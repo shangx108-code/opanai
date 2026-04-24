@@ -1,8 +1,8 @@
 # Archive Checklist
 
 ## Core manuscript package
-- [ ] Title and abstract
-- [ ] Main-text manuscript draft
+- [x] Title and abstract
+- [x] Main-text manuscript draft
 - [ ] Supplementary note
 - [ ] Verified bibliography file
 
@@ -17,6 +17,8 @@
 - [ ] Raw data for main figures
 - [ ] Raw data for supplementary figures
 - [ ] Disorder-sampling metadata
+- [x] Internal toy-model stress-test script
+- [x] Internal toy-model diagnostic figure
 
 ## Figure package
 - [ ] Figure 1 conceptual diagnosis figure
@@ -27,8 +29,8 @@
 - [ ] Final captions
 
 ## Review package
-- [ ] Internal supervision notes
-- [ ] Simulated referee reports
+- [x] Internal supervision notes
+- [x] Simulated referee reports
 - [ ] Revision log by version
 - [ ] Cover-letter draft
 
@@ -37,3 +39,9 @@
 - [ ] Source files
 - [ ] Response-to-reviewers template
 - [ ] Data/code availability statements
+
+## Current drafted assets
+- [x] `/workspace/output/nature-physics-manuscript-package.docx`
+- [x] `/workspace/output/compensated-magnetic-majorana-draft.tex`
+- [x] `/workspace/output/compensated-magnetic-majorana-draft.pdf`
+- [x] `/workspace/output/toy-model/toy-model-summary.png`

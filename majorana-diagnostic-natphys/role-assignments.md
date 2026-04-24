@@ -1,22 +1,22 @@
 # Role Assignments
 
 ## Coordinator
-- Current task: convert the uploaded concept note into a Nature-Physics-grade claim architecture and execution order
-- Inputs: source note, venue criteria, recent literature overlap
-- Deliverable: one-page project brief with bottleneck, claim, figure spine, and task dependencies
-- Completion standard: the project has one primary claim and one primary rejection risk, both stated unambiguously
+- Current task: lock the main claim around the diagnostic hierarchy and supervise the next benchmark round
+- Inputs: source note, venue criteria, verified 2026 overlap, manuscript package
+- Deliverable: updated project brief and execution order
+- Completion standard: the project has one primary claim, one primary rejection risk, and one primary next experiment/calculation block
 - Dependency: none
 
 ## Theory
-- Current task: formalize the diagnostic hierarchy and define which observables are logically necessary, sufficient, or merely supportive
-- Inputs: BdG model family, Green-function formalism, scattering-matrix invariant, disorder and impurity extensions
-- Deliverable: a concise theory note defining the hierarchy and the minimum claim each observable can support
-- Completion standard: the manuscript can state exactly why `G_LL` fails and what extra conditions elevate the claim to topology
+- Current task: formalize the diagnostic hierarchy and state the failure boundary of each observable
+- Inputs: BdG model family, Green-function formalism, scattering-matrix invariant, disorder and impurity extensions, manuscript draft
+- Deliverable: concise theory note plus theorem-like statement or protocol statement
+- Completion standard: the manuscript can say exactly which combination of observables is needed and what each one excludes
 - Dependency: coordinator framing
 
 ## Code and Numerical Computation
-- Current task: build one reproducible pipeline that computes the same observable bundle for true and false zero modes
-- Inputs: unified Hamiltonian, lead self-energies, parameter grids, disorder sampler
+- Current task: replace the toy-model stress test with a full transport benchmark
+- Inputs: unified Hamiltonian, lead self-energies, parameter grids, disorder sampler, false-positive controls
 - Deliverable: scripts/results for `G_LL`, `G_RR`, `G_LR`, gap evolution, `Q`, LDOS, and robustness scans
 - Completion standard: one positive-control dataset and three negative-control datasets generated from the same code path
 - Dependency: theory definitions
@@ -29,15 +29,15 @@
 - Dependency: first-round numerics
 
 ## Figure Production
-- Current task: turn the evidence chain into a five-figure main-text architecture
+- Current task: keep the current storyboard but replace conceptual placeholders with benchmark-ready figures
 - Inputs: analyzed numerical outputs and manuscript claim hierarchy
 - Deliverable: figure storyboard with caption logic, panel order, and what each panel proves
-- Completion standard: every main claim maps to at least one indispensable figure panel
+- Completion standard: every main claim maps to at least one indispensable benchmarked panel
 - Dependency: data-analysis memo
 
 ## Writing
-- Current task: draft a concise Nature-Physics-style title, abstract, intro gap paragraph, and results section skeleton
-- Inputs: verified novelty statement, figure storyboard, evidence chain
+- Current task: maintain the manuscript package and absorb benchmark results as they arrive
+- Inputs: verified novelty statement, figure storyboard, evidence chain, current draft files
 - Deliverable: manuscript scaffold ready to receive results
 - Completion standard: a non-specialist condensed-matter referee can understand the problem, the gap in prior work, and the new contribution
 - Dependency: coordinator + theory + figure plan

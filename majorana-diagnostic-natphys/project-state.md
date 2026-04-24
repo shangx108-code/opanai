@@ -9,10 +9,10 @@
 Build a publishable theory paper that does not merely restate that nonlocal conductance helps, but establishes a genuinely new and experimentally actionable diagnostic hierarchy that separates topological Majorana zero modes from trivial zero-energy states across multiple superconducting hybrid platforms.
 
 ## Current stage
-Concept consolidation and venue-fit triage. The project already has a strong conceptual direction and a plausible computational toolbox, but it is not yet at the level of a Nature Physics submission package.
+Concept consolidation, literature-verified repositioning, and manuscript-package drafting. The project now has a sharper Nature-Physics-oriented claim architecture and first deliverables, but it is still below submission readiness.
 
 ## Current main bottleneck
-The novelty bar is not yet cleared. Existing literature already covers end-to-end nonlocal correlations, three-terminal nonlocal conductance under disorder, and local-conductance-based topology probes in Majorana nanowires. The current draft idea is still too close to that literature and too centered on a qualitative program rather than a sharply new principle with a closed evidence chain.
+The novelty bar is still not cleared. In addition to the older nonlocal-Majorana diagnostic literature, the paper must now explicitly separate itself from the 1 April 2026 *npj Quantum Materials* article on topological altermagnetic Josephson junctions. A generic field-free Majorana-platform claim is no longer sufficient.
 
 ## Highest-priority objective for the current round
 Reframe the manuscript around one original centerpiece:
@@ -37,6 +37,8 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Unified Green-function / BTK / self-energy / T-matrix technical spine
 - Good instinct to include false positives instead of only ideal Majoranas
 - Strong candidate visual centerpiece in the form of a diagnostic map
+- A first manuscript package and LaTeX draft now exist in `/workspace/output`
+- Literature positioning now reflects the 2026 TAJJ overlap explicitly
 
 ## What is still missing
 - A verified novelty statement against 2019/2021/2024 nanowire-diagnostic literature
@@ -45,10 +47,11 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Platform breadth sufficient for Nature Physics
 - Real numerical results, figure-ready parameter scans, and robustness windows
 - A citation-clean reference set
+- A three-terminal transport benchmark with positive and false-positive controls from one code path
 
 ## Acceptance probability (stage estimate)
-- Nature Physics: 8-15% in the current concept-only state
-- Reason: important problem and promising architecture, but novelty and evidence are both currently below threshold
+- Nature Physics: 10-18% in the current manuscript-package state
+- Reason: topic importance and manuscript architecture improved, but the evidence chain remains incomplete and novelty separation is still below threshold
 
 ## Last update
-2026-04-24: initialized project memory, identified novelty-overlap as the main rejection risk, and set the next round around a cross-platform diagnostic hierarchy with quantitative failure tests.
+2026-04-25: verified the direct overlap with Yang, Sun, Xie and Law's *Topological altermagnetic Josephson junctions* (*npj Quantum Materials*, published 1 April 2026), repositioned the project toward a diagnostic-hierarchy paper, generated a first manuscript package, and completed an honesty-check toy-model calculation that did not yet produce a robust topological zero-mode window.
