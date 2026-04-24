@@ -9,13 +9,13 @@
 Build a publishable theory paper that does not merely restate that nonlocal conductance helps, but establishes a genuinely new and experimentally actionable diagnostic hierarchy that separates topological Majorana zero modes from trivial zero-energy states across multiple superconducting hybrid platforms.
 
 ## Current stage
-Concept consolidation, literature-verified repositioning, and manuscript-package drafting. The project now has a sharper Nature-Physics-oriented claim architecture and first deliverables, but it is still below submission readiness.
+Pilot-manuscript stage with literature-verified repositioning. The project now includes a full draft manuscript, a compact numerical benchmark, figure assets, and an internal review package. It is still below Nature Physics submission strength, but it is no longer only a concept note.
 
 ## Current main bottleneck
 The novelty bar is still not cleared. In addition to the older nonlocal-Majorana diagnostic literature, the paper must now explicitly separate itself from the 1 April 2026 *npj Quantum Materials* article on topological altermagnetic Josephson junctions. A generic field-free Majorana-platform claim is no longer sufficient.
 
 ## Highest-priority objective for the current round
-Reframe the manuscript around one original centerpiece:
+The current manuscript has been reframed around one original centerpiece:
 
 1. a universal diagnostic hierarchy with explicit failure boundaries for local tunnelling;
 2. a cross-platform benchmark using at least three model families;
@@ -39,19 +39,23 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Strong candidate visual centerpiece in the form of a diagnostic map
 - A first manuscript package and LaTeX draft now exist in `/workspace/output`
 - Literature positioning now reflects the 2026 TAJJ overlap explicitly
+- Full manuscript draft and internal review package now exist
+- A compact numerical benchmark now exists for clean-wire, dot-ABS, and disorder-induced near-zero-state cases
 
 ## What is still missing
-- A verified novelty statement against 2019/2021/2024 nanowire-diagnostic literature
-- A precise theorem-like or protocol-like new ingredient
-- Quantitative completion criteria for each diagnostic observable
+- A sharper novelty statement against 2019/2021/2024 nanowire-diagnostic literature
+- A numerically validated scattering-matrix topological discriminator
 - Platform breadth sufficient for Nature Physics
 - Real numerical results, figure-ready parameter scans, and robustness windows
 - A citation-clean reference set
 - A three-terminal transport benchmark with positive and false-positive controls from one code path
+- One more false-positive family, preferably impurity- or YSR-like
+- Stronger experimental observability windows for temperature and barrier scans
+- A fully cleaned and expanded reference set
 
 ## Acceptance probability (stage estimate)
-- Nature Physics: 10-18% in the current manuscript-package state
-- Reason: topic importance and manuscript architecture improved, but the evidence chain remains incomplete and novelty separation is still below threshold
+- Nature Physics: 18-28% after the pilot manuscript and compact benchmark
+- Reason: the project now has a real draft and reproducible figures, but the evidence package and novelty separation are still below top-tier threshold
 
 ## Last update
-2026-04-25: verified the direct overlap with Yang, Sun, Xie and Law's *Topological altermagnetic Josephson junctions* (*npj Quantum Materials*, published 1 April 2026), repositioned the project toward a diagnostic-hierarchy paper, generated a first manuscript package, and completed an honesty-check toy-model calculation that did not yet produce a robust topological zero-mode window.
+2026-04-25: verified the direct overlap with Yang, Sun, Xie and Law's *Topological altermagnetic Josephson junctions* (*npj Quantum Materials*, published 1 April 2026), repositioned the project toward a diagnostic-hierarchy paper, and then produced a full draft manuscript, a compact numerical benchmark, figure assets, and an internal review package. The main bottleneck is now insufficient topological and cross-platform evidence for Nature Physics.

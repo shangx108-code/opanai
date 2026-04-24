@@ -53,3 +53,31 @@ Current outcome: still below editorial send-out threshold, but better positioned
 ### Acceptance-probability trend
 - After literature verification and manuscript packaging: 10-18%
 - Upgrade condition to 25-35%: complete the benchmark and make the diagnostic hierarchy quantitative
+
+## 2026-04-25 | Pilot manuscript review
+
+### Material reviewed
+- Draft manuscript: `/workspace/output/majorana_natphys_manuscript.docx`
+- Review package: `/workspace/output/majorana_natphys_review_package.docx`
+- Numerical assets: `/workspace/output/majorana_natphys_assets/`
+
+### Venue lens
+Nature Physics article standard
+
+### Reviewer-style verdict
+Current outcome: major revision
+
+### What improved
+1. The project now has a complete article structure rather than only a concept note.
+2. A compact numerical benchmark supports the failure-aware hierarchy with clean, dot-induced ABS, and disorder-induced near-zero-state cases.
+3. The manuscript now makes a more careful claim: it orders diagnostics by evidentiary power rather than pretending that one pilot benchmark already proves a universal protocol.
+
+### Remaining blockers
+1. The scattering-matrix topological layer is not yet numerically decisive.
+2. The platform coverage is still too narrow for Nature Physics.
+3. The novelty over 2019/2021/2024 diagnostic literature is improved in framing but still not yet forceful enough in evidence.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Physics: 18-28%
+- Upgrade condition to 30-40%: add a validated topological discriminator and one additional benchmark family or platform
+- Upgrade condition to 40%+: show that the new hierarchy changes interpretation in a way not already captured by existing nonlocal-conductance literature

@@ -12,20 +12,23 @@
 - [ ] Derivation note for scattering invariant and transport formulas
 
 ## Numerical package
-- [ ] Reproducible code repository snapshot
-- [ ] Parameter table for all main figures
-- [ ] Raw data for main figures
+- [x] Reproducible code repository snapshot
+- [x] Parameter table for all main figures
+- [x] Raw data for main figures
 - [ ] Raw data for supplementary figures
 - [ ] Disorder-sampling metadata
+- [x] Internal toy-model stress-test script
+- [x] Internal toy-model diagnostic figure
+- [x] Disorder-sampling metadata
 - [x] Internal toy-model stress-test script
 - [x] Internal toy-model diagnostic figure
 
 ## Figure package
 - [ ] Figure 1 conceptual diagnosis figure
-- [ ] Figure 2 spectra and wavefunctions
-- [ ] Figure 3 failure of local tunnelling
-- [ ] Figure 4 nonlocal/topological rescue
-- [ ] Figure 5 diagnostic map / confusion matrix
+- [x] Figure 2 spectra and wavefunctions
+- [x] Figure 3 failure of local tunnelling
+- [x] Figure 4 nonlocal/topological rescue
+- [x] Figure 5 diagnostic map / confusion matrix
 - [ ] Final captions
 
 ## Review package
@@ -45,3 +48,7 @@
 - [x] `/workspace/output/compensated-magnetic-majorana-draft.tex`
 - [x] `/workspace/output/compensated-magnetic-majorana-draft.pdf`
 - [x] `/workspace/output/toy-model/toy-model-summary.png`
+- [x] `/workspace/output/majorana_natphys_manuscript.docx`
+- [x] `/workspace/output/majorana_natphys_manuscript.pdf`
+- [x] `/workspace/output/majorana_natphys_review_package.docx`
+- [x] `/workspace/output/majorana_natphys_review_package.pdf`
