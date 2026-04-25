@@ -1,74 +1,74 @@
 # Nature Photonics Role Assignments
 
 ## Current Phase
-- Main-text manuscript and supplement are both rendered, and the main manuscript now includes the standalone Figure-4 object; immediate next phase is evidence-breadth strengthening for the task-level claim.
+- A real seed-robustness result now exists for the stronger trainable task benchmark; the immediate next phase is to move that stronger evidence into the manuscript-facing Figure-4 story.
 
 ## Role Task Table
 
 ### Coordinator
-- Current task: move the project from packaging completion into one bounded robustness-strengthening action.
-- Input: `manuscript-v1.md`, `manuscript-v1.pdf`, `supplement-v1.md`, current review history, journal criteria.
-- Output: one next computation or analysis choice that directly tests the current systems-level claim rather than expanding scope diffusely.
-- Completion standard: the next action targets the weakest acceptance dimension, which is still evidence breadth rather than manuscript packaging.
+- Current task: replace the outdated minimal-benchmark emphasis with the now-verified trainable-plus-robustness evidence.
+- Input: `manuscript-v1.md`, `figure4_submission_package.md`, `figure4_trainable_benchmark_package.md`, seed-robustness summary files, current review history.
+- Output: one synchronized manuscript/figure revision target that upgrades systems evidence without widening the paper's scope.
+- Completion standard: the next action must make the reviewer-facing paper reflect the strongest real evidence already in the namespace.
 - Priority: highest
 
 ### Theorist
-- Current task: preserve the current claim boundary while the next robustness step is chosen.
-- Input: current manuscript source, supplement source, Figure-3 and Figure-4 claim packages.
-- Output: a checked statement of which systems-level claims remain supported if the next robustness action succeeds or fails.
-- Completion standard: no future benchmark extension is allowed to widen the paper's scope beyond a bounded design-law contribution.
+- Current task: preserve the new claim boundary created by the seed-robustness result.
+- Input: trainable benchmark package, seed-robustness summary, current manuscript claim sentences.
+- Output: manuscript-safe wording that states both the repeat-stable `22/30` headline and the explicitly fragile low-budget `two_moons` regimes.
+- Completion standard: the stronger evidence must sharpen the claim, not inflate it into a general hardware-readiness statement.
 - Priority: high
 
 ### Code And Numerical Computation
-- Current task: prepare to execute one real robustness extension on the saved task-level benchmark stack.
-- Input: saved task-level benchmark summary, current benchmark assumptions, manuscript-stated task-level claim.
-- Output: one completed robustness computation or evidence-strengthening run, not just a proposed script.
-- Completion standard: a new result must be produced and be traceable to executable code and saved outputs.
-- Priority: highest
+- Current task: hold the completed seed-robustness package fixed unless a manuscript-integration pass uncovers a specific missing statistic.
+- Input: `trainable_task_benchmark_seed_robustness.py` and saved outputs.
+- Output: no new computation requested in this run.
+- Completion standard: already met for the present robustness pass.
+- Priority: paused
 
 ### Data Analyst
-- Current task: define the exact evidence gap left by the current minimal benchmark.
-- Input: `manuscript-v1.md`, `manuscript-v1.pdf`, Figure-4 package, task-level benchmark summary.
-- Output: a narrow interpretation target for the next robustness action.
-- Completion standard: the next analysis step must speak directly to whether the mixed Fig. 4 conclusion is stable or fragile.
+- Current task: translate the seed-robustness outputs into the exact stable-versus-fragile regime split the manuscript should report.
+- Input: `seed_robustness_summary.md`, `seed_robustness_summary.csv`, trainable benchmark summary.
+- Output: a bounded interpretation map: repeat-stable positive regimes, fragile near-threshold regimes, and route-preference variability.
+- Completion standard: the next manuscript revision should no longer flatten robust and fragile positive conditions into one undifferentiated claim.
 - Priority: high
 
 ### Figure Lead
-- Current task: hold the current figure package fixed until new robustness evidence exists.
-- Input used: Figure-3 package, Figure-4 package, current manuscript PDF.
-- Output delivered: no new figure requested in this run.
-- Completion standard: already met for the current harmonized manuscript package.
-- Priority: paused
+- Current task: prepare a revised Figure-4 direction that reflects the trainable benchmark and seed-robustness evidence rather than the older minimal benchmark only.
+- Input: trainable benchmark package and seed-robustness outputs.
+- Output: one revised figure or caption target for the next run.
+- Completion standard: the next figure-facing revision must be traceable to saved trainable and robustness outputs.
+- Priority: highest
 
 ### Manuscript Writer
-- Current task: keep `manuscript-v1.md` synchronized with the current evidence base and avoid premature claim expansion.
-- Input used: harmonized manuscript source/PDF, supplement source/PDF, figure submission packages.
-- Output delivered in this run: integrated Figure-4 image, manuscript-facing caption, bounded Methods paragraph, and updated availability statement.
-- Completion standard: met for the present harmonization pass.
-- Priority: medium
+- Current task: revise the Results and Figure-4 language so the manuscript matches the stronger task-level evidence already computed.
+- Input: current manuscript source/PDF, trainable benchmark package, seed-robustness outputs.
+- Output: one bounded manuscript revision that cites the repeat-stable `22/30` count and names the fragile exceptions.
+- Completion standard: manuscript statements must match the real strengthened benchmark and its caveats.
+- Priority: highest
 
 ### Supervisor
-- Current task: treat narrow systems evidence as the dominant risk rather than manuscript inconsistency.
-- Input: current manuscript source/PDF, supplement source/PDF, review history, journal criteria.
-- Output: next-stage supervision target focused on robustness and reviewer trust.
-- Completion standard: the project does not confuse package polish with solved evidence risk.
+- Current task: treat manuscript lag behind the stronger evidence as the dominant risk.
+- Input: seed-robustness outputs, current manuscript PDF, review history, journal criteria.
+- Output: a next-stage supervision target focused on evidence synchronization and honest scope control.
+- Completion standard: the project should not leave stronger verified evidence stranded outside the paper package.
 - Priority: highest
 
 ### Strict Reviewers
-- Current task: update acceptance estimates after the manuscript caught up to the Figure-4 package.
-- Input: harmonized `manuscript-v1.md`, regenerated `manuscript-v1.pdf`, supplement source/PDF, Figure-3 package, Figure-4 package, prior review history.
-- Output: revised reviewer matrix and next upgrade condition.
-- Completion standard: the project state reflects the real improvement in package coherence without pretending new scientific evidence.
+- Current task: update acceptance estimates after the stronger trainable benchmark passed a real seed-robustness check.
+- Input: trainable benchmark package, seed-robustness outputs, current manuscript source/PDF, prior review history.
+- Output: revised reviewer matrix and the next upgrade condition.
+- Completion standard: the project state must reflect that methods/results confidence improved even though the paper text has not yet caught up.
 - Priority: high
 
 ## What Was Completed In This Run
-- Completed: integrated the rendered Figure-4 panel into `manuscript-v1.md`.
-- Completed: added manuscript-facing Figure-4 caption and bounded Methods wording aligned to the existing figure package.
-- Completed: regenerated `manuscript-v1.pdf` and verified it as an 8-page PDF object.
+- Completed: created and ran `trainable_task_benchmark_seed_robustness.py`.
+- Completed: saved repeat-level and condition-level robustness outputs for the trainable benchmark.
+- Completed: verified that the `22/30` positive-condition headline survives across all three repeats while `9/30` conditions remain fragile or negative.
 
 ## What Remains Incomplete
-- Incomplete: no new robustness computation or broader task-level validation has yet been added.
+- Incomplete: the stronger trainable-plus-robustness evidence is not yet integrated into the manuscript or current Figure-4 story.
 - Incomplete: final submission archive remains open.
 
 ## Next Immediate Deliverable
-- One real robustness-strengthening result that tests the stability of the current mixed Fig. 4 conclusion.
+- One manuscript-facing Figure-4 and Results revision built directly from the trainable and seed-robustness outputs.

@@ -205,3 +205,45 @@
 
 ### Next Supervision Focus
 - Check whether the next evidence-strengthening action materially raises reviewer confidence without widening the manuscript's claim boundary beyond a bounded design-law paper.
+
+## Supervision Entry 2026-04-25 (trainable benchmark seed robustness)
+
+### Current Version Overall Evaluation
+- The systems-evidence package is now materially stronger than the current manuscript reveals. The project no longer relies only on a one-seed trainable benchmark claim: it now has a repeat-level robustness check that preserves the headline count while exposing the fragile edge cases honestly.
+
+### Newly Verified Facts
+- `trainable_task_benchmark_seed_robustness.py` was created and run successfully inside the Nature Photonics project namespace.
+- The run completed three independently reseeded repeats of the trainable task benchmark.
+- In every repeat, physical activation beat the trainable linear baseline in `22/30` scanned conditions.
+- `21/30` conditions stayed above the manuscript's `+0.02` margin threshold in all three repeats.
+- The fragile conditions were localized, not diffuse: all nine fragile cases are on `two_moons`, mostly at low and intermediate budgets.
+- Route preference remains non-universal under reseeding; on-off beats homodyne in `20`, `13`, and `11` of `30` matched comparisons across the three repeats.
+
+### What Is Genuinely At Standard
+- The stronger trainable benchmark is now supported by a real robustness check rather than by a single-seed headline only.
+- The project can now distinguish repeat-stable positive regimes from fragile near-threshold regimes in reviewer-inspectable saved outputs.
+- The new systems evidence still supports the bounded design rule that activation utility depends jointly on task geometry, detector efficiency, total budget, and receiver choice.
+
+### What Is Not Yet At Standard
+- The manuscript and current Figure-4 package still foreground the older minimal benchmark rather than the stronger trainable-plus-robustness evidence.
+- The robustness result still comes from a small one-hidden-layer benchmark, not from broader dataset or architecture coverage.
+- The final submission archive is still absent.
+
+### Core Quality Risk
+- The dominant risk is now under-integration rather than under-computation. A reviewer could reasonably ask why the paper text still leans on the weaker systems benchmark when a stronger verified benchmark already exists in the project namespace.
+
+### Evidence-Chain Gap
+- The missing evidence link is manuscript embodiment of the stronger task-level result: Figure-4 definition, Results wording, and discussion language that reflect the seed-robust trainable benchmark and its explicit fragile exceptions.
+
+### Must-Correct Item
+- The next run must revise the manuscript-facing Figure-4 package so it is based on the trainable benchmark plus seed-robustness summary, not only on the older minimal benchmark.
+
+### Priority Adjustment
+- The single main bottleneck moves from raw systems-evidence breadth to synchronization of the strongest verified systems evidence into the paper.
+- Additional new computation should wait unless manuscript revision uncovers a specific unsupported statement.
+
+### Allowed To Enter Next Stage?
+- Yes. The project may now move from robustness generation into manuscript and figure revision around the stronger trainable evidence package.
+
+### Next Supervision Focus
+- Check whether the next manuscript revision states the repeat-stable `22/30` result, names the fragile `two_moons` low-budget regimes, and keeps the scope bounded to a small trainable benchmark.

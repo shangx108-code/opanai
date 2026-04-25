@@ -2,10 +2,10 @@
 
 ## Last Updated
 - Date: 2026-04-25
-- Run type: scheduled continuation after Figure-4 manuscript integration
+- Run type: scheduled continuation after trainable-benchmark seed-robustness analysis
 
 ## Current Stage
-- Stage: Main manuscript harmonized around Figures 3 and 4; next gap is evidence-breadth strengthening
+- Stage: Results-generation and robustness-strengthening completed for the trainable task benchmark; next gap is manuscript integration of the stronger systems evidence
 
 ## Current Overall Goal
 - Build a Nature Photonics-competitive theory-and-simulation paper on quantum limits of nonlinear activation in photonic neural networks, with a quantitative resource framework, explicit same-axis comparisons, and submission-grade evidence.
@@ -22,25 +22,31 @@
 - Completed before this run: that supplement source was rendered successfully to `supplement-v1.pdf`, with 6 pages verified by `pdfinfo`.
 - Completed before this run in the project-specific namespace: the saved minimal task-level benchmark was converted into a standalone Figure-4 package consisting of a dedicated plotting script, a figure-specific CSV table, rendered SVG/PNG/PDF outputs, and a caption-ready submission package.
 - Completed before this run: the rendered Figure-4 package preserves the mixed positive-and-negative systems result already present in the manuscript prose, including the `15/15`, `0/15`, and `9/30` evidence lines.
-- Completed in this run: the standalone Figure-4 object was integrated into `manuscript-v1.md`, including a manuscript-facing caption, a bounded Methods description, and an updated data/code availability statement aligned to the real current package.
-- Completed in this run: the harmonized `manuscript-v1.md` was rendered successfully back to `manuscript-v1.pdf`, now verified by `pdfinfo` as an 8-page PDF object.
-- Incomplete: no new robustness computation, broader task scan, or stronger systems-level validation was added in this run.
+- Completed before this run: the standalone Figure-4 object was integrated into `manuscript-v1.md`, including a manuscript-facing caption, a bounded Methods description, and an updated data/code availability statement aligned to the real current package.
+- Completed before this run: the harmonized `manuscript-v1.md` was rendered successfully back to `manuscript-v1.pdf`, now verified by `pdfinfo` as an 8-page PDF object.
+- Completed in this run: a new script, `trainable_task_benchmark_seed_robustness.py`, was created inside the project-specific namespace and run successfully to completion.
+- Completed in this run: that script produced `seed_robustness_detail.csv`, `seed_robustness_summary.csv`, `seed_repeat_counts.csv`, `seed_robustness_summary.json`, and `seed_robustness_summary.md` inside `trainable_task_benchmark_seed_robustness/`.
+- Completed in this run: across three independently reseeded data-split and training repeats, physical activation beat the trainable linear baseline in `22/30` scanned conditions in every repeat.
+- Completed in this run: `21/30` scanned conditions stayed above the manuscript's `+0.02` margin threshold in all three repeats, while `9/30` conditions were shown explicitly to be fragile or negative under reseeding.
+- Completed in this run: the fragile region was localized rather than hidden; it remains concentrated in `two_moons` at low and intermediate budgets, with `eta = 0.70, budget = 4` positive in only `1/3` repeats and `eta = 0.99, budget = 4` positive in `2/3` repeats.
+- Incomplete: the main manuscript and current Figure-4 package still present the older minimal benchmark rather than the stronger trainable-plus-robustness evidence package.
 
 ## Single Main Bottleneck
-- The single main bottleneck is now evidence breadth at task level: the manuscript package is coherent, but the systems claim still rests on a deliberately narrow minimal benchmark with no new robustness extension in this run.
+- The single main bottleneck is now evidence-to-manuscript mismatch: the stronger trainable and seed-robust systems evidence now exists, but the reviewer-facing manuscript still foregrounds the older minimal benchmark rather than the improved result.
 
 ## Single Highest-Priority Action Completed In This Run
-- Integrated the rendered Figure-4 package into the main manuscript and regenerated the full manuscript PDF.
+- Executed a real three-repeat seed-robustness analysis on the trainable task benchmark.
 
 ## Deliverable From This Run
-- Harmonized manuscript package in the project-specific Nature Photonics namespace:
-  - `manuscript-v1.md`: updated to embed the rendered Figure-4 panel, add a bounded manuscript-facing Figure-4 caption, add a figure-specific Methods paragraph, and revise the data/code availability statement so it matches the real current package.
-  - `manuscript-v1.pdf`: regenerated successfully from the updated source and verified by `pdfinfo` as an 8-page PDF.
-  - The current integrated manuscript now makes reviewer-inspectable in one top-level paper object:
-    - the single-neuron Fig. 3 design-law comparison
-    - the task-level Fig. 4 mixed positive-and-negative systems result
-    - the route-preference dependence behind the saved `9/30` comparison count
-    - the bounded statement that the current systems evidence is a minimal benchmark rather than a hardware-feasibility map
+- Seed-robustness package for the stronger trainable task benchmark in the project-specific Nature Photonics namespace:
+  - `trainable_task_benchmark_seed_robustness.py`: reproducible robustness-analysis script that reuses the existing trainable benchmark and changes only the data-split and training seeds.
+  - `trainable_task_benchmark_seed_robustness/seed_robustness_summary.md`: narrative summary of the repeat-level counts, robust positive regimes, and fragile regimes.
+  - `trainable_task_benchmark_seed_robustness/seed_robustness_summary.csv`: condition-level mean margin, margin spread, route-win counts, and positive-repeat counts.
+  - `trainable_task_benchmark_seed_robustness/seed_repeat_counts.csv`: per-repeat counts showing that the `22/30` headline held in every repeat.
+  - The new reviewer-relevant evidence is now:
+    - the trainable benchmark conclusion is not a one-seed accident at the headline-count level
+    - the robust positive regimes are concentrated in all `15/15` concentric-circles settings plus six high-budget `two_moons` settings
+    - the fragile or negative regimes are stated explicitly rather than averaged away
 
 ## What Is Genuinely Completed
 - Completed: recovery of the real Nature Photonics project state from the project-specific namespace only.
@@ -59,16 +65,19 @@
 - Completed: wrote a figure-specific submission package with a caption draft and explicit allowed/disallowed claims for the current benchmark scope.
 - Completed: integrated the rendered Figure-4 object directly into the main manuscript source.
 - Completed: regenerated the full manuscript PDF after that integration, so the top-level paper object now matches the current figure package.
+- Completed: executed a stronger seed-robustness test on the trainable hidden-layer benchmark rather than on the earlier random-feature surrogate.
+- Completed: verified that the headline `22/30` count is stable across three independently reseeded repeats.
+- Completed: identified exactly which task-level settings are robustly positive in all repeats and which settings remain fragile near the decision boundary.
 
 ## What Is Still Incomplete
-- Incomplete: no broader robustness scan or stronger task-level validation has yet tested whether the mixed Fig. 4 conclusion survives beyond the saved minimal benchmark.
+- Incomplete: the stronger trainable-plus-robustness benchmark has not yet replaced the older minimal benchmark in the manuscript-facing Figure-4 story.
 - Incomplete: final submission archive package.
 - Incomplete: all five reviewer acceptance estimates remain below 70%.
 
 ## Acceptance Probability Snapshot
 - Status: improved, but still below submission readiness.
-- Conservative current estimate: `59-69%`.
-- Basis: the project now has a coherent main manuscript PDF that visibly includes both top-level figure objects plus a paired supplement. The estimate remains capped because this run added no new robustness computation, the task-level systems claim is still supported only by the saved minimal benchmark, and the final submission archive is absent.
+- Conservative current estimate: `65-69%`.
+- Basis: this run added real systems-level robustness evidence on the stronger trainable benchmark and showed that the headline `22/30` count is repeat-stable, which directly raises confidence in methods and results support. The estimate remains capped because the stronger evidence has not yet been integrated into the manuscript or Figure-4 package, the benchmark is still small-scale, and the final submission archive is absent.
 
 ## Recent Update Summary
 - Recovered the real project state from the Nature Photonics-only namespace rather than borrowing from other projects.
@@ -80,6 +89,8 @@
 - Closed the supplement-absence gap by assembling `supplement-v1.md` and rendering `supplement-v1.pdf`.
 - Converted the saved minimal task-level benchmark into a real Figure-4 package with rendered SVG/PNG/PDF outputs and a caption-ready submission note.
 - Folded the rendered Figure-4 object back into `manuscript-v1.md`, tightened the manuscript-facing Fig. 4 caption and Methods wording, and regenerated `manuscript-v1.pdf` as an 8-page paper object.
+- Added a real seed-robustness layer on top of the stronger trainable benchmark and verified that the `22/30` positive-condition headline survives across three independent reseeded repeats.
+- Tightened the systems claim boundary further by naming the exact fragile regimes instead of treating all positive margins as equally secure.
 
 ## Next Immediate Action
-- Run one real robustness-strengthening action on the task-level claim, so the paper is no longer relying only on the current minimal benchmark when defending its systems-level conclusion.
+- Replace the current minimal-benchmark-only Figure-4 and Results wording with the stronger trainable-plus-seed-robustness evidence package, while preserving the explicit fragile-regime caveats.

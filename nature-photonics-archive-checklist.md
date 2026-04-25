@@ -1,7 +1,7 @@
 # Nature Photonics Archive Checklist
 
 ## Archive Status
-- Checklist updated on 2026-04-25 after Figure-4 manuscript integration.
+- Checklist updated on 2026-04-25 after trainable-benchmark seed-robustness analysis.
 
 ## Present In Namespace
 - [x] Project state file
@@ -38,9 +38,16 @@
 - [x] Figure-4 submission package (`figure4_submission_package.md`)
 - [x] Manuscript source updated to integrate the new Figure-4 object
 - [x] Regenerated manuscript PDF reflecting the integrated Figure-4 object
+- [x] Trainable benchmark package (`figure4_trainable_benchmark_package.md`)
+- [x] Seed-robustness analysis script (`trainable_task_benchmark_seed_robustness.py`)
+- [x] Seed-robustness detail table (`trainable_task_benchmark_seed_robustness/seed_robustness_detail.csv`)
+- [x] Seed-robustness condition summary (`trainable_task_benchmark_seed_robustness/seed_robustness_summary.csv`)
+- [x] Seed-robustness repeat-count table (`trainable_task_benchmark_seed_robustness/seed_repeat_counts.csv`)
+- [x] Seed-robustness narrative summary (`trainable_task_benchmark_seed_robustness/seed_robustness_summary.md`)
+- [x] Seed-robustness JSON summary (`trainable_task_benchmark_seed_robustness/seed_robustness_summary.json`)
 
 ## Still Missing
-- [ ] Broader robustness-strengthening evidence beyond the current minimal benchmark
+- [ ] Manuscript-facing Figure-4 and Results revision built from the trainable-plus-robustness evidence
 - [ ] Final submission archive package
 
 ## Truthfulness Note
@@ -49,4 +56,5 @@
 - Supplement assembly is now genuinely completed for a first reviewer-inspectable version.
 - First-pass Figure-4 manuscript-grade packaging is now genuinely completed.
 - Full manuscript integration of that Figure-4 package is now genuinely completed for the current manuscript object.
-- Broader systems-level robustness evidence and final submission packaging remain incomplete and are not marked as done.
+- The trainable benchmark seed-robustness pass is now genuinely completed and saved.
+- Manuscript integration of that stronger systems evidence and final submission packaging remain incomplete and are not marked as done.

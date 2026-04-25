@@ -399,3 +399,51 @@
 
 ## Next Immediate Review-Driven Action
 - Execute one real robustness-strengthening action on the task-level claim before spending another round on packaging or archive assembly.
+
+## Round 9 Trainable-Benchmark-Seed-Robustness Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only, using `trainable_task_benchmark_summary.md`, `figure4_trainable_benchmark_package.md`, `trainable_task_benchmark_seed_robustness.py`, and the saved seed-robustness outputs
+
+### Material Reviewed
+- `trainable_task_benchmark/trainable_task_benchmark_summary.md`
+- `figure4_trainable_benchmark_package.md`
+- `trainable_task_benchmark_seed_robustness.py`
+- `trainable_task_benchmark_seed_robustness/seed_robustness_summary.md`
+- `trainable_task_benchmark_seed_robustness/seed_robustness_summary.csv`
+- current `manuscript-v1.md`
+- current `manuscript-v1.pdf`
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: the paper's systems claim is now more journal-relevant because the stronger trainable benchmark survives reseeding at the headline-count level, but the manuscript still has not been revised to show that stronger evidence.
+- Acceptance estimate: 67%
+- Main reason: editorial fit rises when the task-level design rule is no longer a one-seed artifact, yet the visible paper package still foregrounds the older minimal benchmark.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: the mechanism story is stronger because the systems consequence now survives trainable hidden-layer adaptation and repeat-level reseeding while still exposing the fragile near-threshold regimes honestly.
+- Acceptance estimate: 69%
+- Main reason: rigor improves when the bounded claim is both stronger and better delimited, but the theory-to-manuscript chain is not finished until the paper text catches up.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: reviewer trust improves materially because the trainable benchmark has now passed a real reseeding check rather than resting on a single random draw.
+- Acceptance estimate: 66%
+- Main reason: the saved outputs show that the `22/30` headline is repeat-stable and that the fragile cases are localized, though the benchmark remains small and not yet broadly generalized.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: results support is stronger because the project can now separate robust positive regimes from fragile ones instead of reporting only a single aggregate count.
+- Acceptance estimate: 69%
+- Main reason: the evidence package is much harder to dismiss as cherry-picked, but the main manuscript and Figure 4 still do not present this stronger result directly.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: the paper is more defensible in substance, but the visible manuscript still undersells its best systems evidence.
+- Acceptance estimate: 65%
+- Main reason: persuasion improves only partially until the stronger trainable and seed-robustness conclusions are written into the main text and figure narrative.
+
+## Updated Summary
+- Genuine completion in this run: a real three-repeat seed-robustness analysis was executed for the stronger trainable task benchmark, and the headline `22/30` count held in every repeat.
+- Genuine completion in this run: the new outputs identify `21/30` repeat-stable positive conditions and `9/30` fragile or negative conditions, with fragility concentrated in low-budget `two_moons` regimes.
+- Still incomplete: the manuscript and current Figure-4 package have not yet been revised to reflect the stronger trainable-plus-robustness evidence, and the final archive remains absent.
+- Current five-reviewer range: `65-69%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
+## Next Immediate Review-Driven Action
+- Rewrite the manuscript-facing Figure-4 story around the trainable benchmark plus seed-robustness outputs, including the stable `22/30` headline and the explicit fragile `two_moons` exceptions.
