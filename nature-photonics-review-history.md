@@ -72,5 +72,46 @@
 - Current five-reviewer range: `36-45%`.
 - Stop condition status: not met; all five reviewer estimates remain below 70%.
 
+## Round 2 Figure-3 Results-Writing Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only
+
+### Material Reviewed
+- prior same-axis figure package
+- revised `figure3_submission_package.md` with insertable subsection and caption
+- theory framework
+- manuscript spine
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: the paper's central message is now clearer and less likely to be mistaken for a generic implementation note, but novelty still needs literature-backed separation.
+- Acceptance estimate: 40%
+- Main reason: the design-law claim is sharper, yet the distinction from nearby 2024-2025 work is still not explicitly secured.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: the manuscript now states its non-claims more responsibly and ties the detector penalty and route-dependent prefactor to explicit numbers.
+- Acceptance estimate: 49%
+- Main reason: theory presentation improved because the fixed-model scope is clearer, but manuscript-wide integration is still incomplete.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: the writing now reflects the actual computed models accurately, but the project still lacks broader robustness or task-level validation.
+- Acceptance estimate: 42%
+- Main reason: no new computation was needed for this action, yet the evidence is now described more faithfully and inspectably.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: Figure 3 now reads like a real main-text result rather than an internal figure candidate, which is a meaningful upgrade.
+- Acceptance estimate: 47%
+- Main reason: the figure finally has a bounded narrative and claim sentence, though the manuscript still lacks literature separation and system-level support.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: the new subsection materially improves readability and persuasion by saying exactly what the figure proves and what it does not.
+- Acceptance estimate: 46%
+- Main reason: prose quality improved, but the paper still does not have a complete journal-facing narrative package.
+
+## Updated Summary
+- Genuine completion in this run: Figure 3 now has an insertable Results subsection, tightened caption, and explicit claim boundary.
+- Still incomplete: verified literature separation, task-level evidence, full manuscript integration, manuscript PDF, supplement package, and final archive.
+- Current five-reviewer range: `40-49%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
 ## Next Immediate Review-Driven Action
-- Write and review the Figure-3 Results subsection and caption logic before expanding to new benchmarks.
+- Write and review one verified literature-positioning paragraph before expanding to new benchmarks.

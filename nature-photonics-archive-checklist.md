@@ -1,7 +1,7 @@
 # Nature Photonics Archive Checklist
 
 ## Archive Status
-- Checklist updated on 2026-04-25 after Figure-3 candidate assembly.
+- Checklist updated on 2026-04-25 after Figure-3 Results-writing pass.
 
 ## Present In Namespace
 - [x] Project state file
@@ -20,10 +20,11 @@
 - [x] Figure-3 candidate SVG
 - [x] Figure-3 candidate PNG render
 - [x] Figure-3 candidate PDF render
+- [x] Figure-3 Results subsection draft
+- [x] Figure-3 revised caption draft
+- [x] Figure-3 insertable claim sentence
 
 ## Still Missing
-- [ ] Manuscript Results subsection tied to Figure 3
-- [ ] Final Figure-3 caption package with explicit model limits
 - [ ] Verified literature-separation paragraph
 - [ ] Current manuscript source
 - [ ] Current manuscript PDF
@@ -34,4 +35,4 @@
 
 ## Truthfulness Note
 - Figure packaging is genuinely completed for the first candidate version.
-- Manuscript integration, literature separation, task-level evidence, and submission packaging remain incomplete and are not marked as done.
+- Figure-3 subsection drafting is genuinely completed at the package level, but full-manuscript integration, literature separation, task-level evidence, and submission packaging remain incomplete and are not marked as done.
