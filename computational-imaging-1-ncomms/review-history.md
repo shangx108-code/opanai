@@ -43,3 +43,9 @@
 - 线性任务已有第一批 unsupported-structure 案例。
 - 相位恢复已有严格的 measurement ambiguity 证据。
 - 但由于当前 prior 仍是手工候选库而非真实深度先验，正式五审稿人循环仍不能启动。
+
+## 预审备注（round3 学习型 prior 后）
+- 线性任务已新增真实非线性学习型 autoencoder prior 结果，并形成 zero-fill / PCA / autoencoder 三方对照。
+- autoencoder prior 在 6 个断裂目标上保持观测区误差为 0，但未观测区平均 MAE 上升到 `0.2356`，bridge mean intensity 为 `0.3417`，说明 learned prior 的 unsupported hallucination 现象确已进入训练型模型层面。
+- 但该结果仍不等同于 DIP、diffusion prior、PnP 或 Bayesian posterior baseline，因此正式五审稿人循环仍不能启动。
+- 当前最近的预审判断仍为：不具备进入正式五审稿人并行评审的条件。

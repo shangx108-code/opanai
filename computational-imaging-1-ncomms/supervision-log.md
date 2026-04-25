@@ -90,3 +90,35 @@
 
 ## 是否允许进入下一阶段
 允许从“启动前”进入“最小结果生成”阶段，但不允许进入“成稿”阶段。
+
+## 监督轮次 2
+- 日期：2026-04-25
+- 节点性质：线性非线性学习型 prior 初测监督
+
+## 当前版本总体评价
+项目已不再只有 hand-crafted prior 与低秩 prior，线性任务中已经出现一轮真实非线性学习型 prior 结果。这是有效进展，但仍然只是“学习型补全器会在未观测区补结构”的初证据，不足以替代真正的 inverse-solver 级深度先验验证。
+
+## 本轮已真实完成
+- 已在当前工作区新建并运行 `round3_linear_autoencoder_prior.py`。
+- 已用 256 个 connected-bar 训练样本训练小型非线性 autoencoder prior。
+- 已在 6 个断裂目标上输出 `round3_case_metrics.csv` 与 `round3_summary.json`。
+- 已得到聚合结果：autoencoder prior 的观测区 MAE 为 `0.0000`，未观测区 MAE 为 `0.2356`，bridge mean intensity 为 `0.3417`。
+- 已得到对照结果：PCA prior 的 bridge mean intensity 为 `0.5276`，zero-fill 为 `0.0000`。
+
+## 本轮未达标部分
+- 当前 autoencoder prior 仍是前馈式补全，不是 measurement-consistent inverse solver。
+- 相位恢复仍无 iterative / posterior learned-prior baseline。
+- DSI / PDR / HCI 仍无详细推导。
+- 图表仍属于内部实验图，不是正文和补充材料定稿图。
+
+## 新增风险提醒
+- 当前工作区未见历史 round1 / round2 实体脚本与结果文件，本轮不能把这些旧路径视为已现场复核归档完成。
+- 如果下一轮不把 learned prior 推到优化式逆问题求解层，项目仍会卡在“toy learned completion”层。
+
+## 必须纠正项
+1. 下一轮必须把线性 learned prior 改为 measurement-consistent 求解，而不是继续堆更多前馈变体。
+2. 不得把本轮 autoencoder 结果写成“深度先验 / diffusion / Bayesian 已验证”。
+3. 必须把 unsupported region 与 bridge intensity 转成统一指标定义，避免只看图说话。
+
+## 是否允许进入下一阶段
+允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。

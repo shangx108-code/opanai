@@ -23,8 +23,9 @@
 - [x] 相位恢复最小基准代码
 - [ ] classical baselines 跑通
 - [ ] deep prior baselines 跑通
+- [x] 非线性 autoencoder prior 初测
 - [ ] ambiguity case 生成脚本
-- [ ] 失败案例记录
+- [x] 失败案例记录
 - [ ] OOD / model mismatch 实验
 - [ ] calibration / abstention 实验
 
@@ -72,3 +73,11 @@
 - [ ] 正文源文件归档
 - [ ] 补充材料源文件归档
 - [ ] 最终 ZIP 归档包
+
+## 当前归档备注
+- round3 当前已落地的实体文件：
+  - `/workspace/computational-imaging-1-ncomms/round3_linear_autoencoder_prior.py`
+  - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_summary.json`
+  - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_case_metrics.csv`
+  - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_linear_autoencoder_panel.png`
+- 当前工作区未见历史 round1 / round2 实体脚本与输出文件，说明历史结果记录已保存在项目状态中，但原始归档仍需后续补齐。

@@ -9,11 +9,12 @@
 - 优先级：最高
 
 ## 理论人员
-- 当前任务：把第 1 轮的线性 observation mask 现象和 phase ambiguity 现象转写成形式化判据
+- 当前任务：把线性 observation mask 下的 zero-fill / PCA / autoencoder 差异转写成第一版可计算判据
 - 输入：统一 forward model、线性与非线性任务定义、likelihood / prior 形式
 - 输出：
   - 统一数学符号表
   - 线性 incomplete measurement 下的 data-supported / unsupported 区域判据
+  - bridge intensity 与 unsupported-region error 的定义草案
   - 相位恢复 reversed ambiguity 的测量等价说明
   - DSI / ambiguity branch 的第一版数学说明
 - 完成标准：
@@ -23,26 +24,26 @@
 - 优先级：P1
 
 ## 代码与数值计算人员
-- 当前任务：把最小双任务基准升级到学习型先验版本
+- 当前任务：把线性任务从前馈式学习型先验继续升级到 measurement-consistent 的优化式 learned prior
 - 输入：任务定义、噪声模型、baseline 清单
 - 输出：
-  - 第 1 轮最小基准脚本与结果文件
-  - 下一轮训练型先验接口
+  - 已完成的 autoencoder prior 脚本与结果文件
+  - 下一轮优化式 learned prior 接口
   - iterative phase-retrieval baseline
   - 运行日志与失败案例表
 - 完成标准：
-  - 第 1 轮结果基础上能接入真实可训练 prior
+  - 当前线性任务基础上能接入 measurement-consistent learned prior
   - 输入输出接口明确
   - 至少一组结果能展示“相同或近似相同测量对应不同结构”的案例
 - 依赖：理论人员给出任务参数与评价指标
 - 优先级：P1
 
 ## 数据分析人员
-- 当前任务：对第 1 轮结果做结构性判读，特别是区分观测区与未观测区误差
+- 当前任务：对 zero-fill、PCA prior 与 autoencoder prior 的差异做结构性判读，特别是区分观测区与未观测区误差
 - 输入：baseline 输出、误差图、数据一致性指标、posterior variance 或 sample spread
 - 输出：
-  - 第 1 轮 ambiguity case 判读模板
   - observed / unsupported 区域误差对照表
+  - bridge intensity 指标表
   - 第一版高风险失败案例归纳
 - 完成标准：
   - 能区分普通误差与疑似 hallucination
@@ -108,11 +109,11 @@
 6. 撰写人员再写结果段与方法段
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：把线性最小 benchmark 升级为学习型先验验证平台
+- 任务名称：把线性最小 benchmark 升级为 measurement-consistent learned prior 验证平台
 - 负责人：统筹者 + 代码与数值计算人员 + 理论人员
 - 预期输出：
-  - 训练型或低秩学习型 prior 版本的线性任务结果
-  - 与第 1 轮 hand-crafted prior 的对照结果
-  - DSI / unsupported region 的第一版量化说明
+  - 优化式 learned prior 版本的线性任务结果
+  - 与 zero-fill、PCA prior、autoencoder prior 的同任务对照结果
+  - unsupported region 与 bridge intensity 的第一版量化说明
 - 完成标准：
   - 不是“想好怎么做”，而是“真实运行并产生新结果”
