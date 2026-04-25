@@ -24,7 +24,7 @@
 - [ ] classical baselines 跑通
 - [ ] deep prior baselines 跑通
 - [x] 非线性 autoencoder prior 初测
-- [ ] ambiguity case 生成脚本
+- [x] ambiguity case 生成脚本
 - [x] 失败案例记录
 - [ ] OOD / model mismatch 实验
 - [ ] calibration / abstention 实验
@@ -94,5 +94,11 @@
   - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_panel.png`
   - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_mask.png`
   - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_region_metadata.json`
+- round5 相位恢复 learned-prior 当前已落地的实体文件：
+  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_learned_prior.py`
+  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_summary.json`
+  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_case_metrics.csv`
+  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_panel.png`
+  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_ambiguity_notes.md`
 - 当前工作区未见历史 round1 / round2 实体脚本与输出文件，说明历史结果记录已保存在项目状态中，但原始归档仍需后续补齐。
 - 当前工作区也未见记忆中登记的旧 round4 实体脚本与输出文件，因此旧 round4 工件仍不能视为已现场复核归档；本轮新增的是一套新的可复核重现实验归档。

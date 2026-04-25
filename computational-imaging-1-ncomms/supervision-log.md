@@ -216,3 +216,37 @@
 
 ## 是否允许进入下一阶段
 允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。
+
+## 监督轮次 6
+- 日期：2026-04-26
+- 节点性质：相位恢复 learned-prior / ambiguity selection 初证据监督
+
+## 当前版本总体评价
+这一轮确实补上了之前最缺的一块：相位恢复不再只有 true / reversed 的等测量存在性，而是已经出现一版真实运行的 learned-prior branch-selection 结果。项目因此第一次具备了“线性任务有 learned prior unsupported structure，非线性任务也有 learned prior branch bias”的跨 forward model 初证据。但这仍然只是第一版经验结果，还不是强 solver 结果，更不是统一理论闭环。
+
+## 本轮已真实完成
+- 已在当前工作区新建并运行 `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_learned_prior.py`。
+- 已训练一版长度为 64 的非线性 autoencoder decoder prior，并在 4 个 held-out 相位恢复样例上仅通过 Fourier magnitude 测量做 latent 优化。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_summary.json`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_case_metrics.csv`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_panel.png` 与 `round5_phase_ambiguity_notes.md`。
+- 聚合结果显示：true / reversed 分支的 measurement error 为 `1.26e-16` 量级；learned prior 输出到 true branch 的平均距离为 `0.4380`，到 reversed branch 的平均距离为 `1.2072`，mean branch bias 为 `0.7692`，且 4 / 4 个样例均为正偏向。
+
+## 本轮未达标部分
+- 当前 learned prior 仍是 orientation-biased decoder prior，不是 posterior / diffusion / Bayesian baseline。
+- 当前平均 recovered measurement error 仍为 `2.52e-01`，说明它还不是低误差强求解器。
+- 当前相位恢复指标说明仍未正式接入 DSI / PDR / HCI 推导链。
+- 图表、正文、补充材料与五审稿人循环仍未启动。
+
+## 新增风险提醒
+- 不能把 `x_true` 与 `x_rev` 的精确测量等价，与 `x_hat` 对 true branch 的经验偏向混写成同一种“已证明结论”。
+- 当前 round5 的 branch bias 强，但 measurement error 仍不低；如果写作时忽略这一点，会把“branch preference”误包装成“高质量 reconstruction”。
+- 当前 phase 结果只覆盖一类 orientation-biased toy family，不能直接外推为一般 phase retrieval learned prior 定理。
+
+## 必须纠正项
+1. 下一轮必须把 phase ambiguity 的 exact quantity 与 empirical quantity 写成统一、可检查的说明。
+2. 不得把 round5 结果写成“phase retrieval 深度先验已经证明理论成立”。
+3. 在 measurement error 口径与适用边界未写清前，不得把当前 panel 直接升级成正文定稿图。
+
+## 是否允许进入下一阶段
+允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。

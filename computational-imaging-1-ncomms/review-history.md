@@ -63,3 +63,10 @@
 - 该结果使线性 benchmark 首次具备“measurement consistency 与 unsupported bridge hallucination 可同时成立”的统一口径。
 - 但由于相位恢复 learned prior / posterior baseline 仍缺失、DSI/PDR/HCI 仍未完成完整推导、正文与补图仍缺失，正式五审稿人循环仍不能启动。
 - 当前最近的预审判断仍为：不具备进入正式五审稿人并行评审的条件。
+
+## 预审备注（round5 相位恢复 learned-prior branch bias 后）
+- 当前工作区已新增一套可复核的 round5 相位恢复工件，并首次把 true / reversed 精确 ambiguity 与 learned-prior branch selection 放到同一 measurement-error 口径下比较。
+- round5 在 4 个 held-out 样例上的聚合结果为：true / reversed 的 measurement error `1.26e-16` 量级，learned prior 输出的平均 measurement error `2.52e-01`，到 true branch 的平均距离 `0.4380`，到 reversed branch 的平均距离 `1.2072`，mean branch bias `0.7692`，且 4 / 4 个样例均为正偏向。
+- 该结果说明：相位恢复中的 learned prior branch selection 已从“纯存在性”推进到“真实经验结果”。
+- 但由于当前 baseline 仍是 toy decoder prior、measurement error 仍不低、统一理论指标接口仍未完成、正文与补图仍缺失，正式五审稿人循环仍不能启动。
+- 当前最近的预审判断仍为：不具备进入正式五审稿人并行评审的条件。

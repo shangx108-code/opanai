@@ -9,34 +9,34 @@
 - 优先级：最高
 
 ## 理论人员
-- 当前任务：把相位恢复最小任务中的 ambiguity branch 从“存在性证明”推进到“可量化的 learned-prior 偏向判据”
+- 当前任务：把 round5 相位恢复结果写成统一、可检查的 phase ambiguity 指标说明，明确 exact 结论与 empirical 结论的边界
 - 输入：统一 forward model、线性与非线性任务定义、likelihood / prior 形式
 - 输出：
   - phase retrieval 中 true / reversed ambiguity branch 的统一符号表
-  - measurement-equivalent branch 与 learned-prior selected branch 的距离定义
-  - 相位恢复 reversed ambiguity 的测量等价说明
+  - exact ambiguity quantity 与 empirical branch-selection quantity 的区分说明
+  - `recovered_measurement_error`、`distance_to_true`、`distance_to_reversed`、`branch_bias` 的正式定义
   - 相位恢复局部指标与 DSI / ambiguity branch 的第一版接口说明
 - 完成标准：
   - 每个关键结论都有连续推导，而不是概念口号
   - 清楚区分已证明结果、近似结果和待验证命题
-- 依赖：forward model 设定与实验场景固定
+- 依赖：round5 结果已固定
 - 优先级：P1
 
 ## 代码与数值计算人员
-- 当前任务：落地一版当前环境可真实运行的 phase-retrieval learned-prior / ambiguity baseline
+- 当前任务：审计并补强 round5 相位恢复 learned-prior baseline 的 measurement consistency 口径，为下一轮 solver 强化做准备
 - 输入：任务定义、噪声模型、baseline 清单
 - 输出：
-  - phase-retrieval baseline 脚本及结果文件
-  - true / reversed / learned prior 三方对照指标
-  - 运行日志与失败案例表
+  - round5 脚本与输出字段说明
+  - latent restarts / measurement error 的诊断记录
+  - 是否需要下一轮优先降低 measurement error 的判断依据
 - 完成标准：
-  - 至少一组结果能展示“相同或近似相同测量对应不同结构”的 learned-prior 偏向案例
-  - 输出字段能直接映射到理论人员定义的 branch 指标
+  - 现有输出字段能直接映射到理论人员定义的 branch 指标
+  - 明确当前 baseline 的能力边界，而不是含糊写成“已解决”
 - 依赖：理论人员给出统一评价指标
-- 优先级：P1
+- 优先级：P2
 
 ## 数据分析人员
-- 当前任务：对 true branch、reversed branch 与 learned prior 输出的关系做结构性判读
+- 当前任务：把 round5 的 branch bias 与 measurement error 组合成可写入 Results 的结构化结论
 - 输入：baseline 输出、误差图、数据一致性指标、posterior variance 或 sample spread
 - 输出：
   - branch distance 对照表
@@ -102,18 +102,18 @@
 ## 当前依赖主链
 1. 统筹者锁定“从 toy prior 走向学习型 prior”的升级路线
 2. 线性 benchmark 已形成可复核区域定义与指标输出
-3. 代码与数值计算人员在 phase retrieval 最小任务上接入真实 learned prior / decoder prior baseline
-4. 理论人员把 phase ambiguity 与 learned-prior branch selection 写成统一判据
+3. 代码与数值计算人员已在 phase retrieval 最小任务上接入真实 learned decoder prior baseline，并跑出 round5 结果
+4. 理论人员把 phase ambiguity 的 exact quantity 与 learned-prior branch-selection quantity 写成统一判据
 5. 数据分析人员建立 branch distance 与 measurement consistency 对照表
 6. 画图人员定义 Figure 2 / Figure 4 的正式面板结构
 6. 撰写人员再写结果段与方法段
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：把相位恢复任务推进到 learned-prior / ambiguity selection 级真实结果
+- 任务名称：把 round5 相位恢复结果推进到统一、可检查的 phase ambiguity 指标说明
 - 负责人：统筹者 + 理论人员 + 代码与数值计算人员
 - 预期输出：
-  - 可运行的相位恢复 learned-prior baseline
-  - true / reversed / learned prior 三方对照结果
-  - 与 phase ambiguity 指标一一对应的计算说明
+  - exact / empirical phase ambiguity 量的区分说明
+  - 与 round5 输出字段一一对应的指标定义
+  - 下一轮是否优先强化 solver 的判断依据
 - 完成标准：
-  - 不是“存在歧义”的口头复述，而是“真实跑出 learned-prior 对歧义分支的偏向结果”
+  - 不是“看图解释”的口头复述，而是“把 round5 的真实结果写成可检查判据”
