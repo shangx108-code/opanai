@@ -3,7 +3,7 @@
 ## Supervision Entry 2026-04-25
 
 ### Current Version Overall Evaluation
-- The project has advanced beyond figure consolidation. Figure 3 now has a reviewer-safe subsection draft and tightened caption, so the evidence chain reaches from quantitative comparison to manuscript-ready interpretation.
+- The project has advanced beyond standalone packages. The paper now has one continuous manuscript integration draft, so the evidence chain runs from editorial positioning through Figure 3 to the first task-level consequence without a narrative break.
 
 ### Newly Verified Facts
 - The real project materials were recoverable inside the Nature Photonics-only namespace under `photonic-activation-natphoton`.
@@ -12,6 +12,7 @@
 - This run revised that package into insertable manuscript prose with an evidence-bounded caption and claim sentence.
 - The project-specific namespace also already contains a real minimal task-level benchmark with saved summary tables and interpretation bounds.
 - This run also produced a checked literature-positioning paragraph using recent comparison papers from Nature Photonics (2024, 2025) and Nature Communications (2025).
+- This run fused that verified literature block, the Figure-3 package, and the task-level benchmark package into one continuous manuscript integration draft.
 
 ### What Is Genuinely At Standard
 - A lower bound plus two concrete measurement routes now exist on the same axes.
@@ -19,26 +20,27 @@
 - A figure candidate now exists as an actual rendered object, not just a planned panel.
 - The figure is now accompanied by manuscript text that states the detector-driven `1/eta` penalty and the route-dependent prefactor without claiming universal receiver optimality.
 - The project now has a reviewer-safe paragraph saying exactly what recent nearby papers already establish and why this manuscript's contribution is instead a cross-architecture resource framework plus bounded task-level design consequence.
+- The project now has a continuous manuscript-grade narrative that carries the reader from the Introduction gap to the mixed task-level result without changing the bounded numerical or theoretical claim set.
 
 ### What Is Not Yet At Standard
 - A task-level benchmark exists, but it is not yet integrated into the top-level manuscript-facing package strongly enough to satisfy journal-level presentation standards.
-- No full-manuscript integration or rendered manuscript PDF yet demonstrates that this new subsection fits the paper-level narrative cleanly.
+- No full-manuscript source or rendered manuscript PDF yet demonstrates that the new continuous draft fits a submission-like paper shell cleanly.
 
 ### Core Quality Risk
-- The next quality risk is no longer missing external positioning. It is narrative fragmentation: the paper could still be rejected if the new verified paragraph, Figure-3 package, and task-level benchmark remain disconnected packages rather than one clean manuscript argument.
+- The next quality risk is no longer narrative fragmentation at the paragraph level. It is packaging incompleteness: the project could still be rejected if the continuous draft remains outside a renderable manuscript source and PDF-level paper package.
 
 ### Evidence-Chain Gap
-- The missing link is now manuscript-level continuity from literature gap to single-neuron design law to task-level consequence.
+- The missing link is now manuscript-file embodiment of the new continuity, including section ordering, figure-number references, and renderable source.
 
 ### Must-Correct Item
-- The next run must integrate the verified literature paragraph with the current Figure-3 and task-level packages into one continuous manuscript section.
+- The next run must embed the new continuous draft into a full manuscript source and render the first manuscript PDF.
 
 ### Priority Adjustment
-- The single main bottleneck is now manuscript integration around the finished Figure-3 claim and the newly positioned task-level result.
-- Further expanding benchmarks before building that integrated manuscript flow would dilute progress.
+- The single main bottleneck is now full-manuscript source assembly around the finished integrated draft.
+- Further expanding benchmarks before producing the first paper-level source and PDF would dilute progress.
 
 ### Allowed To Enter Next Stage?
-- Yes. The project may now move from Figure-3 Results writing into literature-positioning and manuscript-integration work.
+- Yes. The project may now move from integration drafting into manuscript source assembly and first-render validation.
 
 ### Next Supervision Focus
-- Check whether the next writing pass fuses literature separation, Figure 3, and the task-level result into one coherent Nature Photonics narrative without mutating the bounded claim set.
+- Check whether the next source-assembly pass preserves the new narrative continuity while remaining faithful to the bounded claim set and numerical evidence.

@@ -164,3 +164,48 @@
 
 ## Next Immediate Review-Driven Action
 - Integrate the verified literature-positioning block into a continuous manuscript flow with Figure 3 and the task-level benchmark before adding new benchmarks.
+
+## Round 4 Continuous-Integration-Draft Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only, using the verified literature-positioning block, Figure-3 submission package, task-level benchmark summary, and the new continuous manuscript integration draft
+
+### Material Reviewed
+- verified literature-positioning package
+- Figure-3 submission package
+- task-level benchmark summary
+- manuscript spine
+- revised `manuscript-integration-draft.md`
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: the manuscript now explains more cleanly why its contribution is a resource-and-regime design law rather than another generic photonic nonlinearity demonstration.
+- Acceptance estimate: 52%
+- Main reason: editorial differentiation is now carried into the paper flow itself, but the work still lacks a full manuscript source and rendered package.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: the mechanism story is now more convincing because the Introduction claim, Fig. 3 design law, and Fig. 4 systems consequence are stitched together without widening the theorem boundary.
+- Acceptance estimate: 58%
+- Main reason: claim discipline improved materially, but source-level integration and supplement-level derivation packaging are still incomplete.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: the manuscript now uses the existing numerical evidence more honestly and coherently, but the computational package itself is unchanged.
+- Acceptance estimate: 46%
+- Main reason: no new computation or robustness scan was added in this run, so confidence rises only modestly from improved evidence presentation.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: the positive and negative task-level outcomes now read as a real follow-through from Fig. 3 rather than as an unrelated toy benchmark.
+- Acceptance estimate: 54%
+- Main reason: result continuity improved, but there is still no rendered manuscript or final figure-numbered package.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: the project now reads much more like a paper and much less like a stack of notes.
+- Acceptance estimate: 57%
+- Main reason: prose continuity improved significantly, but the absence of a full manuscript source and PDF still blocks submission-readiness.
+
+## Updated Summary
+- Genuine completion in this run: one continuous manuscript integration draft now exists, spanning end-of-Introduction through Fig. 4 and Discussion carry-through.
+- Still incomplete: full manuscript source, rendered manuscript PDF, supplement package, and final archive.
+- Current five-reviewer range: `46-58%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
+## Next Immediate Review-Driven Action
+- Embed the continuous integration draft into a full manuscript source and render the first manuscript PDF before expanding the evidence base further.

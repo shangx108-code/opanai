@@ -1,7 +1,7 @@
 # Nature Photonics Archive Checklist
 
 ## Archive Status
-- Checklist updated on 2026-04-25 after Figure-3 Results-writing pass.
+- Checklist updated on 2026-04-25 after continuous manuscript integration drafting.
 
 ## Present In Namespace
 - [x] Project state file
@@ -24,6 +24,7 @@
 - [x] Figure-3 revised caption draft
 - [x] Figure-3 insertable claim sentence
 - [x] Verified literature-positioning paragraph
+- [x] Continuous manuscript integration draft
 
 ## Still Missing
 - [ ] Current manuscript source
