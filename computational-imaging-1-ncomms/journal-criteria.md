@@ -86,6 +86,7 @@
 
 ## 当前阶段性补充判断
 - 线性任务已出现从 hand-crafted prior -> PCA prior -> 非线性 autoencoder prior 的递进证据，这有助于证明 unsupported hallucination 不只来自手工候选库。
+- 线性任务现已进一步补上 measurement-consistent latent inverse 基线，这意味着“观测区严格一致时仍出现 bridge hallucination”的现象已不再局限于前馈补全器。
 - 但 Nature Communications 级别仍要求更强的方法学闭环：measurement-consistent 深度先验 / posterior baseline、跨任务结果链、理论推导、正文与补图全部成体系。
 - 因此当前进展只能视为“提高了方法可靠性证据”，不能视为“已达到投稿门槛”。
 

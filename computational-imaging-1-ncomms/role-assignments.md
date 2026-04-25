@@ -9,12 +9,12 @@
 - 优先级：最高
 
 ## 理论人员
-- 当前任务：把线性 observation mask 下的 zero-fill / PCA / autoencoder 差异转写成第一版可计算判据
+- 当前任务：把线性 observation mask 下的 zero-fill / PCA / autoencoder / latent inverse 差异转写成第一版可计算判据
 - 输入：统一 forward model、线性与非线性任务定义、likelihood / prior 形式
 - 输出：
   - 统一数学符号表
   - 线性 incomplete measurement 下的 data-supported / unsupported 区域判据
-  - bridge intensity 与 unsupported-region error 的定义草案
+  - bridge intensity、unsupported-region error 与 observed-region error 的定义草案
   - 相位恢复 reversed ambiguity 的测量等价说明
   - DSI / ambiguity branch 的第一版数学说明
 - 完成标准：
@@ -24,26 +24,27 @@
 - 优先级：P1
 
 ## 代码与数值计算人员
-- 当前任务：把线性任务从前馈式学习型先验继续升级到 measurement-consistent 的优化式 learned prior
+- 当前任务：维护 round4 线性 benchmark 结果可复核性，并为下一轮指标公式化提供一致的数据接口
 - 输入：任务定义、噪声模型、baseline 清单
 - 输出：
-  - 已完成的 autoencoder prior 脚本与结果文件
-  - 下一轮优化式 learned prior 接口
+  - 已完成的 autoencoder prior 与 latent inverse prior 脚本及结果文件
+  - 下一轮统一指标计算接口
   - iterative phase-retrieval baseline
   - 运行日志与失败案例表
 - 完成标准：
-  - 当前线性任务基础上能接入 measurement-consistent learned prior
-  - 输入输出接口明确
+  - 当前线性任务基础上已经产出 measurement-consistent learned prior 真实结果
+  - round4 结果字段与像素区域能够无歧义映射到理论定义
   - 至少一组结果能展示“相同或近似相同测量对应不同结构”的案例
-- 依赖：理论人员给出任务参数与评价指标
+- 依赖：理论人员给出统一评价指标
 - 优先级：P1
 
 ## 数据分析人员
-- 当前任务：对 zero-fill、PCA prior 与 autoencoder prior 的差异做结构性判读，特别是区分观测区与未观测区误差
+- 当前任务：对 zero-fill、PCA prior、autoencoder projection 与 latent inverse 的差异做结构性判读，特别是区分观测区与未观测区误差
 - 输入：baseline 输出、误差图、数据一致性指标、posterior variance 或 sample spread
 - 输出：
   - observed / unsupported 区域误差对照表
   - bridge intensity 指标表
+  - round4 四方法对照解读
   - 第一版高风险失败案例归纳
 - 完成标准：
   - 能区分普通误差与疑似 hallucination
@@ -52,7 +53,7 @@
 - 优先级：P2
 
 ## 画图人员
-- 当前任务：把第 1 轮内部实验图转化为 Figure 1 / Figure 2 的雏形需求
+- 当前任务：把 round4 线性结果转化为 Figure 2 理论-现象联动图的字段需求，而不是提前定稿
 - 输入：图 1-6 草案、统一变量命名、配色与面板逻辑
 - 输出：
   - 图表风格规范
@@ -109,11 +110,11 @@
 6. 撰写人员再写结果段与方法段
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：把线性最小 benchmark 升级为 measurement-consistent learned prior 验证平台
-- 负责人：统筹者 + 代码与数值计算人员 + 理论人员
+- 任务名称：把 round4 线性四方法结果写成统一可计算判据
+- 负责人：统筹者 + 理论人员 + 代码与数值计算人员
 - 预期输出：
-  - 优化式 learned prior 版本的线性任务结果
-  - 与 zero-fill、PCA prior、autoencoder prior 的同任务对照结果
-  - unsupported region 与 bridge intensity 的第一版量化说明
+  - observed / unsupported / bridge 三类区域的正式定义
+  - 与 round4 数据字段一一对应的指标计算式
+  - 能直接接到结果段与方法段的定义说明
 - 完成标准：
-  - 不是“想好怎么做”，而是“真实运行并产生新结果”
+  - 不是“想好怎么写”，而是“给出可检查公式并和真实结果文件对齐”

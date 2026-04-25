@@ -122,3 +122,34 @@
 
 ## 是否允许进入下一阶段
 允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。
+
+## 监督轮次 3
+- 日期：2026-04-25
+- 节点性质：measurement-consistent learned prior 基线监督
+
+## 当前版本总体评价
+项目在线性 benchmark 上终于补上了一类真正按测量约束做求解的 learned prior 逆问题基线。这是有效补强，但目前提升的是“现象可靠性”，还不是“理论闭环完成”。
+
+## 本轮已真实完成
+- 已在当前工作区新建并运行 `round4_linear_measurement_consistent_prior.py`。
+- 已在 6 个断裂目标上统一对照 zero-fill、PCA prior、autoencoder projection 与 measurement-consistent latent inverse。
+- 已生成 `round4_summary.json`、`round4_case_metrics.csv`、`round4_linear_measurement_consistent_panel.png` 与 `round4_linear_measurement_mask.png`。
+- latent inverse 的聚合结果为：观测区 MAE `0.0000`，未观测区 MAE `0.4891`，bridge mean intensity `0.4964`。
+
+## 本轮未达标部分
+- unsupported region / bridge intensity 仍只是经验性指标，没有正式定义。
+- latent inverse 仍只在线性 benchmark 上成立，未扩展到相位恢复 learned prior / posterior baseline。
+- DSI / PDR / HCI 仍无详细推导。
+- 正文与补充材料图仍未成体系。
+
+## 新增风险提醒
+- 当前 zero-fill 的未观测区 MAE 为 `0.0000`，因为 benchmark 的 ground truth 本身就是断裂目标；这意味着后续写作必须明确区分“重建误差最小”和“unsupported bridge hallucination 最强”不是同一个命题。
+- 如果下一轮不把区域定义与指标公式化，round4 结果仍只能作为现象图，不能进入理论主张。
+
+## 必须纠正项
+1. 下一轮必须把 observed / unsupported / bridge 三类区域的定义固定下来。
+2. 不得把 round4 结果直接写成“measurement-consistent 深度先验已经证明理论成立”。
+3. 必须在结果叙述中明确 benchmark 的 ground truth 是断裂目标，因此 bridge intensity 才是当前 hallucination 现象的关键量之一。
+
+## 是否允许进入下一阶段
+允许继续停留在“理论强化与最小结果生成阶段”，仍不允许进入“图表完善完成”或“成稿”阶段。

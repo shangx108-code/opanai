@@ -49,3 +49,10 @@
 - autoencoder prior 在 6 个断裂目标上保持观测区误差为 0，但未观测区平均 MAE 上升到 `0.2356`，bridge mean intensity 为 `0.3417`，说明 learned prior 的 unsupported hallucination 现象确已进入训练型模型层面。
 - 但该结果仍不等同于 DIP、diffusion prior、PnP 或 Bayesian posterior baseline，因此正式五审稿人循环仍不能启动。
 - 当前最近的预审判断仍为：不具备进入正式五审稿人并行评审的条件。
+
+## 预审备注（round4 measurement-consistent latent inverse 后）
+- 线性任务已新增一类 measurement-consistent learned prior 逆问题基线，并形成 zero-fill / PCA / autoencoder projection / latent inverse 四方对照。
+- latent inverse 在 6 个断裂目标上的聚合结果为：观测区 MAE `0.0000`，未观测区 MAE `0.4891`，bridge mean intensity `0.4964`。
+- 该结果表明：即使在观测区严格一致的条件下，learned prior 仍可能在 bridge 区域生成 unsupported structure。
+- 但由于当前指标尚未形式化、相位恢复 learned prior 尚未补齐、正文与补图体系仍缺失，正式五审稿人循环仍不能启动。
+- 当前最近的预审判断仍为：不具备进入正式五审稿人并行评审的条件。

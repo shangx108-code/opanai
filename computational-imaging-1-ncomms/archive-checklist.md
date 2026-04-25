@@ -80,4 +80,10 @@
   - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_summary.json`
   - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_case_metrics.csv`
   - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_linear_autoencoder_panel.png`
+- round4 当前已落地的实体文件：
+  - `/workspace/computational-imaging-1-ncomms/round4_linear_measurement_consistent_prior.py`
+  - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_summary.json`
+  - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_case_metrics.csv`
+  - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_linear_measurement_consistent_panel.png`
+  - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_linear_measurement_mask.png`
 - 当前工作区未见历史 round1 / round2 实体脚本与输出文件，说明历史结果记录已保存在项目状态中，但原始归档仍需后续补齐。
