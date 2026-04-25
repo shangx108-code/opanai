@@ -1,0 +1,259 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+<rect width="100%" height="100%" fill="#ffffff" />
+<text x="100.00" y="44.00" font-family="Helvetica, Arial, sans-serif" font-size="26" text-anchor="start" font-weight="700" fill="#111827">Figure 4 candidate | Task-level value of activation under a fixed photon budget</text>
+<text x="100.00" y="74.00" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="start" font-weight="400" fill="#111827">Margins are measured against the task-specific linear no-activation baseline using the saved minimal benchmark outputs.</text>
+<text x="100.00" y="98.00" font-family="Helvetica, Arial, sans-serif" font-size="15" text-anchor="start" font-weight="400" fill="#111827">Line color denotes detector efficiency eta. Marker shape denotes the best implementable route at that setting.</text>
+<text x="55.00" y="147.00" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" font-weight="700" fill="#111827">a</text>
+<text x="690.00" y="147.00" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" font-weight="700" fill="#111827">b</text>
+<text x="55.00" y="602.00" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="start" font-weight="700" fill="#111827">c</text>
+<text x="100.00" y="141.00" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="start" font-weight="600" fill="#111827">two_moons | strong linear baseline</text>
+<rect x="100.00" y="165.00" width="525.00" height="330.00" fill="#ffffff" stroke="#111827" stroke-width="1.40" rx="4" ry="4" />
+<rect x="100.00" y="165.00" width="525.00" height="192.50" fill="#ecfeff" stroke="none" stroke-width="0.00" rx="4" ry="4" />
+<rect x="100.00" y="357.50" width="525.00" height="137.50" fill="#fef2f2" stroke="none" stroke-width="0.00" rx="4" ry="4" />
+<line x1="100.00" y1="495.00" x2="625.00" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="88.00" y="500.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">-0.3</text>
+<line x1="100.00" y1="449.17" x2="625.00" y2="449.17" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="88.00" y="454.17" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">-0.2</text>
+<line x1="100.00" y1="403.33" x2="625.00" y2="403.33" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="88.00" y="408.33" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">-0.1</text>
+<line x1="100.00" y1="357.50" x2="625.00" y2="357.50" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="88.00" y="362.50" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.0</text>
+<line x1="100.00" y1="311.67" x2="625.00" y2="311.67" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="88.00" y="316.67" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.1</text>
+<line x1="100.00" y1="265.83" x2="625.00" y2="265.83" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="88.00" y="270.83" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.2</text>
+<line x1="100.00" y1="220.00" x2="625.00" y2="220.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="88.00" y="225.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.3</text>
+<line x1="100.00" y1="174.17" x2="625.00" y2="174.17" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="88.00" y="179.17" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.4</text>
+<line x1="120.00" y1="165.00" x2="120.00" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="120.00" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">1</text>
+<line x1="241.25" y1="165.00" x2="241.25" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="241.25" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">2</text>
+<line x1="362.50" y1="165.00" x2="362.50" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="362.50" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">4</text>
+<line x1="483.75" y1="165.00" x2="483.75" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="483.75" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">8</text>
+<line x1="605.00" y1="165.00" x2="605.00" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="605.00" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">16</text>
+<text x="362.50" y="551.00" font-family="Helvetica, Arial, sans-serif" font-size="17" text-anchor="middle" font-weight="400" fill="#111827">Total activation budget per inference</text>
+<text x="32.00" y="330.00" font-family="Helvetica, Arial, sans-serif" font-size="17" text-anchor="middle" font-weight="400" fill="#111827">Accuracy margin vs linear baseline</text>
+<polyline fill="none" stroke="#0f766e" stroke-width="3.40" points="120.00,456.04 241.25,434.39 362.50,416.51 483.75,384.08 605.00,359.56" />
+<circle cx="120.00" cy="456.04" r="6.00" fill="#0f766e" stroke="#0f172a" stroke-width="1.80" />
+<text x="120.00" y="444.04" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">4</text>
+<polygon points="241.25,427.59 248.05,434.39 241.25,441.19 234.45,434.39" fill="#0f766e" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="241.25" y="422.39" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">4</text>
+<polygon points="362.50,409.71 369.30,416.51 362.50,423.31 355.70,416.51" fill="#0f766e" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="362.50" y="404.51" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">4</text>
+<circle cx="483.75" cy="384.08" r="6.00" fill="#0f766e" stroke="#0f172a" stroke-width="1.80" />
+<text x="483.75" y="372.08" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<polygon points="605.00,352.76 611.80,359.56 605.00,366.36 598.20,359.56" fill="#0f766e" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="605.00" y="347.56" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<polyline fill="none" stroke="#14b8a6" stroke-width="3.40" points="120.00,466.93 241.25,445.61 362.50,421.67 483.75,399.55 605.00,374.00" />
+<circle cx="120.00" cy="466.93" r="6.00" fill="#14b8a6" stroke="#0f172a" stroke-width="1.80" />
+<text x="120.00" y="454.93" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">4</text>
+<polygon points="241.25,438.81 248.05,445.61 241.25,452.41 234.45,445.61" fill="#14b8a6" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="241.25" y="433.61" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">4</text>
+<polygon points="362.50,414.87 369.30,421.67 362.50,428.47 355.70,421.67" fill="#14b8a6" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="362.50" y="409.67" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">4</text>
+<circle cx="483.75" cy="399.55" r="6.00" fill="#14b8a6" stroke="#0f172a" stroke-width="1.80" />
+<text x="483.75" y="387.55" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<polygon points="605.00,367.20 611.80,374.00 605.00,380.80 598.20,374.00" fill="#14b8a6" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="605.00" y="362.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<polyline fill="none" stroke="#99f6e4" stroke-width="3.40" points="120.00,476.78 241.25,459.02 362.50,436.33 483.75,411.81 605.00,388.44" />
+<circle cx="120.00" cy="476.78" r="6.00" fill="#99f6e4" stroke="#0f172a" stroke-width="1.80" />
+<text x="120.00" y="464.78" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">4</text>
+<circle cx="241.25" cy="459.02" r="6.00" fill="#99f6e4" stroke="#0f172a" stroke-width="1.80" />
+<text x="241.25" y="447.02" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">4</text>
+<polygon points="362.50,429.53 369.30,436.33 362.50,443.13 355.70,436.33" fill="#99f6e4" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="362.50" y="424.33" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">4</text>
+<circle cx="483.75" cy="411.81" r="6.00" fill="#99f6e4" stroke="#0f172a" stroke-width="1.80" />
+<text x="483.75" y="399.81" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<circle cx="605.00" cy="388.44" r="6.00" fill="#99f6e4" stroke="#0f172a" stroke-width="1.80" />
+<text x="605.00" y="376.44" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<rect x="360.00" y="193.00" width="235.00" height="34.00" fill="#fff7ed" stroke="#cbd5e1" stroke-width="1.00" rx="4" ry="4" />
+<text x="478.00" y="215.00" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="600" fill="#111827">Activation clearly worth paying for in 0/15 settings</text>
+<text x="735.00" y="141.00" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="start" font-weight="600" fill="#111827">concentric_circles | weak linear baseline</text>
+<rect x="735.00" y="165.00" width="525.00" height="330.00" fill="#ffffff" stroke="#111827" stroke-width="1.40" rx="4" ry="4" />
+<rect x="735.00" y="165.00" width="525.00" height="192.50" fill="#ecfeff" stroke="none" stroke-width="0.00" rx="4" ry="4" />
+<rect x="735.00" y="357.50" width="525.00" height="137.50" fill="#fef2f2" stroke="none" stroke-width="0.00" rx="4" ry="4" />
+<line x1="735.00" y1="495.00" x2="1260.00" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="723.00" y="500.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">-0.3</text>
+<line x1="735.00" y1="449.17" x2="1260.00" y2="449.17" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="723.00" y="454.17" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">-0.2</text>
+<line x1="735.00" y1="403.33" x2="1260.00" y2="403.33" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="723.00" y="408.33" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">-0.1</text>
+<line x1="735.00" y1="357.50" x2="1260.00" y2="357.50" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="723.00" y="362.50" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.0</text>
+<line x1="735.00" y1="311.67" x2="1260.00" y2="311.67" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="723.00" y="316.67" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.1</text>
+<line x1="735.00" y1="265.83" x2="1260.00" y2="265.83" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="723.00" y="270.83" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.2</text>
+<line x1="735.00" y1="220.00" x2="1260.00" y2="220.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="723.00" y="225.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.3</text>
+<line x1="735.00" y1="174.17" x2="1260.00" y2="174.17" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="723.00" y="179.17" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" font-weight="400" fill="#111827">0.4</text>
+<line x1="755.00" y1="165.00" x2="755.00" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="755.00" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">1</text>
+<line x1="876.25" y1="165.00" x2="876.25" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="876.25" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">2</text>
+<line x1="997.50" y1="165.00" x2="997.50" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="997.50" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">4</text>
+<line x1="1118.75" y1="165.00" x2="1118.75" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="1118.75" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">8</text>
+<line x1="1240.00" y1="165.00" x2="1240.00" y2="495.00" stroke="#e5e7eb" stroke-width="1.00" />
+<text x="1240.00" y="521.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="400" fill="#111827">16</text>
+<text x="997.50" y="551.00" font-family="Helvetica, Arial, sans-serif" font-size="17" text-anchor="middle" font-weight="400" fill="#111827">Total activation budget per inference</text>
+<polyline fill="none" stroke="#0f766e" stroke-width="3.40" points="755.00,319.92 876.25,296.77 997.50,266.41 1118.75,227.91 1240.00,186.54" />
+<circle cx="755.00" cy="319.92" r="6.00" fill="#0f766e" stroke="#0f172a" stroke-width="1.80" />
+<text x="755.00" y="307.92" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">8</text>
+<circle cx="876.25" cy="296.77" r="6.00" fill="#0f766e" stroke="#0f172a" stroke-width="1.80" />
+<text x="876.25" y="284.77" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<circle cx="997.50" cy="266.41" r="6.00" fill="#0f766e" stroke="#0f172a" stroke-width="1.80" />
+<text x="997.50" y="254.41" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<circle cx="1118.75" cy="227.91" r="6.00" fill="#0f766e" stroke="#0f172a" stroke-width="1.80" />
+<text x="1118.75" y="215.91" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<polygon points="1240.00,179.74 1246.80,186.54 1240.00,193.34 1233.20,186.54" fill="#0f766e" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="1240.00" y="174.54" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<polyline fill="none" stroke="#14b8a6" stroke-width="3.40" points="755.00,316.94 876.25,307.66 997.50,278.09 1118.75,252.20 1240.00,214.73" />
+<circle cx="755.00" cy="316.94" r="6.00" fill="#14b8a6" stroke="#0f172a" stroke-width="1.80" />
+<text x="755.00" y="304.94" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<circle cx="876.25" cy="307.66" r="6.00" fill="#14b8a6" stroke="#0f172a" stroke-width="1.80" />
+<text x="876.25" y="295.66" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<circle cx="997.50" cy="278.09" r="6.00" fill="#14b8a6" stroke="#0f172a" stroke-width="1.80" />
+<text x="997.50" y="266.09" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<circle cx="1118.75" cy="252.20" r="6.00" fill="#14b8a6" stroke="#0f172a" stroke-width="1.80" />
+<text x="1118.75" y="240.20" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<circle cx="1240.00" cy="214.73" r="6.00" fill="#14b8a6" stroke="#0f172a" stroke-width="1.80" />
+<text x="1240.00" y="202.73" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<polyline fill="none" stroke="#99f6e4" stroke-width="3.40" points="755.00,325.07 876.25,314.53 997.50,292.42 1118.75,279.47 1240.00,235.12" />
+<circle cx="755.00" cy="325.07" r="6.00" fill="#99f6e4" stroke="#0f172a" stroke-width="1.80" />
+<text x="755.00" y="313.07" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<circle cx="876.25" cy="314.53" r="6.00" fill="#99f6e4" stroke="#0f172a" stroke-width="1.80" />
+<text x="876.25" y="302.53" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">8</text>
+<circle cx="997.50" cy="292.42" r="6.00" fill="#99f6e4" stroke="#0f172a" stroke-width="1.80" />
+<text x="997.50" y="280.42" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<polygon points="1118.75,272.67 1125.55,279.47 1118.75,286.27 1111.95,279.47" fill="#99f6e4" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="1118.75" y="267.47" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">8</text>
+<circle cx="1240.00" cy="235.12" r="6.00" fill="#99f6e4" stroke="#0f172a" stroke-width="1.80" />
+<text x="1240.00" y="223.12" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#334155">32</text>
+<rect x="995.00" y="173.00" width="235.00" height="34.00" fill="#ecfeff" stroke="#cbd5e1" stroke-width="1.00" rx="4" ry="4" />
+<text x="1113.00" y="195.00" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" font-weight="600" fill="#111827">Activation clearly worth paying for in 15/15 settings</text>
+<rect x="725.00" y="94.00" width="455.00" height="54.00" fill="#ffffff" stroke="#d1d5db" stroke-width="1.00" rx="4" ry="4" />
+<line x1="741.00" y1="118.00" x2="775.00" y2="118.00" stroke="#0f766e" stroke-width="3.40" />
+<text x="785.00" y="123.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="400" fill="#111827">eta = 0.99</text>
+<line x1="861.00" y1="118.00" x2="895.00" y2="118.00" stroke="#14b8a6" stroke-width="3.40" />
+<text x="905.00" y="123.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="400" fill="#111827">eta = 0.70</text>
+<line x1="981.00" y1="118.00" x2="1015.00" y2="118.00" stroke="#99f6e4" stroke-width="3.40" />
+<text x="1025.00" y="123.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="400" fill="#111827">eta = 0.50</text>
+<circle cx="1106.00" cy="118.00" r="6.00" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.80" />
+<text x="1121.00" y="123.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="400" fill="#111827">homodyne best</text>
+<polygon points="1106.00,133.20 1112.80,140.00 1106.00,146.80 1099.20,140.00" fill="#e2e8f0" stroke="#7f1d1d" stroke-width="1.80" />
+<text x="1121.00" y="145.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="400" fill="#111827">on-off best</text>
+<text x="100.00" y="596.00" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="start" font-weight="600" fill="#111827">Route preference map: sign of (on-off accuracy - homodyne accuracy)</text>
+<text x="100.00" y="780.00" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" font-weight="400" fill="#111827">Budget blocks are grouped by detector efficiency eta = 0.99, 0.70, 0.50 from left to right.</text>
+<text x="86.00" y="644.00" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="end" font-weight="600" fill="#111827">two_moons</text>
+<text x="280.00" y="610.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="600" fill="#111827">eta = 0.99</text>
+<rect x="100.00" y="620.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="133.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=1</text>
+<text x="133.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.001</text>
+<rect x="172.00" y="620.00" width="66.00" height="38.00" fill="#fecaca" stroke="#b91c1c" stroke-width="1.00" rx="4" ry="4" />
+<text x="205.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=2</text>
+<text x="205.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">+0.021</text>
+<rect x="244.00" y="620.00" width="66.00" height="38.00" fill="#fecaca" stroke="#b91c1c" stroke-width="1.00" rx="4" ry="4" />
+<text x="277.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=4</text>
+<text x="277.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">+0.001</text>
+<rect x="316.00" y="620.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="349.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=8</text>
+<text x="349.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.018</text>
+<rect x="388.00" y="620.00" width="66.00" height="38.00" fill="#fecaca" stroke="#b91c1c" stroke-width="1.00" rx="4" ry="4" />
+<text x="421.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=16</text>
+<text x="421.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">+0.003</text>
+<text x="658.00" y="610.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="600" fill="#111827">eta = 0.70</text>
+<rect x="478.00" y="620.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="511.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=1</text>
+<text x="511.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.020</text>
+<rect x="550.00" y="620.00" width="66.00" height="38.00" fill="#fecaca" stroke="#b91c1c" stroke-width="1.00" rx="4" ry="4" />
+<text x="583.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=2</text>
+<text x="583.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">+0.007</text>
+<rect x="622.00" y="620.00" width="66.00" height="38.00" fill="#fecaca" stroke="#b91c1c" stroke-width="1.00" rx="4" ry="4" />
+<text x="655.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=4</text>
+<text x="655.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">+0.010</text>
+<rect x="694.00" y="620.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="727.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=8</text>
+<text x="727.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.032</text>
+<rect x="766.00" y="620.00" width="66.00" height="38.00" fill="#fecaca" stroke="#b91c1c" stroke-width="1.00" rx="4" ry="4" />
+<text x="799.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=16</text>
+<text x="799.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">+0.004</text>
+<text x="1036.00" y="610.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="600" fill="#111827">eta = 0.50</text>
+<rect x="856.00" y="620.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="889.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=1</text>
+<text x="889.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.035</text>
+<rect x="928.00" y="620.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="961.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=2</text>
+<text x="961.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.004</text>
+<rect x="1000.00" y="620.00" width="66.00" height="38.00" fill="#fecaca" stroke="#b91c1c" stroke-width="1.00" rx="4" ry="4" />
+<text x="1033.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=4</text>
+<text x="1033.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">+0.009</text>
+<rect x="1072.00" y="620.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="1105.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=8</text>
+<text x="1105.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.013</text>
+<rect x="1144.00" y="620.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="1177.00" y="636.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=16</text>
+<text x="1177.00" y="651.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.016</text>
+<text x="86.00" y="704.00" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="end" font-weight="600" fill="#111827">concentric_circles</text>
+<text x="280.00" y="670.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="600" fill="#111827">eta = 0.99</text>
+<rect x="100.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="133.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=1</text>
+<text x="133.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.051</text>
+<rect x="172.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="205.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=2</text>
+<text x="205.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.024</text>
+<rect x="244.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="277.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=4</text>
+<text x="277.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.021</text>
+<rect x="316.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="349.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=8</text>
+<text x="349.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.042</text>
+<rect x="388.00" y="680.00" width="66.00" height="38.00" fill="#fecaca" stroke="#b91c1c" stroke-width="1.00" rx="4" ry="4" />
+<text x="421.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=16</text>
+<text x="421.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">+0.016</text>
+<text x="658.00" y="670.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="600" fill="#111827">eta = 0.70</text>
+<rect x="478.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="511.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=1</text>
+<text x="511.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.029</text>
+<rect x="550.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="583.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=2</text>
+<text x="583.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.051</text>
+<rect x="622.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="655.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=4</text>
+<text x="655.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.026</text>
+<rect x="694.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="727.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=8</text>
+<text x="727.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.029</text>
+<rect x="766.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="799.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=16</text>
+<text x="799.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.009</text>
+<text x="1036.00" y="670.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" font-weight="600" fill="#111827">eta = 0.50</text>
+<rect x="856.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="889.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=1</text>
+<text x="889.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.014</text>
+<rect x="928.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="961.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=2</text>
+<text x="961.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.040</text>
+<rect x="1000.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="1033.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=4</text>
+<text x="1033.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.031</text>
+<rect x="1072.00" y="680.00" width="66.00" height="38.00" fill="#fecaca" stroke="#b91c1c" stroke-width="1.00" rx="4" ry="4" />
+<text x="1105.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=8</text>
+<text x="1105.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">+0.005</text>
+<rect x="1144.00" y="680.00" width="66.00" height="38.00" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.00" rx="4" ry="4" />
+<text x="1177.00" y="696.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="600" fill="#111827">B=16</text>
+<text x="1177.00" y="711.00" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="400" fill="#111827">-0.019</text>
+<rect x="960.00" y="634.00" width="330.00" height="110.00" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.00" rx="4" ry="4" />
+<text x="976.00" y="658.00" font-family="Helvetica, Arial, sans-serif" font-size="15" text-anchor="start" font-weight="600" fill="#111827">Reviewer-safe readout:</text>
+<text x="976.00" y="682.00" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" font-weight="400" fill="#111827">on-off beats homodyne in 9/30 settings.</text>
+<text x="976.00" y="704.00" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" font-weight="400" fill="#111827">The best route switches with task geometry, eta, and budget.</text>
+<text x="976.00" y="726.00" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="start" font-weight="400" fill="#111827">Single-neuron closeness to the bound does not fix system-level preference.</text>
+<text x="100.00" y="956.00" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="start" font-weight="400" fill="#111827">All values are drawn from task_level_benchmark_summary.json generated by the saved minimal benchmark. Width labels above markers denote the selected hidden-layer width for the best implementable route.</text>
+</svg>

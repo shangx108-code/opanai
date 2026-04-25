@@ -302,3 +302,52 @@
 
 ## Next Immediate Review-Driven Action
 - Build the standalone Figure-4 panel and caption package from the saved task-level benchmark outputs before adding new benchmark scope.
+
+## Round 7 Figure-4-Package Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only, using `figure4_task_level_panel.py`, the rendered Figure-4 SVG/PNG/PDF outputs, `figure4_submission_package.md`, `task_level_benchmark/task_level_benchmark_summary.json`, `manuscript-v1.md`, `manuscript-v1.pdf`, `supplement-v1.md`, and `supplement-v1.pdf`
+
+### Material Reviewed
+- `figure4_task_level_panel.py`
+- `figure4_task_level_panel/figure4_task_level_panel_data.csv`
+- `figure4_task_level_panel/figure4_task_level_panel.svg`
+- `figure4_task_level_panel/figure4_task_level_panel.png`
+- `figure4_task_level_panel/figure4_task_level_panel.pdf`
+- `figure4_submission_package.md`
+- `task_level_benchmark/task_level_benchmark_summary.json`
+- `manuscript-v1.md`
+- `supplement-v1.md`
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: the paper now presents both halves of its design-law story as real top-level figure objects, which improves editorial clarity, but the manuscript source still needs to catch up to the new package.
+- Acceptance estimate: 64%
+- Main reason: journal fit improves when the task-level consequence is no longer prose-only, yet the package still looks one step short of submission because manuscript harmonization is unfinished.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: the systems-level claim is now more credible because the mixed positive-and-negative benchmark outcome is visible at figure level with an explicit claim boundary.
+- Acceptance estimate: 67%
+- Main reason: rigor rises because the paper now exposes both the single-neuron frontier and the bounded task-level consequence in reviewer-inspectable forms, but the final integrated manuscript pass is still missing.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: trust improves modestly because the plotted Figure-4 data are tied directly to the saved benchmark summary, although no new robustness computation or broader benchmark was added.
+- Acceptance estimate: 57%
+- Main reason: the figure package strengthens inspectability, but the numerical evidence base itself remains narrow and unchanged.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: the results package is materially stronger because Figure 4 now shows the task split and route-preference map visually rather than only through prose and tables.
+- Acceptance estimate: 66%
+- Main reason: figure-level presentation improves the systems argument, but the current manuscript PDF still lacks full figure/caption harmonization.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: persuasion improves because the paper's central two-step logic is now reflected in two concrete figure packages, but the main-text source still needs a final coherence pass.
+- Acceptance estimate: 68%
+- Main reason: the manuscript story is easier to defend once Figure 4 exists as a real object, yet the submission package still does not look fully finished.
+
+## Updated Summary
+- Genuine completion in this run: the project now has a standalone Figure-4 plotting script, figure-specific data table, rendered SVG/PNG/PDF outputs, and a caption-ready submission package built directly from saved benchmark outputs.
+- Still incomplete: integration of Figure 4 into the main manuscript source, manuscript-wide caption/style harmonization, and the final archive.
+- Current five-reviewer range: `57-68%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
+## Next Immediate Review-Driven Action
+- Integrate the new Figure-4 package into the manuscript source and perform one paper-wide caption harmonization pass before expanding benchmark scope.

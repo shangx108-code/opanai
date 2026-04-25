@@ -16,14 +16,15 @@
 - A continuous manuscript integration draft now exists, so the project can present the Introduction gap, the Fig. 3 design law, and the Fig. 4 mixed task-level consequence as one coherent story.
 - A full manuscript source and first rendered manuscript PDF now exist, so the paper can be inspected as a paper-level object rather than only as manuscript fragments.
 - A first supplement source and first rendered supplement PDF now exist, so derivations, benchmark assumptions, and evidence provenance are no longer absent from the paper package.
+- A standalone Figure-4 package now exists, including figure-specific data, rendered SVG/PNG/PDF outputs, and a caption-ready submission note tied directly to the saved benchmark summary.
 
 ## Criteria Still Not Satisfied
 - Submission-grade full manuscript package with PDF, supplement, and archive bundle.
-- Manuscript-wide figure/caption harmonization and final top-level task-level figure packaging.
+- Manuscript-wide figure/caption harmonization and final manuscript integration of the new Figure-4 package.
 - Final submission archive bundle.
 
 ## Current Main Risk Relative To Journal Standard
-- The manuscript and supplement now exist, but the paper still falls short of journal standard because the task-level systems result is not yet embodied as a standalone top-level figure package and the final archive is still missing.
+- The manuscript, supplement, and both top-level figure packages now exist, but the paper still falls short of journal standard because the current manuscript source has not yet been harmonized around the new Figure-4 object and the final archive is still missing.
 
 ## Immediate Criterion To Satisfy Next
-- Build a standalone Figure-4 panel and caption package from the saved benchmark outputs so that the systems-level claim reaches the same figure-level standard as Figure 3.
+- Integrate the new Figure-4 object into the main manuscript and complete one manuscript-wide caption/style harmonization pass.

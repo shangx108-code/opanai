@@ -1,22 +1,22 @@
 # Nature Photonics Role Assignments
 
 ## Current Phase
-- Main-text manuscript and first supplement are both rendered; immediate next phase is Figure-4 packaging and manuscript-wide harmonization.
+- Main-text manuscript, first supplement, and first standalone Figure-4 package are all rendered; immediate next phase is manuscript-wide harmonization.
 
 ## Role Task Table
 
 ### Coordinator
-- Current task: convert the current paper pair into a more submission-like package by adding the missing Figure-4 manuscript object and keeping cross-references stable.
-- Input: `manuscript-v1.md`, `supplement-v1.md`, task-level benchmark outputs, journal criteria.
-- Output: one standalone Figure-4 panel and caption package aligned to the existing manuscript claims.
-- Completion standard: the task-level result is no longer prose-only; it exists as a figure-ready object tied to saved benchmark outputs.
+- Current task: fold the new Figure-4 package back into the manuscript and keep cross-references stable.
+- Input: `manuscript-v1.md`, `supplement-v1.md`, `figure4_submission_package.md`, rendered Figure-4 outputs, journal criteria.
+- Output: one manuscript source with the new Figure-4 object and harmonized caption logic.
+- Completion standard: the current paper-level source no longer lags behind the figure packages already present in the namespace.
 - Priority: highest
 
 ### Theorist
-- Current task: preserve claim boundaries while the task-level benchmark is converted from prose into a figure package.
-- Input: current manuscript source, supplement source, task-level benchmark assumptions.
-- Output: figure-safe statements of what Fig. 4 can and cannot claim.
-- Completion standard: the future Figure-4 package does not overstate task-level generality.
+- Current task: preserve claim boundaries while the new Figure-4 package is integrated into the main text.
+- Input: current manuscript source, supplement source, `figure4_submission_package.md`.
+- Output: integration-safe statements of what Fig. 4 can and cannot claim.
+- Completion standard: manuscript integration does not widen the benchmark scope beyond the saved task-level evidence.
 - Priority: high
 
 ### Code And Numerical Computation
@@ -27,47 +27,47 @@
 - Priority: paused
 
 ### Data Analyst
-- Current task: preserve the mixed positive-and-negative task interpretation when it is moved into the Figure-4 panel/caption package.
-- Input: `manuscript-v1.md`, `supplement-v1.md`, task-level benchmark summary, benchmark assumptions.
-- Output: checked figure-ready selection of the task-level numbers and evidence boundaries.
-- Completion standard: the manuscript-plus-supplement package keeps the `15/15`, `0/15`, and `9/30` evidence lines accurate and properly scoped.
+- Current task: preserve the current Figure-4 evidence boundaries during manuscript integration.
+- Input: rendered Figure-4 outputs, figure data CSV, task-level benchmark summary, benchmark assumptions.
+- Output: checked manuscript-facing use of the `15/15`, `0/15`, and `9/30` evidence lines.
+- Completion standard: the paper keeps the plotted numbers and their interpretation aligned.
 - Priority: high
 
 ### Figure Lead
-- Current task: keep Figure 3 fixed and prepare the missing Figure 4 manuscript-grade panel/caption package now that the supplement exists.
-- Input used: task-level summary tables, benchmark assumptions, manuscript-v1 wording, supplement-v1 wording.
-- Output delivered: Figure 3 package already complete; Figure 4 packaging still pending.
-- Completion standard: not yet met for Figure 4.
+- Current task: keep the rendered Figure-4 package fixed while the manuscript catches up.
+- Input used: task-level benchmark summary JSON, manuscript-v1 wording, supplement-v1 wording.
+- Output delivered: Figure 4 plotting script, figure CSV, rendered SVG/PNG/PDF outputs, and caption-ready submission package.
+- Completion standard: met for the first Figure-4 package.
 - Priority: highest
 
 ### Manuscript Writer
-- Current task: preserve `manuscript-v1.md` as the baseline while integrating future Figure-4 figure/caption updates.
-- Input used: manuscript source, supplement source, task-level benchmark package.
-- Output delivered: baseline manuscript plus paired supplement.
-- Completion standard: partially met; figure/caption harmonization is still open.
+- Current task: revise `manuscript-v1.md` to reflect the new Figure-4 package.
+- Input used: manuscript source, supplement source, `figure4_submission_package.md`, rendered Figure-4 outputs.
+- Output delivered: pending.
+- Completion standard: not yet met; figure/caption harmonization is still open.
 - Priority: medium
 
 ### Supervisor
-- Current task: guard against overclaim while the task-level prose is converted into a figure package.
-- Input: `manuscript-v1.md`, `supplement-v1.md`, benchmark assumptions, journal criteria.
-- Output: allowed-claim / disallowed-claim checklist for the Figure-4 pass.
+- Current task: guard against overclaim while the rendered Figure-4 package is folded into the manuscript.
+- Input: `manuscript-v1.md`, `supplement-v1.md`, `figure4_submission_package.md`, journal criteria.
+- Output: allowed-claim / disallowed-claim checklist for the integration pass.
 - Completion standard: the manuscript-plus-supplement package stays strict and evidence-based.
 - Priority: high
 
 ### Strict Reviewers
-- Current task: update acceptance estimates after the project gained a full supplement source and first rendered supplement PDF.
-- Input: figure package, literature-positioning package, manuscript source/PDF, supplement source/PDF, prior review history.
+- Current task: update acceptance estimates after the project gained a rendered Figure-4 package.
+- Input: Figure-3 package, Figure-4 package, literature-positioning package, manuscript source/PDF, supplement source/PDF, prior review history.
 - Output: revised reviewer matrix and next upgrade condition.
-- Completion standard: the project state reflects the genuine source-and-render advance without pretending supplement completeness.
+- Completion standard: the project state reflects the genuine figure-package advance without pretending full manuscript harmonization.
 - Priority: high
 
 ## What Was Completed In This Run
-- Completed: supplement assembly produced `supplement-v1.md`.
-- Completed: the supplement source was rendered successfully to `supplement-v1.pdf`.
-- Completed: the project now has a first paired manuscript-plus-supplement package for reviewer inspection.
+- Completed: created `figure4_task_level_panel.py`.
+- Completed: rendered `figure4_task_level_panel.svg`, `figure4_task_level_panel.png`, and `figure4_task_level_panel.pdf`.
+- Completed: wrote `figure4_submission_package.md` with a caption draft and explicit claim boundaries.
 
 ## What Remains Incomplete
-- Incomplete: Figure 4 manuscript-grade packaging and final archive remain open.
+- Incomplete: manuscript integration of Figure 4, final caption harmonization, and final archive remain open.
 
 ## Next Immediate Deliverable
-- One standalone Figure-4 panel and caption package aligned to the current manuscript and supplement sources.
+- One harmonized manuscript source that incorporates the new Figure-4 object cleanly.

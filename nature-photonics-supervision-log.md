@@ -122,3 +122,44 @@
 
 ### Next Supervision Focus
 - Check whether the future Figure-4 package preserves the mixed positive-and-negative result without selective emphasis or inflated scope.
+
+## Supervision Entry 2026-04-25 (first Figure-4 package)
+
+### Current Version Overall Evaluation
+- The project has now crossed the next packaging threshold. The task-level systems result is no longer carried only by prose and tables; it now exists as a rendered top-level figure object with an explicit caption draft and claim boundary.
+
+### Newly Verified Facts
+- A new plotting script, `figure4_task_level_panel.py`, was created directly in the project-specific Nature Photonics namespace.
+- That script reads the saved minimal benchmark summary and wrote a figure-specific CSV table, `figure4_task_level_panel_data.csv`.
+- The Figure-4 package was rendered successfully to `figure4_task_level_panel.svg`, `figure4_task_level_panel.png`, and `figure4_task_level_panel.pdf`.
+- `pdfinfo` verified the rendered Figure-4 PDF as a real one-page PDF object.
+- A new `figure4_submission_package.md` now records the panel definition, caption draft, allowed claims, disallowed claims, and provenance.
+
+### What Is Genuinely At Standard
+- The task-level benchmark is now embodied as a standalone figure-level manuscript object rather than remaining prose-only.
+- The mixed systems result is preserved honestly at figure level: `concentric_circles` is positive across the scanned settings, `two_moons` is not, and route preference remains task dependent.
+- The Figure-4 package is traceable back to the saved benchmark summary rather than to newly invented or recomputed numbers.
+
+### What Is Not Yet At Standard
+- The new Figure-4 object has not yet been integrated into the main manuscript source.
+- Caption style and cross-reference harmonization across the full manuscript package remain incomplete.
+- The final submission archive is still absent.
+
+### Core Quality Risk
+- The dominant risk is no longer missing Figure 4. It is package inconsistency: reviewers could still see a mismatch between the rendered figure package and the current manuscript source if integration is delayed.
+
+### Evidence-Chain Gap
+- The missing link is now manuscript-level incorporation of the new Figure-4 object and caption into the existing main-text draft.
+
+### Must-Correct Item
+- The next run must integrate the rendered Figure-4 package into `manuscript-v1.md` and harmonize full-paper caption style.
+
+### Priority Adjustment
+- The single main bottleneck moves from Figure-4 embodiment to manuscript-wide harmonization.
+- Additional new benchmarks should still wait until the paper-level source reflects the figure objects already present.
+
+### Allowed To Enter Next Stage?
+- Yes. The project may now move from figure-package completion into manuscript integration and harmonization.
+
+### Next Supervision Focus
+- Check whether the manuscript integration pass preserves the current Figure-4 claim boundaries and visual evidence without widening scope.

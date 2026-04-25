@@ -5,7 +5,7 @@
 - Run type: scheduled continuation
 
 ## Current Stage
-- Stage: supplement assembly completed; package harmonization remains
+- Stage: Figure-4 package completed; manuscript-wide harmonization remains
 
 ## Current Overall Goal
 - Build a Nature Photonics-competitive theory-and-simulation paper on quantum limits of nonlinear activation in photonic neural networks, with a quantitative resource framework, explicit same-axis comparisons, and submission-grade evidence.
@@ -22,23 +22,29 @@
 - Completed in this run: the first supplement source, `supplement-v1.md`, was assembled directly from the saved theory framework, same-axis notes, task-level benchmark assumptions, and provenance files inside the Nature Photonics namespace.
 - Completed in this run: that supplement source was rendered successfully to `supplement-v1.pdf`, with 6 pages verified by `pdfinfo`.
 - Completed before this run in the project-specific namespace: a minimal task-level benchmark already shows a bounded but real system-level consequence of the single-neuron frontier.
-- Incomplete: the task-level benchmark is now integrated into the first full manuscript source and PDF at the prose level, but it still lacks a standalone manuscript-grade Figure 4 panel and caption package.
+- Completed in this run: the saved minimal task-level benchmark was converted into a standalone Figure-4 package consisting of a dedicated plotting script, a figure-specific CSV table, rendered SVG/PNG/PDF outputs, and a caption-ready submission package.
+- Completed in this run: the rendered Figure-4 package preserves the mixed positive-and-negative systems result already present in the manuscript prose, including the `15/15`, `0/15`, and `9/30` evidence lines.
+- Incomplete: the new Figure-4 object has been created in the project namespace, but it has not yet been integrated into the main manuscript source and harmonized with the full-paper caption style.
 
 ## Single Main Bottleneck
-- The single main bottleneck is now Figure-4 embodiment: the manuscript and supplement both exist as real rendered PDFs, but the task-level benchmark still lacks a standalone manuscript-grade Figure 4 panel and caption package tied directly to the saved outputs.
+- The single main bottleneck is now manuscript-wide harmonization: the project has a real Figure-4 object, but the new figure and caption package have not yet been folded back into the main manuscript and final paper-wide style pass.
 
 ## Single Highest-Priority Action Completed In This Run
-- Built the first supplementary source from existing verified project materials and rendered the first supplementary PDF.
+- Built the first standalone Figure-4 panel and caption package directly from the saved minimal task-level benchmark outputs.
 
 ## Deliverable From This Run
-- First supplementary package in the project-specific Nature Photonics namespace:
-  - `supplement-v1.md`: supplement source covering metric definitions, lower-bound inverse derivation, receiver-model formulas, task-level benchmark assumptions, and evidence provenance.
-  - `supplement-v1.pdf`: first rendered 6-page supplementary PDF built directly from that source.
-  - The current supplement package now makes reviewer-inspectable:
-    - the exact lower-bound inverse used in the Figure-3 comparison
-    - the homodyne and displaced on-off formulas used in the saved scripts
-    - the mapping from per-neuron photon budget to task-level activation-flip probability
-    - the file-level provenance underlying the current manuscript claims
+- First standalone Figure-4 package in the project-specific Nature Photonics namespace:
+  - `figure4_task_level_panel.py`: plotting script that reads the saved benchmark summary and renders the figure package without introducing new task-level claims.
+  - `figure4_task_level_panel/figure4_task_level_panel_data.csv`: plotting-ready table of the best-route margin-versus-baseline data plus the matched route-preference deltas.
+  - `figure4_task_level_panel/figure4_task_level_panel.svg`
+  - `figure4_task_level_panel/figure4_task_level_panel.png`
+  - `figure4_task_level_panel/figure4_task_level_panel.pdf`
+  - `figure4_submission_package.md`: caption draft, panel definitions, allowed/disallowed claims, and provenance notes.
+  - The current Figure-4 package now makes reviewer-inspectable:
+    - the per-task margin above the linear baseline at each scanned `(eta, budget)` setting
+    - the task split between `two_moons` and `concentric_circles`
+    - the matched homodyne-versus-on-off preference map that yields the saved `9/30` route-switch count
+    - the selected hidden-layer width for the best implementable route at each plotted point
 
 ## What Is Genuinely Completed
 - Completed: recovery of the real Nature Photonics project state from the project-specific namespace only.
@@ -52,17 +58,20 @@
 - Completed: rendered a first full manuscript PDF from that source, so the project now has a paper-level object rather than only manuscript fragments.
 - Completed: assembled the first supplementary source from existing project evidence only.
 - Completed: rendered the first supplementary PDF, so the derivation and provenance burden is no longer absent from the paper package.
+- Completed: created a dedicated Figure-4 plotting script tied directly to the saved minimal benchmark summary.
+- Completed: rendered a standalone Figure-4 SVG, PNG, and PDF, so the systems-level result is no longer prose-only.
+- Completed: wrote a figure-specific submission package with a caption draft and explicit allowed/disallowed claims for the current benchmark scope.
 
 ## What Is Still Incomplete
+- Incomplete: the main manuscript source still needs to absorb the new Figure-4 object and caption.
 - Incomplete: final caption package after manuscript-wide style harmonization.
-- Incomplete: the task-level evidence is integrated in prose, but not yet as a standalone manuscript-grade Figure 4 panel with caption.
 - Incomplete: final submission archive package.
 - Incomplete: all five reviewer acceptance estimates remain below 70%.
 
 ## Acceptance Probability Snapshot
 - Status: improved, but still well below submission readiness.
-- Conservative current estimate: `56-66%`.
-- Basis: the project now has a real same-axis figure package, a checked literature-positioning paragraph, a full manuscript source and PDF, plus a first supplementary source and PDF that expose derivations, benchmark assumptions, and provenance. The estimate remains capped because Figure 4 is still prose-level rather than a standalone figure package, manuscript-wide caption/style harmonization is incomplete, and the final submission archive is absent.
+- Conservative current estimate: `57-68%`.
+- Basis: the project now has real top-level figure packages for both the single-neuron comparison and the task-level consequence, plus a full manuscript source/PDF and a paired supplement source/PDF. The estimate remains capped because the new Figure-4 package has not yet been integrated into the manuscript, manuscript-wide caption/style harmonization is still incomplete, and the final submission archive is absent.
 
 ## Recent Update Summary
 - Recovered the real project state from the Nature Photonics-only namespace rather than borrowing from other projects.
@@ -72,6 +81,7 @@
 - Turned those separate packages into one continuous manuscript integration draft that now carries the reader from the Introduction gap statement through Fig. 3 and into the mixed Fig. 4 systems consequence.
 - Advanced that integration draft into a real manuscript object by assembling `manuscript-v1.md` and rendering `manuscript-v1.pdf`.
 - Closed the supplement-absence gap by assembling `supplement-v1.md` and rendering `supplement-v1.pdf`.
+- Converted the saved minimal task-level benchmark into a real Figure-4 package with rendered SVG/PNG/PDF outputs and a caption-ready submission note.
 
 ## Next Immediate Action
-- Convert the saved task-level benchmark outputs into a standalone Figure 4 panel and caption package, so the current prose-level systems claim becomes a figure-level manuscript object.
+- Integrate the new Figure-4 object into `manuscript-v1.md` and harmonize the full-paper caption style so the paper package reflects the new figure-level evidence consistently.
