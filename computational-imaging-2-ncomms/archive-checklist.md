@@ -16,11 +16,11 @@
 - [ ] 鲁棒容量定义与证明文稿
 
 ## 代码与数据
-- [ ] 线性高斯平台代码与运行日志
+- [x] 线性高斯平台代码与运行日志
 - [ ] PSF / depth 参数估计平台代码与运行日志
 - [ ] 任务容量平台代码与运行日志
 - [ ] 鲁棒容量平台代码与运行日志
-- [ ] 图表原始数据表
+- [x] 图表原始数据表
 
 ## 图表
 - [ ] Figure 1 正文图
@@ -41,6 +41,13 @@
 - [ ] 30 篇以上已核对参考文献
 - [ ] 参考文献主题分类表
 - [ ] 引言与讨论对应引用映射表
+
+## 当前已生成文件
+- [x] `/workspace/computational-imaging-2-ncomms/linear_gaussian_round1.py`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round1/linear_gaussian_round1_results.csv`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round1/linear_gaussian_round1_summary.json`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round1/linear_gaussian_round1_summary.md`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round1/linear_gaussian_round1_overview.svg`
 
 ## 投稿归档包
 - [ ] 最终代码与数据清单

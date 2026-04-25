@@ -13,7 +13,7 @@
 - 可覆盖 coded aperture、PSF engineering、hyperspectral imaging、metasurface imaging 等多个方向
 
 ## 当前尚未满足的质量门槛
-1. 尚无真实运行结果和正式图表
+1. 尚无完整任务容量与鲁棒容量结果
 2. 尚无详细理论推导
 3. 尚无 30+ 篇参考文献链条
 4. 尚无正文与补充材料初稿
@@ -22,7 +22,7 @@
 ## 当前重点检查项
 - 统一符号表是否能同时覆盖多平台
 - OIG、TIG、PIE、RCR 是否具备严格定义与真实计算路径
-- 线性高斯平台是否能形成第一条理论-数值闭环
+- 线性高斯平台是否已从 baseline 结果推进到 task-weighted 结果
 - Figure 1-6 是否最终都能追溯到真实数据或可校正示意图
 - 参考文献是否覆盖 computational imaging、task-specific imaging、differentiable optics、meta-optics、information theory、Fisher information 与 robust design
 
@@ -31,6 +31,7 @@
 2. 平台跨度大，若不先收敛到最小闭环，容易长期停在空中
 3. 若只做互信息而不做任务容量和鲁棒容量，会被认为理论不完整
 4. 若只做仿真而不补充分解推导，会削弱说服力
+5. 若把第一轮 baseline 排序过度推广，会引起审稿质疑
 
 ## 当前判断
 期刊匹配度存在潜力，但尚未接近期刊接收标准。
