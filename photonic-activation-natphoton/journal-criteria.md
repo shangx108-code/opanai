@@ -20,9 +20,9 @@ To be competitive as a theory-and-simulation Nature Photonics article, this pape
 - Scope fit: good
 - Significance potential: medium to high
 - Conceptual sharpness: medium to high
-- Novelty separation from recent literature: insufficient
-- Evidence completeness: still insufficient, but improved
-- Device relevance: now partially demonstrated at the single-neuron boundary-discrimination level
+- Novelty separation from recent literature: still insufficient, but improving
+- Evidence completeness: still insufficient, but materially improved
+- Device relevance: now demonstrated more convincingly at the single-neuron boundary-discrimination level
 - Broad-reader accessibility: not yet developed
 
 ## Immediate venue-specific rules for this project
@@ -38,14 +38,15 @@ To be competitive as a theory-and-simulation Nature Photonics article, this pape
 
 ## What this run newly satisfies
 - The project now has one concrete measurement-induced activation route on the same axes as the coherent-state discrimination lower bound.
+- The project now has a second concrete same-axis route using displaced on-off counting.
 - Detector efficiency now appears as an explicit device-facing control axis rather than as a generic future parameter.
-- The paper can now support one bounded statement that is plausible for Nature Photonics readers:
-  measurement-induced activation can stay near the frontier only when detector efficiency is very high.
+- The paper can now support a stronger bounded statement that is plausible for Nature Photonics readers:
+  detector efficiency sets the global accessibility of the frontier, while measurement choice sets a further constant-factor overhead above it.
 
 ## What this run still does not satisfy
-- No second architecture trace yet separates the result from a single illustrative example.
-- No figure-ready main-text panel yet turns the comparison into a persuasive editorial object.
+- No figure-ready main-text panel yet turns the completed comparison into a persuasive editorial object.
 - No verified literature-positioning subsection yet shows why this comparison changes the novelty landscape relative to 2024-2025 photonic nonlinearity papers.
+- No task-level evidence yet shows that the single-neuron comparison changes network-level design choices.
 
 ## Current venue risk summary
-- The paper is now less likely to be dismissed as purely formal, but it is still at risk of being judged preliminary because the comparison set is too narrow and the main-text figure package does not yet exist.
+- The paper is now less likely to be dismissed as purely formal or merely illustrative, but it is still at risk of being judged preliminary because the main-text figure package, literature separation, and task-level consequences do not yet exist.

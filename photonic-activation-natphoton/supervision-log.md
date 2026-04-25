@@ -84,3 +84,37 @@ The new comparison could still be dismissed as a convenient toy route if the pap
 
 ### Next supervision focus
 - Whether the next run creates a genuine Figure-3 candidate and whether the comparison survives contact with a second activation baseline.
+
+## 2026-04-25 | Round 4 supervision after second same-axis architecture comparison
+
+### Overall evaluation
+This run solved the right bottleneck. The paper no longer depends on one worked route beside the lower bound; it now has a three-curve comparison that can plausibly carry a main-text design message.
+
+### Gap to target-journal standard
+- The project can now support a sharper statement: detector efficiency controls whether the frontier is globally accessible, while measurement choice controls the constant-factor overhead above that frontier.
+- That is materially closer to a Nature Photonics result because it reads like a design law rather than a single architecture anecdote.
+- However, the evidence still sits in notes rather than in a figure object or manuscript-integrated narrative.
+
+### Most critical quality risk
+The project could still lose momentum if the new comparison remains a set of internal calculations instead of becoming a persuasive figure panel with crisp textual claims and explicit limits.
+
+### Evidence-chain gap
+- Missing Figure-3-grade panel and caption
+- Missing manuscript-ready Results subsection
+- Missing verified literature-positioning paragraph against 2024-2025 photonic nonlinearity work
+
+### Must-correct items
+1. Do not imply that fixed-displacement on-off counting is the globally best adaptive receiver.
+2. Keep the distinction between asymptotic scaling and constant-factor overhead explicit.
+3. Show at least one regime annotation in the next figure so the result answers a device-design question.
+
+### Priority adjustment
+- The main bottleneck has shifted again.
+- It is no longer "missing second architecture"; it is now "missing figure-grade assembly and manuscript integration."
+
+### Permission to move to next phase
+- Yes.
+- The project may now move into figure consolidation and Results writing, but not yet into a full manuscript review loop.
+
+### Next supervision focus
+- Whether the next run turns the completed comparison into one main-text figure with a bounded, reviewer-safe claim.

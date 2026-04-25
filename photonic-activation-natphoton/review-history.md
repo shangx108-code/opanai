@@ -108,3 +108,46 @@ Current outcome: major revision, but now with the first concrete evidence that t
 - Updated estimate for Nature Photonics: 24-34%
 - Upgrade condition to 35-45%: add a second architecture baseline or a figure-grade accessible-region panel that makes the comparison feel field-relevant rather than illustrative
 - Upgrade condition to 45-60%: integrate the comparison into manuscript text with verified literature separation and at least one stronger device-facing figure
+
+## 2026-04-25 | Second same-axis architecture-comparison review
+
+### Material reviewed
+- Lower-bound project state entry
+- Homodyne comparison note: `/workspace/memory/photonic-activation-natphoton/aqma-homodyne-comparison.md`
+- Displaced on-off comparison note: `/workspace/memory/photonic-activation-natphoton/kennedy-onoff-comparison.md`
+- Reproducible script: `/workspace/memory/photonic-activation-natphoton/same_axis_metrics.py`
+
+### Reviewer-style verdict
+Current outcome: major revision, but the paper is now meaningfully closer to a selective-journal result because the core comparison has moved from one route to a small architecture family.
+
+### What improved
+1. The evidence base now includes two physically distinct measurement-induced routes on the same axes as the lower bound.
+2. The project can now separate two effects cleanly: detector efficiency sets the global `1 / eta` penalty, while measurement architecture changes the constant-factor overhead above the limit.
+3. The numerical path is now reproducible from saved code rather than living only in prose.
+
+### Remaining blockers
+1. The new result is still not packaged as a submission-grade figure and caption.
+2. The manuscript still lacks a verified literature-positioning paragraph against the strongest 2024-2025 photonic-nonlinearity papers.
+3. There is still no task-level evidence showing whether the single-neuron frontier changes network-level design choices.
+
+### Five-reviewer dimension estimates
+- Reviewer 1, novelty-focused:
+  innovation/significance `42/100`; theory rigor `52/100`; method reliability `50/100`; data/results `47/100`; figure quality `23/100`; writing `31/100`; journal fit `50/100`; acceptance estimate `33%`.
+- Reviewer 2, theory-rigor-focused:
+  innovation/significance `41/100`; theory rigor `64/100`; method reliability `58/100`; data/results `50/100`; figure quality `23/100`; writing `32/100`; journal fit `50/100`; acceptance estimate `39%`.
+- Reviewer 3, device/implementation-focused:
+  innovation/significance `40/100`; theory rigor `52/100`; method reliability `55/100`; data/results `49/100`; figure quality `23/100`; writing `30/100`; journal fit `49/100`; acceptance estimate `35%`.
+- Reviewer 4, broad-reader-clarity-focused:
+  innovation/significance `41/100`; theory rigor `52/100`; method reliability `51/100`; data/results `50/100`; figure quality `24/100`; writing `36/100`; journal fit `52/100`; acceptance estimate `36%`.
+- Reviewer 5, benchmark/comparison-focused:
+  innovation/significance `43/100`; theory rigor `58/100`; method reliability `58/100`; data/results `56/100`; figure quality `24/100`; writing `32/100`; journal fit `51/100`; acceptance estimate `41%`.
+
+### Review interpretation
+- Reviewer 5 improves the most because the comparison is no longer a single worked example.
+- Reviewer 2 also moves upward because the constant-factor-versus-scaling distinction is now mathematically cleaner.
+- Reviewer 1 remains restrained because novelty is still only partially secured until the manuscript explicitly positions the new comparison against recent photonic nonlinearity papers.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 31-41%
+- Upgrade condition to 40-50%: assemble a main-text Figure 3 with clear regime annotations and a reviewer-safe Results subsection
+- Upgrade condition to 50-65%: add verified literature separation and at least first task-level evidence that the single-neuron frontier changes system-level design choices

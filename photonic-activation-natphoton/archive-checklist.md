@@ -13,6 +13,8 @@
 - Project state initialization files for the Nature Photonics activation project
 - Lower-bound derivation and first numerical scan recorded in project memory
 - First same-axis homodyne-comparison note recorded in project memory
+- Second same-axis displaced on-off comparison note recorded in project memory
+- Reproducible comparison script: `/workspace/memory/photonic-activation-natphoton/same_axis_metrics.py`
 
 ## Still to archive
 - Theory note on activation quantum cost
@@ -23,4 +25,4 @@
 - Simulated review packages for each round
 
 ## Next archive-worthy item
-- First explicit lower-bound-versus-multi-route comparison panel with data provenance and caption logic
+- First Figure-3 candidate panel with data provenance, regime annotations, and caption logic
