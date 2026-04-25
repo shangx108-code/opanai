@@ -16,8 +16,8 @@
 
 ## 代码与数据
 - [ ] 线性高斯第一轮平台代码与运行日志（当前工作区未找到，需重建）
-- [ ] 线性高斯第二轮 task-weighted 代码与运行日志（当前工作区未找到，需重建）
-- [x] 第三轮鲁棒容量平台代码与运行日志
+- [x] 线性高斯第二轮 task-weighted 代码与运行日志
+- [ ] 第三轮鲁棒容量平台代码与运行日志（当前工作区未找到，需重建）
 - [ ] PSF / depth 参数估计平台代码与运行日志
 - [ ] 图表原始数据表
 
@@ -48,15 +48,14 @@
 - [x] 已明确“示意图可用 GPT-imag-2.0，数据图必须全部使用真实数据”
 
 ## 当前已生成文件
-- [x] `/workspace/computational-imaging-2-ncomms/linear_gaussian_round3_robust.py`
-- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round3_robust/linear_gaussian_round3_robust_results.csv`
-- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round3_robust/linear_gaussian_round3_robust_summary.json`
-- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round3_robust/linear_gaussian_round3_robust_summary.md`
-- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round3_robust/linear_gaussian_round3_robust_overview.svg`
-- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round3_robust/linear_gaussian_round3_robust_run.log`
-- [ ] round1 / round2 历史文件当前工作区仍未找到，暂不计入已生成文件
-- [x] 本轮已完成对当前工作区的证据完整性核查与归档纠偏
-- [x] 本轮已完成 round3 最小鲁棒链真实重建与归档
+- [x] `/workspace/computational-imaging-2-ncomms/linear_gaussian_round2_task_weighted.py`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_results.csv`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_summary.json`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_summary.md`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_overview.svg`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_run.log`
+- [ ] round1 / round3 历史文件当前工作区仍未找到，暂不计入已生成文件
+- [x] 本轮已完成当前工作区的 round2 最小 task-weighted 链真实重建与归档
 
 ## 投稿归档包
 - [ ] 最终代码与数据清单
