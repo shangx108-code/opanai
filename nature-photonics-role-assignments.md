@@ -1,72 +1,72 @@
 # Nature Photonics Role Assignments
 
 ## Current Phase
-- Supervision initialization / evidence recovery
+- Figure consolidation completed for the first same-axis main-text candidate; immediate next phase is Results-section integration.
 
 ## Role Task Table
 
 ### Coordinator
-- Current task: maintain a project-specific state that does not borrow from other namespaces.
-- Input: verified file-existence check for the six Nature Photonics memory files.
-- Output: synchronized project-state, supervision-log, review-history, journal-criteria, and archive-checklist files.
-- Completion standard: all six files exist and agree on the current stage, bottleneck, and next action.
+- Current task: lock the exact Figure-3 claim and keep the manuscript from overstating the new comparison.
+- Input: figure candidate, comparison notes, manuscript spine, journal criteria.
+- Output: one reviewer-safe claim sentence and one Results-subsection brief.
+- Completion standard: the next writing pass can proceed without reopening the comparison logic.
 - Priority: highest
 
 ### Theorist
-- Current task: blocked until a project claim, model definition, or prior derivation draft exists in this namespace.
-- Input: none currently available in this namespace.
-- Output: none in this run.
-- Completion standard: not met.
-- Priority: blocked
-
-### Code And Numerical Computation
-- Current task: blocked until runnable model/code/data provenance is available in this namespace.
-- Input: none currently available in this namespace.
-- Output: none in this run.
-- Completion standard: not met.
-- Priority: blocked
-
-### Data Analyst
-- Current task: blocked until real outputs or source data exist in this namespace.
-- Input: none currently available in this namespace.
-- Output: none in this run.
-- Completion standard: not met.
-- Priority: blocked
-
-### Figure Lead
-- Current task: blocked until figure source data or a mechanism draft exists in this namespace.
-- Input: none currently available in this namespace.
-- Output: none in this run.
-- Completion standard: not met.
-- Priority: blocked
-
-### Manuscript Writer
-- Current task: blocked until manuscript text or structured result notes exist in this namespace.
-- Input: none currently available in this namespace.
-- Output: none in this run.
-- Completion standard: not met.
-- Priority: blocked
-
-### Supervisor
-- Current task: execute baseline quality gate based on available evidence only.
-- Input: verified absence of project files in this namespace.
-- Output: baseline supervision assessment and correction priority.
-- Completion standard: completed in this run.
+- Current task: state precisely which claims are valid for the fixed homodyne and displaced on-off models, and which global-optimality claims remain invalid.
+- Input: theory framework, same-axis comparison notes, figure candidate.
+- Output: assumptions-and-limitations language for Results text and caption.
+- Completion standard: the paper can discuss constant-factor overhead without implying universal ordering over all receivers.
 - Priority: highest
 
+### Code And Numerical Computation
+- Current task: completed the first figure-grade same-axis panel package.
+- Input used: `same_axis_metrics.py` and the saved architecture notes.
+- Output delivered: plotting script plus dense CSV/SVG/PNG/PDF figure package.
+- Completion standard: met in this run.
+- Priority: completed in this run
+
+### Data Analyst
+- Current task: convert the plotted comparison into a clean device-facing interpretation for manuscript text.
+- Input: Figure-3 candidate and verified ratios for both routes.
+- Output: one paragraph that separates detector-efficiency scaling from architecture-dependent prefactors.
+- Completion standard: a reader can infer the design law directly from the text and figure together.
+- Priority: highest
+
+### Figure Lead
+- Current task: completed the first true Figure-3 candidate around the lower bound plus two measurement routes.
+- Input used: same-axis comparison models and project figure logic.
+- Output delivered: rendered figure package with consistent axes and legend rules.
+- Completion standard: met in this run for the first candidate, not yet for final submission polish.
+- Priority: completed in this run
+
+### Manuscript Writer
+- Current task: write the first Results subsection and caption package around the new figure.
+- Input: figure candidate, theory limitations, manuscript spine, journal criteria.
+- Output: insertable manuscript prose with bounded claims.
+- Completion standard: the figure can enter the paper without hidden assumptions or overclaim.
+- Priority: highest
+
+### Supervisor
+- Current task: guard against turning a model-specific three-route ordering into a universal claim about all photonic activations.
+- Input: figure candidate, theory limits, journal criteria.
+- Output: allowed-claim / disallowed-claim checklist for the next writing run.
+- Completion standard: the next draft stays strict and evidence-based.
+- Priority: high
+
 ### Strict Reviewers
-- Current task: maintain a conservative non-passing baseline until real project content is restored.
-- Input: no manuscript or evidence package in this namespace.
-- Output: round-0 baseline review record.
-- Completion standard: completed in this run.
+- Current task: update acceptance estimates after the figure candidate now exists as a rendered object.
+- Input: figure package plus prior review history.
+- Output: revised reviewer matrix and next upgrade condition.
+- Completion standard: the project state reflects the genuine improvement from the new figure, without pretending manuscript readiness.
 - Priority: high
 
 ## What Was Completed In This Run
-- Completed: coordinator and supervisor established the Nature Photonics-only memory scaffold.
-- Completed: strict reviewers logged a baseline non-passing review state.
+- Completed: code/numerics converted the same-axis comparison into a rendered Figure-3 candidate package.
+- Completed: figure production moved the project from note-level evidence to figure-level evidence.
 
 ## What Remains Incomplete
-- Incomplete: every science-producing role remains blocked by missing project materials in this namespace.
+- Incomplete: manuscript writing, literature separation, task-level evidence, and final journal-grade figure polish remain open.
 
 ## Next Immediate Deliverable
-- A project artifact inside this namespace that contains the actual research claim and the latest real evidence set.
+- One Results subsection plus caption logic tied directly to the new Figure 3 candidate.

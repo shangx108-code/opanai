@@ -3,37 +3,39 @@
 ## Supervision Entry 2026-04-25
 
 ### Current Version Overall Evaluation
-- The project is not yet in a scientifically advancing state inside the allowed Nature Photonics namespace.
+- The project is no longer blocked by missing project evidence. It is now in a real figure-consolidation state with a rendered same-axis Figure-3 candidate.
 
 ### Newly Verified Facts
-- All six requested Nature Photonics memory files were absent before this run.
-- No project-specific state could be read from this namespace.
+- The real project materials were recoverable inside the Nature Photonics-only namespace under `photonic-activation-natphoton`.
+- That namespace already contained the theory framework, manuscript spine, homodyne comparison note, displaced on-off comparison note, and reproducible same-axis code.
+- This run generated a Figure-3 candidate package from those saved models and rendered it successfully to SVG, PNG, and PDF.
 
 ### What Is Genuinely At Standard
-- The namespace boundary is now correctly enforced for this project.
-- The current state and missing evidence are now explicitly documented.
+- A lower bound plus two concrete measurement routes now exist on the same axes.
+- The comparison is reproducible from saved code rather than existing only in prose.
+- A figure candidate now exists as an actual rendered object, not just a planned panel.
 
-### What Is Not At Standard
-- No derivation is available for checking.
-- No computation has been run in this namespace.
-- No figure-source data or submission-grade figure is available.
-- No manuscript section, PDF, supplement, or archive package is available.
+### What Is Not Yet At Standard
+- No main-text Results subsection yet locks the allowed claim boundaries.
+- No final caption package yet states the model assumptions and the non-claims clearly enough for referees.
+- No literature-separation paragraph yet shows why this comparison is distinct from the strongest 2024-2025 photonic nonlinearity papers.
+- No task-level benchmark yet links the single-neuron frontier to system-level benefit.
 
 ### Core Quality Risk
-- Any attempt to claim continuity or progress without restoring project-specific evidence would risk fabricating research state.
+- The new figure could still be misused if the manuscript presents the displaced on-off route or homodyne proxy as globally optimal rather than as fixed, concrete baselines inside a controlled comparison.
 
 ### Evidence-Chain Gap
-- Missing primary scientific artifact: a concrete statement of the project claim plus the latest real supporting materials.
+- The missing link is no longer raw data or plotting. It is the manuscript layer that translates the figure into a reviewer-safe claim.
 
 ### Must-Correct Item
-- Re-establish the first real project artifact within this namespace before attempting derivation, computation, figure production, or manuscript revision.
+- The next run must write the Figure-3 Results subsection and caption logic with explicit model boundaries, claim boundaries, and a clear design-law sentence.
 
 ### Priority Adjustment
-- The single main bottleneck is evidence absence in the Nature Photonics namespace.
-- Therefore the next action must begin with project evidence recovery, not broad planning.
+- The single main bottleneck is now manuscript integration of the finished figure package.
+- Further expanding scope before writing this section would dilute progress.
 
 ### Allowed To Enter Next Stage?
-- No. The project cannot responsibly move to theory/result/figure/manuscript advancement until the first real artifact is present.
+- Yes. The project may now move from figure consolidation into Results writing anchored to the new Figure 3 candidate.
 
 ### Next Supervision Focus
-- Verify that the restored artifact is real, scoped to this project, and sufficient to unlock one concrete scientific action.
+- Check whether the next writing pass says exactly what the new figure proves, what it does not prove, and why that distinction matters for Nature Photonics readers.

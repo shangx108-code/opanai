@@ -4,23 +4,21 @@
 - Nature Photonics
 
 ## High-Level Standard To Keep In View
-- The work must show strong photonics significance, a clearly differentiated advance, rigorous mechanism or theory support where needed, convincing evidence, and polished figure/manuscript presentation.
+- The work must show strong photonics significance, a clearly differentiated advance, rigorous mechanism support, convincing quantitative evidence, and polished figure/manuscript presentation.
 
-## Criteria That Cannot Yet Be Checked From This Namespace
-- Importance of the research question within photonics.
-- Novelty relative to the relevant literature.
-- Mechanism/theory sufficiency.
-- Reliability and completeness of numerical or experimental support.
-- Figure quality at submission level.
-- Narrative quality and editor/reviewer persuasion.
+## Criteria Now Satisfied At A First-Pass Level
+- A field-facing project claim exists: nonlinear activation is treated as a quantum resource problem rather than as a generic implementation detail.
+- The project has a lower bound plus two concrete same-axis measurement routes.
+- A rendered Figure-3 candidate now exists, so the main comparison is no longer trapped in internal notes.
 
-## Criteria Currently Not Satisfied
-- A documented project claim aligned to Nature Photonics.
-- Evidence chain linking theory/method/results/figures/text.
-- Submission-grade manuscript package.
+## Criteria Still Not Satisfied
+- A manuscript-ready Results subsection and caption package that translate the figure into a precise editorial claim.
+- A verified literature-positioning paragraph against the strongest recent photonic nonlinearity and photonic-AI papers.
+- Task-level evidence showing whether the single-neuron frontier changes network-level design choices.
+- Submission-grade full manuscript package with PDF, supplement, and archive bundle.
 
 ## Current Main Risk Relative To Journal Standard
-- The project currently fails at the most basic threshold: there is no recoverable project-specific scientific record in the permitted namespace.
+- Without manuscript integration, the new figure may still read as an interesting internal benchmark rather than as a decisive design rule for Nature Photonics readers.
 
 ## Immediate Criterion To Satisfy Next
-- Reconstruct the first evidence-bearing project artifact in this namespace so the work can be judged against real Nature Photonics standards rather than against absence of material.
+- Convert the new figure package into one bounded Results subsection and caption set that says exactly what the three-route comparison proves and what it does not prove.
