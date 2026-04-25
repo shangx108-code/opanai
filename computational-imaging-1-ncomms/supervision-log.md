@@ -79,6 +79,12 @@
 
 ## 新增进展备注
 - 线性任务已增加训练型低秩 PCA prior，说明 unsupported-region error 升高并不只来自手工候选库；该现象已经开始从 hand-crafted prior 过渡到 learned prior。
+- 已增加第一版理论笔记和 42 条工作文献表，项目不再停留在“只有实验碎片”的状态。
+
+## 新的监督判断
+- 文献数量门槛已跨过，但仍未形成最终引用体系。
+- 理论链已从口号进入可检查状态，但距离正文 / Methods 可直接使用还差一步。
+- 下一轮最应该继续推进的是：把真实 deep prior / diffusion / Bayesian baseline 接进现有双任务框架。
 
 ## 核心质量风险
 如果接下来不尽快把 toy prior 升级为真实学习型 prior，项目会卡在“概念演示”层，无法提升到目标期刊标准。

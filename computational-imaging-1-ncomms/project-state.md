@@ -19,8 +19,9 @@
 
 说明：
 - 选题主线、论文定位、潜在创新点、候选任务和阶段路线图已有较完整草案。
-- 线性 incomplete measurement 任务已新增一轮真实可运行的非线性学习型 prior 实验，并继续推进到 measurement-consistent 的优化式 learned prior 逆问题基线。
-- 但当前结果仍是“最小证据链”，还不是 Nature Communications 级别的完整研究证据。
+- 线性 incomplete measurement 任务已从 hand-crafted prior 推进到低秩 PCA prior、autoencoder prior 和 measurement-consistent latent inverse 基线。
+- 同时，第一版理论笔记与 30+ 工作文献表已经补上。
+- 但当前仍是“最小证据链”，还不是 Nature Communications 级别的完整研究证据。
 
 ## 当前唯一主瓶颈
 虽然线性任务已经从 hand-crafted prior、低秩 prior、前馈式 autoencoder prior 推进到 measurement-consistent 的 latent inverse baseline，但 unsupported region / bridge intensity 仍只是经验指标，还没有被形式化成统一、可计算、可写入理论部分的判据，因此当前结果仍停留在“现象成立”而不是“论证闭环”。
@@ -29,7 +30,7 @@
 - 线性任务已新增 latent inverse solver，但 bridge intensity 与 unsupported-region error 还没有升格为正式定义。
 - 当前 measurement-consistent baseline 仍是线性 benchmark 下的一类 learned decoder prior，不等同于 DIP / diffusion / Bayesian posterior 全景证据。
 - 相位恢复任务已经证明 measurement ambiguity，但还没有展示 learned prior 或 posterior sampling 在该歧义上的实际失效模式。
-- DSI / PDR / HCI 仍未完成详细推导和可计算实现。
+- DSI / PDR / HCI 仍未完成完整推导和可计算实现。
 - 正文与补充材料仍无投稿级图表体系。
 
 ## 本轮唯一最高优先级
@@ -41,6 +42,8 @@
 3. 代表性结果图：`round4_linear_measurement_consistent_panel.png`
 4. 观测 mask 图：`round4_linear_measurement_mask.png`
 5. 指标文件：`round4_summary.json` 与 `round4_case_metrics.csv`
+6. 第一版理论笔记：`/workspace/computational-imaging-1-ncomms/theory_round2_note.md`
+7. 30+ 工作文献表：`/workspace/computational-imaging-1-ncomms/reference_map_round2.md`
 
 ## 完成标准
 下一轮完成标准：
@@ -84,24 +87,28 @@
   - autoencoder projection：观测区 MAE `0.0000`，未观测区 MAE `0.4900`，bridge mean intensity `0.4968`
   - latent inverse：观测区 MAE `0.0000`，未观测区 MAE `0.4891`，bridge mean intensity `0.4964`
 - round4 结果说明：在当前断裂目标 benchmark 中，measurement-consistent 的 latent inverse 基线即使保持观测区精确一致，仍会在未观测 bridge 区域生成非零连接结构。
+- 已完成第一版可检查理论链：
+  - 线性 masked-identity 模型下，未观测像素的 DSI = 0、PDR = 1 为精确结论。
+  - Fourier magnitude phase retrieval 下，true object 与 reversed mode 的测量等价为精确结论。
+- 已完成 30+ 工作文献表，当前工作文献数为 42。
 
 ## 已部分完成但仍缺关键环节
-- 文献：已有 12 篇种子参考文献，但未补足到 30+，且尚未完成统一核对与主题归类。
-- 理论：已有概念框架与指标定义草案，但详细推导尚未完成。
+- 文献：已补到 30+，并形成按主题分类的工作文献表；但尚未整理成最终 BibTeX 并逐条嵌入正文/补充材料。
+- 理论：已有第一版可检查理论链，但仍缺一般压缩成像、一般非线性相位恢复和 calibrated HCI 的完整推导。
 - 任务设计：压缩成像/incomplete measurement 与相位恢复已形成最小真实运行结果；线性任务已有训练型低秩 prior、前馈式非线性 autoencoder prior 与 measurement-consistent latent inverse prior，但仍缺相位恢复的 learned prior / posterior 版本以及投稿级 benchmark。
 - 图表：已有第 1 轮结果图，但仍属于内部实验图，不是投稿定稿图。
 - 归档：本轮在当前工作区未找到历史 round1 / round2 脚本与输出文件，说明历史结果记录已存在于 memory，但原始工件仍需补回归档。
 
 ## 尚未开始
-- DSI / PDR / HCI 的详细推导文稿
+- DSI / PDR / HCI 的完整论文级推导文稿
 - 正文与补充材料图的正式生成
 - 5 位审稿人并行审稿循环
 - 最终投稿归档包
 
 ## 参考文献状态
-- 当前已提取种子文献数：12
+- 当前工作文献数：42
 - 目标下限：30
-- 当前判断：明显不足，不能支撑 Nature Communications 级别的引言、相关工作与讨论部分
+- 当前判断：数量门槛已跨过，但还未完成 BibTeX 统一、正文嵌入和引用角色精修
 
 ## 当前接收概率判断
 - 综合接收概率：14%–20%
@@ -118,7 +125,7 @@
 当前最拖累接收概率的短板：
 1. 没有闭合的理论推导与正式可计算指标定义
 2. 结果仍停留在线性 toy benchmark 与最小相位恢复证据，跨任务主结果链尚未形成
-3. 参考文献与补充证据链远未补齐
+3. 图表体系、正文、补充材料和多任务结果矩阵仍远未补齐
 
 ## 最近一次重要更新摘要
 2026-04-25：根据上传项目草案完成项目初始化，确立“先建立并跑通最小双任务证据链”为当前唯一最高优先级，并启用独立项目记忆文件集。
@@ -126,3 +133,4 @@
 2026-04-25：在线性任务上完成训练型低秩 PCA prior 初测。PCA prior 残差为 `7.28e-02`，观测区误差为 `5.29e-03`，未观测区误差为 `4.49e-02`，表明 learned prior 同样更容易在 unsupported region 引入结构。
 2026-04-25：在线性任务上完成非线性 autoencoder prior 初测。基于 256 个 connected-bar 训练样本训练小型自编码器，并在 6 个断裂目标上真实运行；autoencoder prior 的平均观测区 MAE 为 `0.0000`，未观测区 MAE 为 `0.2356`，bridge mean intensity 为 `0.3417`，说明 learned prior 会在 measurement mask 未覆盖区域补出连接结构。
 2026-04-25：在线性任务上补做 measurement-consistent learned prior 逆问题基线。已在当前工作区真实运行 `round4_linear_measurement_consistent_prior.py`，并输出 `round4_summary.json`、`round4_case_metrics.csv`、`round4_linear_measurement_consistent_panel.png` 与 `round4_linear_measurement_mask.png`；结果显示 latent inverse 在观测区 MAE 为 `0.0000` 的同时，未观测区 MAE 为 `0.4891`，bridge mean intensity 为 `0.4964`，说明 measurement-consistent 求解并未消除 unsupported bridge hallucination。
+2026-04-25：完成第一版理论笔记与工作文献表。理论上已把 masked-identity 下的 DSI/PDR 和 Fourier magnitude 下的 ambiguity branch 写成可检查形式；文献已扩展到 42 条并按主题分类。
