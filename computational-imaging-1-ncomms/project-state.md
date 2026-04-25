@@ -3,8 +3,25 @@
 ## 项目基本信息
 - 项目名称：计算成像1
 - 目标期刊：Nature Communications
-- 最近更新时间：2026-04-25
+- 最近更新时间：2026-04-26
 - 当前资料来源：`/workspace/user_files/01-1-.txt`
+
+## 当前运行规则
+- 默认推进主体：自研智能体
+- 自动迭代频率：每 2 小时 1 轮
+- 停止条件必须同时满足：
+  - Nature Communications 五位审稿人接收概率均大于 70%
+  - 所有需要补的 evidence 全部补齐
+  - 所有需要的数据全部补齐
+  - 正文与补充材料所需图全部补齐
+  - 参考文献补齐并稳定高于 30 篇
+- 图表规则：
+  - 机制示意图、结构示意图、概念图可用 GPT-imag-2.0 生成初稿
+  - 除示意图外，所有数据图必须基于真实数据正式成图
+  - 任何 AI 生成示意图都不得直接视为定稿，仍需后续人工校正标签、结构逻辑、比例关系与期刊风格
+- 理论规则：
+  - 理论推导必须详实、可靠、可检查
+  - 未完成详细推导的部分不得写成已证明结论
 
 ## 研究总目标
 围绕“深度先验计算成像的幻觉边界与可校准不确定性理论”建立一条可投稿到 Nature Communications 的完整证据链，最终形成：
@@ -30,7 +47,7 @@
 - 线性任务已新增 latent inverse solver，但 bridge intensity 与 unsupported-region error 还没有升格为正式定义。
 - 当前 measurement-consistent baseline 仍是线性 benchmark 下的一类 learned decoder prior，不等同于 DIP / diffusion / Bayesian posterior 全景证据。
 - 相位恢复任务已经证明 measurement ambiguity，但还没有展示 learned prior 或 posterior sampling 在该歧义上的实际失效模式。
-- DSI / PDR / HCI 仍未完成完整推导和可计算实现。
+- DSI / PDR / HCI 仍未完成完整推导、完整适用边界说明和可计算实现。
 - 正文与补充材料仍无投稿级图表体系。
 
 ## 本轮唯一最高优先级
@@ -134,3 +151,4 @@
 2026-04-25：在线性任务上完成非线性 autoencoder prior 初测。基于 256 个 connected-bar 训练样本训练小型自编码器，并在 6 个断裂目标上真实运行；autoencoder prior 的平均观测区 MAE 为 `0.0000`，未观测区 MAE 为 `0.2356`，bridge mean intensity 为 `0.3417`，说明 learned prior 会在 measurement mask 未覆盖区域补出连接结构。
 2026-04-25：在线性任务上补做 measurement-consistent learned prior 逆问题基线。已在当前工作区真实运行 `round4_linear_measurement_consistent_prior.py`，并输出 `round4_summary.json`、`round4_case_metrics.csv`、`round4_linear_measurement_consistent_panel.png` 与 `round4_linear_measurement_mask.png`；结果显示 latent inverse 在观测区 MAE 为 `0.0000` 的同时，未观测区 MAE 为 `0.4891`，bridge mean intensity 为 `0.4964`，说明 measurement-consistent 求解并未消除 unsupported bridge hallucination。
 2026-04-25：完成第一版理论笔记与工作文献表。理论上已把 masked-identity 下的 DSI/PDR 和 Fourier magnitude 下的 ambiguity branch 写成可检查形式；文献已扩展到 42 条并按主题分类。
+2026-04-26：更新项目运行规则。后续由自研智能体按每 2 小时 1 轮推进；停止标准收紧为“接收概率 >70%”与“evidence / 数据 / 图 / 参考文献全部补齐”同时成立；示意图允许用 GPT-imag-2.0 起稿，但非示意图必须全部使用真实数据，理论推导必须详实可靠。
