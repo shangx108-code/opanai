@@ -26,12 +26,19 @@
 - Figure 1-6 是否最终都能追溯到真实数据或可校正示意图
 - 参考文献是否覆盖 computational imaging、task-specific imaging、differentiable optics、meta-optics、information theory、Fisher information 与 robust design
 
+## 当前已锁定但尚未验证的第二轮门槛
+1. 任务变量至少包含 `T_lowpass` 和 `T_sparseROI` 两类，不能只做单一任务
+2. 指标必须同时报告 raw mutual information、full-image Bayes risk、task Bayes risk 与 TIG，不能只报单一优势指标
+3. 排序翻转必须基于真实结果表判定，不能凭观察性叙述
+4. 若未出现排序翻转，也必须如实报告，并把结果转化为负结果或边界条件讨论
+5. Figure 2 的正式结论只能来自第二轮真实数据，而不能来自当前规范文本
+
 ## 当前高风险点
 1. 选题高度够，但证据推进速度可能跟不上
 2. 平台跨度大，若不先收敛到最小闭环，容易长期停在空中
 3. 若只做互信息而不做任务容量和鲁棒容量，会被认为理论不完整
 4. 若只做仿真而不补充分解推导，会削弱说服力
-5. 若把第一轮 baseline 排序过度推广，会引起审稿质疑
+5. 若把第一轮 baseline 排序过度推广，或把第二轮规范误写成第二轮结果，会引起审稿质疑
 
 ## 当前判断
 期刊匹配度存在潜力，但尚未接近期刊接收标准。
