@@ -50,3 +50,37 @@ The project could become over-formalized without becoming more convincing if the
 2. Require every upcoming figure to answer a yes-or-no design question.
 3. Do not broaden tasks until the single-neuron and frontier comparisons are already decisive.
 4. Keep the discussion calibrated: "near frontier in a defined regime" is credible; "optimal" is not yet supportable.
+
+## 2026-04-25 | Round 3 supervision after first same-axis architecture comparison
+
+### Overall evaluation
+This run finally connected the lower-bound story to one concrete measurement-induced route on the same axes. That is the right kind of progress for Nature Photonics because it produces a real design consequence rather than another abstract promise.
+
+### Gap to target-journal standard
+- The paper can now say something more specific than "activation has a cost": it can say that a homodyne-conditioned route stays near the frontier only when detector efficiency is very high.
+- However, the evidence package is still only one worked example plus one lower bound.
+- The journal threshold still requires either a broader same-axis comparison set or a figure/manuscript package strong enough to make this first result feel definitive rather than preliminary.
+
+### Most critical quality risk
+The new comparison could still be dismissed as a convenient toy route if the paper does not rapidly add one more physically distinct baseline or a figure panel that makes the accessible and inaccessible regions impossible to ignore.
+
+### Evidence-chain gap
+- Missing second architecture on the same axes
+- Missing figure-grade panel and caption logic
+- Missing direct text stating what is gained and what is not claimed
+
+### Must-correct items
+1. Do not present the homodyne proxy as "AQMA optimal"; it is only the first concrete measurement-induced route computed in this project.
+2. Keep detector efficiency in the headline interpretation because that is where the first device-facing consequence actually lives.
+3. Make the next result either a second baseline or a figure-ready accessible-region panel, not a broader but shallower sweep.
+
+### Priority adjustment
+- The main bottleneck has shifted again.
+- It is no longer "no architecture comparison"; it is now "no multi-route or figure-grade comparison package."
+
+### Permission to move to next phase
+- Yes.
+- The project may now move from first comparison generation to comparison consolidation, but it is still not ready for manuscript-level confidence or review-loop escalation.
+
+### Next supervision focus
+- Whether the next run creates a genuine Figure-3 candidate and whether the comparison survives contact with a second activation baseline.

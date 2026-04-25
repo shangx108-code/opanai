@@ -75,3 +75,36 @@
 
 ### Immediate upgrade condition
 - Put one explicit measurement-induced activation model on the same axes as the lower-bound curve and show whether it approaches, misses, or crosses into an excluded regime.
+
+## 2026-04-25 | Post-homodyne-comparison micro-update
+
+### New evidence reviewed
+- One explicit homodyne-conditioned AQMA proxy was computed on the same axes as the coherent-state discrimination lower bound.
+- Verified same-axis results include:
+  at `epsilon = 0.10`, `n_bar^lb = 0.255413` while `n_bar^hom = 0.414741` at `eta = 0.99` and `0.821187` at `eta = 0.50`;
+  at `epsilon = 0.01`, `n_bar^lb = 0.807232` while `n_bar^hom = 1.366640` at `eta = 0.99` and `2.705947` at `eta = 0.50`.
+- The homodyne-to-bound photon-cost ratio stays near `1.6-1.7x` for `eta = 0.99` but grows to about `3.2-3.35x` for `eta = 0.50` over `epsilon = 0.10-0.01`.
+
+### Review impact
+- Reviewer 2 and Reviewer 5 should rise meaningfully because the project now has a genuine lower-bound-versus-architecture comparison.
+- Reviewer 3 should also rise because detector efficiency now enters as an explicit device-facing control axis.
+- Reviewer 1 still remains cautious because one worked route is not yet a full novelty-separating comparison set.
+
+### Five-reviewer dimension estimates
+- Reviewer 1:
+  innovation/significance `34/100`; theory rigor `45/100`; method reliability `42/100`; data/results `37/100`; figure quality `20/100`; writing `28/100`; journal fit `44/100`; acceptance estimate `26%`.
+- Reviewer 2:
+  innovation/significance `36/100`; theory rigor `58/100`; method reliability `49/100`; data/results `40/100`; figure quality `20/100`; writing `30/100`; journal fit `45/100`; acceptance estimate `34%`.
+- Reviewer 3:
+  innovation/significance `33/100`; theory rigor `46/100`; method reliability `47/100`; data/results `39/100`; figure quality `20/100`; writing `27/100`; journal fit `43/100`; acceptance estimate `27%`.
+- Reviewer 4:
+  innovation/significance `35/100`; theory rigor `46/100`; method reliability `43/100`; data/results `41/100`; figure quality `22/100`; writing `33/100`; journal fit `47/100`; acceptance estimate `30%`.
+- Reviewer 5:
+  innovation/significance `35/100`; theory rigor `50/100`; method reliability `48/100`; data/results `45/100`; figure quality `21/100`; writing `29/100`; journal fit `45/100`; acceptance estimate `33%`.
+
+### Current conclusion
+- All five reviewer acceptance estimates remain far below 70%.
+- The project must continue iterative advancement.
+
+### Immediate upgrade condition
+- Add either a second activation route on the same axes or a figure-grade accessible-region panel strong enough to make the new comparison feel definitive rather than illustrative.

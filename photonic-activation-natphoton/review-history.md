@@ -67,3 +67,44 @@ Current outcome: major revision, but materially stronger than concept-only stage
 - Updated estimate for Nature Photonics: 18-26%
 - Upgrade condition to 30-40%: generate the first regime-boundary benchmark and show where AQMA changes the frontier
 - Upgrade condition to 40-55%: integrate benchmark evidence into a coherent manuscript package with verified literature separation
+
+## 2026-04-25 | First same-axis architecture-comparison review
+
+### Material reviewed
+- Lower-bound project state entry
+- Homodyne comparison note: `/workspace/memory/photonic-activation-natphoton/aqma-homodyne-comparison.md`
+
+### Reviewer-style verdict
+Current outcome: major revision, but now with the first concrete evidence that the framework produces a device-facing design law rather than only a formal lower bound
+
+### What improved
+1. The paper now has one concrete measurement-induced route on the same axes as the lower bound.
+2. Detector efficiency has become a quantitative control variable with a clear penalty on boundary-energy cost.
+3. The project can now make one bounded main-text claim about when a measurement-induced route stays near the frontier and when it does not.
+
+### Remaining blockers
+1. Only one architecture trace exists, so the comparison can still be dismissed as illustrative.
+2. No submission-grade figure or caption package yet communicates the result.
+3. Novelty relative to recent photonic nonlinearity papers is still only partially discharged because the comparison set remains too narrow.
+
+### Five-reviewer dimension estimates
+- Reviewer 1, novelty-focused:
+  innovation/significance `34/100`; theory rigor `45/100`; method reliability `42/100`; data/results `37/100`; figure quality `20/100`; writing `28/100`; journal fit `44/100`; acceptance estimate `26%`.
+- Reviewer 2, theory-rigor-focused:
+  innovation/significance `36/100`; theory rigor `58/100`; method reliability `49/100`; data/results `40/100`; figure quality `20/100`; writing `30/100`; journal fit `45/100`; acceptance estimate `34%`.
+- Reviewer 3, device/implementation-focused:
+  innovation/significance `33/100`; theory rigor `46/100`; method reliability `47/100`; data/results `39/100`; figure quality `20/100`; writing `27/100`; journal fit `43/100`; acceptance estimate `27%`.
+- Reviewer 4, broad-reader-clarity-focused:
+  innovation/significance `35/100`; theory rigor `46/100`; method reliability `43/100`; data/results `41/100`; figure quality `22/100`; writing `33/100`; journal fit `47/100`; acceptance estimate `30%`.
+- Reviewer 5, benchmark/comparison-focused:
+  innovation/significance `35/100`; theory rigor `50/100`; method reliability `48/100`; data/results `45/100`; figure quality `21/100`; writing `29/100`; journal fit `45/100`; acceptance estimate `33%`.
+
+### Review interpretation
+- Reviewer 2 and Reviewer 5 move the most because the project now contains a real same-axis comparison rather than a bound alone.
+- Reviewer 3 improves, but only modestly, because the detector-efficiency dependence is informative without yet being a full hardware-feasibility map.
+- Reviewer 1 still sees a narrow evidence base because there is only one architecture beside the lower bound.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 24-34%
+- Upgrade condition to 35-45%: add a second architecture baseline or a figure-grade accessible-region panel that makes the comparison feel field-relevant rather than illustrative
+- Upgrade condition to 45-60%: integrate the comparison into manuscript text with verified literature separation and at least one stronger device-facing figure

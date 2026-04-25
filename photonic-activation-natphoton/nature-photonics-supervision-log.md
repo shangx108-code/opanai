@@ -79,3 +79,43 @@
 
 ### Next supervision focus
 - Whether the first comparison demonstrates a nontrivial accessible or inaccessible region relative to the lower bound.
+
+## 2026-04-25 | Post-homodyne-comparison supervision update
+
+### Current version overall evaluation
+- This run produced the first true same-axis architecture comparison in the project.
+- The paper now has a defensible device-facing statement:
+  high-efficiency homodyne can stay within about a `1.6-1.7x` photon penalty above the lower bound, while reduced detector efficiency quickly widens that gap.
+
+### What is now genuinely improved
+- The lower bound is no longer isolated from a concrete physical route.
+- The accessible region is now partially visible rather than only hypothesized.
+- Detector efficiency has emerged as a manuscript-usable control axis rather than a generic nuisance parameter.
+
+### What remains below target-journal standard
+- Only one architecture trace has been computed.
+- No final figure panel or caption package yet communicates the result in main-text form.
+- No task-level or second-baseline evidence yet shows whether this is the decisive comparison the paper needs.
+
+### Core quality risk
+- A referee could still say the result is interesting but preliminary because the current comparison contains only one architecture family beside the lower bound.
+
+### Evidence-chain gap
+- Missing second activation route on the same axes
+- Missing figure-ready panel with explicit accessible and excluded regions
+- Missing manuscript paragraph that states both the positive message and the present limitation
+
+### Must-correct items
+1. Do not overlabel the homodyne proxy as the AQMA optimum.
+2. Keep the claim regime-based and detector-efficiency-dependent.
+3. Use the next run to add either a second baseline or a figure-ready panel, not a diffuse expansion of scope.
+
+### Priority adjustment
+- Main bottleneck is now the absence of a multi-route or figure-grade comparison package.
+
+### Permission to move to next phase
+- Yes.
+- The project may proceed to comparison consolidation.
+
+### Next supervision focus
+- Whether the next run creates a referee-persuasive panel rather than another isolated note.
