@@ -41,35 +41,37 @@
 - 但当前仍是“最小证据链”，还不是 Nature Communications 级别的完整研究证据。
 
 ## 当前唯一主瓶颈
-round7 已在当前工作区重建并真实运行一个更强的 learned-prior phase baseline，把平均 `recovered_measurement_error` 从已登记 round5 的 `2.52e-01` 压到 `9.54e-03`。因此上一轮“phase solver measurement consistency 偏弱”的首要问题已被推进。当前新的唯一主瓶颈变成：在更低 solver error 下，phase branch bias 不再稳定，甚至多数样例更接近 reversed branch，说明现有 phase 证据仍不足以支撑“稳定 prior-induced branch selection”这一论文级主张。
+round8 已在当前环境中重新落地并真实运行一个受控稳健性扫描，在持续保持低 `recovered_measurement_error` 的同时，直接比较 prior family、训练随机种子和初始化对 branch bias 的影响。结果显示：当前 phase branch selection 的符号并不稳定，且会随训练分布取向偏置系统性翻转。因此，项目新的唯一主瓶颈不再是“先把 solver error 压低”，而是“如何把 branch selection 的机制来源从训练分布取向偏置、初始化偶然性和真正可推广的 prior effect 中分离出来”。
 
 具体表现：
-- round7 的 exact ambiguity quantity 仍保持机器精度量级，但 empirical branch-selection quantity 出现明显翻转和样例间波动。
-- round7 的 4 个样例中仅 `1 / 4` 为正 branch bias，平均 `branch_bias = -0.1475`，与已登记 round5 的 `0.7692` 正偏向不一致。
-- 这意味着此前 branch preference 至少部分依赖 solver / benchmark / prior family 细节，而不是已站稳的统一现象。
+- round8 共真实运行 `144` 次 phase solve，exact ambiguity quantity 仍保持 `1.08e-16` 量级。
+- 在低误差条件下，整体平均 `recovered_measurement_error = 1.20e-02`，中位数 `6.79e-03`，说明这一步已经不再停留在高 solver-error 状态。
+- 但整体平均 `branch_bias = 0.0105`，正偏向比例仅 `0.535`，接近不稳定混合态。
+- `true_biased` prior family 下平均 `branch_bias = 0.6893`，`48 / 48` 次为正偏向；`reversed_biased` prior family 下平均 `branch_bias = -0.7330`，`48 / 48` 次为负偏向；`balanced` 条件下平均 `branch_bias = 0.0752`，仅 `29 / 48` 次为正偏向。
+- 这说明当前 branch preference 至少在本 benchmark 中高度依赖 prior family / 训练取向偏置，而不是已站稳的统一现象。
 - DSI / PDR / HCI 仍未完成完整推导、完整适用边界说明和可计算实现。
 - 正文与补充材料仍无投稿级图表体系。
 
 ## 本轮唯一最高优先级
-在 round6 指标边界已固定的前提下，本轮唯一最高优先级是：重建并真实运行一个更强的 learned-prior phase solver，优先把 `recovered_measurement_error` 明显降下来，再检查低误差条件下 branch bias 是否仍稳定存在。
+在 round7 已确认低 solver-error 可达的前提下，本轮唯一最高优先级是：做受控 phase branch-bias 稳健性扫描，真实检验低误差条件下 branch selection 是否在 prior family、训练随机种子和初始化变化下仍保持稳定。
 
 ## 本轮交付物
-1. 当前工作区可现场复核的 round7 phase solver 重建脚本
-2. round7 相位恢复输出目录与真实结果文件
-3. 新的 `recovered_measurement_error`、`distance_to_true`、`distance_to_reversed`、`branch_bias` 对照表
-4. “低 solver error 下 branch bias 仍不稳定”的优先级判定
-5. 更新后的项目状态与监督结论
+1. 当前工作区可现场复核的 `round8_phase_branch_robustness_scan.py`
+2. `round8_phase_branch_robustness_outputs/` 真实输出目录
+3. `round8_phase_case_metrics.csv` 与 `round8_phase_summary.json`
+4. “低误差 phase branch bias 会随 prior family 系统性翻转”的优先级判定
+5. 更新后的项目状态、监督结论与预审判断
 
 ## 完成标准
-- 当前工作区已真实跑出一个更低 `recovered_measurement_error` 的新 phase baseline
-- 新 baseline 的输出字段仍与 round6 的 exact / empirical 三层量兼容
-- 已据新结果判断低误差下 branch bias 是否仍稳定
-- 已据此更新项目状态与监督结论
+- 当前环境已真实跑出 phase branch-bias 的受控稳健性扫描
+- 扫描结果字段仍与 round6 的 exact / empirical 三层量兼容
+- 已在低 measurement-error 条件下判断 branch bias 是否稳定
+- 已据此更新项目状态、监督结论与下一轮唯一动作
 
 ## 下一轮立即动作
-1. 在 round7 低 measurement-error 重建基线上做受控稳健性扫描，优先检查 branch bias 对 prior family、训练集取向偏置和随机初始化的敏感性。
-2. 真实运行该稳健性扫描，并形成 branch sign / magnitude 的重复性统计，而不是只看单次均值。
-3. 只有在低误差条件下 branch selection 仍可重复稳定出现，才考虑把 phase 结果接到 DSI / PDR / HCI 的统一理论接口。
+1. 在当前 round8 扫描基础上，做训练取向比例连续扫参，量化 branch bias 与 orientation bias 的响应曲线，而不是只停留在三档 prior family。
+2. 优先补一个“去偏置或后验平均”型 phase baseline，检查 branch bias 是否在更对称的先验下收敛到接近零。
+3. 只有在机制来源被分离清楚后，才决定是把 phase 结果改写为“prior-induced symmetry breaking depends on prior bias”，还是继续寻找更稳健的统一接口。
 
 ## 已真实完成
 - 已从上传材料中抽取项目名称、论文主线、实施方案、候选任务、图表规划与首批参考文献。
@@ -150,11 +152,31 @@ round7 已在当前工作区重建并真实运行一个更强的 learned-prior p
   - mean branch bias：`-0.1475`
   - 仅 `1 / 4` 个样例为正 branch bias
 - 这一步真实推进了“先降 solver error”的瓶颈，但同时暴露出一个更关键的新事实：当 measurement consistency 显著改善后，branch bias 并没有稳定保持为对 true branch 的正偏向，因此当前 phase 结果仍不足以直接支撑统一理论接口。
+- 已在当前工作区新建并真实运行 `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_scan.py`，对 prior family、训练随机种子和初始化做受控稳健性扫描。
+- 已生成新的输出目录：`/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/`。
+- 已生成 round8 结果文件：
+  - `round8_phase_summary.json`
+  - `round8_phase_case_metrics.csv`
+  - `round8_phase_panel.png`
+  - `round8_phase_notes.md`
+- round8 共真实运行 `144` 次 phase solve，聚合结果为：
+  - true / reversed 精确 branch 的 measurement error：`1.08e-16`
+  - 平均 `recovered_measurement_error`：`1.20e-02`
+  - 中位数 `recovered_measurement_error`：`6.79e-03`
+  - 最大 `recovered_measurement_error`：`6.07e-02`
+  - 整体平均 `branch_bias`：`0.0105`
+  - 正 branch bias 比例：`0.535`
+  - 负 branch bias 比例：`0.465`
+- 按 prior family 分组后：
+  - `true_biased`：平均 `recovered_measurement_error = 1.14e-02`，平均 `branch_bias = 0.6893`，正偏向比例 `1.000`
+  - `balanced`：平均 `recovered_measurement_error = 1.33e-02`，平均 `branch_bias = 0.0752`，正偏向比例 `0.604`
+  - `reversed_biased`：平均 `recovered_measurement_error = 1.14e-02`，平均 `branch_bias = -0.7330`，正偏向比例 `0.000`
+- 这一步真实推进了当前唯一主瓶颈：在保持低 measurement-error 的前提下，当前 phase branch selection 会随 prior orientation bias 系统性翻转，因此“稳定 prior-induced branch selection”这一写法目前不能成立。
 
 ## 已部分完成但仍缺关键环节
 - 文献：已补到 30+，并形成按主题分类的工作文献表；但尚未整理成最终 BibTeX 并逐条嵌入正文/补充材料。
 - 理论：已有第一版可检查理论链，并补上了线性 benchmark 的区域与指标正式定义；但仍缺一般压缩成像、一般非线性相位恢复和 calibrated HCI 的完整推导。
-- 任务设计：压缩成像/incomplete measurement 与相位恢复已形成最小真实运行结果；线性任务已有训练型低秩 prior、前馈式非线性 autoencoder prior、measurement-consistent latent inverse prior 以及统一区域指标；相位恢复除已登记 round5 结果外，现又补出 round7 的低 measurement-error 重建基线，但仍缺 posterior / diffusion / Bayesian 版本、branch bias 稳健性统计以及投稿级 benchmark。
+- 任务设计：压缩成像/incomplete measurement 与相位恢复已形成最小真实运行结果；线性任务已有训练型低秩 prior、前馈式非线性 autoencoder prior、measurement-consistent latent inverse prior 以及统一区域指标；相位恢复除已登记 round5 结果外，现已补出 round7 的低 measurement-error 重建基线与 round8 的 branch bias 稳健性扫描，但仍缺 posterior / diffusion / Bayesian 版本、orientation-bias 连续曲线以及投稿级 benchmark。
 - 图表：已有第 1 轮结果图，但仍属于内部实验图，不是投稿定稿图。
 - 归档：当前工作区已新增 round4 重现实验工件；但历史 round1 / round2 以及记忆中登记的旧 round4 工件仍未在现场找到，原始归档仍需后续补回。
 
@@ -170,7 +192,7 @@ round7 已在当前工作区重建并真实运行一个更强的 learned-prior p
 - 当前判断：数量门槛已跨过，但还未完成 BibTeX 统一、正文嵌入和引用角色精修
 
 ## 当前接收概率判断
-- 综合接收概率：19%–25%
+- 综合接收概率：18%–24%
 
 依据：
 - 创新构想：中到强
@@ -182,7 +204,7 @@ round7 已在当前工作区重建并真实运行一个更强的 learned-prior p
 - 期刊匹配度：中
 
 当前最拖累接收概率的短板：
-1. 低 measurement-error 条件下的 phase branch bias 仍不稳定，尚未形成可重复的机制证据
+1. 低 measurement-error 条件下的 phase branch bias 会随 prior orientation bias 系统性翻转，尚未形成可推广的机制证据
 2. DSI / PDR / HCI 仍没有完整论文级推导与适用边界说明
 3. 图表体系、正文、补充材料和多任务结果矩阵仍远未补齐
 
@@ -198,3 +220,4 @@ round7 已在当前工作区重建并真实运行一个更强的 learned-prior p
 2026-04-26：在当前工作区新建并真实运行 `round5_phase_retrieval_learned_prior.py`，训练长度为 64 的一维非对称对象 autoencoder decoder prior，并在 4 个 held-out 样例上仅通过 Fourier magnitude 测量做 latent 优化。生成 `round5_phase_summary.json`、`round5_phase_case_metrics.csv`、`round5_phase_panel.png` 与 `round5_phase_ambiguity_notes.md`。结果显示 true / reversed 分支的精确 measurement error 为 `1.26e-16` 量级，而 learned prior 输出的 mean branch bias 为 `0.7692`，且 4 / 4 个样例均更接近 true branch；但其平均 measurement error 仍为 `2.52e-01`，因此当前只能算“第一版经验性 branch-selection 证据”，不能包装成强求解器或一般理论结论。
 2026-04-26：新增 `/workspace/memory/computational-imaging-1-ncomms/phase-ambiguity-metrics-round6.md`。本轮未新增真实数值实验，而是把 round5 已登记字段正式拆分为 exact ambiguity quantity、empirical measurement-consistency quantity 与 empirical branch-selection quantity，并明确 `branch_bias = distance_to_reversed - distance_to_true`。基于这一步，项目当前唯一主瓶颈已从“指标边界不清”切换为“phase solver 的 measurement consistency 仍偏弱”，因此下一轮唯一最高优先级改为先补强 phase baseline，而不是直接推进统一理论主接口。
 2026-04-26：在当前工作区新建并真实运行 `round7_phase_pca_solver_rebuild.py`，重建了一个可现场复核的 learned-prior phase retrieval benchmark，并生成 `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/`。该 rebuilt PCA prior baseline 在 4 个 held-out 样例上的平均 `recovered_measurement_error` 为 `9.54e-03`，显著低于已登记 round5 的 `2.52e-01`；但其平均 `branch_bias = -0.1475`，且只有 `1 / 4` 个样例为正偏向，说明一旦 solver error 降低，当前 phase branch preference 并不稳定。由此，项目当前唯一主瓶颈已从“先降 measurement error”切换为“验证低误差 phase branch bias 的稳健性与机制来源”，统一理论接口仍不能提前闭合。
+2026-04-26：在当前环境中重新落地并真实运行 `round8_phase_branch_robustness_scan.py`，生成 `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/`。本轮共完成 `144` 次低误差 phase solve，整体平均 `recovered_measurement_error = 1.20e-02`、平均 `branch_bias = 0.0105`。更关键的是，`true_biased` prior family 下全部 `48 / 48` 次为正偏向，而 `reversed_biased` 下全部 `48 / 48` 次为负偏向，说明当前 branch selection 会随 prior orientation bias 系统性翻转。因此项目当前唯一主瓶颈进一步收缩为：必须把 phase branch selection 的机制来源从训练分布偏置与可推广 prior effect 中分离出来，才能决定后续理论写法。

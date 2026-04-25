@@ -7,44 +7,47 @@
 - 完成标准：任何时刻都能明确当前阶段、当前主瓶颈、本轮最高优先级、交付物和下一轮动作
 - 依赖：全部角色的真实完成状态
 - 优先级：最高
+- 最近完成产出：完成 round8 受控稳健性扫描后的阶段重判，确认当前唯一主瓶颈已从“先降 solver error”切换为“分离 branch selection 的机制来源”
+- 下一步交付物：训练取向比例连续扫参与下一轮唯一最高优先级重排
 
 ## 理论人员
-- 当前任务：在 round7 已显著降低 measurement error 的基础上，为后续稳健性扫描保留 exact / empirical 边界，不让“低误差但不稳定的 branch bias”被误写成统一理论
+- 当前任务：在 round8 已确认 branch bias 会随 prior orientation bias 翻转的基础上，继续维护 exact / empirical 边界，并把“稳定分支选择”改写为“待分离机制来源”的理论问题
 - 输入：统一 forward model、线性与非线性任务定义、likelihood / prior 形式
 - 输出：
   - round6 指标说明维护版
   - phase solver 强化后仍适用的 exact / empirical 判据
-  - solver error 与 branch bias 分离所需的理论检查项
+  - orientation bias 与 branch bias 关系的理论检查项
 - 完成标准：
   - 所有新 phase 结果都必须落入 round6 定义的三层量中
   - 不把经验 branch bias 写成精确 ambiguity 定理
+  - 不把 orientation-biased prior 的分支偏向写成可推广结论
 - 依赖：round6 指标说明已形成
 - 优先级：P2
 
 ## 代码与数值计算人员
-- 当前任务：以 round6 指标说明为约束，在 round7 rebuilt baseline 上继续做 phase branch-bias 稳健性扫描
+- 当前任务：以 round6 指标说明为约束，在 round8 已跑通的低误差稳健性扫描基础上，继续做 training orientation 比例连续扫参与去偏置 baseline
 - 输入：任务定义、噪声模型、baseline 清单
 - 输出：
-  - 多组 prior family / seed / initialization 对照
-  - 新一轮真实运行结果
-  - `recovered_measurement_error` 与 `branch_bias` 的重复性统计
+  - training orientation ratio 响应曲线
+  - 去偏置或后验平均型新 baseline
+  - `recovered_measurement_error` 与 `branch_bias` 的连续响应统计
 - 完成标准：
   - 新输出字段直接继承 round6 定义
-  - 能判断低 measurement-error 条件下 branch bias 是否仍稳定存在
+  - 能判断 branch bias 是否主要由 orientation bias 驱动
 - 依赖：理论人员给出 round6 统一评价指标
 - 优先级：P1
 
 ## 数据分析人员
-- 当前任务：比较 round5 与 round7，以及 round7 后续稳健性扫描之间的 branch bias 稳定性
+- 当前任务：比较 round5、round7 与 round8，重点判断低误差条件下 branch bias 的符号是否由 prior family 系统性控制
 - 输入：baseline 输出、误差图、数据一致性指标、posterior variance 或 sample spread
 - 输出：
   - branch distance 对照表
   - measurement consistency 与 branch selection 对照表
   - solver failure 与 branch bias 分离分析
-  - branch sign 翻转来源判断
+  - orientation bias 驱动强度判断
 - 完成标准：
   - 能区分普通 solver failure 与可重复的 branch preference
-  - 能指出需要补充的对照实验
+  - 能指出需要补充的去偏置对照实验
 - 依赖：新的 phase baseline 结果
 - 优先级：P2
 
@@ -88,6 +91,8 @@
   - 所有不满足 First Principle 的内容都不计入完成项
 - 依赖：全部角色
 - 优先级：最高
+- 最近完成产出：确认 round8 属于真实新进展，但其结论只能写成“低误差条件下 branch bias 对 prior family 敏感”，不能写成稳定 branch selection 已成立
+- 下一步交付物：下一轮继续盯住是否把 orientation-biased 现象误写成统一理论
 
 ## 严格审稿人
 - 当前任务：暂不启动正式五审稿人循环，只维护预审入口条件
@@ -103,17 +108,17 @@
 2. 线性 benchmark 已形成可复核区域定义与指标输出
 3. round6 已把 phase ambiguity 的三个层级量固定下来
 4. 代码与数值计算人员已据此完成 round7 的低 measurement-error rebuilt solver
-5. 数据分析人员据此判断 solver error 降低后 branch bias 并未稳定
-6. 画图人员再定义 Figure 4 的正式面板结构
-7. 撰写人员再写结果段与方法段
+5. 代码与数值计算人员已继续完成 round8 的 prior-family / seed / init 稳健性扫描
+6. 数据分析人员据此判断低误差条件下的 branch bias 会随 prior orientation bias 系统性翻转
+7. 后续再由画图人员定义 Figure 4 的正式面板结构，并由撰写人员改写 Results/Methods 入口
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：重建并补强 phase retrieval baseline 的 measurement consistency
+- 任务名称：低误差条件下的 phase branch-bias 稳健性扫描
 - 负责人：统筹者 + 代码与数值计算人员
 - 预期输出：
-  - 更低 `recovered_measurement_error` 的新 baseline
+  - prior family / train seed / init seed 对照结果
   - 在 round6 判据下可直接比较的新 branch 指标
-  - solver error 与 branch bias 是否分离的判断依据
+  - branch sign 是否由 orientation bias 驱动的判断依据
 - 完成标准：
-  - 已在当前工作区真实得到低 measurement-error 的 rebuilt phase baseline
-  - 已确认 branch bias 在该低误差 baseline 下并不稳定
+  - 已在当前环境真实完成稳健性扫描
+  - 已确认 branch bias 在低 measurement-error 条件下不稳定，且会随 prior family 系统性翻转

@@ -83,3 +83,10 @@
 - 该结果说明：phase retrieval 中“先把 solver error 降下来”这一任务已被真实推进，但 branch preference 并未在低误差条件下稳定保持。
 - 因此，当前 phase 结果更接近“branch selection 对 solver / prior / benchmark 细节敏感”的预审结论，而不是“稳定 prior-induced branch bias 已成立”。
 - 正式五审稿人循环仍不能启动，因为理论推导、稳健性统计、正文与补图仍未形成可审材料。
+
+## 预审备注（round8 branch-bias 稳健性扫描后）
+- 当前环境已新增一套可复核的 round8 稳健性扫描工件，并在低 measurement-error 条件下系统比较了 prior family、训练随机种子和初始化对 branch bias 的影响。
+- round8 共完成 `144` 次真实 phase solve，整体聚合结果为：mean exact ambiguity quantity `1.08e-16`，mean recovered measurement error `1.20e-02`，mean branch bias `0.0105`，正偏向比例 `0.535`，负偏向比例 `0.465`。
+- 更关键的是，分组后出现了系统性翻转：`true_biased` 条件下 `48 / 48` 次为正偏向，平均 `branch_bias = 0.6893`；`reversed_biased` 条件下 `48 / 48` 次为负偏向，平均 `branch_bias = -0.7330`；`balanced` 条件下仅轻微偏正，平均 `branch_bias = 0.0752`。
+- 该结果说明：当前 phase retrieval 中的 branch selection 至少在这个 controlled benchmark 里高度依赖 prior orientation bias，而不是稳定的统一现象。
+- 因此，正式五审稿人循环仍不能启动；下一步必须先补机制分离实验，而不是把当前 branch sign 写成论文主结论。

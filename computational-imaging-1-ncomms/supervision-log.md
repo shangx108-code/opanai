@@ -258,6 +258,44 @@
 - 正文、补充材料和投稿级图表仍未形成。
 
 ## 新增风险提醒
+
+## 监督轮次 8
+- 日期：2026-04-26
+- 节点性质：低误差 phase branch-bias 稳健性扫描监督
+
+## 当前版本总体评价
+这一轮不是停留在“猜测 branch bias 不稳”，而是把它真实跑成了一个受控稳健性扫描。当前环境中已经有一套新的可复核脚本和 `144` 次 phase solve 输出，因此项目对 phase 分支问题的认识明显更扎实了。但结果同样更严格地削弱了旧的强主张空间：branch selection 在低误差条件下会随 prior orientation bias 系统性翻转，当前不能再把它写成稳定、统一的 prior-induced branch preference。
+
+## 本轮已真实完成
+- 已在当前环境中新建并运行 `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_scan.py`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/round8_phase_summary.json`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/round8_phase_case_metrics.csv`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/round8_phase_panel.png` 与 `round8_phase_notes.md`。
+- 已在 `3` 个 prior family、`3` 个训练随机种子、`4` 个初始化种子和 `4` 个 held-out 样例上完成 `144` 次真实 solve。
+- 聚合结果显示：mean exact ambiguity quantity `1.08e-16`，mean recovered measurement error `1.20e-02`，median recovered measurement error `6.79e-03`，mean branch bias `0.0105`。
+- 分组结果显示：
+  - `true_biased` 下平均 `branch_bias = 0.6893`，正偏向比例 `1.000`
+  - `balanced` 下平均 `branch_bias = 0.0752`，正偏向比例 `0.604`
+  - `reversed_biased` 下平均 `branch_bias = -0.7330`，正偏向比例 `0.000`
+
+## 本轮未达标部分
+- 当前 phase baseline 仍是 synthetic PCA prior，不是 posterior / diffusion / Bayesian baseline。
+- 当前稳健性扫描已证明“branch bias 不稳定”，但还没有给出 orientation bias 的连续响应曲线。
+- DSI / PDR / HCI 仍未完成论文级详细推导。
+- 正文、补充材料与投稿级图表仍未形成。
+
+## 新增风险提醒
+- 现在最大的写作风险已经从“把高 solver-error 现象误写成 branch selection”变成“把 orientation-biased prior 的翻转现象误写成普适 prior effect”。
+- 当前 round8 是 synthetic controlled benchmark，不等于真实高应用价值任务已经补齐。
+- 即使 mean recovered measurement error 已在 `1e-2` 量级，也不能直接宣称 phase 机制闭环成立，因为 branch sign 仍受 prior family 强烈控制。
+
+## 必须纠正项
+1. 下一轮必须优先补 training orientation 比例连续扫参，量化 branch bias 对先验偏置的响应曲线。
+2. 不得把 `true_biased` 条件下的全正偏向写成“相位恢复普遍偏向 true branch”；它只对当前有偏训练分布成立。
+3. 不得把当前稳健性扫描当作 phase 任务已经完成；它只是把主瓶颈从“是否稳定”进一步缩到“为何翻转”。
+
+## 是否允许进入下一阶段
+允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。
 - 如果下一轮直接把当前 round5 结果接成统一理论接口，会把 solver failure 与 prior-induced branch preference 混写。
 - 如果后续恢复 round5 原始工件，仍需再做一次现场核验，不能用本轮口径说明替代原始归档。
 
