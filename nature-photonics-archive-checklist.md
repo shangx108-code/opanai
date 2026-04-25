@@ -23,9 +23,9 @@
 - [x] Figure-3 Results subsection draft
 - [x] Figure-3 revised caption draft
 - [x] Figure-3 insertable claim sentence
+- [x] Verified literature-positioning paragraph
 
 ## Still Missing
-- [ ] Verified literature-separation paragraph
 - [ ] Current manuscript source
 - [ ] Current manuscript PDF
 - [ ] Supplementary source
@@ -35,4 +35,4 @@
 
 ## Truthfulness Note
 - Figure packaging is genuinely completed for the first candidate version.
-- Figure-3 subsection drafting is genuinely completed at the package level, but full-manuscript integration, literature separation, task-level evidence, and submission packaging remain incomplete and are not marked as done.
+- Figure-3 subsection drafting and the standalone literature-positioning paragraph are genuinely completed at the package level, but full-manuscript integration, task-level manuscript flow, and submission packaging remain incomplete and are not marked as done.

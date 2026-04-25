@@ -115,3 +115,52 @@
 
 ## Next Immediate Review-Driven Action
 - Write and review one verified literature-positioning paragraph before expanding to new benchmarks.
+
+## Round 3 Literature-Positioning Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only plus checked recent comparison papers
+
+### Material Reviewed
+- prior same-axis figure package
+- Figure-3 Results writing package
+- task-level benchmark summary
+- manuscript spine
+- checked comparison papers:
+  - `Nonlinear optical encoding enabled by recurrent linear scattering`, Nature Photonics (2024)
+  - `Nonlinear processing with linear optics`, Nature Photonics (2024)
+  - `Field-programmable photonic nonlinearity`, Nature Photonics (2025)
+  - `Quantum-limited stochastic optical neural networks operating at a few quanta per activation`, Nature Communications (2025)
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: novelty is now better defended because the manuscript can explicitly say it is not claiming generic programmable nonlinearity, but rather a resource-based design law with bounded task consequence.
+- Acceptance estimate: 48%
+- Main reason: literature separation is now real, yet the full manuscript still does not integrate the argument into a polished journal narrative.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: the claim set is now sharper because nearby literature no longer forces ambiguous novelty language, and the paper's mechanism story is more cleanly delimited.
+- Acceptance estimate: 53%
+- Main reason: theory credibility improves when novelty and non-novelty boundaries are explicit, but full derivation-to-manuscript continuity is still incomplete.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: no new computation was added in this run, but the literature comparison makes the scope of the existing numerics more honest and inspectable.
+- Acceptance estimate: 44%
+- Main reason: computational evidence is unchanged and still limited to the current benchmark stack.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: the evidence package is more persuasive because Figure 3 and the task-level benchmark now have a clearer external reason for belonging in the same paper.
+- Acceptance estimate: 50%
+- Main reason: result framing improved, but the paper still lacks integrated manuscript presentation and PDF-level delivery.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: the project now has a reviewer-safe paragraph that explains what the paper adds beyond recent Nature Photonics-adjacent work.
+- Acceptance estimate: 55%
+- Main reason: writing persuasiveness improves materially, but the manuscript still exists as packages rather than as a full journal-facing draft.
+
+## Updated Summary
+- Genuine completion in this run: one citation-verified literature-positioning paragraph now exists as a reusable manuscript block.
+- Still incomplete: manuscript integration of the paragraph and current Results packages, rendered manuscript PDF, supplement package, and final archive.
+- Current five-reviewer range: `44-55%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
+## Next Immediate Review-Driven Action
+- Integrate the verified literature-positioning block into a continuous manuscript flow with Figure 3 and the task-level benchmark before adding new benchmarks.

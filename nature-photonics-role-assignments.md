@@ -1,22 +1,22 @@
 # Nature Photonics Role Assignments
 
 ## Current Phase
-- Figure-3 Results-section drafting completed for the first same-axis main-text candidate; immediate next phase is literature separation.
+- Figure-3 Results-section drafting and standalone literature-positioning paragraph are completed; immediate next phase is manuscript integration.
 
 ## Role Task Table
 
 ### Coordinator
-- Current task: lock the literature-positioning paragraph that explains why the same-axis resource result is distinct from recent photonic nonlinearity papers.
-- Input: Figure-3 writing package, manuscript spine, journal criteria, recent literature set.
-- Output: one bounded positioning paragraph with explicit novelty and non-novelty lines.
-- Completion standard: the Introduction/Results can reference recent work without drifting into unsupported novelty claims.
+- Current task: place the verified literature-positioning paragraph into the manuscript flow that bridges the Introduction gap statement and the Figure-3 / Figure-4 Results logic.
+- Input: Figure-3 writing package, task-level benchmark package, manuscript spine, journal criteria, verified recent literature set.
+- Output: one integrated manuscript flow for Introduction plus early Results.
+- Completion standard: the paper reads as one coherent Nature Photonics story rather than separate result packages.
 - Priority: highest
 
 ### Theorist
-- Current task: keep the Figure-3 theory boundaries stable while the paper is positioned against recent literature.
-- Input: theory framework, same-axis comparison notes, Figure-3 writing package.
-- Output: a short checklist of novelty claims that remain valid after literature comparison.
-- Completion standard: literature positioning does not mutate the fixed-model claim into a universal theorem.
+- Current task: keep the verified literature paragraph aligned with the current theory boundaries.
+- Input: theory framework, same-axis comparison notes, Figure-3 writing package, task-level benchmark assumptions.
+- Output: a short checklist of claims that remain valid during manuscript integration.
+- Completion standard: manuscript integration does not mutate the fixed-model claim into a universal theorem or turn the task-level surrogate into a hardware-level proof.
 - Priority: high
 
 ### Code And Numerical Computation
@@ -27,11 +27,11 @@
 - Priority: paused
 
 ### Data Analyst
-- Current task: extract the one-sentence editorial distinction between "resource framework" and "generic programmability" claims.
-- Input: Figure-3 writing package, manuscript spine, journal criteria.
-- Output: novelty-positioning language that remains faithful to the available evidence.
-- Completion standard: a reader can see what is new here without inferring unproved superiority.
-- Priority: highest
+- Current task: carry the verified editorial distinction into the manuscript-level argument.
+- Input: literature-positioning paragraph, Figure-3 writing package, task-level benchmark summary.
+- Output: one sentence linking literature separation to the mixed positive-and-negative task-level consequence.
+- Completion standard: a reader can see why the project contributes a design law rather than another generic photonic-AI demonstration.
+- Priority: high
 
 ### Figure Lead
 - Current task: hold the figure package fixed while caption wording is aligned later with manuscript style.
@@ -41,32 +41,32 @@
 - Priority: low
 
 ### Manuscript Writer
-- Current task: completed the first insertable Results subsection and tightened caption around Figure 3.
-- Input used: figure candidate, verified ratios, theory limitations, manuscript spine, journal criteria.
-- Output delivered: insertable subsection text, revised caption draft, and one-sentence claim.
+- Current task: completed the verified literature-positioning paragraph and preserve it as an insertable block for manuscript integration.
+- Input used: manuscript spine, journal criteria, Figure-3 claim package, task-level benchmark summary, checked 2024-2025 literature.
+- Output delivered: one insertable paragraph with explicit novelty and non-novelty boundaries.
 - Completion standard: met in this run.
 - Priority: completed in this run
 
 ### Supervisor
-- Current task: guard against turning literature positioning into overclaim about universal novelty or universal optimality.
-- Input: Figure-3 writing package, theory limits, journal criteria.
-- Output: allowed-claim / disallowed-claim checklist for the literature-separation pass.
+- Current task: guard against overclaim during manuscript integration.
+- Input: literature-positioning paragraph, Figure-3 writing package, task-level benchmark assumptions, journal criteria.
+- Output: allowed-claim / disallowed-claim checklist for the integration pass.
 - Completion standard: the next draft stays strict and evidence-based.
 - Priority: high
 
 ### Strict Reviewers
-- Current task: update acceptance estimates after Figure 3 now has bounded manuscript prose rather than only a rendered panel.
-- Input: figure package, Figure-3 writing package, prior review history.
+- Current task: update acceptance estimates after the project gained verified literature separation as a standalone package.
+- Input: figure package, Figure-3 writing package, literature-positioning paragraph, prior review history.
 - Output: revised reviewer matrix and next upgrade condition.
-- Completion standard: the project state reflects the genuine writing advance without pretending full-manuscript readiness.
+- Completion standard: the project state reflects the genuine novelty-positioning advance without pretending full-manuscript readiness.
 - Priority: high
 
 ## What Was Completed In This Run
-- Completed: manuscript writing moved Figure 3 from figure-only status to an insertable Results package with bounded claims.
-- Completed: the project now has explicit allowed and disallowed claim boundaries for this comparison.
+- Completed: manuscript writing produced a verified literature-positioning paragraph against the nearest 2024-2025 comparison papers.
+- Completed: the project now has explicit novelty and non-novelty lines for how Figure 3 and the task-level benchmark should be described.
 
 ## What Remains Incomplete
-- Incomplete: literature separation, task-level evidence, and full-manuscript integration remain open.
+- Incomplete: full-manuscript integration, manuscript PDF generation, and full task-level manuscript flow remain open.
 
 ## Next Immediate Deliverable
-- One verified literature-positioning paragraph tied directly to the new Figure-3 claim.
+- One integrated manuscript section that threads the verified literature paragraph into the Figure-3 and task-level Results story.
