@@ -236,3 +236,46 @@ Current outcome: still major revision, but the manuscript now has a true task-le
 - Updated estimate for Nature Photonics: 44-55%
 - Upgrade condition to 52-62%: add a verified literature-positioning subsection that explicitly distinguishes this work from the strongest 2024-2025 photonic nonlinearity papers
 - Upgrade condition to 60-72%: integrate Figure 3 and Figure 4 into a manuscript-grade Results flow and clean the reference ledger
+
+## 2026-04-25 | Verified literature-positioning review
+
+### Material reviewed
+- Literature-positioning note: `/workspace/memory/photonic-activation-natphoton/verified-literature-positioning.md`
+- Reference ledger: `/workspace/memory/photonic-activation-natphoton/verified-reference-ledger.md`
+- Manuscript integration draft: `/workspace/memory/photonic-activation-natphoton/manuscript-integration-draft.md`
+- Updated manuscript spine: `/workspace/memory/photonic-activation-natphoton/manuscript-spine.md`
+
+### Reviewer-style verdict
+Current outcome: still major revision, but now with a much cleaner path to a serious Nature Photonics submission because the novelty case is finally explicit, bounded, and citation-checked.
+
+### What improved
+1. The paper can now answer the main novelty challenge against 2024-2025 comparator papers without overclaiming.
+2. Introduction, Results, and Discussion prose can now be drafted from checked assets rather than from placeholders.
+3. Reviewer confusion between "can photonic nonlinearity be built?" and "what is the physical cost and design consequence of paying for it?" is substantially reduced.
+
+### Remaining blockers
+1. The strongest system-level benchmark is still a random-feature surrogate rather than a tighter trainable-network result.
+2. The manuscript is still section-ready rather than full-draft complete.
+3. The reference ledger is cleaned for the core comparator set, but not yet for the full manuscript bibliography.
+
+### Five-reviewer dimension estimates
+- Reviewer 1, novelty-focused:
+  innovation/significance `60/100`; theory rigor `58/100`; method reliability `57/100`; data/results `60/100`; figure quality `53/100`; writing `58/100`; journal fit `64/100`; acceptance estimate `55%`.
+- Reviewer 2, theory-rigor-focused:
+  innovation/significance `56/100`; theory rigor `68/100`; method reliability `61/100`; data/results `61/100`; figure quality `53/100`; writing `56/100`; journal fit `63/100`; acceptance estimate `59%`.
+- Reviewer 3, device/implementation-focused:
+  innovation/significance `54/100`; theory rigor `56/100`; method reliability `60/100`; data/results `58/100`; figure quality `52/100`; writing `54/100`; journal fit `61/100`; acceptance estimate `53%`.
+- Reviewer 4, broad-reader-clarity-focused:
+  innovation/significance `57/100`; theory rigor `57/100`; method reliability `58/100`; data/results `59/100`; figure quality `55/100`; writing `62/100`; journal fit `65/100`; acceptance estimate `60%`.
+- Reviewer 5, benchmark/comparison-focused:
+  innovation/significance `58/100`; theory rigor `61/100`; method reliability `61/100`; data/results `62/100`; figure quality `54/100`; writing `57/100`; journal fit `63/100`; acceptance estimate `58%`.
+
+### Review interpretation
+- Reviewer 1 and Reviewer 4 move the most because the paper's significance case is now sharper and easier to understand at first pass.
+- Reviewer 2 improves more modestly because the theory framework was already relatively strong before this run.
+- Reviewer 5 still caps the paper because the present task-level evidence remains stylized.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 50-60%
+- Upgrade condition to 58-68%: replace the random-feature surrogate with one tighter trainable-network benchmark under the same budget accounting
+- Upgrade condition to 65-75%: complete a full manuscript draft and extend the cleaned reference ledger across the complete bibliography

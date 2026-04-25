@@ -22,15 +22,17 @@
 - Reproducible task benchmark script: `/workspace/memory/photonic-activation-natphoton/task_level_benchmark.py`
 - Task benchmark outputs in `task_level_benchmark/`
 - Figure-4 benchmark package: `/workspace/memory/photonic-activation-natphoton/figure4_minimal_benchmark_package.md`
+- Verified literature-positioning package: `/workspace/memory/photonic-activation-natphoton/verified-literature-positioning.md`
+- Verified core reference ledger: `/workspace/memory/photonic-activation-natphoton/verified-reference-ledger.md`
+- Manuscript integration prose package: `/workspace/memory/photonic-activation-natphoton/manuscript-integration-draft.md`
 
 ## Still to archive
 - Theory note on activation quantum cost
 - Benchmark specification
-- Manuscript outline and draft sections
+- Full manuscript outline and draft sections
 - Simulated review packages for each round
-- Verified literature-positioning note
-- Clean reference ledger
-- Manuscript-integrated Figure-3/Figure-4 Results text
+- Full clean reference ledger
+- Stronger end-to-end task benchmark package
 
 ## Next archive-worthy item
-- Verified literature-positioning package linking the new task-level result to the 2024-2025 photonic nonlinearity literature
+- Stronger trainable-network task benchmark package that supersedes the current random-feature surrogate under the same budget accounting

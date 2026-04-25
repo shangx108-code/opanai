@@ -19,8 +19,8 @@ To be competitive as a theory-and-simulation Nature Photonics article, this pape
 ## Current distance to threshold
 - Scope fit: good
 - Significance potential: medium to high
-- Conceptual sharpness: medium to high
-- Novelty separation from recent literature: still insufficient, but improving
+- Conceptual sharpness: high
+- Novelty separation from recent literature: now materially improved for the core comparator set
 - Evidence completeness: still insufficient, but materially improved
 - Device relevance: now demonstrated more convincingly at the single-neuron boundary-discrimination level
 - Broad-reader accessibility: improved, but not yet secured across a full manuscript
@@ -37,21 +37,15 @@ To be competitive as a theory-and-simulation Nature Photonics article, this pape
 - Recent 2024-2025 Nature-family photonics papers must be explicitly positioned because they directly affect the novelty threshold.
 
 ## What this run newly satisfies
-- The project now has one concrete measurement-induced activation route on the same axes as the coherent-state discrimination lower bound.
-- The project now has a second concrete same-axis route using displaced on-off counting.
-- Detector efficiency now appears as an explicit device-facing control axis rather than as a generic future parameter.
-- The paper can now support a stronger bounded statement that is plausible for Nature Photonics readers:
-  detector efficiency sets the global accessibility of the frontier, while measurement choice sets a further constant-factor overhead above it.
-- The project now has a submission-grade Figure-3 candidate with regime annotations, caption logic, claim boundaries, and Results-ready prose.
-- The project now has a first real task-level benchmark package with reproducible outputs rather than only a planned Figure-4 placeholder.
-- The manuscript can now support a more mature design statement:
-  activation is worth paying for only in task-and-budget regimes where the nonlinear gain exceeds the fixed-budget reliability penalty.
-- The benchmark now shows that implementable-route preference does not follow trivially from single-neuron closeness to the lower bound once width allocation is included.
+- The project now has a citation-verified comparator set against the strongest 2024-2025 photonic-nonlinearity papers most likely to define reviewer expectations.
+- The manuscript can now make a bounded and field-appropriate novelty claim:
+  the advance is a resource-and-regime framework for nonlinear activation cost, not generic photonic programmability.
+- The project now has direct Introduction, Results, and Discussion text that distinguishes hardware realization, frontier distance, and task-level worth-it region.
 
 ## What this run still does not satisfy
-- No verified literature-positioning subsection yet shows why the new mixed task-level result changes the novelty landscape relative to 2024-2025 photonic nonlinearity papers.
-- No cleaned reference ledger yet separates checked primary citations from placeholders.
-- No manuscript-grade Figure-3 to Figure-4 integration yet exists in one continuous Results flow.
+- No stronger end-to-end task benchmark yet replaces the current random-feature surrogate.
+- No full manuscript draft yet assembles the checked prose into a submission-ready main text.
+- No full bibliography cleanup yet covers all non-core citations.
 
 ## Current venue risk summary
-- The paper is now less likely to be dismissed as incomplete on task-level consequence grounds, but it is still at risk of being judged insufficiently distinctive because the manuscript has not yet secured its literature-positioning argument or cleaned reference base.
+- The paper is now less likely to be dismissed as insufficiently distinctive on novelty-positioning grounds, but it is still at risk of being judged too stylized at task level unless the benchmark evidence is strengthened.

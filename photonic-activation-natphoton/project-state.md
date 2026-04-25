@@ -9,13 +9,13 @@
 Build a publishable theory-and-simulation paper that turns the vague claim "photonic neural networks need nonlinearity" into a journal-grade result: a quantitative resource framework for nonlinear activation under quantum noise, finite shots, detector inefficiency and loss, together with a near-limit measurement-induced activation architecture and a device-level design map.
 
 ## Current stage
-Task-level-consequence and manuscript-bridging stage. The project now has a first real Figure-4-style benchmark package that tests whether the Figure-3 activation frontier changes system-level design choices under a fixed activation photon budget.
+Verified novelty-positioning and manuscript-integration stage. The project now has a citation-checked literature-positioning package and direct manuscript text that connect the Figure-3 activation frontier and the first real Figure-4 task-level benchmark to the 2024-2025 Nature-family photonic-nonlinearity landscape.
 
 ## Current main bottleneck
-The main bottleneck is now the lack of a manuscript-grade novelty-positioning section that explains why the new mixed positive-and-negative task-level result is distinct from recent 2024-2025 programmable and measurement-based photonic-nonlinearity papers. The project now has real task-level evidence, but without verified literature separation the novelty and significance case will remain capped.
+The main bottleneck is now the absence of a stronger end-to-end task benchmark beyond the current random-feature surrogate. The literature-positioning bottleneck is now materially reduced, but reviewers can still argue that the system-level consequence remains too stylized for Nature Photonics unless one tighter trainable-network benchmark is added under the same photon-budget accounting.
 
 ## Highest-priority objective for the current round
-Build the first minimal task-level benchmark that tests whether the Figure-3 frontier changes the preferred activation design once inference utility, detector efficiency and photon budget are all counted together.
+Build a citation-verified literature-positioning package that explains, in reviewer-safe language, why the mixed Figure-3/Figure-4 result is distinct from recent 2024-2025 photonic nonlinearity papers and can be integrated directly into the manuscript.
 
 ## Proposed central claim
 The real scalability bottleneck of photonic neural networks is not linear optics but the physical cost of nonlinear activation; this cost can be cast as a quantum resource problem, and measurement-induced adaptive activation can approach the low-energy Pareto frontier only inside explicitly quantified detector-, loss-, and sampling-limited regimes.
@@ -40,44 +40,36 @@ The real scalability bottleneck of photonic neural networks is not linear optics
 
 ## This run's concrete result
 ### Goal
-- Build the first real task-level benchmark that tests whether the single-neuron frontier changes the preferred implementable activation design under a fixed total activation budget.
+- Remove the novelty-positioning bottleneck by converting the current literature placeholders into verified manuscript-ready positioning text.
 
 ### Real outputs completed in this run
-- Added a reproducible benchmark script in `task_level_benchmark.py`.
-- Added an assumptions ledger in `task_level_benchmark_assumptions.md` that states exactly what the task benchmark may and may not infer from Figure 3.
-- Ran the benchmark and saved:
-  - `task_level_benchmark/task_level_benchmark_results.csv`
-  - `task_level_benchmark/task_level_benchmark_best_configs.csv`
-  - `task_level_benchmark/task_level_benchmark_summary.md`
-  - `task_level_benchmark/task_level_benchmark_summary.json`
-- Added a manuscript-facing interpretation package in `figure4_minimal_benchmark_package.md`.
+- Added a citation-verified literature-positioning brief in `verified-literature-positioning.md`.
+- Added a checked reference ledger in `verified-reference-ledger.md`.
+- Added direct manuscript prose blocks in `manuscript-integration-draft.md`.
+- Updated `manuscript-spine.md` so the prior-work gap and preview logic now align with verified comparator papers rather than placeholder novelty language.
 
-### Task-level numerical anchors now packaged for the manuscript
-- Linear no-activation baseline:
-  - `two_moons`: `0.882` test accuracy
-  - `concentric_circles`: `0.484` test accuracy
-- On `concentric_circles`, the best implementable activation beats the linear baseline in all `15/15` scanned `(eta, budget)` conditions.
-- On `two_moons`, the best implementable activation does not beat the linear baseline in any scanned condition up to total activation budget `16`.
-- Implementable route preference is not trivially inherited from Figure 3:
-  - on-off beats homodyne in only `9/30` matched `(task, eta, budget)` comparisons.
-  - homodyne is the best implementable route in most scanned `concentric_circles` settings.
-  - on-off becomes preferred only in a smaller subset of higher-budget conditions.
-
-### Design-relevant interpretation now locked
-- The project now has a real task-level consequence: whether activation is worth paying for depends on task geometry, not only on the single-neuron frontier.
-- The Figure-3 ranking between implementable routes does not transfer trivially to task-level preference once total activation budget is fixed.
-- The strongest honest statement is now mixed rather than triumphalist:
-  measurement-induced activation can be decisively worthwhile for nonlinear tasks with weak linear baselines, but it can remain unjustified for tasks that are already largely linearly separable in the scanned budget range.
+### Literature-positioning conclusions now locked
+- The manuscript can now state a reviewer-safe novelty claim:
+  the contribution is not generic photonic nonlinearity or generic programmability, but a common resource-and-regime framework for nonlinear activation cost.
+- The strongest comparator papers now have explicit claim boundaries:
+  - Bandyopadhyay et al. 2024 for integrated on-chip nonlinear ONNs
+  - Yildirim et al. 2024 for nonlinear processing with nominally linear optics
+  - Wu et al. 2025 for programmable nonlinear photonic hardware
+  - Wang et al. 2022 and Ma et al. 2025 for low-photon optical-computing and low-photon activation demonstrations
+- The project can now argue, with checked citations, that its distinct result is the combination of:
+  - a common lower-bound-plus-implementable-route comparison
+  - explicit detector-efficiency and sampling penalties
+  - a mixed task-level worth-it criterion showing that paying for activation is regime dependent rather than universally beneficial
 
 ## What is still missing
-- A verified literature-positioning paragraph against 2024-2025 photonic nonlinearity papers that explains why the new task-level split is not redundant with recent photonic nonlinearity work
-- A confirmed reference ledger separating verified citations from placeholders
-- The first paper-integrated draft that places Figure 3 and the new minimal Figure-4 package into one continuous Results flow
-- At least one tighter follow-up benchmark beyond the current random-feature surrogate if the manuscript is to push the task-level claim substantially harder
+- At least one tighter trainable-network benchmark beyond the current random-feature surrogate under the same photon-budget accounting
+- A full manuscript draft that incorporates the new literature-positioning and integration text across Introduction, Results, and Discussion
+- A final cleaned reference ledger covering all non-core citations, not only the key comparator set
+- A clear archive-ready manuscript package with main text, supplementary text, and figure callouts
 
 ## Acceptance probability (stage estimate)
-- Nature Photonics: 44-55% after adding the first real task-level benchmark package
-- Reason: the project no longer stops at a polished single-neuron story. It now has a bounded but real task-level consequence with positive and negative regions, which materially strengthens benchmark credibility and manuscript logic. The ceiling remains limited by incomplete literature separation, lack of a cleaned reference ledger, and the fact that the new task result is still a stylized surrogate rather than a fully trained end-to-end network study.
+- Nature Photonics: 50-60% after adding verified literature positioning and manuscript-ready integration text
+- Reason: the project has now closed a major reviewer-facing weakness by replacing placeholder novelty rhetoric with checked comparator papers and bounded manuscript text. The ceiling remains limited by the lack of a stronger end-to-end task benchmark and by the absence of a full integrated draft.
 
 ## Last update
-2026-04-25: built the first real task-level benchmark from the existing workspace by mapping the Figure-3 boundary-error models onto a fixed-budget random-feature classifier, saving reproducible CSV and JSON outputs, and writing `figure4_minimal_benchmark_package.md`. This closes the previous bottleneck around missing task-level consequence and shifts the next bottleneck to verified literature positioning and manuscript integration of the new mixed task-level result.
+2026-04-25: converted the literature-positioning bottleneck into checked manuscript assets by writing `verified-literature-positioning.md`, `verified-reference-ledger.md`, and `manuscript-integration-draft.md`, and by updating `manuscript-spine.md` to align the claimed advance with verified 2024-2025 comparator papers. This shifts the next bottleneck to a stronger end-to-end task benchmark beyond the current random-feature surrogate.

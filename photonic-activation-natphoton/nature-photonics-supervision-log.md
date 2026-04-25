@@ -186,3 +186,37 @@ The project could now be rejected as insightful but insufficiently distinguished
 
 ### Next supervision focus
 - Whether the next run builds a citation-verified novelty argument that connects the Figure-3 and Figure-4 results into a coherent Nature Photonics submission case.
+
+## 2026-04-25 | Round 7 supervision after verified literature positioning
+
+### Overall evaluation
+This run addressed the correct bottleneck. The project now has a checked novelty-positioning package rather than hand-wavy prior-work language. That matters because the paper's mixed task-level result was already strong enough to deserve a serious submission path, but not strong enough to survive a selective-journal review without a precise answer to "how is this different from recent nonlinear photonic hardware papers?"
+
+### Gap to target-journal standard
+- The manuscript can now articulate a more disciplined advance: not generic photonic nonlinearity, but a cross-architecture resource-and-regime framework for nonlinear activation cost.
+- Broad-reader accessibility improved because the project now distinguishes hardware realization, distance from the resource frontier, and task-level worth-it region as three separate questions.
+- The remaining gap is no longer mainly rhetorical. It is evidentiary: the task-level consequence still rests on a stylized random-feature surrogate.
+
+### Most critical quality risk
+The paper could still be rejected as conceptually elegant but experimentally and numerically too indirect if the system-level conclusion is not strengthened with one tighter trainable-network benchmark under the same accounting rules.
+
+### Evidence-chain gap
+- Missing stronger end-to-end task benchmark beyond the current random-feature surrogate
+- Missing full integrated manuscript draft
+- Missing full reference cleanup beyond the core comparator set
+
+### Must-correct items
+1. Do not spend the next round broadening literature search; the critical comparator set is now sufficient for manuscript positioning.
+2. Do not reopen Figure 3 unless a benchmark-driven narrative change requires it.
+3. Make the next numerical round as narrow and defensible as possible: one stronger benchmark, same photon-budget logic, same allowed-claim discipline.
+
+### Priority adjustment
+- The main bottleneck has shifted again.
+- It is no longer "missing verified novelty positioning"; it is now "missing a stronger trainable-network task benchmark."
+
+### Permission to move to next phase
+- Yes.
+- The project may now move from literature positioning to the next task-level evidence upgrade.
+
+### Next supervision focus
+- Whether the next run replaces the current random-feature surrogate with a tighter benchmark without diluting the bounded design-law claim.

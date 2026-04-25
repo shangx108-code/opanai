@@ -10,9 +10,9 @@ Nonlinear activation in photonic neural networks should be treated as a quantum 
 Linear optical transforms are already highly efficient and programmable, but scalable nonlinear activation remains the unresolved cost center in photonic neural networks. Without a quantitative resource framework, the field lacks a reliable way to judge when sophisticated photonic or measurement-based activations are genuinely useful.
 
 ## Gap against prior work
-- Existing photonic neural-network demonstrations establish impressive linear processing and task-level functionality, but they do not supply a common resource metric for nonlinear activation.
-- Recent work on nonlinear processing with linear optics and field-programmable photonic nonlinearity narrows the novelty space, so this paper must not claim generic programmability as its advance.
-- The paper's distinct contribution is a framework that compares physically different nonlinear routes on common resource, discrimination, and task-performance axes.
+- Existing photonic neural-network demonstrations establish impressive linear processing, integrated nonlinear layers, and task-level functionality, but they do not supply a common resource metric for nonlinear activation itself.
+- Recent Nature Photonics papers on nonlinear processing with linear optics, field-programmable photonic nonlinearity, and integrated coherent optical networks narrow the novelty space, so this paper must not claim generic programmability or generic photonic nonlinearity as its advance.
+- The paper's distinct contribution is a resource-and-regime framework that compares lower bounds and physically different nonlinear routes on common resource, discrimination, and task-performance axes, then asks when paying for activation changes design conclusions.
 
 ## Abstract logic
 1. State the field-level promise of photonic neural networks.
@@ -31,13 +31,13 @@ Photonic neural networks are attractive because optics performs linear transform
 The unresolved issue is not matrix multiplication but nonlinear activation, which often requires electronic feedback, strong material response, or measurement overhead.
 
 ### Paragraph 3
-Recent advances have improved photonic programmability and low-light task demonstrations, but the field still lacks a unified criterion for the physical cost of nonlinearity.
+Recent advances have improved photonic programmability, on-chip nonlinear hardware, and low-light task demonstrations, but the field still lacks a unified criterion for the physical cost of nonlinearity.
 
 ### Paragraph 4
 This paper asks a sharper question: how much optical resource is required to realize useful nonlinear activation under realistic noise and detector limits?
 
 ### Paragraph 5
-Preview the answer: define a resource framework, compare activation families, introduce AQMA as a near-frontier architecture, and identify the regimes where measurement-induced activation is or is not worthwhile.
+Preview the answer: define a resource framework, compare activation families, introduce AQMA as a near-frontier architecture, and identify the regimes where measurement-induced activation is or is not worthwhile under fixed detector-efficiency and photon-budget constraints.
 
 ## Results structure
 
