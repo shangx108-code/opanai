@@ -209,3 +209,49 @@
 
 ## Next Immediate Review-Driven Action
 - Embed the continuous integration draft into a full manuscript source and render the first manuscript PDF before expanding the evidence base further.
+
+## Round 5 First-Manuscript-Render Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only, using `manuscript-v1.md`, rendered `manuscript-v1.pdf`, the Figure-3 package, the task-level benchmark summary, and the verified literature-positioning block
+
+### Material Reviewed
+- `manuscript-v1.md`
+- `manuscript-v1.pdf`
+- verified literature-positioning package
+- Figure-3 submission package
+- task-level benchmark summary
+- theory framework
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: the paper now presents its differentiated contribution as a real manuscript rather than a stack of packages, which improves journal fit, but the submission package is still incomplete without a supplement.
+- Acceptance estimate: 56%
+- Main reason: editorial positioning is much clearer in manuscript form, yet the full Nature Photonics package is not assembled.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: the main-text mechanism story is now inspectable end to end, but rigor is still capped because the derivation burden has not yet been moved into a supplement.
+- Acceptance estimate: 62%
+- Main reason: the manuscript now states assumptions and scope more coherently, but reviewer-facing derivation packaging is still absent.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: reproducibility perception improves because the manuscript now names the saved computational sources and methods in one place, but the evidence stack itself has not expanded.
+- Acceptance estimate: 50%
+- Main reason: source assembly helps inspection, yet no new robustness computation or supplement-level provenance package has been added.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: the manuscript now reads like a real results paper, but Figure 4 remains prose-level rather than a standalone manuscript-grade figure object.
+- Acceptance estimate: 58%
+- Main reason: result continuity and figure anchoring improved materially, though the package still lacks supplement support and final figure harmonization.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: writing quality improved again because the paper is now readable as one narrative with abstract, methods and discussion, but it still looks like a strong draft rather than a submission-ready package.
+- Acceptance estimate: 61%
+- Main reason: persuasion rises from manuscript embodiment, yet the absence of a supplement and final package polish still blocks higher confidence.
+
+## Updated Summary
+- Genuine completion in this run: the project now has a full manuscript source and a first rendered manuscript PDF.
+- Still incomplete: supplement source, supplement PDF, Figure 4 manuscript-grade figure package, and final archive.
+- Current five-reviewer range: `50-62%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
+## Next Immediate Review-Driven Action
+- Assemble the first supplementary source and supplementary PDF before expanding the benchmark stack further.

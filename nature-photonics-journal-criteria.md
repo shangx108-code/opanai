@@ -14,14 +14,15 @@
 - A first task-level benchmark exists in the project-specific namespace, so the paper is no longer missing task-level consequence entirely.
 - A checked literature-positioning paragraph now exists, so the paper can distinguish itself from recent nearby nonlinearity papers without claiming generic programmability or generic all-optical novelty.
 - A continuous manuscript integration draft now exists, so the project can present the Introduction gap, the Fig. 3 design law, and the Fig. 4 mixed task-level consequence as one coherent story.
+- A full manuscript source and first rendered manuscript PDF now exist, so the paper can be inspected as a paper-level object rather than only as manuscript fragments.
 
 ## Criteria Still Not Satisfied
-- Full manuscript source and PDF-level embodiment of the new integrated story.
 - Submission-grade full manuscript package with PDF, supplement, and archive bundle.
+- Supplement source and supplement PDF carrying derivations, assumptions, and provenance.
 - Manuscript-wide figure/caption harmonization and final top-level task-level figure packaging.
 
 ## Current Main Risk Relative To Journal Standard
-- The narrative is now coherent at draft level, but the paper still falls short of journal standard because that story is not yet embodied in a full manuscript source and rendered submission-like package.
+- The narrative is now embodied in a first rendered manuscript, but the paper still falls short of journal standard because the supplement and final evidence packaging are missing.
 
 ## Immediate Criterion To Satisfy Next
-- Build one full manuscript source and first rendered manuscript PDF around the new integration draft.
+- Build one supplementary source and first supplementary PDF around the current manuscript so that the derivation and benchmark burden is reviewer-inspectable.

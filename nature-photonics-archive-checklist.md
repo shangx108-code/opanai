@@ -25,15 +25,16 @@
 - [x] Figure-3 insertable claim sentence
 - [x] Verified literature-positioning paragraph
 - [x] Continuous manuscript integration draft
+- [x] Current manuscript source (`manuscript-v1.md`)
+- [x] Current manuscript PDF (`manuscript-v1.pdf`)
+- [x] Task-level benchmark outputs
 
 ## Still Missing
-- [ ] Current manuscript source
-- [ ] Current manuscript PDF
 - [ ] Supplementary source
 - [ ] Supplementary PDF
-- [ ] Task-level benchmark outputs
 - [ ] Final submission archive package
 
 ## Truthfulness Note
-- Figure packaging is genuinely completed for the first candidate version.
-- Figure-3 subsection drafting and the standalone literature-positioning paragraph are genuinely completed at the package level, but full-manuscript integration, task-level manuscript flow, and submission packaging remain incomplete and are not marked as done.
+- Figure packaging is genuinely completed for the first candidate Figure-3 version.
+- Full-manuscript source assembly and the first rendered manuscript PDF are now genuinely completed.
+- Supplement assembly, final Figure-4 manuscript-grade packaging, and final submission packaging remain incomplete and are not marked as done.

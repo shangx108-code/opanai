@@ -44,3 +44,42 @@
 
 ### Next Supervision Focus
 - Check whether the next source-assembly pass preserves the new narrative continuity while remaining faithful to the bounded claim set and numerical evidence.
+
+## Supervision Entry 2026-04-25 (first manuscript render)
+
+### Current Version Overall Evaluation
+- The project has crossed the main embodiment threshold. It now exists as a real manuscript source and a first rendered paper-level PDF rather than only as figure packages and integration notes.
+
+### Newly Verified Facts
+- The continuous manuscript integration draft was embedded into `manuscript-v1.md` inside the Nature Photonics project namespace.
+- That source was rendered successfully to `manuscript-v1.pdf`.
+- The rendered PDF is a real 7-page object verified by `pdfinfo`, so the current paper can now be inspected as a manuscript rather than as disconnected packages.
+
+### What Is Genuinely At Standard
+- The main text now has one continuous paper-level source.
+- A first rendered manuscript PDF now exists.
+- The current manuscript keeps the bounded Fig. 3 detector-penalty claim and the bounded Fig. 4 mixed task-level claim inside one document.
+
+### What Is Not Yet At Standard
+- No supplementary source or supplementary PDF yet carries the derivation burden, benchmark assumptions, and provenance needed for reviewer-level inspection.
+- Figure 4 still exists as prose-level evidence in the manuscript rather than as a standalone manuscript-grade figure package.
+- Caption and style harmonization across the full paper package is still incomplete.
+
+### Core Quality Risk
+- The dominant risk is now supplement absence rather than main-text absence. A reviewer can now read the paper, but cannot yet inspect the derivation and benchmark burden in a manuscript-paired supplement.
+
+### Evidence-Chain Gap
+- The missing evidence link is a rendered supplement that packages the theory framework, same-axis assumptions, and task-level benchmark assumptions in a form aligned to the manuscript claims.
+
+### Must-Correct Item
+- The next run must assemble the first supplementary source and render the first supplementary PDF.
+
+### Priority Adjustment
+- The single main bottleneck has moved from manuscript embodiment to supplement embodiment.
+- Adding more benchmark scope before producing the supplement would again weaken packaging discipline.
+
+### Allowed To Enter Next Stage?
+- Yes. The project may now move from first-manuscript render into supplement assembly and package harmonization.
+
+### Next Supervision Focus
+- Check whether the supplement pass closes the derivation and provenance gap without widening the paper's claim boundary.
