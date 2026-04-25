@@ -1,16 +1,59 @@
 # Nature Photonics Project State
 
 ## Current stage
-- Theoretical strengthening
+- Result generation
 
 ## Current total goal
 - Build a Nature Photonics-competitive theory-and-simulation paper on quantum limits of nonlinear activation in photonic neural networks, with a quantitative resource framework, realistic measurement-induced activation route, and figure-ready evidence.
 
 ## Core bottleneck
-- The project still lacks a sufficiently complete mathematical framework plus validated numerics that would let a referee see a decisive, decision-relevant result rather than a well-written concept.
+- The project now has a first validated numerical boundary curve, but it still lacks a device-interpretable comparison showing where a concrete measurement-induced activation route can approach or miss this lower bound.
 
 ## Highest-priority action completed in this run
-- Completed one manuscript-usable derivation: a lower bound linking threshold-like activation to binary coherent-state discrimination cost.
+- Ran the first real numerical scan from the completed lower bound and converted it into reproducible boundary-cost data for a figure-ready panel candidate.
+
+## This run's concrete computation
+### Goal
+- Turn the completed lower bound
+  `n_bar >= (1/4) ln(1 / (4 epsilon (1 - epsilon)))`
+  into referee-checkable numerical data rather than leaving it as a text-only formula.
+
+### Parameterization used
+- Allowed boundary decision error `epsilon` sampled at
+  `0.01, 0.02, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40`.
+- Threshold margin parameter `delta` sampled at
+  `0.05, 0.10, 0.15, 0.20, 0.30, 0.40, 0.50`
+  under the local linear encoding model
+  `alpha(x) = g (x - x_th)`,
+  so that `Delta alpha = 2 g delta`.
+
+### Quantities computed
+1. Minimum mean boundary-state photon cost:
+   `n_bar^min(epsilon) = (1/4) ln(1 / (4 epsilon (1 - epsilon)))`.
+2. Minimum encoder gain required to resolve a threshold margin `delta` at target error `epsilon`:
+   `g_min(delta, epsilon) = sqrt(ln(1 / (4 epsilon (1 - epsilon)))) / (2 delta)`.
+
+### Verified numerical outputs
+- Photon-cost lower bound:
+  `epsilon = 0.40 -> n_bar^min = 0.010205`
+- Photon-cost lower bound:
+  `epsilon = 0.20 -> n_bar^min = 0.111572`
+- Photon-cost lower bound:
+  `epsilon = 0.10 -> n_bar^min = 0.255413`
+- Photon-cost lower bound:
+  `epsilon = 0.05 -> n_bar^min = 0.415183`
+- Photon-cost lower bound:
+  `epsilon = 0.02 -> n_bar^min = 0.636483`
+- Photon-cost lower bound:
+  `epsilon = 0.01 -> n_bar^min = 0.807232`
+- At fixed `delta = 0.10`, the minimum encoding gain rises as:
+  `g_min = 1.010223, 3.340236, 5.053838, 6.443468, 7.977987, 8.984607`
+  for `epsilon = 0.40, 0.20, 0.10, 0.05, 0.02, 0.01`, respectively.
+
+### Design-relevant interpretation
+- The bound is numerically weak only when one tolerates very high decision error near the activation boundary.
+- Once the target boundary error drops below `10%`, even the lower bound already requires a quarter-photon-scale average boundary cost.
+- For a narrow normalized threshold margin `delta = 0.10`, the encoding slope required by the lower bound grows sharply as one asks for sharper activation decisions, which gives a direct axis for a figure panel and later hardware comparison.
 
 ## This run's concrete derivation
 ### Goal
@@ -58,21 +101,25 @@
 - One explicit derivation now exists for a lower bound on boundary discrimination cost.
 - The project now has a mathematically checkable quantity that can appear in the theory section or Methods.
 - The previous supervision demand to avoid rhetorical "quantum limit" language has been partially addressed for one local activation decision primitive.
+- One real computation has been run from that derivation.
+- The project now has verified numerical values for a first boundary-cost curve and a first gain-versus-margin map.
+- A figure candidate can now be defined around exact computed values rather than around a symbolic expression alone.
 
 ## What is still incomplete
 - No full unified activation framework yet across Kerr, saturable, electronic, homodyne, photon-counting, and AQMA routes
-- No numerical benchmark has yet been run from this bound
-- No figure-ready parameter scan has yet been produced
+- No comparison to a concrete AQMA or other measurement-induced activation model has yet been derived or computed
+- No finalized figure panel has yet been drawn from the computed tables
 - No manuscript PDF or supplementary PDF exists
 - No verified literature-positioning text has yet been rewritten around this derivation
 
 ## Current acceptance estimate
-- Not enough new evidence exists for a major probability upgrade.
-- Working Nature Photonics stage estimate after this run: 15-23%.
-- Reason: theory rigor improved slightly, but novelty separation, numerics, figure package, and manuscript completeness remain below submission bar.
+- The project is still far below submission readiness, but the evidence base is now stronger than in the derivation-only state.
+- Working Nature Photonics stage estimate after this run: 19-28%.
+- Reason: the project now has both an explicit lower bound and real numeric consequences, but it still lacks architecture comparison, device relevance, manuscript integration, and literature separation.
 
 ## Latest update
 - 2026-04-25: completed the first manuscript-usable derivation for activation quantum cost by reducing threshold activation to a coherent-state discrimination bound and established the lower bound `n_bar >= (1/4) ln(1 / (4 epsilon (1 - epsilon)))` under the stated assumptions.
+- 2026-04-25: ran the first numerical scan from that bound and verified that the lower-bound mean boundary photon cost rises from `0.010205` at `epsilon = 0.40` to `0.807232` at `epsilon = 0.01`; under the local encoding model `alpha(x)=g(x-x_th)`, the required minimum gain at `delta = 0.10` rises from `1.010223` to `8.984607` over the same error range.
 
 ## Next immediate action
-- Extend this local bound into a figure-producing computation: choose one encoded activation family and numerically map required boundary photon cost versus target decision error `epsilon` and boundary margin `delta`, then compare that curve to one AQMA-inspired measurement model.
+- Define one explicit AQMA-inspired measurement model with stated assumptions and compute where its effective boundary error and photon usage sit relative to the new lower-bound curves.

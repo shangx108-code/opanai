@@ -4,22 +4,24 @@
 
 | Role | Current task | Input | Deliverable | Completion standard | Dependency |
 | --- | --- | --- | --- | --- | --- |
-| Coordinator | Re-anchor the paper spine around the new discrimination-cost result without overstating it | Existing project concept, this run's derivation | One-sentence core claim and updated benchmark order | Claim explicitly states what is proved, what is conjectural, and what must be benchmarked next | This run's derivation |
-| Theory | Generalize the completed two-state bound into a framework usable for smooth activations and alternative measurement routes | Coherent-state threshold derivation, activation families already planned | Unified notation note linking activation sharpness, decision error, and resource cost | At least one additional family or one smooth-activation local expansion is derived without hidden assumptions | This run's derivation |
-| Code and Numerical Computation | Turn the bound into a real curve generator for photon cost versus error and margin | Completed bound, chosen encoding map, parameter ranges | First runnable script and data table for one figure candidate | Script runs end to end and writes reproducible numerical output from the analytical bound | Theory parameterization |
-| Data Analysis | Define what would count as a meaningful regime shift relative to baseline measurement or electronic activation | Bound output and benchmark specification | Comparison memo with advantage, parity, and failure criteria | Each planned panel has a decision rule that does not depend on rhetorical interpretation | Numerical output |
-| Figure Production | Promote the first derivation into a figure storyboard panel instead of a text-only claim | Bound expression and planned numerical scan | Figure-1/2 candidate panel description with axes, caption logic, and physical takeaway | Panel can be traced to exact equations and exact numerical data source | Numerical output + analysis memo |
-| Writing | Draft the theory paragraph that introduces activation quantum cost through boundary discrimination | This run's derivation and journal framing | Manuscript-ready paragraph or subsection skeleton | Text states assumptions, physical meaning, and limitations cleanly enough for referee reading | Coordinator framing |
-| Supervision | Check that the new derivation is used conservatively and does not get inflated into unsupported global claims | This run's derivation and current paper claim | Risk note on overclaim boundaries | No unsupported use of "optimal", "universal", or "advantage" remains | Writing update |
-| Strict Review | Hold reviewer estimates roughly flat until numerics and literature separation catch up | Current project state plus new derivation | Short reviewer update note | Review history distinguishes theory progress from submission readiness | Coordinator summary |
+| Coordinator | Re-anchor the paper spine around a now two-step evidence chain: proved lower bound plus first numerical boundary scan | Project concept, completed derivation, verified scan values | One-sentence core claim and updated comparison order | Claim states exactly that the current result is a lower-bound regime map, not yet a full device-advantage theorem | This run's computation |
+| Theory | Specify one explicit AQMA-inspired measurement model that can be placed against the lower-bound curve without hidden assumptions | Completed lower bound, local encoding model, planned measurement route | Stated model equations and variables for effective boundary decision error and photon use | The model is detailed enough to generate numbers and explicit enough to criticize | Current scan + prior derivation |
+| Code and Numerical Computation | Compute the first comparison between the lower-bound curve and one explicit measurement model | Lower-bound scan, theory model for AQMA-like route | Comparison table or curve set for one figure candidate | Computation runs end to end and outputs reproducible numeric comparison values | Theory model |
+| Data Analysis | Turn the scan into a design statement about sharpness cost and where comparison must focus | Verified lower-bound values | Short analysis note defining meaningful win/loss regimes | Interpretation is tied to actual numbers and does not overclaim | Current scan |
+| Figure Production | Convert the computed lower-bound scan into a formal figure panel specification | Verified `n_bar^min(epsilon)` values and `g_min(delta, epsilon)` map | Figure panel blueprint with axes, panel order, caption claim, and limitations note | Every plotted axis is backed by a completed computation | Current scan |
+| Writing | Revise one theory/results subsection so the lower bound and the new numeric consequences appear together | Derivation, computed values, journal framing | Manuscript-ready subsection draft | Text includes formulas, parameter scan summary, and limitations in one place | Coordinator framing |
+| Supervision | Check whether the new numeric scan creates a meaningful design boundary or only a trivial monotonic curve | Verified numerical outputs and intended figure claim | Supervision note on significance threshold | It is explicit whether the result changes a device-level conclusion yet | Current scan |
+| Strict Review | Update reviewer estimates modestly for evidence gain while keeping device/novelty objections active | Updated project state plus current scan | Short reviewer update note | Review record distinguishes real progress from submission readiness | Coordinator summary |
 
 ## What was completed in this run
 - Theory completed one explicit derivation for the lower bound on boundary discrimination cost for threshold-like activation.
+- Code and numerical computation completed the first real scan from that bound.
+- Data analysis now has verified values showing how boundary photon cost and required encoding gain grow as sharper activation decisions are demanded.
 
 ## What remains incomplete
-- No code path has yet converted the derivation into data.
-- No figure panel has yet been generated from real numerical output.
-- No manuscript section has yet been revised around the new result.
+- No AQMA-like comparison model has yet been specified and computed.
+- No figure panel has yet been formally assembled from the numerical output.
+- No manuscript section has yet been revised to integrate both the derivation and the scan.
 
 ## Next immediate deliverable
-- One runnable computation producing a photon-cost-versus-error curve for the derived lower bound.
+- One explicit comparison computation between the lower-bound curve and a stated AQMA-inspired measurement route.
