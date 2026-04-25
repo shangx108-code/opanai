@@ -43,11 +43,15 @@ To be competitive as a theory-and-simulation Nature Photonics article, this pape
 - The paper can now support a stronger bounded statement that is plausible for Nature Photonics readers:
   detector efficiency sets the global accessibility of the frontier, while measurement choice sets a further constant-factor overhead above it.
 - The project now has a submission-grade Figure-3 candidate with regime annotations, caption logic, claim boundaries, and Results-ready prose.
+- The project now has a first real task-level benchmark package with reproducible outputs rather than only a planned Figure-4 placeholder.
+- The manuscript can now support a more mature design statement:
+  activation is worth paying for only in task-and-budget regimes where the nonlinear gain exceeds the fixed-budget reliability penalty.
+- The benchmark now shows that implementable-route preference does not follow trivially from single-neuron closeness to the lower bound once width allocation is included.
 
 ## What this run still does not satisfy
-- No task-level evidence yet shows that the single-neuron comparison changes network-level design choices.
-- No verified literature-positioning subsection yet shows why this comparison changes the novelty landscape relative to 2024-2025 photonic nonlinearity papers.
+- No verified literature-positioning subsection yet shows why the new mixed task-level result changes the novelty landscape relative to 2024-2025 photonic nonlinearity papers.
 - No cleaned reference ledger yet separates checked primary citations from placeholders.
+- No manuscript-grade Figure-3 to Figure-4 integration yet exists in one continuous Results flow.
 
 ## Current venue risk summary
-- The paper is now less likely to be dismissed as preliminary on figure quality or clarity grounds, but it is still at risk of being judged incomplete because the manuscript has not yet shown a system-level consequence of the activation frontier or fully secured its literature-positioning argument.
+- The paper is now less likely to be dismissed as incomplete on task-level consequence grounds, but it is still at risk of being judged insufficiently distinctive because the manuscript has not yet secured its literature-positioning argument or cleaned reference base.

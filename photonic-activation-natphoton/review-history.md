@@ -193,3 +193,46 @@ Current outcome: still major revision, but now the manuscript has its first genu
 - Updated estimate for Nature Photonics: 38-48%
 - Upgrade condition to 45-58%: generate a minimal but real task-level benchmark showing when the neuron-level frontier changes the preferred activation choice
 - Upgrade condition to 55-68%: add verified literature separation and integrate the first two main Results into one full manuscript flow
+
+## 2026-04-25 | First real task-level benchmark review
+
+### Material reviewed
+- Task benchmark script: `/workspace/memory/photonic-activation-natphoton/task_level_benchmark.py`
+- Assumptions note: `/workspace/memory/photonic-activation-natphoton/task_level_benchmark_assumptions.md`
+- Benchmark outputs in `task_level_benchmark/`
+- Figure-4 package note: `/workspace/memory/photonic-activation-natphoton/figure4_minimal_benchmark_package.md`
+
+### Reviewer-style verdict
+Current outcome: still major revision, but the manuscript now has a true task-level result rather than a placeholder promise.
+
+### What improved
+1. The project now has a bounded system-level consequence with both positive and negative regions, which makes the design-law story much more credible.
+2. The benchmark no longer assumes that the single-neuron ranking transfers directly to task-level preference; it tests that bridge explicitly.
+3. The manuscript can now argue that route preference depends jointly on task geometry, width allocation, detector efficiency, and total photon budget.
+
+### Remaining blockers
+1. The new benchmark is still a stylized random-feature surrogate rather than a stronger end-to-end network study.
+2. The manuscript still lacks a verified literature-positioning section showing why this mixed task-level result is distinct from recent programmable/nonlinear photonic work.
+3. The reference ledger is still not cleaned, which keeps the Introduction and Discussion below submission grade.
+
+### Five-reviewer dimension estimates
+- Reviewer 1, novelty-focused:
+  innovation/significance `50/100`; theory rigor `56/100`; method reliability `56/100`; data/results `60/100`; figure quality `53/100`; writing `47/100`; journal fit `58/100`; acceptance estimate `46%`.
+- Reviewer 2, theory-rigor-focused:
+  innovation/significance `48/100`; theory rigor `69/100`; method reliability `63/100`; data/results `61/100`; figure quality `52/100`; writing `47/100`; journal fit `58/100`; acceptance estimate `51%`.
+- Reviewer 3, device/implementation-focused:
+  innovation/significance `46/100`; theory rigor `56/100`; method reliability `60/100`; data/results `58/100`; figure quality `51/100`; writing `45/100`; journal fit `56/100`; acceptance estimate `45%`.
+- Reviewer 4, broad-reader-clarity-focused:
+  innovation/significance `49/100`; theory rigor `56/100`; method reliability `58/100`; data/results `62/100`; figure quality `55/100`; writing `54/100`; journal fit `59/100`; acceptance estimate `53%`.
+- Reviewer 5, benchmark/comparison-focused:
+  innovation/significance `50/100`; theory rigor `62/100`; method reliability `65/100`; data/results `66/100`; figure quality `54/100`; writing `49/100`; journal fit `58/100`; acceptance estimate `55%`.
+
+### Review interpretation
+- Reviewer 5 improves the most because the paper now contains a real task-level test of whether the Figure-3 frontier matters.
+- Reviewer 4 also moves because the story now has a clearer broad-reader narrative: activation is sometimes worth paying for and sometimes not.
+- Reviewer 1 remains capped because the paper still has not converted the new result into a citation-verified novelty claim against recent photonic nonlinearity papers.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 44-55%
+- Upgrade condition to 52-62%: add a verified literature-positioning subsection that explicitly distinguishes this work from the strongest 2024-2025 photonic nonlinearity papers
+- Upgrade condition to 60-72%: integrate Figure 3 and Figure 4 into a manuscript-grade Results flow and clean the reference ledger

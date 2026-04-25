@@ -152,3 +152,37 @@ The project could now be rejected as elegant but incomplete if it cannot show at
 
 ### Next supervision focus
 - Whether the next run produces a real minimal benchmark linking activation resource overhead to system-level utility, or identifies a true workspace-level blocker.
+
+## 2026-04-25 | Round 6 supervision after first real task-level benchmark
+
+### Overall evaluation
+This run solved the correct bottleneck. The paper no longer relies on promises about future system-level evidence; it now has an actual benchmark showing both where activation is worth paying for and where it is not. That positive-and-negative split is much healthier for Nature Photonics than a one-sided task demonstration because it reads like a design rule rather than advocacy.
+
+### Gap to target-journal standard
+- The manuscript can now claim a real task-level consequence with explicit failure regions.
+- The new result is still narrow: a stylized random-feature benchmark is enough to change the paper's logic, but not enough by itself to secure acceptance.
+- Novelty still remains under-defended because the paper has not yet turned this mixed benchmark outcome into a verified comparison against 2024-2025 photonic nonlinearity papers.
+
+### Most critical quality risk
+The project could now be rejected as insightful but insufficiently distinguished from adjacent photonic-nonlinearity literature if the manuscript does not explicitly explain why this task-dependent activation-worth-it criterion is new.
+
+### Evidence-chain gap
+- Missing verified literature-positioning subsection against the strongest 2024-2025 Nature-family and adjacent photonic-nonlinearity papers
+- Missing cleaned reference ledger
+- Missing manuscript-ready integration of Figure 3 and the new Figure-4 package
+
+### Must-correct items
+1. Do not present the random-feature benchmark as an end-to-end photonic network result.
+2. Keep the lower-bound-calibrated route separate from implementable routes in all task-level discussion.
+3. Make the next round about novelty separation and manuscript integration, not about broadening the benchmark before the current claim is positioned correctly.
+
+### Priority adjustment
+- The main bottleneck has shifted again.
+- It is no longer "missing task-level consequence"; it is now "missing verified novelty positioning for the new mixed task-level result."
+
+### Permission to move to next phase
+- Yes.
+- The project may now move from first task-level consequence generation to literature-positioning and manuscript integration.
+
+### Next supervision focus
+- Whether the next run builds a citation-verified novelty argument that connects the Figure-3 and Figure-4 results into a coherent Nature Photonics submission case.
