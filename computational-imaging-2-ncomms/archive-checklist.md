@@ -10,19 +10,16 @@
 
 ## 理论材料
 - [ ] 统一符号表
-- [ ] 线性高斯互信息推导文稿
+- [ ] OIG / PIE / TIG 推导文稿
 - [ ] Fisher information / CRB 推导文稿
-- [ ] 任务容量定义与证明文稿
 - [ ] 鲁棒容量定义与证明文稿
-- [x] 第二轮 task-weighted 执行规范
 
 ## 代码与数据
-- [x] 线性高斯平台代码与运行日志
-- [ ] 第二轮 task-weighted 线性结果表与运行日志
+- [x] 线性高斯第一轮平台代码与运行日志
+- [x] 线性高斯第二轮 task-weighted 代码与运行日志
+- [ ] 第三轮鲁棒容量平台代码与运行日志
 - [ ] PSF / depth 参数估计平台代码与运行日志
-- [ ] 任务容量平台代码与运行日志
-- [ ] 鲁棒容量平台代码与运行日志
-- [x] 图表原始数据表
+- [ ] 图表原始数据表
 
 ## 图表
 - [ ] Figure 1 正文图
@@ -46,16 +43,15 @@
 
 ## 当前已生成文件
 - [x] `/workspace/computational-imaging-2-ncomms/linear_gaussian_round1.py`
+- [x] `/workspace/computational-imaging-2-ncomms/linear_gaussian_round2_task.py`
 - [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round1/linear_gaussian_round1_results.csv`
 - [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round1/linear_gaussian_round1_summary.json`
 - [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round1/linear_gaussian_round1_summary.md`
 - [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round1/linear_gaussian_round1_overview.svg`
-
-## 本轮新归档的状态级产出
-- [x] 第二轮任务变量口径：`T_lowpass`、`T_sparseROI`
-- [x] 第二轮指标口径：raw mutual information / full-image Bayes risk / task Bayes risk / TIG
-- [x] 第二轮最小参数网格与输出字段
-- [x] 排序翻转判定规则与失败记录要求
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task/linear_gaussian_round2_task_results.csv`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task/linear_gaussian_round2_task_summary.json`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task/linear_gaussian_round2_task_summary.md`
+- [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task/linear_gaussian_round2_task_overview.svg`
 
 ## 投稿归档包
 - [ ] 最终代码与数据清单
