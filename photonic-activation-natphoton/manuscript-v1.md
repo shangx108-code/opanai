@@ -56,6 +56,8 @@ For `concentric_circles`, where the linear baseline is weak (`0.484` test accura
 
 The preferred implementable route is also not inherited trivially from Fig. 3. Although displaced on-off counting is often closer to the single-neuron lower bound, it wins only `9/30` matched `(task, eta, budget)` comparisons in the task-level scan. Homodyne becomes the better route in most `concentric_circles` settings because the optimum width-budget trade-off shifts in its favour. Figure 4 therefore supplies the manuscript's systems-level conclusion: the neuron-level frontier changes real design choices, but closeness to that frontier alone does not determine which activation route is best once total photon budget and task geometry are included.
 
+![Figure 4. Task-level worth of physical activation depends on task geometry, detector efficiency and total photon budget. Panels a and b show the best implementable test-accuracy margin above the task-specific linear no-activation baseline against total activation photon budget per inference for `two_moons` and `concentric_circles`, respectively. Each point selects the better of the two implementable activation routes at that `(task, eta, budget)` setting, with line color denoting detector efficiency `eta`, marker shape denoting whether homodyne or displaced on-off counting is preferred, and width labels denoting the selected hidden-layer width. Panel c shows the displaced-on-off minus homodyne accuracy difference over the same `30` matched settings, making explicit that route preference is task dependent and is not inherited trivially from the single-neuron frontier.](figure4_task_level_panel/figure4_task_level_panel.png)
+
 ## Discussion
 
 Taken together, the single-neuron comparison and the task-level benchmark separate three questions that are often conflated in photonic-AI discussions: whether a nonlinear response can be realized, how far above the physical frontier a given realization sits, and whether paying for that response is justified for the target task. Recent hardware advances answer the first question increasingly well. The present framework addresses the second and third.
@@ -78,9 +80,11 @@ The comparison data used in Fig. 3 were generated from the saved analytical mode
 
 The task-level scan uses a minimal random-feature classifier consisting of one random linear feature layer, one noisy threshold-activation layer and a ridge readout. Activation noise is injected by mapping the Figure-3 boundary-error curves directly to per-neuron flip probabilities. A fixed total activation photon budget per inference is imposed, so widening the hidden layer reduces the photons available per neuron. The scanned tasks are two moons and concentric circles, chosen to test a strong-linear-baseline case and a weak-linear-baseline case under the same accounting rules.
 
+Figure 4 is rendered directly from the saved task-level benchmark summary using `figure4_task_level_panel.py`. Panels a and b report the accuracy margin of the best implementable activation route above the task-specific linear baseline as a function of total activation photon budget, while panel c reports the displaced-on-off minus homodyne accuracy difference over the same matched settings. The manuscript uses these results only within the scanned `(task, eta, budget)` grid and does not promote them to a hardware-feasibility map or a full-network optimality claim.
+
 ## Data and code availability
 
-All evidence described here comes from the project namespace used in this run, including the analytical comparison scripts, rendered Figure-3 outputs, and saved task-level benchmark summary tables. The current manuscript source is a first integrated draft assembled from those already generated materials; supplement assembly and broader robustness scans remain incomplete.
+All evidence described here comes from the project namespace used in this run, including the analytical comparison scripts, rendered Figure-3 outputs, the saved task-level benchmark summary tables, and the rendered Figure-4 package. The current paper package includes a main-text manuscript source/PDF and a paired supplementary source/PDF assembled from those already generated materials. Broader robustness scans and a final submission archive remain incomplete.
 
 ## References
 

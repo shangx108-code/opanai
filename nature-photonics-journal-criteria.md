@@ -17,14 +17,14 @@
 - A full manuscript source and first rendered manuscript PDF now exist, so the paper can be inspected as a paper-level object rather than only as manuscript fragments.
 - A first supplement source and first rendered supplement PDF now exist, so derivations, benchmark assumptions, and evidence provenance are no longer absent from the paper package.
 - A standalone Figure-4 package now exists, including figure-specific data, rendered SVG/PNG/PDF outputs, and a caption-ready submission note tied directly to the saved benchmark summary.
+- The main manuscript source and rendered manuscript PDF now directly incorporate the Figure-4 object, so the top-level paper package no longer lags behind the current figure evidence.
 
 ## Criteria Still Not Satisfied
-- Submission-grade full manuscript package with PDF, supplement, and archive bundle.
-- Manuscript-wide figure/caption harmonization and final manuscript integration of the new Figure-4 package.
+- Stronger systems-level evidence breadth beyond the current minimal benchmark.
 - Final submission archive bundle.
 
 ## Current Main Risk Relative To Journal Standard
-- The manuscript, supplement, and both top-level figure packages now exist, but the paper still falls short of journal standard because the current manuscript source has not yet been harmonized around the new Figure-4 object and the final archive is still missing.
+- The manuscript, supplement, and both top-level figure packages now exist as a coherent paper package, but the paper still falls short of journal standard because the systems-level conclusion is supported only by a narrow minimal benchmark and the final archive is still missing.
 
 ## Immediate Criterion To Satisfy Next
-- Integrate the new Figure-4 object into the main manuscript and complete one manuscript-wide caption/style harmonization pass.
+- Add one real robustness-strengthening result for the task-level claim before final archive assembly.

@@ -351,3 +351,51 @@
 
 ## Next Immediate Review-Driven Action
 - Integrate the new Figure-4 package into the manuscript source and perform one paper-wide caption harmonization pass before expanding benchmark scope.
+
+## Round 8 Figure-4-Manuscript-Integration Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only, using the updated `manuscript-v1.md`, regenerated `manuscript-v1.pdf`, `supplement-v1.md`, `supplement-v1.pdf`, the Figure-3 package, the Figure-4 package, and the saved task-level benchmark summary
+
+### Material Reviewed
+- updated `manuscript-v1.md`
+- regenerated `manuscript-v1.pdf`
+- `supplement-v1.md`
+- `supplement-v1.pdf`
+- `figure3_submission_package.md`
+- `figure4_submission_package.md`
+- `figure4_task_level_panel/figure4_task_level_panel.png`
+- `task_level_benchmark/task_level_benchmark_summary.json`
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: the paper's two-step contribution is now presented coherently in the main manuscript, which improves editorial clarity, but the systems evidence is still narrower than the journal would ideally prefer.
+- Acceptance estimate: 66%
+- Main reason: manuscript coherence improved materially, yet the task-level support still comes from a minimal benchmark only.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: the mechanism story is now cleaner because the bounded Figure-4 systems claim appears in the same main-text object as the Figure-3 design law and paired supplement.
+- Acceptance estimate: 69%
+- Main reason: integration improves rigor perception, but no new derivation or stronger systems validation was added in this run.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: packaging and inspectability improved, but confidence remains capped because the numerical evidence stack is unchanged and still narrow.
+- Acceptance estimate: 59%
+- Main reason: this run added no new robustness computation, seed sweep, task extension, or broader validation.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: the results package is substantially stronger because the top-level manuscript now visibly contains both key figures, but reviewer confidence is still limited by minimal task-level breadth.
+- Acceptance estimate: 68%
+- Main reason: figure-to-manuscript consistency is now real, yet the systems conclusion still relies on one narrow benchmark configuration.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: persuasion improved because the manuscript no longer asks reviewers to mentally merge a separate Figure-4 package with the main text.
+- Acceptance estimate: 69%
+- Main reason: writing and package coherence are better, but the paper still needs one stronger evidence step before it reads as safely acceptable.
+
+## Updated Summary
+- Genuine completion in this run: the rendered Figure-4 package was integrated into `manuscript-v1.md`, and the updated manuscript was rendered successfully to an 8-page `manuscript-v1.pdf`.
+- Still incomplete: broader task-level robustness evidence and the final submission archive.
+- Current five-reviewer range: `59-69%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
+## Next Immediate Review-Driven Action
+- Execute one real robustness-strengthening action on the task-level claim before spending another round on packaging or archive assembly.

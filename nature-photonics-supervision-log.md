@@ -163,3 +163,45 @@
 
 ### Next Supervision Focus
 - Check whether the manuscript integration pass preserves the current Figure-4 claim boundaries and visual evidence without widening scope.
+
+## Supervision Entry 2026-04-25 (Figure-4 manuscript integration)
+
+### Current Version Overall Evaluation
+- The manuscript package is now internally coherent at the top level. Reviewers can inspect the single-neuron design-law result and the task-level consequence inside the same rendered main-text PDF, rather than inferring Fig. 4 only from prose plus a separate figure package.
+
+### Newly Verified Facts
+- `manuscript-v1.md` was updated to embed the rendered Figure-4 image directly in the Results section.
+- The manuscript now carries a manuscript-facing Figure-4 caption that stays within the claim boundaries already defined in `figure4_submission_package.md`.
+- The Methods section now states explicitly how Figure 4 is rendered from the saved task-level benchmark summary and what the present benchmark does not claim.
+- The data/code availability statement was updated so it matches the real package already present in the project namespace.
+- The revised `manuscript-v1.md` was rendered successfully to `manuscript-v1.pdf`.
+- `pdfinfo` verified the updated manuscript as a real 8-page PDF object.
+
+### What Is Genuinely At Standard
+- The manuscript no longer lags behind the current Figure-4 package.
+- The top-level paper object now presents both Fig. 3 and Fig. 4 directly, with bounded captions and methods wording.
+- The current manuscript-plus-supplement package is coherent enough for a stricter next-stage evidence review.
+
+### What Is Not Yet At Standard
+- The systems-level conclusion still rests on a deliberately narrow minimal benchmark.
+- No new robustness computation or broader task validation was added in this run.
+- The final submission archive is still absent.
+
+### Core Quality Risk
+- The dominant risk has shifted again. It is no longer manuscript inconsistency. It is that reviewer confidence, especially on methods and evidence support, is still limited by narrow benchmark breadth.
+
+### Evidence-Chain Gap
+- The missing evidence link is one real robustness-strengthening result showing whether the current mixed Fig. 4 conclusion is stable beyond the saved minimal benchmark.
+
+### Must-Correct Item
+- The next run must execute one bounded robustness or evidence-strengthening action on the task-level claim.
+
+### Priority Adjustment
+- The single main bottleneck moves from manuscript-wide harmonization to systems-evidence breadth.
+- Additional paper polish without new evidence would now produce diminishing returns.
+
+### Allowed To Enter Next Stage?
+- Yes. The project may now move from manuscript harmonization into review-guided robustness strengthening.
+
+### Next Supervision Focus
+- Check whether the next evidence-strengthening action materially raises reviewer confidence without widening the manuscript's claim boundary beyond a bounded design-law paper.

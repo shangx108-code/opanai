@@ -1,7 +1,7 @@
 # Nature Photonics Archive Checklist
 
 ## Archive Status
-- Checklist updated on 2026-04-25 after first Figure-4 package rendering.
+- Checklist updated on 2026-04-25 after Figure-4 manuscript integration.
 
 ## Present In Namespace
 - [x] Project state file
@@ -36,9 +36,11 @@
 - [x] Figure-4 PNG render
 - [x] Figure-4 PDF render
 - [x] Figure-4 submission package (`figure4_submission_package.md`)
+- [x] Manuscript source updated to integrate the new Figure-4 object
+- [x] Regenerated manuscript PDF reflecting the integrated Figure-4 object
 
 ## Still Missing
-- [ ] Manuscript source updated to integrate the new Figure-4 object
+- [ ] Broader robustness-strengthening evidence beyond the current minimal benchmark
 - [ ] Final submission archive package
 
 ## Truthfulness Note
@@ -46,4 +48,5 @@
 - Full-manuscript source assembly and the first rendered manuscript PDF are now genuinely completed.
 - Supplement assembly is now genuinely completed for a first reviewer-inspectable version.
 - First-pass Figure-4 manuscript-grade packaging is now genuinely completed.
-- Full manuscript integration of that Figure-4 package and final submission packaging remain incomplete and are not marked as done.
+- Full manuscript integration of that Figure-4 package is now genuinely completed for the current manuscript object.
+- Broader systems-level robustness evidence and final submission packaging remain incomplete and are not marked as done.
