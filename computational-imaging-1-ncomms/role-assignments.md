@@ -9,14 +9,13 @@
 - 优先级：最高
 
 ## 理论人员
-- 当前任务：把线性 observation mask 下的 zero-fill / PCA / autoencoder / latent inverse 差异转写成第一版可计算判据
+- 当前任务：把相位恢复最小任务中的 ambiguity branch 从“存在性证明”推进到“可量化的 learned-prior 偏向判据”
 - 输入：统一 forward model、线性与非线性任务定义、likelihood / prior 形式
 - 输出：
-  - 统一数学符号表
-  - 线性 incomplete measurement 下的 data-supported / unsupported 区域判据
-  - bridge intensity、unsupported-region error 与 observed-region error 的定义草案
+  - phase retrieval 中 true / reversed ambiguity branch 的统一符号表
+  - measurement-equivalent branch 与 learned-prior selected branch 的距离定义
   - 相位恢复 reversed ambiguity 的测量等价说明
-  - DSI / ambiguity branch 的第一版数学说明
+  - 相位恢复局部指标与 DSI / ambiguity branch 的第一版接口说明
 - 完成标准：
   - 每个关键结论都有连续推导，而不是概念口号
   - 清楚区分已证明结果、近似结果和待验证命题
@@ -24,27 +23,25 @@
 - 优先级：P1
 
 ## 代码与数值计算人员
-- 当前任务：维护 round4 线性 benchmark 结果可复核性，并为下一轮指标公式化提供一致的数据接口
+- 当前任务：落地一版当前环境可真实运行的 phase-retrieval learned-prior / ambiguity baseline
 - 输入：任务定义、噪声模型、baseline 清单
 - 输出：
-  - 已完成的 autoencoder prior 与 latent inverse prior 脚本及结果文件
-  - 下一轮统一指标计算接口
-  - iterative phase-retrieval baseline
+  - phase-retrieval baseline 脚本及结果文件
+  - true / reversed / learned prior 三方对照指标
   - 运行日志与失败案例表
 - 完成标准：
-  - 当前线性任务基础上已经产出 measurement-consistent learned prior 真实结果
-  - round4 结果字段与像素区域能够无歧义映射到理论定义
-  - 至少一组结果能展示“相同或近似相同测量对应不同结构”的案例
+  - 至少一组结果能展示“相同或近似相同测量对应不同结构”的 learned-prior 偏向案例
+  - 输出字段能直接映射到理论人员定义的 branch 指标
 - 依赖：理论人员给出统一评价指标
 - 优先级：P1
 
 ## 数据分析人员
-- 当前任务：对 zero-fill、PCA prior、autoencoder projection 与 latent inverse 的差异做结构性判读，特别是区分观测区与未观测区误差
+- 当前任务：对 true branch、reversed branch 与 learned prior 输出的关系做结构性判读
 - 输入：baseline 输出、误差图、数据一致性指标、posterior variance 或 sample spread
 - 输出：
-  - observed / unsupported 区域误差对照表
-  - bridge intensity 指标表
-  - round4 四方法对照解读
+  - branch distance 对照表
+  - measurement consistency 与 branch selection 对照表
+  - 相位恢复 learned-prior 偏向解读
   - 第一版高风险失败案例归纳
 - 完成标准：
   - 能区分普通误差与疑似 hallucination
@@ -104,18 +101,19 @@
 
 ## 当前依赖主链
 1. 统筹者锁定“从 toy prior 走向学习型 prior”的升级路线
-2. 代码与数值计算人员在第 1 轮脚本基础上接入真实 prior
-3. 理论人员把 observation mask 和 phase ambiguity 结果写成判据
-4. 数据分析人员建立 observed / unsupported 区域误差表
-5. 画图人员定义 Figure 1 / Figure 2 的正式面板结构
+2. 线性 benchmark 已形成可复核区域定义与指标输出
+3. 代码与数值计算人员在 phase retrieval 最小任务上接入真实 learned prior / decoder prior baseline
+4. 理论人员把 phase ambiguity 与 learned-prior branch selection 写成统一判据
+5. 数据分析人员建立 branch distance 与 measurement consistency 对照表
+6. 画图人员定义 Figure 2 / Figure 4 的正式面板结构
 6. 撰写人员再写结果段与方法段
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：把 round4 线性四方法结果写成统一可计算判据
+- 任务名称：把相位恢复任务推进到 learned-prior / ambiguity selection 级真实结果
 - 负责人：统筹者 + 理论人员 + 代码与数值计算人员
 - 预期输出：
-  - observed / unsupported / bridge 三类区域的正式定义
-  - 与 round4 数据字段一一对应的指标计算式
-  - 能直接接到结果段与方法段的定义说明
+  - 可运行的相位恢复 learned-prior baseline
+  - true / reversed / learned prior 三方对照结果
+  - 与 phase ambiguity 指标一一对应的计算说明
 - 完成标准：
-  - 不是“想好怎么写”，而是“给出可检查公式并和真实结果文件对齐”
+  - 不是“存在歧义”的口头复述，而是“真实跑出 learned-prior 对歧义分支的偏向结果”

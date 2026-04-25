@@ -183,3 +183,36 @@
 1. 不得因为示意图可用 GPT-imag-2.0 起稿，就放松真实数据图标准。
 2. 不得因为参考文献数量已过 30，就忽略正文嵌入、引用角色和补充材料衔接。
 3. 不得把未完成详细推导的量写成论文主结论。
+
+## 监督轮次 5
+- 日期：2026-04-26
+- 节点性质：线性 benchmark 区域定义与指标正式化监督
+
+## 当前版本总体评价
+本轮终于把“unsupported region / bridge intensity 只是经验说法”的问题往前推进了一步。当前工作区已经有了真实运行的重现实验脚本、可复核输出和正式定义文档，因此线性 benchmark 不再只是现象图，而是具备了第一版 Methods/Results 可写入口径。
+
+## 本轮已真实完成
+- 已在当前工作区新建并运行 `/workspace/computational-imaging-1-ncomms/round4_region_formalization_repro.py`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_summary.json`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_case_metrics.csv`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_panel.png` 与 `round4_reproduced_mask.png`。
+- 已新增 `/workspace/computational-imaging-1-ncomms/theory_round3_region_formalization.md`，把 observed region、unsupported region、bridge region 以及四个指标的口径固定下来。
+- 重现实验聚合结果显示：zero-fill 的 bridge mean intensity 为 `0.0000`，PCA prior 为 `0.5756`，autoencoder projection 为 `0.9077`，latent inverse 为 `0.9959`；同时四个方法的 observed-region MAE 都为 `0.0000`。
+
+## 本轮未达标部分
+- 当前正式化只覆盖 linear masked-identity benchmark，不等于一般 hallucination 理论已经完成。
+- 相位恢复仍缺 learned prior / posterior baseline。
+- DSI / PDR / HCI 仍缺完整论文级推导。
+- 图表仍属于内部研究图，不是正文和补充材料定稿图。
+
+## 新增风险提醒
+- 当前工作区未找到记忆中登记的旧 round4 实体路径，因此不能把旧 round4 文件包装成“已现场复核”；本轮真正新增的是一套新的可复核重现实验工件。
+- 当前断裂 bar benchmark 的 ground truth 在未观测 bridge 区域为零，因此 bridge intensity 与 bridge L1 error 在当前脚本中数值重合；后续写作不能把这种重合误写成一般结论。
+
+## 必须纠正项
+1. 下一轮必须把相位恢复任务补到 learned prior / ambiguity selection 级真实结果。
+2. 不得把当前线性 benchmark 的区域定义直接外推成所有 forward model 的普适定理。
+3. 不得把内部研究图直接当作 Figure 2 / Figure 3 定稿图。
+
+## 是否允许进入下一阶段
+允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。

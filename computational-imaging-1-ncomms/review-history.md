@@ -56,3 +56,10 @@
 - 该结果表明：即使在观测区严格一致的条件下，learned prior 仍可能在 bridge 区域生成 unsupported structure。
 - 但由于当前指标尚未形式化、相位恢复 learned prior 尚未补齐、正文与补图体系仍缺失，正式五审稿人循环仍不能启动。
 - 当前最近的预审判断仍为：不具备进入正式五审稿人并行评审的条件。
+
+## 预审备注（线性区域定义与指标正式化后）
+- 当前工作区已新增一套可复核的 round4 重现实验工件，并把 observed / unsupported / bridge 三类区域及其指标写成正式定义。
+- 新重现实验在 6 个断裂目标上的聚合结果为：PCA prior 的 bridge mean intensity `0.5756`，autoencoder projection `0.9077`，latent inverse `0.9959`，而 zero-fill 为 `0.0000`；四个方法的 observed-region MAE 均为 `0.0000`。
+- 该结果使线性 benchmark 首次具备“measurement consistency 与 unsupported bridge hallucination 可同时成立”的统一口径。
+- 但由于相位恢复 learned prior / posterior baseline 仍缺失、DSI/PDR/HCI 仍未完成完整推导、正文与补图仍缺失，正式五审稿人循环仍不能启动。
+- 当前最近的预审判断仍为：不具备进入正式五审稿人并行评审的条件。

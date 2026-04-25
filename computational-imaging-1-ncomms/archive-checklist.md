@@ -86,4 +86,13 @@
   - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_case_metrics.csv`
   - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_linear_measurement_consistent_panel.png`
   - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_linear_measurement_mask.png`
+- round4 区域定义重现实验当前已落地的实体文件：
+  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_repro.py`
+  - `/workspace/computational-imaging-1-ncomms/theory_round3_region_formalization.md`
+  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_summary.json`
+  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_case_metrics.csv`
+  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_panel.png`
+  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_mask.png`
+  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_region_metadata.json`
 - 当前工作区未见历史 round1 / round2 实体脚本与输出文件，说明历史结果记录已保存在项目状态中，但原始归档仍需后续补齐。
+- 当前工作区也未见记忆中登记的旧 round4 实体脚本与输出文件，因此旧 round4 工件仍不能视为已现场复核归档；本轮新增的是一套新的可复核重现实验归档。

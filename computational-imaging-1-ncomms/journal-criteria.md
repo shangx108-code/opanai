@@ -81,15 +81,16 @@
 
 ## 当前项目距离期刊标准的差距
 - 创新叙事：初步具备
-- 理论链：明显不足
-- 真实结果：已有线性任务最小证据链，并新增非线性学习型 prior 初测，但仍明显不足
+- 理论链：已有线性 benchmark 的第一版区域与指标正式定义，但整体仍明显不足
+- 真实结果：已有线性任务最小证据链，并新增当前工作区可复核的区域定义重现实验，但跨任务结果链仍明显不足
 - 图表：缺失
 - 写作：缺失
-- 参考文献：不足
+- 参考文献：数量已达标，但引用体系仍未完成
 
 ## 当前阶段性补充判断
 - 线性任务已出现从 hand-crafted prior -> PCA prior -> 非线性 autoencoder prior 的递进证据，这有助于证明 unsupported hallucination 不只来自手工候选库。
 - 线性任务现已进一步补上 measurement-consistent latent inverse 基线，这意味着“观测区严格一致时仍出现 bridge hallucination”的现象已不再局限于前馈补全器。
+- 当前工作区还重新落地了一套 round4 重现实验与正式定义文档，使 observed / unsupported / bridge 三类区域及其指标首次具有可复算口径。
 - 但 Nature Communications 级别仍要求更强的方法学闭环：measurement-consistent 深度先验 / posterior baseline、跨任务结果链、理论推导、正文与补图全部成体系。
 - 因此当前进展只能视为“提高了方法可靠性证据”，不能视为“已达到投稿门槛”。
 
