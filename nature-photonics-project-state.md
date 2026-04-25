@@ -5,7 +5,7 @@
 - Run type: scheduled continuation
 
 ## Current Stage
-- Stage: manuscript assembly and first-render validation
+- Stage: supplement assembly completed; package harmonization remains
 
 ## Current Overall Goal
 - Build a Nature Photonics-competitive theory-and-simulation paper on quantum limits of nonlinear activation in photonic neural networks, with a quantitative resource framework, explicit same-axis comparisons, and submission-grade evidence.
@@ -19,24 +19,26 @@
 - Completed in this run: the literature-positioning block, Figure-3 Results package, and task-level benchmark package were fused into one continuous manuscript integration draft covering the end of the Introduction, the Fig. 3 subsection, the Fig. 3 to Fig. 4 bridge, the Fig. 4 subsection, and the Discussion carry-through.
 - Completed in this run: the continuous integration draft was embedded into a full manuscript source file, `manuscript-v1.md`, inside the Nature Photonics project namespace.
 - Completed in this run: that manuscript source was rendered successfully to a first full manuscript PDF, `manuscript-v1.pdf`, with 7 pages verified by `pdfinfo`.
+- Completed in this run: the first supplement source, `supplement-v1.md`, was assembled directly from the saved theory framework, same-axis notes, task-level benchmark assumptions, and provenance files inside the Nature Photonics namespace.
+- Completed in this run: that supplement source was rendered successfully to `supplement-v1.pdf`, with 6 pages verified by `pdfinfo`.
 - Completed before this run in the project-specific namespace: a minimal task-level benchmark already shows a bounded but real system-level consequence of the single-neuron frontier.
 - Incomplete: the task-level benchmark is now integrated into the first full manuscript source and PDF at the prose level, but it still lacks a standalone manuscript-grade Figure 4 panel and caption package.
 
 ## Single Main Bottleneck
-- The single main bottleneck is now supplementary embodiment: the manuscript has a real main-text source and first rendered PDF, but it still lacks a supplement source and supplement PDF that package derivations, benchmark assumptions, and evidence provenance to Nature Photonics standard.
+- The single main bottleneck is now Figure-4 embodiment: the manuscript and supplement both exist as real rendered PDFs, but the task-level benchmark still lacks a standalone manuscript-grade Figure 4 panel and caption package tied directly to the saved outputs.
 
 ## Single Highest-Priority Action Completed In This Run
-- Built the first complete manuscript source from the existing verified project packages and rendered the first manuscript PDF.
+- Built the first supplementary source from existing verified project materials and rendered the first supplementary PDF.
 
 ## Deliverable From This Run
-- First full manuscript package in the project-specific Nature Photonics namespace:
-  - `manuscript-v1.md`: complete manuscript source containing title, abstract, Introduction, Framework, Results, Discussion, Methods, Data and code availability, and References.
-  - `manuscript-v1.pdf`: first rendered 7-page manuscript PDF built directly from that source.
-  - The integrated main-text flow now includes:
-    - End-of-Introduction literature separation without generic novelty claims.
-    - Fig. 3 design-law narrative tied to the computed `1 / eta` detector penalty and route-dependent prefactor.
-    - Fig. 4 prose-level systems consequence with the bounded `15/15`, `0/15`, and `9/30` benchmark statements.
-    - Methods text that states the saved code provenance and current scope boundaries.
+- First supplementary package in the project-specific Nature Photonics namespace:
+  - `supplement-v1.md`: supplement source covering metric definitions, lower-bound inverse derivation, receiver-model formulas, task-level benchmark assumptions, and evidence provenance.
+  - `supplement-v1.pdf`: first rendered 6-page supplementary PDF built directly from that source.
+  - The current supplement package now makes reviewer-inspectable:
+    - the exact lower-bound inverse used in the Figure-3 comparison
+    - the homodyne and displaced on-off formulas used in the saved scripts
+    - the mapping from per-neuron photon budget to task-level activation-flip probability
+    - the file-level provenance underlying the current manuscript claims
 
 ## What Is Genuinely Completed
 - Completed: recovery of the real Nature Photonics project state from the project-specific namespace only.
@@ -48,9 +50,10 @@
 - Completed: fused the verified literature paragraph, the Fig. 3 claim package, and the real task-level benchmark into one continuous manuscript integration draft that preserves the existing numerical and claim boundaries.
 - Completed: assembled those verified packages into one full manuscript source file within the Nature Photonics namespace.
 - Completed: rendered a first full manuscript PDF from that source, so the project now has a paper-level object rather than only manuscript fragments.
+- Completed: assembled the first supplementary source from existing project evidence only.
+- Completed: rendered the first supplementary PDF, so the derivation and provenance burden is no longer absent from the paper package.
 
 ## What Is Still Incomplete
-- Incomplete: supplementary source and supplementary PDF do not yet exist.
 - Incomplete: final caption package after manuscript-wide style harmonization.
 - Incomplete: the task-level evidence is integrated in prose, but not yet as a standalone manuscript-grade Figure 4 panel with caption.
 - Incomplete: final submission archive package.
@@ -58,8 +61,8 @@
 
 ## Acceptance Probability Snapshot
 - Status: improved, but still well below submission readiness.
-- Conservative current estimate: `50-62%`.
-- Basis: the project now has a real same-axis figure package, an evidence-bounded Results narrative, a checked literature-positioning paragraph, a full manuscript source, and a first rendered manuscript PDF. The estimate remains capped because no supplement source or supplement PDF exists, Figure 4 is still prose-level rather than figure-level in the manuscript package, and final submission packaging is still absent.
+- Conservative current estimate: `56-66%`.
+- Basis: the project now has a real same-axis figure package, a checked literature-positioning paragraph, a full manuscript source and PDF, plus a first supplementary source and PDF that expose derivations, benchmark assumptions, and provenance. The estimate remains capped because Figure 4 is still prose-level rather than a standalone figure package, manuscript-wide caption/style harmonization is incomplete, and the final submission archive is absent.
 
 ## Recent Update Summary
 - Recovered the real project state from the Nature Photonics-only namespace rather than borrowing from other projects.
@@ -68,6 +71,7 @@
 - Added a literature-positioning paragraph that separates the paper from recent work on repeated-scattering nonlinearity, field-programmable photonic nonlinearity, and low-photon task demonstrations without claiming generic programmability or universal superiority.
 - Turned those separate packages into one continuous manuscript integration draft that now carries the reader from the Introduction gap statement through Fig. 3 and into the mixed Fig. 4 systems consequence.
 - Advanced that integration draft into a real manuscript object by assembling `manuscript-v1.md` and rendering `manuscript-v1.pdf`.
+- Closed the supplement-absence gap by assembling `supplement-v1.md` and rendering `supplement-v1.pdf`.
 
 ## Next Immediate Action
-- Assemble the first supplementary source and supplementary PDF, prioritizing the derivation burden, benchmark assumptions, and evidence provenance that are still outside the rendered paper package.
+- Convert the saved task-level benchmark outputs into a standalone Figure 4 panel and caption package, so the current prose-level systems claim becomes a figure-level manuscript object.

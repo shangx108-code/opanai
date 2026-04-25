@@ -83,3 +83,42 @@
 
 ### Next Supervision Focus
 - Check whether the supplement pass closes the derivation and provenance gap without widening the paper's claim boundary.
+
+## Supervision Entry 2026-04-25 (first supplement render)
+
+### Current Version Overall Evaluation
+- The project has now cleared the supplement-absence barrier. The paper package contains a real main-text manuscript and a real supplementary PDF, so reviewer inspection is no longer blocked by missing derivation and provenance packaging.
+
+### Newly Verified Facts
+- A new supplement source, `supplement-v1.md`, was assembled from the saved theory framework, same-axis notes, task-level benchmark assumptions, benchmark summary, and provenance ledger.
+- That source was rendered successfully to `supplement-v1.pdf`.
+- `pdfinfo` verified the rendered supplement as a real 6-page PDF object.
+
+### What Is Genuinely At Standard
+- The lower-bound inverse used in the Figure-3 package is now written out explicitly in reviewer-inspectable form.
+- The homodyne and displaced on-off receiver formulas are now packaged in a manuscript-paired supplement rather than only in internal notes.
+- The task-level benchmark assumptions and provenance are now visible in a paired supplementary document.
+
+### What Is Not Yet At Standard
+- Figure 4 still remains prose-level in the current manuscript rather than a standalone manuscript-grade panel/caption object.
+- The full package has not yet undergone final caption/style harmonization.
+- The final submission archive is still absent.
+
+### Core Quality Risk
+- The dominant risk has moved again. It is no longer supplement absence. It is that the task-level systems claim is still carried mainly by prose and tables rather than by a dedicated top-level figure object.
+
+### Evidence-Chain Gap
+- The missing evidence link is a manuscript-grade Figure 4 panel and caption package created directly from the saved task-level outputs.
+
+### Must-Correct Item
+- The next run must convert the existing task-level benchmark outputs into a standalone Figure-4 package.
+
+### Priority Adjustment
+- The single main bottleneck moves from supplement embodiment to Figure-4 embodiment.
+- Additional new benchmarks should still wait until the existing task-level result is packaged as a figure-level manuscript object.
+
+### Allowed To Enter Next Stage?
+- Yes. The project may now move from supplement assembly into figure-package completion and manuscript-wide harmonization.
+
+### Next Supervision Focus
+- Check whether the future Figure-4 package preserves the mixed positive-and-negative result without selective emphasis or inflated scope.

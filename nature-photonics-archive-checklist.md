@@ -1,7 +1,7 @@
 # Nature Photonics Archive Checklist
 
 ## Archive Status
-- Checklist updated on 2026-04-25 after continuous manuscript integration drafting.
+- Checklist updated on 2026-04-25 after first supplement rendering.
 
 ## Present In Namespace
 - [x] Project state file
@@ -27,14 +27,16 @@
 - [x] Continuous manuscript integration draft
 - [x] Current manuscript source (`manuscript-v1.md`)
 - [x] Current manuscript PDF (`manuscript-v1.pdf`)
+- [x] Current supplementary source (`supplement-v1.md`)
+- [x] Current supplementary PDF (`supplement-v1.pdf`)
 - [x] Task-level benchmark outputs
 
 ## Still Missing
-- [ ] Supplementary source
-- [ ] Supplementary PDF
+- [ ] Figure-4 manuscript-grade panel/caption package
 - [ ] Final submission archive package
 
 ## Truthfulness Note
 - Figure packaging is genuinely completed for the first candidate Figure-3 version.
 - Full-manuscript source assembly and the first rendered manuscript PDF are now genuinely completed.
-- Supplement assembly, final Figure-4 manuscript-grade packaging, and final submission packaging remain incomplete and are not marked as done.
+- Supplement assembly is now genuinely completed for a first reviewer-inspectable version.
+- Final Figure-4 manuscript-grade packaging and final submission packaging remain incomplete and are not marked as done.

@@ -255,3 +255,50 @@
 
 ## Next Immediate Review-Driven Action
 - Assemble the first supplementary source and supplementary PDF before expanding the benchmark stack further.
+
+## Round 6 First-Supplement-Render Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only, using `manuscript-v1.md`, `manuscript-v1.pdf`, `supplement-v1.md`, `supplement-v1.pdf`, the Figure-3 package, the task-level benchmark summary, and the theory framework
+
+### Material Reviewed
+- `manuscript-v1.md`
+- `manuscript-v1.pdf`
+- `supplement-v1.md`
+- `supplement-v1.pdf`
+- Figure-3 submission package
+- task-level benchmark summary
+- theory framework
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: the paper now looks more like a complete submission package because the derivation and provenance burden is no longer missing, but the task-level story still lacks a dedicated top-level figure object.
+- Acceptance estimate: 60%
+- Main reason: journal fit improves when the paper is paired with a real supplement, yet Figure 4 is still not embodied as a manuscript-grade panel.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: rigor rises materially because the lower-bound inverse and receiver formulas are now reviewer-inspectable in a paired supplement.
+- Acceptance estimate: 66%
+- Main reason: the derivation burden is better packaged, but the current manuscript still stops short of a fully harmonized final package.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: computational trust improves because the supplement now exposes the exact mapping from single-neuron error models to the task-level benchmark, although no new robustness computation was added.
+- Acceptance estimate: 56%
+- Main reason: provenance is stronger, but the evidence base itself remains the same and still narrow.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: the evidence chain is more complete than before, yet the task-level result is still weaker than it should be visually because Figure 4 remains prose-level.
+- Acceptance estimate: 61%
+- Main reason: supplement completion helps, but figure-level presentation of the systems result is still missing.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: the manuscript package now reads more like a real submission because readers can inspect both the main text and a paired supplement.
+- Acceptance estimate: 65%
+- Main reason: persuasion rises from package completeness, but final figure/caption harmonization and archive readiness are still incomplete.
+
+## Updated Summary
+- Genuine completion in this run: the project now has a first supplementary source and a first rendered supplementary PDF.
+- Still incomplete: Figure 4 manuscript-grade figure package, final caption/style harmonization, and final archive.
+- Current five-reviewer range: `56-66%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
+## Next Immediate Review-Driven Action
+- Build the standalone Figure-4 panel and caption package from the saved task-level benchmark outputs before adding new benchmark scope.
