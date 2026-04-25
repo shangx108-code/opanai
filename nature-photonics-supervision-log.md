@@ -288,3 +288,45 @@
 
 ### Next Supervision Focus
 - Check whether the next figure/package revision preserves the explicit distinction between the surrogate base visualization and the stronger trainable-plus-robustness extension while keeping all fragile regimes visible.
+
+## Supervision Entry 2026-04-25 (figure-facing synchronization after trainable robustness)
+
+### Current Version Overall Evaluation
+- The paper has now crossed the previous synchronization gap. The stronger trainable-plus-robustness systems evidence is no longer stranded in the Results prose alone; it now reaches the Figure-4 object, the Figure-4 submission package and the manuscript caption.
+
+### Newly Verified Facts
+- `figure4_task_level_panel.py` was revised and executed successfully.
+- The regenerated Figure-4 SVG, PNG and PDF now include an evidence-bounded annotation box sourced from the saved trainable robustness summary.
+- That annotation box states only checked facts already present in the saved robustness outputs: `22/30` positive settings in every repeat, `21/30` settings above the `+0.02` margin threshold in all repeats, and localized fragile `two_moons` settings at `eta = 0.70`, budget `4` (`1/3`) and `eta = 0.99`, budget `4` (`2/3`).
+- `figure4_submission_package.md` was revised so the caption package now makes the plotted surrogate-versus-trainable extension distinction explicit.
+- The Figure-4 caption in `manuscript-v1.md` was revised accordingly.
+- `manuscript-v1.pdf` was rendered successfully again and now verifies as a 9-page PDF object.
+
+### What Is Genuinely At Standard
+- The project now has a figure-facing Figure-4 package that no longer hides the stronger systems evidence behind prose-only description.
+- The figure object itself now records the stronger trainable robustness extension without mislabeling the plotted surrogate panels as trainable data.
+- The manuscript caption and the figure submission package now say the same bounded thing about Figure 4.
+
+### What Is Not Yet At Standard
+- The abstract still foregrounds the older surrogate-only systems message.
+- The discussion still frames the evidence as primarily a stylized random-feature benchmark rather than as a surrogate-plus-trainable robustness package.
+- The methods section still describes Figure 4 mainly through the minimal benchmark and does not yet name the trainable three-repeat extension.
+
+### Core Quality Risk
+- The dominant risk has shifted from figure-package mismatch to section-level mismatch: reviewers can now see the stronger systems evidence at figure level, but the abstract, discussion and methods still do not fully match that improved evidence boundary.
+
+### Evidence-Chain Gap
+- The missing link is full-paper harmonization of the synchronized Figure-4 story.
+
+### Must-Correct Item
+- The next run must revise abstract, discussion and methods so the paper states one consistent systems claim boundary everywhere.
+
+### Priority Adjustment
+- The single main bottleneck is now full-paper harmonization rather than figure-facing synchronization.
+- New benchmark expansion should stay paused until that consistency pass is complete.
+
+### Allowed To Enter Next Stage?
+- Yes. The project may now move from figure-facing synchronization into full-paper harmonization.
+
+### Next Supervision Focus
+- Check whether the next harmonization pass preserves the surrogate-versus-trainable distinction, the localized fragile `two_moons` caveat and the current non-claims about generality.

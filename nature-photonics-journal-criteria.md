@@ -20,15 +20,15 @@
 - The main manuscript source and rendered manuscript PDF now directly incorporate the Figure-4 object, so the top-level paper package no longer lags behind the current figure evidence.
 - A stronger trainable task benchmark now has a real seed-robustness check: the `22/30` positive-condition headline survived across three independently reseeded repeats, and the fragile conditions are now explicitly localized rather than hidden.
 - The manuscript Results section now states that stronger trainable-plus-robustness systems evidence directly, including the repeat-stable `22/30` headline, the `21/30` robust-above-threshold count, and the localized fragile `two_moons` regimes.
+- The Figure-4-facing package now also reflects that stronger systems evidence: the regenerated figure object carries an evidence-bounded synchronization note, and the figure submission package and manuscript caption now distinguish explicitly between the plotted surrogate scan and the separate trainable robustness extension.
 
 ## Criteria Still Not Satisfied
-- Figure-4 caption/package integration of the stronger trainable-plus-robustness systems evidence.
 - Full-paper harmonization of abstract, discussion and methods to the stronger systems evidence.
 - Broader systems-level generality beyond the current small trainable benchmark.
 - Final submission archive bundle.
 
 ## Current Main Risk Relative To Journal Standard
-- The project now has stronger systems evidence than the top-level Figure-4 package visibly shows. That partial mismatch is itself a risk: reviewers can now credit the stronger Results prose, but the figure-facing package still foregrounds the older minimal benchmark.
+- The project now has a synchronized Figure-4 package, but the manuscript as a whole still does not state that same bounded systems message everywhere. Abstract/discussion/methods lag is now the main risk.
 
 ## Immediate Criterion To Satisfy Next
-- Revise the Figure-4 caption/package and section harmonization so the stronger trainable benchmark plus seed-robustness outputs are represented consistently across the whole paper before final archive assembly.
+- Harmonize abstract, discussion and methods so the stronger trainable benchmark plus seed-robustness outputs are represented consistently across the whole paper before final archive assembly.

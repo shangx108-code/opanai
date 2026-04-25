@@ -493,3 +493,50 @@
 
 ## Next Immediate Review-Driven Action
 - Rewrite the manuscript-facing Figure-4 story around the trainable benchmark plus seed-robustness outputs, including the stable `22/30` headline and the explicit fragile `two_moons` exceptions.
+
+## Round 10 Figure-4 Synchronization Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only, using the regenerated Figure-4 outputs, revised `figure4_submission_package.md`, revised `manuscript-v1.md`, rendered `manuscript-v1.pdf`, and saved seed-robustness summaries
+
+### Material Reviewed
+- regenerated `figure4_task_level_panel.svg`
+- regenerated `figure4_task_level_panel.png`
+- regenerated `figure4_task_level_panel.pdf`
+- revised `figure4_submission_package.md`
+- revised `manuscript-v1.md`
+- rendered `manuscript-v1.pdf`
+- `trainable_task_benchmark_seed_robustness/seed_robustness_summary.json`
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: journal fit improves because the main systems figure now shows the stronger trainable robustness extension explicitly rather than leaving it buried in surrounding prose.
+- Acceptance estimate: 64%
+- Main reason: the paper's systems message is now better embodied at figure level, but the abstract and discussion still lag behind that stronger bounded claim.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: rigor perception improves because the figure-facing package now distinguishes clearly between what is plotted from the surrogate scan and what is added from the separate trainable robustness check.
+- Acceptance estimate: 67%
+- Main reason: the claim boundary is cleaner and more inspectable, yet full-paper wording consistency is still incomplete.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: computational credibility improves modestly because the top-level figure now cites the real reseeded trainable check, but the underlying evidence base remains small-scale.
+- Acceptance estimate: 61%
+- Main reason: reviewer-visible synchronization is better, though no broader benchmark expansion or external validation was added in this run.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: this is the clearest improvement of the run because Figure 4 is no longer vulnerable to the objection that the stronger benchmark exists only in prose.
+- Acceptance estimate: 69%
+- Main reason: the regenerated figure object, revised caption package and updated manuscript caption now present one consistent bounded systems story, but broader harmonization is still missing.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: persuasion improves because the figure-facing package and the manuscript caption now reinforce the same message, though the abstract and discussion still need alignment.
+- Acceptance estimate: 68%
+- Main reason: paper-level consistency is better at the figure boundary, but the rest of the manuscript has not yet fully caught up.
+
+## Updated Summary
+- Genuine completion in this run: Figure 4 now has a synchronized figure-facing package that combines the plotted surrogate scan with an evidence-bounded annotation of the stronger trainable-plus-robustness extension, and the manuscript PDF was re-rendered successfully.
+- Still incomplete: abstract/discussion/methods harmonization, broader systems-level generality, and final archive packaging.
+- Current five-reviewer range: `61-69%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
+## Next Immediate Review-Driven Action
+- Harmonize abstract, discussion and methods to the now-synchronized Figure-4 package before expanding the evidence base further.

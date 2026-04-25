@@ -1,7 +1,7 @@
 # Nature Photonics Archive Checklist
 
 ## Archive Status
-- Checklist updated on 2026-04-25 after Results-section integration of the trainable-plus-robustness evidence.
+- Checklist updated on 2026-04-25 after Figure-4 figure-facing synchronization to the trainable-plus-robustness evidence.
 
 ## Present In Namespace
 - [x] Project state file
@@ -47,9 +47,13 @@
 - [x] Seed-robustness JSON summary (`trainable_task_benchmark_seed_robustness/seed_robustness_summary.json`)
 - [x] Revised Results subsection in `manuscript-v1.md` that integrates the trainable benchmark plus the three-repeat seed-robustness result
 - [x] Re-rendered `manuscript-v1.pdf` after that Results revision
+- [x] Revised `figure4_task_level_panel.py` so the figure object itself cites the stronger trainable-plus-robustness extension without altering the plotted surrogate data
+- [x] Regenerated Figure-4 SVG/PNG/PDF after that synchronization pass
+- [x] Revised `figure4_submission_package.md` to synchronize the Figure-4 caption package to the stronger trainable-plus-robustness evidence
+- [x] Revised Figure-4 caption in `manuscript-v1.md`
+- [x] Re-rendered `manuscript-v1.pdf` after the Figure-4 synchronization pass
 
 ## Still Missing
-- [ ] Figure-4 caption/package revision built from the trainable-plus-robustness evidence
 - [ ] Abstract/Discussion/Methods harmonization to the stronger systems evidence package
 - [ ] Final submission archive package
 
@@ -61,4 +65,5 @@
 - Full manuscript integration of that Figure-4 package is now genuinely completed for the current manuscript object.
 - The trainable benchmark seed-robustness pass is now genuinely completed and saved.
 - Results-level manuscript integration of that stronger systems evidence is now genuinely completed.
-- Figure-facing synchronization, full-paper harmonization and final submission packaging remain incomplete and are not marked as done.
+- Figure-facing synchronization is now genuinely completed for the current manuscript object.
+- Full-paper harmonization and final submission packaging remain incomplete and are not marked as done.
