@@ -220,3 +220,37 @@ The paper could still be rejected as conceptually elegant but experimentally and
 
 ### Next supervision focus
 - Whether the next run replaces the current random-feature surrogate with a tighter benchmark without diluting the bounded design-law claim.
+
+## 2026-04-25 | Round 8 supervision after stronger trainable task benchmark
+
+### Overall evaluation
+This run solved the correct bottleneck. The project no longer relies only on a frozen random-feature surrogate for its system-level claim. The hidden layer is now trainable under the same activation photon-budget accounting, and the route- and budget-dependent design law still survives. That is the strongest single evidentiary upgrade available from the current workspace.
+
+### Gap to target-journal standard
+- The manuscript can now defend Figure 4 against the obvious complaint that the previous benchmark was too stylized to support a Nature Photonics systems claim.
+- The evidence base is now materially closer to submission grade because positive and negative operating regions survive a tighter benchmark.
+- The remaining gap is now primarily assembly rather than first-order evidence: the paper still needs a full integrated draft, a final Figure-4 package, and a broader bibliography cleanup.
+
+### Most critical quality risk
+The project could now lose acceptance probability by failing to convert stronger evidence into a coherent submission-grade manuscript. Reviewers are less likely to reject for missing task-level evidence than for seeing an incomplete paper that still reads like a collection of strong notes.
+
+### Evidence-chain gap
+- Missing full integrated main-text draft that incorporates the upgraded Figure-4 result
+- Missing final Figure-4 submission package and manuscript-facing caption logic
+- Missing full bibliography cleanup beyond the core comparator set
+
+### Must-correct items
+1. Do not keep expanding benchmark variants unless manuscript assembly exposes a concrete inconsistency.
+2. Replace the old Figure-4 random-feature emphasis with the trainable-benchmark logic in all Results and Discussion text.
+3. Preserve the negative regions on `two_moons` at low and intermediate budgets; they are part of the paper's credibility, not a weakness to hide.
+
+### Priority adjustment
+- The main bottleneck has shifted again.
+- It is no longer "missing stronger trainable-network task benchmark"; it is now "missing full integrated manuscript assembly around the upgraded evidence."
+
+### Permission to move to next phase
+- Yes.
+- The project may now move from evidence upgrade to manuscript assembly and final reviewer-proof packaging.
+
+### Next supervision focus
+- Whether the next run turns the upgraded Figure-4 benchmark into a full integrated draft and a final figure package without widening the claim beyond the actual evidence.

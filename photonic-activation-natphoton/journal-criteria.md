@@ -41,11 +41,12 @@ To be competitive as a theory-and-simulation Nature Photonics article, this pape
 - The manuscript can now make a bounded and field-appropriate novelty claim:
   the advance is a resource-and-regime framework for nonlinear activation cost, not generic photonic programmability.
 - The project now has direct Introduction, Results, and Discussion text that distinguishes hardware realization, frontier distance, and task-level worth-it region.
+- The project now also has a tighter trainable-network benchmark showing that the Figure-3 route physics still changes task-level design conclusions once the hidden layer is trained.
 
 ## What this run still does not satisfy
-- No stronger end-to-end task benchmark yet replaces the current random-feature surrogate.
 - No full manuscript draft yet assembles the checked prose into a submission-ready main text.
 - No full bibliography cleanup yet covers all non-core citations.
+- No final Figure-4 submission package yet turns the upgraded trainable benchmark into a main-text figure object.
 
 ## Current venue risk summary
-- The paper is now less likely to be dismissed as insufficiently distinctive on novelty-positioning grounds, but it is still at risk of being judged too stylized at task level unless the benchmark evidence is strengthened.
+- The paper is now less likely to be dismissed as either insufficiently distinctive or too stylized at task level, but it is still at risk of looking incomplete until the upgraded evidence is assembled into a full submission-grade manuscript.

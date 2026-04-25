@@ -25,6 +25,10 @@
 - Verified literature-positioning package: `/workspace/memory/photonic-activation-natphoton/verified-literature-positioning.md`
 - Verified core reference ledger: `/workspace/memory/photonic-activation-natphoton/verified-reference-ledger.md`
 - Manuscript integration prose package: `/workspace/memory/photonic-activation-natphoton/manuscript-integration-draft.md`
+- Trainable benchmark assumptions note: `/workspace/memory/photonic-activation-natphoton/trainable_task_benchmark_assumptions.md`
+- Reproducible trainable task benchmark script: `/workspace/memory/photonic-activation-natphoton/trainable_task_benchmark.py`
+- Trainable task benchmark outputs in `trainable_task_benchmark/`
+- Figure-4 trainable benchmark package: `/workspace/memory/photonic-activation-natphoton/figure4_trainable_benchmark_package.md`
 
 ## Still to archive
 - Theory note on activation quantum cost
@@ -32,7 +36,7 @@
 - Full manuscript outline and draft sections
 - Simulated review packages for each round
 - Full clean reference ledger
-- Stronger end-to-end task benchmark package
+- Final Figure-4 submission package built from the trainable benchmark
 
 ## Next archive-worthy item
-- Stronger trainable-network task benchmark package that supersedes the current random-feature surrogate under the same budget accounting
+- Full integrated manuscript-and-supplement draft that replaces the old Figure-4 random-feature emphasis with the upgraded trainable benchmark narrative

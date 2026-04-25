@@ -279,3 +279,46 @@ Current outcome: still major revision, but now with a much cleaner path to a ser
 - Updated estimate for Nature Photonics: 50-60%
 - Upgrade condition to 58-68%: replace the random-feature surrogate with one tighter trainable-network benchmark under the same budget accounting
 - Upgrade condition to 65-75%: complete a full manuscript draft and extend the cleaned reference ledger across the complete bibliography
+
+## 2026-04-25 | Stronger trainable task-benchmark review
+
+### Material reviewed
+- Trainable benchmark script: `/workspace/memory/photonic-activation-natphoton/trainable_task_benchmark.py`
+- Assumptions note: `/workspace/memory/photonic-activation-natphoton/trainable_task_benchmark_assumptions.md`
+- Benchmark outputs in `trainable_task_benchmark/`
+- Figure-4 package note: `/workspace/memory/photonic-activation-natphoton/figure4_trainable_benchmark_package.md`
+
+### Reviewer-style verdict
+Current outcome: still major revision, but now with the strongest task-level evidence in the project so far and a materially more credible path to a serious Nature Photonics submission.
+
+### What improved
+1. The earlier reviewer objection that Figure 4 rested on a frozen random-feature surrogate is now materially reduced.
+2. The route- and budget-dependent design law survives hidden-layer training, which strengthens the paper's claim that the Figure-3 physics has genuine system-level consequence.
+3. The benchmark now includes a trainable linear baseline, so the task-level win regions are harder to dismiss as weak-baseline artifacts.
+
+### Remaining blockers
+1. The paper still lacks a full integrated draft that inserts the stronger Figure-4 evidence into a submission-grade narrative.
+2. Figure 4 is still a benchmark package rather than a fully assembled main-text figure and caption object.
+3. The bibliography is still only partially cleaned beyond the core comparator papers.
+
+### Five-reviewer dimension estimates
+- Reviewer 1, novelty-focused:
+  innovation/significance `64/100`; theory rigor `60/100`; method reliability `66/100`; data/results `69/100`; figure quality `56/100`; writing `59/100`; journal fit `67/100`; acceptance estimate `61%`.
+- Reviewer 2, theory-rigor-focused:
+  innovation/significance `60/100`; theory rigor `72/100`; method reliability `68/100`; data/results `70/100`; figure quality `56/100`; writing `58/100`; journal fit `66/100`; acceptance estimate `65%`.
+- Reviewer 3, device/implementation-focused:
+  innovation/significance `58/100`; theory rigor `59/100`; method reliability `67/100`; data/results `66/100`; figure quality `55/100`; writing `57/100`; journal fit `64/100`; acceptance estimate `59%`.
+- Reviewer 4, broad-reader-clarity-focused:
+  innovation/significance `62/100`; theory rigor `60/100`; method reliability `65/100`; data/results `68/100`; figure quality `58/100`; writing `66/100`; journal fit `68/100`; acceptance estimate `64%`.
+- Reviewer 5, benchmark/comparison-focused:
+  innovation/significance `63/100`; theory rigor `65/100`; method reliability `72/100`; data/results `74/100`; figure quality `57/100`; writing `60/100`; journal fit `67/100`; acceptance estimate `66%`.
+
+### Review interpretation
+- Reviewer 5 moves the most because the benchmark is no longer exposed to the frozen-feature criticism.
+- Reviewer 2 also rises because the stronger benchmark now better matches the manuscript's `C_task` logic.
+- Reviewer 1 remains below the stop condition because novelty is now credible but still not packaged inside a full submission-ready narrative.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 58-66%
+- Upgrade condition to 64-72%: assemble the upgraded Figure-4 evidence into a full manuscript draft with final figure/caption logic
+- Upgrade condition to 70%+ across all five reviewers: complete manuscript assembly, bibliography cleanup, and final figure-level packaging without reopening solved evidence gaps
