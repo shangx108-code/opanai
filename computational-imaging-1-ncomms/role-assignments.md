@@ -9,12 +9,13 @@
 - 优先级：最高
 
 ## 理论人员
-- 当前任务：把 hallucination、DSI、PDR、HCI 转化为可检查推导链
+- 当前任务：把第 1 轮的线性 observation mask 现象和 phase ambiguity 现象转写成形式化判据
 - 输入：统一 forward model、线性与非线性任务定义、likelihood / prior 形式
 - 输出：
   - 统一数学符号表
-  - 线性压缩成像下的可辨识性与 prior dominance 推导
-  - 相位恢复局部 Jacobian / Fisher information 推导草案
+  - 线性 incomplete measurement 下的 data-supported / unsupported 区域判据
+  - 相位恢复 reversed ambiguity 的测量等价说明
+  - DSI / ambiguity branch 的第一版数学说明
 - 完成标准：
   - 每个关键结论都有连续推导，而不是概念口号
   - 清楚区分已证明结果、近似结果和待验证命题
@@ -22,26 +23,26 @@
 - 优先级：P1
 
 ## 代码与数值计算人员
-- 当前任务：搭建并跑通双任务最小基准
+- 当前任务：把最小双任务基准升级到学习型先验版本
 - 输入：任务定义、噪声模型、baseline 清单
 - 输出：
-  - 线性压缩成像 forward model 与 classical baseline 结果
-  - 单平面相位恢复 forward model 与 classical baseline 结果
-  - ambiguity / null-space case 生成脚本
+  - 第 1 轮最小基准脚本与结果文件
+  - 下一轮训练型先验接口
+  - iterative phase-retrieval baseline
   - 运行日志与失败案例表
 - 完成标准：
-  - 最小脚本可真实运行
+  - 第 1 轮结果基础上能接入真实可训练 prior
   - 输入输出接口明确
-  - 至少一组结果能展示“近似相同测量对应不同真实目标”的案例
+  - 至少一组结果能展示“相同或近似相同测量对应不同结构”的案例
 - 依赖：理论人员给出任务参数与评价指标
 - 优先级：P1
 
 ## 数据分析人员
-- 当前任务：定义第一版结果判读表，避免只看 PSNR/SSIM
+- 当前任务：对第 1 轮结果做结构性判读，特别是区分观测区与未观测区误差
 - 输入：baseline 输出、误差图、数据一致性指标、posterior variance 或 sample spread
 - 输出：
-  - ambiguity case 判读模板
-  - error / confidence / data support 对照表
+  - 第 1 轮 ambiguity case 判读模板
+  - observed / unsupported 区域误差对照表
   - 第一版高风险失败案例归纳
 - 完成标准：
   - 能区分普通误差与疑似 hallucination
@@ -50,7 +51,7 @@
 - 优先级：P2
 
 ## 画图人员
-- 当前任务：先规划投稿级图表规范，再等待真实数据成图
+- 当前任务：把第 1 轮内部实验图转化为 Figure 1 / Figure 2 的雏形需求
 - 输入：图 1-6 草案、统一变量命名、配色与面板逻辑
 - 输出：
   - 图表风格规范
@@ -63,7 +64,7 @@
 - 优先级：P3
 
 ## 论文撰写人员
-- 当前任务：先建立稿件骨架，不提前写结论
+- 当前任务：建立“最小结果如何进入引言与结果段”的文本接口，但不提前下强结论
 - 输入：论文定位、期刊标准、图表规划、理论框架
 - 输出：
   - 标题候选
@@ -99,20 +100,19 @@
 - 优先级：后置
 
 ## 当前依赖主链
-1. 统筹者锁定双任务最小基准
-2. 代码与数值计算人员先跑通最小结果
-3. 理论人员据此固化 DSI / PDR / HCI 的第一版形式
-4. 数据分析人员建立 hallucination 判读规则
-5. 画图人员基于真实数据出第一版正式图
+1. 统筹者锁定“从 toy prior 走向学习型 prior”的升级路线
+2. 代码与数值计算人员在第 1 轮脚本基础上接入真实 prior
+3. 理论人员把 observation mask 和 phase ambiguity 结果写成判据
+4. 数据分析人员建立 observed / unsupported 区域误差表
+5. 画图人员定义 Figure 1 / Figure 2 的正式面板结构
 6. 撰写人员再写结果段与方法段
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：双任务最小证据链启动
+- 任务名称：把线性最小 benchmark 升级为学习型先验验证平台
 - 负责人：统筹者 + 代码与数值计算人员 + 理论人员
 - 预期输出：
-  - 任务参数表
-  - 可运行脚本入口
-  - 第一版 ambiguity case
-  - 与理论定义对齐的观察记录
+  - 训练型或低秩学习型 prior 版本的线性任务结果
+  - 与第 1 轮 hand-crafted prior 的对照结果
+  - DSI / unsupported region 的第一版量化说明
 - 完成标准：
-  - 不是“代码写了”，而是“脚本真实跑通并留下结果”
+  - 不是“想好怎么做”，而是“真实运行并产生新结果”

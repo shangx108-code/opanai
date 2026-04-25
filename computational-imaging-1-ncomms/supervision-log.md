@@ -54,7 +54,39 @@
 - 理论推导细化
 
 ## 下一轮监督重点
-1. 双任务最小脚本是否真实跑通
-2. 是否出现第一批 ambiguity / hallucination 候选案例
+1. 学习型 prior 是否已接入线性任务
+2. 第 1 轮 toy prior 现象是否能被更真实的 prior 复现
 3. DSI / PDR / HCI 是否开始从口号变为可计算对象
 4. 文献扩充是否开始有系统推进
+
+## 监督轮次 1
+- 日期：2026-04-25
+- 节点性质：第 1 轮最小真实结果监督
+
+## 当前版本总体评价
+项目已经脱离纯 proposal 状态，开始有可核查的真实结果，但这些结果仍然只是最小证据链，不应被包装成论文主结果。
+
+## 本轮已真实完成
+- 已运行最小双任务脚本。
+- 线性任务中，prior library selection 选中了 `connected_vertical_bar`，在仅观测上下两段亮块的条件下，引入了未被测量支持的连接结构。
+- 相位恢复任务中，prior library selection 选中了 `reversed_ambiguity_mode`，其相对 reversed mode 的误差为 0，且 measurement identity error 为 `4.20e-26` 量级，证明该歧义是测量层面的真实等价。
+
+## 本轮未达标部分
+- 没有真实深度先验或 Bayesian baseline。
+- 没有 formal DSI / PDR / HCI 推导。
+- 图还只是内部说明图。
+- 还没有正文 / 补充材料组织方式。
+
+## 新增进展备注
+- 线性任务已增加训练型低秩 PCA prior，说明 unsupported-region error 升高并不只来自手工候选库；该现象已经开始从 hand-crafted prior 过渡到 learned prior。
+
+## 核心质量风险
+如果接下来不尽快把 toy prior 升级为真实学习型 prior，项目会卡在“概念演示”层，无法提升到目标期刊标准。
+
+## 必须纠正项
+1. 下一轮必须把至少一个任务切换到真实学习型 prior。
+2. 不得把当前候选库选择结果写成“深度先验已经验证”。
+3. 必须把 observed 与 unsupported 区域的差异做成更标准的量化表。
+
+## 是否允许进入下一阶段
+允许从“启动前”进入“最小结果生成”阶段，但不允许进入“成稿”阶段。
