@@ -41,7 +41,7 @@
 - 但当前仍是“最小证据链”，还不是 Nature Communications 级别的完整研究证据。
 
 ## 当前唯一主瓶颈
-相位恢复已经从“等测量存在性”推进到了“learned prior 对 ambiguity branch 的经验偏向”，但当前 round5 结果仍然只是 orientation-biased autoencoder decoder prior 的第一版经验性证据：`x_true` 与 `x_rev` 的 Fourier-magnitude 等价是精确事实，而 `x_hat` 对 true branch 的偏向只是当前 learned prior 的经验现象，且当前平均 measurement error 仍为 `2.52e-01`。这意味着跨任务证据链虽然不再断在“相位恢复完全没 learned prior 结果”，但它仍断在“phase ambiguity 的 exact statement、empirical branch-selection statement 与统一理论指标之间还没有闭环”。
+round6 已把 phase ambiguity 的 exact quantity、empirical branch-selection quantity 与 measurement-consistency quantity 分开写成正式口径，因此上一轮“指标边界不清”的问题已被推进。当前新的唯一主瓶颈变成：phase retrieval learned-prior baseline 的平均 `recovered_measurement_error` 仍为 `2.52e-01`，solver 误差与 branch bias 还没有充分分离，导致 round5 结果仍不能安全接入 DSI / PDR / HCI 的统一理论接口。
 
 具体表现：
 - 线性任务现已补出统一区域定义，但它仍只覆盖 masked-identity benchmark。
@@ -51,26 +51,25 @@
 - 正文与补充材料仍无投稿级图表体系。
 
 ## 本轮唯一最高优先级
-把 round5 的 phase-retrieval learned-prior 结果从“经验性内部结果”推进到“可写入 Methods/Results 的统一判据说明”：明确区分 exact ambiguity quantity 与 empirical branch-selection quantity，补出 phase branch metric、measurement consistency 口径与当前适用边界，并据此决定下一轮是先压低 phase baseline 的 measurement error，还是先接 DSI / PDR / HCI 理论接口。
+在 phase ambiguity 指标边界已固定的前提下，下一轮唯一最高优先级应切换为：补强 phase retrieval baseline 的 measurement consistency，优先把 solver 误差降下来，再判断 branch bias 是否仍稳定存在并能否接入统一理论接口。
 
 ## 本轮交付物
 1. 与 round5 结果对齐的 phase ambiguity 指标正式说明
 2. exact / empirical 结论边界表
 3. round5 相位恢复结果的 Methods/Results 可写入口径
-4. 更新后的项目状态与下一轮唯一优先级
+4. “下一轮先补强 phase solver，而不是直接接理论接口”的优先级判定
+5. 更新后的项目状态与监督结论
 
 ## 完成标准
-下一轮完成标准：
 - 明确写出哪些相位恢复量是精确结论，哪些只是当前 learned prior baseline 的经验结果
 - 给出 branch bias、measurement error、branch distance 的统一定义与解释边界
-- 能据此判断下一轮究竟优先补 phase solver 强度，还是优先补统一理论推导
+- 已据此判断下一轮优先补强 phase solver 的 measurement consistency
 - 已据此更新项目状态与监督结论
 
 ## 下一轮立即动作
-1. 把 round5 中 `true_reversed_measurement_error`、`recovered_measurement_error`、`distance_to_true`、`distance_to_reversed`、`branch_bias` 写成统一符号和判据说明。
-2. 检查这些量与线性任务 observed / unsupported / bridge 指标之间能否形成统一叙述接口。
-3. 明确当前 round5 中哪些结论只能写成“经验偏向”，不能写成“已证明定理”。
-4. 在 phase 指标边界未写清之前，不提前把 round5 结果包装成正文主结论。
+1. 在当前 exact / empirical 边界说明的约束下，为 phase retrieval 设计更强的 measurement-consistent baseline。
+2. 真实运行该 baseline，并记录新的 `recovered_measurement_error`、`distance_to_true`、`distance_to_reversed` 与 `branch_bias`。
+3. 只有在 solver 误差显著下降后，才重新判断 round5/round6 结果能否安全接入 DSI / PDR / HCI 理论接口。
 
 ## 已真实完成
 - 已从上传材料中抽取项目名称、论文主线、实施方案、候选任务、图表规划与首批参考文献。
@@ -129,6 +128,13 @@
   - latent inverse：观测区 MAE `0.0000`，未支撑区 MAE `0.1674`，bridge mean intensity `0.9959`
 - 这一步已经把 observed region、unsupported region、bridge region 以及对应的 observed-region MAE、unsupported-region MAE、bridge mean intensity、bridge L1 error 固定为可复算字段。
 - 已确认一个关键归档事实：记忆中登记的旧 round4 实体路径当前不在工作区，因此本轮新增的是“可复核重现实验工件”，不能把旧路径直接算作已现场复核完成。
+- 已新增 `/workspace/memory/computational-imaging-1-ncomms/phase-ambiguity-metrics-round6.md`，把 round5 中 `true_reversed_measurement_error`、`recovered_measurement_error`、`distance_to_true`、`distance_to_reversed` 与 `branch_bias` 固定为三层量：
+  - exact ambiguity quantity
+  - empirical measurement-consistency quantity
+  - empirical branch-selection quantity
+- 已在该说明中明确：`branch_bias = distance_to_reversed - distance_to_true`，按登记聚合值计算为 `1.2072 - 0.4380 = 0.7692`。
+- 已据此完成本轮优先级判定：下一轮应先补强 phase solver 的 measurement consistency，而不是直接把当前 round5 结果接成统一理论主结论。
+- 已确认一个新的现场限制：当前工作区未找到 round5 的原始脚本与原始输出文件，因此本轮 formalization 是基于已登记项目状态完成的理论/口径推进，不构成对 round5 原始工件的二次现场复核。
 
 ## 已部分完成但仍缺关键环节
 - 文献：已补到 30+，并形成按主题分类的工作文献表；但尚未整理成最终 BibTeX 并逐条嵌入正文/补充材料。
@@ -161,7 +167,7 @@
 - 期刊匹配度：中
 
 当前最拖累接收概率的短板：
-1. phase ambiguity 的 exact quantity 与 empirical branch-selection quantity 仍未写成统一、可检查的理论与指标接口
+1. 相位恢复 baseline 的 measurement consistency 仍偏弱，solver error 与 branch bias 还未充分分离
 2. DSI / PDR / HCI 仍没有完整论文级推导与适用边界说明
 3. 图表体系、正文、补充材料和多任务结果矩阵仍远未补齐
 
@@ -175,3 +181,4 @@
 2026-04-26：更新项目运行规则。后续由自研智能体按每 2 小时 1 轮推进；停止标准收紧为“接收概率 >70%”与“evidence / 数据 / 图 / 参考文献全部补齐”同时成立；示意图允许用 GPT-imag-2.0 起稿，但非示意图必须全部使用真实数据，理论推导必须详实可靠。
 2026-04-26：在当前工作区重新落地并真实运行 `round4_region_formalization_repro.py`，生成 `round4_reproduced_summary.json`、`round4_reproduced_case_metrics.csv`、`round4_reproduced_panel.png`、`round4_reproduced_mask.png` 与 `round4_region_metadata.json`；同时新增 `theory_round3_region_formalization.md`，把 observed / unsupported / bridge 三类区域及其指标定义固定为可复算口径。此举补上了线性 benchmark 的第一版正式判据，但尚未补齐相位恢复 learned prior / posterior 结果链。
 2026-04-26：在当前工作区新建并真实运行 `round5_phase_retrieval_learned_prior.py`，训练长度为 64 的一维非对称对象 autoencoder decoder prior，并在 4 个 held-out 样例上仅通过 Fourier magnitude 测量做 latent 优化。生成 `round5_phase_summary.json`、`round5_phase_case_metrics.csv`、`round5_phase_panel.png` 与 `round5_phase_ambiguity_notes.md`。结果显示 true / reversed 分支的精确 measurement error 为 `1.26e-16` 量级，而 learned prior 输出的 mean branch bias 为 `0.7692`，且 4 / 4 个样例均更接近 true branch；但其平均 measurement error 仍为 `2.52e-01`，因此当前只能算“第一版经验性 branch-selection 证据”，不能包装成强求解器或一般理论结论。
+2026-04-26：新增 `/workspace/memory/computational-imaging-1-ncomms/phase-ambiguity-metrics-round6.md`。本轮未新增真实数值实验，而是把 round5 已登记字段正式拆分为 exact ambiguity quantity、empirical measurement-consistency quantity 与 empirical branch-selection quantity，并明确 `branch_bias = distance_to_reversed - distance_to_true`。基于这一步，项目当前唯一主瓶颈已从“指标边界不清”切换为“phase solver 的 measurement consistency 仍偏弱”，因此下一轮唯一最高优先级改为先补强 phase baseline，而不是直接推进统一理论主接口。

@@ -70,3 +70,9 @@
 - 该结果说明：相位恢复中的 learned prior branch selection 已从“纯存在性”推进到“真实经验结果”。
 - 但由于当前 baseline 仍是 toy decoder prior、measurement error 仍不低、统一理论指标接口仍未完成、正文与补图仍缺失，正式五审稿人循环仍不能启动。
 - 当前最近的预审判断仍为：不具备进入正式五审稿人并行评审的条件。
+
+## 预审备注（round6 phase ambiguity 指标 formalization 后）
+- 本轮未新增正式审稿材料，也未新增新的 phase 数值结果，因此仍不具备进入正式五审稿人并行评审的条件。
+- 本轮新增的是一份指标边界说明：把 round5 的 `true_reversed_measurement_error` 定义为 exact ambiguity quantity，把 `recovered_measurement_error` 定义为 empirical measurement-consistency quantity，把 `distance_to_true`、`distance_to_reversed` 与 `branch_bias` 定义为 empirical branch-selection quantities。
+- 该说明进一步明确：当前 `branch_bias = 0.7692` 只能写成“toy learned prior 的经验性 true-branch preference”，不能写成 phase retrieval ambiguity 的一般结论。
+- 基于这一预审更新，下一轮更合理的推进路线是先把 phase baseline 变成更强、误差更低的 solver，再决定是否启动统一理论接口或更靠近正式审稿门槛。

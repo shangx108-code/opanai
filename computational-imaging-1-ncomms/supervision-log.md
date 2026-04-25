@@ -238,6 +238,37 @@
 - 当前相位恢复指标说明仍未正式接入 DSI / PDR / HCI 推导链。
 - 图表、正文、补充材料与五审稿人循环仍未启动。
 
+## 监督轮次 7
+- 日期：2026-04-26
+- 节点性质：phase ambiguity 指标边界 formalization 监督
+
+## 当前版本总体评价
+本轮没有新增真实数值实验，但完成了一项必要的理论与口径清障：把 round5 相位恢复中的 exact ambiguity、empirical measurement consistency 和 empirical branch selection 明确拆开。这一步是有效推进，因为它直接降低了把经验偏向误写成理论结论的风险。
+
+## 本轮已真实完成
+- 已新增 `/workspace/memory/computational-imaging-1-ncomms/phase-ambiguity-metrics-round6.md`。
+- 已把 round5 已登记字段 `true_reversed_measurement_error`、`recovered_measurement_error`、`distance_to_true`、`distance_to_reversed`、`branch_bias` 固定为三层量。
+- 已明确 `branch_bias = distance_to_reversed - distance_to_true`，并根据已登记聚合值验证出 `1.2072 - 0.4380 = 0.7692`。
+- 已完成下一轮优先级判定：先补强 phase solver 的 measurement consistency，再讨论统一理论接口。
+
+## 本轮未达标部分
+- 当前工作区仍未找到 round5 原始脚本和原始输出文件，因此本轮不构成对 round5 工件的二次现场复核。
+- 当前仍没有新的低 measurement-error phase baseline。
+- DSI / PDR / HCI 仍未完成论文级推导。
+- 正文、补充材料和投稿级图表仍未形成。
+
+## 新增风险提醒
+- 如果下一轮直接把当前 round5 结果接成统一理论接口，会把 solver failure 与 prior-induced branch preference 混写。
+- 如果后续恢复 round5 原始工件，仍需再做一次现场核验，不能用本轮口径说明替代原始归档。
+
+## 必须纠正项
+1. 下一轮必须优先降低 phase baseline 的 `recovered_measurement_error`。
+2. 不得把 `branch_bias > 0` 写成 phase retrieval 中的一般理论定理。
+3. 在原始 round5 工件补回前，不得声称本轮完成了对该脚本实现细节的重新核验。
+
+## 是否允许进入下一阶段
+允许继续停留在“理论强化与最小结果生成阶段”，但不允许进入“图表完善完成”或“成稿”阶段。
+
 ## 新增风险提醒
 - 不能把 `x_true` 与 `x_rev` 的精确测量等价，与 `x_hat` 对 true branch 的经验偏向混写成同一种“已证明结论”。
 - 当前 round5 的 branch bias 强，但 measurement error 仍不低；如果写作时忽略这一点，会把“branch preference”误包装成“高质量 reconstruction”。

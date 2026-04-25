@@ -94,6 +94,7 @@
 - 相位恢复现已补出第一版 learned-prior branch-selection 结果：在 exact true / reversed ambiguity 之上，当前 learned decoder prior 在 4 个 held-out 样例中全部偏向 true branch，mean branch bias 为 `0.7692`。
 - 但 Nature Communications 级别仍要求更强的方法学闭环：measurement-consistent 深度先验 / posterior baseline、跨任务结果链、理论推导、正文与补图全部成体系。
 - 同时必须明确：当前 round5 中 `x_true` 与 `x_rev` 的 measurement 等价是精确事实，而 learned prior 对 true branch 的偏向只是当前 toy decoder prior 的经验现象；两者不能混写。
+- round6 已把这一边界进一步固定为三层量：exact ambiguity quantity、empirical measurement-consistency quantity 与 empirical branch-selection quantity。只要 `recovered_measurement_error` 仍偏高，就不能把 branch bias 当成强方法学证据。
 - 因此当前进展只能视为“提高了方法可靠性证据”，不能视为“已达到投稿门槛”。
 
 ## 当前不允许提前宣称的事项

@@ -9,44 +9,42 @@
 - 优先级：最高
 
 ## 理论人员
-- 当前任务：把 round5 相位恢复结果写成统一、可检查的 phase ambiguity 指标说明，明确 exact 结论与 empirical 结论的边界
+- 当前任务：在 round6 已完成指标边界 formalization 的基础上，为后续 phase solver 强化保留 exact / empirical 边界，不让新结果再次混写
 - 输入：统一 forward model、线性与非线性任务定义、likelihood / prior 形式
 - 输出：
-  - phase retrieval 中 true / reversed ambiguity branch 的统一符号表
-  - exact ambiguity quantity 与 empirical branch-selection quantity 的区分说明
-  - `recovered_measurement_error`、`distance_to_true`、`distance_to_reversed`、`branch_bias` 的正式定义
-  - 相位恢复局部指标与 DSI / ambiguity branch 的第一版接口说明
+  - round6 指标说明维护版
+  - phase solver 强化后仍适用的 exact / empirical 判据
+  - solver error 与 branch bias 分离所需的理论检查项
 - 完成标准：
-  - 每个关键结论都有连续推导，而不是概念口号
-  - 清楚区分已证明结果、近似结果和待验证命题
-- 依赖：round5 结果已固定
-- 优先级：P1
-
-## 代码与数值计算人员
-- 当前任务：审计并补强 round5 相位恢复 learned-prior baseline 的 measurement consistency 口径，为下一轮 solver 强化做准备
-- 输入：任务定义、噪声模型、baseline 清单
-- 输出：
-  - round5 脚本与输出字段说明
-  - latent restarts / measurement error 的诊断记录
-  - 是否需要下一轮优先降低 measurement error 的判断依据
-- 完成标准：
-  - 现有输出字段能直接映射到理论人员定义的 branch 指标
-  - 明确当前 baseline 的能力边界，而不是含糊写成“已解决”
-- 依赖：理论人员给出统一评价指标
+  - 所有新 phase 结果都必须落入 round6 定义的三层量中
+  - 不把经验 branch bias 写成精确 ambiguity 定理
+- 依赖：round6 指标说明已形成
 - 优先级：P2
 
+## 代码与数值计算人员
+- 当前任务：以 round6 指标说明为约束，优先补强 phase retrieval baseline 的 measurement consistency
+- 输入：任务定义、噪声模型、baseline 清单
+- 输出：
+  - 更强的 phase baseline 设计
+  - 新一轮真实运行结果
+  - 新的 `recovered_measurement_error` 与 `branch_bias` 对照
+- 完成标准：
+  - 新输出字段直接继承 round6 定义
+  - 能判断 solver error 降低后 branch bias 是否仍稳定存在
+- 依赖：理论人员给出 round6 统一评价指标
+- 优先级：P1
+
 ## 数据分析人员
-- 当前任务：把 round5 的 branch bias 与 measurement error 组合成可写入 Results 的结构化结论
+- 当前任务：等待更强 phase baseline 结果后，比较 solver error 下降前后 branch bias 是否稳定
 - 输入：baseline 输出、误差图、数据一致性指标、posterior variance 或 sample spread
 - 输出：
   - branch distance 对照表
   - measurement consistency 与 branch selection 对照表
-  - 相位恢复 learned-prior 偏向解读
-  - 第一版高风险失败案例归纳
+  - solver failure 与 branch bias 分离分析
 - 完成标准：
-  - 能区分普通误差与疑似 hallucination
+  - 能区分普通 solver failure 与可重复的 branch preference
   - 能指出需要补充的对照实验
-- 依赖：代码与数值计算结果
+- 依赖：新的 phase baseline 结果
 - 优先级：P2
 
 ## 画图人员
@@ -100,20 +98,20 @@
 - 优先级：后置
 
 ## 当前依赖主链
-1. 统筹者锁定“从 toy prior 走向学习型 prior”的升级路线
+1. 统筹者锁定“先分清 exact ambiguity 与 empirical branch bias，再强化 solver”的路线
 2. 线性 benchmark 已形成可复核区域定义与指标输出
-3. 代码与数值计算人员已在 phase retrieval 最小任务上接入真实 learned decoder prior baseline，并跑出 round5 结果
-4. 理论人员把 phase ambiguity 的 exact quantity 与 learned-prior branch-selection quantity 写成统一判据
-5. 数据分析人员建立 branch distance 与 measurement consistency 对照表
-6. 画图人员定义 Figure 2 / Figure 4 的正式面板结构
-6. 撰写人员再写结果段与方法段
+3. round6 已把 phase ambiguity 的三个层级量固定下来
+4. 代码与数值计算人员据此补强 phase solver 的 measurement consistency
+5. 数据分析人员判断 solver error 降低后 branch bias 是否仍稳定
+6. 画图人员再定义 Figure 4 的正式面板结构
+7. 撰写人员再写结果段与方法段
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：把 round5 相位恢复结果推进到统一、可检查的 phase ambiguity 指标说明
-- 负责人：统筹者 + 理论人员 + 代码与数值计算人员
+- 任务名称：补强 phase retrieval baseline 的 measurement consistency
+- 负责人：统筹者 + 代码与数值计算人员
 - 预期输出：
-  - exact / empirical phase ambiguity 量的区分说明
-  - 与 round5 输出字段一一对应的指标定义
-  - 下一轮是否优先强化 solver 的判断依据
+  - 更低 `recovered_measurement_error` 的新 baseline
+  - 在 round6 判据下可直接比较的新 branch 指标
+  - solver error 与 branch bias 是否分离的判断依据
 - 完成标准：
-  - 不是“看图解释”的口头复述，而是“把 round5 的真实结果写成可检查判据”
+  - 不再停留在 round5 的高 measurement-error 经验偏向层面
