@@ -247,3 +247,44 @@
 
 ### Next Supervision Focus
 - Check whether the next manuscript revision states the repeat-stable `22/30` result, names the fragile `two_moons` low-budget regimes, and keeps the scope bounded to a small trainable benchmark.
+
+## Supervision Entry 2026-04-25 (Results-section synchronization)
+
+### Current Version Overall Evaluation
+- The manuscript is now more honest and more competitive at the Results level. The stronger systems evidence is no longer stranded outside the paper: the reader can now see both the surrogate Figure-4 scan and the trainable-plus-robustness extension in one bounded narrative.
+
+### Newly Verified Facts
+- The Figure-4-linked Results subsection in the main manuscript was revised to preserve the existing minimal surrogate benchmark as the base visualization rather than silently replacing it.
+- The same subsection now states that a separate small trainable-hidden-layer benchmark beats the trainable linear baseline in `22/30` scanned settings.
+- The manuscript now states that a three-repeat reseeded robustness check preserves that `22/30` headline in every repeat, with `21/30` settings staying above the `+0.02` margin threshold in all three repeats.
+- The manuscript now names the localized fragile region explicitly as low- and intermediate-budget `two_moons`, including the `eta = 0.70, budget = 4` (`1/3` repeats positive) and `eta = 0.99, budget = 4` (`2/3` repeats positive) cases.
+- The revised manuscript source was rendered successfully back to an 8-page PDF object.
+
+### What Is Genuinely At Standard
+- The strongest currently verified systems evidence is now visible in the reviewer-facing Results text.
+- The manuscript now distinguishes robustly positive regimes from fragile near-threshold regimes instead of flattening them into one undifferentiated positive headline.
+- The stronger trainable benchmark is now integrated without inflating scope into a hardware-readiness claim or a large-scale learning claim.
+
+### What Is Not Yet At Standard
+- The top-level Figure-4 caption and object still foreground the older minimal benchmark.
+- Abstract, Discussion and Methods still lag behind the revised Results-level systems story.
+- Final submission packaging remains absent.
+
+### Core Quality Risk
+- The dominant risk is now partial package mismatch rather than text absence. Reviewers can see the stronger systems evidence in the Results section, but the visual/caption package still says less than the text.
+
+### Evidence-Chain Gap
+- The missing link is figure-facing synchronization: caption, package note and, if needed, figure definition aligned to the trainable-plus-robustness evidence while keeping the bounded surrogate/training distinction explicit.
+
+### Must-Correct Item
+- The next run must revise the Figure-4 caption/package so the top-level visual evidence matches the upgraded Results story.
+
+### Priority Adjustment
+- The single main bottleneck remains synchronization, but it has moved from Results prose to figure-facing embodiment and paper-wide harmonization.
+- Additional new computation should still wait unless that caption/package revision uncovers a specific unsupported statement.
+
+### Allowed To Enter Next Stage?
+- Yes. The project may now move from Results-section synchronization into figure-facing synchronization and final claim harmonization.
+
+### Next Supervision Focus
+- Check whether the next figure/package revision preserves the explicit distinction between the surrogate base visualization and the stronger trainable-plus-robustness extension while keeping all fragile regimes visible.

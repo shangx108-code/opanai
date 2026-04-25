@@ -1,15 +1,15 @@
 # Nature Photonics Role Assignments
 
 ## Current Phase
-- A real seed-robustness result now exists for the stronger trainable task benchmark; the immediate next phase is to move that stronger evidence into the manuscript-facing Figure-4 story.
+- The stronger trainable-plus-robustness evidence has now entered the manuscript Results text; the immediate next phase is to synchronize the Figure-4 caption/object and the remaining paper sections to that stronger evidence.
 
 ## Role Task Table
 
 ### Coordinator
-- Current task: replace the outdated minimal-benchmark emphasis with the now-verified trainable-plus-robustness evidence.
-- Input: `manuscript-v1.md`, `figure4_submission_package.md`, `figure4_trainable_benchmark_package.md`, seed-robustness summary files, current review history.
-- Output: one synchronized manuscript/figure revision target that upgrades systems evidence without widening the paper's scope.
-- Completion standard: the next action must make the reviewer-facing paper reflect the strongest real evidence already in the namespace.
+- Current task: close the remaining gap between the revised Results text and the still-minimal Figure-4 package.
+- Input: revised manuscript Results subsection, `figure4_submission_package.md`, `figure4_trainable_benchmark_package.md`, seed-robustness summary files, current review history.
+- Output: one synchronized figure-facing revision target that upgrades systems evidence without widening the paper's scope.
+- Completion standard: the next action must make the top-level visual/caption package reflect the strongest real evidence already described in the paper text.
 - Priority: highest
 
 ### Theorist
@@ -34,41 +34,42 @@
 - Priority: high
 
 ### Figure Lead
-- Current task: prepare a revised Figure-4 direction that reflects the trainable benchmark and seed-robustness evidence rather than the older minimal benchmark only.
+- Current task: prepare a revised Figure-4 direction and caption that reflect the trainable benchmark and seed-robustness evidence rather than the older minimal benchmark only.
 - Input: trainable benchmark package and seed-robustness outputs.
 - Output: one revised figure or caption target for the next run.
 - Completion standard: the next figure-facing revision must be traceable to saved trainable and robustness outputs.
 - Priority: highest
 
 ### Manuscript Writer
-- Current task: revise the Results and Figure-4 language so the manuscript matches the stronger task-level evidence already computed.
-- Input: current manuscript source/PDF, trainable benchmark package, seed-robustness outputs.
-- Output: one bounded manuscript revision that cites the repeat-stable `22/30` count and names the fragile exceptions.
-- Completion standard: manuscript statements must match the real strengthened benchmark and its caveats.
+- Current task: keep the revised Results subsection fixed and extend the same evidence discipline into caption and section harmonization.
+- Input: revised manuscript source/PDF, trainable benchmark package, seed-robustness outputs.
+- Output: one bounded follow-up revision that prevents the rest of the paper from lagging behind the updated Results text.
+- Completion standard: not yet met until the stronger benchmark and its caveats appear consistently wherever Fig. 4 is summarized.
 - Priority: highest
 
 ### Supervisor
-- Current task: treat manuscript lag behind the stronger evidence as the dominant risk.
-- Input: seed-robustness outputs, current manuscript PDF, review history, journal criteria.
-- Output: a next-stage supervision target focused on evidence synchronization and honest scope control.
-- Completion standard: the project should not leave stronger verified evidence stranded outside the paper package.
+- Current task: treat partial synchronization as the dominant risk.
+- Input: revised manuscript PDF, Figure-4 package, review history, journal criteria.
+- Output: a next-stage supervision target focused on figure/package synchronization and honest scope control.
+- Completion standard: the project should not leave stronger verified evidence stranded in text while the top-level figure package still says less.
 - Priority: highest
 
 ### Strict Reviewers
-- Current task: update acceptance estimates after the stronger trainable benchmark passed a real seed-robustness check.
-- Input: trainable benchmark package, seed-robustness outputs, current manuscript source/PDF, prior review history.
+- Current task: update acceptance estimates after the paper text itself incorporated the stronger trainable benchmark and real seed-robustness check.
+- Input: revised manuscript source/PDF, trainable benchmark package, seed-robustness outputs, prior review history.
 - Output: revised reviewer matrix and the next upgrade condition.
-- Completion standard: the project state must reflect that methods/results confidence improved even though the paper text has not yet caught up.
+- Completion standard: the project state must reflect that reviewer-visible evidence improved, while still recording the remaining figure-package mismatch.
 - Priority: high
 
 ## What Was Completed In This Run
-- Completed: created and ran `trainable_task_benchmark_seed_robustness.py`.
-- Completed: saved repeat-level and condition-level robustness outputs for the trainable benchmark.
-- Completed: verified that the `22/30` positive-condition headline survives across all three repeats while `9/30` conditions remain fragile or negative.
+- Completed: revised the manuscript Results subsection so it now states the stronger trainable-hidden-layer benchmark and the repeat-stable `22/30` headline.
+- Completed: the revised Results text now names the six robust high-budget `two_moons` gains and the localized fragile low/intermediate-budget `two_moons` regimes.
+- Completed: re-rendered the manuscript PDF after the Results revision.
 
 ## What Remains Incomplete
-- Incomplete: the stronger trainable-plus-robustness evidence is not yet integrated into the manuscript or current Figure-4 story.
+- Incomplete: the Figure-4 caption/object still reflects the older minimal benchmark rather than the stronger trainable-plus-robustness evidence.
+- Incomplete: abstract, discussion and methods harmonization to the stronger systems evidence remains open.
 - Incomplete: final submission archive remains open.
 
 ## Next Immediate Deliverable
-- One manuscript-facing Figure-4 and Results revision built directly from the trainable and seed-robustness outputs.
+- One figure-facing Figure-4 caption/package revision built directly from the trainable and seed-robustness outputs.

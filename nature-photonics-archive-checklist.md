@@ -1,7 +1,7 @@
 # Nature Photonics Archive Checklist
 
 ## Archive Status
-- Checklist updated on 2026-04-25 after trainable-benchmark seed-robustness analysis.
+- Checklist updated on 2026-04-25 after Results-section integration of the trainable-plus-robustness evidence.
 
 ## Present In Namespace
 - [x] Project state file
@@ -45,9 +45,12 @@
 - [x] Seed-robustness repeat-count table (`trainable_task_benchmark_seed_robustness/seed_repeat_counts.csv`)
 - [x] Seed-robustness narrative summary (`trainable_task_benchmark_seed_robustness/seed_robustness_summary.md`)
 - [x] Seed-robustness JSON summary (`trainable_task_benchmark_seed_robustness/seed_robustness_summary.json`)
+- [x] Revised Results subsection in `manuscript-v1.md` that integrates the trainable benchmark plus the three-repeat seed-robustness result
+- [x] Re-rendered `manuscript-v1.pdf` after that Results revision
 
 ## Still Missing
-- [ ] Manuscript-facing Figure-4 and Results revision built from the trainable-plus-robustness evidence
+- [ ] Figure-4 caption/package revision built from the trainable-plus-robustness evidence
+- [ ] Abstract/Discussion/Methods harmonization to the stronger systems evidence package
 - [ ] Final submission archive package
 
 ## Truthfulness Note
@@ -57,4 +60,5 @@
 - First-pass Figure-4 manuscript-grade packaging is now genuinely completed.
 - Full manuscript integration of that Figure-4 package is now genuinely completed for the current manuscript object.
 - The trainable benchmark seed-robustness pass is now genuinely completed and saved.
-- Manuscript integration of that stronger systems evidence and final submission packaging remain incomplete and are not marked as done.
+- Results-level manuscript integration of that stronger systems evidence is now genuinely completed.
+- Figure-facing synchronization, full-paper harmonization and final submission packaging remain incomplete and are not marked as done.

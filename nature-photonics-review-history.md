@@ -318,6 +318,52 @@
 - `manuscript-v1.md`
 - `supplement-v1.md`
 
+## Round 8 Results-Synchronization Review
+- Date: 2026-04-25
+- Basis: project-specific Nature Photonics namespace only, using the revised `manuscript-v1.md`, re-rendered `manuscript-v1.pdf`, `figure4_trainable_benchmark_package.md`, and the saved trainable seed-robustness summaries
+
+### Material Reviewed
+- revised `manuscript-v1.md`
+- revised `manuscript-v1.pdf`
+- `figure4_trainable_benchmark_package.md`
+- `trainable_task_benchmark_seed_robustness/seed_robustness_summary.md`
+- `trainable_task_benchmark_seed_robustness/seed_repeat_counts.csv`
+- prior `figure4_submission_package.md`
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: the paper's systems claim is now better differentiated because it no longer stops at the weaker surrogate story, but editorial sharpness is still limited by the old Figure-4 caption/package.
+- Acceptance estimate: 63%
+- Main reason: the manuscript now presents a stronger and more realistic bounded systems consequence, yet the top-level figure package still underplays it.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: rigor improves because the Results text now ties the trainable extension and its fragile regimes directly back to the design-law interpretation rather than leaving them outside the paper.
+- Acceptance estimate: 68%
+- Main reason: the evidence-to-claim chain is more honest and explicit, but the stronger benchmark is still not harmonized through every manuscript-facing component.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: reviewer-visible computational reliability improves because the reseeded `22/30` result is now stated in the paper, though the benchmark remains narrow and the figure package has not yet caught up.
+- Acceptance estimate: 64%
+- Main reason: methods confidence rises when the robustness check is carried into the manuscript, but no broader task or architecture coverage was added.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: the Results section is materially stronger, but evidence support is still capped by the fact that Figure 4 itself remains anchored to the older minimal benchmark.
+- Acceptance estimate: 65%
+- Main reason: the strongest systems evidence is now visible in prose, yet the visual/caption package is not fully synchronized.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: the paper now reads more persuasively because it distinguishes the surrogate visualization, the trainable extension and the fragile exceptions in one coherent subsection.
+- Acceptance estimate: 67%
+- Main reason: writing quality improves when the stronger result is integrated honestly, but full-paper harmonization is still incomplete.
+
+## Updated Summary
+- Genuine completion in this run: the manuscript Results subsection now incorporates the stronger trainable-hidden-layer benchmark and the three-repeat seed-robustness check, and the manuscript PDF was re-rendered successfully.
+- Still incomplete: Figure-4 caption/package synchronization, abstract/discussion/methods harmonization to the stronger systems evidence, and final archive assembly.
+- Current five-reviewer range: `63-68%`.
+- Stop condition status: not met; all five reviewer estimates remain below 70%.
+
+## Next Immediate Review-Driven Action
+- Revise the Figure-4 caption/package so the visual evidence matches the upgraded Results story without erasing the surrogate-versus-trainable distinction.
+
 ### Reviewer 1: Innovation And Journal Match
 - One-line assessment: the paper now presents both halves of its design-law story as real top-level figure objects, which improves editorial clarity, but the manuscript source still needs to catch up to the new package.
 - Acceptance estimate: 64%

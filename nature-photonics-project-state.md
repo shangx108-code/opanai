@@ -2,10 +2,10 @@
 
 ## Last Updated
 - Date: 2026-04-25
-- Run type: scheduled continuation after trainable-benchmark seed-robustness analysis
+- Run type: scheduled continuation after Results-section integration of the trainable-plus-robustness evidence
 
 ## Current Stage
-- Stage: Results-generation and robustness-strengthening completed for the trainable task benchmark; next gap is manuscript integration of the stronger systems evidence
+- Stage: Manuscript revision after results-generation and robustness-strengthening; the stronger systems evidence has begun to enter the paper text but has not yet propagated through the full Figure-4 package
 
 ## Current Overall Goal
 - Build a Nature Photonics-competitive theory-and-simulation paper on quantum limits of nonlinear activation in photonic neural networks, with a quantitative resource framework, explicit same-axis comparisons, and submission-grade evidence.
@@ -29,24 +29,24 @@
 - Completed in this run: across three independently reseeded data-split and training repeats, physical activation beat the trainable linear baseline in `22/30` scanned conditions in every repeat.
 - Completed in this run: `21/30` scanned conditions stayed above the manuscript's `+0.02` margin threshold in all three repeats, while `9/30` conditions were shown explicitly to be fragile or negative under reseeding.
 - Completed in this run: the fragile region was localized rather than hidden; it remains concentrated in `two_moons` at low and intermediate budgets, with `eta = 0.70, budget = 4` positive in only `1/3` repeats and `eta = 0.99, budget = 4` positive in `2/3` repeats.
-- Incomplete: the main manuscript and current Figure-4 package still present the older minimal benchmark rather than the stronger trainable-plus-robustness evidence package.
+- Completed in this run: the Figure-4-linked Results subsection in the main manuscript was revised to add the stronger trainable-hidden-layer benchmark and its three-repeat seed-robustness check, while preserving the localized fragile `two_moons` caveats.
+- Completed in this run: the revised manuscript source was rendered successfully back to a real 8-page `manuscript-v1.pdf`.
+- Incomplete: the top-level Figure-4 object and caption still foreground the older minimal benchmark, so the stronger systems evidence is only partially embodied at manuscript level.
 
 ## Single Main Bottleneck
-- The single main bottleneck is now evidence-to-manuscript mismatch: the stronger trainable and seed-robust systems evidence now exists, but the reviewer-facing manuscript still foregrounds the older minimal benchmark rather than the improved result.
+- The single main bottleneck is now partial evidence synchronization: the Results prose now reflects the stronger trainable and seed-robust systems evidence, but the Figure-4 caption/object and the rest of the paper package still foreground the older minimal benchmark.
 
 ## Single Highest-Priority Action Completed In This Run
-- Executed a real three-repeat seed-robustness analysis on the trainable task benchmark.
+- Revised the manuscript's Figure-4-linked Results subsection so it now incorporates the stronger trainable-hidden-layer benchmark plus the three-repeat seed-robustness result.
 
 ## Deliverable From This Run
-- Seed-robustness package for the stronger trainable task benchmark in the project-specific Nature Photonics namespace:
-  - `trainable_task_benchmark_seed_robustness.py`: reproducible robustness-analysis script that reuses the existing trainable benchmark and changes only the data-split and training seeds.
-  - `trainable_task_benchmark_seed_robustness/seed_robustness_summary.md`: narrative summary of the repeat-level counts, robust positive regimes, and fragile regimes.
-  - `trainable_task_benchmark_seed_robustness/seed_robustness_summary.csv`: condition-level mean margin, margin spread, route-win counts, and positive-repeat counts.
-  - `trainable_task_benchmark_seed_robustness/seed_repeat_counts.csv`: per-repeat counts showing that the `22/30` headline held in every repeat.
-  - The new reviewer-relevant evidence is now:
-    - the trainable benchmark conclusion is not a one-seed accident at the headline-count level
-    - the robust positive regimes are concentrated in all `15/15` concentric-circles settings plus six high-budget `two_moons` settings
-    - the fragile or negative regimes are stated explicitly rather than averaged away
+## Deliverable From This Run
+- Manuscript-facing Results revision for the stronger systems evidence:
+  - the surrogate Figure-4 scan remains described explicitly as the base visualization rather than being silently overwritten
+  - the stronger small trainable-hidden-layer benchmark is now stated in the paper text as beating the trainable linear baseline in `22/30` scanned settings
+  - the three-repeat robustness result is now stated in the paper text as preserving that `22/30` headline in every repeat, with `21/30` settings staying above the `+0.02` threshold in all three repeats
+  - the localized fragile region is now named explicitly as low- and intermediate-budget `two_moons`, including the `eta = 0.70, budget = 4` (`1/3` repeats positive) and `eta = 0.99, budget = 4` (`2/3` repeats positive) cases
+  - the updated manuscript source was rendered successfully back to an 8-page PDF object
 
 ## What Is Genuinely Completed
 - Completed: recovery of the real Nature Photonics project state from the project-specific namespace only.
@@ -68,16 +68,20 @@
 - Completed: executed a stronger seed-robustness test on the trainable hidden-layer benchmark rather than on the earlier random-feature surrogate.
 - Completed: verified that the headline `22/30` count is stable across three independently reseeded repeats.
 - Completed: identified exactly which task-level settings are robustly positive in all repeats and which settings remain fragile near the decision boundary.
+- Completed: revised the manuscript Results subsection so it now distinguishes the minimal surrogate Figure-4 visualization from the stronger trainable-plus-robustness extension.
+- Completed: re-rendered the manuscript PDF after that Results revision, so the top-level paper object now includes the updated systems-evidence wording.
 
 ## What Is Still Incomplete
 - Incomplete: the stronger trainable-plus-robustness benchmark has not yet replaced the older minimal benchmark in the manuscript-facing Figure-4 story.
+- Incomplete: the Figure-4 caption/object itself has not yet been rebuilt around the stronger trainable-plus-robustness evidence.
+- Incomplete: abstract, discussion and methods harmonization to the stronger systems evidence remains incomplete.
 - Incomplete: final submission archive package.
 - Incomplete: all five reviewer acceptance estimates remain below 70%.
 
 ## Acceptance Probability Snapshot
 - Status: improved, but still below submission readiness.
-- Conservative current estimate: `65-69%`.
-- Basis: this run added real systems-level robustness evidence on the stronger trainable benchmark and showed that the headline `22/30` count is repeat-stable, which directly raises confidence in methods and results support. The estimate remains capped because the stronger evidence has not yet been integrated into the manuscript or Figure-4 package, the benchmark is still small-scale, and the final submission archive is absent.
+- Conservative current estimate: `66-69%`.
+- Basis: the paper text now states the stronger trainable benchmark and the repeat-stable `22/30` result directly, which improves reviewer-visible evidence support and narrative honesty. The estimate remains capped because the Figure-4 caption/object still reflects the older minimal benchmark, the stronger evidence is not yet harmonized through the full paper package, the benchmark remains small-scale, and the final submission archive is absent.
 
 ## Recent Update Summary
 - Recovered the real project state from the Nature Photonics-only namespace rather than borrowing from other projects.
@@ -91,6 +95,8 @@
 - Folded the rendered Figure-4 object back into `manuscript-v1.md`, tightened the manuscript-facing Fig. 4 caption and Methods wording, and regenerated `manuscript-v1.pdf` as an 8-page paper object.
 - Added a real seed-robustness layer on top of the stronger trainable benchmark and verified that the `22/30` positive-condition headline survives across three independent reseeded repeats.
 - Tightened the systems claim boundary further by naming the exact fragile regimes instead of treating all positive margins as equally secure.
+- Revised the manuscript's task-level Results subsection so the paper now says explicitly that the base Figure-4 visualization comes from the surrogate benchmark while the stronger trainable-hidden-layer extension preserves the same design rule under reseeding.
+- Re-rendered the manuscript PDF successfully after that revision.
 
 ## Next Immediate Action
-- Replace the current minimal-benchmark-only Figure-4 and Results wording with the stronger trainable-plus-seed-robustness evidence package, while preserving the explicit fragile-regime caveats.
+- Revise the Figure-4 caption and figure-facing package so the top-level visual evidence, not only the Results prose, reflects the stronger trainable-plus-seed-robustness benchmark while preserving the explicit fragile-regime caveats.
