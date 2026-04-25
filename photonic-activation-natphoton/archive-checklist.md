@@ -15,14 +15,16 @@
 - First same-axis homodyne-comparison note recorded in project memory
 - Second same-axis displaced on-off comparison note recorded in project memory
 - Reproducible comparison script: `/workspace/memory/photonic-activation-natphoton/same_axis_metrics.py`
+- Figure-3 submission package: `/workspace/memory/photonic-activation-natphoton/figure3_submission_package.md`
+- Figure-3 rendering script: `/workspace/memory/photonic-activation-natphoton/figure3_same_axis_panel.py`
+- Figure-3 outputs and provenance table in `figure3_same_axis_panel/`
 
 ## Still to archive
 - Theory note on activation quantum cost
 - Benchmark specification
-- Figure storyboard
-- Figure-3 candidate panel and caption package
 - Manuscript outline and draft sections
 - Simulated review packages for each round
+- First task-level benchmark package and outputs
 
 ## Next archive-worthy item
-- First Figure-3 candidate panel with data provenance, regime annotations, and caption logic
+- First real task-level benchmark package linking Figure 3 to system-level design choice

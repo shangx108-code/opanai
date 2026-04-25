@@ -1,27 +1,57 @@
-# Nature Photonics Role Assignments
+# Role Assignments
 
-## Role task table
+## Coordinator
+- Current task: convert the finished Figure-3 package into the first task-level benchmark plan that asks whether the activation frontier changes the best system design
+- Inputs: Figure-3 submission package, theory framework, benchmark specification, manuscript spine
+- Deliverable: one minimal Figure-4 benchmark brief with task definition, activation candidates, evaluation metric, and required code path
+- Completion standard: the next run can start real task-level computation instead of debating benchmark scope
+- Dependency: none
 
-| Role | Current task | Input | Deliverable | Completion standard | Dependency |
-| --- | --- | --- | --- | --- | --- |
-| Coordinator | Convert the lower-bound-versus-homodyne comparison into a figure-grade result package and define the next same-axis baseline | Homodyne comparison note, venue criteria, manuscript spine | Execution brief for the second comparison cycle | The next run can immediately compute the next baseline and assemble one main-text panel | This run's computation |
-| Theory | Derive the second baseline on the same axes, most likely direct or displaced counting | Lower-bound derivation, homodyne comparison note, theory framework | Explicit error model with assumptions | The next baseline can be computed without hidden choices | Current comparison |
-| Code and Numerical Computation | Implement the next same-axis comparison and package figure-ready tables | Homodyne comparison note, second-baseline theory note | Reproducible comparison tables for Figure 3 | At least two concrete architecture traces exist beside the lower bound | Theory model |
-| Data Analysis | Turn the homodyne ratio map into accessible, marginal, and excluded device regimes | Verified homodyne comparison values | Interpretation memo for the main-text claim | The result answers a device-design question rather than only showing a curve | Current comparison |
-| Figure Production | Assemble the first Figure-3 candidate around lower bound plus homodyne curves | Homodyne comparison note, manuscript spine | Panel plan, caption logic, provenance checklist | The current result can be shown in the main text | Current comparison |
-| Writing | Draft the first results subsection from completed evidence | Homodyne comparison note, manuscript spine | Lower-bound-versus-homodyne subsection text | The paragraph set is manuscript-usable and limitation-aware | Coordinator framing |
-| Supervision | Keep the new comparison from being overstated as a global optimum claim | Homodyne comparison note, journal criteria | Allowed-claim and disallowed-claim list | Only bounded regime claims survive | Current comparison |
-| Strict Review | Update the reviewer matrix after the first same-axis architecture comparison | Lower-bound derivation, homodyne comparison note, journal criteria | Revised reviewer matrix with dimension scores and next upgrade conditions | Acceptance probability reflects the new evidence without ignoring the single-route limitation | Coordinator summary |
+## Theory
+- Current task: define the narrowest theoretically honest bridge from single-neuron boundary cost to task-level utility
+- Inputs: theory framework, Figure-3 submission package, benchmark specification
+- Deliverable: assumptions note stating what a minimal task benchmark may and may not infer from Figure 3
+- Completion standard: the next benchmark does not overclaim network-level consequences from neuron-level bounds
+- Dependency: coordinator framing
 
-## What was completed in this run
-- Code and numerical computation completed the first concrete same-axis comparison between the lower bound and a homodyne-conditioned AQMA proxy.
-- Data analysis established that near-unity detector efficiency keeps the route within about `1.6-1.7x` of the lower-bound photon cost, while lower efficiency quickly widens the gap.
-- Supervision can now permit one bounded device-facing claim rather than only a theory-only claim.
+## Code and Numerical Computation
+- Current task: identify the lightest reproducible task benchmark that can be run from the current workspace without fabricating new hardware evidence
+- Inputs: benchmark specification, same-axis metrics, Figure-3 package
+- Deliverable: executable benchmark stub or a clear workspace-level blocker report
+- Completion standard: either real task-level code begins, or the project has an explicit evidence gap instead of a vague missing-result label
+- Dependency: theory definitions
 
-## What remains incomplete
-- No second activation baseline has yet been computed on the same axes.
-- No figure panel has yet been formally assembled from the completed comparison.
-- No manuscript subsection has yet been revised around the new result.
+## Data Analysis
+- Current task: decide what system-level quantity would count as a real design consequence of the Figure-3 frontier
+- Inputs: Figure-3 package, benchmark specification, journal criteria
+- Deliverable: one ranking metric that trades task error against photon cost and detector assumptions
+- Completion standard: the first task-level result will answer a design question instead of producing generic accuracy curves
+- Dependency: theory + computation plan
 
-## Next immediate deliverable
-- One second same-axis activation baseline or one figure-grade panel strong enough to make the current comparison feel definitive rather than illustrative.
+## Figure Production
+- Current task: hold Figure 3 stable and only revise it if the upcoming task-level benchmark changes the manuscript flow
+- Inputs: current Figure-3 outputs and package
+- Deliverable: locked figure provenance and revision notes if needed
+- Completion standard: Figure 3 no longer blocks the paper
+- Dependency: none
+
+## Writing
+- Current task: turn the Figure-3 package into manuscript text only after the next benchmark fixes what follows it
+- Inputs: Figure-3 submission package, manuscript spine, journal criteria
+- Deliverable: a revised Results flow with Figure 3 as the neuron-level anchor and one placeholder slot for the task-level consequence
+- Completion standard: the paper narrative no longer stalls after Figure 3
+- Dependency: coordinator + theory + benchmark brief
+
+## Supervision
+- Current task: prevent the paper from stopping at a polished single-neuron story without a system-level consequence
+- Inputs: Figure-3 package, venue criteria, benchmark plan
+- Deliverable: supervision note that distinguishes a decisive Figure-4 benchmark from a merely decorative task sweep
+- Completion standard: the next round either creates a real design-consequence benchmark or names a true blocker
+- Dependency: coordinator output
+
+## Strict Review
+- Current task: update the five-reviewer matrix after the Figure-3 package closes the figure-quality bottleneck
+- Inputs: Figure-3 package, journal criteria, manuscript spine
+- Deliverable: revised reviewer matrix with explicit recognition that task-level evidence is now the main missing ingredient
+- Completion standard: acceptance probability reflects the improved figure/manuscript state without overstating novelty or completeness
+- Dependency: coordinator output

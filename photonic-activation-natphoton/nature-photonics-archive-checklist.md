@@ -1,28 +1,30 @@
-# Nature Photonics Archive Checklist
+# Archive Checklist
 
-## Genuinely completed and now archivable
-- Canonical Nature Photonics memory namespace files initialized
-- One explicit derivation for boundary discrimination cost of threshold-like activation
-- First real numerical lower-bound scan completed for `n_bar^min(epsilon)` with verified values recorded in project memory
-- First real numerical gain map completed for `g_min(delta, epsilon)` under the local linear encoding model
-- First same-axis homodyne-conditioned AQMA proxy comparison completed with verified detector-efficiency-dependent photon-cost ratios
+## Planned final archive
+- Manuscript source
+- Submission PDF
+- Supplementary information
+- Figure source files
+- Numerical scripts and configuration files
+- Clean reference ledger
+- Review-response history
 
-## Partially completed but not archivable as final evidence
-- Activation quantum cost theory note
-  Status: one lower-bound component completed, but the full framework is not yet complete
-- Boundary-cost figure package
-  Status: exact lower-bound and homodyne comparison values now exist, but no submission-grade panel or caption package has been assembled
-- Review history
-  Status: updated with a post-derivation micro-assessment, but not yet a full manuscript review cycle
+## Current archived items
+- Project state initialization files for the Nature Photonics activation project
+- Lower-bound derivation and first numerical scan recorded in project memory
+- First same-axis homodyne-comparison note recorded in project memory
+- Second same-axis displaced on-off comparison note recorded in project memory
+- Reproducible comparison script: `/workspace/memory/photonic-activation-natphoton/same_axis_metrics.py`
+- Figure-3 submission package: `/workspace/memory/photonic-activation-natphoton/figure3_submission_package.md`
+- Figure-3 rendering script: `/workspace/memory/photonic-activation-natphoton/figure3_same_axis_panel.py`
+- Figure-3 outputs and provenance table in `figure3_same_axis_panel/`
 
-## Still incomplete
-- Second concrete activation-family comparison curve
-- Figure-ready plot and caption logic
-- Unified activation framework across alternative physical mechanisms
-- Manuscript outline revision incorporating the new derivation
-- Main manuscript PDF
-- Supplementary information PDF
-- Submission archive package
+## Still to archive
+- Theory note on activation quantum cost
+- Benchmark specification
+- Manuscript outline and draft sections
+- Simulated review packages for each round
+- First task-level benchmark package and outputs
 
 ## Next archive-worthy item
-- First explicit lower-bound-versus-multi-route comparison panel with data provenance and caption logic
+- First real task-level benchmark package linking Figure 3 to system-level design choice

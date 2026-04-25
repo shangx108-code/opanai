@@ -1,110 +1,195 @@
-# Nature Photonics Review History
+# Review History
 
-## 2026-04-25 | Pre-manuscript triage baseline
+## 2026-04-25 | Pre-manuscript triage
+
+### Material reviewed
+- Source note: `/workspace/user_files/01-1-.txt`
+
+### Venue lens
+Nature Photonics research article standard
 
 ### Reviewer-style verdict
-- Major revision before a full draft exists
+Current outcome: major revision before a full draft even exists
 
-### Baseline reviewer estimates
+### Why
+1. The proposed topic is timely and broad enough for the journal, but the present evidence is still conceptual.
+2. The note identifies the right bottleneck, yet it does not fully prove that activation quantum cost is both new and indispensable relative to adjacent recent work.
+3. AQMA is promising as a proposed architecture, but no result yet shows a clear regime where it changes design decisions.
+
+### Closest pressure points from current literature
+- Nature Photonics aims and scope confirm fit for nonlinear optics, quantum optics, optoelectronic components, and emerging photonic applications.
+- Bandyopadhyay et al., *Single-chip photonic deep neural network with forward-only training*, Nature Photonics 18, 1335-1343 (2024), raises the standard for photonic-AI relevance.
+- Yildirim et al., *Nonlinear processing with linear optics*, Nature Photonics 18, 1076-1085 (2024), narrows the space for claims that nonlinearity always requires intrinsic material nonlinearity.
+- Wu et al., *Field-programmable photonic nonlinearity*, Nature Photonics 19, 725-732 (2025), raises the bar for programmability and device-level relevance.
+- Wang et al., *An optical neural network using less than 1 photon per multiplication*, Nature Communications 13, 123 (2022), already occupies the low-photon task-demonstration lane.
+
+### Five-reviewer baseline
 - Reviewer 1 (novelty-focused): 18%
 - Reviewer 2 (theory-rigor-focused): 16%
 - Reviewer 3 (device/implementation-focused): 14%
 - Reviewer 4 (broad-reader clarity-focused): 22%
 - Reviewer 5 (benchmark/comparison-focused): 15%
 
-## 2026-04-25 | Post-derivation micro-update
+### Acceptance-probability trend
+- Start-of-project estimate for Nature Photonics: 12-20%
+- Upgrade condition to 25-35%: formalize the framework and produce first benchmark-grade numerical figures
+- Upgrade condition to 35-50%: prove at least one actionable regime boundary where AQMA or measurement-induced activation changes the optimal design choice
+- Upgrade condition to 50-70%: complete a manuscript package with clear literature separation, reproducible numerics, and submission-grade figures
 
-### New evidence reviewed
-- One explicit derivation reducing threshold-like activation to a coherent-state binary discrimination problem and proving
-  `n_bar >= (1/4) ln(1 / (4 epsilon (1 - epsilon)))`
-  for the mean boundary-state photon cost under the stated assumptions.
+## 2026-04-25 | Formalization-package review
 
-### Review impact
-- This is genuine progress on theory rigor.
-- It does not yet materially solve the novelty, benchmark, or device-relevance objections.
+### Material reviewed
+- Theory framework: `/workspace/memory/photonic-activation-natphoton/theory-framework.md`
+- Benchmark specification: `/workspace/memory/photonic-activation-natphoton/benchmark-spec.md`
+- Manuscript spine: `/workspace/memory/photonic-activation-natphoton/manuscript-spine.md`
 
-### Updated reviewer interpretation
-- Reviewer 1 (novelty-focused): stays effectively unchanged. A bound alone does not yet show field-changing consequence.
-- Reviewer 2 (theory-rigor-focused): improves modestly because one central quantity is now explicitly defined and derived.
-- Reviewer 3 (device/implementation-focused): unchanged until hardware-parameter mapping exists.
-- Reviewer 4 (broad-reader clarity-focused): slight improvement because the activation-cost narrative is now more concrete.
-- Reviewer 5 (benchmark/comparison-focused): unchanged until real comparison curves exist.
+### Reviewer-style verdict
+Current outcome: major revision, but materially stronger than concept-only stage
 
-### Working reviewer estimates after this run
-- Reviewer 1: 18-20%
-- Reviewer 2: 20-24%
-- Reviewer 3: 14-16%
-- Reviewer 4: 22-25%
-- Reviewer 5: 15-17%
+### What improved
+1. The paper now has a central quantity, explicit assumptions, and a clear separation between function imitation, discrimination, and task-level usefulness.
+2. The benchmark plan is structured around falsification, which is much healthier for a selective journal.
+3. The manuscript spine is now journal-facing rather than note-like.
 
-### Current conclusion
-- All five reviewer acceptance estimates remain far below 70%.
-- The project must continue iterative advancement.
+### Remaining blockers
+1. No benchmark result yet demonstrates a design-changing regime boundary.
+2. Novelty relative to recent programmable/nonlinear photonic work is still argued rather than shown.
+3. The current package still lacks a first real figure, which keeps the acceptance ceiling low.
 
-### Immediate upgrade condition
-- Produce at least one real numerical regime map from the new bound and use it to state where measurement-induced activation could plausibly approach the boundary and where it cannot.
+### Updated five-reviewer baseline
+- Reviewer 1 (novelty-focused): 24%
+- Reviewer 2 (theory-rigor-focused): 29%
+- Reviewer 3 (device/implementation-focused): 18%
+- Reviewer 4 (broad-reader clarity-focused): 31%
+- Reviewer 5 (benchmark/comparison-focused): 21%
 
-## 2026-04-25 | Post-scan micro-update
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 18-26%
+- Upgrade condition to 30-40%: generate the first regime-boundary benchmark and show where AQMA changes the frontier
+- Upgrade condition to 40-55%: integrate benchmark evidence into a coherent manuscript package with verified literature separation
 
-### New evidence reviewed
-- A real numerical scan was run from the proved lower bound
-  `n_bar >= (1/4) ln(1 / (4 epsilon (1 - epsilon)))`.
-- Verified points include
-  `n_bar^min = 0.255413` at `epsilon = 0.10`,
-  `0.415183` at `epsilon = 0.05`,
-  and `0.807232` at `epsilon = 0.01`.
-- Under the local encoding model `alpha(x)=g(x-x_th)`, the minimum gain required at `delta = 0.10` rises to
-  `g_min = 5.053838, 6.443468, 7.977987, 8.984607`
-  for `epsilon = 0.10, 0.05, 0.02, 0.01`, respectively.
+## 2026-04-25 | First same-axis architecture-comparison review
 
-### Review impact
-- Reviewer 2 and Reviewer 5 should move modestly upward because the project now has a true theory-to-numerics link.
-- Reviewer 3 remains skeptical because no architecture comparison or hardware mapping exists yet.
-- Reviewer 1 still lacks a reason to view the work as field-shifting rather than analytically tidy.
+### Material reviewed
+- Lower-bound project state entry
+- Homodyne comparison note: `/workspace/memory/photonic-activation-natphoton/aqma-homodyne-comparison.md`
 
-### Working reviewer estimates after this run
-- Reviewer 1: 19-21%
-- Reviewer 2: 24-29%
-- Reviewer 3: 15-18%
-- Reviewer 4: 24-28%
-- Reviewer 5: 20-25%
+### Reviewer-style verdict
+Current outcome: major revision, but now with the first concrete evidence that the framework produces a device-facing design law rather than only a formal lower bound
 
-### Current conclusion
-- All five reviewer acceptance estimates remain far below 70%.
-- The project must continue iterative advancement.
+### What improved
+1. The paper now has one concrete measurement-induced route on the same axes as the lower bound.
+2. Detector efficiency has become a quantitative control variable with a clear penalty on boundary-energy cost.
+3. The project can now make one bounded main-text claim about when a measurement-induced route stays near the frontier and when it does not.
 
-### Immediate upgrade condition
-- Put one explicit measurement-induced activation model on the same axes as the lower-bound curve and show whether it approaches, misses, or crosses into an excluded regime.
-
-## 2026-04-25 | Post-homodyne-comparison micro-update
-
-### New evidence reviewed
-- One explicit homodyne-conditioned AQMA proxy was computed on the same axes as the coherent-state discrimination lower bound.
-- Verified same-axis results include:
-  at `epsilon = 0.10`, `n_bar^lb = 0.255413` while `n_bar^hom = 0.414741` at `eta = 0.99` and `0.821187` at `eta = 0.50`;
-  at `epsilon = 0.01`, `n_bar^lb = 0.807232` while `n_bar^hom = 1.366640` at `eta = 0.99` and `2.705947` at `eta = 0.50`.
-- The homodyne-to-bound photon-cost ratio stays near `1.6-1.7x` for `eta = 0.99` but grows to about `3.2-3.35x` for `eta = 0.50` over `epsilon = 0.10-0.01`.
-
-### Review impact
-- Reviewer 2 and Reviewer 5 should rise meaningfully because the project now has a genuine lower-bound-versus-architecture comparison.
-- Reviewer 3 should also rise because detector efficiency now enters as an explicit device-facing control axis.
-- Reviewer 1 still remains cautious because one worked route is not yet a full novelty-separating comparison set.
+### Remaining blockers
+1. Only one architecture trace exists, so the comparison can still be dismissed as illustrative.
+2. No submission-grade figure or caption package yet communicates the result.
+3. Novelty relative to recent photonic nonlinearity papers is still only partially discharged because the comparison set remains too narrow.
 
 ### Five-reviewer dimension estimates
-- Reviewer 1:
+- Reviewer 1, novelty-focused:
   innovation/significance `34/100`; theory rigor `45/100`; method reliability `42/100`; data/results `37/100`; figure quality `20/100`; writing `28/100`; journal fit `44/100`; acceptance estimate `26%`.
-- Reviewer 2:
+- Reviewer 2, theory-rigor-focused:
   innovation/significance `36/100`; theory rigor `58/100`; method reliability `49/100`; data/results `40/100`; figure quality `20/100`; writing `30/100`; journal fit `45/100`; acceptance estimate `34%`.
-- Reviewer 3:
+- Reviewer 3, device/implementation-focused:
   innovation/significance `33/100`; theory rigor `46/100`; method reliability `47/100`; data/results `39/100`; figure quality `20/100`; writing `27/100`; journal fit `43/100`; acceptance estimate `27%`.
-- Reviewer 4:
+- Reviewer 4, broad-reader-clarity-focused:
   innovation/significance `35/100`; theory rigor `46/100`; method reliability `43/100`; data/results `41/100`; figure quality `22/100`; writing `33/100`; journal fit `47/100`; acceptance estimate `30%`.
-- Reviewer 5:
+- Reviewer 5, benchmark/comparison-focused:
   innovation/significance `35/100`; theory rigor `50/100`; method reliability `48/100`; data/results `45/100`; figure quality `21/100`; writing `29/100`; journal fit `45/100`; acceptance estimate `33%`.
 
-### Current conclusion
-- All five reviewer acceptance estimates remain far below 70%.
-- The project must continue iterative advancement.
+### Review interpretation
+- Reviewer 2 and Reviewer 5 move the most because the project now contains a real same-axis comparison rather than a bound alone.
+- Reviewer 3 improves, but only modestly, because the detector-efficiency dependence is informative without yet being a full hardware-feasibility map.
+- Reviewer 1 still sees a narrow evidence base because there is only one architecture beside the lower bound.
 
-### Immediate upgrade condition
-- Add either a second activation route on the same axes or a figure-grade accessible-region panel strong enough to make the new comparison feel definitive rather than illustrative.
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 24-34%
+- Upgrade condition to 35-45%: add a second architecture baseline or a figure-grade accessible-region panel that makes the comparison feel field-relevant rather than illustrative
+- Upgrade condition to 45-60%: integrate the comparison into manuscript text with verified literature separation and at least one stronger device-facing figure
+
+## 2026-04-25 | Second same-axis architecture-comparison review
+
+### Material reviewed
+- Lower-bound project state entry
+- Homodyne comparison note: `/workspace/memory/photonic-activation-natphoton/aqma-homodyne-comparison.md`
+- Displaced on-off comparison note: `/workspace/memory/photonic-activation-natphoton/kennedy-onoff-comparison.md`
+- Reproducible script: `/workspace/memory/photonic-activation-natphoton/same_axis_metrics.py`
+
+### Reviewer-style verdict
+Current outcome: major revision, but the paper is now meaningfully closer to a selective-journal result because the core comparison has moved from one route to a small architecture family.
+
+### What improved
+1. The evidence base now includes two physically distinct measurement-induced routes on the same axes as the lower bound.
+2. The project can now separate two effects cleanly: detector efficiency sets the global `1 / eta` penalty, while measurement architecture changes the constant-factor overhead above the limit.
+3. The numerical path is now reproducible from saved code rather than living only in prose.
+
+### Remaining blockers
+1. The new result is still not packaged as a submission-grade figure and caption.
+2. The manuscript still lacks a verified literature-positioning paragraph against the strongest 2024-2025 photonic-nonlinearity papers.
+3. There is still no task-level evidence showing whether the single-neuron frontier changes network-level design choices.
+
+### Five-reviewer dimension estimates
+- Reviewer 1, novelty-focused:
+  innovation/significance `42/100`; theory rigor `52/100`; method reliability `50/100`; data/results `47/100`; figure quality `23/100`; writing `31/100`; journal fit `50/100`; acceptance estimate `33%`.
+- Reviewer 2, theory-rigor-focused:
+  innovation/significance `41/100`; theory rigor `64/100`; method reliability `58/100`; data/results `50/100`; figure quality `23/100`; writing `32/100`; journal fit `50/100`; acceptance estimate `39%`.
+- Reviewer 3, device/implementation-focused:
+  innovation/significance `40/100`; theory rigor `52/100`; method reliability `55/100`; data/results `49/100`; figure quality `23/100`; writing `30/100`; journal fit `49/100`; acceptance estimate `35%`.
+- Reviewer 4, broad-reader-clarity-focused:
+  innovation/significance `41/100`; theory rigor `52/100`; method reliability `51/100`; data/results `50/100`; figure quality `24/100`; writing `36/100`; journal fit `52/100`; acceptance estimate `36%`.
+- Reviewer 5, benchmark/comparison-focused:
+  innovation/significance `43/100`; theory rigor `58/100`; method reliability `58/100`; data/results `56/100`; figure quality `24/100`; writing `32/100`; journal fit `51/100`; acceptance estimate `41%`.
+
+### Review interpretation
+- Reviewer 5 improves the most because the comparison is no longer a single worked example.
+- Reviewer 2 also moves upward because the constant-factor-versus-scaling distinction is now mathematically cleaner.
+- Reviewer 1 remains restrained because novelty is still only partially secured until the manuscript explicitly positions the new comparison against recent photonic nonlinearity papers.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 31-41%
+- Upgrade condition to 40-50%: assemble a main-text Figure 3 with clear regime annotations and a reviewer-safe Results subsection
+- Upgrade condition to 50-65%: add verified literature separation and at least first task-level evidence that the single-neuron frontier changes system-level design choices
+
+## 2026-04-25 | Figure-3 package review
+
+### Material reviewed
+- Figure package note: `/workspace/memory/photonic-activation-natphoton/figure3_submission_package.md`
+- Figure generator: `/workspace/memory/photonic-activation-natphoton/figure3_same_axis_panel.py`
+- Figure outputs in `figure3_same_axis_panel/`
+
+### Reviewer-style verdict
+Current outcome: still major revision, but now the manuscript has its first genuinely persuasive main-text result object.
+
+### What improved
+1. Figure quality is no longer a major bottleneck: the comparison now has panel logic, regime annotation, and reviewer-safe captioning.
+2. Writing quality improved because the Results claim is now packaged in bounded prose instead of scattered notes.
+3. The lower-bound versus two-route story now looks substantially more like a Nature Photonics Results section and less like an internal benchmark memo.
+
+### Remaining blockers
+1. There is still no task-level evidence showing whether the single-neuron frontier changes architecture choice in a network setting.
+2. Literature positioning against the strongest 2024-2025 photonic nonlinearity papers is still incomplete.
+3. The paper still lacks a verified reference ledger and a full draft that carries the Figure-3 logic forward.
+
+### Five-reviewer dimension estimates
+- Reviewer 1, novelty-focused:
+  innovation/significance `44/100`; theory rigor `53/100`; method reliability `52/100`; data/results `54/100`; figure quality `47/100`; writing `45/100`; journal fit `54/100`; acceptance estimate `42%`.
+- Reviewer 2, theory-rigor-focused:
+  innovation/significance `43/100`; theory rigor `65/100`; method reliability `60/100`; data/results `56/100`; figure quality `46/100`; writing `44/100`; journal fit `54/100`; acceptance estimate `46%`.
+- Reviewer 3, device/implementation-focused:
+  innovation/significance `41/100`; theory rigor `53/100`; method reliability `57/100`; data/results `54/100`; figure quality `45/100`; writing `42/100`; journal fit `52/100`; acceptance estimate `41%`.
+- Reviewer 4, broad-reader-clarity-focused:
+  innovation/significance `43/100`; theory rigor `53/100`; method reliability `53/100`; data/results `55/100`; figure quality `50/100`; writing `49/100`; journal fit `56/100`; acceptance estimate `48%`.
+- Reviewer 5, benchmark/comparison-focused:
+  innovation/significance `45/100`; theory rigor `59/100`; method reliability `60/100`; data/results `60/100`; figure quality `48/100`; writing `45/100`; journal fit `55/100`; acceptance estimate `49%`.
+
+### Review interpretation
+- Reviewer 4 moves the most because the work now reads more clearly to a broad photonics audience.
+- Reviewer 5 also improves because the benchmark is finally packaged as a figure with explicit regime interpretation.
+- Reviewer 1 remains capped because the paper still has not fully shown how the single-neuron frontier changes the broader design landscape or novelty relative to recent photonic nonlinearity work.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 38-48%
+- Upgrade condition to 45-58%: generate a minimal but real task-level benchmark showing when the neuron-level frontier changes the preferred activation choice
+- Upgrade condition to 55-68%: add verified literature separation and integrate the first two main Results into one full manuscript flow

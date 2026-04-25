@@ -118,3 +118,37 @@ The project could still lose momentum if the new comparison remains a set of int
 
 ### Next supervision focus
 - Whether the next run turns the completed comparison into one main-text figure with a bounded, reviewer-safe claim.
+
+## 2026-04-25 | Round 5 supervision after Figure-3 package assembly
+
+### Overall evaluation
+This run cleared the correct bottleneck. The project now has an actual main-text figure object, not just strong calculations and intentions. That matters because selective-journal momentum is often lost exactly at the stage where a sound result still does not look editorially decisive. Figure 3 now reads like a design-law figure rather than an internal note.
+
+### Gap to target-journal standard
+- The manuscript can now communicate the single-neuron design consequence with much higher clarity and lower overclaim risk.
+- Figure quality and narrative readiness have both improved enough to support a real Results section.
+- However, the paper is still vulnerable to the criticism that it stops at a polished single-neuron theory without proving why the frontier changes system-level photonic-neural-network design.
+
+### Most critical quality risk
+The project could now be rejected as elegant but incomplete if it cannot show at least one task-level consequence or a rigorously justified reason that such a consequence is currently unidentifiable from available evidence.
+
+### Evidence-chain gap
+- Missing task-level benchmark that connects neuron-level resource limits to system-level design choice
+- Missing verified literature-positioning paragraph against the strongest 2024-2025 photonic nonlinearity papers
+- Missing cleaned reference ledger
+
+### Must-correct items
+1. Do not spend the next round polishing Figure 3 further unless a concrete error appears.
+2. Make the next benchmark answer a design question, not merely produce another accuracy table.
+3. Keep the task-level benchmark narrow enough that a real result can be generated from the current workspace.
+
+### Priority adjustment
+- The main bottleneck has shifted again.
+- It is no longer "missing figure-grade assembly"; it is now "missing task-level consequence."
+
+### Permission to move to next phase
+- Yes.
+- The project may now move from figure consolidation to task-level consequence testing.
+
+### Next supervision focus
+- Whether the next run produces a real minimal benchmark linking activation resource overhead to system-level utility, or identifies a true workspace-level blocker.

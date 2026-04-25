@@ -151,3 +151,45 @@ Current outcome: major revision, but the paper is now meaningfully closer to a s
 - Updated estimate for Nature Photonics: 31-41%
 - Upgrade condition to 40-50%: assemble a main-text Figure 3 with clear regime annotations and a reviewer-safe Results subsection
 - Upgrade condition to 50-65%: add verified literature separation and at least first task-level evidence that the single-neuron frontier changes system-level design choices
+
+## 2026-04-25 | Figure-3 package review
+
+### Material reviewed
+- Figure package note: `/workspace/memory/photonic-activation-natphoton/figure3_submission_package.md`
+- Figure generator: `/workspace/memory/photonic-activation-natphoton/figure3_same_axis_panel.py`
+- Figure outputs in `figure3_same_axis_panel/`
+
+### Reviewer-style verdict
+Current outcome: still major revision, but now the manuscript has its first genuinely persuasive main-text result object.
+
+### What improved
+1. Figure quality is no longer a major bottleneck: the comparison now has panel logic, regime annotation, and reviewer-safe captioning.
+2. Writing quality improved because the Results claim is now packaged in bounded prose instead of scattered notes.
+3. The lower-bound versus two-route story now looks substantially more like a Nature Photonics Results section and less like an internal benchmark memo.
+
+### Remaining blockers
+1. There is still no task-level evidence showing whether the single-neuron frontier changes architecture choice in a network setting.
+2. Literature positioning against the strongest 2024-2025 photonic nonlinearity papers is still incomplete.
+3. The paper still lacks a verified reference ledger and a full draft that carries the Figure-3 logic forward.
+
+### Five-reviewer dimension estimates
+- Reviewer 1, novelty-focused:
+  innovation/significance `44/100`; theory rigor `53/100`; method reliability `52/100`; data/results `54/100`; figure quality `47/100`; writing `45/100`; journal fit `54/100`; acceptance estimate `42%`.
+- Reviewer 2, theory-rigor-focused:
+  innovation/significance `43/100`; theory rigor `65/100`; method reliability `60/100`; data/results `56/100`; figure quality `46/100`; writing `44/100`; journal fit `54/100`; acceptance estimate `46%`.
+- Reviewer 3, device/implementation-focused:
+  innovation/significance `41/100`; theory rigor `53/100`; method reliability `57/100`; data/results `54/100`; figure quality `45/100`; writing `42/100`; journal fit `52/100`; acceptance estimate `41%`.
+- Reviewer 4, broad-reader-clarity-focused:
+  innovation/significance `43/100`; theory rigor `53/100`; method reliability `53/100`; data/results `55/100`; figure quality `50/100`; writing `49/100`; journal fit `56/100`; acceptance estimate `48%`.
+- Reviewer 5, benchmark/comparison-focused:
+  innovation/significance `45/100`; theory rigor `59/100`; method reliability `60/100`; data/results `60/100`; figure quality `48/100`; writing `45/100`; journal fit `55/100`; acceptance estimate `49%`.
+
+### Review interpretation
+- Reviewer 4 moves the most because the work now reads more clearly to a broad photonics audience.
+- Reviewer 5 also improves because the benchmark is finally packaged as a figure with explicit regime interpretation.
+- Reviewer 1 remains capped because the paper still has not fully shown how the single-neuron frontier changes the broader design landscape or novelty relative to recent photonic nonlinearity work.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Photonics: 38-48%
+- Upgrade condition to 45-58%: generate a minimal but real task-level benchmark showing when the neuron-level frontier changes the preferred activation choice
+- Upgrade condition to 55-68%: add verified literature separation and integrate the first two main Results into one full manuscript flow

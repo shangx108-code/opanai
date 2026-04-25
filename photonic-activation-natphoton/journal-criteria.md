@@ -23,7 +23,7 @@ To be competitive as a theory-and-simulation Nature Photonics article, this pape
 - Novelty separation from recent literature: still insufficient, but improving
 - Evidence completeness: still insufficient, but materially improved
 - Device relevance: now demonstrated more convincingly at the single-neuron boundary-discrimination level
-- Broad-reader accessibility: not yet developed
+- Broad-reader accessibility: improved, but not yet secured across a full manuscript
 
 ## Immediate venue-specific rules for this project
 1. The main claim must be expressible without depending on a long list of ad hoc metrics.
@@ -42,11 +42,12 @@ To be competitive as a theory-and-simulation Nature Photonics article, this pape
 - Detector efficiency now appears as an explicit device-facing control axis rather than as a generic future parameter.
 - The paper can now support a stronger bounded statement that is plausible for Nature Photonics readers:
   detector efficiency sets the global accessibility of the frontier, while measurement choice sets a further constant-factor overhead above it.
+- The project now has a submission-grade Figure-3 candidate with regime annotations, caption logic, claim boundaries, and Results-ready prose.
 
 ## What this run still does not satisfy
-- No figure-ready main-text panel yet turns the completed comparison into a persuasive editorial object.
-- No verified literature-positioning subsection yet shows why this comparison changes the novelty landscape relative to 2024-2025 photonic nonlinearity papers.
 - No task-level evidence yet shows that the single-neuron comparison changes network-level design choices.
+- No verified literature-positioning subsection yet shows why this comparison changes the novelty landscape relative to 2024-2025 photonic nonlinearity papers.
+- No cleaned reference ledger yet separates checked primary citations from placeholders.
 
 ## Current venue risk summary
-- The paper is now less likely to be dismissed as purely formal or merely illustrative, but it is still at risk of being judged preliminary because the main-text figure package, literature separation, and task-level consequences do not yet exist.
+- The paper is now less likely to be dismissed as preliminary on figure quality or clarity grounds, but it is still at risk of being judged incomplete because the manuscript has not yet shown a system-level consequence of the activation frontier or fully secured its literature-positioning argument.

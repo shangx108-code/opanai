@@ -9,13 +9,13 @@
 Build a publishable theory-and-simulation paper that turns the vague claim "photonic neural networks need nonlinearity" into a journal-grade result: a quantitative resource framework for nonlinear activation under quantum noise, finite shots, detector inefficiency and loss, together with a near-limit measurement-induced activation architecture and a device-level design map.
 
 ## Current stage
-Result-generation and figure-consolidation stage. The project now has a three-curve same-axis comparison set: one proved lower bound, one homodyne-conditioned measurement route, and one displaced on-off counting route.
+Figure-consolidation and manuscript-integration stage. The project now has a submission-grade Figure-3 candidate package built around the three-curve same-axis comparison: one proved lower bound, one homodyne-conditioned measurement route, and one displaced on-off counting route.
 
 ## Current main bottleneck
-The leading blocker is no longer the lack of a second architecture. The main bottleneck is now the absence of a submission-grade Figure-3 package and integrated Results text that convert the new three-curve comparison into an unmistakable design law for Nature Photonics readers.
+The main bottleneck is now the absence of task-level evidence showing whether the single-neuron activation frontier changes system-level design choices. The paper can now state the single-neuron design law clearly, but Nature Photonics acceptance will still be capped if the story stops before a network-level consequence.
 
 ## Highest-priority objective for the current round
-Turn the completed lower-bound plus homodyne plus displaced-counting comparison into a figure-ready main-text panel with caption logic, claim boundaries, and manuscript-ready Results prose.
+Build the first minimal task-level benchmark that tests whether the Figure-3 frontier changes the preferred activation design once inference utility, detector efficiency and photon budget are all counted together.
 
 ## Proposed central claim
 The real scalability bottleneck of photonic neural networks is not linear optics but the physical cost of nonlinear activation; this cost can be cast as a quantum resource problem, and measurement-induced adaptive activation can approach the low-energy Pareto frontier only inside explicitly quantified detector-, loss-, and sampling-limited regimes.
@@ -33,79 +33,49 @@ The real scalability bottleneck of photonic neural networks is not linear optics
 - The project now has one explicit lower bound for boundary discrimination cost
 - The project now also has one concrete same-axis comparison for a measurement-induced activation route
 - The project now has a second concrete same-axis baseline using a displaced on-off counting route
+- The project now has a Figure-3 submission package with panel structure, regime annotations, caption logic, claim boundaries, and Results-ready prose
 - The target venue is scope-compatible with nonlinear optics, quantum optics, optoelectronic components, and photonic AI
 - The paper can be framed as design rules plus limits, which fits a theory-heavy route better than a hardware-claim route
 
 ## This run's concrete result
 ### Goal
-- Add a second concrete architecture on the same discrimination-cost axes so the paper no longer rests on a single illustrative route.
+- Convert the completed three-curve comparison into a main-text Figure-3 object with reviewer-safe wording.
 
-### Architecture fixed in this run
-- Use a Kennedy-type displaced on-off route as the second same-axis baseline.
-- Boundary states are the coherent pair `|+a>` and `|-a>` with symmetric mean photon number `n_bar = a^2`.
-- Apply a fixed displacement that nulls the `|+a>` hypothesis, producing post-displacement states `|0>` and `|-2a>`.
-- Detection uses an on-off detector with efficiency `eta` and dark-count probability `p_d`.
-- Decision rule is `no click -> |+a>`, `click -> |-a>`.
+### Real outputs completed in this run
+- Refined the plotting code in `figure3_same_axis_panel.py` and regenerated:
+  - `figure3_same_axis_panel.svg`
+  - `figure3_same_axis_panel.png`
+  - `figure3_same_axis_panel.pdf`
+  - `figure3_same_axis_panel_data.csv`
+- Added regime annotations in the lower panel to separate:
+  - near-frontier operation `1.0-1.4`
+  - moderate overhead `1.4-2.0`
+  - detector-limited operation `> 2.0`
+- Added a submission-ready package in `figure3_submission_package.md` containing:
+  - caption draft
+  - insertable Results subsection text
+  - allowed versus disallowed claims
+  - provenance checklist
 
-### Quantities computed
-1. Lower-bound decision error:
-   `epsilon_lb(n_bar) = 1/2 * (1 - sqrt(1 - exp(-4 n_bar)))`.
-2. Lower-bound inverse cost:
-   `n_bar^lb(epsilon) = (1/4) ln(1 / (4 epsilon (1 - epsilon)))`.
-3. Kennedy/on-off error:
-   `epsilon_ken(n_bar, eta, p_d) = 1/2 * [p_d + (1 - p_d) exp(-4 eta n_bar)]`.
-4. In the no-dark-count limit:
-   `n_bar^ken(epsilon, eta) = [ln(1 / (2 epsilon))] / (4 eta)`.
-5. With dark counts:
-   `n_bar^ken(epsilon, eta, p_d) = [ln((1 - p_d) / (2 epsilon - p_d))] / (4 eta)`,
-   valid only when `2 epsilon > p_d`.
+### Figure-supported numerical anchors now packaged for the manuscript
+- At `epsilon = 0.01`, the displaced on-off route requires `1.224 x`, `1.731 x`, and `2.423 x` the lower-bound photon cost for `eta = 0.99`, `0.70`, and `0.50`, respectively.
+- At the same target, the homodyne route requires `1.693 x`, `2.394 x`, and `3.352 x`.
+- At `epsilon = 0.10`, the displaced on-off route requires `1.591 x`, `2.250 x`, and `3.151 x` the lower-bound photon cost for `eta = 0.99`, `0.70`, and `0.50`, while the homodyne route requires `1.624 x`, `2.297 x`, and `3.215 x`.
 
-### Verified numerical outputs
-- At target error `epsilon = 0.10`:
-  `n_bar^lb = 0.255413`,
-  `n_bar^ken = 0.406424` at `eta = 0.99`,
-  `0.473364` at `eta = 0.85`,
-  `0.574799` at `eta = 0.70`,
-  `0.804719` at `eta = 0.50`.
-- At target error `epsilon = 0.01`:
-  `n_bar^lb = 0.807232`,
-  `n_bar^ken = 0.987885` at `eta = 0.99`,
-  `1.150595` at `eta = 0.85`,
-  `1.397151` at `eta = 0.70`,
-  `1.956012` at `eta = 0.50`.
-- The ratio `n_bar^ken / n_bar^lb` is:
-  `1.224-1.591` for `eta = 0.99`,
-  `1.425-1.853` for `eta = 0.85`,
-  `1.731-2.250` for `eta = 0.70`,
-  and `2.423-3.151` for `eta = 0.50`
-  over the target-error range `epsilon = 0.01-0.10`.
-- Relative to the homodyne proxy, the ratio `n_bar^hom / n_bar^ken` is:
-  `1.020-1.383` across the same error range, independent of `eta` in the idealized no-dark-count model because both routes scale as `1 / eta`.
-- At fixed photon budget `n_bar = 0.25`, the lower bound gives `epsilon_lb = 0.102470`, while the displaced on-off route gives:
-  `0.185788` at `eta = 0.99`,
-  `0.213707` at `eta = 0.85`,
-  `0.248293` at `eta = 0.70`,
-  `0.303265` at `eta = 0.50`.
-- Dark-count sensitivity check:
-  the route cannot reach `epsilon <= p_d / 2`; for `p_d = 1e-4` and `1e-3`, the cost shift is still modest in the current `epsilon = 0.10-0.01` window but becomes a hard floor below that range.
-
-### Design-relevant interpretation
-- The project now has three real same-axis curves: a lower bound plus two physically distinct measurement-induced routes.
-- Detector inefficiency remains the dominant global penalty because both measurement routes scale as `1 / eta`.
-- Measurement architecture still matters strongly at fixed `eta`: displaced on-off counting is noticeably closer to the lower bound than homodyne at low target error.
-- This sharpens the paper's design message from a single-route observation into a comparative law:
-  detector quality sets the global accessibility of the frontier, while measurement choice sets the constant-factor overhead above it.
+### Design-relevant interpretation now locked
+- Detector efficiency controls the shared global accessibility of the frontier in the computed measurement-induced routes.
+- Measurement choice controls the remaining constant-factor overhead above that frontier.
+- The Figure-3 package is now strong enough to support this bounded design-law statement without claiming global optimality of either route.
 
 ## What is still missing
-- A sharp novelty statement against 2024-2025 photonic nonlinearity papers
-- A submission-grade figure panel and caption package built from the three-curve same-axis comparison
-- A verified reference ledger separating confirmed citations from placeholders
-- A main-text Results subsection that states the new comparison sharply but without overclaiming
 - Task-level evidence showing whether the single-neuron frontier matters for network utility
+- A verified literature-positioning paragraph against 2024-2025 photonic nonlinearity papers
+- A confirmed reference ledger separating verified citations from placeholders
+- The first paper-integrated draft that places Figure 3 into the main Results flow with Figure 4 level follow-through
 
 ## Acceptance probability (stage estimate)
-- Nature Photonics: 31-41% after adding the second same-axis architecture baseline
-- Reason: the project now has a lower bound plus two concrete measurement routes and can articulate a stronger design law. The ceiling remains limited by the absence of a figure-ready panel, manuscript-integrated Results text, verified literature separation, and task-level evidence.
+- Nature Photonics: 38-48% after assembling the Figure-3 package and Results-ready text
+- Reason: the project now has a persuasive main-text comparison object rather than scattered internal notes, which materially improves clarity, figure quality, and reviewer confidence. The ceiling remains limited by the lack of task-level evidence and incomplete literature separation.
 
 ## Last update
-2026-04-25: added a Kennedy-type displaced on-off baseline on the same axes as the lower bound and homodyne route, and saved a reproducible calculation script in `/workspace/memory/photonic-activation-natphoton/same_axis_metrics.py`. Verified that the displaced on-off route sits closer to the lower bound than homodyne in the low-error regime, while both measurement routes inherit a strong `1 / eta` penalty from detector inefficiency. The main bottleneck has therefore shifted from "missing second architecture" to "missing Figure-3-grade assembly and manuscript integration."
+2026-04-25: converted the completed same-axis comparison into a true Figure-3 submission package by improving the figure layout, adding regime annotations, regenerating SVG/PNG/PDF outputs, and writing a caption-plus-Results draft with explicit claim boundaries in `figure3_submission_package.md`. This closes the previous bottleneck around figure-grade assembly and shifts the project bottleneck to missing task-level evidence.

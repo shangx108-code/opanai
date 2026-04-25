@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import math
+import subprocess
 from pathlib import Path
 
 
@@ -79,6 +80,37 @@ def text(x: float, y: float, value: str, size: int = 16, anchor: str = "start", 
     )
 
 
+def text_rotated(
+    x: float,
+    y: float,
+    value: str,
+    size: int = 16,
+    angle: float = -90.0,
+    anchor: str = "middle",
+    weight: str = "400",
+) -> str:
+    return (
+        f'<text x="{x:.2f}" y="{y:.2f}" transform="rotate({angle:.1f} {x:.2f} {y:.2f})" '
+        f'font-family="Helvetica, Arial, sans-serif" font-size="{size}" text-anchor="{anchor}" '
+        f'font-weight="{weight}" fill="#111827">{value}</text>'
+    )
+
+
+def text_block(
+    x: float,
+    y: float,
+    lines: list[str],
+    size: int = 14,
+    line_gap: int = 18,
+    anchor: str = "start",
+    weight: str = "400",
+) -> list[str]:
+    parts: list[str] = []
+    for idx, line_value in enumerate(lines):
+        parts.append(text(x, y + idx * line_gap, line_value, size=size, anchor=anchor, weight=weight))
+    return parts
+
+
 def line(x1: float, y1: float, x2: float, y2: float, color: str = "#9ca3af", width: float = 1.2, dash: str = "") -> str:
     dash_attr = f' stroke-dasharray="{dash}"' if dash else ""
     return (
@@ -143,14 +175,14 @@ def write_csv(dataset: list[dict[str, float | str]]) -> Path:
 
 
 def draw_panel(dataset: list[dict[str, float | str]]) -> Path:
-    width = 1280
-    height = 860
+    width = 1320
+    height = 920
     margin_left = 110
-    margin_right = 50
-    top_a = 90
+    margin_right = 60
+    top_a = 150
     panel_width = width - margin_left - margin_right
     panel_height = 260
-    gap = 110
+    gap = 120
     top_b = top_a + panel_height + gap
 
     top_ylim = (0.0, 3.0)
@@ -174,16 +206,23 @@ def draw_panel(dataset: list[dict[str, float | str]]) -> Path:
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '<rect width="100%" height="100%" fill="#ffffff" />',
-        text(margin_left, 42, "Figure 3 Candidate | Same-axis boundary-cost comparison", size=28, weight="700"),
-        text(
-            margin_left,
-            68,
-            "Lower bound versus homodyne-conditioned and displaced on-off measurement routes for coherent-boundary discrimination",
-            size=16,
-        ),
+        text(margin_left, 46, "Figure 3 candidate | Boundary-cost design law for measurement-induced activation", size=26, weight="700"),
+        text(margin_left, 76, "Coherent-boundary discrimination benchmark with the proved lower bound and two concrete measurement routes", size=16),
+        text(margin_left, 100, "Solid blue: homodyne-conditioned route. Dashed red: displaced on-off route. Color intensity denotes detector efficiency.", size=15),
         text(margin_left - 55, top_a - 18, "a", size=24, weight="700"),
         text(margin_left - 55, top_b - 18, "b", size=24, weight="700"),
     ]
+
+    band_specs = [
+        (1.0, 1.4, "#ecfdf5", "Near-frontier"),
+        (1.4, 2.0, "#fffbeb", "Moderate overhead"),
+        (2.0, 3.6, "#fef2f2", "Detector-limited"),
+    ]
+    for lo, hi, fill, label in band_specs:
+        y_hi = y_map(hi, *bottom_ylim, top_b, panel_height)
+        y_lo = y_map(lo, *bottom_ylim, top_b, panel_height)
+        parts.append(rect(margin_left, y_hi, panel_width, y_lo - y_hi, fill, stroke="none"))
+        parts.append(text(margin_left + panel_width - 8, y_hi + 18, label, size=13, anchor="end", weight="600"))
 
     for y_value in (0.0, 1.0, 2.0, 3.0):
         y = y_map(y_value, *top_ylim, top_a, panel_height)
@@ -210,8 +249,8 @@ def draw_panel(dataset: list[dict[str, float | str]]) -> Path:
             line(margin_left, top_b + panel_height, margin_left + panel_width, top_b + panel_height, color="#111827", width=1.5),
             text(margin_left + panel_width / 2, top_a + panel_height + 58, "Target boundary error ε", size=18, anchor="middle"),
             text(margin_left + panel_width / 2, top_b + panel_height + 58, "Target boundary error ε", size=18, anchor="middle"),
-            text(28, top_a + panel_height / 2, "Required mean photons n̄", size=18),
-            text(28, top_b + panel_height / 2, "Penalty ratio n̄ / n̄LB", size=18),
+            text_rotated(46, top_a + panel_height / 2, "Required mean photons n̄", size=18),
+            text_rotated(46, top_b + panel_height / 2, "Penalty ratio n̄ / n̄LB", size=18),
             text(margin_left, top_a - 24, "Photon cost versus target boundary error", size=18, weight="600"),
             text(margin_left, top_b - 24, "Constant-factor overhead above the lower bound", size=18, weight="600"),
         ]
@@ -243,9 +282,9 @@ def draw_panel(dataset: list[dict[str, float | str]]) -> Path:
         parts.append(polyline(top_points, colors[key], 3.0, dash=dash))
         parts.append(polyline(bottom_points, colors[key], 3.0, dash=dash))
 
-    legend_x = 760
-    legend_y = 108
-    parts.append(rect(legend_x - 18, legend_y - 34, 425, 128, "#ffffff", stroke="#d1d5db", stroke_width=1.2))
+    legend_x = 805
+    legend_y = 146
+    parts.append(rect(legend_x - 20, legend_y - 36, 420, 134, "#ffffff", stroke="#d1d5db", stroke_width=1.2))
     legend_items = [
         ("#111827", "", "Lower bound"),
         ("#2563eb", "", "Homodyne, η = 0.99"),
@@ -260,20 +299,53 @@ def draw_panel(dataset: list[dict[str, float | str]]) -> Path:
         parts.append(line(legend_x, y, legend_x + 44, y, color=color, width=3.0, dash=dash))
         parts.append(text(legend_x + 56, y + 5, label, size=13))
 
-    note_x = 800
-    note_y = 508
-    parts.append(rect(note_x - 20, note_y - 62, 370, 92, "#f9fafb", stroke="#d1d5db", stroke_width=1.0))
-    parts.append(text(note_x, note_y - 28, "Observed design law in this model:", size=15, weight="600"))
-    parts.append(text(note_x, note_y - 6, "Detector efficiency moves both routes together", size=14))
-    parts.append(text(note_x, note_y + 14, "through the global 1/η penalty, while the", size=14))
-    parts.append(text(note_x, note_y + 34, "measurement architecture sets the prefactor.", size=14))
+    parts.append(line(x_map(0.0105, margin_left, panel_width), y_map(1.24, *bottom_ylim, top_b, panel_height), x_map(0.016, margin_left, panel_width), y_map(1.30, *bottom_ylim, top_b, panel_height), color="#7f1d1d", width=1.3))
+    parts.extend(
+        text_block(
+            x_map(0.017, margin_left, panel_width),
+            y_map(1.36, *bottom_ylim, top_b, panel_height),
+            ["Low-error regime:", "displaced on-off moves", "closest to the bound"],
+            size=13,
+            line_gap=16,
+            weight="600",
+        )
+    )
 
-    footer = "Curves computed from the saved analytical models in same_axis_metrics.py; dashed lines denote displaced on-off routes."
+    note_x = 680
+    note_y = 542
+    parts.append(rect(note_x - 18, note_y - 64, 390, 96, "#f9fafb", stroke="#d1d5db", stroke_width=1.0))
+    parts.append(text(note_x, note_y - 28, "Reviewer-safe claim boundary:", size=15, weight="600"))
+    parts.extend(
+        text_block(
+            note_x,
+            note_y - 6,
+            [
+                "Detector efficiency sets the shared 1/η penalty.",
+                "Measurement choice sets the remaining prefactor.",
+                "Neither route is claimed to be globally optimal.",
+            ],
+            size=14,
+            line_gap=20,
+        )
+    )
+
+    footer = "Curves computed from the saved analytical models in same_axis_metrics.py; lower panel bands mark near-frontier, moderate-overhead and detector-limited regimes within this benchmark."
     parts.append(text(margin_left, height - 24, footer, size=13))
     parts.append("</svg>")
 
     svg_path = OUTDIR / "figure3_same_axis_panel.svg"
     svg_path.write_text("\n".join(parts), encoding="utf-8")
+
+    png_path = OUTDIR / "figure3_same_axis_panel.png"
+    pdf_path = OUTDIR / "figure3_same_axis_panel.pdf"
+    subprocess.run(
+        ["inkscape", str(svg_path), "--export-filename", str(png_path)],
+        check=True,
+    )
+    subprocess.run(
+        ["inkscape", str(svg_path), "--export-filename", str(pdf_path)],
+        check=True,
+    )
     return svg_path
 
 

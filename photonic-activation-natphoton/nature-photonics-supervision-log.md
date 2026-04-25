@@ -1,121 +1,154 @@
-# Nature Photonics Supervision Log
+# Supervision Log
 
-## 2026-04-25 | Post-derivation supervision update
+## 2026-04-25 | Round 1 initialization
 
-### Current version overall evaluation
-- The project is still below Nature Photonics article standard, but this run produced a real theory advance rather than another planning layer.
-- The completed bound is useful because it converts part of the activation story into an operational discrimination limit with explicit assumptions.
+### Overall evaluation
+The project has a journal-conscious core idea and is much better aimed than a generic "photonic AI with quantum flavor" manuscript. The current strength is in problem selection and framing; the current weakness is that almost all of the weight still sits in proposed analyses rather than in completed evidence.
 
-### What is now at least partially improved
-- The theory section no longer has to begin from purely rhetorical language about "activation cost".
-- One local quantity is now derivable and referee-checkable.
+### Gap to target-journal standard
+- Nature Photonics scope fit is real, but scope fit alone is not enough.
+- The paper still needs a memorable conceptual result, not only a catalogue of activation mechanisms and tasks.
+- The manuscript cannot rely on classifier accuracy alone; it needs a physically interpretable limit or design law.
+- Recent 2024-2025 papers on programmable photonic nonlinearity and nonlinear processing with linear optics raise the novelty bar.
 
-### What remains below target-journal standard
-- The derivation is local and binary; the paper still lacks a unified framework and any benchmark that shows decision-relevant design consequences.
-- There is still no figure-grade numerical evidence.
-- The manuscript still lacks a verified novelty separation against 2024-2025 programmable-photonic-nonlinearity work.
+### Most critical quality risk
+The paper could be rejected as a polished perspective disguised as an Article if the framework is not tied to decisive calculations and clearly bounded claims.
 
-### Core quality risk
-- The new bound could still be rejected as mathematically neat but too elementary unless it is rapidly connected to a regime map, failure boundary, or architecture comparison that changes a design conclusion.
+### Plan-revision advice
+1. Center the story on one quantity: activation quantum cost.
+2. Make the first real technical output a theory note that fixes notation, assumptions, and optimization targets.
+3. Treat AQMA as the proposed route to approach the frontier, not as an already proven superior architecture.
+4. Keep "quantum advantage" language out unless the benchmark shows an advantage region against realistic electronic or material baselines.
+5. Build the first revision around failure boundaries: where measurement-induced activation helps, where it does not, and why.
 
-### Evidence-chain gap
-- Missing link from analytical lower bound to real plots and hardware-relevant parameter regions
-- Missing statement of where AQMA is expected to approach the bound and where it will not
-- Missing text that positions the result against recent linear-optics-enabled nonlinear processing papers
+### Items that already meet baseline
+- Important question selection
+- Plausible Nature Photonics topical alignment
+- Coherent paper architecture with concept, metrics, and hardware map layers
 
-### Must-correct items
-1. Do not call the new result a full quantum limit for photonic neural networks; it is only a lower bound for one boundary decision primitive under stated assumptions.
-2. Convert the bound into real numerical curves before using it as a central figure claim.
-3. Write the limitations next to the result, not in a later cleanup pass.
+### Items still below submission bar
+- Verified novelty separation
+- Full mathematical formalization
+- Figure-grade numerics
+- Reference-clean manuscript package
 
-### Priority adjustment
-- Main bottleneck remains evidence completeness.
-- Immediate sub-bottleneck is now narrower: convert the completed derivation into figure-ready numerical evidence.
+## 2026-04-25 | Round 2 supervision after formalization
 
-### Permission to move to next phase
-- Partial only.
-- The project may move from pure theory strengthening toward first result generation, but not yet to manuscript-level claiming or full review iteration.
+### Overall evaluation
+The project is in a healthier state. It now has a paper-shaped framework rather than a promising but diffuse concept. That said, the move from concept to framework does not yet move it into submission territory; the decisive question is now whether the numerics will reveal a real design boundary.
 
-### Next supervision focus
-- Whether the first numerical curve actually creates a design boundary that matters for Nature Photonics readers.
+### Gap to target-journal standard
+- The paper now has a central metric and a clean structure, which improves editorial plausibility.
+- The novelty burden is still not discharged until the benchmark shows something design-changing rather than just well-formulated.
+- The first main result must be quantitative and discriminating; otherwise the work risks being seen as a thoughtful perspective.
 
-## 2026-04-25 | Post-scan supervision update
+### Most critical quality risk
+The project could become over-formalized without becoming more convincing if the first numerical cycle only confirms obvious trade-offs.
 
-### Current version overall evaluation
-- This run achieved the correct next move: the project now contains real numerical evidence derived from the proved lower bound, not just a symbolic statement.
-- The quality level is still well below Nature Photonics article standard, but the evidence chain is more credible because the theory has now been exercised quantitatively.
+### Plan-revision advice
+1. Make the first numerical target a regime-boundary figure, not a broad task sweep.
+2. Require every upcoming figure to answer a yes-or-no design question.
+3. Do not broaden tasks until the single-neuron and frontier comparisons are already decisive.
+4. Keep the discussion calibrated: "near frontier in a defined regime" is credible; "optimal" is not yet supportable.
 
-### What is now genuinely improved
-- A first lower-bound regime map now exists in numerical form.
-- The project can now state concrete scale changes, for example:
-  reducing the allowed boundary error from `0.40` to `0.01` raises the lower-bound mean boundary cost from `0.010205` to `0.807232`.
-- The local linear encoding model also now exposes a concrete sharpness penalty:
-  at `delta = 0.10`, the minimum gain rises from `1.010223` at `epsilon = 0.40` to `8.984607` at `epsilon = 0.01`.
+## 2026-04-25 | Round 3 supervision after first same-axis architecture comparison
 
-### What remains below target-journal standard
-- The new curve is still a lower bound only; without a concrete architecture trace, a referee can still say the result is physically unsurprising.
-- No measured or simulated device route has yet been placed on the map.
-- No final figure panel or manuscript subsection yet communicates the result in submission-grade form.
+### Overall evaluation
+This run finally connected the lower-bound story to one concrete measurement-induced route on the same axes. That is the right kind of progress for Nature Photonics because it produces a real design consequence rather than another abstract promise.
 
-### Core quality risk
-- If the project stops here, the curve will look like a mathematically inevitable monotonic tradeoff instead of a result that changes photonic design choices.
+### Gap to target-journal standard
+- The paper can now say something more specific than "activation has a cost": it can say that a homodyne-conditioned route stays near the frontier only when detector efficiency is very high.
+- However, the evidence package is still only one worked example plus one lower bound.
+- The journal threshold still requires either a broader same-axis comparison set or a figure/manuscript package strong enough to make this first result feel definitive rather than preliminary.
 
-### Evidence-chain gap
-- Missing explicit AQMA-like or other measurement-induced activation model to compare against the bound
-- Missing statement of which region of the bound is physically accessible versus merely formal
-- Missing figure assembly and caption logic that turn the data into a journal-relevant message
-
-### Must-correct items
-1. Use the numeric scan to make only lower-bound claims, not performance claims.
-2. Add one concrete architecture curve next; otherwise the reader still cannot judge practical consequence.
-3. Keep the local-linear encoding assumption visible whenever the `g_min(delta, epsilon)` map is discussed.
-
-### Priority adjustment
-- The main bottleneck has shifted from "absence of numerics" to "absence of a device-level comparison on the same axes."
-
-### Permission to move to next phase
-- Yes, but only one step forward:
-  the project may now move from first result generation to first comparison generation.
-
-### Next supervision focus
-- Whether the first comparison demonstrates a nontrivial accessible or inaccessible region relative to the lower bound.
-
-## 2026-04-25 | Post-homodyne-comparison supervision update
-
-### Current version overall evaluation
-- This run produced the first true same-axis architecture comparison in the project.
-- The paper now has a defensible device-facing statement:
-  high-efficiency homodyne can stay within about a `1.6-1.7x` photon penalty above the lower bound, while reduced detector efficiency quickly widens that gap.
-
-### What is now genuinely improved
-- The lower bound is no longer isolated from a concrete physical route.
-- The accessible region is now partially visible rather than only hypothesized.
-- Detector efficiency has emerged as a manuscript-usable control axis rather than a generic nuisance parameter.
-
-### What remains below target-journal standard
-- Only one architecture trace has been computed.
-- No final figure panel or caption package yet communicates the result in main-text form.
-- No task-level or second-baseline evidence yet shows whether this is the decisive comparison the paper needs.
-
-### Core quality risk
-- A referee could still say the result is interesting but preliminary because the current comparison contains only one architecture family beside the lower bound.
+### Most critical quality risk
+The new comparison could still be dismissed as a convenient toy route if the paper does not rapidly add one more physically distinct baseline or a figure panel that makes the accessible and inaccessible regions impossible to ignore.
 
 ### Evidence-chain gap
-- Missing second activation route on the same axes
-- Missing figure-ready panel with explicit accessible and excluded regions
-- Missing manuscript paragraph that states both the positive message and the present limitation
+- Missing second architecture on the same axes
+- Missing figure-grade panel and caption logic
+- Missing direct text stating what is gained and what is not claimed
 
 ### Must-correct items
-1. Do not overlabel the homodyne proxy as the AQMA optimum.
-2. Keep the claim regime-based and detector-efficiency-dependent.
-3. Use the next run to add either a second baseline or a figure-ready panel, not a diffuse expansion of scope.
+1. Do not present the homodyne proxy as "AQMA optimal"; it is only the first concrete measurement-induced route computed in this project.
+2. Keep detector efficiency in the headline interpretation because that is where the first device-facing consequence actually lives.
+3. Make the next result either a second baseline or a figure-ready accessible-region panel, not a broader but shallower sweep.
 
 ### Priority adjustment
-- Main bottleneck is now the absence of a multi-route or figure-grade comparison package.
+- The main bottleneck has shifted again.
+- It is no longer "no architecture comparison"; it is now "no multi-route or figure-grade comparison package."
 
 ### Permission to move to next phase
 - Yes.
-- The project may proceed to comparison consolidation.
+- The project may now move from first comparison generation to comparison consolidation, but it is still not ready for manuscript-level confidence or review-loop escalation.
 
 ### Next supervision focus
-- Whether the next run creates a referee-persuasive panel rather than another isolated note.
+- Whether the next run creates a genuine Figure-3 candidate and whether the comparison survives contact with a second activation baseline.
+
+## 2026-04-25 | Round 4 supervision after second same-axis architecture comparison
+
+### Overall evaluation
+This run solved the right bottleneck. The paper no longer depends on one worked route beside the lower bound; it now has a three-curve comparison that can plausibly carry a main-text design message.
+
+### Gap to target-journal standard
+- The project can now support a sharper statement: detector efficiency controls whether the frontier is globally accessible, while measurement choice controls the constant-factor overhead above that frontier.
+- That is materially closer to a Nature Photonics result because it reads like a design law rather than a single architecture anecdote.
+- However, the evidence still sits in notes rather than in a figure object or manuscript-integrated narrative.
+
+### Most critical quality risk
+The project could still lose momentum if the new comparison remains a set of internal calculations instead of becoming a persuasive figure panel with crisp textual claims and explicit limits.
+
+### Evidence-chain gap
+- Missing Figure-3-grade panel and caption
+- Missing manuscript-ready Results subsection
+- Missing verified literature-positioning paragraph against 2024-2025 photonic nonlinearity work
+
+### Must-correct items
+1. Do not imply that fixed-displacement on-off counting is the globally best adaptive receiver.
+2. Keep the distinction between asymptotic scaling and constant-factor overhead explicit.
+3. Show at least one regime annotation in the next figure so the result answers a device-design question.
+
+### Priority adjustment
+- The main bottleneck has shifted again.
+- It is no longer "missing second architecture"; it is now "missing figure-grade assembly and manuscript integration."
+
+### Permission to move to next phase
+- Yes.
+- The project may now move into figure consolidation and Results writing, but not yet into a full manuscript review loop.
+
+### Next supervision focus
+- Whether the next run turns the completed comparison into one main-text figure with a bounded, reviewer-safe claim.
+
+## 2026-04-25 | Round 5 supervision after Figure-3 package assembly
+
+### Overall evaluation
+This run cleared the correct bottleneck. The project now has an actual main-text figure object, not just strong calculations and intentions. That matters because selective-journal momentum is often lost exactly at the stage where a sound result still does not look editorially decisive. Figure 3 now reads like a design-law figure rather than an internal note.
+
+### Gap to target-journal standard
+- The manuscript can now communicate the single-neuron design consequence with much higher clarity and lower overclaim risk.
+- Figure quality and narrative readiness have both improved enough to support a real Results section.
+- However, the paper is still vulnerable to the criticism that it stops at a polished single-neuron theory without proving why the frontier changes system-level photonic-neural-network design.
+
+### Most critical quality risk
+The project could now be rejected as elegant but incomplete if it cannot show at least one task-level consequence or a rigorously justified reason that such a consequence is currently unidentifiable from available evidence.
+
+### Evidence-chain gap
+- Missing task-level benchmark that connects neuron-level resource limits to system-level design choice
+- Missing verified literature-positioning paragraph against the strongest 2024-2025 photonic nonlinearity papers
+- Missing cleaned reference ledger
+
+### Must-correct items
+1. Do not spend the next round polishing Figure 3 further unless a concrete error appears.
+2. Make the next benchmark answer a design question, not merely produce another accuracy table.
+3. Keep the task-level benchmark narrow enough that a real result can be generated from the current workspace.
+
+### Priority adjustment
+- The main bottleneck has shifted again.
+- It is no longer "missing figure-grade assembly"; it is now "missing task-level consequence."
+
+### Permission to move to next phase
+- Yes.
+- The project may now move from figure consolidation to task-level consequence testing.
+
+### Next supervision focus
+- Whether the next run produces a real minimal benchmark linking activation resource overhead to system-level utility, or identifies a true workspace-level blocker.
