@@ -9,13 +9,13 @@
 Build a publishable theory-and-simulation paper that turns the vague claim "photonic neural networks need nonlinearity" into a journal-grade result: a quantitative resource framework for nonlinear activation under quantum noise, finite shots, detector inefficiency and loss, together with a near-limit measurement-induced activation architecture and a device-level design map.
 
 ## Current stage
-Concept-to-manuscript architecture stage. The project now has a strong journal-facing paper concept, a candidate flagship architecture (AQMA), an initial figure storyboard, and a clear metrics stack, but it does not yet have validated numerics or a full manuscript package.
+Formalization stage. The project now has a strong journal-facing concept plus a first-pass theory framework, benchmark specification, and manuscript spine. It still lacks validated numerics and a full draft, but it is no longer only a concept note.
 
 ## Current main bottleneck
-The evidence chain is still too conceptual for Nature Photonics. Right now the project lacks a quantitative proof package showing that the proposed framework yields a new and decision-relevant result beyond recent work on photonic nonlinearity, low-photon optical neural networks, and linear-scattering-based nonlinear encoding.
+The framework is now defined, but it remains untested. The leading blocker is the absence of numerical evidence showing a real regime boundary or superiority window that would make the framework decision-relevant rather than merely well organized.
 
 ## Highest-priority objective for the current round
-Convert the concept note into a falsifiable paper spine with one decisive main claim, one minimal mathematical framework, one benchmark plan, and one realistic venue-risk assessment.
+Turn the new framework into a falsifiable evidence program by generating the first benchmark-grade numerical plan and then using it to build the manuscript's first technical results section.
 
 ## Proposed central claim
 The real scalability bottleneck of photonic neural networks is not linear optics but the physical cost of nonlinear activation; this cost can be cast as a quantum resource problem, and measurement-induced adaptive activation can approach the low-energy Pareto frontier under realistic detector and loss constraints.
@@ -37,14 +37,13 @@ The real scalability bottleneck of photonic neural networks is not linear optics
 
 ## What is still missing
 - A sharp novelty statement against 2024-2025 photonic nonlinearity papers
-- A mathematically clean formulation with assumptions and approximation regime stated explicitly
 - Reproducible numerical benchmarks and figure-ready parameter scans
-- A validated manuscript structure calibrated to Nature Photonics rather than to a broad review article
 - A verified reference ledger separating confirmed citations from placeholders
+- A first technical result demonstrating either a regime boundary or a superiority window
 
 ## Acceptance probability (stage estimate)
-- Nature Photonics: 12-20% at project start
-- Reason: the concept is timely and well aimed, but currently it is still a strong proposal rather than a submission-grade evidence package
+- Nature Photonics: 18-26% after formalization
+- Reason: the project now has a paper-grade framework and clearer editorial positioning, but the decisive evidence package is still absent
 
 ## Last update
-2026-04-25: started autonomous project orchestration from the uploaded note, verified current Nature Photonics scope and several closely related 2024-2025 papers, identified evidence incompleteness as the lead blocker, and launched the first structured planning/review cycle plus scheduled 90-minute follow-up iterations.
+2026-04-25: converted the concept into a formal project package by adding a theory framework, benchmark specification, and manuscript spine; the main bottleneck has shifted from conceptual vagueness to missing benchmark evidence. The automation cadence is now being updated from 90-minute runs to hourly runs.

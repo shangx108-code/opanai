@@ -31,3 +31,22 @@ The paper could be rejected as a polished perspective disguised as an Article if
 - Full mathematical formalization
 - Figure-grade numerics
 - Reference-clean manuscript package
+
+## 2026-04-25 | Round 2 supervision after formalization
+
+### Overall evaluation
+The project is in a healthier state. It now has a paper-shaped framework rather than a promising but diffuse concept. That said, the move from concept to framework does not yet move it into submission territory; the decisive question is now whether the numerics will reveal a real design boundary.
+
+### Gap to target-journal standard
+- The paper now has a central metric and a clean structure, which improves editorial plausibility.
+- The novelty burden is still not discharged until the benchmark shows something design-changing rather than just well-formulated.
+- The first main result must be quantitative and discriminating; otherwise the work risks being seen as a thoughtful perspective.
+
+### Most critical quality risk
+The project could become over-formalized without becoming more convincing if the first numerical cycle only confirms obvious trade-offs.
+
+### Plan-revision advice
+1. Make the first numerical target a regime-boundary figure, not a broad task sweep.
+2. Require every upcoming figure to answer a yes-or-no design question.
+3. Do not broaden tasks until the single-neuron and frontier comparisons are already decisive.
+4. Keep the discussion calibrated: "near frontier in a defined regime" is credible; "optimal" is not yet supportable.
