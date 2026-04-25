@@ -46,6 +46,7 @@
 - [x] 自动迭代频率已调整为每 2 小时 1 轮
 - [x] 已明确“接收概率 > 70%”之外还必须补齐 evidence、图表、推导和参考文献
 - [x] 已明确“示意图可用 GPT-imag-2.0，数据图必须全部使用真实数据”
+- [x] scheduled round 3 已将当前唯一最高优先级正式切换到 round3 robust 恢复
 
 ## 当前已生成文件
 - [x] `/workspace/computational-imaging-2-ncomms/linear_gaussian_round2_task_weighted.py`
@@ -56,6 +57,7 @@
 - [x] `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_run.log`
 - [ ] round1 / round3 历史文件当前工作区仍未找到，暂不计入已生成文件
 - [x] 本轮已完成当前工作区的 round2 最小 task-weighted 链真实重建与归档
+- [ ] 本轮尚未新增 round3 当前工作区实物文件，暂不能计入已生成文件
 
 ## 投稿归档包
 - [ ] 最终代码与数据清单

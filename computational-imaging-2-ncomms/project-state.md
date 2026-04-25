@@ -3,7 +3,7 @@
 ## 项目基本信息
 - 项目名称：计算成像2
 - 目标期刊：Nature Communications
-- 最近更新时间：2026-04-26
+- 最近更新时间：2026-04-26（scheduled round 3）
 - 当前资料来源：当前项目命名空间状态文件 + 本轮对 `/workspace` 的最小范围证据核查结果
 
 ## 当前推进规则
@@ -23,7 +23,7 @@
 - 可归档的代码、数据、图表、正文、补充材料与最终投稿包
 
 ## 当前阶段
-结果生成阶段（证据恢复子阶段，round2 最小 task-weighted 链已恢复）。
+结果生成阶段（证据恢复子阶段，round2 已恢复，当前切换到 round3 robust 恢复）。
 
 说明：
 - 本轮已在当前工作区新建并真实运行 `/workspace/computational-imaging-2-ncomms/linear_gaussian_round2_task_weighted.py`。
@@ -41,31 +41,31 @@
 - 参考文献、正文图、补充图、正文和补充材料仍远未补齐。
 
 ## 本轮唯一最高优先级
-重建并真实跑通当前工作区中的最小 round2 task-weighted 证据链。
+重建并真实跑通当前工作区中的最小 round3 robust 证据链。
 
 本轮只聚焦一件事：
-- 在 `/workspace/computational-imaging-2-ncomms/` 下恢复 round2 最小平台脚本
-- 真实运行并落盘 CSV、summary、log 和 SVG
-- 用当前工作区真实输出重新建立 task-capacity 证据基座
+- 在 `/workspace/computational-imaging-2-ncomms/` 下恢复 round3 最小 robust 平台脚本
+- 真实运行并落盘 CSV、summary、log 和图文件
+- 用当前工作区真实输出重新建立 robust-capacity 证据基座，并与已恢复的 round2 最小链形成最小对照
 
 ## 本轮交付物
-1. `/workspace/computational-imaging-2-ncomms/linear_gaussian_round2_task_weighted.py`
-2. `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_results.csv`
-3. `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_summary.json`
-4. `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_summary.md`
-5. `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_overview.svg`
-6. `/workspace/computational-imaging-2-ncomms/results/linear_gaussian_round2_task_weighted/linear_gaussian_round2_task_weighted_run.log`
+1. `/workspace/computational-imaging-2-ncomms/` 下的 round3 robust 最小平台脚本
+2. round3 结果 CSV
+3. round3 summary JSON
+4. round3 summary Markdown
+5. round3 对照图文件
+6. round3 运行日志
 
 ## 本轮完成标准
-- 已在当前工作区真实写出并运行 round2 脚本
-- 已真实生成 round2 的 CSV、JSON、Markdown、SVG 和运行日志
-- 已从结果文件中核查出 task/reconstruction 排序分离
+- 已在当前工作区真实写出并运行 round3 脚本
+- 已真实生成 round3 的 CSV、JSON、Markdown、图文件和运行日志
+- 已能把 round3 结果与当前 round2 最小链进行逐项对照
 - 未把任何未在当前工作区找到的旧文件继续记为已完成
 
 ## 下一轮立即动作
-1. 重建并真实跑通 round3 robust 最小平台，在当前工作区恢复 robust-capacity 证据链
-2. 以当前 round2 真实结果为锚点，开始补写 `TIG` 与 task risk 的详细推导草稿
-3. 在 round2 / round3 都有当前工作区实物文件后，再决定是先补 round1 还是先做 Figure 5 数据映射
+1. 在当前工作区真实跑通 round3 robust 最小平台并落盘实物文件
+2. 基于 round2 / round3 双链结果起草 `TIG` / `RCR` 对照推导骨架
+3. 决定 round1 reconstruction baseline 与 Figure 5 数据映射的先后顺序
 4. 恢复参考文献核对链，先建立 10 篇可核对种子文献
 5. 继续维持“无实物文件不算完成”的监督规则
 
@@ -77,6 +77,7 @@
 - 已生成当前工作区可追溯的 round2 脚本、结果 CSV、summary JSON、summary Markdown、SVG overview 和运行日志。
 - 已真实观察到在 `gamma = 0.0` 时 `identity_top4` 为 reconstruction-optimal、`task_matched_diag` 为 task-optimal。
 - 已真实观察到 task-optimal 设计会在 `gamma = 0.8` 左右从 `task_matched_diag` 转向 `hadamard_like`。
+- 已完成 scheduled round 3 的状态纠偏：当前唯一主瓶颈与唯一最高优先级已统一切换到 round3 robust 真实恢复。
 
 ## 已部分完成但仍缺关键环节
 - 文献：30+ 已核对参考文献仍未建立。
@@ -116,7 +117,7 @@
 3. 参考文献、补充材料与投稿级图表远未补齐
 
 ## 最近一次重要更新摘要
-2026-04-26：已在当前工作区真实重建并运行最小 round2 task-weighted 平台，生成脚本、CSV、summary、SVG 和运行日志。当前得到的规范 task-matched 分离点为 `gamma = 0.0`，其中 `identity_top4` 为 reconstruction-optimal、`task_matched_diag` 为 task-optimal；继续扫描后观察到 task-optimal 会在 `gamma = 0.8` 左右转向 `hadamard_like`。项目仍停留在证据恢复子阶段，因为 round3 / round1 尚未恢复，详细推导也尚未完成。
+2026-04-26：scheduled round 3 未新增实验或理论证据，但已完成状态纠偏，将当前唯一主瓶颈与唯一最高优先级从已完成的 round2 恢复任务正式切换到 round3 robust 真实恢复。项目仍停留在证据恢复子阶段，因为 round3 / round1 尚未恢复，详细推导、图表和参考文献链也尚未完成。
 
 ## 项目停止条件
 只有在以下条件同时满足后，项目才允许停止自动推进：
