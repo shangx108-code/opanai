@@ -269,6 +269,39 @@
 ## 是否允许进入下一阶段
 允许继续停留在“理论强化与最小结果生成阶段”，但不允许进入“图表完善完成”或“成稿”阶段。
 
+## 监督轮次 8
+- 日期：2026-04-26
+- 节点性质：round7 rebuilt low-error phase solver 监督
+
+## 当前版本总体评价
+这一轮真正推进了上一轮的首要瓶颈：当前工作区已经有一套可现场复核的 rebuilt phase baseline，并把平均 `recovered_measurement_error` 压到 `9.54e-03`。这说明“先把 solver 跑强一点”不是空话，现场已经做成了。但结果也更严格地暴露出新的主问题：当 solver error 不再高企时，branch bias 并没有稳定保留，当前 phase 证据仍不足以支撑论文级机制主张。
+
+## 本轮已真实完成
+- 已在当前工作区新建并运行 `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_rebuild.py`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_summary.json`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_case_metrics.csv`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_panel.png` 与 `round7_phase_notes.md`。
+- rebuilt PCA prior baseline 在 4 个 held-out 样例上的聚合结果为：true / reversed 精确 branch 的 measurement error `1.39e-16`，平均 recovered measurement error `9.54e-03`，平均 distance to true `0.9250`，平均 distance to reversed `0.7775`，mean branch bias `-0.1475`，仅 `1 / 4` 个样例为正 branch bias。
+
+## 本轮未达标部分
+- 当前 rebuilt phase baseline 仍只是一类 PCA decoder prior，不是 posterior / diffusion / Bayesian baseline。
+- 当前 branch bias 在低 measurement-error 条件下并不稳定，因此 phase 结果还不能接成“稳定 prior-induced selection”主结论。
+- DSI / PDR / HCI 仍未完成论文级推导。
+- 图表、正文、补充材料与五审稿人循环仍未启动。
+
+## 新增风险提醒
+- 若继续只引用已登记 round5 的正 branch bias，而忽略 round7 的 sign flip 与波动，就会把不稳健结果包装成机制结论。
+- 当前 round7 是 rebuilt on-site benchmark，不是对缺失的 round5 原始工件做逐项复核；两者不能混写成同一实验轮次。
+- 如果后续不做 prior family / seed / initialization 的受控扫描，phase 结果仍可能停留在“单次实验偶然性”层面。
+
+## 必须纠正项
+1. 下一轮必须优先做 round7 低误差 phase baseline 的稳健性统计，而不是立刻扩写理论主结论。
+2. 不得把本轮 `mean branch_bias = -0.1475` 解读成“reversed branch 一般更优”；当前它只说明 branch selection 还不稳定。
+3. 在稳健性扫描完成前，不得把 round5 或 round7 任一单轮 branch preference 写成统一规律。
+
+## 是否允许进入下一阶段
+允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。
+
 ## 新增风险提醒
 - 不能把 `x_true` 与 `x_rev` 的精确测量等价，与 `x_hat` 对 true branch 的经验偏向混写成同一种“已证明结论”。
 - 当前 round5 的 branch bias 强，但 measurement error 仍不低；如果写作时忽略这一点，会把“branch preference”误包装成“高质量 reconstruction”。

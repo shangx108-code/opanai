@@ -9,7 +9,7 @@
 - 优先级：最高
 
 ## 理论人员
-- 当前任务：在 round6 已完成指标边界 formalization 的基础上，为后续 phase solver 强化保留 exact / empirical 边界，不让新结果再次混写
+- 当前任务：在 round7 已显著降低 measurement error 的基础上，为后续稳健性扫描保留 exact / empirical 边界，不让“低误差但不稳定的 branch bias”被误写成统一理论
 - 输入：统一 forward model、线性与非线性任务定义、likelihood / prior 形式
 - 输出：
   - round6 指标说明维护版
@@ -22,25 +22,26 @@
 - 优先级：P2
 
 ## 代码与数值计算人员
-- 当前任务：以 round6 指标说明为约束，优先补强 phase retrieval baseline 的 measurement consistency
+- 当前任务：以 round6 指标说明为约束，在 round7 rebuilt baseline 上继续做 phase branch-bias 稳健性扫描
 - 输入：任务定义、噪声模型、baseline 清单
 - 输出：
-  - 更强的 phase baseline 设计
+  - 多组 prior family / seed / initialization 对照
   - 新一轮真实运行结果
-  - 新的 `recovered_measurement_error` 与 `branch_bias` 对照
+  - `recovered_measurement_error` 与 `branch_bias` 的重复性统计
 - 完成标准：
   - 新输出字段直接继承 round6 定义
-  - 能判断 solver error 降低后 branch bias 是否仍稳定存在
+  - 能判断低 measurement-error 条件下 branch bias 是否仍稳定存在
 - 依赖：理论人员给出 round6 统一评价指标
 - 优先级：P1
 
 ## 数据分析人员
-- 当前任务：等待更强 phase baseline 结果后，比较 solver error 下降前后 branch bias 是否稳定
+- 当前任务：比较 round5 与 round7，以及 round7 后续稳健性扫描之间的 branch bias 稳定性
 - 输入：baseline 输出、误差图、数据一致性指标、posterior variance 或 sample spread
 - 输出：
   - branch distance 对照表
   - measurement consistency 与 branch selection 对照表
   - solver failure 与 branch bias 分离分析
+  - branch sign 翻转来源判断
 - 完成标准：
   - 能区分普通 solver failure 与可重复的 branch preference
   - 能指出需要补充的对照实验
@@ -101,17 +102,18 @@
 1. 统筹者锁定“先分清 exact ambiguity 与 empirical branch bias，再强化 solver”的路线
 2. 线性 benchmark 已形成可复核区域定义与指标输出
 3. round6 已把 phase ambiguity 的三个层级量固定下来
-4. 代码与数值计算人员据此补强 phase solver 的 measurement consistency
-5. 数据分析人员判断 solver error 降低后 branch bias 是否仍稳定
+4. 代码与数值计算人员已据此完成 round7 的低 measurement-error rebuilt solver
+5. 数据分析人员据此判断 solver error 降低后 branch bias 并未稳定
 6. 画图人员再定义 Figure 4 的正式面板结构
 7. 撰写人员再写结果段与方法段
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：补强 phase retrieval baseline 的 measurement consistency
+- 任务名称：重建并补强 phase retrieval baseline 的 measurement consistency
 - 负责人：统筹者 + 代码与数值计算人员
 - 预期输出：
   - 更低 `recovered_measurement_error` 的新 baseline
   - 在 round6 判据下可直接比较的新 branch 指标
   - solver error 与 branch bias 是否分离的判断依据
 - 完成标准：
-  - 不再停留在 round5 的高 measurement-error 经验偏向层面
+  - 已在当前工作区真实得到低 measurement-error 的 rebuilt phase baseline
+  - 已确认 branch bias 在该低误差 baseline 下并不稳定

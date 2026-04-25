@@ -76,3 +76,10 @@
 - 本轮新增的是一份指标边界说明：把 round5 的 `true_reversed_measurement_error` 定义为 exact ambiguity quantity，把 `recovered_measurement_error` 定义为 empirical measurement-consistency quantity，把 `distance_to_true`、`distance_to_reversed` 与 `branch_bias` 定义为 empirical branch-selection quantities。
 - 该说明进一步明确：当前 `branch_bias = 0.7692` 只能写成“toy learned prior 的经验性 true-branch preference”，不能写成 phase retrieval ambiguity 的一般结论。
 - 基于这一预审更新，下一轮更合理的推进路线是先把 phase baseline 变成更强、误差更低的 solver，再决定是否启动统一理论接口或更靠近正式审稿门槛。
+
+## 预审备注（round7 rebuilt low-error phase solver 后）
+- 当前工作区已新增一套可复核的 round7 rebuilt phase solver 工件，并首次在明显更低 measurement error 的条件下重新检查 branch selection。
+- round7 在 4 个 held-out 样例上的聚合结果为：true / reversed 的 measurement error `1.39e-16` 量级，rebuilt learned prior 输出的平均 measurement error `9.54e-03`，到 true branch 的平均距离 `0.9250`，到 reversed branch 的平均距离 `0.7775`，mean branch bias `-0.1475`，且仅 `1 / 4` 个样例为正偏向。
+- 该结果说明：phase retrieval 中“先把 solver error 降下来”这一任务已被真实推进，但 branch preference 并未在低误差条件下稳定保持。
+- 因此，当前 phase 结果更接近“branch selection 对 solver / prior / benchmark 细节敏感”的预审结论，而不是“稳定 prior-induced branch bias 已成立”。
+- 正式五审稿人循环仍不能启动，因为理论推导、稳健性统计、正文与补图仍未形成可审材料。

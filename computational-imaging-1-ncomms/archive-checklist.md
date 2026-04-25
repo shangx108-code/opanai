@@ -103,6 +103,13 @@
   - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_ambiguity_notes.md`
 - round6 当前已落地的实体文件：
   - `/workspace/memory/computational-imaging-1-ncomms/phase-ambiguity-metrics-round6.md`
+- round7 rebuilt low-error phase solver 当前已落地的实体文件：
+  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_rebuild.py`
+  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_summary.json`
+  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_case_metrics.csv`
+  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_panel.png`
+  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_notes.md`
 - 当前工作区未见历史 round1 / round2 实体脚本与输出文件，说明历史结果记录已保存在项目状态中，但原始归档仍需后续补齐。
 - 当前工作区也未见记忆中登记的旧 round4 实体脚本与输出文件，因此旧 round4 工件仍不能视为已现场复核归档；本轮新增的是一套新的可复核重现实验归档。
 - 当前工作区同样未见记忆中登记的 round5 原始脚本与输出文件，因此 round5 工件仍需后续补回现场归档；本轮新增的是一份基于已登记状态的指标 formalization 文档，而不是 round5 原始工件的二次现场复核。
+- 当前工作区已新增一套 round7 rebuilt phase solver 工件，可作为后续稳健性扫描的现场起点；但它不是对缺失 round5 原始工件的补回归档，二者仍需分开记录。
