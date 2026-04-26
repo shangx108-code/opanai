@@ -121,9 +121,17 @@
   - `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_case_metrics.csv`
   - `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_panel.png`
   - `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_notes.md`
+- round10 rebuilt de-biased exact-pair benchmark 当前已落地的实体文件：
+  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair.py`
+  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_summary.json`
+  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_case_metrics.csv`
+  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_seed_metrics.csv`
+  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_panel.png`
+  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_notes.md`
 - 当前工作区未见历史 round1 / round2 实体脚本与输出文件，说明历史结果记录已保存在项目状态中，但原始归档仍需后续补齐。
 - 当前工作区也未见记忆中登记的旧 round4 实体脚本与输出文件，因此旧 round4 工件仍不能视为已现场复核归档；本轮新增的是一套新的可复核重现实验归档。
 - 当前工作区同样未见记忆中登记的 round5 原始脚本与输出文件，因此 round5 工件仍需后续补回现场归档；本轮新增的是一份基于已登记状态的指标 formalization 文档，而不是 round5 原始工件的二次现场复核。
 - 当前工作区已新增一套 round7 rebuilt phase solver 工件，可作为后续稳健性扫描的现场起点；但它不是对缺失 round5 原始工件的补回归档，二者仍需分开记录。
 - 当前工作区已新增一套 round8 phase 稳健性扫描工件，可作为后续 orientation-ratio 连续扫参和去偏置 baseline 的现场起点；但它仍属于 controlled synthetic benchmark，不等于高应用价值任务的正式归档已补齐。
 - 当前工作区已新增一套 round9 orientation-ratio 连续扫参工件，可作为后续去偏置 baseline 的现场起点；但它仍属于 controlled exact-ambiguity benchmark，不等于 phase retrieval 主结果矩阵已经补齐。
+- 当前工作区已新增一套 round10 rebuilt de-biased exact-pair 工件，可作为后续 solver 级 symmetry-enforced baseline 的现场起点；但它仍属于 rebuilt scorer benchmark，不等于低 measurement-error learned solver 证据已经补齐。

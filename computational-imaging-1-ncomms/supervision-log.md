@@ -1,5 +1,39 @@
 # 监督日志：计算成像1
 
+## 监督轮次 10
+- 日期：2026-04-26
+- 节点性质：round10 rebuilt de-biased exact-pair 检验监督
+
+## 当前版本总体评价
+这一轮真正把“对称先验下 residual bias 会不会自动消失”从猜测变成了可复核结果。当前工作区已经有一套新的 rebuilt de-biased exact-pair 工件，并且继续把 `x_hat` 限制在 exact ambiguity pair 上，因此 `recovered_measurement_error` 仍在机器精度量级。结果说明：随机 `0.5` 取向训练并不会自动把 residual bias 压到近零，但显式 mirror-averaged posterior 可以。这是有效新进展，但仍不是机制闭环，因为这一步还停留在 rebuilt branch scorer，而不是低误差 learned solver。
+
+## 本轮已真实完成
+- 已在当前工作区新建并运行 `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair.py`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_summary.json`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_case_metrics.csv` 与 `round10_phase_seed_metrics.csv`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_panel.png` 与 `round10_phase_notes.md`。
+- `balanced_density_prior` 共完成 `1024` 次 exact-pair evaluation，平均 exact ambiguity quantity `1.04e-16`，平均 `recovered_measurement_error = 4.79e-17`，平均 `branch_bias = 0.0962`，平均 normalized branch bias `0.0820`，`choose_true_ratio = 0.541`，二项检验 `p = 0.00946`。
+- `mirror_averaged_posterior` 共完成 `1024` 次 control evaluation，平均 exact ambiguity quantity `1.04e-16`，平均 `recovered_measurement_error = 5.13e-17`，平均 `branch_bias = 0.0041`，平均 normalized branch bias `0.0039`，`choose_true_ratio = 0.502`，二项检验 `p = 0.925`。
+
+## 本轮未达标部分
+- 当前 round10 是 rebuilt exact-pair branch scorer，不是 solver 级 learned prior / posterior / diffusion baseline。
+- 当前只能说明显式 symmetry-enforced averaging 在这个 controlled benchmark 中有效，不能直接外推到一般 phase retrieval。
+- DSI / PDR / HCI 仍未完成论文级推导。
+- 图表、正文、补充材料与五审稿人循环仍未启动。
+
+## 新增风险提醒
+- 如果下一轮不把 symmetry-enforced 机制接入真实低误差 solver，项目会停留在“评分器层面的机制演示”，还不足以支撑方法学主张。
+- 当前 `balanced_density_prior` 的 residual bias 虽小于强偏置条件，但统计上仍不应包装成“自动无偏”。
+- `mirror_averaged_posterior` 的近零 residual bias 目前是受控 benchmark 结论，不等于真实应用任务中 branch bias 已被完全解决。
+
+## 必须纠正项
+1. 下一轮必须优先把 symmetry-enforced averaging 或 mirror-consistency 约束接入低 measurement-error solver。
+2. 不得把 round10 写成“对称训练已经证明无偏”；当前更准确的结论是“显式 symmetry enforcement 有效，而 balanced sampling 仍可能留下 residual bias”。
+3. 在 solver 级对照完成前，不得把当前 phase 结论外推成 Nature Communications 级方法学闭环。
+
+## 是否允许进入下一阶段
+允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。
+
 ## 监督轮次 0
 - 日期：2026-04-25
 - 节点性质：项目初始化监督

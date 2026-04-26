@@ -97,3 +97,10 @@
 - 更关键的是，平均 `branch_bias` 会随 training true-orientation ratio 连续变化：`ratio=0.0` 时为 `-0.6078`，`ratio=0.5` 时为 `-0.0894`，`ratio=0.6` 时转为 `0.1951`，`ratio=1.0` 时为 `0.4125`。
 - 该结果说明：orientation bias 本身已足以在几乎零 measurement-error 的条件下驱动 branch sign 跨零翻转，因此当前 phase 预审结论已从“对 prior family 敏感”进一步收紧为“对 training orientation bias 连续敏感”。
 - 但正式五审稿人循环仍不能启动，因为去偏置 baseline、理论推导、正文与补图仍未形成可审材料；下一步必须优先检查对称先验下 residual branch bias 是否归零。
+
+## 预审备注（round10 rebuilt de-biased exact-pair 检验后）
+- 当前工作区已新增一套可复核的 round10 去偏置工件，并继续把 branch selection 限制在 exact ambiguity pair 上，因此没有把 solver failure 重新混进 residual bias 判断。
+- `balanced_density_prior` 在 `1024` 次 evaluation 中的聚合结果为：mean exact ambiguity quantity `1.04e-16`，mean recovered measurement error `4.79e-17`，mean branch bias `0.0962`，mean normalized branch bias `0.0820`，`choose_true_ratio = 0.541`，二项检验 `p = 0.00946`。
+- `mirror_averaged_posterior` 在 `1024` 次 evaluation 中的聚合结果为：mean exact ambiguity quantity `1.04e-16`，mean recovered measurement error `5.13e-17`，mean branch bias `0.0041`，mean normalized branch bias `0.0039`，`choose_true_ratio = 0.502`，二项检验 `p = 0.925`。
+- 该结果说明：当前更准确的 phase 预审结论已经从“对称先验下 residual bias 可能会自然归零”收紧为“balanced sampling 仍可能留下 residual bias，而显式 symmetry-enforced posterior averaging 才能在 rebuilt exact-pair benchmark 中把它压到近零”。
+- 但正式五审稿人循环仍不能启动，因为这一点还没有推进到真实低误差 learned solver，理论推导、正文与补图也仍未形成可审材料；下一步必须优先做 solver 级 symmetry-enforced 对照。

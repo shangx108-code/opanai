@@ -7,16 +7,16 @@
 - 完成标准：任何时刻都能明确当前阶段、当前主瓶颈、本轮最高优先级、交付物和下一轮动作
 - 依赖：全部角色的真实完成状态
 - 优先级：最高
-- 最近完成产出：完成 round9 连续扫参后的阶段重判，确认当前唯一主瓶颈已从“orientation bias 是否驱动翻转”收缩为“去偏置后 residual bias 是否归零”
-- 下一步交付物：去偏置或后验平均型 baseline 的唯一最高优先级重排
+- 最近完成产出：完成 round10 rebuilt de-biased exact-pair 检验后的阶段重判，确认当前唯一主瓶颈已从“residual bias 会不会归零”收缩为“显式 symmetry-enforced 机制能否推进到真实低误差 solver”
+- 下一步交付物：solver 级 symmetry-enforced baseline 的唯一最高优先级重排
 
 ## 理论人员
-- 当前任务：在 round9 已确认 orientation ratio 可连续驱动 branch sign 跨零的基础上，继续维护 exact / empirical 边界，并把下一轮检验收缩为“对称先验下 residual bias 是否仍非零”
+- 当前任务：在 round10 已确认 balanced sampling 与显式 mirror averaging 的差别后，继续维护 exact / empirical 边界，并把下一轮检验收缩为“solver 级 symmetry-enforced 机制是否同样消除 residual bias”
 - 输入：统一 forward model、线性与非线性任务定义、likelihood / prior 形式
 - 输出：
   - round6 指标说明维护版
   - exact ambiguity pair 下仍适用的 exact / empirical 判据
-  - symmetric prior 下 residual branch bias 的理论检查项
+  - symmetry-enforced inference 下 residual branch bias 的理论检查项
 - 完成标准：
   - 所有新 phase 结果都必须落入 round6 定义的三层量中
   - 不把经验 branch bias 写成精确 ambiguity 定理
@@ -25,29 +25,30 @@
 - 优先级：P2
 
 ## 代码与数值计算人员
-- 当前任务：以 round6 指标说明为约束，在 round9 已确认连续 crossing 的基础上，优先补去偏置或后验平均型 baseline
+- 当前任务：以 round6 指标说明为约束，在 round10 已确认 mirror averaging 可压低 residual bias 的基础上，优先把 symmetry-enforced 机制接入低 measurement-error phase solver
 - 输入：任务定义、噪声模型、baseline 清单
 - 输出：
-  - 去偏置或后验平均型新 baseline
-  - symmetric prior 下的 `recovered_measurement_error` 与 `branch_bias`
-  - residual bias 是否接近零的直接证据
+  - solver 级 symmetry-enforced 新 baseline
+  - solver 级 `recovered_measurement_error` 与 `branch_bias`
+  - residual bias 是否仍接近零的直接证据
 - 完成标准：
   - 新输出字段直接继承 round6 定义
-  - 能判断去偏置后 residual branch bias 是否收敛到接近零
+  - 能判断 symmetry-enforced solver 是否同样把 residual branch bias 压到接近零
 - 依赖：理论人员给出 round6 统一评价指标
 - 优先级：P1
 
 ## 数据分析人员
-- 当前任务：比较 round5、round7、round8 与 round9，重点判断 branch sign 是否已被 orientation bias 解释，以及 residual bias 是否还需额外机制
+- 当前任务：比较 round5、round7、round8、round9 与 round10，重点判断 branch sign 是否已被 orientation bias 与 symmetry enforcement 共同解释，以及 residual bias 是否还需额外机制
 - 输入：baseline 输出、误差图、数据一致性指标、posterior variance 或 sample spread
 - 输出：
   - branch distance 对照表
   - measurement consistency 与 branch selection 对照表
   - solver failure、prior family 与 orientation ratio 的分离分析
+  - balanced sampling 与 mirror averaging 的差异判断
   - residual bias 是否仍显著的判断
 - 完成标准：
   - 能区分普通 solver failure 与可重复的 branch preference
-  - 能指出对称先验下是否还需要继续排查 architecture / optimizer 隐式偏置
+  - 能指出 residual bias 是否主要来自采样噪声，还是仍需继续排查 architecture / optimizer 隐式偏置
 - 依赖：新的 phase baseline 结果
 - 优先级：P2
 
@@ -91,8 +92,8 @@
   - 所有不满足 First Principle 的内容都不计入完成项
 - 依赖：全部角色
 - 优先级：最高
-- 最近完成产出：确认 round8 与 round9 都属于真实新进展，但当前只能写成“branch sign 对 prior family 与 orientation ratio 敏感”，不能写成稳定或普适分支规律
-- 下一步交付物：下一轮继续盯住是否把 orientation-driven crossing 误写成已完成机制闭环
+- 最近完成产出：确认 round10 属于真实新进展，但当前只能写成“显式 symmetry-enforced posterior averaging 可在 rebuilt exact-pair benchmark 中消除 residual bias”，不能写成一般 phase retrieval 定理
+- 下一步交付物：下一轮继续盯住是否把 rebuilt scorer 上的 symmetry cancellation 误写成 solver 级机制闭环
 
 ## 严格审稿人
 - 当前任务：暂不启动正式五审稿人循环，只维护预审入口条件
@@ -110,16 +111,17 @@
 4. 代码与数值计算人员已据此完成 round7 的低 measurement-error rebuilt solver
 5. 代码与数值计算人员已继续完成 round8 的 prior-family / seed / init 稳健性扫描
 6. 代码与数值计算人员已进一步完成 round9 的 orientation-ratio 连续扫参
-7. 数据分析人员据此判断 branch sign 会在 `ratio=0.5` 附近跨零，而不仅是三档 family 之间跳变
-8. 后续再由画图人员定义 Figure 4 的正式面板结构，并由撰写人员改写 Results/Methods 入口
+7. 代码与数值计算人员已进一步完成 round10 的 rebuilt de-biased exact-pair 检验
+8. 数据分析人员据此判断 balanced sampling 仍可能留下 residual bias，而 mirror averaging 可把它压回近零
+9. 后续再由画图人员定义 Figure 4 的正式面板结构，并由撰写人员改写 Results/Methods 入口
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：对称先验下的 residual branch-bias 检验
+- 任务名称：solver 级 symmetry-enforced residual-bias 检验
 - 负责人：统筹者 + 代码与数值计算人员
 - 预期输出：
-  - 去偏置或后验平均型新 baseline
+  - solver 级 symmetry-enforced 新 baseline
   - 在 round6 判据下可直接比较的新 branch 指标
-  - residual branch bias 是否接近零的判断依据
+  - residual branch bias 是否仍接近零的判断依据
 - 完成标准：
-  - 已在当前环境真实完成对称先验检验
-  - 已确认去偏置后 residual branch bias 是接近零还是仍显著非零
+  - 已在当前环境真实完成 solver 级 symmetry-enforced 检验
+  - 已确认 residual branch bias 是继续接近零还是重新显著偏离零

@@ -95,12 +95,14 @@
 - 当前工作区已进一步补出一套 round7 rebuilt low-error phase baseline：平均 `recovered_measurement_error` 已降到 `9.54e-03`，但平均 `branch_bias = -0.1475`，且仅 `1 / 4` 个样例为正偏向。
 - 当前环境已进一步补出一套 round8 低误差稳健性扫描：共 `144` 次真实 phase solve，整体平均 `recovered_measurement_error = 1.20e-02`，但整体平均 `branch_bias = 0.0105`，且正负偏向比例接近各半；更关键的是，`true_biased` prior family 下全部为正偏向，而 `reversed_biased` 下全部为负偏向。
 - 当前工作区已进一步补出一套 round9 orientation-ratio 连续扫参：共 `1056` 次 exact-ambiguity branch evaluation，平均 `recovered_measurement_error = 7.11e-17`，且平均 `branch_bias` 会随 training true-orientation ratio 从 `-0.6078` 连续跨零移动到 `0.4125`。
+- 当前工作区已进一步补出一套 round10 rebuilt de-biased exact-pair benchmark：随机 `0.5` 取向训练的 `balanced_density_prior` 仍留下平均 `branch_bias = 0.0962`、平均 normalized branch bias `0.0820` 与 `choose_true_ratio = 0.541` 的小幅 residual bias，而显式 `mirror_averaged_posterior` 可把这些量压到 `0.0041`、`0.0039` 与 `0.502`。
 - 但 Nature Communications 级别仍要求更强的方法学闭环：measurement-consistent 深度先验 / posterior baseline、跨任务结果链、理论推导、正文与补图全部成体系。
 - 同时必须明确：当前 round5 中 `x_true` 与 `x_rev` 的 measurement 等价是精确事实，而 learned prior 对 true branch 的偏向只是当前 toy decoder prior 的经验现象；两者不能混写。
 - round6 已把这一边界进一步固定为三层量：exact ambiguity quantity、empirical measurement-consistency quantity 与 empirical branch-selection quantity。只要 `recovered_measurement_error` 仍偏高，就不能把 branch bias 当成强方法学证据。
 - round7 进一步说明：即使 `recovered_measurement_error` 已显著降低，branch bias 也可能不稳定或翻转，因此当前 phase 证据离 Nature Communications 所要求的“稳健、可解释、可推广的方法学结论”仍有明显距离。
 - round8 则把这一点进一步收紧为：即使保持低 measurement error，branch sign 也会随 prior orientation bias 系统性翻转，因此当前 phase 证据最多支持“先验偏置会打破分支对称性”，还不支持“存在稳定且可推广的 branch-selection 规律”。
 - round9 则把这一点进一步收紧为：即使把 solver failure 基本剥离，orientation bias 仍可连续驱动 branch sign 跨零变化，因此下一步必须优先检验去偏置后 residual bias 是否消失。
+- round10 则把这一点进一步收紧为：即使 training ratio 已平衡，residual bias 也未必自动消失；当前更可信的写法是“显式 symmetry-enforced averaging 可以在 rebuilt exact-pair benchmark 中消除 residual branch preference”，因此 Nature Communications 级别仍要求把这一机制推进到 solver 级和跨任务证据链。
 - 因此当前进展只能视为“提高了方法可靠性证据”，不能视为“已达到投稿门槛”。
 
 ## 当前不允许提前宣称的事项
