@@ -115,3 +115,30 @@
 ### 是否支持进入下一阶段
 - 支持继续推进理论、仿真、ML baseline、被动衍射处理器对照与投稿级图稿。
 - 不再把实验数据缺失视为当前主瓶颈。
+
+## 2026-04-27 Round 4
+
+### 当前检查范围
+- tight bound / theorem 是否已形成可检查文本
+- cross-task 泛化是否真正运行并落盘
+
+### 已确认正确的部分
+- 已新增 `round4_tight_bound_note.md`，把 CRLB 推进到任务级 loss sandwich 与 local floor。
+- 已真实运行 `round4_cross_task_generalization.py` 并生成 CSV、JSON、Markdown 和 PNG。
+- OOD 集上，common-path 在 reconstruction、classification true-class residual 和 inverse-design surrogate 上都优于 no-reference。
+
+### 当前存在的问题或错误
+- classification accuracy 本身在当前原型任务上已饱和，因此不能把“accuracy 未提升”误读成机制无效。
+- inverse-design surrogate 的改进幅度仍然较小，当前只能写成“弱正向信号”。
+
+### 尚未验证或待核实的部分
+- task-level theorem 的数值 tightness 常数 `alpha_T / beta_T`
+- 更难 classification 任务或训练型 classifier 下是否仍然成立
+- 被动衍射处理器层面的 cross-task 对照
+
+### 对当前阶段真实状态的判断
+- 理论与 task-level 叙事已明显加强，但最核心的器件级主证据仍未到位。
+
+### 是否支持进入下一阶段
+- 支持进入被动衍射处理器最小对照构建。
+- 支持把 round4 theorem 与 cross-task 结果作为后续文稿骨架的一部分。

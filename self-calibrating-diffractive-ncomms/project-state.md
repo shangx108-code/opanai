@@ -3,7 +3,7 @@
 ## 项目基本信息
 - 项目名称：Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations
 - 目标期刊：Nature Communications
-- 最近更新时间：2026-04-26（round3）
+- 最近更新时间：2026-04-27（round4）
 - 当前资料来源：
   - `/workspace/user_files/01-markdown-1-md-3`
   - `/workspace/self-calibrating-diffractive-ncomms/round1_theory_note.md`
@@ -14,6 +14,8 @@
   - `/workspace/self-calibrating-diffractive-ncomms/round3_information_bound_note.md`
   - `/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_summary.md`
   - `/workspace/self-calibrating-diffractive-ncomms/round3_experiment_feasibility_note.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/round4_tight_bound_note.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_summary.md`
 
 ## 当前运行规则
 - 默认推进主体：自研智能体
@@ -49,13 +51,14 @@
 - 可归档的代码、数据、图表、正文、补充材料与最终投稿包
 
 ## 当前阶段
-结果生成阶段（ML baseline 与理论补强子阶段）。
+结果生成阶段（cross-task 泛化与 tight-bound 子阶段）。
 
 说明：
 - 当前工作区之前没有该项目的既有命名空间记忆。
 - 本轮已把上传提案正式转入项目状态，并完成第一轮最小真实数值验证。
 - 现在已进一步完成 round2：真实运行基于 Zernike pupil 的 wave-optics PSF 最小证据链。
 - 现在已进一步完成 round3：加入最小 FNO-style spectral baseline、CRLB 扫描，以及实验边界澄清。
+- 现在已进一步完成 round4：加入 task-level tight bound / theorem，以及 classification / inverse-design surrogate 的 cross-task 泛化仿真。
 - 当前仍不是完整 D2NN，也不是投稿级证据链。
 
 ## 当前唯一主瓶颈
@@ -64,11 +67,12 @@
 原因：
 - 目前已证明“共路 pilot 降低动态退化不确定性”的最小机制，在 Gaussian surrogate 与 Zernike wave-optics PSF 两层模型上都成立。
 - 当前新增的最小 FNO-style spectral baseline没有自动恢复出这一优势，因此“ML 说服力”仍未闭环。
+- 尽管 round4 已在任务层面看到正向 cross-task 信号，但这一点仍然建立在 aberration-aware inverse / surrogate task maps 上，不是被动衍射处理器本身的器件级证据。
 - 但还没有证明固定被动衍射处理器在真实 coherent propagation 下也能保留这一优势。
 - 若 ordinary D2NN vs pilot-assisted D2NN 在 OOD 动态退化上不能拉开可信差距，则论文主线需要重评。
 
 ## 本轮唯一最高优先级
-补入 ML 与理论层后，继续把核心资源集中到最小被动衍射处理器阳性对照，而不是继续扩展外围材料。
+在理论与 cross-task 证据继续变强后，仍把核心资源集中到最小被动衍射处理器阳性对照，而不是把外围 surrogate 结果包装成最终主证据。
 
 ## 本轮交付物
 1. round1 最小机制脚本：`/workspace/self-calibrating-diffractive-ncomms/round1_pilot_selfcalibration.py`
@@ -85,6 +89,9 @@
 12. round3 理论说明：`/workspace/self-calibrating-diffractive-ncomms/round3_information_bound_note.md`
 13. round3 CRLB 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_summary.md`
 14. round3 实验可行性说明：`/workspace/self-calibrating-diffractive-ncomms/round3_experiment_feasibility_note.md`
+15. round4 cross-task 脚本：`/workspace/self-calibrating-diffractive-ncomms/round4_cross_task_generalization.py`
+16. round4 cross-task 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_summary.md`
+17. round4 tight bound note：`/workspace/self-calibrating-diffractive-ncomms/round4_tight_bound_note.md`
 
 ## 本轮完成标准
 - 已真实运行 round2 脚本并落盘结果文件
@@ -92,12 +99,14 @@
 - 已明确写出 round2 仍不是 D2NN 证据、仍不可包装成 submission-grade 结论
 - 已真实运行 round3 FNO-style baseline 与 CRLB 扫描
 - 已把简单实验验证诚实降级为“当前缺硬件与原始数据，只能先给出最小实验方案”
+- 已真实运行 round4 cross-task 泛化仿真并落盘结果
+- 已写出 round4 task-level tight bound / theorem note
 
 ## 下一轮立即动作
 1. 在当前工作区写出 ordinary D2NN 与 pilot-assisted D2NN 的最小可运行对照脚本。
 2. 保留“共路、非共路、错误 reference”三组关键对照，不满足就及时止损。
 3. 若最小被动衍射对照仍为阳性，再扩展到 turbulence / thin phase screen。
-4. 继续把证据集中到理论推导、仿真对照、强 ML baseline 和投稿级图稿，不再把实验验证列为当前主线动作。
+4. 把 round4 theorem 与 cross-task 结果整理成后续正文/补充材料可直接调用的理论-任务桥接叙事。
 
 ## 技术状态检查结论
 - 已验证：
@@ -108,8 +117,10 @@
   - 在 OOD stronger-aberration 集上，共路 pilot 相比无 reference 将平均 PSNR 从 `37.069 dB` 提升到 `38.422 dB`，非共路仅为 `37.078 dB`。
   - OOD 集上，共路 pilot 的 mean PSF MSE 为 `4.217e-06`，优于无 reference 的 `1.279e-05` 与非共路的 `1.155e-05`。
   - round3 已真实加入最小 FNO-style spectral baseline 与 CRLB 扫描。
+  - round4 已真实加入 cross-task 泛化仿真与 task-level tight bound note。
 - 部分验证：
   - 共路 pilot 降低动态退化不确定性的机制，在 Gaussian surrogate 与 Zernike wave-optics PSF 两层模型上成立。
+  - 该机制在 cross-task surrogate 上已有第一轮任务级正向信号：OOD 下 common-path 相比 no-reference 将 reconstruction PSNR 从 `34.837 dB` 提升到 `36.782 dB`，将 classification true-class residual 从 `0.035464` 降到 `0.034616`，并小幅改善 inverse-design target MSE。
 - 未验证：
   - Zernike、湍流、薄相位屏三类真实波动光学退化。
   - ordinary D2NN 与 pilot-assisted D2NN 的真实对照。
@@ -148,6 +159,7 @@
 - 部分满足：
   - 摘要雏形和主图规划已有提案，但仍是前期构想，不可视为稿件实物
   - “共路 pilot 优于非共路 / 无 reference”的核心机制已有两轮真实数据支撑，但仍未到稿件主结果标准
+  - 现在已有一轮 task-level theorem 和一轮 cross-task 泛化结果，但仍需要更强器件级主证据
 - 存在新的负面或中性证据：
   - 最小 FNO-style spectral baseline 未显示 common-path pilot 优于 observation-only baseline，说明 ML 说服力仍未闭环
 - 未满足：
@@ -160,12 +172,13 @@
   - 只支持进入“最小被动衍射处理器对照”阶段，不支持进入正式成稿阶段
 
 ## 当前接收概率判断
-- 综合接收概率：16%–20%
+- 综合接收概率：20%–25%
 
 依据：
 - 创新构想：中到强
 - 最小机制信号：中到中强
 - 理论层强度：中
+- cross-task 任务级说服力：中
 - 理论充分性：弱
 - 方法与代码可靠性：中
 - 数据与结果完整性：弱
@@ -185,3 +198,5 @@
 - 2026-04-26：完成 round3 最小 FNO-style spectral baseline。当前结果为中性偏负：OOD 集上 observation-only 为 `37.286 dB`，common-path pilot 为 `37.224 dB`，说明最小线性 spectral baseline 还没有自动学会利用 pilot。
 - 2026-04-26：完成 round3 information bound / CRLB 扫描。当前 pilot-channel CRLB 在 train 与 OOD 区域的中位数 trace 分别为 `6.452e-04` 与 `1.736e-04`，说明该 pilot observation model 在大部分区域内确实携带有限 Fisher 信息。
 - 2026-04-26：根据用户最新约束，项目正式收敛为“仅理论与仿真研究”；后续不再把实验验证作为当前阶段硬依赖。
+- 2026-04-27：完成 round4 tight bound / theorem note，将 pilot-channel covariance 与下游任务损失通过局部曲率 sandwich 和 CRLB-limited floor 联系起来。
+- 2026-04-27：完成 round4 cross-task 泛化仿真。OOD 下 common-path 相比 no-reference 将 reconstruction PSNR 从 `34.837 dB` 提升到 `36.782 dB`，将 classification true-class residual 从 `0.035464` 降到 `0.034616`，并将 inverse-design target MSE 从 `0.002317` 小幅降到 `0.002315`。

@@ -1,7 +1,7 @@
 # 角色任务表：self-calibrating-diffractive-ncomms
 
 ## 当前阶段
-wave-optics 最小阳性对照与 round3 理论补强已完成，下一步继续进入最小被动衍射处理器对照构建。
+wave-optics 最小阳性对照、round3 理论补强和 round4 cross-task 验证已完成，下一步继续进入最小被动衍射处理器对照构建。
 
 ## 当前唯一主瓶颈
 缺少 ordinary D2NN vs pilot-assisted D2NN 的真实被动衍射处理器对照结果。
@@ -16,10 +16,10 @@ wave-optics 最小阳性对照与 round3 理论补强已完成，下一步继续
 - 优先级：最高
 
 ### 理论人员
-- 当前任务：把 wave-optics 机制结论推进成 round3 被动衍射处理器的 forward model 与 claim boundary
-- 输入：`round1_theory_note.md`、`round2_theory_note.md`
-- 输出：round3 ordinary / pilot-assisted processor 的理论对象、共路/非共路定义、允许与禁止的表述
-- 完成标准：不把 wave-optics PSF 结果误写成 D2NN 结果
+- 当前任务：把 round4 tight bound 融入后续正文与补充材料理论主线
+- 输入：`round1_theory_note.md`、`round2_theory_note.md`、`round3_information_bound_note.md`、`round4_tight_bound_note.md`
+- 输出：从 pilot-channel information 到 task-level loss floor 的理论桥接
+- 完成标准：不把 local theorem 误写成全局 blind inverse theorem
 - 优先级：高
 
 ### 代码与数值计算人员
@@ -30,10 +30,10 @@ wave-optics 最小阳性对照与 round3 理论补强已完成，下一步继续
 - 优先级：最高
 
 ### 数据分析人员
-- 当前任务：定义 round3 最小成功标准
-- 输入：round2 指标与项目主张
-- 输出：round3 指标表头、对照规则、失败判据
-- 完成标准：明确哪些结果算“processor 层阳性”，哪些结果意味着主线需降级
+- 当前任务：把 round4 cross-task 结果整理成可写入主文或补充材料的任务级证据
+- 输入：`round4_cross_task_summary.md`
+- 输出：哪些指标可作为正向 cross-task 结果，哪些只能作为边界说明
+- 完成标准：不把弱信号写成强结论
 
 ### ML 基线人员
 - 当前任务：把 round3 的最小 FNO-style 负结果记录为真实风险，而不是包装成加分项

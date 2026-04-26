@@ -26,6 +26,12 @@
 - round3 CRLB 汇总 Markdown：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_summary.md`
 - round3 CRLB 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_panel.png`
 - round3 实验可行性说明：`/workspace/self-calibrating-diffractive-ncomms/round3_experiment_feasibility_note.md`
+- round4 tight bound note：`/workspace/self-calibrating-diffractive-ncomms/round4_tight_bound_note.md`
+- round4 cross-task 脚本：`/workspace/self-calibrating-diffractive-ncomms/round4_cross_task_generalization.py`
+- round4 cross-task 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_metrics.csv`
+- round4 cross-task 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_summary.json`
+- round4 cross-task 汇总 Markdown：`/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_summary.md`
+- round4 cross-task 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_panel.png`
 
 ## 待归档
 - round3 passive diffractive processor 最小对照脚本与结果

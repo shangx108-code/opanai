@@ -16,6 +16,8 @@ Nature Communications
 - 共路 pilot 在 stronger-aberration OOD 集上优于无 reference 和非共路 reference
 - 这一积极信号已在 Gaussian surrogate 和 Zernike wave-optics pupil 两轮真实数值链中重复出现
 - pilot-channel CRLB 已形成第一版可计算理论支撑
+- task-level tight bound 已把 pilot-channel covariance 与 downstream task loss 连接起来
+- cross-task surrogate 上已出现第一轮正向泛化信号
 
 ## 当前仍存在的高风险
 - 该积极信号仍可能在 wave-optics / D2NN 场景下消失

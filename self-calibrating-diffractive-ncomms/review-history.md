@@ -62,3 +62,20 @@
 ### 审稿判断
 - 在用户明确限定为纯理论与仿真研究后，实验缺失不再作为当前回合的直接执行缺口。
 - 但如果目标期刊最终对实验支撑高度敏感，这仍可能在后期变成期刊匹配风险，而不是当前执行风险。
+
+## Round 4 内部严格审稿
+
+### 检查范围
+- tighter theorem 与 cross-task 泛化是否真正增强说服力
+
+### 主要意见
+1. round4 的 tight bound note 比 round3 的纯 CRLB 说明更接近正文可用理论，因为它把 state estimation covariance 与 downstream task loss 连接起来了。
+2. cross-task 结果是正向的，但强度不均匀：reconstruction 明显最强，classification residual 次之，inverse-design surrogate 目前只是小幅改善。
+3. 当前 prototype-based classification accuracy 已饱和，因此应当优先引用 residual / score-level量，而不是只盯准确率。
+4. round4 仍不能替代最关键的器件级 ordinary vs pilot-assisted 对照。
+
+### 审稿判断
+- 项目说服力有实质提升，但仍未达到可投稿状态。
+
+### 接收概率变化依据
+- 因理论层从 estimation-bound 提升到 task-level theorem，且 cross-task 结果出现第一轮正向信号，接收概率谨慎上调到 `20%–25%`。
