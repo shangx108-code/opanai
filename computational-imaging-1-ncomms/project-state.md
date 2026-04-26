@@ -41,37 +41,37 @@
 - 但当前仍是“最小证据链”，还不是 Nature Communications 级别的完整研究证据。
 
 ## 当前唯一主瓶颈
-round10 已在当前环境中真实运行一套 rebuilt de-biased exact-pair benchmark，并把输出字段继续对齐到 round6 的 exact / empirical 三层量。结果显示：仅把 training orientation ratio 设为随机 `0.5` 并不足以让 residual branch bias 自动消失；但显式 mirror-averaged posterior 会把 residual bias 压到近零。因此，项目当前新的唯一主瓶颈已进一步收缩为：“如何把这种 symmetry-enforced 去偏置机制，从 rebuilt exact-pair branch scorer 推进到真实低误差 learned phase solver，而不是只停留在受控评分器层面”。 
+当前真正阻塞推进的，不再是“下一条 solver 实验该怎么写”，而是“当前工作区缺少记忆中登记的 round7-10 可运行工件，且云端资料索引当前无法核验”。在本轮核查中，`/workspace` 下未找到 `computational-imaging-1-ncomms/` 项目目录；当前命名空间里能现场读取的只有状态文件和 `phase-ambiguity-metrics-round6.md`。因此，solver 级 symmetry-enforced 检验目前没有可复核的本地起点，必须先恢复或重新索引可运行工件，再继续新增数值实验。
 
 具体表现：
-- round10 在当前工作区真实完成 `1024` 次 `balanced_density_prior` exact-pair evaluation，以及 `1024` 次 `mirror_averaged_posterior` control evaluation。
-- 两个 baseline 的 exact ambiguity quantity 都维持在机器精度：平均 `1.04e-16`；平均 `recovered_measurement_error` 也都在 `5e-17` 量级，说明这一步继续保持了 exact-pair 约束，没有重新把 solver failure 混进来。
-- 随机 `0.5` 取向训练的 `balanced_density_prior` 仍留下小但可测的 residual bias：平均 `branch_bias = 0.0962`，平均 normalized branch bias `0.0820`，`choose_true_ratio = 0.541`，相对 `0.5` 的二项检验 `p = 0.00946`。
-- 显式 `mirror_averaged_posterior` baseline 则把 residual bias 压回近零：平均 `branch_bias = 0.0041`，平均 normalized branch bias `0.0039`，`choose_true_ratio = 0.502`，二项检验 `p = 0.925`。
-- 这说明“仅靠 balanced sampling 就自然无偏”当前没有被支撑；更准确的写法应收紧为：“显式 symmetry-enforced posterior averaging 可在当前 rebuilt exact-pair benchmark 中消除 residual branch preference”。
+- 当前工作区未找到 `/workspace/computational-imaging-1-ncomms/` 目录，因此 round7-10 在项目状态与归档清单中登记的脚本、CSV、PNG 与输出目录都处于“未现场复核”状态。
+- 当前命名空间内已验证存在的技术材料只有状态文件和 `phase-ambiguity-metrics-round6.md`；round7-10 的原始脚本、结果表与图像在本地均未找到。
+- 环境层面已验证：Python、`numpy`、`pandas`、`PIL` 可用；`matplotlib` 当前缺失，因此依赖它的旧绘图脚本即使恢复路径名，也不保证能直接运行。
+- 图片生成最小链路已验证可用：本轮已用 `PIL` 成功生成 PNG 测试图。
+- PDF 编译最小链路已验证可用：本轮已用 `latexmk` 成功编出 1 页测试 PDF。
+- Google Drive 检索当前返回 `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT`，因此云端资料是否存在、是否重复、是否可作为恢复源，当前仍待核实。
 - DSI / PDR / HCI 仍未完成完整推导、完整适用边界说明和可计算实现。
 - 正文与补充材料仍无投稿级图表体系。
 
 ## 本轮唯一最高优先级
-在 round10 已确认“balanced sampling 仍可能留下 residual bias，而显式 mirror-averaging 可将其压回近零”之后，本轮新的唯一最高优先级是：把 symmetry-enforced 去偏置机制接入真实低误差 learned phase solver，检验这一结论是否能从 rebuilt exact-pair scorer 推进到 solver 级证据。
+先恢复当前项目的可运行证据底座并纠正资料索引，而不是直接新增 solver 实验。具体就是：确认 round7-10 工件的真实存放位置、把“记忆中登记但当前工作区缺失”的材料改标为待恢复，并建立一份可继续执行的资料索引，使下一轮 solver 级 symmetry-enforced 检验有真实可复核的起点。
 
 ## 本轮交付物
-1. 当前工作区可现场复核的 rebuilt 脚本：`round10_phase_debiased_exact_pair.py`
-2. `round10_phase_debiased_exact_pair_outputs/` 真实输出目录
-3. `round10_phase_case_metrics.csv`、`round10_phase_seed_metrics.csv`、`round10_phase_summary.json`、`round10_phase_panel.png` 与 `round10_phase_notes.md`
-4. “balanced sampling 不足以完全消除 residual bias，但 mirror-averaged posterior 可把 residual bias 压回近零”的优先级判定
-5. 更新后的项目状态、监督结论与预审判断
+1. 当前项目状态纠偏：把“已登记结果”和“当前现场可核验结果”明确拆开。
+2. 环境核查结论：程序、图片输出、PDF 编译、云端资料访问分别标注为已验证/存在问题。
+3. 新增资料索引文件：`drive-index.md`。
+4. 更新后的监督结论、预审判断与恢复优先级。
 
 ## 完成标准
-- 当前环境已真实跑出去偏置 exact-pair baseline
-- 新输出字段仍与 round6 的 exact / empirical 三层量兼容
-- 已在接近零 measurement-error 条件下比较 random-balanced prior 与 symmetry-enforced posterior averaging
-- 已据此把下一轮唯一动作收缩为“把 symmetry-enforced 机制推进到 solver 级，而不是停留在 rebuilt scorer 级”
+- 已明确区分哪些材料是当前工作区已验证存在，哪些只是记忆中登记但本轮未找到。
+- 已明确当前环境是否支持程序运行、图片生成与 PDF 编译。
+- 已把下一轮唯一动作收缩为“先恢复可运行工件，再做 solver 级 symmetry-enforced 检验”。
+- 已补建当前项目的资料索引并写明云端访问阻塞。
 
 ## 下一轮立即动作
-1. 在当前低 measurement-error phase solver 路线上加入显式 symmetry-enforced averaging 或 mirror-consistency 约束，检查 solver 级 residual bias 是否也能压到近零。
-2. 若 solver 级 residual bias 同样接近零，再把当前 phase 写法收紧为“orientation-biased prior induces controllable symmetry breaking, while symmetry-enforced inference cancels the residual preference”。
-3. 若 solver 级 residual bias 仍显著存在，再继续排查 architecture bias、score parameterization 或优化器隐式偏置。
+1. 优先恢复或重建 `/workspace/computational-imaging-1-ncomms/` 下 round7 或 round10 的最小可运行脚本与输出目录，先拿回一个真实可跑的 phase 起点。
+2. 若恢复成功，再把显式 symmetry-enforced averaging 或 mirror-consistency 约束接入该低 measurement-error solver。
+3. 若本地仍无法恢复，则先解决云端资料访问权限，再从长期资料库回填脚本、输出与图表。
 
 ## 已真实完成
 - 已从上传材料中抽取项目名称、论文主线、实施方案、候选任务、图表规划与首批参考文献。
@@ -246,3 +246,4 @@ round10 已在当前环境中真实运行一套 rebuilt de-biased exact-pair ben
 2026-04-26：在当前环境中重新落地并真实运行 `round8_phase_branch_robustness_scan.py`，生成 `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/`。本轮共完成 `144` 次低误差 phase solve，整体平均 `recovered_measurement_error = 1.20e-02`、平均 `branch_bias = 0.0105`。更关键的是，`true_biased` prior family 下全部 `48 / 48` 次为正偏向，而 `reversed_biased` 下全部 `48 / 48` 次为负偏向，说明当前 branch selection 会随 prior orientation bias 系统性翻转。因此项目当前唯一主瓶颈进一步收缩为：必须把 phase branch selection 的机制来源从训练分布偏置与可推广 prior effect 中分离出来，才能决定后续理论写法。
 2026-04-26：在当前工作区新建并真实运行 `round9_phase_orientation_ratio_scan.py`，生成 `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/`。本轮共完成 `1056` 次 exact-ambiguity branch evaluation，平均 exact ambiguity quantity 为 `1.39e-16`，平均 `recovered_measurement_error = 7.11e-17`。更关键的是，平均 `branch_bias` 随 training true-orientation ratio 从 `0.0` 的 `-0.6078` 连续跨越到 `1.0` 的 `0.4125`，并在 `0.5`–`0.6` 附近跨零。这说明 orientation bias 本身已足以驱动 branch sign 连续变化，因此项目当前唯一主瓶颈进一步收缩为：必须补一个去偏置或后验平均型 baseline，直接检查对称先验下 residual branch bias 是否归零。
 2026-04-26：在当前工作区新建并真实运行 `round10_phase_debiased_exact_pair.py`，生成 `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/`。该 rebuilt de-biased benchmark 在 `1024` 次 `balanced_density_prior` evaluation 中仍测到小但非零的 residual bias：平均 `branch_bias = 0.0962`、平均 normalized branch bias `0.0820`、`choose_true_ratio = 0.541`、二项检验 `p = 0.00946`；而 `1024` 次 `mirror_averaged_posterior` control evaluation 则把 residual bias 压到近零：平均 `branch_bias = 0.0041`、平均 normalized branch bias `0.0039`、`choose_true_ratio = 0.502`、`p = 0.925`。由于两类 baseline 的 `recovered_measurement_error` 都维持在 `5e-17` 量级，这一步说明当前更合理的下一问已经从“对称先验下 residual bias 会不会消失”收缩为“这种 symmetry-enforced cancellation 能否推进到真实低误差 learned solver，而不是只停留在 rebuilt scorer 层”。
+2026-04-26：执行一轮状态核查后确认，当前 `memory/computational-imaging-1-ncomms/` 命名空间里只有状态文件与 `phase-ambiguity-metrics-round6.md` 能被现场读取；项目状态中登记的 `/workspace/computational-imaging-1-ncomms/` round7-10 工件当前未在工作区找到。与此同时，本轮已验证 Python、`numpy`、`pandas`、`PIL`、PNG 生成与 `latexmk` PDF 编译链路可用，但 `matplotlib` 缺失，Google Drive 检索因权限不足失败。因此，项目当前唯一主瓶颈已从“直接做 solver 级 symmetry-enforced 检验”改判为“先恢复真实可运行工件并补齐资料索引，再继续 solver 级实验”。 

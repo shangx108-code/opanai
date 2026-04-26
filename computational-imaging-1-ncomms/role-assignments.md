@@ -7,8 +7,8 @@
 - 完成标准：任何时刻都能明确当前阶段、当前主瓶颈、本轮最高优先级、交付物和下一轮动作
 - 依赖：全部角色的真实完成状态
 - 优先级：最高
-- 最近完成产出：完成 round10 rebuilt de-biased exact-pair 检验后的阶段重判，确认当前唯一主瓶颈已从“residual bias 会不会归零”收缩为“显式 symmetry-enforced 机制能否推进到真实低误差 solver”
-- 下一步交付物：solver 级 symmetry-enforced baseline 的唯一最高优先级重排
+- 最近完成产出：完成本轮状态核查，确认当前工作区缺少 round7-10 本地工件，当前真正的首要阻塞是证据底座与资料索引脱节
+- 下一步交付物：round7 或 round10 的最小本地恢复清单，以及恢复后可直接继续实验的脚本入口
 
 ## 理论人员
 - 当前任务：在 round10 已确认 balanced sampling 与显式 mirror averaging 的差别后，继续维护 exact / empirical 边界，并把下一轮检验收缩为“solver 级 symmetry-enforced 机制是否同样消除 residual bias”
@@ -92,8 +92,8 @@
   - 所有不满足 First Principle 的内容都不计入完成项
 - 依赖：全部角色
 - 优先级：最高
-- 最近完成产出：确认 round10 属于真实新进展，但当前只能写成“显式 symmetry-enforced posterior averaging 可在 rebuilt exact-pair benchmark 中消除 residual bias”，不能写成一般 phase retrieval 定理
-- 下一步交付物：下一轮继续盯住是否把 rebuilt scorer 上的 symmetry cancellation 误写成 solver 级机制闭环
+- 最近完成产出：确认当前不能再把 round7-10 工件写成“当前工作区可现场复核”，因为本轮未找到对应实体文件
+- 下一步交付物：继续盯住是否在未恢复本地工件前就把 solver 级机制闭环写成已完成
 
 ## 严格审稿人
 - 当前任务：暂不启动正式五审稿人循环，只维护预审入口条件
@@ -113,15 +113,17 @@
 6. 代码与数值计算人员已进一步完成 round9 的 orientation-ratio 连续扫参
 7. 代码与数值计算人员已进一步完成 round10 的 rebuilt de-biased exact-pair 检验
 8. 数据分析人员据此判断 balanced sampling 仍可能留下 residual bias，而 mirror averaging 可把它压回近零
-9. 后续再由画图人员定义 Figure 4 的正式面板结构，并由撰写人员改写 Results/Methods 入口
+9. 本轮状态核查进一步确认：当前依赖主链在本地工件层断开，必须先恢复 round7 或 round10 的真实脚本与输出
+10. 后续再由画图人员定义 Figure 4 的正式面板结构，并由撰写人员改写 Results/Methods 入口
 
 ## 本轮唯一最高优先级任务拆解
-- 任务名称：solver 级 symmetry-enforced residual-bias 检验
+- 任务名称：phase 工件恢复与索引纠偏
 - 负责人：统筹者 + 代码与数值计算人员
 - 预期输出：
-  - solver 级 symmetry-enforced 新 baseline
-  - 在 round6 判据下可直接比较的新 branch 指标
-  - residual branch bias 是否仍接近零的判断依据
+  - round7 或 round10 的最小本地脚本入口
+  - 至少一套可现场读取的输出目录或结果文件
+  - 更新后的资料索引与恢复状态说明
 - 完成标准：
-  - 已在当前环境真实完成 solver 级 symmetry-enforced 检验
-  - 已确认 residual branch bias 是继续接近零还是重新显著偏离零
+  - 已明确恢复源来自本地还是云端
+  - 已把“登记存在”和“现场存在”彻底分开
+  - 已为下一轮 solver 级 symmetry-enforced 检验恢复真实起点

@@ -76,6 +76,11 @@
 - [ ] 最终 ZIP 归档包
 
 ## 当前归档备注
+- 2026-04-26 状态核查新增结论：
+  - 当前 `/workspace` 下未找到 `computational-imaging-1-ncomms/` 项目目录。
+  - 因此下列 round3-10 路径目前都只能视为“历史登记路径”，不能继续视为本轮已现场复核。
+  - 当前命名空间内已验证存在的只有状态文件集合与 `phase-ambiguity-metrics-round6.md`。
+  - Google Drive 本轮检索失败，云端归档状态待核实。
 - round3 当前已落地的实体文件：
   - `/workspace/computational-imaging-1-ncomms/round3_linear_autoencoder_prior.py`
   - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_summary.json`

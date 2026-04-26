@@ -39,6 +39,13 @@
 ## 当前结论
 当前接收概率不能通过“审稿轮次”上调；在真实结果、图表和推导补齐前，任何乐观判断都不成立。
 
+## 预审备注（状态核查与资料索引纠偏后）
+- 本轮未新增新的理论推导、数值结果或正式图表，因此仍不具备进入正式五审稿人并行评审的条件。
+- 新增的是一次真实性核查：当前工作区未找到项目状态中登记的 `/workspace/computational-imaging-1-ncomms/` round7-10 工件，当前命名空间内现场可读的技术文件只有 `phase-ambiguity-metrics-round6.md`。
+- 环境方面，Python、`numpy`、`pandas`、`PIL`、PNG 生成和 `latexmk` PDF 编译链路已验证可用；但 `matplotlib` 缺失，Google Drive 检索权限不足，因此旧绘图脚本和长期资料归档都仍待恢复。
+- 这意味着当前项目的预审主风险已从“solver 级去偏置实验还没做”进一步前移为“当前可运行工件与资料索引脱节”。在恢复本地或云端原始工件前，任何把 round7-10 写成“当前可现场复核”的表述都不成立。
+- 因此，下一轮预审入口应优先检查：是否已恢复至少一套可运行 phase 工件，然后才讨论 solver 级 symmetry-enforced 机制闭环。
+
 ## 预审备注（第 1 轮结果后）
 - 线性任务已有第一批 unsupported-structure 案例。
 - 相位恢复已有严格的 measurement ambiguity 证据。
