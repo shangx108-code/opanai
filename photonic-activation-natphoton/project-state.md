@@ -1,68 +1,54 @@
 # Project State
 
 ## Project
-- Working title: Quantum limits of nonlinear activation in photonic neural networks
-- Target journal: Nature Photonics
+- Working title: Activation quantum cost for photonic neural networks
+- Target journal: Laser & Photonics Reviews
 - Source note: initialized from `/workspace/user_files/01-1-.txt` on 2026-04-25
+- LPR reference bundle: `/workspace/user_files/01-cankao.zip` ingested on 2026-04-26
 
 ## Research goal
-Build a publishable theory-and-simulation paper that turns the vague claim "photonic neural networks need nonlinearity" into a journal-grade result: a quantitative resource framework for nonlinear activation under quantum noise, finite shots, detector inefficiency and loss, together with a near-limit measurement-induced activation architecture and a device-level design map.
+Build a publishable theory-and-simulation paper that turns the vague claim "photonic neural networks need nonlinearity" into a journal-grade result: a quantitative resource framework for nonlinear activation under quantum noise, finite shots, detector inefficiency and loss, together with a measurement-induced activation architecture, benchmark-grade evidence, and device-level design maps.
 
 ## Current stage
-Results-generation and manuscript-assembly stage. The project now has a citation-checked novelty package, a Figure-3-grade single-neuron frontier result, a first real task-level benchmark, and one tighter trainable-network benchmark under the same photon-budget accounting.
+LPR manuscript-assembly stage. The project now has a formal theory framework, benchmark specification, LPR style notes, a complete LPR-facing rewrite draft, citation-checked novelty positioning, a Figure-3-grade single-neuron frontier package, a first task-level benchmark, and a stronger trainable-network benchmark under common photon-budget accounting.
 
 ## Current main bottleneck
-The main bottleneck is now the absence of a full integrated manuscript draft that incorporates the stronger trainable Figure-4 evidence into submission-grade Introduction, Results, Discussion, and supplementary logic. The key evidentiary objection to the old random-feature surrogate has now been materially reduced, so the limiting risk has shifted from "missing stronger task benchmark" to "evidence exists but is not yet assembled into a reviewer-proof paper."
+The main bottleneck is no longer first-order evidence generation. It is manuscript integration. The project still needs a full LPR-grade main text and aligned supplement that absorb the upgraded Figure-3 and Figure-4 evidence without overclaiming, plus a cleaner full reference ledger.
 
 ## Highest-priority objective for the current round
-Generate and validate the smallest stronger trainable-network benchmark that tests whether the Figure-3 activation-resource physics still changes system-level design once the hidden layer is trained under the same total photon-budget accounting.
+Fuse the upgraded numerical evidence into the rewritten LPR manuscript so the paper moves from "strong components" to one submission-grade, reviewer-proof draft.
 
 ## Proposed central claim
-The real scalability bottleneck of photonic neural networks is not linear optics but the physical cost of nonlinear activation; this cost can be cast as a quantum resource problem, and measurement-induced adaptive activation can approach the low-energy Pareto frontier only inside explicitly quantified detector-, loss-, and sampling-limited regimes.
+The real scalability bottleneck of photonic neural networks is not linear optics but the physical cost of nonlinear activation; this cost can be cast as a quantum resource problem, and measurement-induced adaptive activation approaches the useful energy frontier only inside explicitly quantified detector-, loss-, and sampling-limited regimes.
 
 ## Mandatory evidence package
 - Formal definition of activation quantum cost, discrimination cost, and task-level energy-accuracy cost
 - Unified activation model covering electronic, Kerr-like, saturable, photon-counting, homodyne, and AQMA-style measurement-feedback activation
 - Single-neuron approximation benchmark for at least five target activation families
-- Small-network task benchmark showing when measurement-induced nonlinearity is useful and when it is not
+- Same-axis frontier comparison against at least two implementable measurement-induced routes
+- Task-level benchmark showing where activation is worth paying for and where it is not
+- Stronger trainable-network benchmark under the same photon-budget accounting
 - Robustness scans over detector efficiency, dark count, optical loss, and finite-shot sampling
-- Clear separation from closely related literature in Nature Photonics, Nature Communications, and adjacent photonic-AI work
+- Clear positioning relative to recent LPR and adjacent photonic neural-network literature
 
 ## What is already strong
 - The question is pitched at a field level rather than as one more classifier demo
-- The project has one explicit lower bound for boundary discrimination cost
-- The project has two concrete same-axis implementable baselines beside that bound
-- The project has a Figure-3 submission package with panel structure, regime annotations, caption logic, claim boundaries, and Results-ready prose
-- The project now has both a random-feature task benchmark and a stronger trainable-network task benchmark under the same budget accounting
-- The target venue is scope-compatible with nonlinear optics, quantum optics, optoelectronic components, and photonic AI
-- The paper can be framed as design rules plus limits, which fits a theory-heavy route better than a hardware-claim route
-- The novelty case is now citation-checked against the strongest 2024-2025 comparator papers
-
-## This run's concrete result
-### Goal
-- Remove the strongest remaining reviewer objection to Figure 4 by replacing the stylized random-feature-only surrogate with the smallest real trainable-network benchmark that preserves the same photonic activation accounting.
-
-### Real outputs completed in this run
-- Added a reproducible trainable benchmark script in `trainable_task_benchmark.py`.
-- Saved real outputs in `trainable_task_benchmark/`.
-- Added a claim-boundary note in `trainable_task_benchmark_assumptions.md`.
-- Added a manuscript-facing interpretation package in `figure4_trainable_benchmark_package.md`.
-
-### Trainable-benchmark conclusions now locked
-- The Figure-3 route physics survives hidden-layer training rather than washing out once the representation is allowed to adapt.
-- Physical activation beats the trainable linear no-activation baseline in `22/30` scanned `(task, eta, budget)` conditions.
-- Activation is still not justified in `8/30` scanned conditions, all on `two_moons` at low or intermediate budgets, so the manuscript still has genuine negative regions.
-- Route preference remains non-universal: on-off beats homodyne in `14/30` matched comparisons, so the best implementable route still depends on task and budget.
+- The AQMA architecture is mechanistic, testable, and now framed in venue-appropriate LPR language
+- The project has a Figure-3-grade frontier package with regime annotations and claim boundaries
+- The project has both a minimal task benchmark and a stronger trainable-network benchmark under the same accounting logic
+- The uploaded LPR corpus provides venue-specific writing and framing guidance
+- The novelty case is citation-checked against the strongest 2024-2025 comparator papers
+- A complete LPR-style manuscript rewrite draft now exists and can absorb benchmark results directly
 
 ## What is still missing
-- A full integrated manuscript draft that replaces the old Figure-4 placeholder logic with the stronger trainable benchmark narrative
-- A final cleaned reference ledger covering all non-core citations, not only the key comparator set
-- A clean supplementary package aligned to the upgraded Figure-4 evidence
-- A final archive-ready manuscript package with main text, supplementary text, figure callouts, and submission-facing provenance
+- One fully integrated LPR main-text draft that replaces placeholder logic with the upgraded Figure-3 and Figure-4 narrative
+- Final figure/caption packages aligned to the rewritten manuscript
+- A fuller clean reference ledger beyond the current core set
+- A final supplementary package with derivation details, benchmark assumptions, and provenance
 
 ## Acceptance probability (stage estimate)
-- Nature Photonics: 58-66% after adding the stronger trainable Figure-4 benchmark
-- Reason: the project has now closed the most obvious reviewer attack on system-level evidence by showing that the route- and budget-dependent design law survives hidden-layer training. The ceiling remains limited by incomplete manuscript assembly, incomplete bibliography cleanup, and the absence of a final submission-grade Figure-4/main-text integration.
+- Laser & Photonics Reviews: 62-72% after LPR rewrite plus upgraded benchmark evidence
+- Reason: the project now has a realistic venue target, a manuscript rewrite in the right journal voice, and materially stronger evidence than a concept-only draft. The main residual risk is assembly quality rather than basic scientific direction.
 
 ## Last update
-2026-04-25: replaced the strongest remaining Figure-4 evidence gap by writing and running `trainable_task_benchmark.py`, saving outputs in `trainable_task_benchmark/`, and packaging the manuscript-safe conclusions in `trainable_task_benchmark_assumptions.md` and `figure4_trainable_benchmark_package.md`. This shifts the next bottleneck from "missing stronger task benchmark" to "missing full integrated manuscript draft with upgraded Figure-4 evidence."
+2026-04-26: merged the LPR retargeting work with the already-generated benchmark assets. The project now contains both a full LPR-facing rewrite and the stronger numerical evidence package. The next bottleneck is integrated manuscript assembly and final reviewer-safe packaging.

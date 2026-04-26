@@ -1,57 +1,57 @@
 # Role Assignments
 
 ## Coordinator
-- Current task: convert the upgraded Figure-4 evidence into one integrated manuscript assembly plan and keep the claim surface bounded
-- Inputs: `figure4_trainable_benchmark_package.md`, `manuscript-integration-draft.md`, journal criteria
-- Deliverable: one manuscript-assembly memo specifying exactly how the trainable benchmark replaces the old random-feature-only Figure-4 storyline
-- Completion standard: the next writing round is locked to one coherent paper flow rather than parallel partial drafts
+- Current task: convert the upgraded evidence package into one integrated LPR manuscript plan
+- Inputs: `lpr-manuscript-rewrite.md`, `figure3_submission_package.md`, `figure4_trainable_benchmark_package.md`, journal criteria
+- Deliverable: manuscript-assembly memo specifying exactly how the trainable benchmark and frontier figures populate the LPR draft
+- Completion standard: the next writing round follows one coherent paper flow rather than parallel partial drafts
 - Dependency: none
 
 ## Theory
-- Current task: make sure the upgraded Figure-4 prose stays consistent with the `C_task` logic and does not overclaim trainable-network generality
-- Inputs: `theory-framework.md`, `trainable_task_benchmark_assumptions.md`, `figure4_trainable_benchmark_package.md`
-- Deliverable: one manuscript-ready theory note on how the trainable benchmark strengthens but does not widen the central claim
-- Completion standard: Figure-4 interpretation is fully aligned with the resource-framework language already used for Figure 3
+- Current task: keep the rewritten LPR draft fully consistent with `C_AQC`, `C_disc`, and `C_task`
+- Inputs: `theory-framework.md`, benchmark assumptions notes, rewritten manuscript
+- Deliverable: a concise proposition set or theory note anchoring the first two Results subsections
+- Completion standard: the manuscript states exactly what is being bounded, compared, and not claimed
 - Dependency: coordinator framing
 
 ## Code and Numerical Computation
-- Current task: hold the trainable benchmark fixed unless a manuscript-integration gap reveals a concrete numerical inconsistency
-- Inputs: `trainable_task_benchmark.py`, saved outputs in `trainable_task_benchmark/`
-- Deliverable: locked reproducible benchmark provenance for manuscript and supplement use
+- Current task: hold the current benchmark package fixed unless manuscript assembly reveals a concrete inconsistency
+- Inputs: saved scripts and outputs in the benchmark folders
+- Deliverable: locked reproducible provenance for main text and supplement use
 - Completion standard: no further numerical expansion occurs unless it directly removes a manuscript-blocking inconsistency
 - Dependency: none
 
 ## Data Analysis
-- Current task: convert the trainable benchmark outputs into a compact reviewer-facing design law with positive and negative regions
-- Inputs: `trainable_task_benchmark/trainable_task_benchmark_summary.md`, `figure4_trainable_benchmark_package.md`
-- Deliverable: one structured Figure-4 interpretation block for Results and Discussion
+- Current task: turn the current benchmark outputs into a compact reviewer-facing design law with positive and negative regions
+- Inputs: Figure-3 package, Figure-4 trainable benchmark package, LPR rewrite draft
+- Deliverable: one interpretation memo for Results and Discussion
 - Completion standard: the manuscript can state clearly when activation helps, when it does not, and why the route choice remains regime dependent
 - Dependency: computation outputs
 
 ## Figure Production
-- Current task: define the final Figure-4 panel/caption requirements using the upgraded trainable benchmark rather than the old random-feature-only package
-- Inputs: `figure4_trainable_benchmark_package.md`, `trainable_task_benchmark/`
-- Deliverable: one Figure-4 submission package with panel logic, caption logic, and data provenance
-- Completion standard: Figure 4 can be cited as a main-text figure rather than as a benchmark memo
+- Current task: align final figure panels and captions with the LPR rewrite
+- Inputs: saved benchmark outputs, current figure packages, rewritten manuscript
+- Deliverable: final Figure 3 and Figure 4 submission packages with panel logic, caption logic, and provenance
+- Completion standard: both figures can be cited as main-text figures rather than internal memos
 - Dependency: data-analysis summary
 
 ## Writing
-- Current task: assemble the first full integrated manuscript draft around the verified novelty package plus the upgraded Figure-4 evidence
-- Inputs: `manuscript-v1.md`, `manuscript-integration-draft.md`, `figure4_trainable_benchmark_package.md`, `verified-literature-positioning.md`
-- Deliverable: one new integrated main-text draft and aligned supplement revision
+- Current task: replace placeholder prose in the LPR rewrite with the upgraded evidence narrative
+- Inputs: `lpr-manuscript-rewrite.md`, benchmark packages, verified literature positioning
+- Deliverable: one integrated main-text draft and aligned supplement revision
 - Completion standard: the manuscript reads like one submission candidate rather than a stack of strong components
 - Dependency: theory + data-analysis framing
 
 ## Supervision
-- Current task: check whether manuscript assembly, not evidence generation, is now the single dominant blocker
-- Inputs: upgraded project state, journal criteria, Figure-4 package
-- Deliverable: supervision note on the remaining path from upgraded evidence to submission competitiveness
-- Completion standard: the next round targets only the largest residual gap and does not reopen solved benchmark work
+- Current task: keep the project from reopening solved benchmark work and focus only on manuscript-assembly gaps
+- Inputs: upgraded project state, journal criteria, current rewrite draft
+- Deliverable: supervision note on the shortest path from upgraded evidence to submission competitiveness
+- Completion standard: the next round targets only the largest residual gap
 - Dependency: coordinator output
 
 ## Strict Review
-- Current task: update the five-reviewer matrix after the trainable benchmark closes the strongest task-level-evidence objection
-- Inputs: `trainable_task_benchmark/`, `figure4_trainable_benchmark_package.md`, journal criteria
-- Deliverable: revised reviewer matrix showing how much acceptance rises and what still keeps all reviewers below the 70% stop condition
+- Current task: update the five-reviewer matrix under the LPR venue lens after the rewrite and stronger benchmarks
+- Inputs: rewritten manuscript, benchmark packages, journal criteria
+- Deliverable: revised reviewer matrix showing what keeps all reviewers from clearing the 70% stop condition
 - Completion standard: acceptance probability reflects the stronger evidence without pretending the manuscript is already submission-ready
 - Dependency: coordinator output
