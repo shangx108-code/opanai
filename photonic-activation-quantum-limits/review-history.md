@@ -57,3 +57,41 @@ Manuscript maturity: project concept + v0 single-neuron proxy simulations
 1. Generate benchmark results linking activation cost to inference accuracy.
 2. Introduce detector efficiency, loss and dark-count scans.
 3. Rewrite the central claim to separate "framework established" from "quantum limit proven", unless a true bound is derived.
+
+## Round 2 Evidence Update
+
+Date: 2026-04-26
+New evidence added: device-aware activation scan, Monte Carlo two-moons benchmark, analytic Poisson discrimination lower bound
+
+### Reviewer 1
+
+- Updated view: The task-level evidence is no longer missing, but it is still narrow.
+- Acceptance probability: 38%
+
+### Reviewer 2
+
+- Updated view: The manuscript is now better grounded physically, but the distinction between measurement-induced resource advantage and standard detect-and-electronics processing still needs sharper articulation.
+- Acceptance probability: 34%
+
+### Reviewer 3
+
+- Updated view: The new discrimination bound is valuable, but it does not yet justify a universal "quantum limit" claim for all activation classes.
+- Acceptance probability: 31%
+
+### Reviewer 4
+
+- Updated view: The manuscript is becoming legible as a framework paper with evidence, though the narrative still needs simplification and clearer scope control.
+- Acceptance probability: 43%
+
+### Reviewer 5
+
+- Updated view: The added efficiency-loss scans help, but the platform map remains too abstract for acceptance.
+- Acceptance probability: 37%
+
+### Composite Assessment
+
+- Current editorial tendency: major revision territory, not yet near acceptance
+- Current main drag items:
+  1. benchmark breadth is still limited
+  2. theory is partially rigorous but not yet comprehensive
+  3. platform-anchored feasibility map is still missing

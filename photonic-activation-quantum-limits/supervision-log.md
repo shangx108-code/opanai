@@ -29,3 +29,33 @@ Referees may interpret the present draft direction as an under-validated framewo
 ### Plan Correction
 
 Do not spend the next round polishing prose first. The next round must prioritize evidence generation and only then expand the manuscript.
+
+## 2026-04-26 Round 2
+
+### Overall Assessment
+
+The project has moved from concept-only framing to a genuine evidence-building phase. This is a meaningful upgrade: the paper now contains one analytic lower-bound component, one device-aware scan and one Monte Carlo benchmark.
+
+### What Improved
+
+1. The evidence base now includes real parameter sweeps with efficiency, loss and dark count.
+2. The benchmark accuracy is no longer implied from function fitting alone.
+3. The analytic bound provides a defensible floor for binary discrimination cost under Poisson statistics.
+
+### Remaining Gap To Target Journal
+
+1. One toy benchmark is still not enough for a top-tier venue.
+2. The current lower bound is rigorous only for a defined discrimination setting, not for the full activation-approximation problem.
+3. The device-feasibility story still needs clearer mapping to named photonic platforms and detector technologies.
+
+### Current Highest Risk
+
+The manuscript may still overuse the phrase "quantum limit" unless each occurrence is tied either to the proven discrimination bound or to an explicitly optimization-based numerical lower envelope.
+
+### Plan Correction
+
+The next round should prioritize:
+
+1. a second benchmark or ablation that tests whether AQMA retains value under harsher noise or smaller feature budgets
+2. a Methods-quality derivation note and notation cleanup
+3. figure-ready source tables for the main data plots

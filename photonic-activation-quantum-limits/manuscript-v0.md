@@ -13,6 +13,9 @@ Nonlinear activation, rather than linear optical matrix multiplication, sets the
 1. The manuscript framing and literature positioning.
 2. A first proxy implementation of several activation families within one numerical scaffold.
 3. Preliminary evidence that measurement-induced AQMA-like activation can approximate sigmoid-like targets well at low photon budget in the current proxy model.
+4. Device-aware scans showing that measurement-induced sigmoid-like activation remains achievable under finite efficiency, loss and dark count in the explored ranges.
+5. A Monte Carlo two-moons benchmark showing nontrivial task-level sensitivity to photon budget and device parameters.
+6. An analytic lower bound for binary discrimination cost under Poisson counting assumptions.
 
 ## Not Yet Supported In This Version
 
@@ -22,7 +25,7 @@ Nonlinear activation, rather than linear optical matrix multiplication, sets the
 
 ## Abstract V0
 
-Photonic neural networks promise low-latency and energy-efficient information processing, but their practical scalability is constrained by the physical cost of nonlinear activation. We formulate a unified numerical framework for comparing activation mechanisms in photonic neural networks through an activation-cost viewpoint that tracks function-approximation error against optical resource budget. We implement proxy models for electronic, Kerr-like, saturable, photon-counting and adaptive quantum measurement activations within a common simulation scaffold. Preliminary scans show that measurement-induced activations can reproduce sigmoid-like responses at low photon budget, whereas binary-like responses remain substantially more expensive. These first results support the broader hypothesis that nonlinear activation should be treated as the dominant resource bottleneck in few-photon photonic inference. To reach journal-ready strength, the next stages will extend the framework to task-level energy-accuracy frontiers and detector-constrained device feasibility maps.
+Photonic neural networks promise low-latency and energy-efficient information processing, but their practical scalability is constrained by the physical cost of nonlinear activation. We formulate a comparative framework for activation mechanisms in photonic neural networks through an activation-cost viewpoint that tracks function-approximation error against optical resource budget. We implement proxy models for electronic, Kerr-like, saturable, photon-counting and adaptive quantum measurement activations within a common simulation scaffold, then extend the measurement-induced models to include detector efficiency, optical loss and dark count. Across the explored parameter ranges, sigmoid-like targets remain achievable with low photon budgets, whereas binary-like responses are substantially more expensive. A Monte Carlo two-moons benchmark further shows that measurement-induced activations retain useful task-level performance but degrade sharply as device constraints tighten. In parallel, we derive a Poisson discrimination lower bound that gives a rigorous baseline for binary activation cost under counting noise. Together these results support the broader hypothesis that nonlinear activation should be treated as a primary resource bottleneck in few-photon photonic inference, while also clarifying which parts of the "quantum limit" claim are already established and which still require stronger theory.
 
 ## Introduction Closing Paragraph V0
 
