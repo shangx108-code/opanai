@@ -40,35 +40,34 @@
 - 但当前仍缺 Nature Communications 级别的多任务完整结果链、论文级理论闭环、正文/补图体系与五审稿人循环。
 
 ## 当前唯一主瓶颈
-当前最关键的问题，是把已经登记的多轮现象与机制结果，收束成“可现场复核、可统一比较、可写入理论和结果部分”的稳定证据底座。项目记忆中已有 round7-10 的 phase 结果登记，但当前工作区本地可直接复核的工件并不完整；与此同时，DSI / PDR / HCI 仍未闭合到论文级定义。因此瓶颈不再是单一新实验，而是“最新结果的本地可复核性”和“统一理论口径”同时不足。
+线性链已经重新在当前工作区落地到 round4，但 phase 链仍然缺少当前工作区可复核的 solver 级 symmetry-enforced 低误差基线。因此当前真正限制投稿概率继续上升的，已经从“线性本地可复核性不足”转成了“phase 结果还没有在当前工作区重新站稳”。
 
 具体表现：
-- 线性任务已有正式区域定义，但不同轮次工件并未全部在当前工作区重新对齐。
+- round3 / round4 现已补回本地 rebuild 工件，但还需要和 round5 的正式区域定义进一步做统一汇总。
 - 项目记忆里已登记 round7-10 的 phase 进展，但当前工作区未现场复核这些工件。
-- 相位恢复 learned-prior / posterior 机制仍缺 solver 级 symmetry-enforced 低误差验证。
+- 相位恢复 learned-prior / posterior 机制仍缺当前工作区可复核的 solver 级 symmetry-enforced 低误差验证。
 - DSI / PDR / HCI 仍未完成完整推导、适用边界说明和可计算实现。
 - 正文与补充材料仍无投稿级图表体系。
 
 ## 本轮唯一最高优先级
-先把线性 benchmark 的区域定义和指标口径固定成可复算、可复核的基线，并据此为后续补回 round3 / round4 以及 phase 结果对齐建立统一模板。
+补回线性 round3 / round4 的本地实体工件，并重新建立当前工作区可复核的 nonlinear prior / measurement-consistent latent inverse 起点。
 
 ## 本轮交付物
-1. 线性区域定义说明：`/workspace/computational-imaging-1-ncomms/linear_region_metric_note_round5.md`
-2. 区域指标对齐脚本：`/workspace/computational-imaging-1-ncomms/round5_region_metric_alignment.py`
-3. 对齐结果：`/workspace/computational-imaging-1-ncomms/round5_outputs/linear_region_metric_alignment.csv`
-4. 对齐摘要：`/workspace/computational-imaging-1-ncomms/round5_outputs/linear_region_metric_alignment_summary.json`
-5. 第一版理论笔记：`/workspace/computational-imaging-1-ncomms/theory_round2_note.md`
-6. 30+ 工作文献表：`/workspace/computational-imaging-1-ncomms/reference_map_round2.md`
+1. rebuilt round3 脚本：`/workspace/computational-imaging-1-ncomms/round3_linear_autoencoder_prior.py`
+2. rebuilt round3 输出目录：`/workspace/computational-imaging-1-ncomms/round3_outputs/`
+3. rebuilt round4 脚本：`/workspace/computational-imaging-1-ncomms/round4_linear_measurement_consistent_prior.py`
+4. rebuilt round4 输出目录：`/workspace/computational-imaging-1-ncomms/round4_outputs/`
+5. round5 区域定义说明与对齐脚本继续保留为统一口径基线
 
 ## 完成标准
-- 不是只给口头定义，而是给出正式符号、区域定义、计算式和适用边界
-- 定义已经和当前本地可复核工件完成至少一轮真实对齐
-- 明确哪些量已可计算，哪些仍只是启发式量
+- round3 / round4 已在当前工作区形成可运行脚本和真实输出文件
+- 明确标注它们是 rebuild 工件，而不是对丢失原件的逐字恢复
+- 新工件已经足以作为下一轮统一线性指标汇总与衔接 phase 链的本地起点
 - 已据此更新项目状态与下一轮优先级
 
 ## 下一轮立即动作
-1. 优先补回或重建 round3 / round4 的本地实体工件，并把 round5 的区域定义映射过去。
-2. 再回到相位恢复链，优先检验 solver 级 symmetry-enforced 低误差基线。
+1. 先把 round5 的区域定义和指标口径映射到 rebuilt round3 / round4 工件上，形成统一线性结果表。
+2. 再回到相位恢复链，优先重建当前工作区可复核的 solver 级 symmetry-enforced 低误差基线。
 3. 把 `bridge gap` 与 DSI / PDR 的关系推进到更正式的理论笔记。
 
 ## 已真实完成
@@ -91,13 +90,33 @@
   - round1 connected vertical bar：observed MAE `0.0875`，bridge mean `0.8750`，bridge gap `0.8385`
   - round2 PCA prior：observed MAE `0.0541`，bridge mean `0.6035`，bridge gap `0.5670`
 - 当前 benchmark 的 bridge 区域真值均值约为 `0.0365`，因此后续写作中 `bridge gap` 比单独的 `bridge mean intensity` 更稳。
+- 已在当前工作区补回并真实运行 rebuilt round3 非线性 learned-prior 工件：
+  - `round3_linear_autoencoder_prior.py`
+  - `round3_outputs/round3_summary.json`
+  - `round3_outputs/round3_case_metrics.csv`
+  - `round3_outputs/round3_linear_autoencoder_panel.png`
+- rebuilt round3 聚合结果为：
+  - autoencoder projection：observed MAE `0.1381`，unsupported MAE `0.1260`，bridge mean intensity `0.7947`，bridge L1 error `0.7617`
+  - zero-fill：observed MAE `0.0000`，unsupported MAE `0.0246`，bridge mean intensity `0.0000`
+- 已在当前工作区补回并真实运行 rebuilt round4 measurement-consistent latent-prior 工件：
+  - `round4_linear_measurement_consistent_prior.py`
+  - `round4_outputs/round4_summary.json`
+  - `round4_outputs/round4_case_metrics.csv`
+  - `round4_outputs/round4_linear_measurement_consistent_panel.png`
+  - `round4_outputs/round4_linear_measurement_mask.png`
+- rebuilt round4 聚合结果为：
+  - zero-fill：observed MAE `0.0000`，unsupported MAE `0.0246`，bridge mean intensity `0.0000`
+  - pca prior：observed MAE `0.0951`，unsupported MAE `0.1291`，bridge mean intensity `0.7121`
+  - autoencoder projection：observed MAE `0.1744`，unsupported MAE `0.1223`，bridge mean intensity `0.7754`
+  - latent inverse：observed MAE `0.0966`，unsupported MAE `0.1355`，bridge mean intensity `0.7102`
+- 需要明确：上述 round3 / round4 是当前工作区的 rebuild 工件，用于恢复本地可复核起点，不等于历史丢失原件的逐字复刻。
 
 ## 已部分完成但仍缺关键环节
 - 文献：已补到 30+，并形成按主题分类的工作文献表；但尚未整理成最终 BibTeX 并逐条嵌入正文/补充材料。
 - 理论：已有第一版可检查理论链，并补上了线性 benchmark 的区域与指标正式定义；但仍缺一般压缩成像、一般非线性相位恢复和 calibrated HCI 的完整推导。
-- 任务设计：压缩成像/incomplete measurement 与相位恢复已形成最小真实运行结果；线性任务已有训练型低秩 prior、前馈式非线性 autoencoder prior、measurement-consistent latent inverse prior 以及统一区域指标；相位恢复在项目记忆中已登记 round7-10 的受控 benchmark 进展，但当前工作区仍需补齐其本地可复核工件。
+- 任务设计：压缩成像/incomplete measurement 与相位恢复已形成最小真实运行结果；线性任务现已重新具备训练型低秩 prior、前馈式非线性 autoencoder prior、measurement-consistent latent inverse prior 以及统一区域指标；相位恢复在项目记忆中已登记 round7-10 的受控 benchmark 进展，但当前工作区仍需补齐其本地可复核工件。
 - 图表：已有内部研究图，但仍不是投稿定稿图。
-- 归档：当前工作区已确认存在 round1、round2 以及本轮新增的 round5 区域对齐工件；其余更晚轮次工件仍需继续补回或重建。
+- 归档：当前工作区已确认存在 round1、round2、rebuilt round3、rebuilt round4 与 round5 区域对齐工件；phase 更晚轮次工件仍需继续补回或重建。
 
 ## 尚未开始
 - DSI / PDR / HCI 的完整论文级推导文稿
@@ -134,3 +153,4 @@
 2026-04-25：完成第一版理论笔记与工作文献表。
 2026-04-26：更新项目运行规则。后续由自研智能体按每 2 小时 1 轮推进；停止标准收紧为“接收概率 >70%”与“evidence / 数据 / 图 / 参考文献全部补齐”同时成立。
 2026-04-26：完成 round5 线性区域定义与指标对齐。已新增 `linear_region_metric_note_round5.md` 与 `round5_region_metric_alignment.py`，并基于当前本地 round1 / round2 工件输出区域指标表；结果表明 `bridge gap` 比单独 `bridge mean intensity` 更适合作为当前 benchmark 的桥接幻觉量。
+2026-04-26：补回当前工作区可复核的 rebuilt round3 / round4 线性工件。已真实运行 `round3_linear_autoencoder_prior.py` 与 `round4_linear_measurement_consistent_prior.py` 并生成对应输出目录；这一步恢复了 nonlinear prior 与 measurement-consistent latent inverse 的本地起点，但这些结果必须明确标注为 rebuild 工件，而不是历史原件的逐字复刻。

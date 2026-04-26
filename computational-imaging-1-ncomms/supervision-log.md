@@ -49,3 +49,31 @@
 1. 下一轮优先补回或重建更晚轮次的本地实体工件。
 2. 不得把 round5 的区域定义写成“所有任务通用的最终定义”。
 3. 在引入相位恢复新结果前，先保证线性任务的最新结果和定义完全对齐。
+
+## 监督轮次 6
+- 日期：2026-04-26
+- 节点性质：线性 round3 / round4 本地 rebuild 工件恢复
+
+## 当前版本总体评价
+这一轮解决的是一个很实际的问题：项目记忆里写过 round3 / round4，但当前工作区并没有本地脚本和输出。现在这两轮至少重新在本地落地了，虽然它们是 rebuild 版本，不是历史原件的逐字恢复，但已经足以作为下一轮继续统一线性指标和衔接 phase 链的现场起点。
+
+## 本轮已真实完成
+- 已新增并运行 `round3_linear_autoencoder_prior.py`。
+- 已生成 `round3_outputs/round3_summary.json`、`round3_case_metrics.csv` 和 `round3_linear_autoencoder_panel.png`。
+- 已新增并运行 `round4_linear_measurement_consistent_prior.py`。
+- 已生成 `round4_outputs/round4_summary.json`、`round4_case_metrics.csv`、`round4_linear_measurement_consistent_panel.png` 和 `round4_linear_measurement_mask.png`。
+
+## 本轮关键结论
+- rebuilt round3 的 autoencoder projection 在 6 个样例上平均 `bridge_mean_intensity = 0.7947`，说明 nonlinear learned prior 在当前 benchmark 中仍会明显填充未观测桥接区。
+- rebuilt round4 的 latent inverse 平均 `bridge_mean_intensity = 0.7102`，说明 measurement-consistent latent optimization 也没有自动消除桥接结构。
+- 但这些数值和记忆里早先登记的版本并不一致，因此必须明确区分“本地 rebuild 工件”和“历史原始工件”。
+
+## 本轮未达标部分
+- round3 / round4 目前只是 rebuild 工件，尚未和历史原始结果完成一一校核。
+- phase 链仍缺当前工作区可复核的 solver 级 symmetry-enforced baseline。
+- DSI / PDR / HCI 仍未达到论文级闭环。
+
+## 必须纠正项
+1. 下一轮先把 round5 的区域定义正式映射到 rebuilt round3 / round4 汇总结果。
+2. 不得把 rebuilt round3 / round4 写成“原始工件已完全找回”。
+3. 线性链补稳后，再把最高优先级切回 phase solver 级 symmetry-enforced 基线。

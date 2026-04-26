@@ -34,6 +34,8 @@
 ## 数据与结果
 - [x] 第一批真实结果数据
 - [x] 第一版区域指标对齐结果
+- [x] rebuilt round3 本地结果
+- [x] rebuilt round4 本地结果
 - [ ] 主结果矩阵
 - [ ] 消融结果
 - [ ] 稳健性分析
@@ -81,9 +83,16 @@
 - 当前工作区已确认存在：
   - `/workspace/computational-imaging-1-ncomms/round1_minimal_benchmark.py`
   - `/workspace/computational-imaging-1-ncomms/round2_linear_pca_prior.py`
+  - `/workspace/computational-imaging-1-ncomms/round3_linear_autoencoder_prior.py`
+  - `/workspace/computational-imaging-1-ncomms/round4_linear_measurement_consistent_prior.py`
   - `/workspace/computational-imaging-1-ncomms/round1_outputs/`
   - `/workspace/computational-imaging-1-ncomms/round2_outputs/`
+  - `/workspace/computational-imaging-1-ncomms/round3_outputs/`
+  - `/workspace/computational-imaging-1-ncomms/round4_outputs/`
   - `/workspace/computational-imaging-1-ncomms/linear_region_metric_note_round5.md`
   - `/workspace/computational-imaging-1-ncomms/round5_region_metric_alignment.py`
   - `/workspace/computational-imaging-1-ncomms/round5_outputs/`
+- 2026-04-26 新增说明：
+  - round3 / round4 现已在当前工作区以 rebuild 形式补回，可作为本地可复核起点。
+  - 这些 rebuild 工件不等于历史原始工件的逐字恢复，后续写作必须如实区分。
 - 项目记忆中还登记有更晚轮次的 phase 工件与 rebuilt benchmark 进展，但它们当前仍需继续补回或重建为本地可复核工件。
