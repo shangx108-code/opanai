@@ -3,13 +3,17 @@
 ## 项目基本信息
 - 项目名称：Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations
 - 目标期刊：Nature Communications
-- 最近更新时间：2026-04-26（round2）
+- 最近更新时间：2026-04-26（round3）
 - 当前资料来源：
   - `/workspace/user_files/01-markdown-1-md-3`
   - `/workspace/self-calibrating-diffractive-ncomms/round1_theory_note.md`
   - `/workspace/self-calibrating-diffractive-ncomms/outputs/round1_summary.md`
   - `/workspace/self-calibrating-diffractive-ncomms/round2_theory_note.md`
   - `/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round3_fno_style_summary.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/round3_information_bound_note.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_summary.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/round3_experiment_feasibility_note.md`
 
 ## 当前运行规则
 - 默认推进主体：自研智能体
@@ -38,12 +42,13 @@
 - 可归档的代码、数据、图表、正文、补充材料与最终投稿包
 
 ## 当前阶段
-结果生成阶段（最小 wave-optics 证据恢复子阶段）。
+结果生成阶段（ML baseline 与理论补强子阶段）。
 
 说明：
 - 当前工作区之前没有该项目的既有命名空间记忆。
 - 本轮已把上传提案正式转入项目状态，并完成第一轮最小真实数值验证。
 - 现在已进一步完成 round2：真实运行基于 Zernike pupil 的 wave-optics PSF 最小证据链。
+- 现在已进一步完成 round3：加入最小 FNO-style spectral baseline、CRLB 扫描，以及最小实验可行性方案。
 - 当前仍不是完整 D2NN，也不是投稿级证据链。
 
 ## 当前唯一主瓶颈
@@ -51,11 +56,12 @@
 
 原因：
 - 目前已证明“共路 pilot 降低动态退化不确定性”的最小机制，在 Gaussian surrogate 与 Zernike wave-optics PSF 两层模型上都成立。
+- 当前新增的最小 FNO-style spectral baseline没有自动恢复出这一优势，因此“ML 说服力”仍未闭环。
 - 但还没有证明固定被动衍射处理器在真实 coherent propagation 下也能保留这一优势。
 - 若 ordinary D2NN vs pilot-assisted D2NN 在 OOD 动态退化上不能拉开可信差距，则论文主线需要重评。
 
 ## 本轮唯一最高优先级
-先把更强 forward model 下的最小真实证据链跑通，再决定是否继续向被动衍射处理器训练栈扩展。
+补入 ML 与理论层后，继续把核心资源集中到最小被动衍射处理器阳性对照，而不是继续扩展外围材料。
 
 ## 本轮交付物
 1. round1 最小机制脚本：`/workspace/self-calibrating-diffractive-ncomms/round1_pilot_selfcalibration.py`
@@ -66,17 +72,25 @@
 6. round2 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.json`
 7. round2 汇总说明：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.md`
 8. round2 结果面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_zernike_waveoptics_panel.png`
+9. round3 FNO-style baseline：`/workspace/self-calibrating-diffractive-ncomms/round3_fno_style_baseline.py`
+10. round3 FNO-style 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_fno_style_summary.md`
+11. round3 CRLB 脚本：`/workspace/self-calibrating-diffractive-ncomms/round3_information_bound.py`
+12. round3 理论说明：`/workspace/self-calibrating-diffractive-ncomms/round3_information_bound_note.md`
+13. round3 CRLB 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_summary.md`
+14. round3 实验可行性说明：`/workspace/self-calibrating-diffractive-ncomms/round3_experiment_feasibility_note.md`
 
 ## 本轮完成标准
 - 已真实运行 round2 脚本并落盘结果文件
 - 已把 stronger forward model 下“共路 vs 非共路 vs 无 reference”的差异写成可检查指标
 - 已明确写出 round2 仍不是 D2NN 证据、仍不可包装成 submission-grade 结论
+- 已真实运行 round3 FNO-style baseline 与 CRLB 扫描
+- 已把简单实验验证诚实降级为“当前缺硬件与原始数据，只能先给出最小实验方案”
 
 ## 下一轮立即动作
 1. 在当前工作区写出 ordinary D2NN 与 pilot-assisted D2NN 的最小可运行对照脚本。
 2. 保留“共路、非共路、错误 reference”三组关键对照，不满足就及时止损。
 3. 若最小被动衍射对照仍为阳性，再扩展到 turbulence / thin phase screen。
-4. 之后才进入传统与电子 baselines、理论细化和图稿成型。
+4. 若后续拿到真实实验硬件或原始数据，按 round3 实验方案补上最小 benchtop 验证。
 
 ## 技术状态检查结论
 - 已验证：
@@ -86,13 +100,15 @@
   - Zernike defocus + astigmatism 的 wave-optics pupil forward model已真实运行。
   - 在 OOD stronger-aberration 集上，共路 pilot 相比无 reference 将平均 PSNR 从 `37.069 dB` 提升到 `38.422 dB`，非共路仅为 `37.078 dB`。
   - OOD 集上，共路 pilot 的 mean PSF MSE 为 `4.217e-06`，优于无 reference 的 `1.279e-05` 与非共路的 `1.155e-05`。
+  - round3 已真实加入最小 FNO-style spectral baseline 与 CRLB 扫描。
 - 部分验证：
   - 共路 pilot 降低动态退化不确定性的机制，在 Gaussian surrogate 与 Zernike wave-optics PSF 两层模型上成立。
 - 未验证：
   - Zernike、湍流、薄相位屏三类真实波动光学退化。
   - ordinary D2NN 与 pilot-assisted D2NN 的真实对照。
-  - 传统与电子 baselines。
+  - 强 ML baseline（完整深 FNO / U-Net / 其他现代神经算子）的正面对照。
   - 制造误差、量化误差、错位、波长漂移和 shot noise 鲁棒性。
+  - 真实实验数据。
 - 存在错误：
   - 无。
 - 待核实：
@@ -113,7 +129,7 @@
   - `scipy` 不可用
   - `torch` / `torchvision` 不可用
 - 待安装、待修复或待核实项：
-  - 若下一轮采用 D2NN 训练，需要确认是否继续使用纯 NumPy 方案，或补齐更合适的训练环境
+  - 若下一轮采用 D2NN / FNO 训练，需要确认是否继续使用纯 NumPy 方案，或补齐更合适的训练环境
 - 是否支持进入下一步程序运行、图片生成或论文编译：
   - 支持继续做小规模数值验证和 PNG 图生成
   - 尚不支持默认按深度学习训练链直接展开
@@ -125,6 +141,8 @@
 - 部分满足：
   - 摘要雏形和主图规划已有提案，但仍是前期构想，不可视为稿件实物
   - “共路 pilot 优于非共路 / 无 reference”的核心机制已有两轮真实数据支撑，但仍未到稿件主结果标准
+- 存在新的负面或中性证据：
+  - 最小 FNO-style spectral baseline 未显示 common-path pilot 优于 observation-only baseline，说明 ML 说服力仍未闭环
 - 未满足：
   - 正文、补充材料、正式图、图注、引用链、参考文献库均未形成投稿级实物
 - 存在错误：
@@ -135,11 +153,12 @@
   - 只支持进入“最小被动衍射处理器对照”阶段，不支持进入正式成稿阶段
 
 ## 当前接收概率判断
-- 综合接收概率：14%–18%
+- 综合接收概率：16%–20%
 
 依据：
 - 创新构想：中到强
 - 最小机制信号：中到中强
+- 理论层强度：中
 - 理论充分性：弱
 - 方法与代码可靠性：中
 - 数据与结果完整性：弱
@@ -148,11 +167,14 @@
 
 最拖累接收概率的短板：
 1. 还没有真实被动衍射处理器 + 动态像差协议下的核心对照结果
-2. 还没有三类退化与强对照 baselines
-3. 还没有投稿级正文、补图与参考文献链
+2. 强 ML baseline 目前没有形成正向加分证据
+3. 还没有三类退化、真实实验与投稿级正文/补图/参考文献链
 
 ## 最近一次重要更新摘要
 - 2026-04-26：基于上传提案初始化 `self-calibrating-diffractive-ncomms` 项目命名空间。
 - 2026-04-26：完成 round1 最小机制验证，使用 shared-blur Gaussian pilot surrogate 检验共路 pilot 降低动态退化不确定性的基本方向是否成立。
 - 2026-04-26：OOD stronger-aberration 集上，无 reference 平均 PSNR 为 `19.669 dB`，共路 pilot 为 `21.990 dB`，非共路 pilot 为 `20.268 dB`。
 - 2026-04-26：完成 round2 wave-optics 最小证据链，使用 Zernike defocus + astigmatism pupil 生成真实 PSF；OOD 集上，无 reference 平均 PSNR 为 `37.069 dB`，共路 pilot 为 `38.422 dB`，非共路 pilot 为 `37.078 dB`，且共路 pilot 的 mean PSF MSE 最低。
+- 2026-04-26：完成 round3 最小 FNO-style spectral baseline。当前结果为中性偏负：OOD 集上 observation-only 为 `37.286 dB`，common-path pilot 为 `37.224 dB`，说明最小线性 spectral baseline 还没有自动学会利用 pilot。
+- 2026-04-26：完成 round3 information bound / CRLB 扫描。当前 pilot-channel CRLB 在 train 与 OOD 区域的中位数 trace 分别为 `6.452e-04` 与 `1.736e-04`，说明该 pilot observation model 在大部分区域内确实携带有限 Fisher 信息。
+- 2026-04-26：完成最小实验可行性说明；当前工作区没有硬件或原始实验数据，不能诚实声称已完成实验验证。

@@ -14,6 +14,18 @@
 - round2 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.json`
 - round2 汇总 Markdown：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.md`
 - round2 结果面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_zernike_waveoptics_panel.png`
+- round3 FNO-style baseline：`/workspace/self-calibrating-diffractive-ncomms/round3_fno_style_baseline.py`
+- round3 FNO-style 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_fno_style_metrics.csv`
+- round3 FNO-style 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_fno_style_summary.json`
+- round3 FNO-style 汇总 Markdown：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_fno_style_summary.md`
+- round3 FNO-style 结果面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_fno_style_panel.png`
+- round3 CRLB 脚本：`/workspace/self-calibrating-diffractive-ncomms/round3_information_bound.py`
+- round3 CRLB 说明：`/workspace/self-calibrating-diffractive-ncomms/round3_information_bound_note.md`
+- round3 CRLB 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_scan.csv`
+- round3 CRLB 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_summary.json`
+- round3 CRLB 汇总 Markdown：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_summary.md`
+- round3 CRLB 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_panel.png`
+- round3 实验可行性说明：`/workspace/self-calibrating-diffractive-ncomms/round3_experiment_feasibility_note.md`
 
 ## 待归档
 - round3 passive diffractive processor 最小对照脚本与结果

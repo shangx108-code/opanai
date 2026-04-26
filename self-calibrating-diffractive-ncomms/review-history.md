@@ -38,3 +38,21 @@
 
 ### 接收概率变化依据
 - round2 提供了比 round1 更接近论文主张的真实物理 forward model，因此将接收概率谨慎上调到 `14%–18%`。
+
+## Round 3 内部严格审稿
+
+### 检查范围
+- FNO baseline、实验验证与信息论补强是否真实落地
+
+### 主要意见
+1. FNO baseline 已经加上，但当前只是最小 FNO-style spectral operator，不是完整深 FNO。
+2. 更重要的是，这个 baseline 没有显示 common-path pilot 优于 observation-only，因此不能把它写成正向支持证据。
+3. CRLB / information-bound 层是真正的理论增强，能支撑“pilot channel carries finite Fisher information”这一有边界的表述。
+4. 实验部分当前只能写成可执行方案，不能写成已完成验证。
+
+### 审稿判断
+- 本轮提升了理论说服力，但没有显著提升 ML 说服力。
+- 项目仍不具备投稿条件。
+
+### 接收概率变化依据
+- 因理论层变强、实验路径更清楚，接收概率谨慎上调到 `16%–20%`；但由于 ML baseline 没有正向结果，上调幅度必须克制。

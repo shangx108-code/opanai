@@ -15,9 +15,11 @@ Nature Communications
 ## 当前已初步碰到的积极信号
 - 共路 pilot 在 stronger-aberration OOD 集上优于无 reference 和非共路 reference
 - 这一积极信号已在 Gaussian surrogate 和 Zernike wave-optics pupil 两轮真实数值链中重复出现
+- pilot-channel CRLB 已形成第一版可计算理论支撑
 
 ## 当前仍存在的高风险
 - 该积极信号仍可能在 wave-optics / D2NN 场景下消失
 - 该积极信号仍可能在被动衍射处理器场景下消失
 - 如果 pilot-assisted 在 OOD 对照中不能显著优于 ordinary D2NN，论文主线将削弱
+- 如果更强 ML baseline 仍然不能利用 pilot，ML 说服力会明显不足
 - 若只能在单一 surrogate 上成立，目标期刊可能下调
