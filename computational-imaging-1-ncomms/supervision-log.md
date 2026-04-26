@@ -129,6 +129,40 @@
 ## 是否允许进入下一阶段
 允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。
 
+## 监督轮次 9
+- 日期：2026-04-26
+- 节点性质：round9 orientation-ratio 连续扫参监督
+
+## 当前版本总体评价
+这一轮真正把“prior family 会不会翻转 branch sign”进一步压缩成了一个更干净的机制问题。当前工作区已经有一套可现场复核的 round9 连续扫参工件，而且本轮把 `x_hat` 直接限制在 exact ambiguity pair 上，使 `recovered_measurement_error` 下降到机器精度量级。结果说明：branch sign 的变化不只是三档 family 的离散现象，而是会随 training orientation ratio 连续跨零移动。这是有效新进展，但仍不是机制闭环，因为对称先验下 residual bias 是否消失还没有被真实检验。
+
+## 本轮已真实完成
+- 已在当前工作区新建并运行 `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_scan.py`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_summary.json`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_case_metrics.csv`。
+- 已生成 `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_panel.png` 与 `round9_phase_notes.md`。
+- 本轮共完成 `1056` 次 exact-ambiguity branch evaluation，平均 exact ambiguity quantity 为 `1.39e-16`，平均 `recovered_measurement_error = 7.11e-17`。
+- 平均 `branch_bias` 随 training true-orientation ratio 从 `0.0` 的 `-0.6078` 连续移动到 `1.0` 的 `0.4125`，并在 `0.5`–`0.6` 附近跨零；对应正偏向比例从 `0.188` 升到 `0.729`。
+
+## 本轮未达标部分
+- 当前 round9 仍是 controlled exact-ambiguity benchmark，不是 posterior / diffusion / Bayesian baseline。
+- 当前只证明了 orientation bias 足以驱动 branch sign 连续变化，还没有证明对称先验下 residual bias 会自动消失。
+- DSI / PDR / HCI 仍未完成论文级推导。
+- 图表、正文、补充材料与五审稿人循环仍未启动。
+
+## 新增风险提醒
+- 如果下一轮不直接做去偏置 baseline，项目会继续停留在“偏置足以解释一部分现象”而不是“机制来源已分离清楚”。
+- 当前 `ratio = 0.5` 条件下平均 `branch_bias = -0.0894`、正偏向比例 `0.479`，已经接近对称，但还不能据此声称 residual bias 为零。
+- round9 的 `recovered_measurement_error` 接近零，说明这一步更适合写成“solver failure 已基本剥离”，但不能反过来包装成“一般 phase retrieval 已解决”。
+
+## 必须纠正项
+1. 下一轮必须优先补去偏置或后验平均型 baseline，直接检查 residual branch bias 是否收敛到接近零。
+2. 不得把 round9 的连续 crossing 写成“branch selection 的统一规律已经确立”；当前它只说明 orientation bias 是充分驱动因素。
+3. 在去偏置检验完成前，不得把当前 phase 结论外推成 Nature Communications 级方法学主张。
+
+## 是否允许进入下一阶段
+允许继续停留在“理论强化与最小结果生成阶段”，但仍不允许进入“图表完善完成”或“成稿”阶段。
+
 ## 监督轮次 3
 - 日期：2026-04-25
 - 节点性质：measurement-consistent learned prior 基线监督

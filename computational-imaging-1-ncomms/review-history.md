@@ -90,3 +90,10 @@
 - 更关键的是，分组后出现了系统性翻转：`true_biased` 条件下 `48 / 48` 次为正偏向，平均 `branch_bias = 0.6893`；`reversed_biased` 条件下 `48 / 48` 次为负偏向，平均 `branch_bias = -0.7330`；`balanced` 条件下仅轻微偏正，平均 `branch_bias = 0.0752`。
 - 该结果说明：当前 phase retrieval 中的 branch selection 至少在这个 controlled benchmark 里高度依赖 prior orientation bias，而不是稳定的统一现象。
 - 因此，正式五审稿人循环仍不能启动；下一步必须先补机制分离实验，而不是把当前 branch sign 写成论文主结论。
+
+## 预审备注（round9 orientation-ratio 连续扫参后）
+- 当前工作区已新增一套可复核的 round9 连续扫参工件，并把 branch selection 限制在 exact ambiguity pair 上，从而把 solver failure 与 prior-induced selection 进一步分离。
+- round9 共完成 `1056` 次真实 branch evaluation，聚合结果为：mean exact ambiguity quantity `1.39e-16`，mean recovered measurement error `7.11e-17`，overall mean branch bias `-0.0280`，overall 正偏向比例 `0.495`。
+- 更关键的是，平均 `branch_bias` 会随 training true-orientation ratio 连续变化：`ratio=0.0` 时为 `-0.6078`，`ratio=0.5` 时为 `-0.0894`，`ratio=0.6` 时转为 `0.1951`，`ratio=1.0` 时为 `0.4125`。
+- 该结果说明：orientation bias 本身已足以在几乎零 measurement-error 的条件下驱动 branch sign 跨零翻转，因此当前 phase 预审结论已从“对 prior family 敏感”进一步收紧为“对 training orientation bias 连续敏感”。
+- 但正式五审稿人循环仍不能启动，因为去偏置 baseline、理论推导、正文与补图仍未形成可审材料；下一步必须优先检查对称先验下 residual branch bias 是否归零。
