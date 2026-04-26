@@ -17,6 +17,7 @@
 - [ ] HCI 详细推导
 - [ ] 线性情形可证明结论
 - [ ] 非线性相位恢复近似推导
+- [x] 线性 benchmark 区域定义说明
 - [x] round6 phase ambiguity 指标边界说明
 
 ## 代码与计算
@@ -32,6 +33,7 @@
 
 ## 数据与结果
 - [x] 第一批真实结果数据
+- [x] 第一版区域指标对齐结果
 - [ ] 主结果矩阵
 - [ ] 消融结果
 - [ ] 稳健性分析
@@ -76,67 +78,12 @@
 - [ ] 最终 ZIP 归档包
 
 ## 当前归档备注
-- 2026-04-26 状态核查新增结论：
-  - 当前 `/workspace` 下未找到 `computational-imaging-1-ncomms/` 项目目录。
-  - 因此下列 round3-10 路径目前都只能视为“历史登记路径”，不能继续视为本轮已现场复核。
-  - 当前命名空间内已验证存在的只有状态文件集合与 `phase-ambiguity-metrics-round6.md`。
-  - Google Drive 本轮检索失败，云端归档状态待核实。
-- round3 当前已落地的实体文件：
-  - `/workspace/computational-imaging-1-ncomms/round3_linear_autoencoder_prior.py`
-  - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_summary.json`
-  - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_case_metrics.csv`
-  - `/workspace/computational-imaging-1-ncomms/round3_outputs/round3_linear_autoencoder_panel.png`
-- round4 当前已落地的实体文件：
-  - `/workspace/computational-imaging-1-ncomms/round4_linear_measurement_consistent_prior.py`
-  - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_summary.json`
-  - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_case_metrics.csv`
-  - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_linear_measurement_consistent_panel.png`
-  - `/workspace/computational-imaging-1-ncomms/round4_outputs/round4_linear_measurement_mask.png`
-- round4 区域定义重现实验当前已落地的实体文件：
-  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_repro.py`
-  - `/workspace/computational-imaging-1-ncomms/theory_round3_region_formalization.md`
-  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_summary.json`
-  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_case_metrics.csv`
-  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_panel.png`
-  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_reproduced_mask.png`
-  - `/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/round4_region_metadata.json`
-- round5 相位恢复 learned-prior 当前已落地的实体文件：
-  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_learned_prior.py`
-  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_summary.json`
-  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_case_metrics.csv`
-  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_panel.png`
-  - `/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/round5_phase_ambiguity_notes.md`
-- round6 当前已落地的实体文件：
-  - `/workspace/memory/computational-imaging-1-ncomms/phase-ambiguity-metrics-round6.md`
-- round7 rebuilt low-error phase solver 当前已落地的实体文件：
-  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_rebuild.py`
-  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_summary.json`
-  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_case_metrics.csv`
-  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_panel.png`
-  - `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/round7_phase_notes.md`
-- round8 low-error branch-bias robustness scan 当前已落地的实体文件：
-  - `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_scan.py`
-  - `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/round8_phase_summary.json`
-  - `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/round8_phase_case_metrics.csv`
-  - `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/round8_phase_panel.png`
-  - `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/round8_phase_notes.md`
-- round9 orientation-ratio continuous scan 当前已落地的实体文件：
-  - `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_scan.py`
-  - `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_summary.json`
-  - `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_case_metrics.csv`
-  - `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_panel.png`
-  - `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/round9_phase_notes.md`
-- round10 rebuilt de-biased exact-pair benchmark 当前已落地的实体文件：
-  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair.py`
-  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_summary.json`
-  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_case_metrics.csv`
-  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_seed_metrics.csv`
-  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_panel.png`
-  - `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/round10_phase_notes.md`
-- 当前工作区未见历史 round1 / round2 实体脚本与输出文件，说明历史结果记录已保存在项目状态中，但原始归档仍需后续补齐。
-- 当前工作区也未见记忆中登记的旧 round4 实体脚本与输出文件，因此旧 round4 工件仍不能视为已现场复核归档；本轮新增的是一套新的可复核重现实验归档。
-- 当前工作区同样未见记忆中登记的 round5 原始脚本与输出文件，因此 round5 工件仍需后续补回现场归档；本轮新增的是一份基于已登记状态的指标 formalization 文档，而不是 round5 原始工件的二次现场复核。
-- 当前工作区已新增一套 round7 rebuilt phase solver 工件，可作为后续稳健性扫描的现场起点；但它不是对缺失 round5 原始工件的补回归档，二者仍需分开记录。
-- 当前工作区已新增一套 round8 phase 稳健性扫描工件，可作为后续 orientation-ratio 连续扫参和去偏置 baseline 的现场起点；但它仍属于 controlled synthetic benchmark，不等于高应用价值任务的正式归档已补齐。
-- 当前工作区已新增一套 round9 orientation-ratio 连续扫参工件，可作为后续去偏置 baseline 的现场起点；但它仍属于 controlled exact-ambiguity benchmark，不等于 phase retrieval 主结果矩阵已经补齐。
-- 当前工作区已新增一套 round10 rebuilt de-biased exact-pair 工件，可作为后续 solver 级 symmetry-enforced baseline 的现场起点；但它仍属于 rebuilt scorer benchmark，不等于低 measurement-error learned solver 证据已经补齐。
+- 当前工作区已确认存在：
+  - `/workspace/computational-imaging-1-ncomms/round1_minimal_benchmark.py`
+  - `/workspace/computational-imaging-1-ncomms/round2_linear_pca_prior.py`
+  - `/workspace/computational-imaging-1-ncomms/round1_outputs/`
+  - `/workspace/computational-imaging-1-ncomms/round2_outputs/`
+  - `/workspace/computational-imaging-1-ncomms/linear_region_metric_note_round5.md`
+  - `/workspace/computational-imaging-1-ncomms/round5_region_metric_alignment.py`
+  - `/workspace/computational-imaging-1-ncomms/round5_outputs/`
+- 项目记忆中还登记有更晚轮次的 phase 工件与 rebuilt benchmark 进展，但它们当前仍需继续补回或重建为本地可复核工件。

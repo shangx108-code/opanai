@@ -18,7 +18,7 @@
 - 图表规则：
   - 机制示意图、结构示意图、概念图可用 GPT-imag-2.0 生成初稿
   - 除示意图外，所有数据图必须基于真实数据正式成图
-  - 任何 AI 生成示意图都不得直接视为定稿，仍需后续人工校正标签、结构逻辑、比例关系与期刊风格
+  - 任何 AI 生成示意图都不得直接视为定稿，仍需后续人工校正
 - 理论规则：
   - 理论推导必须详实、可靠、可检查
   - 未完成详细推导的部分不得写成已证明结论
@@ -35,43 +35,41 @@
 理论强化与最小结果生成阶段。
 
 说明：
-- 选题主线、论文定位、潜在创新点、候选任务和阶段路线图已有较完整草案。
-- 线性 incomplete measurement 任务已从 hand-crafted prior 推进到低秩 PCA prior、autoencoder prior 和 measurement-consistent latent inverse 基线。
-- 同时，线性 masked-identity benchmark 的 observed / unsupported / bridge 三类区域定义已经补成第一版可复算口径。
-- 但当前仍是“最小证据链”，还不是 Nature Communications 级别的完整研究证据。
+- 项目已经从最小双任务基准推进到线性任务的多类 learned prior、相位恢复 exact-ambiguity 分析、orientation-bias 扫描和 de-biased exact-pair benchmark。
+- 同时，线性 benchmark 的 observed / unsupported / bridge 区域已经形成第一版正式定义，且本地新增了一轮区域指标对齐工件。
+- 但当前仍缺 Nature Communications 级别的多任务完整结果链、论文级理论闭环、正文/补图体系与五审稿人循环。
 
 ## 当前唯一主瓶颈
-当前真正阻塞推进的，不再是“下一条 solver 实验该怎么写”，而是“当前工作区缺少记忆中登记的 round7-10 可运行工件，且云端资料索引当前无法核验”。在本轮核查中，`/workspace` 下未找到 `computational-imaging-1-ncomms/` 项目目录；当前命名空间里能现场读取的只有状态文件和 `phase-ambiguity-metrics-round6.md`。因此，solver 级 symmetry-enforced 检验目前没有可复核的本地起点，必须先恢复或重新索引可运行工件，再继续新增数值实验。
+当前最关键的问题，是把已经登记的多轮现象与机制结果，收束成“可现场复核、可统一比较、可写入理论和结果部分”的稳定证据底座。项目记忆中已有 round7-10 的 phase 结果登记，但当前工作区本地可直接复核的工件并不完整；与此同时，DSI / PDR / HCI 仍未闭合到论文级定义。因此瓶颈不再是单一新实验，而是“最新结果的本地可复核性”和“统一理论口径”同时不足。
 
 具体表现：
-- 当前工作区未找到 `/workspace/computational-imaging-1-ncomms/` 目录，因此 round7-10 在项目状态与归档清单中登记的脚本、CSV、PNG 与输出目录都处于“未现场复核”状态。
-- 当前命名空间内已验证存在的技术材料只有状态文件和 `phase-ambiguity-metrics-round6.md`；round7-10 的原始脚本、结果表与图像在本地均未找到。
-- 环境层面已验证：Python、`numpy`、`pandas`、`PIL` 可用；`matplotlib` 当前缺失，因此依赖它的旧绘图脚本即使恢复路径名，也不保证能直接运行。
-- 图片生成最小链路已验证可用：本轮已用 `PIL` 成功生成 PNG 测试图。
-- PDF 编译最小链路已验证可用：本轮已用 `latexmk` 成功编出 1 页测试 PDF。
-- Google Drive 检索当前返回 `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT`，因此云端资料是否存在、是否重复、是否可作为恢复源，当前仍待核实。
-- DSI / PDR / HCI 仍未完成完整推导、完整适用边界说明和可计算实现。
+- 线性任务已有正式区域定义，但不同轮次工件并未全部在当前工作区重新对齐。
+- 项目记忆里已登记 round7-10 的 phase 进展，但当前工作区未现场复核这些工件。
+- 相位恢复 learned-prior / posterior 机制仍缺 solver 级 symmetry-enforced 低误差验证。
+- DSI / PDR / HCI 仍未完成完整推导、适用边界说明和可计算实现。
 - 正文与补充材料仍无投稿级图表体系。
 
 ## 本轮唯一最高优先级
-先恢复当前项目的可运行证据底座并纠正资料索引，而不是直接新增 solver 实验。具体就是：确认 round7-10 工件的真实存放位置、把“记忆中登记但当前工作区缺失”的材料改标为待恢复，并建立一份可继续执行的资料索引，使下一轮 solver 级 symmetry-enforced 检验有真实可复核的起点。
+先把线性 benchmark 的区域定义和指标口径固定成可复算、可复核的基线，并据此为后续补回 round3 / round4 以及 phase 结果对齐建立统一模板。
 
 ## 本轮交付物
-1. 当前项目状态纠偏：把“已登记结果”和“当前现场可核验结果”明确拆开。
-2. 环境核查结论：程序、图片输出、PDF 编译、云端资料访问分别标注为已验证/存在问题。
-3. 新增资料索引文件：`drive-index.md`。
-4. 更新后的监督结论、预审判断与恢复优先级。
+1. 线性区域定义说明：`/workspace/computational-imaging-1-ncomms/linear_region_metric_note_round5.md`
+2. 区域指标对齐脚本：`/workspace/computational-imaging-1-ncomms/round5_region_metric_alignment.py`
+3. 对齐结果：`/workspace/computational-imaging-1-ncomms/round5_outputs/linear_region_metric_alignment.csv`
+4. 对齐摘要：`/workspace/computational-imaging-1-ncomms/round5_outputs/linear_region_metric_alignment_summary.json`
+5. 第一版理论笔记：`/workspace/computational-imaging-1-ncomms/theory_round2_note.md`
+6. 30+ 工作文献表：`/workspace/computational-imaging-1-ncomms/reference_map_round2.md`
 
 ## 完成标准
-- 已明确区分哪些材料是当前工作区已验证存在，哪些只是记忆中登记但本轮未找到。
-- 已明确当前环境是否支持程序运行、图片生成与 PDF 编译。
-- 已把下一轮唯一动作收缩为“先恢复可运行工件，再做 solver 级 symmetry-enforced 检验”。
-- 已补建当前项目的资料索引并写明云端访问阻塞。
+- 不是只给口头定义，而是给出正式符号、区域定义、计算式和适用边界
+- 定义已经和当前本地可复核工件完成至少一轮真实对齐
+- 明确哪些量已可计算，哪些仍只是启发式量
+- 已据此更新项目状态与下一轮优先级
 
 ## 下一轮立即动作
-1. 优先恢复或重建 `/workspace/computational-imaging-1-ncomms/` 下 round7 或 round10 的最小可运行脚本与输出目录，先拿回一个真实可跑的 phase 起点。
-2. 若恢复成功，再把显式 symmetry-enforced averaging 或 mirror-consistency 约束接入该低 measurement-error solver。
-3. 若本地仍无法恢复，则先解决云端资料访问权限，再从长期资料库回填脚本、输出与图表。
+1. 优先补回或重建 round3 / round4 的本地实体工件，并把 round5 的区域定义映射过去。
+2. 再回到相位恢复链，优先检验 solver 级 symmetry-enforced 低误差基线。
+3. 把 `bridge gap` 与 DSI / PDR 的关系推进到更正式的理论笔记。
 
 ## 已真实完成
 - 已从上传材料中抽取项目名称、论文主线、实施方案、候选任务、图表规划与首批参考文献。
@@ -80,128 +78,26 @@
 - 已编写并运行最小双任务基准脚本。
 - 已获得线性 incomplete measurement 任务中的 unsupported connector 现象。
 - 已获得 phase retrieval 中 true object 与 reversed mode 的等测量证据，measurement identity error 为 `4.20e-26` 量级。
-- 已生成第 1 轮结果文件：
-  - `linear_round1_panel.png`
-  - `linear_measurement_mask.png`
-  - `phase_round1_panel.png`
-  - `round1_summary.json`
-  - `round1_metrics.csv`
 - 已在同一线性任务上接入训练型低秩 PCA prior，并真实运行 `round2_linear_pca_prior.py`。
-- 训练型 PCA prior 在观测区误差为 `5.29e-03`，未观测区误差为 `4.49e-02`，说明其在观测约束较弱处更容易引入额外结构。
-- 已新建并真实运行 `round3_linear_autoencoder_prior.py`，在 6 个断裂目标上评估 zero-fill、PCA prior 与非线性 autoencoder prior。
-- round3 聚合结果显示：
-  - zero-fill：观测区 MAE `0.0000`，未观测区 MAE `0.0729`，bridge mean intensity `0.0000`
-  - PCA prior：观测区 MAE `0.0352`，未观测区 MAE `0.1107`，bridge mean intensity `0.5276`
-  - autoencoder prior：观测区 MAE `0.0000`，未观测区 MAE `0.2356`，bridge mean intensity `0.3417`
-- 代表性样例显示，autoencoder prior 在保持观测区一致的同时，会在缺失中段补出连续亮结构。
-- 已在当前工作区新建并真实运行 `round4_linear_measurement_consistent_prior.py`。
-- 已在同一线性 benchmark 上形成 zero-fill、PCA prior、autoencoder projection 与 measurement-consistent latent inverse 四方对照。
-- round4 聚合结果显示：
-  - zero-fill：观测区 MAE `0.0000`，未观测区 MAE `0.0000`，bridge mean intensity `0.0000`
-  - PCA prior：观测区 MAE `0.0000`，未观测区 MAE `0.1887`，bridge mean intensity `0.8264`
-  - autoencoder projection：观测区 MAE `0.0000`，未观测区 MAE `0.4900`，bridge mean intensity `0.4968`
-  - latent inverse：观测区 MAE `0.0000`，未观测区 MAE `0.4891`，bridge mean intensity `0.4964`
-- round4 结果说明：在当前断裂目标 benchmark 中，measurement-consistent 的 latent inverse 基线即使保持观测区精确一致，仍会在未观测 bridge 区域生成非零连接结构。
 - 已完成第一版可检查理论链：
   - 线性 masked-identity 模型下，未观测像素的 DSI = 0、PDR = 1 为精确结论。
   - Fourier magnitude phase retrieval 下，true object 与 reversed mode 的测量等价为精确结论。
 - 已完成 30+ 工作文献表，当前工作文献数为 42。
-- 已在当前工作区重新落地并真实运行线性 round4 重现实验脚本：`/workspace/computational-imaging-1-ncomms/round4_region_formalization_repro.py`。
-- 已生成当前工作区可复核的新输出目录：`/workspace/computational-imaging-1-ncomms/round4_region_formalization_outputs/`。
-- 已生成新的正式定义对齐文件：`/workspace/computational-imaging-1-ncomms/theory_round3_region_formalization.md`。
-- 已在当前工作区新建并真实运行相位恢复 learned-prior 基线脚本：`/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_learned_prior.py`。
-- 已生成新的相位恢复输出目录：`/workspace/computational-imaging-1-ncomms/round5_phase_retrieval_outputs/`。
-- 已生成 round5 结果文件：
-  - `round5_phase_summary.json`
-  - `round5_phase_case_metrics.csv`
-  - `round5_phase_panel.png`
-  - `round5_phase_ambiguity_notes.md`
-- round5 在 4 个 held-out 相位恢复样例上的聚合结果为：
-  - true / reversed 精确 branch 的 measurement error：`1.26e-16`
-  - learned prior 输出的平均 measurement error：`2.52e-01`
-  - learned prior 输出到 true branch 的平均距离：`0.4380`
-  - learned prior 输出到 reversed branch 的平均距离：`1.2072`
-  - mean branch bias：`0.7692`
-  - 4 / 4 个样例均表现为对 true branch 的正偏向
-- 当前重现实验在 6 个断裂目标上的聚合结果为：
-  - zero-fill：观测区 MAE `0.0000`，未支撑区 MAE `0.0000`，bridge mean intensity `0.0000`
-  - PCA prior：观测区 MAE `0.0000`，未支撑区 MAE `0.1186`，bridge mean intensity `0.5756`
-  - autoencoder projection：观测区 MAE `0.0000`，未支撑区 MAE `0.1012`，bridge mean intensity `0.9077`
-  - latent inverse：观测区 MAE `0.0000`，未支撑区 MAE `0.1674`，bridge mean intensity `0.9959`
-- 这一步已经把 observed region、unsupported region、bridge region 以及对应的 observed-region MAE、unsupported-region MAE、bridge mean intensity、bridge L1 error 固定为可复算字段。
-- 已确认一个关键归档事实：记忆中登记的旧 round4 实体路径当前不在工作区，因此本轮新增的是“可复核重现实验工件”，不能把旧路径直接算作已现场复核完成。
-- 已新增 `/workspace/memory/computational-imaging-1-ncomms/phase-ambiguity-metrics-round6.md`，把 round5 中 `true_reversed_measurement_error`、`recovered_measurement_error`、`distance_to_true`、`distance_to_reversed` 与 `branch_bias` 固定为三层量：
-  - exact ambiguity quantity
-  - empirical measurement-consistency quantity
-  - empirical branch-selection quantity
-- 已在该说明中明确：`branch_bias = distance_to_reversed - distance_to_true`，按登记聚合值计算为 `1.2072 - 0.4380 = 0.7692`。
-- 已据此完成本轮优先级判定：下一轮应先补强 phase solver 的 measurement consistency，而不是直接把当前 round5 结果接成统一理论主结论。
-- 已确认一个新的现场限制：当前工作区未找到 round5 的原始脚本与原始输出文件，因此本轮 formalization 是基于已登记项目状态完成的理论/口径推进，不构成对 round5 原始工件的二次现场复核。
-- 已在当前工作区新建并真实运行 ` /workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_rebuild.py`，重建一个可现场复核的 learned-prior phase benchmark。
-- 已生成新的输出目录：`/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/`。
-- 已生成 round7 结果文件：
-  - `round7_phase_summary.json`
-  - `round7_phase_case_metrics.csv`
-  - `round7_phase_panel.png`
-  - `round7_phase_notes.md`
-- round7 在 4 个 held-out 相位恢复样例上的聚合结果为：
-  - true / reversed 精确 branch 的 measurement error：`1.39e-16`
-  - rebuilt learned prior 输出的平均 measurement error：`9.54e-03`
-  - rebuilt learned prior 输出到 true branch 的平均距离：`0.9250`
-  - rebuilt learned prior 输出到 reversed branch 的平均距离：`0.7775`
-  - mean branch bias：`-0.1475`
-  - 仅 `1 / 4` 个样例为正 branch bias
-- 这一步真实推进了“先降 solver error”的瓶颈，但同时暴露出一个更关键的新事实：当 measurement consistency 显著改善后，branch bias 并没有稳定保持为对 true branch 的正偏向，因此当前 phase 结果仍不足以直接支撑统一理论接口。
-- 已在当前工作区新建并真实运行 `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_scan.py`，对 prior family、训练随机种子和初始化做受控稳健性扫描。
-- 已生成新的输出目录：`/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/`。
-- 已生成 round8 结果文件：
-  - `round8_phase_summary.json`
-  - `round8_phase_case_metrics.csv`
-  - `round8_phase_panel.png`
-  - `round8_phase_notes.md`
-- round8 共真实运行 `144` 次 phase solve，聚合结果为：
-  - true / reversed 精确 branch 的 measurement error：`1.08e-16`
-  - 平均 `recovered_measurement_error`：`1.20e-02`
-  - 中位数 `recovered_measurement_error`：`6.79e-03`
-  - 最大 `recovered_measurement_error`：`6.07e-02`
-  - 整体平均 `branch_bias`：`0.0105`
-  - 正 branch bias 比例：`0.535`
-  - 负 branch bias 比例：`0.465`
-- 按 prior family 分组后：
-  - `true_biased`：平均 `recovered_measurement_error = 1.14e-02`，平均 `branch_bias = 0.6893`，正偏向比例 `1.000`
-  - `balanced`：平均 `recovered_measurement_error = 1.33e-02`，平均 `branch_bias = 0.0752`，正偏向比例 `0.604`
-  - `reversed_biased`：平均 `recovered_measurement_error = 1.14e-02`，平均 `branch_bias = -0.7330`，正偏向比例 `0.000`
-- 这一步真实推进了当前唯一主瓶颈：在保持低 measurement-error 的前提下，当前 phase branch selection 会随 prior orientation bias 系统性翻转，因此“稳定 prior-induced branch selection”这一写法目前不能成立。
-- 已在当前工作区新建并真实运行 `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_scan.py`，对 training true-orientation ratio 做连续扫参。
-- 已生成新的输出目录：`/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/`。
-- 已生成 round9 结果文件：
-  - `round9_phase_summary.json`
-  - `round9_phase_case_metrics.csv`
-  - `round9_phase_panel.png`
-  - `round9_phase_notes.md`
-- round9 共真实完成 `1056` 次 exact-ambiguity branch evaluation，聚合结果为：
-  - 平均 exact ambiguity quantity：`1.39e-16`
-  - 平均 `recovered_measurement_error`：`7.11e-17`
-  - 整体平均 `branch_bias`：`-0.0280`
-  - 正 branch bias 比例：`0.495`
-- 按 orientation ratio 分组后，平均 `branch_bias` 与正偏向比例分别为：
-  - `0.0`：`-0.6078`，`0.188`
-  - `0.5`：`-0.0894`，`0.479`
-  - `0.6`：`0.1951`，`0.583`
-  - `1.0`：`0.4125`，`0.729`
-- 这一步真实推进了当前唯一主瓶颈：当前 branch sign 不仅会随 prior family 翻转，而且会随 orientation ratio 连续跨零变化；因此下一轮不该再追问“有没有 bias”，而应直接检验“去偏置后 residual bias 是否归零”。
-- 已在当前工作区新建并真实运行 `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair.py`，重建去偏置 exact-pair benchmark，并生成 `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/`。
-- round10 共真实完成 `2048` 次 exact-pair evaluation，其中：
-  - `balanced_density_prior`：平均 exact ambiguity quantity `1.04e-16`，平均 `recovered_measurement_error = 4.79e-17`，平均 `branch_bias = 0.0962`，平均 normalized branch bias `0.0820`，`choose_true_ratio = 0.541`
-  - `mirror_averaged_posterior`：平均 exact ambiguity quantity `1.04e-16`，平均 `recovered_measurement_error = 5.13e-17`，平均 `branch_bias = 0.0041`，平均 normalized branch bias `0.0039`，`choose_true_ratio = 0.502`
-- 这一步真实推进了当前唯一主瓶颈：当前证据不支持“balanced sampling 会自动无偏”，而是更支持“显式 symmetry-enforced posterior averaging 才能把 residual branch preference 压回近零”。
+- 项目记忆中已登记后续 phase 任务推进到 rebuilt low-error solver、orientation-ratio 连续扫描和 de-biased exact-pair benchmark。
+- 已完成线性 benchmark 的第一版正式区域定义说明，明确了 observed region、unsupported region、bridge region 与 peripheral unsupported region。
+- 已真实运行 `round5_region_metric_alignment.py`，并用当前本地可复核的 round1 / round2 工件完成一次区域指标对齐计算。
+- round5 对齐结果显示：
+  - zero-fill：observed MAE `0.0000`，bridge mean `0.0000`，bridge gap `-0.0365`
+  - round1 connected vertical bar：observed MAE `0.0875`，bridge mean `0.8750`，bridge gap `0.8385`
+  - round2 PCA prior：observed MAE `0.0541`，bridge mean `0.6035`，bridge gap `0.5670`
+- 当前 benchmark 的 bridge 区域真值均值约为 `0.0365`，因此后续写作中 `bridge gap` 比单独的 `bridge mean intensity` 更稳。
 
 ## 已部分完成但仍缺关键环节
 - 文献：已补到 30+，并形成按主题分类的工作文献表；但尚未整理成最终 BibTeX 并逐条嵌入正文/补充材料。
 - 理论：已有第一版可检查理论链，并补上了线性 benchmark 的区域与指标正式定义；但仍缺一般压缩成像、一般非线性相位恢复和 calibrated HCI 的完整推导。
-- 任务设计：压缩成像/incomplete measurement 与相位恢复已形成最小真实运行结果；线性任务已有训练型低秩 prior、前馈式非线性 autoencoder prior、measurement-consistent latent inverse prior 以及统一区域指标；相位恢复除已登记 round5 结果外，现已补出 round7 的低 measurement-error 重建基线、round8 的 branch bias 稳健性扫描、round9 的 orientation-bias 连续响应曲线，以及 round10 的 rebuilt de-biased exact-pair benchmark；但仍缺 solver 级 symmetry-enforced baseline、posterior / diffusion / Bayesian 版本以及投稿级 benchmark。
-- 图表：已有第 1 轮结果图，但仍属于内部实验图，不是投稿定稿图。
-- 归档：当前工作区已新增 round4 重现实验工件；但历史 round1 / round2 以及记忆中登记的旧 round4 工件仍未在现场找到，原始归档仍需后续补回。
+- 任务设计：压缩成像/incomplete measurement 与相位恢复已形成最小真实运行结果；线性任务已有训练型低秩 prior、前馈式非线性 autoencoder prior、measurement-consistent latent inverse prior 以及统一区域指标；相位恢复在项目记忆中已登记 round7-10 的受控 benchmark 进展，但当前工作区仍需补齐其本地可复核工件。
+- 图表：已有内部研究图，但仍不是投稿定稿图。
+- 归档：当前工作区已确认存在 round1、round2 以及本轮新增的 round5 区域对齐工件；其余更晚轮次工件仍需继续补回或重建。
 
 ## 尚未开始
 - DSI / PDR / HCI 的完整论文级推导文稿
@@ -227,23 +123,14 @@
 - 期刊匹配度：中
 
 当前最拖累接收概率的短板：
-1. 当前虽已证明显式 symmetry-enforced posterior averaging 可在 rebuilt exact-pair benchmark 中把 residual bias 压回近零，但这一点还没有推进到真实低误差 learned phase solver
+1. solver 级 symmetry-enforced 低误差 phase baseline 还没有形成当前工作区可复核闭环
 2. DSI / PDR / HCI 仍没有完整论文级推导与适用边界说明
 3. 图表体系、正文、补充材料和多任务结果矩阵仍远未补齐
 
 ## 最近一次重要更新摘要
 2026-04-25：根据上传项目草案完成项目初始化，确立“先建立并跑通最小双任务证据链”为当前唯一最高优先级，并启用独立项目记忆文件集。
-2026-04-25：完成第 1 轮最小双任务基准运行。线性任务中 prior library selection 选择了 `connected_vertical_bar`，其未观测区域误差高于观测区域误差；相位恢复任务中 prior library selection 选择了 `reversed_ambiguity_mode`，且该分支相对 reversed mode 的误差为 0，measurement identity error 为 `4.20e-26`。
-2026-04-25：在线性任务上完成训练型低秩 PCA prior 初测。PCA prior 残差为 `7.28e-02`，观测区误差为 `5.29e-03`，未观测区误差为 `4.49e-02`，表明 learned prior 同样更容易在 unsupported region 引入结构。
-2026-04-25：在线性任务上完成非线性 autoencoder prior 初测。基于 256 个 connected-bar 训练样本训练小型自编码器，并在 6 个断裂目标上真实运行；autoencoder prior 的平均观测区 MAE 为 `0.0000`，未观测区 MAE 为 `0.2356`，bridge mean intensity 为 `0.3417`，说明 learned prior 会在 measurement mask 未覆盖区域补出连接结构。
-2026-04-25：在线性任务上补做 measurement-consistent learned prior 逆问题基线。已在当前工作区真实运行 `round4_linear_measurement_consistent_prior.py`，并输出 `round4_summary.json`、`round4_case_metrics.csv`、`round4_linear_measurement_consistent_panel.png` 与 `round4_linear_measurement_mask.png`；结果显示 latent inverse 在观测区 MAE 为 `0.0000` 的同时，未观测区 MAE 为 `0.4891`，bridge mean intensity 为 `0.4964`，说明 measurement-consistent 求解并未消除 unsupported bridge hallucination。
-2026-04-25：完成第一版理论笔记与工作文献表。理论上已把 masked-identity 下的 DSI/PDR 和 Fourier magnitude 下的 ambiguity branch 写成可检查形式；文献已扩展到 42 条并按主题分类。
-2026-04-26：更新项目运行规则。后续由自研智能体按每 2 小时 1 轮推进；停止标准收紧为“接收概率 >70%”与“evidence / 数据 / 图 / 参考文献全部补齐”同时成立；示意图允许用 GPT-imag-2.0 起稿，但非示意图必须全部使用真实数据，理论推导必须详实可靠。
-2026-04-26：在当前工作区重新落地并真实运行 `round4_region_formalization_repro.py`，生成 `round4_reproduced_summary.json`、`round4_reproduced_case_metrics.csv`、`round4_reproduced_panel.png`、`round4_reproduced_mask.png` 与 `round4_region_metadata.json`；同时新增 `theory_round3_region_formalization.md`，把 observed / unsupported / bridge 三类区域及其指标定义固定为可复算口径。此举补上了线性 benchmark 的第一版正式判据，但尚未补齐相位恢复 learned prior / posterior 结果链。
-2026-04-26：在当前工作区新建并真实运行 `round5_phase_retrieval_learned_prior.py`，训练长度为 64 的一维非对称对象 autoencoder decoder prior，并在 4 个 held-out 样例上仅通过 Fourier magnitude 测量做 latent 优化。生成 `round5_phase_summary.json`、`round5_phase_case_metrics.csv`、`round5_phase_panel.png` 与 `round5_phase_ambiguity_notes.md`。结果显示 true / reversed 分支的精确 measurement error 为 `1.26e-16` 量级，而 learned prior 输出的 mean branch bias 为 `0.7692`，且 4 / 4 个样例均更接近 true branch；但其平均 measurement error 仍为 `2.52e-01`，因此当前只能算“第一版经验性 branch-selection 证据”，不能包装成强求解器或一般理论结论。
-2026-04-26：新增 `/workspace/memory/computational-imaging-1-ncomms/phase-ambiguity-metrics-round6.md`。本轮未新增真实数值实验，而是把 round5 已登记字段正式拆分为 exact ambiguity quantity、empirical measurement-consistency quantity 与 empirical branch-selection quantity，并明确 `branch_bias = distance_to_reversed - distance_to_true`。基于这一步，项目当前唯一主瓶颈已从“指标边界不清”切换为“phase solver 的 measurement consistency 仍偏弱”，因此下一轮唯一最高优先级改为先补强 phase baseline，而不是直接推进统一理论主接口。
-2026-04-26：在当前工作区新建并真实运行 `round7_phase_pca_solver_rebuild.py`，重建了一个可现场复核的 learned-prior phase retrieval benchmark，并生成 `/workspace/computational-imaging-1-ncomms/round7_phase_pca_solver_outputs/`。该 rebuilt PCA prior baseline 在 4 个 held-out 样例上的平均 `recovered_measurement_error` 为 `9.54e-03`，显著低于已登记 round5 的 `2.52e-01`；但其平均 `branch_bias = -0.1475`，且只有 `1 / 4` 个样例为正偏向，说明一旦 solver error 降低，当前 phase branch preference 并不稳定。由此，项目当前唯一主瓶颈已从“先降 measurement error”切换为“验证低误差 phase branch bias 的稳健性与机制来源”，统一理论接口仍不能提前闭合。
-2026-04-26：在当前环境中重新落地并真实运行 `round8_phase_branch_robustness_scan.py`，生成 `/workspace/computational-imaging-1-ncomms/round8_phase_branch_robustness_outputs/`。本轮共完成 `144` 次低误差 phase solve，整体平均 `recovered_measurement_error = 1.20e-02`、平均 `branch_bias = 0.0105`。更关键的是，`true_biased` prior family 下全部 `48 / 48` 次为正偏向，而 `reversed_biased` 下全部 `48 / 48` 次为负偏向，说明当前 branch selection 会随 prior orientation bias 系统性翻转。因此项目当前唯一主瓶颈进一步收缩为：必须把 phase branch selection 的机制来源从训练分布偏置与可推广 prior effect 中分离出来，才能决定后续理论写法。
-2026-04-26：在当前工作区新建并真实运行 `round9_phase_orientation_ratio_scan.py`，生成 `/workspace/computational-imaging-1-ncomms/round9_phase_orientation_ratio_outputs/`。本轮共完成 `1056` 次 exact-ambiguity branch evaluation，平均 exact ambiguity quantity 为 `1.39e-16`，平均 `recovered_measurement_error = 7.11e-17`。更关键的是，平均 `branch_bias` 随 training true-orientation ratio 从 `0.0` 的 `-0.6078` 连续跨越到 `1.0` 的 `0.4125`，并在 `0.5`–`0.6` 附近跨零。这说明 orientation bias 本身已足以驱动 branch sign 连续变化，因此项目当前唯一主瓶颈进一步收缩为：必须补一个去偏置或后验平均型 baseline，直接检查对称先验下 residual branch bias 是否归零。
-2026-04-26：在当前工作区新建并真实运行 `round10_phase_debiased_exact_pair.py`，生成 `/workspace/computational-imaging-1-ncomms/round10_phase_debiased_exact_pair_outputs/`。该 rebuilt de-biased benchmark 在 `1024` 次 `balanced_density_prior` evaluation 中仍测到小但非零的 residual bias：平均 `branch_bias = 0.0962`、平均 normalized branch bias `0.0820`、`choose_true_ratio = 0.541`、二项检验 `p = 0.00946`；而 `1024` 次 `mirror_averaged_posterior` control evaluation 则把 residual bias 压到近零：平均 `branch_bias = 0.0041`、平均 normalized branch bias `0.0039`、`choose_true_ratio = 0.502`、`p = 0.925`。由于两类 baseline 的 `recovered_measurement_error` 都维持在 `5e-17` 量级，这一步说明当前更合理的下一问已经从“对称先验下 residual bias 会不会消失”收缩为“这种 symmetry-enforced cancellation 能否推进到真实低误差 learned solver，而不是只停留在 rebuilt scorer 层”。
-2026-04-26：执行一轮状态核查后确认，当前 `memory/computational-imaging-1-ncomms/` 命名空间里只有状态文件与 `phase-ambiguity-metrics-round6.md` 能被现场读取；项目状态中登记的 `/workspace/computational-imaging-1-ncomms/` round7-10 工件当前未在工作区找到。与此同时，本轮已验证 Python、`numpy`、`pandas`、`PIL`、PNG 生成与 `latexmk` PDF 编译链路可用，但 `matplotlib` 缺失，Google Drive 检索因权限不足失败。因此，项目当前唯一主瓶颈已从“直接做 solver 级 symmetry-enforced 检验”改判为“先恢复真实可运行工件并补齐资料索引，再继续 solver 级实验”。 
+2026-04-25：完成第 1 轮最小双任务基准运行。线性任务中 prior library selection 选择了 `connected_vertical_bar`；相位恢复任务中 prior library selection 选择了 `reversed_ambiguity_mode`，measurement identity error 为 `4.20e-26`。
+2026-04-25：在线性任务上完成训练型低秩 PCA prior 初测。
+2026-04-25：完成第一版理论笔记与工作文献表。
+2026-04-26：更新项目运行规则。后续由自研智能体按每 2 小时 1 轮推进；停止标准收紧为“接收概率 >70%”与“evidence / 数据 / 图 / 参考文献全部补齐”同时成立。
+2026-04-26：完成 round5 线性区域定义与指标对齐。已新增 `linear_region_metric_note_round5.md` 与 `round5_region_metric_alignment.py`，并基于当前本地 round1 / round2 工件输出区域指标表；结果表明 `bridge gap` 比单独 `bridge mean intensity` 更适合作为当前 benchmark 的桥接幻觉量。
