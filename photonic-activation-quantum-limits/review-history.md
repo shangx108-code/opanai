@@ -95,3 +95,41 @@ New evidence added: device-aware activation scan, Monte Carlo two-moons benchmar
   1. benchmark breadth is still limited
   2. theory is partially rigorous but not yet comprehensive
   3. platform-anchored feasibility map is still missing
+
+## Round 3 Evidence Update
+
+Date: 2026-04-26
+New evidence added: weak-signal benchmark and figure-ready real-data plots
+
+### Reviewer 1
+
+- Updated view: Two benchmarks plus real-data plots make the manuscript materially stronger, but the benchmark suite still needs a sharper connection to device relevance.
+- Acceptance probability: 46%
+
+### Reviewer 2
+
+- Updated view: The manuscript is improved by showing that AQMA is not universally best. This helps credibility, but the physics narrative around why different tasks prefer different nonlinearities still needs strengthening.
+- Acceptance probability: 44%
+
+### Reviewer 3
+
+- Updated view: The theory remains careful and properly scoped, which is good. The next gain must come from extending the Methods-grade derivation and avoiding inflated language.
+- Acceptance probability: 39%
+
+### Reviewer 4
+
+- Updated view: The paper is easier to believe now that both favorable and unfavorable regimes are shown. The storyline is closer to a publishable framework article.
+- Acceptance probability: 51%
+
+### Reviewer 5
+
+- Updated view: The device scan plus figure drafts help, but the platform comparison is still too generic for a final acceptance recommendation.
+- Acceptance probability: 45%
+
+### Composite Assessment
+
+- Current editorial tendency: still major revision, but plausibly moving toward the upper end of that range
+- Current main drag items:
+  1. platform-specific feasibility interpretation is still missing
+  2. the benchmark-to-theory linkage needs cleaner exposition
+  3. the strongest proven lower bound still covers only a subset of the full manuscript claim

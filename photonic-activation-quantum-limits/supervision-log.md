@@ -59,3 +59,27 @@ The next round should prioritize:
 1. a second benchmark or ablation that tests whether AQMA retains value under harsher noise or smaller feature budgets
 2. a Methods-quality derivation note and notation cleanup
 3. figure-ready source tables for the main data plots
+
+## 2026-04-26 Round 3
+
+### Overall Assessment
+
+The project now looks more like a serious framework paper and less like an optimistic concept memo. The new weak-signal benchmark is especially useful because it introduces a realistic limiting case rather than simply adding another favorable result.
+
+### What Improved
+
+1. The benchmark suite now contains both a task where measurement-induced activations perform strongly and a task where their gains are modest.
+2. Real-data figure drafts now exist, so the project has started to move from tables toward manuscript-grade presentation.
+3. The manuscript scope is becoming more disciplined: the contribution is increasingly framed as a comparative resource framework rather than a universal advantage claim.
+
+### Current Highest Risk
+
+The remaining risk is no longer lack of data alone. It is interpretive coherence: the paper must explain why the evidence is mixed without sounding inconsistent or defensive.
+
+### Plan Correction
+
+The next round should prioritize:
+
+1. writing a platform-facing discussion section that explains which device windows correspond to which parts of the current scans
+2. turning the current real-data plots into captioned figure panels with consistent notation
+3. expanding the Methods note into reproducible manuscript-ready text with symbol definitions and seed reporting
