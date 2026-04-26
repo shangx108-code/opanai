@@ -34,3 +34,35 @@
 ### 自动化迭代任务判断
 - 当前只应保留这一轮每 2 小时 1 次的项目迭代。
 - 尚未发现同项目重复迭代任务，但后续若新增任务，需检查是否冲突。
+
+## 2026-04-26 Round 2
+
+### 当前检查范围
+- round2 是否真正把 forward model 升级为 wave-optics pupil
+- 结果是否仍支持共路 pilot 主线
+- 是否出现过度陈述
+
+### 已确认正确的部分
+- 已真实运行 `round2_zernike_waveoptics.py` 并输出 CSV、JSON、Markdown 和 PNG。
+- round2 forward model 使用了基于 Zernike defocus + astigmatism 的 pupil 来生成 PSF。
+- OOD 集上，共路 pilot 的平均 PSNR 为 `38.422 dB`，优于无 reference 的 `37.069 dB` 与非共路的 `37.078 dB`。
+- OOD 集上，共路 pilot 的 mean PSF MSE 为 `4.217e-06`，优于无 reference 与非共路。
+
+### 当前存在的问题或错误
+- 仍然没有真实 passive diffractive processor 层面的对照。
+- round2 的 coefficient L1 error 没有优于无 reference，因此不应把“参数恢复更准”写成主结论。
+
+### 尚未验证或待核实的部分
+- passive diffractive processor 是否保留相同优势
+- turbulence / thin phase screen 是否仍为阳性
+- 参考文献链与期刊匹配度
+
+### 对当前阶段真实状态的判断
+- 当前已经越过“纯 idea / 纯 surrogate”阶段，进入“有两轮真实机制证据，但仍未触及核心器件证据”的状态。
+
+### 是否支持进入下一阶段
+- 支持进入 round3 最小被动衍射处理器对照。
+- 不支持进入正式成稿。
+
+### 自动化迭代任务判断
+- 继续保留每 2 小时 1 次的单项目迭代。

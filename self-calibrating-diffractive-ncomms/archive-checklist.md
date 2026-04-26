@@ -8,9 +8,15 @@
 - round1 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round1_summary.json`
 - round1 汇总 Markdown：`/workspace/self-calibrating-diffractive-ncomms/outputs/round1_summary.md`
 - round1 结果面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round1_selfcalibration_panel.png`
+- round2 理论说明：`/workspace/self-calibrating-diffractive-ncomms/round2_theory_note.md`
+- round2 数值脚本：`/workspace/self-calibrating-diffractive-ncomms/round2_zernike_waveoptics.py`
+- round2 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_metrics.csv`
+- round2 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.json`
+- round2 汇总 Markdown：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.md`
+- round2 结果面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_zernike_waveoptics_panel.png`
 
 ## 待归档
-- round2 wave-optics 最小对照脚本与结果
+- round3 passive diffractive processor 最小对照脚本与结果
 - 文献索引与 reference ledger
 - 后续 manuscript / supplement 源文件
 - 正式图号映射表

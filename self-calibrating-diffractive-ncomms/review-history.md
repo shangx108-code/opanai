@@ -19,3 +19,22 @@
 ### 接收概率变化依据
 - 从“无项目状态”提升到“有最小真实机制验证”，因此项目从不可判断提升到 `8%–12%` 的非常早期水平。
 - 该提升不来自写作，而来自实际运行结果。
+
+## Round 2 内部严格审稿
+
+### 检查范围
+- round2 是否比 round1 真正更接近论文主张
+- 当前结果是否足以支撑更强 claims
+
+### 主要意见
+1. round2 是实质性前进，因为 forward model 已从 Gaussian surrogate 升到 Zernike wave-optics pupil。
+2. 共路 pilot 的图像恢复优势在 OOD stronger-aberration 集上仍然存在，因此主线继续成立。
+3. 不能把 coefficient L1 error 写成 round2 的主亮点；更稳妥的状态量是 PSF 匹配误差和重建质量。
+4. 当前仍然缺 ordinary D2NN vs pilot-assisted D2NN 的最小真实 processor 对照，这仍是下一轮唯一主瓶颈。
+
+### 审稿判断
+- 当前仍不具备投稿条件。
+- 但项目已从“是否值得继续做”提升到“值得投入下一轮器件级最小对照”。
+
+### 接收概率变化依据
+- round2 提供了比 round1 更接近论文主张的真实物理 forward model，因此将接收概率谨慎上调到 `14%–18%`。
