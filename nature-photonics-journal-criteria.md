@@ -21,14 +21,14 @@
 - A stronger trainable task benchmark now has a real seed-robustness check: the `22/30` positive-condition headline survived across three independently reseeded repeats, and the fragile conditions are now explicitly localized rather than hidden.
 - The manuscript Results section now states that stronger trainable-plus-robustness systems evidence directly, including the repeat-stable `22/30` headline, the `21/30` robust-above-threshold count, and the localized fragile `two_moons` regimes.
 - The Figure-4-facing package now also reflects that stronger systems evidence: the regenerated figure object carries an evidence-bounded synchronization note, and the figure submission package and manuscript caption now distinguish explicitly between the plotted surrogate scan and the separate trainable robustness extension.
+- The abstract, discussion and methods now also state that same bounded surrogate-plus-trainable systems message, so the manuscript no longer contains a paper-level consistency gap around Figure 4.
 
 ## Criteria Still Not Satisfied
-- Full-paper harmonization of abstract, discussion and methods to the stronger systems evidence.
 - Broader systems-level generality beyond the current small trainable benchmark.
 - Final submission archive bundle.
 
 ## Current Main Risk Relative To Journal Standard
-- The project now has a synchronized Figure-4 package, but the manuscript as a whole still does not state that same bounded systems message everywhere. Abstract/discussion/methods lag is now the main risk.
+- The project now has a coherent manuscript-scale systems story, but the underlying systems evidence remains narrow. Reviewer confidence is therefore more likely to be limited by breadth than by wording consistency.
 
 ## Immediate Criterion To Satisfy Next
-- Harmonize abstract, discussion and methods so the stronger trainable benchmark plus seed-robustness outputs are represented consistently across the whole paper before final archive assembly.
+- Add one bounded systems-evidence strengthening result beyond the current small trainable benchmark before final archive assembly.

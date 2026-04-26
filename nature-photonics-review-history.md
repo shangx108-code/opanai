@@ -540,3 +540,49 @@
 
 ## Next Immediate Review-Driven Action
 - Harmonize abstract, discussion and methods to the now-synchronized Figure-4 package before expanding the evidence base further.
+
+## Round 11 Full-Paper-Harmonization Review
+- Date: 2026-04-26
+- Basis: project-specific Nature Photonics namespace only, using revised `manuscript-v1.md`, rendered `manuscript-v1.pdf`, the synchronized Figure-4 package, and the saved seed-robustness summaries
+
+### Material Reviewed
+- revised `manuscript-v1.md`
+- rendered `manuscript-v1.pdf`
+- revised `figure4_submission_package.md`
+- regenerated `figure4_task_level_panel.png`
+- `trainable_task_benchmark_seed_robustness/seed_robustness_summary.md`
+- `trainable_task_benchmark_seed_robustness/seed_robustness_summary.json`
+
+### Reviewer 1: Innovation And Journal Match
+- One-line assessment: journal fit improves because the paper now states its strongest bounded systems message consistently, but significance is still capped by narrow benchmark breadth.
+- Acceptance estimate: 68%
+- Main reason: the manuscript no longer undersells its best evidence, yet the paper still does not show broader systems generality beyond the current small trainable slice.
+
+### Reviewer 2: Theory Rigor And Mechanism
+- One-line assessment: rigor perception improves because the abstract, discussion and methods now preserve the same surrogate-versus-trainable claim boundary already visible in the Results and figure package.
+- Acceptance estimate: 70%
+- Main reason: the paper is now more internally disciplined and easier to trust, but no new derivation or broader systems evidence was added in this run.
+
+### Reviewer 3: Method And Computational Reliability
+- One-line assessment: methods credibility improves modestly because the trainable robustness workflow is now described explicitly, but confidence remains capped by the small benchmark scope.
+- Acceptance estimate: 65%
+- Main reason: the evidence stack is better documented, though no new task, architecture or robustness dimension was computed here.
+
+### Reviewer 4: Results, Figures, And Evidence Support
+- One-line assessment: reviewer-visible evidence support is stronger because the full paper now carries one coherent systems message instead of splitting it across sections unevenly.
+- Acceptance estimate: 69%
+- Main reason: the stronger `22/30` three-repeat result is now summarized honestly at paper scale, but the supporting systems benchmark remains narrow.
+
+### Reviewer 5: Writing Quality And Persuasion
+- One-line assessment: persuasion improves because the manuscript now reads like one consistent argument rather than a paper whose best evidence lives only in the Results and figure note.
+- Acceptance estimate: 70%
+- Main reason: full-paper consistency is materially better, but the next jump in confidence requires real evidence breadth rather than more rewriting.
+
+## Updated Summary
+- Genuine completion in this run: the abstract, discussion and methods were revised to match the stronger trainable-plus-robustness evidence, and `manuscript-v1.pdf` was re-rendered successfully as a 9-page PDF object.
+- Still incomplete: broader systems-level evidence beyond the current small trainable benchmark and the final submission archive.
+- Current five-reviewer range: `65-70%`.
+- Stop condition status: not met; not all five reviewer estimates are above 70%.
+
+## Next Immediate Review-Driven Action
+- Execute one bounded systems-evidence strengthening action beyond the current small trainable benchmark before spending another round on packaging.

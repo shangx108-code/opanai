@@ -1,11 +1,11 @@
 # Nature Photonics Project State
 
 ## Last Updated
-- Date: 2026-04-25
-- Run type: scheduled continuation after Figure-4 figure-facing synchronization to the trainable-plus-robustness evidence
+- Date: 2026-04-26
+- Run type: scheduled continuation after full-paper harmonization of abstract, discussion and methods to the trainable-plus-robustness evidence
 
 ## Current Stage
-- Stage: Manuscript revision after figure-facing synchronization; the stronger systems evidence now reaches the Figure-4 object and caption package, but has not yet been harmonized through the full paper text
+- Stage: Manuscript revision after full-paper harmonization; the stronger systems evidence now reaches the abstract, results, discussion, methods and Figure-4 package, but broader systems evidence is still narrow
 
 ## Current Overall Goal
 - Build a Nature Photonics-competitive theory-and-simulation paper on quantum limits of nonlinear activation in photonic neural networks, with a quantitative resource framework, explicit same-axis comparisons, and submission-grade evidence.
@@ -37,17 +37,16 @@
 - Completed in this run: the manuscript source was rendered successfully back to a real 9-page `manuscript-v1.pdf`.
 
 ## Single Main Bottleneck
-- The single main bottleneck is now full-paper harmonization: the Figure-4 object and caption package now reflect the stronger trainable and seed-robust systems evidence, but the abstract, discussion and methods still lag behind that updated evidence boundary.
+- The single main bottleneck is now systems-evidence breadth beyond the current small trainable benchmark: the paper package is internally consistent again, but reviewer confidence is still capped by narrow task and architecture coverage rather than by manuscript wording drift.
 
 ## Single Highest-Priority Action Completed In This Run
-- Synchronized the Figure-4 figure-facing package to the stronger trainable-hidden-layer plus three-repeat seed-robustness evidence by regenerating the plotted figure with an evidence-bounded note, revising the Figure-4 submission package, revising the manuscript caption, and re-rendering the manuscript PDF.
+- Harmonized the abstract, discussion and methods in `manuscript-v1.md` to the stronger trainable-hidden-layer plus three-repeat seed-robustness evidence, then re-rendered and verified the manuscript PDF.
 
 ## Deliverable From This Run
-- Figure-facing synchronization package for the stronger systems evidence:
-  - the plotted Figure-4 panels remain explicitly the saved minimal surrogate scan rather than being silently relabeled
-  - the regenerated figure object now carries a note citing the stronger trainable-hidden-layer benchmark and its three-repeat robustness result
-  - the revised Figure-4 caption package now states the surrogate-versus-trainable distinction explicitly and keeps the fragile `two_moons` caveats visible
-  - the revised manuscript caption now matches that same bounded interpretation
+- Full-paper harmonization package for the stronger systems evidence:
+  - the abstract now names the surrogate benchmark and the separate trainable-hidden-layer three-repeat extension in one bounded summary
+  - the discussion now treats the evidence as a surrogate-plus-trainable robustness package rather than a surrogate-only story
+  - the methods now include an explicit `Trainable robustness extension` subsection tied to the saved benchmark and reseeding scripts
   - the updated manuscript source was rendered successfully back to a 9-page PDF object
 
 ## What Is Genuinely Completed
@@ -75,17 +74,20 @@
 - Completed: regenerated the Figure-4 SVG, PNG and PDF from that revised script.
 - Completed: revised the Figure-4 submission package and the manuscript caption so the figure-facing story no longer lags behind the Results prose.
 - Completed: re-rendered the manuscript PDF after the Figure-4 synchronization pass.
+- Completed in this run: revised the manuscript abstract so it now states the surrogate benchmark and the separate `22/30` three-repeat trainable robustness extension together, with the `21/30` robust-above-threshold count and the localized fragile `two_moons` caveat.
+- Completed in this run: revised the discussion so it now says explicitly that representation learning recovers only part of the negative `two_moons` region rather than erasing the task dependence.
+- Completed in this run: revised the methods section to add a dedicated trainable robustness extension subsection tied directly to `trainable_task_benchmark.py` and `trainable_task_benchmark_seed_robustness.py`.
+- Completed in this run: re-rendered `manuscript-v1.pdf` successfully after that harmonization pass and verified it as a 9-page PDF object.
 
 ## What Is Still Incomplete
-- Incomplete: abstract harmonization to the stronger trainable-plus-robustness systems evidence remains incomplete.
-- Incomplete: discussion and methods harmonization to the stronger systems evidence remains incomplete.
+- Incomplete: broader systems-level evidence beyond the current small trainable benchmark remains absent.
 - Incomplete: final submission archive package.
-- Incomplete: all five reviewer acceptance estimates remain below 70%.
+- Incomplete: all five reviewer acceptance estimates remain below or at 70%, so the stop condition is not met.
 
 ## Acceptance Probability Snapshot
 - Status: improved, but still below submission readiness.
-- Conservative current estimate: `67-69%`.
-- Basis: the stronger trainable benchmark and the repeat-stable `22/30` result are now visible not only in the Results prose but also in the regenerated Figure-4-facing package, which reduces the earlier synchronization risk. The estimate remains capped because abstract, discussion and methods are still not harmonized to that updated evidence boundary, the benchmark remains small-scale, and the final submission archive is absent.
+- Conservative current estimate: `68-70%`.
+- Basis: the stronger trainable benchmark and the repeat-stable `22/30` result now propagate through the abstract, results, discussion, methods and Figure-4 package, which closes the prior full-paper consistency gap. The estimate remains capped because the systems evidence still comes from a small trainable benchmark plus three repeats rather than from broader task or architecture coverage, and the final submission archive is still absent.
 
 ## Recent Update Summary
 - Recovered the real project state from the Nature Photonics-only namespace rather than borrowing from other projects.
@@ -103,6 +105,8 @@
 - Revised the Figure-4 rendering script so the figure object itself now carries an evidence-bounded synchronization note sourced from the saved trainable robustness summary.
 - Revised the Figure-4 submission package and manuscript caption to make the surrogate-versus-trainable distinction visible at figure level rather than only in surrounding prose.
 - Regenerated the Figure-4 outputs and re-rendered `manuscript-v1.pdf`, which now verifies as a 9-page PDF object.
+- Revised the abstract, discussion and methods so the full paper now states the same bounded surrogate-plus-trainable systems message rather than leaving that stronger evidence localized to the Results and Figure-4 package.
+- Re-rendered `manuscript-v1.pdf` after that full-paper harmonization pass and verified it again as a 9-page PDF object.
 
 ## Next Immediate Action
-- Harmonize the abstract, discussion and methods to the now-synchronized Figure-4 package so the full paper states one consistent systems claim boundary.
+- Execute one bounded systems-evidence strengthening action beyond the current small trainable benchmark, preferably one additional trainable benchmark slice that tests whether the current design rule survives beyond the present task/architecture scope.

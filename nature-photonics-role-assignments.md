@@ -1,74 +1,74 @@
 # Nature Photonics Role Assignments
 
 ## Current Phase
-- The stronger trainable-plus-robustness evidence now reaches the Figure-4 object and caption package; the immediate next phase is to harmonize the remaining paper sections to that stronger evidence.
+- The full paper now states the stronger trainable-plus-robustness evidence consistently; the immediate next phase is to widen the systems evidence without breaking that bounded claim discipline.
 
 ## Role Task Table
 
 ### Coordinator
-- Current task: close the remaining gap between the synchronized Figure-4 package and the rest of the manuscript.
-- Input: revised Figure-4 outputs, revised `figure4_submission_package.md`, revised manuscript caption, current review history.
-- Output: one bounded full-paper harmonization target that upgrades consistency without widening the paper's scope.
-- Completion standard: the next action must make abstract, discussion and methods match the already synchronized Figure-4 package.
+- Current task: choose one bounded evidence-strengthening computation that most increases reviewer confidence without opening a broad new scope.
+- Input: harmonized manuscript source/PDF, seed-robustness summary, current review history, journal criteria.
+- Output: one concrete next benchmark target beyond the current small trainable study.
+- Completion standard: the next action must add real evidence breadth rather than more wording-only polish.
 - Priority: highest
 
 ### Theorist
-- Current task: preserve the updated claim boundary while the remaining sections are rewritten.
-- Input: revised Figure-4 caption package, seed-robustness summary, current abstract/discussion/methods text.
-- Output: manuscript-safe wording that keeps the surrogate-versus-trainable distinction explicit across the whole paper.
-- Completion standard: the stronger evidence must stay bounded to the scanned benchmark and repeat check, not inflate into a general hardware-readiness statement.
+- Current task: preserve the now-harmonized claim boundary while the next evidence-strengthening action is selected.
+- Input: harmonized manuscript text, seed-robustness summary, journal criteria.
+- Output: guardrails for what the next benchmark can and cannot claim.
+- Completion standard: broader evidence must remain a bounded design-law test rather than turn into a generic hardware-readiness statement.
 - Priority: high
 
 ### Code And Numerical Computation
-- Current task: hold the completed seed-robustness package fixed unless a manuscript-harmonization pass uncovers a specific missing statistic.
-- Input: `trainable_task_benchmark_seed_robustness.py` and saved outputs.
-- Output: no new computation requested in the next run.
-- Completion standard: already met for the present robustness pass.
-- Priority: paused
+- Current task: prepare for one bounded next benchmark beyond the present small trainable slice.
+- Input: harmonized manuscript, saved benchmark scripts, saved robustness outputs.
+- Output: one executable next evidence-strengthening run.
+- Completion standard: not yet met; the next run must produce real new outputs rather than restate existing summaries.
+- Priority: highest
 
 ### Data Analyst
-- Current task: keep the stable-versus-fragile regime split fixed while the remaining sections are harmonized.
-- Input: revised Figure-4 package, `seed_robustness_summary.md`, trainable benchmark summary.
-- Output: a bounded interpretation map that can be inserted into abstract, discussion and methods without drift.
-- Completion standard: the next manuscript revision should preserve the exact robust-versus-fragile split already exposed in the figure-facing package.
+- Current task: identify which missing slice of evidence would most reduce reviewer concern about narrow systems breadth.
+- Input: harmonized manuscript, `seed_robustness_summary.md`, prior review history.
+- Output: one reviewer-facing rationale for the next benchmark choice.
+- Completion standard: the next evidence pass should target the current narrowness objection directly.
 - Priority: high
 
 ### Figure Lead
-- Current task: hold the synchronized Figure-4 package fixed unless a later manuscript pass uncovers a specific mismatch.
+- Current task: hold the synchronized Figure-4 package fixed unless a later evidence pass creates a real figure mismatch.
 - Input: regenerated Figure-4 SVG/PNG/PDF, revised submission package, revised manuscript caption.
 - Output: no new figure generation requested in the next run unless harmonization exposes a real inconsistency.
-- Completion standard: already met for the present figure-facing synchronization pass.
+- Completion standard: already met for the present full-paper harmonization pass.
 - Priority: paused
 
 ### Manuscript Writer
-- Current task: keep the revised Figure-4 package fixed and extend the same evidence discipline into abstract, discussion and methods.
+- Current task: hold the now-harmonized manuscript fixed unless the next real evidence pass creates a specific unsupported sentence.
 - Input: revised manuscript source/PDF, revised Figure-4 package, seed-robustness outputs.
-- Output: one bounded follow-up revision that prevents the rest of the paper from lagging behind the updated Figure-4 story.
-- Completion standard: not yet met until the stronger benchmark and its caveats appear consistently wherever the paper summarizes systems consequences.
-- Priority: highest
+- Output: no additional wording-only revision requested in the next run.
+- Completion standard: met for the present harmonization pass.
+- Priority: paused
 
 ### Supervisor
-- Current task: treat full-paper harmonization as the dominant risk.
-- Input: revised manuscript PDF, synchronized Figure-4 package, review history, journal criteria.
-- Output: a next-stage supervision target focused on section-level consistency and honest scope control.
-- Completion standard: the project should not leave the synchronized figure-facing evidence out ahead of the abstract, discussion or methods.
+- Current task: treat narrow systems evidence, not wording drift, as the dominant risk.
+- Input: harmonized manuscript PDF, review history, journal criteria.
+- Output: a next-stage supervision target focused on one evidence-strengthening action.
+- Completion standard: the next plan should not spend the highest-priority slot on packaging alone.
 - Priority: highest
 
 ### Strict Reviewers
-- Current task: update acceptance estimates after the Figure-4-facing package itself incorporated the stronger trainable benchmark and real seed-robustness check.
+- Current task: update acceptance estimates after the manuscript-wide harmonization pass closed the last paper-level consistency gap.
 - Input: revised manuscript source/PDF, synchronized Figure-4 package, seed-robustness outputs, prior review history.
-- Output: revised reviewer matrix and the next upgrade condition.
-- Completion standard: the project state must reflect that reviewer-visible figure evidence improved, while still recording the remaining full-paper harmonization gap.
+- Output: revised reviewer matrix and the next upgrade condition centered on evidence breadth.
+- Completion standard: the project state must reflect that full-paper wording improved, while still recording that benchmark breadth remains the limiting issue.
 - Priority: high
 
 ## What Was Completed In This Run
-- Completed: revised and re-ran the Figure-4 rendering script so the figure object now records the stronger trainable-plus-robustness extension without changing the plotted surrogate data.
-- Completed: revised `figure4_submission_package.md` so the caption package now distinguishes the plotted surrogate scan from the stronger trainable-hidden-layer robustness extension.
-- Completed: revised the Figure-4 caption inside `manuscript-v1.md` and re-rendered the manuscript PDF.
+- Completed: revised the manuscript abstract so it now states the surrogate benchmark and the separate trainable-hidden-layer three-repeat extension together.
+- Completed: revised the discussion and methods so they now preserve the surrogate-versus-trainable distinction and the localized fragile `two_moons` caveat.
+- Completed: re-rendered the manuscript PDF after that full-paper harmonization pass.
 
 ## What Remains Incomplete
-- Incomplete: abstract, discussion and methods harmonization to the stronger systems evidence remains open.
+- Incomplete: broader systems-level evidence beyond the current small trainable benchmark remains open.
 - Incomplete: final submission archive remains open.
 
 ## Next Immediate Deliverable
-- One bounded abstract/discussion/methods harmonization pass built directly from the already synchronized Figure-4 package.
+- One real evidence-strengthening benchmark pass beyond the current small trainable slice.

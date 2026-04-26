@@ -330,3 +330,44 @@
 
 ### Next Supervision Focus
 - Check whether the next harmonization pass preserves the surrogate-versus-trainable distinction, the localized fragile `two_moons` caveat and the current non-claims about generality.
+
+## Supervision Entry 2026-04-26 (full-paper harmonization after Figure-4 synchronization)
+
+### Current Version Overall Evaluation
+- The manuscript has cleared the previous paper-level consistency gap. The stronger trainable-plus-robustness systems evidence is no longer localized to the Results section and Figure-4 package; it now reaches the abstract, discussion and methods as well.
+
+### Newly Verified Facts
+- `manuscript-v1.md` was revised directly inside the Nature Photonics project namespace.
+- The abstract now states both the surrogate task-level scan and the separate small trainable-hidden-layer three-repeat extension.
+- The discussion now says explicitly that hidden-layer training recovers only part of the previously negative `two_moons` region rather than erasing task dependence.
+- The methods section now contains a dedicated `Trainable robustness extension` subsection tied to `trainable_task_benchmark.py` and `trainable_task_benchmark_seed_robustness.py`.
+- `manuscript-v1.pdf` was re-rendered successfully and verified as a 9-page PDF object after this harmonization pass.
+
+### What Is Genuinely At Standard
+- The full paper now states one consistent bounded systems message across abstract, results, discussion, methods and Figure 4.
+- The surrogate-versus-trainable distinction is now explicit at paper scale rather than only at figure scale.
+- The localized fragile `two_moons` caveat remains visible in the manuscript summary logic instead of being hidden by the stronger `22/30` headline.
+
+### What Is Not Yet At Standard
+- The systems evidence still comes from a narrow small-scale benchmark stack rather than from broader task or architecture coverage.
+- No new computation or new validation breadth was added in this run.
+- The final submission archive is still absent.
+
+### Core Quality Risk
+- The dominant risk is no longer manuscript inconsistency. It is evidence narrowness: reviewers can now read a coherent paper, but may still doubt whether the bounded design rule has enough systems breadth for Nature Photonics confidence.
+
+### Evidence-Chain Gap
+- The missing evidence link is one additional bounded systems benchmark or validation slice beyond the current small trainable benchmark.
+
+### Must-Correct Item
+- The next run must execute one real evidence-strengthening action rather than another wording-only or packaging-only pass.
+
+### Priority Adjustment
+- The single main bottleneck moves from full-paper harmonization back to systems-evidence breadth.
+- Further manuscript polish without new evidence would now give diminishing returns.
+
+### Allowed To Enter Next Stage?
+- Yes. The project may now move from full-paper harmonization into one bounded evidence-strengthening computation or analysis.
+
+### Next Supervision Focus
+- Check whether the next evidence-strengthening action materially broadens reviewer confidence while preserving the current bounded claim discipline.

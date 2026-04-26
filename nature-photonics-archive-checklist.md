@@ -1,7 +1,7 @@
 # Nature Photonics Archive Checklist
 
 ## Archive Status
-- Checklist updated on 2026-04-25 after Figure-4 figure-facing synchronization to the trainable-plus-robustness evidence.
+- Checklist updated on 2026-04-26 after full-paper harmonization to the trainable-plus-robustness evidence.
 
 ## Present In Namespace
 - [x] Project state file
@@ -52,9 +52,13 @@
 - [x] Revised `figure4_submission_package.md` to synchronize the Figure-4 caption package to the stronger trainable-plus-robustness evidence
 - [x] Revised Figure-4 caption in `manuscript-v1.md`
 - [x] Re-rendered `manuscript-v1.pdf` after the Figure-4 synchronization pass
+- [x] Revised abstract in `manuscript-v1.md` so it now summarizes both the surrogate benchmark and the separate three-repeat trainable robustness extension
+- [x] Revised discussion in `manuscript-v1.md` so it now keeps the task dependence and localized fragile `two_moons` region explicit at full-paper level
+- [x] Revised methods in `manuscript-v1.md` to add the `Trainable robustness extension` subsection tied to the saved scripts
+- [x] Re-rendered `manuscript-v1.pdf` after the full-paper harmonization pass
 
 ## Still Missing
-- [ ] Abstract/Discussion/Methods harmonization to the stronger systems evidence package
+- [ ] Broader systems-evidence package beyond the current small trainable benchmark
 - [ ] Final submission archive package
 
 ## Truthfulness Note
@@ -66,4 +70,5 @@
 - The trainable benchmark seed-robustness pass is now genuinely completed and saved.
 - Results-level manuscript integration of that stronger systems evidence is now genuinely completed.
 - Figure-facing synchronization is now genuinely completed for the current manuscript object.
-- Full-paper harmonization and final submission packaging remain incomplete and are not marked as done.
+- Full-paper harmonization is now genuinely completed for the current manuscript object.
+- Broader systems-evidence strengthening and final submission packaging remain incomplete and are not marked as done.
