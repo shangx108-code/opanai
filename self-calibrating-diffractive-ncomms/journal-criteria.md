@@ -23,3 +23,4 @@ Nature Communications
 - 如果 pilot-assisted 在 OOD 对照中不能显著优于 ordinary D2NN，论文主线将削弱
 - 如果更强 ML baseline 仍然不能利用 pilot，ML 说服力会明显不足
 - 若只能在单一 surrogate 上成立，目标期刊可能下调
+- 在当前纯理论与仿真路线下，实验缺失不作为当前执行失败项，但可能继续限制最终期刊匹配上限

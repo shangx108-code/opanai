@@ -24,6 +24,10 @@
   - 所有正式数据图都基于真实数据
   - 理论推导详实、可靠、可检查
   - 正文与补充材料所需图表、引用和对照组全部补齐
+- 研究边界：
+  - 当前项目按纯理论与纯仿真路线推进
+  - 不把实验设备、实验数据或 benchtop 验证作为当前阶段硬依赖
+  - 允许在论文中讨论 future experimental pathway，但不得把实验验证写成当前待补的必做证据，除非后续条件发生变化
 - 图表规则：
   - 机制示意图、结构示意图、概念图可用 GPT-imag-2.0 生成初稿
   - 除示意图外，所有图必须来自真实计算或真实实验数据
@@ -36,6 +40,9 @@
 围绕“固定被动衍射处理器如何在动态像差/弱散射环境中通过共路 reference 实现自校准成像恢复”建立一条可投稿到 Nature Communications 的完整证据链，最终形成：
 - 主体理论：共路 pilot 如何降低瞬时退化不确定性，以及该机制在 diffractive optical neural operator 中的成立条件、边界和失效模式
 - 真实可复现实验链：至少覆盖 Zernike 动态像差、Kolmogorov 湍流、薄相位屏散射三类退化
+- 真实可复现实验链：
+  - 当前版本限定为真实可复现的理论推导、数值计算、仿真数据与仿真图表
+  - 至少覆盖 Zernike 动态像差、Kolmogorov 湍流、薄相位屏散射三类退化
 - 关键对照：ordinary D2NN、pilot-assisted D2NN、非共路 reference、错误 reference、传统 Wiener / RL / blind deconvolution、电子 U-Net、理想 phase-conjugation 上限
 - 正文与补充材料全套投稿级图表
 - 30 篇以上已核对参考文献
@@ -48,7 +55,7 @@
 - 当前工作区之前没有该项目的既有命名空间记忆。
 - 本轮已把上传提案正式转入项目状态，并完成第一轮最小真实数值验证。
 - 现在已进一步完成 round2：真实运行基于 Zernike pupil 的 wave-optics PSF 最小证据链。
-- 现在已进一步完成 round3：加入最小 FNO-style spectral baseline、CRLB 扫描，以及最小实验可行性方案。
+- 现在已进一步完成 round3：加入最小 FNO-style spectral baseline、CRLB 扫描，以及实验边界澄清。
 - 当前仍不是完整 D2NN，也不是投稿级证据链。
 
 ## 当前唯一主瓶颈
@@ -90,7 +97,7 @@
 1. 在当前工作区写出 ordinary D2NN 与 pilot-assisted D2NN 的最小可运行对照脚本。
 2. 保留“共路、非共路、错误 reference”三组关键对照，不满足就及时止损。
 3. 若最小被动衍射对照仍为阳性，再扩展到 turbulence / thin phase screen。
-4. 若后续拿到真实实验硬件或原始数据，按 round3 实验方案补上最小 benchtop 验证。
+4. 继续把证据集中到理论推导、仿真对照、强 ML baseline 和投稿级图稿，不再把实验验证列为当前主线动作。
 
 ## 技术状态检查结论
 - 已验证：
@@ -108,7 +115,7 @@
   - ordinary D2NN 与 pilot-assisted D2NN 的真实对照。
   - 强 ML baseline（完整深 FNO / U-Net / 其他现代神经算子）的正面对照。
   - 制造误差、量化误差、错位、波长漂移和 shot noise 鲁棒性。
-  - 真实实验数据。
+  - 真实实验数据（当前已从主线依赖中移除，不作为本阶段硬门槛）。
 - 存在错误：
   - 无。
 - 待核实：
@@ -168,7 +175,7 @@
 最拖累接收概率的短板：
 1. 还没有真实被动衍射处理器 + 动态像差协议下的核心对照结果
 2. 强 ML baseline 目前没有形成正向加分证据
-3. 还没有三类退化、真实实验与投稿级正文/补图/参考文献链
+3. 还没有三类退化、投稿级正文/补图/参考文献链，以及更强 ML/器件级核心对照
 
 ## 最近一次重要更新摘要
 - 2026-04-26：基于上传提案初始化 `self-calibrating-diffractive-ncomms` 项目命名空间。
@@ -177,4 +184,4 @@
 - 2026-04-26：完成 round2 wave-optics 最小证据链，使用 Zernike defocus + astigmatism pupil 生成真实 PSF；OOD 集上，无 reference 平均 PSNR 为 `37.069 dB`，共路 pilot 为 `38.422 dB`，非共路 pilot 为 `37.078 dB`，且共路 pilot 的 mean PSF MSE 最低。
 - 2026-04-26：完成 round3 最小 FNO-style spectral baseline。当前结果为中性偏负：OOD 集上 observation-only 为 `37.286 dB`，common-path pilot 为 `37.224 dB`，说明最小线性 spectral baseline 还没有自动学会利用 pilot。
 - 2026-04-26：完成 round3 information bound / CRLB 扫描。当前 pilot-channel CRLB 在 train 与 OOD 区域的中位数 trace 分别为 `6.452e-04` 与 `1.736e-04`，说明该 pilot observation model 在大部分区域内确实携带有限 Fisher 信息。
-- 2026-04-26：完成最小实验可行性说明；当前工作区没有硬件或原始实验数据，不能诚实声称已完成实验验证。
+- 2026-04-26：根据用户最新约束，项目正式收敛为“仅理论与仿真研究”；后续不再把实验验证作为当前阶段硬依赖。
