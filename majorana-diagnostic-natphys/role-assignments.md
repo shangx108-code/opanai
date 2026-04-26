@@ -8,17 +8,17 @@
 - Dependency: none
 
 ## Theory
-- Current task: formalize the diagnostic hierarchy and state the failure boundary of each observable
-- Inputs: BdG model family, Green-function formalism, scattering-matrix invariant, disorder and impurity extensions, manuscript draft
+- Current task: integrate the new diagnostic-hierarchy theory note into manuscript-ready derivation blocks
+- Inputs: BdG model family, Green-function formalism, scattering-matrix invariant, disorder and impurity extensions, manuscript draft, internal theory note
 - Deliverable: concise theory note plus theorem-like statement or protocol statement
-- Completion standard: the manuscript can say exactly which combination of observables is needed and what each one excludes
+- Completion standard: the manuscript can say exactly which combination of observables is needed, what each one excludes, and which derivation steps support that statement
 - Dependency: coordinator framing
 
 ## Code and Numerical Computation
-- Current task: replace the toy-model stress test with a full transport benchmark
-- Inputs: unified Hamiltonian, lead self-energies, parameter grids, disorder sampler, false-positive controls
+- Current task: extend the new finite-chain Rashba benchmark into a transport-and-topology benchmark
+- Inputs: shared finite-chain code path, lead self-energies, parameter grids, false-positive controls, theory note completion criteria
 - Deliverable: scripts/results for `G_LL`, `G_RR`, `G_LR`, gap evolution, `Q`, LDOS, and robustness scans
-- Completion standard: one positive-control dataset and three negative-control datasets generated from the same code path
+- Completion standard: the existing positive-control and smooth-dot datasets are upgraded with transport and topology observables from the same code path
 - Dependency: theory definitions
 
 ## Data Analysis
@@ -29,10 +29,10 @@
 - Dependency: first-round numerics
 
 ## Figure Production
-- Current task: keep the current storyboard but replace conceptual placeholders with benchmark-ready figures
+- Current task: keep the current storyboard but enforce the new figure policy
 - Inputs: analyzed numerical outputs and manuscript claim hierarchy
 - Deliverable: figure storyboard with caption logic, panel order, and what each panel proves
-- Completion standard: every main claim maps to at least one indispensable benchmarked panel
+- Completion standard: only Figure 1 may use a generated conceptual schematic; every data panel must trace to real stored results
 - Dependency: data-analysis memo
 
 ## Writing

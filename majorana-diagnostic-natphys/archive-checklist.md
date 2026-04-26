@@ -10,6 +10,7 @@
 - [ ] Unified Hamiltonian note
 - [ ] Observable definitions and notation ledger
 - [ ] Derivation note for scattering invariant and transport formulas
+- [x] Internal diagnostic-hierarchy theory note
 
 ## Numerical package
 - [x] Reproducible code repository snapshot
@@ -19,9 +20,9 @@
 - [ ] Disorder-sampling metadata
 - [x] Internal toy-model stress-test script
 - [x] Internal toy-model diagnostic figure
-- [x] Disorder-sampling metadata
-- [x] Internal toy-model stress-test script
-- [x] Internal toy-model diagnostic figure
+- [x] First shared-code-path Rashba benchmark script
+- [x] First shared-code-path positive-control and smooth-dot CSV outputs
+- [x] First real-data benchmark summary figure
 
 ## Figure package
 - [ ] Figure 1 conceptual diagnosis figure
@@ -30,6 +31,7 @@
 - [x] Figure 4 nonlocal/topological rescue
 - [x] Figure 5 diagnostic map / confusion matrix
 - [ ] Final captions
+- [ ] Every data figure traced to real computed or verified data
 
 ## Review package
 - [x] Internal supervision notes
@@ -42,13 +44,14 @@
 - [ ] Source files
 - [ ] Response-to-reviewers template
 - [ ] Data/code availability statements
+- [ ] Acceptance-probability estimate above 70%
+- [ ] All evidence gaps closed
 
 ## Current drafted assets
 - [x] `/workspace/output/nature-physics-manuscript-package.docx`
 - [x] `/workspace/output/compensated-magnetic-majorana-draft.tex`
 - [x] `/workspace/output/compensated-magnetic-majorana-draft.pdf`
 - [x] `/workspace/output/toy-model/toy-model-summary.png`
-- [x] `/workspace/output/majorana_natphys_manuscript.docx`
-- [x] `/workspace/output/majorana_natphys_manuscript.pdf`
-- [x] `/workspace/output/majorana_natphys_review_package.docx`
-- [x] `/workspace/output/majorana_natphys_review_package.pdf`
+- [x] `/workspace/output/rashba-benchmark/positive_control_scan.csv`
+- [x] `/workspace/output/rashba-benchmark/smooth_dot_control_scan.csv`
+- [x] `/workspace/output/rashba-benchmark/rashba-benchmark-summary.png`

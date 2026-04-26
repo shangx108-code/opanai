@@ -54,30 +54,46 @@ Current outcome: still below editorial send-out threshold, but better positioned
 - After literature verification and manuscript packaging: 10-18%
 - Upgrade condition to 25-35%: complete the benchmark and make the diagnostic hierarchy quantitative
 
-## 2026-04-25 | Pilot manuscript review
+## 2026-04-26 | Project-standard escalation review
 
 ### Material reviewed
-- Draft manuscript: `/workspace/output/majorana_natphys_manuscript.docx`
-- Review package: `/workspace/output/majorana_natphys_review_package.docx`
-- Numerical assets: `/workspace/output/majorana_natphys_assets/`
-
-### Venue lens
-Nature Physics article standard
+- Internal theory note: `/workspace/research/diagnostic_hierarchy_theory_note.md`
+- Updated project memory and execution standard
 
 ### Reviewer-style verdict
-Current outcome: major revision
+Current outcome: still far below send-out threshold, but the project now has a much more honest and audit-ready internal standard
 
-### What improved
-1. The project now has a complete article structure rather than only a concept note.
-2. A compact numerical benchmark supports the failure-aware hierarchy with clean, dot-induced ABS, and disorder-induced near-zero-state cases.
-3. The manuscript now makes a more careful claim: it orders diagnostics by evidentiary power rather than pretending that one pilot benchmark already proves a universal protocol.
-
-### Remaining blockers
-1. The scattering-matrix topological layer is not yet numerically decisive.
-2. The platform coverage is still too narrow for Nature Physics.
-3. The novelty over 2019/2021/2024 diagnostic literature is improved in framing but still not yet forceful enough in evidence.
+### Why
+1. The manuscript now has explicit evidence-completion criteria instead of a loose collection of desired observables.
+2. The success threshold has been correctly redefined as >70% estimated acceptance probability plus a closed evidence checklist, which is appropriate for a Nature Physics push.
+3. The missing piece is unchanged in substance: no shared-pipeline benchmark yet exists.
 
 ### Acceptance-probability trend
-- Updated estimate for Nature Physics: 18-28%
-- Upgrade condition to 30-40%: add a validated topological discriminator and one additional benchmark family or platform
-- Upgrade condition to 40%+: show that the new hierarchy changes interpretation in a way not already captured by existing nonlocal-conductance literature
+- Current estimate remains 10-18%
+- No upgrade justified from documentation work alone
+- Upgrade condition to 25-35% remains the first real benchmark milestone
+- Upgrade condition to >50% requires complete positive/negative-control evidence plus robustness windows
+- Upgrade condition to >70% requires a submission-grade manuscript with closed evidence gaps, verified references, figure-ready results, and a strong final supervision pass
+
+## 2026-04-26 | First real-data benchmark check
+
+### Material reviewed
+- Benchmark script: `/workspace/research/rashba_benchmark.py`
+- Positive-control data: `/workspace/output/rashba-benchmark/positive_control_scan.csv`
+- False-positive data: `/workspace/output/rashba-benchmark/smooth_dot_control_scan.csv`
+- Summary figure: `/workspace/output/rashba-benchmark/rashba-benchmark-summary.png`
+
+### Reviewer-style verdict
+Current outcome: useful internal progress, but still not yet a persuasive manuscript figure set
+
+### What was learned
+1. The project has now moved beyond pure concept documents and contains real computed benchmark data.
+2. The smooth-dot false-positive control reaches a much smaller finite-size minimum gap than the positive control in the present sweep.
+3. A simple end-to-end nonlocality score is not by itself sufficient, because both the positive and false-positive controls can reach high values in this first pass.
+
+### Why this is scientifically useful
+This is a good stress test of the paper's central philosophy. It shows that the manuscript should not replace one weak single diagnostic with another. Instead, the paper must keep the full hierarchy logic: local anomaly, gap reopening, topology label, and nonlocal transport together.
+
+### Acceptance-probability trend
+- Current estimate remains 10-18%
+- Real-data progress achieved, but no major upgrade justified until transport and topology information are coupled in the same benchmark

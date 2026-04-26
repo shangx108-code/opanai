@@ -56,3 +56,50 @@ The paper could still drift into a polished but under-supported conceptual essay
 - Verified the 2026 TAJJ overlap from a primary source
 - Produced a manuscript package and a LaTeX-ready draft
 - Generated a first-pass toy-model stress-test figure
+
+## 2026-04-26 | Round 3 supervision after success-criteria escalation
+
+### Overall evaluation
+The project standard is now substantially stricter in a healthy way. The work is no longer allowed to drift toward a soft "promising draft" definition of success. The new explicit requirement is an estimated acceptance probability above 70% together with a closed evidence checklist.
+
+### Gap to target-journal standard
+- The manuscript still lacks the first real Level 3 evidence milestone: a positive-control/false-positive benchmark from one common transport code path.
+- The theory logic is now much better defined internally, but it is not yet integrated into the manuscript as derivation-grade text.
+- No main-text data figure yet meets the new real-data-only rule.
+
+### Most critical quality risk
+The project could continue producing articulate internal documents without quickly enough converting them into real benchmark data.
+
+### Plan-revision advice
+1. Treat the new theory note as frozen guidance and stop re-litigating the observable hierarchy unless a benchmark result forces a change.
+2. Spend the next coding round on the Rashba positive control and one false-positive control in a shared pipeline.
+3. Do not generate any synthetic data illustrations for the manuscript; restrict image generation to conceptual schematics only.
+4. Do not raise the acceptance estimate meaningfully until Level 3 evidence exists.
+
+### Newly completed items
+- Raised the completion bar to >70% estimated acceptance probability plus closed evidence checklist
+- Added a formal diagnostic-hierarchy theory note
+- Upgraded the automation cadence to every 2 hours
+
+## 2026-04-26 | Round 4 supervision after first real-data benchmark
+
+### Overall evaluation
+This is the first iteration that clearly moves the project from planning into auditable computation. The benchmark is still preliminary, but it is already scientifically informative because it exposes a weakness in any attempt to collapse the diagnosis onto a single nonlocality score.
+
+### Gap to target-journal standard
+- The benchmark currently uses finite-chain spectral proxies rather than the final transport-and-topology bundle.
+- The false-positive control is only one member of the required control family.
+- The current figure is internal-quality only and not yet publication-grade in either visual design or observable completeness.
+
+### Most critical quality risk
+The team could prematurely interpret the current nonlocality score as near-sufficient, even though the first benchmark already shows that it is not.
+
+### Plan-revision advice
+1. Preserve the current benchmark as a cautionary internal figure, not as a final manuscript figure.
+2. Make the next coding round about attaching lead self-energies and computing transport rather than adding more spectral-only scans.
+3. Keep the smooth-dot control in the benchmark suite because it is already proving useful.
+4. Let the first main-text failure figure show not only that local peaks fail, but also that naive nonlocality-only metrics can mislead.
+
+### Newly completed items
+- Built a shared finite-chain Rashba benchmark for a positive control and a smooth-dot false-positive control
+- Stored real CSV outputs and a summary image derived from the computed data
