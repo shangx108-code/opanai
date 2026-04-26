@@ -9,10 +9,10 @@
 Build a publishable theory paper that does not merely restate that nonlocal conductance helps, but establishes a genuinely new and experimentally actionable diagnostic hierarchy that separates topological Majorana zero modes from trivial zero-energy states across multiple superconducting hybrid platforms. The project is not considered complete until the estimated Nature Physics acceptance probability exceeds 70% and all required evidence layers are closed with auditable support.
 
 ## Current stage
-Pilot-manuscript stage with literature-verified repositioning and theory-standard fixing. The project now includes a draft manuscript package, an explicit diagnostic-hierarchy theory note, and first real-data benchmark outputs. It is still below Nature Physics submission strength, but it is no longer only a concept note.
+Pilot-manuscript stage with literature-verified repositioning, theory-standard fixing, and a first reliable topological layer for the clean homogeneous wire. The project now includes a draft manuscript package, an explicit diagnostic-hierarchy theory note, a compact real-data benchmark, figure assets, and an internal review package. It is still below Nature Physics submission strength, but it is no longer only a concept note.
 
 ## Current main bottleneck
-The evidence bar is now the main bottleneck. Novelty still needs sharpening, but the immediate blocker is that the project does not yet have a real positive-control/false-positive benchmark generated from one common transport pipeline. Without that, neither the >70% target nor the "all evidence completed" rule is reachable.
+The main bottleneck is now missing generality under the stricter evidence-completion standard. The project has moved beyond pure concept work and the clean-wire class-D invariant is now explicit and reliable, but the manuscript still lacks an equally defensible topological or quasi-topological discriminator for the inhomogeneous false-positive controls. Without that, neither the >70% target nor the "all evidence completed" rule is reachable. Novelty also still needs sharper separation from the older nonlocal-Majorana diagnostic literature and from the 1 April 2026 *npj Quantum Materials* article on topological altermagnetic Josephson junctions.
 
 ## Highest-priority objective for the current round
 Lock the project around one original centerpiece and one auditable completion rule:
@@ -44,10 +44,13 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Literature positioning now reflects the 2026 TAJJ overlap explicitly
 - A formal internal theory note now defines the diagnostic hierarchy and evidence-completion criteria
 - A first real-data benchmark sweep now exists for a Rashba positive control and a smooth-dot false-positive control in one finite-chain BdG code path
+- Full manuscript draft and internal review package now exist
+- A compact numerical benchmark now exists for clean-wire, dot-ABS, and disorder-induced near-zero-state cases
+- The clean homogeneous Rashba wire now has a reliable bulk class-D invariant in the benchmark
 
 ## What is still missing
-- A verified novelty statement against 2019/2021/2024 nanowire-diagnostic literature
-- A numerically validated scattering-matrix topological discriminator
+- A sharper novelty statement against 2019/2021/2024 nanowire-diagnostic literature
+- A numerically validated inhomogeneous topological discriminator for false-positive controls
 - Platform breadth sufficient for Nature Physics
 - Real numerical results, figure-ready parameter scans, and robustness windows
 - A citation-clean reference set
@@ -59,9 +62,9 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Stronger experimental observability windows for temperature and barrier scans
 
 ## Acceptance probability (stage estimate)
-- Nature Physics: 10-18% in the current manuscript-package state
+- Nature Physics: 22-32% after adding the clean-wire topological layer and keeping the stricter >70% completion rule
 - Project success threshold: >70%
-- Reason: topic importance and manuscript architecture improved, but the evidence chain remains incomplete and novelty separation is still below threshold
+- Reason: the manuscript is now more honest and stronger on the positive-control topology side, but the evidence package and novelty separation are still below top-tier threshold because the inhomogeneous-control topology layer and cross-platform breadth are missing
 
 ## Last update
-2026-04-26: raised the project completion bar to acceptance probability >70% with all evidence layers closed, created an internal diagnostic-hierarchy theory note with explicit completion criteria, changed the automation cadence to every 2 hours, and generated the first real-data benchmark sweep for a Rashba positive control and a smooth-dot false-positive control in a shared finite-chain code path.
+2026-04-27: after the 2026-04-26 escalation to a >70% completion bar with closed evidence layers, the project was advanced again by replacing the unreliable reflection-matrix output with a reliable clean-wire bulk class-D invariant. The manuscript and review package were updated accordingly. The main bottleneck is now the lack of an equally reliable inhomogeneous-control topological discriminator and insufficient cross-platform evidence.

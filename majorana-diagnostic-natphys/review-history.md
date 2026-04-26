@@ -97,3 +97,27 @@ This is a good stress test of the paper's central philosophy. It shows that the 
 ### Acceptance-probability trend
 - Current estimate remains 10-18%
 - Real-data progress achieved, but no major upgrade justified until transport and topology information are coupled in the same benchmark
+## 2026-04-27 | Topological-layer repair
+
+### Material reviewed
+- Updated draft manuscript: `/workspace/output/majorana_natphys_manuscript.docx`
+- Updated review package: `/workspace/output/majorana_natphys_review_package.docx`
+- Updated numerical assets: `/workspace/output/majorana_natphys_assets/`
+
+### What changed
+1. The previously unreliable reflection-matrix-style output was removed from the benchmark logic.
+2. A reliable clean-wire class-D bulk invariant was added for the homogeneous Rashba reference wire.
+3. The manuscript now states explicitly that the inhomogeneous false-positive controls are not assigned the same bulk invariant, because that would be theoretically unjustified in the present benchmark.
+
+### Reviewer-style impact
+This is a meaningful improvement in rigor. The paper now makes one honest topological claim that can be defended quantitatively, instead of gesturing toward a topological layer that was not actually reliable. The cost is that the manuscript's remaining incompleteness is now more visible: the inhomogeneous-control topological layer is still absent.
+
+### Updated blockers
+1. Need a defensible inhomogeneous topological or quasi-topological discriminator.
+2. Need at least one additional false-positive family, ideally impurity- or YSR-like.
+3. Need stronger novelty separation from existing nanowire-diagnostic literature.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Physics: 22-32%
+- Upgrade condition to 35-45%: add a reliable inhomogeneous-control discriminator and one additional benchmark family
+- Upgrade condition to 45%+: demonstrate a cross-platform result that existing nonlocal-conductance studies do not already subsume
