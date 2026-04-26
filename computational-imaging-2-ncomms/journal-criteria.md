@@ -13,8 +13,8 @@
 - 可覆盖 coded aperture、PSF engineering、hyperspectral imaging、metasurface imaging 等多个方向
 
 ## 当前尚未满足的质量门槛
-1. 当前唯一主瓶颈是 round3 robust 真实结果链缺失；在 round3 恢复前，三线证据链无法闭合
-2. `TIG` / `RCR` 理论推导仍未与当前真实结果形成逐项对照的详细闭环
+1. 尚无足够强的鲁棒容量与跨平台验证
+2. 尚无详细理论推导文稿
 3. 尚无 30+ 篇参考文献链条
 4. 尚无正文与补充材料初稿
 5. 尚无可供五审稿人评估的完整证据包
@@ -22,16 +22,17 @@
 ## 当前重点检查项
 - 统一符号表是否能同时覆盖多平台
 - OIG、TIG、PIE、RCR 是否具备严格定义与真实计算路径
-- 线性高斯平台是否已经在当前工作区重新形成 reconstruction / task / robust 三类连续分离证据
+- 线性高斯平台是否已经形成 reconstruction / task 两类分离证据
+- 线性高斯鲁棒平台是否已经给出 robust ranking flip 区域或足够清晰的边界条件图谱
 - Figure 1-6 是否最终都能追溯到真实数据或可校正示意图
 - 参考文献是否覆盖 computational imaging、task-specific imaging、differentiable optics、meta-optics、information theory、Fisher information 与 robust design
 
 ## 当前高风险点
 1. 选题高度够，但证据推进速度可能跟不上
-2. 状态文件若继续记录不存在的结果，会直接损害可复核性
-3. 若 round3 继续缺失而项目停留在 round2 单链，理论与图表仍无法成立为论文级证据
-4. 若只保留概念定义而不补 round3 / round1 与详细推导，会削弱说服力
-5. 若在缺失数据条件下继续推进写作，会引起审稿质疑
+2. 平台跨度大，若不先收敛到最小闭环，容易长期停在空中
+3. 若只有最小 robust surrogate 而没有更强鲁棒性证据，会被认为理论不完整
+4. 若只保留数值结果而不补全推导，会削弱说服力
+5. 若把第二轮排序分离过度推广，会引起审稿质疑
 
 ## 当前判断
 期刊匹配度存在潜力，但尚未接近期刊接收标准。
