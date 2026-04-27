@@ -29,6 +29,10 @@
 - [x] Impurity transport and bias-trace CSV outputs
 - [x] Disorder and eta-broadening CSV outputs
 - [x] Expanded transport benchmark summary figure
+- [x] Three-terminal benchmark script
+- [x] Three-terminal selected operating-point table
+- [x] Rebuilt Figure 3 candidate from three-terminal data
+- [x] Rebuilt Figure 4 candidate from three-terminal data
 
 ## Figure package
 - [ ] Figure 1 conceptual diagnosis figure
@@ -70,3 +74,12 @@
 - [x] `/workspace/output/transport-benchmark/smooth_dot_bias_trace.csv`
 - [x] `/workspace/output/transport-benchmark/impurity_bias_trace.csv`
 - [x] `/workspace/output/transport-benchmark/transport_benchmark_summary.png`
+- [x] `/workspace/output/three-terminal-benchmark/selected_operating_points.csv`
+- [x] `/workspace/output/three-terminal-benchmark/positive_three_terminal_scan.csv`
+- [x] `/workspace/output/three-terminal-benchmark/positive_three_terminal_bias.csv`
+- [x] `/workspace/output/three-terminal-benchmark/dot_three_terminal_bias.csv`
+- [x] `/workspace/output/three-terminal-benchmark/impurity_three_terminal_bias.csv`
+- [x] `/workspace/output/three-terminal-benchmark/disorder_three_terminal_bias.csv`
+- [x] `/workspace/output/three-terminal-benchmark/positive_three_terminal_robustness.csv`
+- [x] `/workspace/output/three-terminal-benchmark/figure3_failure_local_peaks.png`
+- [x] `/workspace/output/three-terminal-benchmark/figure4_nonlocal_rescue.png`

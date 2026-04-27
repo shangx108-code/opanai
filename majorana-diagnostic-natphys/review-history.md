@@ -120,3 +120,26 @@ Current outcome: the numerical evidence classes are substantially more complete,
 ### Acceptance-probability trend
 - Current estimate remains 10-18%
 - Numerical coverage improved, but the evidence is not yet strong enough to justify a higher editorial-confidence estimate
+
+## 2026-04-27 | Three-terminal figure rebuild review
+
+### Material reviewed
+- Three-terminal benchmark script: `/workspace/research/majorana_three_terminal_figures.py`
+- Output bundle: `/workspace/output/three-terminal-benchmark/`
+
+### Reviewer-style verdict
+Current outcome: this is the first numerically coherent Figure 3/4 candidate set, but still not the final manuscript version
+
+### What improved
+1. The benchmark is now three-terminal rather than only two-terminal wide-band.
+2. Smooth-dot, impurity, and disorder controls are tuned to more misleading local low-bias behavior than before.
+3. Figure 3 now shows a real local-failure comparison, and Figure 4 now shows that the absolute nonlocal signal is stronger in the positive control than in the tuned false positives.
+
+### What remains limiting
+1. The topology layer in Figure 4 still relies on the clean-backbone criterion rather than a stronger inhomogeneous topological discriminator.
+2. The disorder false positive remains too dominant relative to the smooth-dot and impurity cases.
+3. The positive-control gap panel still shows a monotonic finite-size trend rather than a visually sharp gap-closing/reopening story.
+
+### Acceptance-probability trend
+- Current estimate can cautiously move to 14-22%
+- Reason: Figure readiness and benchmark realism improved, but the topological and robustness layers are still below the threshold needed for a top-tier theory paper

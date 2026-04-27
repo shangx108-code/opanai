@@ -125,3 +125,25 @@ The team could mistake broader output coverage for a solved evidence problem, ev
 
 ### Newly completed items
 - Added a shared transport benchmark script and stored CSV outputs for positive-control, smooth-dot, impurity, disorder, eta-broadening, and bias-trace scans
+
+## 2026-04-27 | Round 6 supervision after three-terminal rebuild
+
+### Overall evaluation
+This is a meaningful step forward. The project now has a three-terminal benchmark and actual Figure 3/4 candidates built from real data rather than placeholders. That substantially improves manuscript credibility.
+
+### Gap to target-journal standard
+- The positive-control topology story is still not visually decisive enough in the current finite-size paneling.
+- The false-positive suite is stronger than before, but disorder still overwhelms the comparison.
+- The inhomogeneous topology layer still needs a more defensible discriminator than the present clean-backbone criterion.
+
+### Most critical quality risk
+The paper could now look visually complete before the topological logic is truly complete.
+
+### Plan-revision advice
+1. Keep the new Figure 3/4 as working candidates, not final camera-ready figures.
+2. The next numerical round should focus on strengthening the topological layer and rebalancing the disorder-versus-dot/impurity comparison.
+3. After that, refresh the captions and main-text interpretation so the figures tell the right story without overclaiming.
+
+### Newly completed items
+- Added a three-terminal benchmark script
+- Rebuilt Figure 3 and Figure 4 candidates from real three-terminal data

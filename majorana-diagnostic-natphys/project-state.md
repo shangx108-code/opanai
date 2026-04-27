@@ -9,7 +9,7 @@
 Build a publishable theory paper that does not merely restate that nonlocal conductance helps, but establishes a genuinely new and experimentally actionable diagnostic hierarchy that separates topological Majorana zero modes from trivial zero-energy states across multiple superconducting hybrid platforms. The project is not considered complete until the estimated Nature Physics acceptance probability exceeds 70% and all required evidence layers are closed with auditable support.
 
 ## Current stage
-Pilot-manuscript stage with literature-verified repositioning, theory-standard fixing, and expanded transport numerics. The project now includes a draft manuscript package, an explicit diagnostic-hierarchy theory note, first real-data benchmark outputs, and a wider transport benchmark suite across positive, smooth-dot, impurity, disorder, and broadening scans. It is still below Nature Physics submission strength, but it is no longer only a concept note.
+Pilot-manuscript stage with literature-verified repositioning, theory-standard fixing, expanded transport numerics, and a first three-terminal figure-grade benchmark. The project now includes a draft manuscript package, an explicit diagnostic-hierarchy theory note, broader transport benchmark suites, and rebuilt Figure 3/4 candidates derived from real three-terminal data. It is still below Nature Physics submission strength, but it is no longer only a concept note.
 
 ## Current main bottleneck
 The main bottleneck is still selectivity under the stricter evidence-completion standard. The project now has broader result coverage, but the current false-positive parameter families do not yet produce the strongest misleading zero-bias behavior, and the topology layer remains weaker than the manuscript ultimately needs. Without a stronger disorder-robust discriminator and more convincing false-positive benchmarks, neither the >70% target nor the "all evidence completed" rule is reachable.
@@ -45,6 +45,7 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - A formal internal theory note now defines the diagnostic hierarchy and evidence-completion criteria
 - A first real-data benchmark sweep now exists for a Rashba positive control and a smooth-dot false-positive control in one finite-chain BdG code path
 - A wider transport benchmark bundle now exists with positive-control, smooth-dot, impurity, disorder, eta-broadening, and bias-trace outputs stored under `/workspace/output/transport-benchmark`
+- A first three-terminal benchmark package now exists under `/workspace/output/three-terminal-benchmark`, including selected operating points and rebuilt Figure 3/4 candidates
 
 ## What is still missing
 - A verified novelty statement against 2019/2021/2024 nanowire-diagnostic literature
@@ -52,18 +53,18 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Platform breadth sufficient for Nature Physics
 - Real numerical results, figure-ready parameter scans, and robustness windows
 - A citation-clean reference set
-- A three-terminal transport benchmark with positive and false-positive controls from one code path
+- A fully convincing three-terminal transport benchmark with stronger topology discrimination than the current backbone criterion
 - A completed derivation note integrated into the manuscript rather than only the internal theory file
 - Evidence-complete real data for every main-text data figure
-- A benchmark where nonlocal transport, gap reopening, and topology label are evaluated together rather than only finite-chain spectral proxies
+- A benchmark where nonlocal transport, gap reopening, and a stronger topology label are evaluated together rather than only finite-chain spectral proxies plus backbone topology
 - One more false-positive family, preferably impurity- or YSR-like
 - Stronger experimental observability windows for temperature and barrier scans
-- Parameter tuning that produces genuinely persuasive false-positive zero-bias behavior rather than merely weak trivial responses
+- Additional tuning that reduces the current over-dominance of the disorder false positive and sharpens the smooth-dot and impurity comparison
 
 ## Acceptance probability (stage estimate)
 - Nature Physics: 10-18% in the current manuscript-package state
 - Project success threshold: >70%
-- Reason: numerical coverage improved, but the evidence is still not selective enough and the novelty separation remains below the top-tier threshold
+- Reason: numerical coverage and figure readiness improved, but the evidence is still not selective enough and the novelty separation remains below the top-tier threshold
 
 ## Last update
-2026-04-27: expanded the numerical suite from the initial Rashba sweep to a shared transport-benchmark package containing positive-control, smooth-dot, impurity, disorder, eta-broadening, and bias-trace outputs. The new result classes are now available, but the present parameter family still does not generate convincingly strong false-positive zero-bias peaks, so scientific closure has not yet been reached.
+2026-04-27: added a new three-terminal benchmark package with tuned smooth-dot, impurity, and disorder false-positive operating points, rebuilt Figure 3 and Figure 4 candidates from real data, and established a first three-terminal nonlocal separation between the positive control and the tuned false positives. The present topology layer is still not strong enough for submission-grade claims, and disorder remains too dominant relative to the other false positives.
