@@ -12,7 +12,7 @@ Build a publishable theory paper that does not merely restate that nonlocal cond
 Pilot-manuscript stage with literature-verified repositioning, theory-standard fixing, and a first reliable topological layer for the clean homogeneous wire. The project now includes a draft manuscript package, an explicit diagnostic-hierarchy theory note, a compact real-data benchmark, figure assets, and an internal review package. It is still below Nature Physics submission strength, but it is no longer only a concept note.
 
 ## Current main bottleneck
-The main bottleneck is now missing generality under the stricter evidence-completion standard. The project has moved beyond pure concept work and the clean-wire class-D invariant is now explicit and reliable, but the manuscript still lacks an equally defensible topological or quasi-topological discriminator for the inhomogeneous false-positive controls. Without that, neither the >70% target nor the "all evidence completed" rule is reachable. Novelty also still needs sharper separation from the older nonlocal-Majorana diagnostic literature and from the 1 April 2026 *npj Quantum Materials* article on topological altermagnetic Josephson junctions.
+The main bottleneck is now missing selectivity under the stricter evidence-completion standard. The clean-wire class-D invariant is explicit and reliable, and the inhomogeneous controls now have a quasi-topological layer based on end-to-end nonlocality and charge neutrality. However, that new layer rejects the dot-induced ABS but does not yet eliminate the disorder-generated false positive. Without a stronger disorder-robust discriminator, neither the >70% target nor the "all evidence completed" rule is reachable. Novelty also still needs sharper separation from the older nonlocal-Majorana diagnostic literature and from the 1 April 2026 *npj Quantum Materials* article on topological altermagnetic Josephson junctions.
 
 ## Highest-priority objective for the current round
 Lock the project around one original centerpiece and one auditable completion rule:
@@ -47,10 +47,11 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Full manuscript draft and internal review package now exist
 - A compact numerical benchmark now exists for clean-wire, dot-ABS, and disorder-induced near-zero-state cases
 - The clean homogeneous Rashba wire now has a reliable bulk class-D invariant in the benchmark
+- A quasi-topological metric now exists for the inhomogeneous controls and already suppresses the dot-induced ABS case
 
 ## What is still missing
 - A sharper novelty statement against 2019/2021/2024 nanowire-diagnostic literature
-- A numerically validated inhomogeneous topological discriminator for false-positive controls
+- A numerically validated disorder-robust inhomogeneous discriminator for false-positive controls
 - Platform breadth sufficient for Nature Physics
 - Real numerical results, figure-ready parameter scans, and robustness windows
 - A citation-clean reference set
@@ -62,9 +63,9 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Stronger experimental observability windows for temperature and barrier scans
 
 ## Acceptance probability (stage estimate)
-- Nature Physics: 22-32% after adding the clean-wire topological layer and keeping the stricter >70% completion rule
+- Nature Physics: 24-34% after adding the quasi-topological control layer and keeping the stricter >70% completion rule
 - Project success threshold: >70%
-- Reason: the manuscript is now more honest and stronger on the positive-control topology side, but the evidence package and novelty separation are still below top-tier threshold because the inhomogeneous-control topology layer and cross-platform breadth are missing
+- Reason: the manuscript is now stronger on both the clean topological side and the local-ABS-control side, but the evidence package and novelty separation are still below top-tier threshold because the disorder false positive remains insufficiently filtered and the cross-platform breadth is missing
 
 ## Last update
-2026-04-27: after the 2026-04-26 escalation to a >70% completion bar with closed evidence layers, the project was advanced again by replacing the unreliable reflection-matrix output with a reliable clean-wire bulk class-D invariant. The manuscript and review package were updated accordingly. The main bottleneck is now the lack of an equally reliable inhomogeneous-control topological discriminator and insufficient cross-platform evidence.
+2026-04-27: the project was advanced again by adding a quasi-topological inhomogeneous-control layer based on end-to-end nonlocality and charge neutrality. This new layer strongly suppresses the dot-induced ABS but does not yet eliminate the disorder-generated false positive. The manuscript and review package were updated accordingly. The next bottleneck is now a disorder-robust inhomogeneous discriminator and insufficient cross-platform evidence.

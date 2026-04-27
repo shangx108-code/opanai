@@ -121,3 +121,28 @@ This is a meaningful improvement in rigor. The paper now makes one honest topolo
 - Updated estimate for Nature Physics: 22-32%
 - Upgrade condition to 35-45%: add a reliable inhomogeneous-control discriminator and one additional benchmark family
 - Upgrade condition to 45%+: demonstrate a cross-platform result that existing nonlocal-conductance studies do not already subsume
+
+## 2026-04-27 | Quasi-topological control-layer check
+
+### Material reviewed
+- Updated benchmark script: `/workspace/research/majorana_diagnostics.py`
+- Updated numerical assets: `/workspace/output/majorana_natphys_assets/`
+- Updated manuscript and review package
+
+### What changed
+1. Added an inhomogeneous-control quasi-topological metric built from end-to-end nonlocality and charge neutrality of the lowest positive-energy mode.
+2. Added a new figure showing the clean case, dot-induced ABS, and disorder-induced near-zero-state values of that metric.
+3. Added the same metric to the disorder-ensemble statistics.
+
+### What was learned
+1. The dot-induced ABS is strongly suppressed by the quasi-topological layer.
+2. The disorder-induced near-zero state is not strongly suppressed by the same layer.
+3. This strengthens the manuscript's central hierarchy claim: quasi-topological structure cannot replace genuine topology and disorder stress tests.
+
+### Reviewer-style impact
+This is a scientifically useful upgrade. It gives the paper a more complete inhomogeneous-control layer, but in a way that produces a hard negative result rather than a cosmetic win. The manuscript is therefore more convincing, not less. At the same time, the disorder false positive remains the central unresolved control problem.
+
+### Acceptance-probability trend
+- Updated estimate for Nature Physics: 24-34%
+- Upgrade condition to 35-45%: add a disorder-robust inhomogeneous discriminator and one additional benchmark family
+- Upgrade condition to 45%+: demonstrate a cross-platform result that existing nonlocal-conductance studies do not already subsume
