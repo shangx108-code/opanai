@@ -84,3 +84,28 @@ Three-track execution is now the right framing, but only one track has permissio
 ### Supports Next Stage?
 
 Yes, at the planning and orchestration level. The project now has a sharper role split and completion standard for all three tracks.
+
+## 2026-04-27 | Workspace reproducibility correction
+
+### Check Scope
+
+- Verify that the reconstruction assets cited in the current project state are actually present and runnable in this workspace snapshot
+
+### Confirmed Correct
+
+- The twse2 project still has a clearly specified PRL-oriented target style in saved project notes.
+- The previously reported scientific bottleneck order does not change: the first real blocker remains the evidence-chain gap in exact `K`-point valley closure.
+
+### Problems / Risks
+
+- The local files named in the saved state are not present in the current workspace snapshot: `/workspace/user_files/04-ws2.zip`, `/workspace/tmp/ws2/...`, and `/workspace/twse2_tb/reconstruct_tuo_tb.py` could not be found in this run.
+- This means the previously reported partial reconstruction status is not currently reproducible from the available local files.
+- Until those assets are restored, the project is blocked one layer earlier than before: not only on unresolved `K`-sector convention, but on missing executable reconstruction inputs in the current workspace.
+
+### Stage Judgment
+
+Still in evidence generation, but now with a newly verified workspace-level reproducibility break inside the primary evidence chain.
+
+### Supports Next Stage?
+
+Only after the missing local reconstruction assets are restored or re-supplied in an accessible location.
