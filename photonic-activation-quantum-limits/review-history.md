@@ -133,3 +133,41 @@ New evidence added: weak-signal benchmark and figure-ready real-data plots
   1. platform-specific feasibility interpretation is still missing
   2. the benchmark-to-theory linkage needs cleaner exposition
   3. the strongest proven lower bound still covers only a subset of the full manuscript claim
+
+## Round 4 Evidence Update
+
+Date: 2026-04-27
+New evidence added: threshold-activation photon-floor corollary, platform window note, platform figure, figure verification report
+
+### Reviewer 1
+
+- Updated view: The platform mapping is more concrete now, and the figure verification removes presentation risk. The remaining concern is whether the benchmark story is broad enough for the venue.
+- Acceptance probability: 53%
+
+### Reviewer 2
+
+- Updated view: The manuscript is now materially more credible because it distinguishes hardware-plausible windows from abstract scans. The explanation of why Kerr-like behavior remains stronger on the weak-signal task should still be sharpened.
+- Acceptance probability: 50%
+
+### Reviewer 3
+
+- Updated view: The new threshold-activation corollary is a real theoretical improvement. The paper still does not have a universal theorem for all activation classes, but the rigor bar is now noticeably higher.
+- Acceptance probability: 47%
+
+### Reviewer 4
+
+- Updated view: The paper is steadily becoming a coherent framework article. The mix of favorable and limiting evidence now reads as deliberate rather than incomplete.
+- Acceptance probability: 58%
+
+### Reviewer 5
+
+- Updated view: The platform figure and source-backed window note help substantially. A more explicit device-facing discussion section could move this from interesting to convincing.
+- Acceptance probability: 52%
+
+### Composite Assessment
+
+- Current editorial tendency: still below acceptance, but now clearly moving through the stronger half of major revision
+- Current main drag items:
+  1. benchmark breadth is improved but still not yet enough for a 75% acceptance outlook
+  2. the theory is significantly better but not yet fully universal
+  3. the platform section still needs a direct discussion of routing length, coupling and system-level effective loss

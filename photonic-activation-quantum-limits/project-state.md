@@ -43,18 +43,20 @@ The paper now has multiple evidence layers, but still needs stronger cross-linki
 - In the weak-signal benchmark, deterministic nonlinear baselines remain strongest in the current setup, with Kerr reaching 54.2% and the best AQMA reaching 53.8%, which is useful limiting evidence.
 - Across photon budgets in the weak-signal benchmark, AQMA rises from about 51.3% at 0.3 photons to 53.8% at 10 photons, indicating only modest gains on this task class.
 - The analytic discrimination lower bound predicts that at efficiency 0.9, loss 3 dB and dark count 0.01, at least 2.26, 8.91, 20.00 and 55.47 input photons are required to reach SNR targets 1, 2, 3 and 5, respectively.
+- A new threshold-activation corollary now links binary-like approximation error directly to a photon floor; for margin 0.5, efficiency 0.82, loss 3 dB and dark count 0.01, the current lower bound rises from 5.57 photons at epsilon 0.2 to 41.59 photons at epsilon 0.05.
+- A new platform window note maps the explored detector-loss scan to representative SiN, hybrid LiNbO3-on-SiN and III-V/SiN regimes using primary-source numbers.
 
 ## Current Acceptance Estimate
 
-This is still below the stop condition for Nature Photonics, but the evidence is now much more complete and more trustworthy because it includes both positive and limiting cases. Current stage estimate: 42-52%.
+This is still below the stop condition for Nature Photonics, but the evidence is now broader, more internally consistent and better tied to realistic hardware windows. Current stage estimate: 48-58%.
 
 ## Next Highest-Priority Goal
 
 Turn the current mixed evidence into a tighter paper-grade chain:
 
-1. explain the benchmark split clearly: AQMA helps on some targets, but not all
-2. connect the analytic floor to the benchmark behavior and device-scan regimes in manuscript-ready prose
-3. tighten the paper's scope so the contribution is a framework with bounded claims, not an overgeneralized superiority claim
+1. connect the two analytic bounds to the benchmark and platform-map story in manuscript-ready prose
+2. make the platform discussion concrete enough that device-oriented referees stop seeing the map as abstract
+3. keep trimming claims until every sentence is fully covered by either proof, direct simulation or explicit scope wording
 
 ## Immediate Plan
 

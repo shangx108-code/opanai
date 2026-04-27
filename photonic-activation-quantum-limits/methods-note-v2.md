@@ -38,3 +38,4 @@ Use the following hierarchy in the paper:
 2. precise prior choice `p(x)` for activation-cost integration
 3. reproducibility note for random seeds and parameter grids
 4. one paragraph explaining why the weak-signal benchmark is intentionally difficult and why its modest gains are informative rather than contradictory
+5. add the new threshold-activation corollary as a separate proposition beneath the Poisson discrimination theorem
