@@ -38,6 +38,7 @@
 - 后续 manuscript / supplement 源文件
 - 正式图号映射表
 - round5 / round5b 结果尚未写入 Google Drive 主索引
+- 活动工作区中的 round1-round5b 源脚本与输出文件当前不可见，需先恢复或重新归档后才能视为可复跑包
 
 ## 本轮新增归档
 - 写作启动记录：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-writing-launch-2026-04-27.md`
@@ -51,3 +52,9 @@
 - round5b 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_metrics.csv`
 - round5b 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_summary.md`
 - round5b 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_panel.png`
+- strict 主文草稿：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md`
+- strict 审稿记录：`/workspace/memory/self-calibrating-diffractive-ncomms/review-round-manuscript-v1-strict.md`
+
+## 本轮归档状态判断
+- 已完成：主文草稿与本轮审稿记录已写入 memory 命名空间
+- 未完成：底层 round1-round5b 活动工作区文件未恢复，Google Drive 主索引仍未建立，因此本项目仍处于“未完成归档”状态

@@ -229,3 +229,23 @@
 - 2026-04-27：正式启动严格写作流程，新增主文骨架、图文映射和 30+ reference ledger 初稿；同时保留“普通 D2NN vs pilot-assisted D2NN 器件级阳性对照尚未完成”的明确边界。
 - 2026-04-27：完成 round5 两层 pure-reconstruction phase-only D2NN 对照。OOD 下 common-path 相比 ordinary 为 `-0.191 dB`，给出中性偏负结果。
 - 2026-04-27：完成 round5b 三层 self-calibrating phase-only D2NN 原型。OOD 下 common-path object-zone PSNR 相比 ordinary 提升 `+0.204 dB`，但相对 non-common-path 仅 `+0.054 dB`，且 coefficient readout MAE 未改善，因此 Figure 5 只获得了第一轮弱原型证据。
+- 2026-04-27：进入 strict manuscript mode，新增连续主文草稿 `manuscript-v1-strict.md`，把四段式引言、Methods / Results / Discussion / Summary、五张图的正文引用职责和 30+ 参考文献谨慎核验状态统一到同一份稿件中。
+- 2026-04-27：完成基于 `manuscript-v1-strict.md` 的五审稿人严格评估；当前接收概率分别为 Reviewer A `36%`、Reviewer B `18%`、Reviewer C `23%`、Reviewer D `41%`、Reviewer E `17%`。
+- 2026-04-27：本轮发现新的可复现性风险：项目状态文件中记录的 round1-round5b 代码与输出路径当前不在活动工作区中，故本轮无法对这些结果做直接复跑验证；该问题已记为“证据包可访问性缺口”，但不改写既有已记录结果。
+
+## Strict Manuscript Mode Update
+- 当前阶段：严格稿件整合阶段
+- 当前总目标：在不越过现有证据边界的前提下，把主文、图号职责、参考文献账本与审稿判断统一起来，同时继续把 Figure 5 视为唯一主瓶颈。
+- 当前唯一主瓶颈：Figure 5 的器件级 evidence 仍然过弱；在此之外，本轮新增的次级风险是底层 round1-round5b 文件当前不在活动工作区，限制了立即复跑与归档核验。
+- 本轮唯一最高优先级：先把现有证据收束成一份完整且克制的主文草稿，避免稿件逻辑继续落后于证据边界。
+- 本轮交付物：
+  - `manuscript-v1-strict.md`
+  - `review-round-manuscript-v1-strict.md`
+  - 更新后的项目状态、监督、审稿、角色与归档记录
+- 完成标准状态：
+  - 四段式引言：已满足
+  - Methods / Results / Discussion / Summary 主文结构：已满足
+  - 每张图在正文中被明确引用并承担论证职责：已满足
+  - 30+ 参考文献并区分谨慎核验状态：已满足
+  - 所有缺失标准完全满足：未满足
+  - 五位审稿人接收概率全部超过 80%：未满足
