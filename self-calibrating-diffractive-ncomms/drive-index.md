@@ -15,4 +15,10 @@
 - `09-archive`
 
 ## 当前待执行动作
-- 等 round2 开始生成更完整的真实证据后，再把关键文件系统性写入云端索引。
+- 现在已经有 round5 / round5b 的关键 processor-level 本地结果，但仍未写入 Google Drive 主索引。
+- 下一次具备 Drive 路径后，优先归档：
+  - `/workspace/self-calibrating-diffractive-ncomms/round5_minimal_d2nn_comparison.py`
+  - `/workspace/self-calibrating-diffractive-ncomms/round5b_selfcalibrating_d2nn.py`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5_minimal_d2nn_metrics.csv`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_metrics.csv`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_panel.png`

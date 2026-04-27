@@ -166,3 +166,34 @@
 ### 对当前阶段真实状态的判断
 - 当前支持进入“严格写作 + 继续补主证据”的并行推进阶段。
 - 当前仍不支持宣布可投稿。
+
+## 2026-04-27 Round 5 / 5b
+
+### 当前检查范围
+- 最小 phase-only D2NN 器件级对照是否已真实运行
+- common-path 优势是否在 processor level 上出现
+- Figure 5 是否可从占位项升级为真实原型
+
+### 已确认正确的部分
+- 已真实运行 `round5_minimal_d2nn_comparison.py` 并生成 CSV、JSON、Markdown、PNG、NPZ。
+- 已真实运行 `round5b_selfcalibrating_d2nn.py` 并生成 CSV、JSON、Markdown、PNG、NPZ。
+- round5b 在 OOD 集上给出第一轮弱正向 reconstruction 信号：common-path object-zone PSNR 为 `11.559 dB`，ordinary 为 `11.356 dB`，wrong-reference 为 `11.350 dB`。
+- Figure 5 现在已有真实原型图，不再是纯占位。
+
+### 当前存在的问题或错误
+- round5 的最小两层重建型 D2NN 是中性偏负结果，说明当前器件级主线并不天然稳健。
+- round5b 的 common-path 相比 non-common-path 仅 `+0.054 dB`，增益太弱。
+- round5b 的 coefficient readout MAE 未优于 ordinary，因此不能把它写成“已经实现清晰自校准”。
+
+### 尚未验证或待核实的部分
+- seed 稳定性
+- pilot amplitude / layer count 的局部鲁棒性窗口
+- turbulence / thin phase screen 下是否仍保留相同方向
+- 更强数字基线与器件级对照的最终关系
+
+### 对当前阶段真实状态的判断
+- 当前已从“缺失 processor-level 结果”进入“已有 processor-level 弱原型，但仍不足以封闭主文结论”的阶段。
+
+### 是否支持进入下一阶段
+- 支持进入 Figure 5 稳健性增强阶段。
+- 不支持宣称所有缺失标准已满足。

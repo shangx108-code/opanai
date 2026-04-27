@@ -6,11 +6,11 @@ Self-calibrating diffractive optical neural operators for imaging through dynami
 ## Claim boundary
 - Verified: common-path pilot/reference improves recovery relative to no-reference and non-common-path settings in Gaussian surrogate, Zernike wave-optics PSF modeling, and task-level cross-task surrogate evaluations.
 - Partially verified: the pilot channel carries useful information about instantaneous degradation, consistent with the current CRLB-style and local task-level bounds.
-- Not verified: the central device-level claim for a fixed passive diffractive processor under a unified ordinary-D2NN versus pilot-assisted-D2NN protocol.
+- Partially verified: a first phase-only passive-processor prototype now exists under a unified ordinary-D2NN versus pilot-assisted-D2NN protocol, but the gain is weak and architecture-dependent.
 - Therefore, the current manuscript can be written as a strict submission scaffold, but not yet as a submission-ready paper.
 
 ## Abstract skeleton
-Dynamic aberrations and weak scattering limit optical imaging across microscopy, free-space sensing, and coherent computational imaging. Existing correction strategies typically rely on wavefront sensing, adaptive hardware, iterative optimization, or substantial electronic post-processing. Here we study whether a fixed diffractive optical processor can exploit a co-propagating optical reference to infer the instantaneous aberration state and improve image formation without dynamic reconfiguration of the optical hardware. Numerical evidence from Gaussian surrogates, wave-optics modeling with dynamic Zernike aberrations, and task-level generalization tests supports the core mechanism that a common-path pilot channel reduces uncertainty about the current degradation. However, the decisive passive-processor comparison between ordinary and pilot-assisted diffractive networks remains outstanding. The present draft therefore establishes the manuscript logic, evidence boundaries, figure roles, and citation chain needed for a strict writing workflow, while reserving the device-level main claim for the next verified result package.
+Dynamic aberrations and weak scattering limit optical imaging across microscopy, free-space sensing, and coherent computational imaging. Existing correction strategies typically rely on wavefront sensing, adaptive hardware, iterative optimization, or substantial electronic post-processing. Here we study whether a fixed diffractive optical processor can exploit a co-propagating optical reference to infer the instantaneous aberration state and improve image formation without dynamic reconfiguration of the optical hardware. Numerical evidence from Gaussian surrogates, wave-optics modeling with dynamic Zernike aberrations, task-level generalization tests, and a first phase-only processor prototype supports the core mechanism that a common-path pilot channel can reduce uncertainty about the current degradation. However, the processor-level gain remains too weak to carry the manuscript by itself. The present draft therefore establishes the manuscript logic, evidence boundaries, figure roles, and citation chain needed for a strict writing workflow, while reserving the final device-level claim for a stronger verified result package.
 
 ## Introduction
 
@@ -24,7 +24,7 @@ Diffractive optical neural networks and related free-space optical processors ha
 Existing routes do not fully close this gap. Robust training can average over a family of degradations, but does not by itself guarantee access to the current degradation realization. Guide-star or wavefront-sensing methods can estimate the aberration state, but typically require dedicated sensing paths, adaptive elements, or separate correction loops [2-4,11,24-26]. Purely digital learning-based restoration can be powerful, yet it moves the burden to electronic computation, latency, and training assumptions that may fail out of distribution [12,13,27-36]. A physically appealing alternative is to let a known optical reference co-propagate with the object through the same unknown degradation, so that the optical input already contains a conditional observation of the present distortion state.
 
 ### Paragraph 4: this work and contributions
-This paper develops that conditional-optics perspective for self-calibrating diffractive processing. We formulate a common-path pilot/reference scheme in which object and reference fields share the same dynamic degradation, and we test whether the resulting observation can improve downstream recovery in fixed diffractive pipelines. The present evidence package establishes three elements needed for the manuscript spine: first, a mechanism-level signal showing that common-path reference information improves recovery relative to no-reference and non-common-path controls; second, a wave-optics validation under dynamic Zernike aberrations together with information-theoretic and task-level bounds; and third, a cross-task analysis clarifying where the gain is strongest and where it remains weak. The final device-level claim, namely an ordinary-D2NN versus pilot-assisted-D2NN comparison under a unified protocol, is still pending and is explicitly reserved as the critical next result.
+This paper develops that conditional-optics perspective for self-calibrating diffractive processing. We formulate a common-path pilot/reference scheme in which object and reference fields share the same dynamic degradation, and we test whether the resulting observation can improve downstream recovery in fixed diffractive pipelines. The present evidence package establishes four elements needed for the manuscript spine: first, a mechanism-level signal showing that common-path reference information improves recovery relative to no-reference and non-common-path controls; second, a wave-optics validation under dynamic Zernike aberrations together with information-theoretic and task-level bounds; third, a cross-task analysis clarifying where the gain is strongest and where it remains weak; and fourth, a first phase-only processor prototype under a unified protocol that provides only a weak positive signal and therefore defines the real remaining gap. The device-level story is no longer absent, but it is still too weak to serve as the final central claim.
 
 ## Main text structure
 
@@ -46,7 +46,7 @@ This paper develops that conditional-optics perspective for self-calibrating dif
 #### Section 3. Metrics, controls, and evidence status
 - Define no-reference, common-path, non-common-path, and wrong-reference controls.
 - Use PSNR and PSF mismatch as primary current metrics; do not overemphasize coefficient recovery.
-- Mark current device-level processor comparison as not yet available.
+- Mark the current device-level processor comparison as available only in a weak prototype form.
 
 ### Results
 
@@ -76,20 +76,21 @@ Text role:
 
 #### Result 5. Passive diffractive processor comparison under a unified protocol
 Text role:
-- Introduce Figure 5 only after the result exists.
-- Figure 5 must become the manuscript pivot once ordinary D2NN and pilot-assisted D2NN are both run under the same dynamic-aberration protocol.
-- Until then, this section remains a locked placeholder and a formal blocker for submission.
+- Introduce Figure 5 as the first processor-level prototype after Figures 1-4 have established the mechanism, wave-optics, and task-level context.
+- State explicitly that the current verified processor-level result is weak: in the present prototype the common-path pilot improves object-zone OOD PSNR by only about 0.2 dB over the ordinary D2NN, and the calibration readout itself is not yet stronger than the ordinary control.
+- Use Figure 5 to argue that the processor-level story has moved from “missing” to “partially present but not yet decisive”.
+- This section must not overclaim; it should motivate the next strengthening step rather than declare submission readiness.
 
 ### Discussion
 - Summarize what is actually established: common-path pilot observations carry useful state information and improve recovery in current models.
 - Explain why this differs from plain robustness training.
-- Discuss failure modes: low-information pilot, reference mismatch, non-common-path corruption, limited gain under some tasks, and possible disappearance of the advantage in device-level D2NN tests.
-- Explicitly note that the present manuscript boundary is below full submission maturity until the passive-processor comparison is completed.
+- Discuss failure modes: low-information pilot, reference mismatch, non-common-path corruption, limited gain under some tasks, and the possibility that the advantage stays weak even when a device-level D2NN prototype exists.
+- Explicitly note that the present manuscript boundary is below full submission maturity because the passive-processor comparison is still not strong enough.
 
 ### Summary
 - Restate the main conceptual advance in one restrained sentence.
 - Restate the current strongest verified evidence in one sentence.
-- Restate the decisive missing evidence in one sentence.
+- Restate the decisive remaining gap in one sentence.
 
 ## Figure-to-text argument map
 
@@ -112,8 +113,8 @@ Text role:
 
 ### Figure 5. Ordinary D2NN vs pilot-assisted D2NN under shared protocol
 - Must be cited in Result 5, Discussion, and Summary.
-- This figure is mandatory for the final submission narrative.
-- Current status: missing.
+- Must support only the restrained statement that a first processor-level prototype exists and currently shows at most a weak common-path advantage.
+- This figure is still mandatory for the final submission narrative, but its current version is not yet strong enough for final use.
 
 ## Evidence ledger
 
@@ -127,9 +128,10 @@ Text role:
 - The present manuscript spine uses five main figures, with Figure 5 reserved for the decisive passive-processor comparison.
 - The abstract skeleton and section transitions are drafted in a restrained Nature-like voice.
 - The current figure roles are inferred from the project-state evidence already stored in memory.
+- The current Result 5 wording is intentionally conservative because the processor-level gain is weak and not yet robust.
 
 ### C. Missing or unverified content
-- Unified ordinary D2NN versus pilot-assisted D2NN result package.
+- A stronger and more robust unified ordinary D2NN versus pilot-assisted D2NN result package.
 - Final manuscript figures and captions.
 - Final bibliography formatting in journal style.
 - Full Methods parameter table and supplementary note structure.

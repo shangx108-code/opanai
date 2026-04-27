@@ -34,12 +34,20 @@
 - round4 cross-task 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_panel.png`
 
 ## 待归档
-- round3 passive diffractive processor 最小对照脚本与结果
 - 文献索引与 reference ledger
 - 后续 manuscript / supplement 源文件
 - 正式图号映射表
+- round5 / round5b 结果尚未写入 Google Drive 主索引
 
 ## 本轮新增归档
 - 写作启动记录：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-writing-launch-2026-04-27.md`
 - 主文骨架：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v0-structure.md`
 - 参考文献账本：`/workspace/memory/self-calibrating-diffractive-ncomms/reference-ledger-v1.md`
+- round5 两层 D2NN 脚本：`/workspace/self-calibrating-diffractive-ncomms/round5_minimal_d2nn_comparison.py`
+- round5 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5_minimal_d2nn_metrics.csv`
+- round5 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5_minimal_d2nn_summary.md`
+- round5 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5_minimal_d2nn_panel.png`
+- round5b 自校准 D2NN 脚本：`/workspace/self-calibrating-diffractive-ncomms/round5b_selfcalibrating_d2nn.py`
+- round5b 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_metrics.csv`
+- round5b 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_summary.md`
+- round5b 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_panel.png`

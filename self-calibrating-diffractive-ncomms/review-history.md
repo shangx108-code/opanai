@@ -98,3 +98,31 @@
 
 ### 接收概率变化依据
 - 因写作结构、图文映射和引用链得到规范化，稿件执行效率会提高，但主证据没有新增，因此综合接收概率暂维持 `20%–25%`。
+
+## Round 5 / 5b 内部严格审稿
+
+### 检查范围
+- ordinary D2NN vs pilot-assisted D2NN 的最小 phase-only 器件级对照是否已真实运行
+- Figure 5 是否已经从占位项变成真实可审查结果
+- 新结果是否足以显著提升投稿成熟度
+
+### 主要意见
+1. round5 的两层 pure-reconstruction D2NN 给出的是中性偏负结果：common-path 相比 ordinary 为 `-0.191 dB`，说明“把 pilot 加进输入”本身不会自动形成器件级优势。
+2. round5b 升级为带 calibration readout 区的三层 self-calibrating D2NN 后，processor-level OOD reconstruction 出现第一轮弱正向信号：common-path 相比 ordinary 为 `+0.204 dB`，相对 wrong-reference 为 `+0.209 dB`。
+3. 但相对 non-common-path 仅 `+0.054 dB`，而 coefficient readout MAE 反而没有优于 ordinary，因此“自校准已被器件级清晰读出”仍不能成立。
+4. Figure 5 已经不再缺失，但它现在只能作为“第一轮弱原型”，不能承担 Nature Communications 主文 pivot。
+
+### 审稿判断
+- 项目有真实推进，因为最核心缺口已从“无结果”变为“有弱结果”。
+- 但项目仍不具备投稿条件。
+
+### 五审稿人接收概率
+- Reviewer A（机制与理论链）: `31%`
+- Reviewer B（器件级证据）: `22%`
+- Reviewer C（计算成像与基线）: `24%`
+- Reviewer D（图文与叙事完整性）: `29%`
+- Reviewer E（期刊门槛与总体成熟度）: `21%`
+
+### 接收概率变化依据
+- 由于 Figure 5 已有第一轮真实 prototype，综合接收概率可谨慎上调到 `24%–30%`。
+- 但所有五位审稿人的接收概率都远未超过 `80%`，停止条件明确未满足。

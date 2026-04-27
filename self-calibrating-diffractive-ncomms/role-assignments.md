@@ -1,18 +1,18 @@
 # 角色任务表：self-calibrating-diffractive-ncomms
 
 ## 当前阶段
-wave-optics 最小阳性对照、round3 理论补强和 round4 cross-task 验证已完成，下一步继续进入最小被动衍射处理器对照构建。
+wave-optics 最小阳性对照、round3 理论补强和 round4 cross-task 验证已完成，且已有 round5/round5b 第一轮最小被动衍射处理器原型；下一步转入“增强 Figure 5 稳健性”。
 
 ## 当前唯一主瓶颈
-缺少 ordinary D2NN vs pilot-assisted D2NN 的真实被动衍射处理器对照结果。
+已有 ordinary D2NN vs pilot-assisted D2NN 的真实最小原型对照，但优势太弱，且 calibration readout 没有形成一致正向结果。
 
 ## 角色任务
 
 ### 统筹者
-- 当前任务：把已验证的 wave-optics 机制推进到被动衍射处理器层面的最小阳性对照
-- 输入：上传提案、round1/round2 结果、环境状态
-- 输出：round3 唯一目标、完成标准、风险边界
-- 完成标准：后续所有任务只围绕最小 ordinary vs pilot-assisted 被动衍射处理器对照推进
+- 当前任务：把已存在的 round5/round5b 弱原型推进到更稳健的 Figure 5 结果
+- 输入：round1-round5b 结果、环境状态
+- 输出：Figure 5 增强路线、完成标准、风险边界
+- 完成标准：后续所有任务只围绕 processor-level 优势增强展开
 - 优先级：最高
 
 ### 理论人员
@@ -23,10 +23,10 @@ wave-optics 最小阳性对照、round3 理论补强和 round4 cross-task 验证
 - 优先级：高
 
 ### 代码与数值计算人员
-- 当前任务：实现最小 passive diffractive processor + dynamic aberration + ordinary / pilot-assisted 对照
-- 输入：上传提案中的 Result 1 / Result 2 框架，round1/round2 结果
-- 输出：round3 脚本、CSV、summary、图文件、运行日志
-- 完成标准：至少得到一轮真实可复核的 ordinary vs pilot-assisted OOD 对照
+- 当前任务：增强 round5b self-calibrating D2NN，使 common-path 相比 ordinary / non-common-path / wrong-reference 的优势更清晰
+- 输入：`round5_minimal_d2nn_comparison.py`、`round5b_selfcalibrating_d2nn.py`
+- 输出：稳健性扫描脚本、更新后的 Figure 5 指标表与图文件
+- 完成标准：processor-level gain 不再只是弱单点信号
 - 优先级：最高
 
 ### 数据分析人员
@@ -49,17 +49,17 @@ wave-optics 最小阳性对照、round3 理论补强和 round4 cross-task 验证
 - 优先级：高
 
 ### 画图人员
-- 当前任务：维持“所有正式数据图必须来自真实计算”的约束
-- 输入：round2 原始输出
-- 输出：只生成真实数据图；概念示意图若需要可后续由 GPT-imag-2.0 起草
-- 完成标准：不提前制造装饰性定稿图
+- 当前任务：把 round5b 面板当作 Figure 5 原型，而不是终稿
+- 输入：round5 / round5b 原始输出
+- 输出：真实数据图更新版；若后续增强成功再升级图面布局
+- 完成标准：Figure 5 每个条件都必须有论证职责
 - 优先级：中
 
 ### 论文撰写人员
-- 当前任务：推进严格写作流程，先完成四段式引言、正文结构、图文映射和 reference ledger 初稿
-- 输入：项目主张、round1-round4 证据边界、目标期刊要求
-- 输出：`manuscript-v0-structure.md` 与 `reference-ledger-v1.md`
-- 完成标准：写作结构可直接承接后续真实结果；不出现结论强于证据
+- 当前任务：把 Figure 5 从“缺失”改写为“弱原型证据”
+- 输入：项目主张、round1-round5b 证据边界、目标期刊要求
+- 输出：更新后的 `manuscript-v0-structure.md`
+- 完成标准：Figure 5 在正文中被明确引用，但不越过证据强度
 - 优先级：高
 
 ### 监督 / 审稿环节

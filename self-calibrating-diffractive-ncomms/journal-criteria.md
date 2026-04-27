@@ -4,7 +4,7 @@
 Nature Communications
 
 ## 当前必须满足而尚未满足的门槛
-- ordinary D2NN vs pilot-assisted D2NN 的核心阳性对照
+- ordinary D2NN vs pilot-assisted D2NN 的核心阳性对照必须从“弱原型信号”提升到“清晰且稳健”
 - 至少两到三类动态退化的统一证据链
 - 强基线对照：传统恢复、电子网络、理想上限
 - 完整理论边界：为何共路 pilot 有效、何时失效、何时只剩有限增益
@@ -20,9 +20,8 @@ Nature Communications
 - cross-task surrogate 上已出现第一轮正向泛化信号
 
 ## 当前仍存在的高风险
-- 该积极信号仍可能在 wave-optics / D2NN 场景下消失
-- 该积极信号仍可能在被动衍射处理器场景下消失
-- 如果 pilot-assisted 在 OOD 对照中不能显著优于 ordinary D2NN，论文主线将削弱
+- 该积极信号在最小被动衍射处理器场景下虽然未消失，但目前过弱，仍可能在稍微改变协议后消失
+- 如果 pilot-assisted 在 OOD 对照中仍不能显著优于 ordinary D2NN，论文主线将削弱
 - 如果更强 ML baseline 仍然不能利用 pilot，ML 说服力会明显不足
 - 若只能在单一 surrogate 上成立，目标期刊可能下调
 - 在当前纯理论与仿真路线下，实验缺失不作为当前执行失败项，但可能继续限制最终期刊匹配上限
