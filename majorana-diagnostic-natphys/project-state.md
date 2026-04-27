@@ -9,10 +9,10 @@
 Build a publishable theory paper that does not merely restate that nonlocal conductance helps, but establishes a genuinely new and experimentally actionable diagnostic hierarchy that separates topological Majorana zero modes from trivial zero-energy states across multiple superconducting hybrid platforms. The project is not considered complete until the estimated Nature Physics acceptance probability exceeds 70% and all required evidence layers are closed with auditable support.
 
 ## Current stage
-Pilot-manuscript stage with literature-verified repositioning, theory-standard fixing, and a first reliable topological layer for the clean homogeneous wire. The project now includes a draft manuscript package, an explicit diagnostic-hierarchy theory note, a compact real-data benchmark, figure assets, and an internal review package. It is still below Nature Physics submission strength, but it is no longer only a concept note.
+Pilot-manuscript stage with literature-verified repositioning, theory-standard fixing, and expanded transport numerics. The project now includes a draft manuscript package, an explicit diagnostic-hierarchy theory note, first real-data benchmark outputs, and a wider transport benchmark suite across positive, smooth-dot, impurity, disorder, and broadening scans. It is still below Nature Physics submission strength, but it is no longer only a concept note.
 
 ## Current main bottleneck
-The main bottleneck is now missing selectivity under the stricter evidence-completion standard. The clean-wire class-D invariant is explicit and reliable, and the inhomogeneous controls now have a quasi-topological layer based on end-to-end nonlocality and charge neutrality. However, that new layer rejects the dot-induced ABS but does not yet eliminate the disorder-generated false positive. Without a stronger disorder-robust discriminator, neither the >70% target nor the "all evidence completed" rule is reachable. Novelty also still needs sharper separation from the older nonlocal-Majorana diagnostic literature and from the 1 April 2026 *npj Quantum Materials* article on topological altermagnetic Josephson junctions.
+The main bottleneck is still selectivity under the stricter evidence-completion standard. The project now has broader result coverage, but the current false-positive parameter families do not yet produce the strongest misleading zero-bias behavior, and the topology layer remains weaker than the manuscript ultimately needs. Without a stronger disorder-robust discriminator and more convincing false-positive benchmarks, neither the >70% target nor the "all evidence completed" rule is reachable.
 
 ## Highest-priority objective for the current round
 Lock the project around one original centerpiece and one auditable completion rule:
@@ -44,13 +44,10 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Literature positioning now reflects the 2026 TAJJ overlap explicitly
 - A formal internal theory note now defines the diagnostic hierarchy and evidence-completion criteria
 - A first real-data benchmark sweep now exists for a Rashba positive control and a smooth-dot false-positive control in one finite-chain BdG code path
-- Full manuscript draft and internal review package now exist
-- A compact numerical benchmark now exists for clean-wire, dot-ABS, and disorder-induced near-zero-state cases
-- The clean homogeneous Rashba wire now has a reliable bulk class-D invariant in the benchmark
-- A quasi-topological metric now exists for the inhomogeneous controls and already suppresses the dot-induced ABS case
+- A wider transport benchmark bundle now exists with positive-control, smooth-dot, impurity, disorder, eta-broadening, and bias-trace outputs stored under `/workspace/output/transport-benchmark`
 
 ## What is still missing
-- A sharper novelty statement against 2019/2021/2024 nanowire-diagnostic literature
+- A verified novelty statement against 2019/2021/2024 nanowire-diagnostic literature
 - A numerically validated disorder-robust inhomogeneous discriminator for false-positive controls
 - Platform breadth sufficient for Nature Physics
 - Real numerical results, figure-ready parameter scans, and robustness windows
@@ -61,11 +58,12 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - A benchmark where nonlocal transport, gap reopening, and topology label are evaluated together rather than only finite-chain spectral proxies
 - One more false-positive family, preferably impurity- or YSR-like
 - Stronger experimental observability windows for temperature and barrier scans
+- Parameter tuning that produces genuinely persuasive false-positive zero-bias behavior rather than merely weak trivial responses
 
 ## Acceptance probability (stage estimate)
-- Nature Physics: 24-34% after adding the quasi-topological control layer and keeping the stricter >70% completion rule
+- Nature Physics: 10-18% in the current manuscript-package state
 - Project success threshold: >70%
-- Reason: the manuscript is now stronger on both the clean topological side and the local-ABS-control side, but the evidence package and novelty separation are still below top-tier threshold because the disorder false positive remains insufficiently filtered and the cross-platform breadth is missing
+- Reason: numerical coverage improved, but the evidence is still not selective enough and the novelty separation remains below the top-tier threshold
 
 ## Last update
-2026-04-27: the project was advanced again by adding a quasi-topological inhomogeneous-control layer based on end-to-end nonlocality and charge neutrality. This new layer strongly suppresses the dot-induced ABS but does not yet eliminate the disorder-generated false positive. The manuscript and review package were updated accordingly. The next bottleneck is now a disorder-robust inhomogeneous discriminator and insufficient cross-platform evidence.
+2026-04-27: expanded the numerical suite from the initial Rashba sweep to a shared transport-benchmark package containing positive-control, smooth-dot, impurity, disorder, eta-broadening, and bias-trace outputs. The new result classes are now available, but the present parameter family still does not generate convincingly strong false-positive zero-bias peaks, so scientific closure has not yet been reached.

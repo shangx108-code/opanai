@@ -97,52 +97,26 @@ This is a good stress test of the paper's central philosophy. It shows that the 
 ### Acceptance-probability trend
 - Current estimate remains 10-18%
 - Real-data progress achieved, but no major upgrade justified until transport and topology information are coupled in the same benchmark
-## 2026-04-27 | Topological-layer repair
+
+## 2026-04-27 | Expanded transport benchmark review
 
 ### Material reviewed
-- Updated draft manuscript: `/workspace/output/majorana_natphys_manuscript.docx`
-- Updated review package: `/workspace/output/majorana_natphys_review_package.docx`
-- Updated numerical assets: `/workspace/output/majorana_natphys_assets/`
+- Benchmark script: `/workspace/research/majorana_transport_benchmark.py`
+- Output bundle: `/workspace/output/transport-benchmark/`
 
-### What changed
-1. The previously unreliable reflection-matrix-style output was removed from the benchmark logic.
-2. A reliable clean-wire class-D bulk invariant was added for the homogeneous Rashba reference wire.
-3. The manuscript now states explicitly that the inhomogeneous false-positive controls are not assigned the same bulk invariant, because that would be theoretically unjustified in the present benchmark.
+### Reviewer-style verdict
+Current outcome: the numerical evidence classes are substantially more complete, but the benchmark is still not yet a submission-grade argument
 
-### Reviewer-style impact
-This is a meaningful improvement in rigor. The paper now makes one honest topological claim that can be defended quantitatively, instead of gesturing toward a topological layer that was not actually reliable. The cost is that the manuscript's remaining incompleteness is now more visible: the inhomogeneous-control topological layer is still absent.
+### What improved
+1. The code now produces transport-side observables rather than only finite-chain spectral proxies.
+2. The result bundle includes positive-control, smooth-dot, impurity, disorder, eta-broadening, and representative bias-trace outputs.
+3. The project now has real stored data for several main-text and supplementary-style evidence categories.
 
-### Updated blockers
-1. Need a defensible inhomogeneous topological or quasi-topological discriminator.
-2. Need at least one additional false-positive family, ideally impurity- or YSR-like.
-3. Need stronger novelty separation from existing nanowire-diagnostic literature.
-
-### Acceptance-probability trend
-- Updated estimate for Nature Physics: 22-32%
-- Upgrade condition to 35-45%: add a reliable inhomogeneous-control discriminator and one additional benchmark family
-- Upgrade condition to 45%+: demonstrate a cross-platform result that existing nonlocal-conductance studies do not already subsume
-
-## 2026-04-27 | Quasi-topological control-layer check
-
-### Material reviewed
-- Updated benchmark script: `/workspace/research/majorana_diagnostics.py`
-- Updated numerical assets: `/workspace/output/majorana_natphys_assets/`
-- Updated manuscript and review package
-
-### What changed
-1. Added an inhomogeneous-control quasi-topological metric built from end-to-end nonlocality and charge neutrality of the lowest positive-energy mode.
-2. Added a new figure showing the clean case, dot-induced ABS, and disorder-induced near-zero-state values of that metric.
-3. Added the same metric to the disorder-ensemble statistics.
-
-### What was learned
-1. The dot-induced ABS is strongly suppressed by the quasi-topological layer.
-2. The disorder-induced near-zero state is not strongly suppressed by the same layer.
-3. This strengthens the manuscript's central hierarchy claim: quasi-topological structure cannot replace genuine topology and disorder stress tests.
-
-### Reviewer-style impact
-This is a scientifically useful upgrade. It gives the paper a more complete inhomogeneous-control layer, but in a way that produces a hard negative result rather than a cosmetic win. The manuscript is therefore more convincing, not less. At the same time, the disorder false positive remains the central unresolved control problem.
+### What remains limiting
+1. The present parameter family still does not generate strong false-positive zero-bias peaks in the way needed for a convincing failure figure.
+2. The reflection-based topology proxy is not yet numerically decisive in the current implementation.
+3. The transport benchmark is still effectively two-terminal wide-band rather than a fully convincing three-terminal manuscript engine.
 
 ### Acceptance-probability trend
-- Updated estimate for Nature Physics: 24-34%
-- Upgrade condition to 35-45%: add a disorder-robust inhomogeneous discriminator and one additional benchmark family
-- Upgrade condition to 45%+: demonstrate a cross-platform result that existing nonlocal-conductance studies do not already subsume
+- Current estimate remains 10-18%
+- Numerical coverage improved, but the evidence is not yet strong enough to justify a higher editorial-confidence estimate

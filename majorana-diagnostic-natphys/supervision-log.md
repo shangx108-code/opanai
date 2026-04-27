@@ -103,3 +103,25 @@ The team could prematurely interpret the current nonlocality score as near-suffi
 ### Newly completed items
 - Built a shared finite-chain Rashba benchmark for a positive control and a smooth-dot false-positive control
 - Stored real CSV outputs and a summary image derived from the computed data
+
+## 2026-04-27 | Round 5 supervision after expanded transport numerics
+
+### Overall evaluation
+The project now has a much broader numerical base than before. This is real progress: the missing result categories are being closed one by one rather than left as placeholders. At the same time, the new results reinforce that numerical completeness and scientific sharpness are not the same thing.
+
+### Gap to target-journal standard
+- The transport bundle exists, but the failure-figure logic is still not sharp enough because the current false-positive controls do not yet produce the strongest misleading zero-bias behavior.
+- The topology layer still needs a more decisive implementation.
+- The positive-control result remains more useful as a pipeline anchor than as a polished Nature Physics figure.
+
+### Most critical quality risk
+The team could mistake broader output coverage for a solved evidence problem, even though the hardest discriminating case is still under-tuned.
+
+### Plan-revision advice
+1. Keep the new transport bundle as a milestone, but do not present it as final proof.
+2. The next numerical round should target parameter tuning for the strongest false-positive cases, especially dot-induced and impurity-driven near-zero states.
+3. After that, replace the topology proxy with a more decisive implementation or a cleaner benchmark construction.
+4. Only then should the manuscript-facing figure set be rebuilt.
+
+### Newly completed items
+- Added a shared transport benchmark script and stored CSV outputs for positive-control, smooth-dot, impurity, disorder, eta-broadening, and bias-trace scans
