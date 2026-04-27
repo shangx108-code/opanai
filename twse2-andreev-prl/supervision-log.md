@@ -57,3 +57,30 @@ Still in evidence generation and reconstruction, not yet in final manuscript rev
 ### Supports Next Stage?
 
 Partially. The project can keep iterating on reconstruction logic, but exact closure now appears increasingly dependent on obtaining either the author-side code or an actually reachable source archive.
+
+## 2026-04-27 | Three-track orchestration pass
+
+### Check Scope
+
+- Reclassify the project around the three user-specified tracks:
+  - `K`-point valley closure
+  - surface Green's-function benchmark
+  - BTK + robustness full data package
+
+### Confirmed Correct
+
+- The current workspace contains planning notes for SGF and BTK, but not actual numerical implementations for this project.
+- The current workspace contains an executable TB reconstruction script, so Track 1 is the only one that has already entered real code execution.
+
+### Problems / Risks
+
+- If the project treats all three tracks as equal bottlenecks now, execution will diffuse and the core material-specific closure may slip again.
+- SGF and BTK can be architected now, but they cannot yet count as final material-specific closure without an exact true-Tuo-TB base Hamiltonian.
+
+### Stage Judgment
+
+Three-track execution is now the right framing, but only one track has permission to remain the primary bottleneck: exact `K`-point valley closure.
+
+### Supports Next Stage?
+
+Yes, at the planning and orchestration level. The project now has a sharper role split and completion standard for all three tracks.

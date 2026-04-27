@@ -15,6 +15,12 @@ Replace the current `H_kp` benchmark with a symmetry-completed tight-binding Ham
 
 The uploaded Tuo supplementary package provides only representative hopping parameters in Eq. (S1), not the full lattice-vector hopping table. The current round must therefore reconstruct the full real-space hopping table from geometry and symmetry before the manuscript can honestly claim use of the true Tuo TB model.
 
+As of 2026-04-27 after the three-track triage requested by the user, this bottleneck is refined to:
+
+- exact `K`-point valley closure of the true Tuo TB model.
+
+The planned surface Green's-function benchmark and BTK / robustness package remain essential, but they are downstream of this main bottleneck rather than co-equal bottlenecks.
+
 ## Newly Verified Facts
 
 - The uploaded `04-ws2.zip` contains the Tuo article, SI, and source data.
