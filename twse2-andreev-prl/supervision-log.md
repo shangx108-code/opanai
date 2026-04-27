@@ -29,3 +29,31 @@ Current stage is still evidence generation, not final manuscript polishing.
 ### Supports Next Stage?
 
 Partially. The project supports further theory / code reconstruction immediately, but does not yet support a fully honest manuscript-wide material-specific rewrite.
+
+## 2026-04-27 | Second reconstruction pass
+
+### Check Scope
+
+- Search for editable manuscript source in the workspace
+- Search for additional public material that could remove the Tuo hopping-table ambiguity
+- Re-evaluate whether the remaining mismatch is due to missing files versus unresolved convention
+
+### Confirmed Correct
+
+- No local twse2 manuscript source is currently available for direct patching and compilation.
+- The peer-review file does not disclose the full lattice-vector hopping table.
+- The Nature article explicitly says code is available only from the corresponding author upon request.
+- The arXiv record exposes a TeX-source entry, but that source archive could not be fetched from the current environment because the remote endpoint returns access-denied responses here.
+
+### Problems / Risks
+
+- The project still cannot honestly claim exact true-Tuo-TB closure from public files already in hand.
+- Without local manuscript source files, even a future exact TB closure would still require one more step before final PDF compilation.
+
+### Stage Judgment
+
+Still in evidence generation and reconstruction, not yet in final manuscript revision.
+
+### Supports Next Stage?
+
+Partially. The project can keep iterating on reconstruction logic, but exact closure now appears increasingly dependent on obtaining either the author-side code or an actually reachable source archive.

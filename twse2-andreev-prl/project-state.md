@@ -1,7 +1,7 @@
 # Project State
 
 Project: `twse2-andreev-prl`
-Last updated: 2026-04-26
+Last updated: 2026-04-27
 
 ## Current Stage
 
@@ -22,6 +22,9 @@ The uploaded Tuo supplementary package provides only representative hopping para
 - Supplementary Eq. (S1) lists representative onsite and hopping amplitudes for the K valley.
 - Fig. S1 shows representative bonds up to fifth-nearest neighbor.
 - The SI explicitly states that the full model is obtained by symmetry completion from these representative bonds.
+- The Nature page states that code is only available from the corresponding author upon request.
+- The arXiv preprint `2409.06779` exposes a TeX-source entry publicly, but the source archive is not retrievable from the current container due remote access restrictions.
+- No editable local manuscript source for this twse2-Andreev project has appeared in the workspace as of 2026-04-27.
 
 ## Current Best Reconstruction Status
 
@@ -30,6 +33,7 @@ The uploaded Tuo supplementary package provides only representative hopping para
 - A reproducible reconstruction script now exists at `/workspace/twse2_tb/reconstruct_tuo_tb.py`.
 - The current best reconstructed `H_TB(k)` reproduces the exact `Gamma`-point energies of Tuo Fig. 1c and the full-band endpoint closure, but still shows nontrivial mismatch near `K^B` and `K^T`.
 - The current quantitative check gives an overall band RMSE of `10.55 meV` against the uploaded Fig. 1c source arrays.
+- Additional 2026-04-27 inspection confirms that the remaining mismatch is not explained by a missing source-data sheet or an obvious alternate peer-review attachment; the ambiguity is still in the unpublished full hopping convention / code path.
 - Therefore the honest status is: partial reconstruction achieved; exact full-band reproduction not yet closed.
 
 ## Evidence Ledger Snapshot
@@ -45,4 +49,4 @@ The uploaded Tuo supplementary package provides only representative hopping para
 
 ## Immediate Next Action
 
-Refine the symmetry completion for the mixed A/C and B/C hopping stars and determine the correct full star ordering / phase convention needed to collapse the remaining `K`-point band mismatch.
+Either obtain the author-side full hopping table / code, or recover the exact full star ordering and phase convention from a newly accessible source archive, before any manuscript text is upgraded from “candidate reconstruction” to “true Tuo TB”.
