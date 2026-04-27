@@ -147,3 +147,27 @@ The paper could now look visually complete before the topological logic is truly
 ### Newly completed items
 - Added a three-terminal benchmark script
 - Rebuilt Figure 3 and Figure 4 candidates from real three-terminal data
+
+## 2026-04-27 | Round 7 supervision after topology-layer triage
+
+### Overall evaluation
+The project bottleneck is now narrower and more actionable than before. The main risk is no longer "missing figures" in a generic sense; it is specifically that the current Figure 4 topology panel cannot yet carry a Nature Physics-grade conclusion because it is not computed on the same inhomogeneous landscape as the misleading false positives.
+
+### Gap to target-journal standard
+- The paper still lacks a manuscript-defensible inhomogeneous topological discriminator.
+- The current figure logic risks looking more complete than it really is.
+- The next numerical round is not free to explore broadly; it must be tied to one auditable Figure 4 rebuild criterion.
+
+### Most critical quality risk
+The team could polish captions and prose around the present Figure 4 and accidentally turn a working benchmark into an overstated result.
+
+### Plan-revision advice
+1. Replace the clean-backbone criterion with one full-device class-D invariant in the shared three-terminal pipeline.
+2. Define the next rebuild around `nu_ring` and `P_topo`, not around additional ad hoc nonlocal scores.
+3. Only refresh the Figure 4 caption and Results paragraph after the full-device rerun exists.
+4. Keep the disorder family visually present, but rebalance the operating points so dot and impurity false positives remain scientifically visible.
+
+### Newly completed items
+- Froze a topology-layer upgrade specification in `topology-layer-upgrade-spec-2026-04-27.md`
+- Added directly reusable manuscript paragraph and caption language for the future full-device topology rebuild
+- Identified the current scheduled-run blocker: the workspace does not contain the benchmark scripts or output bundles needed for a rerun

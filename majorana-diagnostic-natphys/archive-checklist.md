@@ -11,6 +11,7 @@
 - [ ] Observable definitions and notation ledger
 - [ ] Derivation note for scattering invariant and transport formulas
 - [x] Internal diagnostic-hierarchy theory note
+- [x] Topology-layer upgrade specification for the full-device Figure 4 rebuild
 
 ## Numerical package
 - [x] Reproducible code repository snapshot
@@ -39,6 +40,7 @@
 - [x] Figure 2 spectra and wavefunctions
 - [x] Figure 3 failure of local tunnelling
 - [x] Figure 4 nonlocal/topological rescue
+- [ ] Figure 4 rebuilt with full-device topology label
 - [x] Figure 5 diagnostic map / confusion matrix
 - [ ] Final captions
 - [ ] Every data figure traced to real computed or verified data
@@ -83,3 +85,4 @@
 - [x] `/workspace/output/three-terminal-benchmark/positive_three_terminal_robustness.csv`
 - [x] `/workspace/output/three-terminal-benchmark/figure3_failure_local_peaks.png`
 - [x] `/workspace/output/three-terminal-benchmark/figure4_nonlocal_rescue.png`
+- [x] `topology-layer-upgrade-spec-2026-04-27.md`

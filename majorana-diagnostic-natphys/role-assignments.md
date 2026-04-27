@@ -1,52 +1,52 @@
 # Role Assignments
 
 ## Coordinator
-- Current task: lock the main claim around the diagnostic hierarchy and supervise the next benchmark round
-- Inputs: source note, venue criteria, verified 2026 overlap, manuscript package
-- Deliverable: updated project brief and execution order
-- Completion standard: the project has one primary claim, one primary rejection risk, and one primary next experiment/calculation block
+- Current task: lock the next round around the full-device topology upgrade and prevent Figure 4 from drifting into premature finalization
+- Inputs: topology-layer upgrade specification, venue criteria, current figure logic, manuscript package
+- Deliverable: updated project brief and single benchmark target
+- Completion standard: the project has one primary rejection risk, one primary topology-fix task, and one rebuild trigger for Figure 4
 - Dependency: none
 
 ## Theory
-- Current task: integrate the new diagnostic-hierarchy theory note into manuscript-ready derivation blocks
-- Inputs: BdG model family, Green-function formalism, scattering-matrix invariant, disorder and impurity extensions, manuscript draft, internal theory note
-- Deliverable: concise theory note plus theorem-like statement or protocol statement
-- Completion standard: the manuscript can say exactly which combination of observables is needed, what each one excludes, and which derivation steps support that statement
+- Current task: formalize the full-device inhomogeneous class-D invariant and its relation to the diagnostic hierarchy
+- Inputs: BdG model family, Green-function formalism, Majorana-basis antisymmetrization, disorder and impurity extensions, topology-layer upgrade specification
+- Deliverable: concise derivation block plus manuscript-ready explanation of `nu_ring`
+- Completion standard: the manuscript can explain why the topology label and transport observables probe the same physical landscape
 - Dependency: coordinator framing
 
 ## Code and Numerical Computation
-- Current task: extend the new finite-chain Rashba benchmark into a transport-and-topology benchmark
-- Inputs: shared finite-chain code path, lead self-energies, parameter grids, false-positive controls, theory note completion criteria
-- Deliverable: scripts/results for `G_LL`, `G_RR`, `G_LR`, gap evolution, `Q`, LDOS, and robustness scans
-- Completion standard: the existing positive-control and smooth-dot datasets are upgraded with transport and topology observables from the same code path
+- Current task: implement the full-device ring-invariant topology label in the shared three-terminal benchmark path
+- Inputs: three-terminal operating-point table, inhomogeneous device Hamiltonians, barrier/temperature/disorder perturbations, topology-layer upgrade specification
+- Deliverable: rerun data for `G_LL`, `G_RR`, `G_LR`, reopened-gap proxy, `nu_ring`, and `P_topo`
+- Completion standard: positive, smooth-dot, impurity, and disorder families are evaluated with transport and topology on the same inhomogeneous instances
 - Dependency: theory definitions
 
 ## Data Analysis
-- Current task: define quantitative discrimination metrics and failure criteria
-- Inputs: output tables/curves from the computation pipeline
-- Deliverable: analysis memo stating which signatures are separable, where they overlap, and where the diagnostic fails
-- Completion standard: can produce at least one confusion-matrix-style summary and one disorder-statistics conclusion
+- Current task: quantify the decoupling between local-peak prevalence and topological-consistency probability
+- Inputs: rerun tables containing local-peak score, `|G_LR|`, gap proxy, `nu_ring`, and `P_topo`
+- Deliverable: analysis memo showing where false positives remain locally misleading but topologically inconsistent
+- Completion standard: can state one concise discrimination rule and one robustness summary without leaning on the old backbone proxy
 - Dependency: first-round numerics
 
 ## Figure Production
-- Current task: keep the current storyboard but enforce the new figure policy
-- Inputs: analyzed numerical outputs and manuscript claim hierarchy
-- Deliverable: figure storyboard with caption logic, panel order, and what each panel proves
-- Completion standard: only Figure 1 may use a generated conceptual schematic; every data panel must trace to real stored results
+- Current task: rebuild Figure 4 as a consistency-filter figure rather than a nonlocal-only rescue figure
+- Inputs: topology-layer upgrade specification and rerun numerical outputs
+- Deliverable: updated Figure 4 panel order, caption, and legend logic
+- Completion standard: the figure shows matched local anomaly, nonlocal signal, gap logic, and full-device topology on the same operating points
 - Dependency: data-analysis memo
 
 ## Writing
-- Current task: maintain the manuscript package and absorb benchmark results as they arrive
-- Inputs: verified novelty statement, figure storyboard, evidence chain, current draft files
-- Deliverable: manuscript scaffold ready to receive results
-- Completion standard: a non-specialist condensed-matter referee can understand the problem, the gap in prior work, and the new contribution
+- Current task: integrate the new full-device topology language into the Results and Figure 4 caption logic
+- Inputs: topology-layer upgrade specification, verified novelty statement, figure storyboard, current draft files
+- Deliverable: manuscript replacement paragraph and caption text
+- Completion standard: the manuscript no longer describes the topology panel as a clean-backbone proxy or as a completed proof
 - Dependency: coordinator + theory + figure plan
 
 ## Supervision
-- Current task: police novelty inflation and prevent the paper from drifting into a review-style article
-- Inputs: claim architecture and literature map
-- Deliverable: a supervision note naming the top 3 rejection risks
-- Completion standard: no unsupported "universal" or "robust" language remains without a matching evidence requirement
+- Current task: police topology inflation and block any claim that the three-terminal figure is already final
+- Inputs: topology-layer upgrade specification, claim architecture, literature map
+- Deliverable: a supervision note naming the topology-specific rejection risks
+- Completion standard: no manuscript text implies that topology has been established without the full-device rerun
 - Dependency: coordinator output
 
 ## Strict Review

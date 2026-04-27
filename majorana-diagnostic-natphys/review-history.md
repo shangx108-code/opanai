@@ -143,3 +143,27 @@ Current outcome: this is the first numerically coherent Figure 3/4 candidate set
 ### Acceptance-probability trend
 - Current estimate can cautiously move to 14-22%
 - Reason: Figure readiness and benchmark realism improved, but the topological and robustness layers are still below the threshold needed for a top-tier theory paper
+
+## 2026-04-27 | Topology-layer triage review
+
+### Material reviewed
+- Project memory state for `majorana-diagnostic-natphys`
+- New upgrade note: `topology-layer-upgrade-spec-2026-04-27.md`
+
+### Reviewer-style verdict
+Current outcome: the manuscript logic is cleaner, but no acceptance-probability upgrade is justified without the full-device topology rerun
+
+### What improved
+1. The project now has one explicit replacement target for the weak topology panel instead of a vague instruction to "strengthen topology".
+2. The Figure 4 story is now constrained to a consistency-filter claim rather than a nonlocal-only rescue claim.
+3. The writing layer has reusable text that can be inserted once the stronger topology data exist.
+
+### What remains limiting
+1. No new real numerical evidence was generated in this scheduled run.
+2. The current workspace does not contain the benchmark scripts or stored outputs needed to execute the rerun from here.
+3. The paper still lacks the decisive full-device topological discriminator evaluated on the same inhomogeneous instances as the transport observables.
+
+### Acceptance-probability trend
+- Current estimate remains 14-22%
+- No upgrade justified from specification work alone
+- Next upgrade condition: produce a rerun Figure 4 in which the positive control sustains nonlocal transport, gap reopening, and full-device topological parity over a finite robustness window while the dot and impurity false positives do not

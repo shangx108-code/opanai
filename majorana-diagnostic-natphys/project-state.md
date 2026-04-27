@@ -9,19 +9,19 @@
 Build a publishable theory paper that does not merely restate that nonlocal conductance helps, but establishes a genuinely new and experimentally actionable diagnostic hierarchy that separates topological Majorana zero modes from trivial zero-energy states across multiple superconducting hybrid platforms. The project is not considered complete until the estimated Nature Physics acceptance probability exceeds 70% and all required evidence layers are closed with auditable support.
 
 ## Current stage
-Pilot-manuscript stage with literature-verified repositioning, theory-standard fixing, expanded transport numerics, and a first three-terminal figure-grade benchmark. The project now includes a draft manuscript package, an explicit diagnostic-hierarchy theory note, broader transport benchmark suites, and rebuilt Figure 3/4 candidates derived from real three-terminal data. It is still below Nature Physics submission strength, but it is no longer only a concept note.
+Pilot-manuscript stage with literature-verified repositioning, theory-standard fixing, expanded transport numerics, a first three-terminal figure-grade benchmark, and a newly frozen topology-layer upgrade specification for the next Figure 4 rebuild. The project now includes a draft manuscript package, an explicit diagnostic-hierarchy theory note, broader transport benchmark suites, rebuilt Figure 3/4 candidates derived from real three-terminal data, and a manuscript-facing definition of the required full-device topological discriminator. It is still below Nature Physics submission strength, but it is no longer only a concept note.
 
 ## Current main bottleneck
-The main bottleneck is still selectivity under the stricter evidence-completion standard. The project now has broader result coverage, but the current false-positive parameter families do not yet produce the strongest misleading zero-bias behavior, and the topology layer remains weaker than the manuscript ultimately needs. Without a stronger disorder-robust discriminator and more convincing false-positive benchmarks, neither the >70% target nor the "all evidence completed" rule is reachable.
+The main bottleneck is the weak topology layer in the current manuscript-facing benchmark. The three-terminal figure package is now real enough to matter, but Figure 4 still relies on a clean-backbone criterion rather than a full-device inhomogeneous topological discriminator. Until transport and topology are evaluated on the same dot/impurity/disorder landscape, the paper cannot make a Nature Physics-level rescue claim.
 
 ## Highest-priority objective for the current round
-Lock the project around one original centerpiece and one auditable completion rule:
+Freeze the topology-layer upgrade path so the next numerical round is constrained to one auditable manuscript goal:
 
-1. a universal diagnostic hierarchy with explicit failure boundaries for local tunnelling;
-2. a cross-platform benchmark using at least three model families;
-3. a disorder/impurity stress-test showing that zero-bias-peak probability and topology probability decouple;
-4. an experimentally usable protocol window rather than only theoretical observables;
-5. no success declaration before acceptance probability exceeds 70% and every required evidence layer is backed by real data or verified derivation.
+1. replace the clean-backbone criterion with a full-device inhomogeneous class-D invariant;
+2. require transport, reopened-gap logic, and topology to be evaluated on the same operating points;
+3. compare topological-consistency probability against local-peak prevalence for positive and false-positive families;
+4. rebuild Figure 4 only after the dot and impurity false positives remain visually meaningful beside the disorder family;
+5. keep the project below success status until the strengthened topology layer is backed by real rerun data.
 
 ## Proposed central claim
 Local zero-bias peaks are neither sufficient nor stably informative in realistic hybrid superconductors; a topological diagnosis requires the joint consistency of end-to-end correlation, nonlocal transport, bulk-gap reopening, and scattering-matrix topology, and this hierarchy remains discriminating across dot-induced ABS, impurity-induced YSR-like states, and disorder-induced near-zero modes.
@@ -62,9 +62,9 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Additional tuning that reduces the current over-dominance of the disorder false positive and sharpens the smooth-dot and impurity comparison
 
 ## Acceptance probability (stage estimate)
-- Nature Physics: 10-18% in the current manuscript-package state
+- Nature Physics: 14-22% in the current manuscript-package state
 - Project success threshold: >70%
-- Reason: numerical coverage and figure readiness improved, but the evidence is still not selective enough and the novelty separation remains below the top-tier threshold
+- Reason: numerical coverage and figure readiness improved, but the evidence is still not selective enough, and the topology layer remains below the threshold needed for a top-tier theory paper
 
 ## Last update
-2026-04-27: added a new three-terminal benchmark package with tuned smooth-dot, impurity, and disorder false-positive operating points, rebuilt Figure 3 and Figure 4 candidates from real data, and established a first three-terminal nonlocal separation between the positive control and the tuned false positives. The present topology layer is still not strong enough for submission-grade claims, and disorder remains too dominant relative to the other false positives.
+2026-04-27: reviewed the post-three-terminal project state and froze a manuscript-facing topology-layer upgrade specification in `topology-layer-upgrade-spec-2026-04-27.md`. This round did not rerun the numerics because the current scheduled-run workspace contains only the memory files and not the benchmark scripts or output bundles. The project remains blocked on replacing the clean-backbone criterion with a full-device inhomogeneous topological discriminator and then rebuilding Figure 4 from real rerun data.
