@@ -48,6 +48,7 @@
 ## Review package
 - [x] Internal supervision notes
 - [x] Simulated referee reports
+- [x] Figure 4 rewrite pack with claim-discipline guardrails
 - [ ] Revision log by version
 - [ ] Cover-letter draft
 
@@ -86,3 +87,4 @@
 - [x] `/workspace/output/three-terminal-benchmark/figure3_failure_local_peaks.png`
 - [x] `/workspace/output/three-terminal-benchmark/figure4_nonlocal_rescue.png`
 - [x] `topology-layer-upgrade-spec-2026-04-27.md`
+- [x] `figure4-full-device-topology-rewrite-v1.md`

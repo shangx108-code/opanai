@@ -171,3 +171,26 @@ The team could polish captions and prose around the present Figure 4 and acciden
 - Froze a topology-layer upgrade specification in `topology-layer-upgrade-spec-2026-04-27.md`
 - Added directly reusable manuscript paragraph and caption language for the future full-device topology rebuild
 - Identified the current scheduled-run blocker: the workspace does not contain the benchmark scripts or output bundles needed for a rerun
+
+## 2026-04-27 | Round 8 supervision after manuscript-facing Figure 4 rewrite lock
+
+### Overall evaluation
+This round did not improve the evidence base, but it did improve manuscript discipline. That matters because the project had reached the point where better-looking prose could easily outrun the data. The paper is now less likely to overclaim before the full-device topology rerun is completed.
+
+### Gap to target-journal standard
+- The decisive full-device topology rerun is still missing.
+- Figure 4 remains a working figure until `nu_ring` and `P_topo` are computed on the same inhomogeneous instances as the transport observables.
+- The manuscript still cannot claim that topology has been established from the current benchmark package.
+
+### Most critical quality risk
+The main risk is now rhetorical inflation: the figure logic is sharp enough to sound finished even though the core topology evidence is not yet closed.
+
+### Plan-revision advice
+1. Use the new rewrite pack as a holding structure, not as permission to finalize the Results section.
+2. Treat every sentence in Figure 4 as conditional on the missing full-device rerun unless it refers only to the current working benchmark.
+3. Make the next executable round purely about implementing `nu_ring` and regenerating the operating-point table.
+4. Refresh captions only after the rerun outputs exist in the same workspace as the manuscript files.
+
+### Newly completed items
+- Produced a directly reusable Figure 4 rewrite pack in `figure4-full-device-topology-rewrite-v1.md`
+- Recorded the scheduled-run environment as a hard blocker for numerical execution rather than silently treating it as a soft delay

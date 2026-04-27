@@ -167,3 +167,28 @@ Current outcome: the manuscript logic is cleaner, but no acceptance-probability 
 - Current estimate remains 14-22%
 - No upgrade justified from specification work alone
 - Next upgrade condition: produce a rerun Figure 4 in which the positive control sustains nonlocal transport, gap reopening, and full-device topological parity over a finite robustness window while the dot and impurity false positives do not
+
+## 2026-04-27 | Manuscript-facing Figure 4 rewrite review
+
+### Material reviewed
+- Project memory state for `majorana-diagnostic-natphys`
+- `topology-layer-upgrade-spec-2026-04-27.md`
+- New rewrite package: `figure4-full-device-topology-rewrite-v1.md`
+
+### Reviewer-style verdict
+Current outcome: manuscript wording is better controlled, but the paper remains below editorial-send-out strength because no new evidence was generated
+
+### What improved
+1. The Figure 4 story is now explicitly framed as a transport-plus-topology consistency filter rather than a generic nonlocal rescue.
+2. The replacement paragraph and caption language no longer depend on the clean-backbone topology proxy.
+3. The write-up now makes the missing rerun legible as a concrete evidence gap rather than allowing it to hide behind polished phrasing.
+
+### What remains limiting
+1. The full-device class-D invariant is still not implemented in the shared numerical pipeline inside this workspace.
+2. No updated figure or rerun table exists yet.
+3. The manuscript still cannot claim a validated topology layer from real rerun data.
+
+### Acceptance-probability trend
+- Current estimate remains 14-22%
+- No upgrade justified from writing control alone
+- Next upgrade condition remains unchanged: generate a full-device rerun Figure 4 with matched transport, reopened-gap, and topology observables

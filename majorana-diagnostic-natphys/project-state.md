@@ -15,13 +15,12 @@ Pilot-manuscript stage with literature-verified repositioning, theory-standard f
 The main bottleneck is the weak topology layer in the current manuscript-facing benchmark. The three-terminal figure package is now real enough to matter, but Figure 4 still relies on a clean-backbone criterion rather than a full-device inhomogeneous topological discriminator. Until transport and topology are evaluated on the same dot/impurity/disorder landscape, the paper cannot make a Nature Physics-level rescue claim.
 
 ## Highest-priority objective for the current round
-Freeze the topology-layer upgrade path so the next numerical round is constrained to one auditable manuscript goal:
+Convert the topology-layer upgrade path into a directly insertable manuscript rewrite pack so the paper can advance without overstating the current Figure 4:
 
-1. replace the clean-backbone criterion with a full-device inhomogeneous class-D invariant;
-2. require transport, reopened-gap logic, and topology to be evaluated on the same operating points;
-3. compare topological-consistency probability against local-peak prevalence for positive and false-positive families;
-4. rebuild Figure 4 only after the dot and impurity false positives remain visually meaningful beside the disorder family;
-5. keep the project below success status until the strengthened topology layer is backed by real rerun data.
+1. lock manuscript wording to the full-device inhomogeneous class-D invariant rather than the clean-backbone proxy;
+2. rewrite the Figure 4 Results logic around a transport-plus-topology consistency filter rather than a nonlocal-only rescue claim;
+3. record explicitly that the numerical rerun is still required before the revised text can be promoted from prepared language to validated result text;
+4. keep the project below success status until the strengthened topology layer is backed by real rerun data.
 
 ## Proposed central claim
 Local zero-bias peaks are neither sufficient nor stably informative in realistic hybrid superconductors; a topological diagnosis requires the joint consistency of end-to-end correlation, nonlocal transport, bulk-gap reopening, and scattering-matrix topology, and this hierarchy remains discriminating across dot-induced ABS, impurity-induced YSR-like states, and disorder-induced near-zero modes.
@@ -67,4 +66,4 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Reason: numerical coverage and figure readiness improved, but the evidence is still not selective enough, and the topology layer remains below the threshold needed for a top-tier theory paper
 
 ## Last update
-2026-04-27: reviewed the post-three-terminal project state and froze a manuscript-facing topology-layer upgrade specification in `topology-layer-upgrade-spec-2026-04-27.md`. This round did not rerun the numerics because the current scheduled-run workspace contains only the memory files and not the benchmark scripts or output bundles. The project remains blocked on replacing the clean-backbone criterion with a full-device inhomogeneous topological discriminator and then rebuilding Figure 4 from real rerun data.
+2026-04-27: reviewed the scheduled-run workspace and confirmed that the benchmark scripts and output bundles are absent here, so no numerical rerun was possible. To keep manuscript progress honest, this round converted the topology-layer specification into a directly reusable Figure 4 rewrite pack in `figure4-full-device-topology-rewrite-v1.md`, updated the supervision/review state, and kept the main bottleneck fixed on the missing full-device rerun rather than allowing premature prose polish to masquerade as completed evidence.

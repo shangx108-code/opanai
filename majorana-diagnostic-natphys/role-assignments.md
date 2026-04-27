@@ -36,10 +36,10 @@
 - Dependency: data-analysis memo
 
 ## Writing
-- Current task: integrate the new full-device topology language into the Results and Figure 4 caption logic
-- Inputs: topology-layer upgrade specification, verified novelty statement, figure storyboard, current draft files
-- Deliverable: manuscript replacement paragraph and caption text
-- Completion standard: the manuscript no longer describes the topology panel as a clean-backbone proxy or as a completed proof
+- Current task: integrate the new full-device topology language into the Results and Figure 4 caption logic without implying that the missing rerun already exists
+- Inputs: topology-layer upgrade specification, verified novelty statement, figure storyboard, current draft files, scheduled-run workspace constraints
+- Deliverable: manuscript replacement paragraph, caption text, and claim-discipline note stored in `figure4-full-device-topology-rewrite-v1.md`
+- Completion standard: the manuscript no longer describes the topology panel as a clean-backbone proxy, a nonlocal-only rescue, or a completed proof before the rerun data exist
 - Dependency: coordinator + theory + figure plan
 
 ## Supervision
