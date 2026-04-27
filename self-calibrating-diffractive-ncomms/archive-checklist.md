@@ -38,3 +38,8 @@
 - 文献索引与 reference ledger
 - 后续 manuscript / supplement 源文件
 - 正式图号映射表
+
+## 本轮新增归档
+- 写作启动记录：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-writing-launch-2026-04-27.md`
+- 主文骨架：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v0-structure.md`
+- 参考文献账本：`/workspace/memory/self-calibrating-diffractive-ncomms/reference-ledger-v1.md`

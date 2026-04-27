@@ -56,11 +56,11 @@ wave-optics 最小阳性对照、round3 理论补强和 round4 cross-task 验证
 - 优先级：中
 
 ### 论文撰写人员
-- 当前任务：暂不写主文，先为后续引言和机制段准备边界语言
-- 输入：项目主张与 round1 边界
-- 输出：仅限 claim boundary 备忘，不生成过早摘要定稿
-- 完成标准：不出现结论强于证据
-- 优先级：中
+- 当前任务：推进严格写作流程，先完成四段式引言、正文结构、图文映射和 reference ledger 初稿
+- 输入：项目主张、round1-round4 证据边界、目标期刊要求
+- 输出：`manuscript-v0-structure.md` 与 `reference-ledger-v1.md`
+- 完成标准：写作结构可直接承接后续真实结果；不出现结论强于证据
+- 优先级：高
 
 ### 监督 / 审稿环节
 - 当前任务：每轮检查是否把 surrogate 结果误写成 D2NN 结果

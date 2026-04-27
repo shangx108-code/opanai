@@ -3,7 +3,7 @@
 ## 项目基本信息
 - 项目名称：Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations
 - 目标期刊：Nature Communications
-- 最近更新时间：2026-04-27（round4）
+- 最近更新时间：2026-04-27（writing-launch）
 - 当前资料来源：
   - `/workspace/user_files/01-markdown-1-md-3`
   - `/workspace/self-calibrating-diffractive-ncomms/round1_theory_note.md`
@@ -19,7 +19,7 @@
 
 ## 当前运行规则
 - 默认推进主体：自研智能体
-- 自动迭代频率：每 2 小时 1 轮
+- 自动迭代频率：每 1 小时 1 轮
 - 停止条件必须同时满足：
   - 保守五审稿人接收概率均超过 70%
   - 所有需要补的 evidence 全部补齐
@@ -51,7 +51,7 @@
 - 可归档的代码、数据、图表、正文、补充材料与最终投稿包
 
 ## 当前阶段
-结果生成阶段（cross-task 泛化与 tight-bound 子阶段）。
+严格写作启动阶段（在现有证据边界内建立主文骨架、图文映射与引用链）。
 
 说明：
 - 当前工作区之前没有该项目的既有命名空间记忆。
@@ -60,6 +60,7 @@
 - 现在已进一步完成 round3：加入最小 FNO-style spectral baseline、CRLB 扫描，以及实验边界澄清。
 - 现在已进一步完成 round4：加入 task-level tight bound / theorem，以及 classification / inverse-design surrogate 的 cross-task 泛化仿真。
 - 当前仍不是完整 D2NN，也不是投稿级证据链。
+- 本轮新增严格写作流程骨架，但这不改变主结果仍未闭环的事实。
 
 ## 当前唯一主瓶颈
 当前唯一主瓶颈是：还没有在同一动态像差协议下建立“真实被动衍射处理器”层面的 ordinary D2NN 与 pilot-assisted D2NN 最小阳性对照证据。
@@ -72,7 +73,7 @@
 - 若 ordinary D2NN vs pilot-assisted D2NN 在 OOD 动态退化上不能拉开可信差距，则论文主线需要重评。
 
 ## 本轮唯一最高优先级
-在理论与 cross-task 证据继续变强后，仍把核心资源集中到最小被动衍射处理器阳性对照，而不是把外围 surrogate 结果包装成最终主证据。
+在保持最小被动衍射处理器阳性对照为核心任务的前提下，正式启动严格写作流程，先把引言、正文结构、图文映射和参考文献链固定下来，避免后续结果到位后再整体返工。
 
 ## 本轮交付物
 1. round1 最小机制脚本：`/workspace/self-calibrating-diffractive-ncomms/round1_pilot_selfcalibration.py`
@@ -92,6 +93,9 @@
 15. round4 cross-task 脚本：`/workspace/self-calibrating-diffractive-ncomms/round4_cross_task_generalization.py`
 16. round4 cross-task 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_summary.md`
 17. round4 tight bound note：`/workspace/self-calibrating-diffractive-ncomms/round4_tight_bound_note.md`
+18. 写作启动记录：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-writing-launch-2026-04-27.md`
+19. 主文骨架：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v0-structure.md`
+20. reference ledger：`/workspace/memory/self-calibrating-diffractive-ncomms/reference-ledger-v1.md`
 
 ## 本轮完成标准
 - 已真实运行 round2 脚本并落盘结果文件
@@ -101,12 +105,13 @@
 - 已把简单实验验证诚实降级为“当前缺硬件与原始数据，只能先给出最小实验方案”
 - 已真实运行 round4 cross-task 泛化仿真并落盘结果
 - 已写出 round4 task-level tight bound / theorem note
+- 已建立四段式引言、正文结构、图文映射和 30+ reference ledger 初稿
 
 ## 下一轮立即动作
 1. 在当前工作区写出 ordinary D2NN 与 pilot-assisted D2NN 的最小可运行对照脚本。
 2. 保留“共路、非共路、错误 reference”三组关键对照，不满足就及时止损。
 3. 若最小被动衍射对照仍为阳性，再扩展到 turbulence / thin phase screen。
-4. 把 round4 theorem 与 cross-task 结果整理成后续正文/补充材料可直接调用的理论-任务桥接叙事。
+4. 用新的真实器件级结果替换主文骨架中 Figure 5 的占位段落，并继续压实 30+ 参考文献链。
 
 ## 技术状态检查结论
 - 已验证：
@@ -156,6 +161,7 @@
 - 已满足：
   - 题目主线、核心主张、关键对照框架已有第一版方向定义
   - 现在已有两轮真实证据，而不是只有选题草案
+  - 已启动严格写作流程，并建立四段式引言、正文结构、图文映射与 30+ reference ledger 初稿
 - 部分满足：
   - 摘要雏形和主图规划已有提案，但仍是前期构想，不可视为稿件实物
   - “共路 pilot 优于非共路 / 无 reference”的核心机制已有两轮真实数据支撑，但仍未到稿件主结果标准
@@ -164,6 +170,7 @@
   - 最小 FNO-style spectral baseline 未显示 common-path pilot 优于 observation-only baseline，说明 ML 说服力仍未闭环
 - 未满足：
   - 正文、补充材料、正式图、图注、引用链、参考文献库均未形成投稿级实物
+  - 尽管已启动主文骨架，但仍未达到 submission-ready manuscript
 - 存在错误：
   - 若将当前 surrogate 结果直接包装为“固定被动衍射网络已实现自校准恢复”，会构成过度陈述
 - 待核实：
@@ -200,3 +207,4 @@
 - 2026-04-26：根据用户最新约束，项目正式收敛为“仅理论与仿真研究”；后续不再把实验验证作为当前阶段硬依赖。
 - 2026-04-27：完成 round4 tight bound / theorem note，将 pilot-channel covariance 与下游任务损失通过局部曲率 sandwich 和 CRLB-limited floor 联系起来。
 - 2026-04-27：完成 round4 cross-task 泛化仿真。OOD 下 common-path 相比 no-reference 将 reconstruction PSNR 从 `34.837 dB` 提升到 `36.782 dB`，将 classification true-class residual 从 `0.035464` 降到 `0.034616`，并将 inverse-design target MSE 从 `0.002317` 小幅降到 `0.002315`。
+- 2026-04-27：正式启动严格写作流程，新增主文骨架、图文映射和 30+ reference ledger 初稿；同时保留“普通 D2NN vs pilot-assisted D2NN 器件级阳性对照尚未完成”的明确边界。
