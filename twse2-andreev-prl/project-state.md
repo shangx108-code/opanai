@@ -1,7 +1,7 @@
 # Project State
 
 Project: `twse2-andreev-prl`
-Last updated: 2026-04-27
+Last updated: 2026-04-28
 
 ## Current Stage
 
@@ -35,12 +35,15 @@ The planned surface Green's-function benchmark and BTK / robustness package rema
 ## Current Best Reconstruction Status
 
 - Real-space geometry most consistently matches a three-color triangular-lattice embedding of the A/B/C Wannier centers.
-- A symmetry-completed candidate hopping table was reported in the previous round, but the corresponding local execution assets are not present in the current workspace snapshot.
-- The previously cited reconstruction script path, `/workspace/twse2_tb/reconstruct_tuo_tb.py`, is not available in the present run, so the last reported executable closure state is not currently reproducible from local files alone.
-- The latest auditable quantitative reconstruction state still comes from the saved prior record: the best reconstructed `H_TB(k)` reproduced the exact `Gamma`-point energies of Tuo Fig. 1c and the full-band endpoint closure, but still showed nontrivial mismatch near `K^B` and `K^T`, with an overall band RMSE of `10.55 meV`.
+- A symmetry-completed candidate hopping table has been reconstructed locally.
+- A reproducible reconstruction script now exists at `/workspace/twse2_tb/reconstruct_tuo_tb.py`.
+- The current best reconstructed `H_TB(k)` reproduces the exact `Gamma`-point energies of Tuo Fig. 1c and the full-band endpoint closure, but still shows nontrivial mismatch near `K^B` and `K^T`.
+- As of 2026-04-28, the RMSE definition has been aligned explicitly with `band_comparison.csv`. The summary metric now uses the element-wise global RMSE `sqrt(mean((E_rec - E_src)^2))`, while the larger row-wise sum metric is recorded separately for clarity.
+- The current quantitative check gives an element-wise global band RMSE of `10.25 meV` and a row-wise summed RMSE of `17.76 meV` against the uploaded Fig. 1c source arrays.
+- A new high-symmetry residual file now exists at `/workspace/output/twse2_tb_reconstruction/high_symmetry_residuals.csv`.
+- A previous 2026-04-27 workspace snapshot briefly reported a reproducibility break because the local reconstruction assets were missing there. In the current workspace snapshot, those assets are present again, so the executable evidence path is restored.
 - Additional 2026-04-27 inspection confirms that the remaining mismatch is not explained by a missing source-data sheet or an obvious alternate peer-review attachment; the ambiguity is still in the unpublished full hopping convention / code path.
-- New blocker verified in the current run: the reconstruction code and extracted source bundle referenced by earlier notes are themselves missing from the current workspace, so even partial `K`-sector debugging cannot continue reproducibly until those local assets are restored.
-- Therefore the honest status is: partial reconstruction was previously achieved, but exact full-band reproduction remains open and the executable evidence path is currently broken in this workspace snapshot.
+- Therefore the honest status is: partial reconstruction has been restored and modestly improved, but exact full-band reproduction remains open.
 
 ## Evidence Ledger Snapshot
 
@@ -55,4 +58,4 @@ The planned surface Green's-function benchmark and BTK / robustness package rema
 
 ## Immediate Next Action
 
-First restore the missing local reconstruction assets (`04-ws2.zip`, extracted SI/source-data files, and the reconstruction script or its saved replacement) so the prior partial closure state becomes executable again in the current workspace. Only then is it meaningful to continue the `K^B / K^T` convention search or escalate to requesting the author-side full hopping table / code.
+Continue the `K^B / K^T` convention search from the restored executable state, while keeping the fallback path open: if the remaining ambiguity cannot be removed from public materials, escalate to requesting the author-side full hopping table / code.

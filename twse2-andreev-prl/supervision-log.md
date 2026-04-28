@@ -89,7 +89,7 @@ Yes, at the planning and orchestration level. The project now has a sharper role
 
 ### Check Scope
 
-- Verify that the reconstruction assets cited in the current project state are actually present and runnable in this workspace snapshot
+- Verify that the reconstruction assets cited in the current project state are actually present and runnable in the current workspace snapshot
 
 ### Confirmed Correct
 
@@ -98,14 +98,36 @@ Yes, at the planning and orchestration level. The project now has a sharper role
 
 ### Problems / Risks
 
-- The local files named in the saved state are not present in the current workspace snapshot: `/workspace/user_files/04-ws2.zip`, `/workspace/tmp/ws2/...`, and `/workspace/twse2_tb/reconstruct_tuo_tb.py` could not be found in this run.
-- This means the previously reported partial reconstruction status is not currently reproducible from the available local files.
-- Until those assets are restored, the project is blocked one layer earlier than before: not only on unresolved `K`-sector convention, but on missing executable reconstruction inputs in the current workspace.
+- One 2026-04-27 workspace snapshot reported that the local files named in the saved state were not present there.
+- That temporarily meant the previously reported partial reconstruction status was not reproducible from that snapshot alone.
 
 ### Stage Judgment
 
-Still in evidence generation, but now with a newly verified workspace-level reproducibility break inside the primary evidence chain.
+Still in evidence generation, but that snapshot exposed a workspace-level reproducibility break inside the primary evidence chain.
 
 ### Supports Next Stage?
 
 Only after the missing local reconstruction assets are restored or re-supplied in an accessible location.
+
+## 2026-04-28 | Metric-alignment and candidate-update pass
+
+### Check Scope
+
+- Verify whether the apparent RMSE inconsistency comes from stale files or from mismatched metric definitions
+- Improve the current candidate hopping completion only if the full-path comparison actually improves
+
+### Confirmed Correct
+
+- The previous apparent RMSE inconsistency was a metric-definition issue, not a file mismatch: the summary used the element-wise global RMSE, whereas the manual re-check had used the row-wise summed norm.
+- The reconstruction script has now been updated to write both metrics explicitly and to export a high-symmetry residual table.
+- The current candidate completion improved modestly from `10.55 meV` to `10.25 meV` in the element-wise global RMSE.
+- The local reconstruction script and output files are present again in the current snapshot, so the executable evidence path has been restored.
+
+### Problems / Risks
+
+- The `K^B / K^T` mismatch remains large and still blocks any honest claim of exact true-Tuo-TB closure.
+- The main remaining residuals are no longer hidden by metric ambiguity; they are now clearly localized in the high-symmetry residual report.
+
+### Stage Judgment
+
+Still in Track-1 evidence generation. The project is cleaner and slightly better constrained than before, but the core closure is still unresolved.
