@@ -1,7 +1,7 @@
 # Project State
 
 Project: `twse2-andreev-prl`
-Last updated: 2026-04-29
+Last updated: 2026-04-28
 
 ## Current Stage
 
@@ -13,7 +13,7 @@ Complete a manuscript-grade data package for the twse2-Andreev project: reconstr
 
 ## Single Main Bottleneck
 
-The project still does not have a complete, manuscript-grade data package. The sharpest unresolved data gap remains exact `K`-point valley closure of the true Tuo TB model, and until that normal-state foundation is closed the later SGF / BTK / robustness datasets cannot be completed honestly or archived as final evidence.
+The project still does not have a complete, manuscript-grade data package. The sharpest unresolved data gap remains exact `K`-point valley closure of the true Tuo TB model under the hard constraint that exact `Gamma` closure must survive, and until that normal-state foundation is closed the later SGF / BTK / robustness datasets cannot be completed honestly or archived as final evidence.
 
 ## Newly Verified Facts
 
@@ -35,6 +35,11 @@ The project still does not have a complete, manuscript-grade data package. The s
   - `/workspace/output/twse2_tb_reconstruction/band_reconstruction_check.png`
   - `/workspace/output/twse2_tb_reconstruction/summary.md`
 - On 2026-04-29, the current Track-1 data bundle and reconstruction script were copied into the memory folder at `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/`, so local persistent storage is now in place for the current normal-state package.
+- In the 2026-04-28 UTC workspace snapshot, the original source-workbook path `/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx` and the uploaded archive path `/workspace/user_files/04-ws2.zip` are absent, so the current executable path cannot assume those files still exist locally.
+- On 2026-04-28 UTC, a runnable workspace script was restored at `/workspace/twse2_tb/reconstruct_tuo_tb.py` with a verified fallback that reads mirrored source-band columns from `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/band_comparison.csv` when the original workbook is missing.
+- On 2026-04-28 UTC, a new 162-candidate `A-B` convention scan was executed and archived at `/workspace/output/twse2_ab_scan/` and `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-ab-scan/`.
+- The best overall `A-B` scan candidate lowers the global RMSE to `8.898 meV`, but it breaks `Gamma` closure by about `8.19 meV`, so it is a rejected branch rather than a new faithful reconstruction.
+- Under the exact-`Gamma` tolerance used in this round (`max abs delta < 0.05 meV` at both `Gamma` endpoints), the baseline all-constant `A-B` branch remains the best exact-`Gamma` candidate with RMSE `10.255 meV`.
 
 ## Current Best Reconstruction Status
 
@@ -49,6 +54,7 @@ The project still does not have a complete, manuscript-grade data package. The s
 - Additional 2026-04-27 inspection confirms that the remaining mismatch is not explained by a missing source-data sheet or an obvious alternate peer-review attachment; the ambiguity is still in the unpublished full hopping convention / code path.
 - A new 2026-04-28 constrained phase scan over the `A-B` three-star families shows that several local phase-ordering choices can reduce the global band RMSE from `10.25 meV` to about `8.73 meV`, but every such candidate found in the scanned family also breaks the exact `Gamma` endpoint closure by about `3.51 meV`.
 - Therefore the apparent `K`-sector improvement from those `A-B` phase-cycled candidates is currently classified as a rejected branch, not a new best faithful reconstruction.
+- A wider 2026-04-28 UTC `A-B` convention scan over 162 candidates confirms the same pattern at larger scope: better global RMSE is available only by giving up `Gamma` closure, and no exact-`Gamma` branch beats the current baseline.
 - Therefore the honest status is: partial reconstruction has been restored and modestly improved, but exact full-band reproduction remains open.
 
 ## Evidence Ledger Snapshot
@@ -64,6 +70,7 @@ The project still does not have a complete, manuscript-grade data package. The s
 - BTK / robustness data package: not started
 - Memory-folder persistence for current Track-1 data artifacts: closed for current Track-1 bundle
 - Google Drive persistence for current Track-1 data artifacts: blocked by permissions
+- `A-B` convention exclusion scan package: closed locally, pending cloud sync
 - Replace current `H_kp` with true Tuo TB: not started in local manuscript files
 - Rerun Fig. 1-4 with true Tuo TB: not started in local manuscript files
 
@@ -76,4 +83,4 @@ Use the “data completion first” policy for every subsequent hourly iteration
 3. attempt Google Drive sync / indexing whenever connector permissions allow it;
 4. if Drive remains blocked, keep an explicit pending-sync queue rather than claiming cloud persistence is complete.
 
-The next technical move inside Track 1 is therefore: continue the `K^B / K^T` convention search only under the hard constraint that exact `Gamma` closure must survive, while treating every accepted result as part of a manuscript-grade data package instead of an isolated exploratory scan.
+The next technical move inside Track 1 is therefore: move beyond the exhausted `A-B` convention family and test the next highest-value convention layers that can still preserve exact `Gamma` closure, starting with non-`A-B` mixed-star gauge / labeling rules and exact `k`-path mapping checks, while treating every accepted result as part of a manuscript-grade data package instead of an isolated exploratory scan.

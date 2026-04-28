@@ -191,3 +191,33 @@ The project has moved from mainly local reconstruction triage to data-package co
 ### Supports Next Stage?
 
 Yes, partially. The next hourly iterations can proceed immediately on local data completion and memory indexing, while Google Drive sync remains a live environment blocker that must be retried after permission repair.
+
+## 2026-04-28 | Runnable-chain recovery and wider A-B exclusion scan
+
+### Check Scope
+
+- Verify the current technical chain before any new data-generation pass
+- Recover a runnable Track-1 script path inside the current workspace snapshot
+- Test whether a wider `A-B` convention scan can improve `K`-sector agreement without violating exact `Gamma` closure
+
+### Confirmed Correct
+
+- The current workspace snapshot does not contain the earlier local paths `/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx` or `/workspace/user_files/04-ws2.zip`, so direct dependence on those paths would currently break execution.
+- The current Track-1 source arrays remain recoverable from the mirrored file `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/band_comparison.csv`, so Track 1 can continue honestly without inventing data.
+- A runnable workspace script has now been restored at `/workspace/twse2_tb/reconstruct_tuo_tb.py`, and it reproduces the baseline Track-1 package while falling back to the mirrored source arrays if the original workbook is absent.
+- A wider `A-B` convention scan covering 162 candidates has now been executed and archived.
+- The best overall scanned candidate reaches global RMSE `8.898 meV`, confirming again that the `K`-sector mismatch is convention-sensitive.
+
+### Problems / Risks
+
+- Every scanned branch that materially improves the global RMSE still breaks exact `Gamma` closure, with the best overall branch missing the `Gamma` constraint by about `8.19 meV`.
+- Under the hard acceptance rule `max abs delta < 0.05 meV` at both `Gamma` endpoints, no scanned `A-B` branch improves on the current baseline; the best exact-`Gamma` candidate is still the baseline all-constant branch at `10.255 meV`.
+- Google Drive still lacks a usable generic upload path in this session, so the new scan artifacts can only be claimed as locally archived, not cloud-synced.
+
+### Stage Judgment
+
+Still in Track-1 evidence generation. This round closed a workspace reproducibility gap and added a broader exclusion dataset, but it did not close the true-Tuo-TB reconstruction.
+
+### Supports Next Stage?
+
+Yes. The next pass should leave the exhausted `A-B` family and move to the next convention layers that could change `K^B / K^T` while preserving `Gamma`, such as non-`A-B` mixed-star gauge choices or explicit high-symmetry path mapping checks.
