@@ -158,3 +158,35 @@ Still in Track-1 evidence generation. This pass narrows the live ambiguity but d
 ### Supports Next Stage?
 
 Partially. Future search should move to convention layers not exhausted by this local scan, such as the exact `K`-point labeling, a different gauge choice, or the unpublished author-side hopping completion.
+
+## 2026-04-29 | Data-completion reprioritization and storage check
+
+### Check Scope
+
+- Incorporate the user's new instruction that all subsequent iterations must prioritize data completion
+- Verify whether the current Track-1 artifacts are durably persisted in both the memory folder and Google Drive
+
+### Confirmed Correct
+
+- The project now has a concrete local Track-1 data bundle ready for indexing:
+  - reconstructed hopping table
+  - full band comparison table
+  - high-symmetry residual table
+  - band-check figure
+  - reconstruction summary
+- The memory folder can be updated normally, so local persistent indexing is available this round.
+- Google account identity is reachable through the connector.
+
+### Problems / Risks
+
+- Google Drive search and file discovery are currently blocked by `ACCESS_TOKEN_SCOPE_INSUFFICIENT`, so this round cannot honestly claim that project data have been stored in Drive.
+- The complete manuscript-grade data package is still missing: SGF and BTK / robustness datasets have not yet been generated, and Track 1 still lacks exact `K`-point closure.
+- Without an explicit pending-sync queue, later iterations would risk mistaking “local files exist” for “cloud persistence is complete.”
+
+### Stage Judgment
+
+The project has moved from mainly local reconstruction triage to data-package completion and storage hardening. The technical core is still Track 1, but every accepted result must now be treated as part of a persistent data pipeline.
+
+### Supports Next Stage?
+
+Yes, partially. The next hourly iterations can proceed immediately on local data completion and memory indexing, while Google Drive sync remains a live environment blocker that must be retried after permission repair.

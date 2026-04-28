@@ -1,25 +1,19 @@
 # Project State
 
 Project: `twse2-andreev-prl`
-Last updated: 2026-04-28
+Last updated: 2026-04-29
 
 ## Current Stage
 
-Theory strengthening and evidence-ledger closure for a PRL-oriented twisted bilayer WSe2 Andreev manuscript.
+Results generation, data-package completion, and storage hardening for a PRL-oriented twisted bilayer WSe2 Andreev manuscript.
 
 ## Current Overall Goal
 
-Replace the current `H_kp` benchmark with a symmetry-completed tight-binding Hamiltonian reconstructed from the Tuo et al. three-band Wannier model, then rerun the manuscript-facing Fig. 1-4 evidence chain with the true-or-closest faithful Tuo TB input.
+Complete a manuscript-grade data package for the twse2-Andreev project: reconstruct the true-or-closest faithful Tuo tight-binding input, then generate and durably store the Fig. 1-4 evidence chain, including normal-state band benchmarks, downstream SGF / BTK / robustness arrays, and their file-level indexes in both the memory folder and Google Drive.
 
 ## Single Main Bottleneck
 
-The uploaded Tuo supplementary package provides only representative hopping parameters in Eq. (S1), not the full lattice-vector hopping table. The current round must therefore reconstruct the full real-space hopping table from geometry and symmetry before the manuscript can honestly claim use of the true Tuo TB model.
-
-As of 2026-04-27 after the three-track triage requested by the user, this bottleneck is refined to:
-
-- exact `K`-point valley closure of the true Tuo TB model.
-
-The planned surface Green's-function benchmark and BTK / robustness package remain essential, but they are downstream of this main bottleneck rather than co-equal bottlenecks.
+The project still does not have a complete, manuscript-grade data package. The sharpest unresolved data gap remains exact `K`-point valley closure of the true Tuo TB model, and until that normal-state foundation is closed the later SGF / BTK / robustness datasets cannot be completed honestly or archived as final evidence.
 
 ## Newly Verified Facts
 
@@ -31,6 +25,15 @@ The planned surface Green's-function benchmark and BTK / robustness package rema
 - The Nature page states that code is only available from the corresponding author upon request.
 - The arXiv preprint `2409.06779` exposes a TeX-source entry publicly, but the source archive is not retrievable from the current container due remote access restrictions.
 - No editable local manuscript source for this twse2-Andreev project has appeared in the workspace as of 2026-04-27.
+- On 2026-04-29, the user explicitly redirected the project so that “补齐所有数据” is the unique top priority.
+- On 2026-04-29, the user set the project iteration cadence to once per hour.
+- On 2026-04-29, Google account identity was reachable, but Google Drive file search failed with `ACCESS_TOKEN_SCOPE_INSUFFICIENT`, so cloud indexing / sync is currently blocked by connector permissions rather than by missing local data files.
+- The current local Track-1 data bundle already available for indexing includes:
+  - `/workspace/output/twse2_tb_reconstruction/reconstructed_hopping_table.csv`
+  - `/workspace/output/twse2_tb_reconstruction/band_comparison.csv`
+  - `/workspace/output/twse2_tb_reconstruction/high_symmetry_residuals.csv`
+  - `/workspace/output/twse2_tb_reconstruction/band_reconstruction_check.png`
+  - `/workspace/output/twse2_tb_reconstruction/summary.md`
 
 ## Current Best Reconstruction Status
 
@@ -55,9 +58,21 @@ The planned surface Green's-function benchmark and BTK / robustness package rema
 - Full lattice-vector hopping table: in progress
 - Reconstructed `H_TB(k)` from hopping table: in progress
 - Reproduced Tuo TB bands from hopping table: in progress
+- Manuscript-grade normal-state data package with indexed artifacts: partial
+- SGF benchmark data package: not started
+- BTK / robustness data package: not started
+- Memory-folder persistence for current Track-1 data artifacts: partial
+- Google Drive persistence for current Track-1 data artifacts: blocked by permissions
 - Replace current `H_kp` with true Tuo TB: not started in local manuscript files
 - Rerun Fig. 1-4 with true Tuo TB: not started in local manuscript files
 
 ## Immediate Next Action
 
-Continue the `K^B / K^T` convention search with the new hard constraint that any candidate must preserve the exact `Gamma` closure. Prioritize unreduced convention questions such as the true `K`-point labeling, gauge choice, or unpublished author-side hopping completion; if the remaining ambiguity cannot be removed from public materials, escalate to requesting the author-side full hopping table / code.
+Use the “data completion first” policy for every subsequent hourly iteration:
+
+1. close the highest-value missing dataset, starting with exact `K^B / K^T` closure under the exact-`Gamma` constraint;
+2. archive every newly verified artifact in the memory folder with an explicit index entry;
+3. attempt Google Drive sync / indexing whenever connector permissions allow it;
+4. if Drive remains blocked, keep an explicit pending-sync queue rather than claiming cloud persistence is complete.
+
+The next technical move inside Track 1 is therefore: continue the `K^B / K^T` convention search only under the hard constraint that exact `Gamma` closure must survive, while treating every accepted result as part of a manuscript-grade data package instead of an isolated exploratory scan.
