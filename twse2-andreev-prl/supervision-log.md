@@ -221,3 +221,35 @@ Still in Track-1 evidence generation. This round closed a workspace reproducibil
 ### Supports Next Stage?
 
 Yes. The next pass should leave the exhausted `A-B` family and move to the next convention layers that could change `K^B / K^T` while preserving `Gamma`, such as non-`A-B` mixed-star gauge choices or explicit high-symmetry path mapping checks.
+
+## 2026-04-28 | K-path mapping recovery and scan pass
+
+### Check Scope
+
+- Verify the current technical chain before any new data-generation pass
+- Recover a runnable Track-1 script path inside the current workspace snapshot if the original workbook is absent
+- Test whether the remaining residual can be reduced by high-symmetry path mapping alone before changing the hopping table again
+
+### Confirmed Correct
+
+- In this workspace snapshot, the previously cited `/workspace/twse2_tb` and `/workspace/output` tree were absent, so the runnable chain did need to be rebuilt before further data work.
+- A restored workspace script now exists at `/workspace/twse2_tb/reconstruct_tuo_tb.py`, and it runs from the mirrored source-band columns when `/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx` is missing.
+- The current Python environment has `numpy`, `pandas`, and `Pillow`; `matplotlib` and `scipy` are absent, but they do not block the present Track-1 scripts.
+- A 180-candidate `k`-path mapping scan has now been executed and archived locally.
+- The best threshold-exact-`Gamma` candidate in that scan improves the global RMSE from `10.255 meV` to `8.880 meV` with `Gamma_end` max abs residual `0.0132 meV`.
+- A duplicated-boundary source-compatible variant reaches `8.900 meV` while restoring the final `Gamma` row exactly to numerical precision.
+- Google Drive profile lookup and project search are working again.
+
+### Problems / Risks
+
+- The improved fit still does not count as true-Tuo-TB closure yet, because the project has not proved that the new `K^B / M / K^T` mapping is the physically faithful published convention rather than an equally plausible relabeling.
+- The hopping-table ambiguity is therefore narrowed but not removed; the next scan still has to move into non-`A-B` mixed-star / gauge choices on top of the improved path baseline.
+- The current Google Drive connector surface still does not expose a generic file-upload / folder-placement path for the full CSV + PNG + Python artifact bundle, so this round can only claim local archival, not cloud sync.
+
+### Stage Judgment
+
+Still in Track-1 evidence generation, but the active bottleneck has shifted. The project is no longer justified in treating the old path convention as fixed; path mapping is now a verified lever inside the missing normal-state data package.
+
+### Supports Next Stage?
+
+Yes. The next pass should treat the `8.880 meV` path-mapping candidate as the new baseline and rerun the next non-`A-B` mixed-star / gauge layer rather than revisiting the exhausted old baseline.
