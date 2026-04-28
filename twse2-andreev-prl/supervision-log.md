@@ -258,6 +258,41 @@ Yes. The next pass should treat the `8.880 meV` path-mapping candidate as the ne
 
 ### Check Scope
 
+## 2026-04-28 | Technical / environment / manuscript check plus asymmetric follow-up scans
+
+### Check Scope
+
+- Re-run the required technical state check before generating new data
+- Re-run the environment and Google Drive availability check
+- Re-run the manuscript-state check
+- Test whether the remaining `K^B / K^T` mismatch can be improved by breaking `A-C / B-C` sharing in two isolated layers:
+  - short-range (`|R|=1, 2`)
+  - `sqrt(7)` mixed-star layer
+
+### Confirmed Correct
+
+- The current workspace snapshot initially lacked `/workspace/twse2_tb`, so the runnable Track-1 chain did need to be restored again before the new scan pass.
+- The current Python environment still has `numpy`, `pandas`, and `Pillow`, while `matplotlib` and `scipy` remain absent; the present Track-1 scans do not require the missing packages.
+- No editable manuscript source for this project is present in the current workspace snapshot, so manuscript revision remains gated by data completion plus future source recovery.
+- Google Drive profile lookup and project search are still readable in this session, and the project still has no existing Drive folder or file returned by the current searches.
+- The 81-candidate asymmetric short-range scan is now complete and archived locally.
+- The 324-candidate asymmetric `sqrt(7)` scan is now complete and archived locally.
+
+### Problems / Risks
+
+- The asymmetric short-range scan does not improve the best exact-`Gamma` candidate; the previous shared baseline remains the faithful best point.
+- The asymmetric `sqrt(7)` scan finds a lower-RMSE overall candidate (`8.283 meV`), but it violates exact `Gamma` closure by `7.885 meV`, so it is not an honest upgrade.
+- The current unresolved bottleneck is therefore no longer generic `A-C / B-C` sharing. It is a narrower coupled valley-specific gauge / path-plus-hopping ambiguity that has not yet been closed by any isolated asymmetry layer.
+- Google Drive still does not offer a generic binary upload / folder-placement path for the full CSV + PNG + Python bundle, so this round cannot honestly claim cloud archival.
+
+### Stage Judgment
+
+Still in Track-1 evidence generation, but the exclusion logic is now materially stronger. Two more plausible ambiguity layers have been closed as local exclusion datasets.
+
+### Supports Next Stage?
+
+Yes. The next data pass should move to a coupled valley-specific gauge / indexing completion rather than re-scanning any isolated `A-C / B-C` asymmetry layer.
+
 - Perform the required technical status check, environment check, and manuscript-status check before generating new data
 - Restore the runnable Track-1 chain in the current workspace snapshot
 - Test the next non-`A-B` shared mixed-star layer on top of the best exact-`Gamma` `k`-path baseline

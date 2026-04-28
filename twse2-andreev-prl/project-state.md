@@ -13,7 +13,7 @@ Complete a manuscript-grade data package for the twse2-Andreev project: reconstr
 
 ## Single Main Bottleneck
 
-The project still does not have a complete, manuscript-grade normal-state data package. After the new shared `A-C / B-C` mixed-star scan on top of the improved `k`-path baseline, the sharpest unresolved data gap is now the remaining `K^B / K^T` valley mismatch under candidates that already preserve exact-`Gamma` closure; the next highest-value data pass must therefore break the still-shared mixed-star assumptions or test the next valley-specific gauge layer rather than revisit `M`, the old path baseline, or exhausted `A-B` scans.
+The project still does not have a complete, manuscript-grade normal-state data package. After two new asymmetric follow-up scans on top of the best shared mixed-star baseline, the sharpest unresolved data gap is now narrower: independent `A-C / B-C` short-range phase rules and independent `sqrt(7)` mixed-star rules both fail to improve the exact-`Gamma` candidate. The next highest-value data pass must therefore move to a coupled valley-specific gauge / path-plus-hopping layer rather than revisit `M`, the old path baseline, exhausted `A-B` scans, or now-exhausted one-layer `A-C / B-C` asymmetry scans.
 
 ## Newly Verified Facts
 
@@ -30,6 +30,13 @@ The project still does not have a complete, manuscript-grade normal-state data p
 - Relative to the previous best path-only candidate, the new mixed-star candidate improves the global RMSE by `0.508 meV`, improves the `M`-window RMSE by `4.951 meV`, and modestly improves the `K^B` / `K^T` windows while keeping the hard exact-`Gamma` acceptance threshold satisfied.
 - The mixed-star scan yields 24 candidates within the `0.05 meV` exact-`Gamma` threshold, so the current ambiguity has narrowed from “whether any non-`A-B` layer helps honestly” to “which valley-specific or asymmetric mixed-star rule closes the remaining `K`-sector mismatch.”
 - On 2026-04-28 UTC, Google Drive profile lookup and project search were both reachable, but no existing project folder or file was found for this project, and the current connector surface still does not expose a generic file-upload / folder-placement path for the full CSV + PNG + Python artifact bundle.
+- On 2026-04-28 UTC, a new 81-candidate asymmetric short-range scan was executed at `/workspace/output/twse2_asymmetric_short_range_scan/` and mirrored into `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-asymmetric-short-range/`.
+- The asymmetric short-range scan confirms that breaking only the `A-C / B-C` first- and second-neighbor sharing does not improve the best exact-`Gamma` candidate: the previous shared baseline (`ac1=bc1=cyc`, `ac2=bc2=anti`) remains the best exact-`Gamma` result at global RMSE `8.372 meV`.
+- The best near-threshold alternative from the short-range scan (`ac1=bc1=cyc`, `ac2=cyc`, `bc2=anti`) reaches exact-`Gamma` tolerance but worsens the global RMSE to `8.401 meV`, so short-range asymmetry is now an exclusion dataset, not an upgrade path.
+- On 2026-04-28 UTC, a new 324-candidate asymmetric `sqrt(7)` scan was executed at `/workspace/output/twse2_asymmetric_c7_scan/` and mirrored into `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-asymmetric-c7/`.
+- The best overall asymmetric `sqrt(7)` candidate (`ac7_first=const`, `bc7_first=cyc`, `ac7_second=anti`, `bc7_second=const`, both non-conjugated) lowers the global RMSE to `8.283 meV`, but it breaks exact-`Gamma` closure by `7.885 meV`, so it cannot be promoted honestly.
+- Within the hard exact-`Gamma` tolerance, the asymmetric `sqrt(7)` scan also leaves the previous shared mixed-star baseline unchanged as the best faithful candidate at global RMSE `8.372 meV`.
+- The current workspace runnable chain has been restored again at `/workspace/twse2_tb/`, now including `reconstruct_tuo_tb.py`, `scan_asymmetric_short_range.py`, and `scan_asymmetric_c7.py`, all mirrored into `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/`.
 
 ## Current Best Reconstruction Status
 
@@ -39,7 +46,8 @@ The project still does not have a complete, manuscript-grade normal-state data p
 - The best exact-`Gamma` path-mapping candidate improves that to `8.880 meV`.
 - The best exact-`Gamma` shared mixed-star candidate improves that further to `8.372 meV`.
 - The dominant remaining residual is no longer at `M`; it is now concentrated in the `K^B / K^T` valleys.
-- The honest status is therefore no longer “only path labeling remains.” The path-label / indexing layer and the non-`A-B` mixed-star convention are both verified contributors to the residual mismatch, but exact valley closure is still open.
+- Independent short-range `A-C / B-C` asymmetry and independent `sqrt(7)` asymmetry have now both been tested as isolated layers and neither improves the best exact-`Gamma` candidate.
+- The honest status is therefore no longer “only path labeling remains.” The path-label / indexing layer and the shared non-`A-B` mixed-star convention are verified contributors, while the unresolved gap has narrowed to a higher-order coupled valley-specific gauge / indexing completion that is still open.
 
 ## Evidence Ledger Snapshot
 
@@ -51,6 +59,8 @@ The project still does not have a complete, manuscript-grade normal-state data p
 - `A-B` convention exclusion scan package: closed locally, pending cloud sync
 - `k`-path mapping exclusion / candidate scan package: closed locally, pending cloud sync
 - non-`A-B` mixed-star exclusion / candidate scan package: closed locally, pending cloud sync
+- asymmetric short-range exclusion / candidate scan package: closed locally, pending cloud sync
+- asymmetric `sqrt(7)` exclusion / candidate scan package: closed locally, pending cloud sync
 - Manuscript-grade normal-state data package with indexed artifacts: partial
 - SGF benchmark data package: not started
 - BTK / robustness data package: not started
@@ -63,4 +73,4 @@ The project still does not have a complete, manuscript-grade normal-state data p
 
 ## Immediate Next Action
 
-Treat the `8.372 meV` mixed-star candidate as the new Track-1 baseline, then run the next smallest asymmetric scan that decouples the still-shared `A-C` and `B-C` phase rules or the next valley-specific gauge layer, because `M` has now improved sharply while `K^B / K^T` remains the dominant residual. Every newly accepted artifact should continue to be mirrored into the memory folder immediately, and Google Drive sync should remain an explicit pending queue item until a generic upload surface becomes available.
+Keep the `8.372 meV` shared mixed-star candidate as the faithful Track-1 baseline. The next data pass should stop scanning isolated `A-C / B-C` asymmetry layers and instead test the next coupled valley-specific gauge / path-plus-hopping completion, because both the short-range-only and `sqrt(7)`-only asymmetric scans are now closed as exclusion datasets. Every newly accepted artifact should continue to be mirrored into the memory folder immediately, and Google Drive sync should remain an explicit pending queue item until a generic upload surface becomes available.

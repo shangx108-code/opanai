@@ -11,8 +11,12 @@ Last updated: 2026-04-28
   - search queries run successfully
   - metadata reads are available
 - Google Drive project search:
-  - query `twse2 andreev prl`: no existing project file found
-  - query `ws2 tuo andreev`: no existing project file found
+- query `twse2 andreev prl`: no existing project file found
+- query `ws2 tuo andreev`: no existing project file found
+- 2026-04-28 UTC re-check:
+  - profile lookup still works
+  - query `twse2 andreev prl`: still no existing project file found
+  - query `ws2 tuo andreev`: still no existing project file found
 - Current write-side limitation:
   - this session exposes account lookup and search, but it still does not expose a generic binary upload / folder-placement path for the current CSV + PNG + Python artifact bundle
   - consequence: this round cannot honestly mark the Track-1, `k`-path, or mixed-star artifacts as already uploaded into a stable project folder
@@ -60,9 +64,27 @@ Last updated: 2026-04-28
 | `/workspace/output/twse2_mixed_star_scan/best_exact_gamma_candidate/high_symmetry_residuals.csv` | table | best exact-`Gamma` mixed-star residual audit | improved main candidate | pending sync |
 | `/workspace/output/twse2_mixed_star_scan/best_exact_gamma_candidate/band_reconstruction_check.png` | figure | best exact-`Gamma` mixed-star figure | improved main candidate | pending sync |
 | `/workspace/output/twse2_mixed_star_scan/best_exact_gamma_candidate/summary.md` | summary | best exact-`Gamma` mixed-star summary | improved main candidate | pending sync |
+| `/workspace/output/twse2_asymmetric_short_range_scan/asymmetric_short_range_scan.csv` | table | 81-candidate `A-C / B-C` short-range asymmetry ledger | exclusion dataset | pending sync |
+| `/workspace/output/twse2_asymmetric_short_range_scan/asymmetric_short_range_scan_top20.csv` | table | ranked top-20 short-range asymmetry candidates | exclusion dataset | pending sync |
+| `/workspace/output/twse2_asymmetric_short_range_scan/summary.md` | summary | short-range asymmetry scan summary | exclusion dataset | pending sync |
+| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/reconstructed_hopping_table.csv` | table | best exact-`Gamma` short-range asymmetry hopping export | exclusion dataset baseline replay | pending sync |
+| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/band_comparison.csv` | table | best exact-`Gamma` short-range asymmetry band comparison | exclusion dataset baseline replay | pending sync |
+| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/high_symmetry_residuals.csv` | table | best exact-`Gamma` short-range asymmetry residual audit | exclusion dataset baseline replay | pending sync |
+| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/band_reconstruction_check.png` | figure | best exact-`Gamma` short-range asymmetry figure | exclusion dataset baseline replay | pending sync |
+| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/summary.md` | summary | best exact-`Gamma` short-range asymmetry summary | exclusion dataset baseline replay | pending sync |
+| `/workspace/output/twse2_asymmetric_c7_scan/asymmetric_c7_scan.csv` | table | 324-candidate `sqrt(7)` asymmetry ledger | exclusion dataset | pending sync |
+| `/workspace/output/twse2_asymmetric_c7_scan/asymmetric_c7_scan_top20.csv` | table | ranked top-20 `sqrt(7)` asymmetry candidates | exclusion dataset | pending sync |
+| `/workspace/output/twse2_asymmetric_c7_scan/summary.md` | summary | `sqrt(7)` asymmetry scan summary | exclusion dataset | pending sync |
+| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/reconstructed_hopping_table.csv` | table | best exact-`Gamma` `sqrt(7)` asymmetry hopping export | exclusion dataset baseline replay | pending sync |
+| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/band_comparison.csv` | table | best exact-`Gamma` `sqrt(7)` asymmetry band comparison | exclusion dataset baseline replay | pending sync |
+| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/high_symmetry_residuals.csv` | table | best exact-`Gamma` `sqrt(7)` asymmetry residual audit | exclusion dataset baseline replay | pending sync |
+| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/band_reconstruction_check.png` | figure | best exact-`Gamma` `sqrt(7)` asymmetry figure | exclusion dataset baseline replay | pending sync |
+| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/summary.md` | summary | best exact-`Gamma` `sqrt(7)` asymmetry summary | exclusion dataset baseline replay | pending sync |
 | `/workspace/twse2_tb/reconstruct_tuo_tb.py` | code | restored Track-1 reconstruction script with workbook fallback | working main script | pending sync |
 | `/workspace/twse2_tb/scan_k_path_mappings.py` | code | reproducible `k`-path mapping scan script | exclusion script | pending sync |
 | `/workspace/twse2_tb/scan_mixed_star_gauges.py` | code | reproducible mixed-star scan script on top of the best `k`-path baseline | exclusion script | pending sync |
+| `/workspace/twse2_tb/scan_asymmetric_short_range.py` | code | reproducible short-range asymmetry scan script | exclusion script | pending sync |
+| `/workspace/twse2_tb/scan_asymmetric_c7.py` | code | reproducible `sqrt(7)` asymmetry scan script | exclusion script | pending sync |
 
 ## Memory-folder mirror
 
@@ -97,12 +119,34 @@ Last updated: 2026-04-28
   - `high_symmetry_residuals.csv`
   - `band_reconstruction_check.png`
   - `best_exact_gamma_summary.md`
+- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-asymmetric-short-range/`
+  - `asymmetric_short_range_scan.csv`
+  - `asymmetric_short_range_scan_top20.csv`
+  - `summary.md`
+  - `best_exact_gamma_candidate/reconstructed_hopping_table.csv`
+  - `best_exact_gamma_candidate/band_comparison.csv`
+  - `best_exact_gamma_candidate/high_symmetry_residuals.csv`
+  - `best_exact_gamma_candidate/band_reconstruction_check.png`
+  - `best_exact_gamma_candidate/summary.md`
+- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-asymmetric-c7/`
+  - `asymmetric_c7_scan.csv`
+  - `asymmetric_c7_scan_top20.csv`
+  - `summary.md`
+  - `best_exact_gamma_candidate/reconstructed_hopping_table.csv`
+  - `best_exact_gamma_candidate/band_comparison.csv`
+  - `best_exact_gamma_candidate/high_symmetry_residuals.csv`
+  - `best_exact_gamma_candidate/band_reconstruction_check.png`
+  - `best_exact_gamma_candidate/summary.md`
 - Persistent local code mirror: `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-28-kpath/`
   - `reconstruct_tuo_tb.py`
   - `scan_k_path_mappings.py`
 - Persistent local code mirror: `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-28-mixed-star/`
   - `reconstruct_tuo_tb.py`
   - `scan_mixed_star_gauges.py`
+- Persistent local code mirror: `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/`
+  - `reconstruct_tuo_tb.py`
+  - `scan_asymmetric_short_range.py`
+  - `scan_asymmetric_c7.py`
 
 ## Pending sync queue
 
@@ -112,6 +156,8 @@ Last updated: 2026-04-28
 4. Upload the `A-B` convention scan artifacts.
 5. Upload the `k`-path mapping scan artifacts and the improved best-candidate package.
 6. Upload the mixed-star scan artifacts and the improved best-candidate package.
-7. Upload the restored Track-1 scripts, including the new mixed-star scan entrypoint.
-8. Re-upload the original workbook and archive when they become available again.
-9. Record Google Drive folder URL, file IDs, and version labels back into this index.
+7. Upload the asymmetric short-range scan artifacts and the best exact-`Gamma` replay package.
+8. Upload the asymmetric `sqrt(7)` scan artifacts and the best exact-`Gamma` replay package.
+9. Upload the restored Track-1 scripts, including the new asymmetric scan entrypoints.
+10. Re-upload the original workbook and archive when they become available again.
+11. Record Google Drive folder URL, file IDs, and version labels back into this index.
