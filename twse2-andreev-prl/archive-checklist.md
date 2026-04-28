@@ -28,9 +28,19 @@ Last updated: 2026-04-28
 - [x] Best exact-`Gamma` `k`-path candidate figure archived
 - [x] Best exact-`Gamma` `k`-path candidate summary archived
 - [x] `k`-path mapping scan script archived
+- [x] Mixed-star scan CSV archived
+- [x] Mixed-star scan top-20 CSV archived
+- [x] Mixed-star scan summary archived
+- [x] Best exact-`Gamma` mixed-star candidate hopping CSV archived
+- [x] Best exact-`Gamma` mixed-star candidate comparison CSV archived
+- [x] Best exact-`Gamma` mixed-star candidate residual CSV archived
+- [x] Best exact-`Gamma` mixed-star candidate figure archived
+- [x] Best exact-`Gamma` mixed-star candidate summary archived
+- [x] Mixed-star scan script archived
 - [ ] Google Drive sync for current Track-1 artifacts completed
 - [ ] Google Drive sync for `A-B` convention scan artifacts completed
 - [ ] Google Drive sync for `k`-path mapping artifacts completed
+- [ ] Google Drive sync for mixed-star artifacts completed
 - [ ] SGF data package archived
 - [ ] BTK / robustness data package archived
 - [ ] Final manuscript source / replacement text archived

@@ -253,3 +253,37 @@ Still in Track-1 evidence generation, but the active bottleneck has shifted. The
 ### Supports Next Stage?
 
 Yes. The next pass should treat the `8.880 meV` path-mapping candidate as the new baseline and rerun the next non-`A-B` mixed-star / gauge layer rather than revisiting the exhausted old baseline.
+
+## 2026-04-28 | Mixed-star scan and state-hardening pass
+
+### Check Scope
+
+- Perform the required technical status check, environment check, and manuscript-status check before generating new data
+- Restore the runnable Track-1 chain in the current workspace snapshot
+- Test the next non-`A-B` shared mixed-star layer on top of the best exact-`Gamma` `k`-path baseline
+
+### Confirmed Correct
+
+- The current workspace snapshot again lacked an active `/workspace/twse2_tb` chain at the start of the round, but the runnable script has now been restored at `/workspace/twse2_tb/reconstruct_tuo_tb.py`.
+- A new reproducible scan entrypoint now exists at `/workspace/twse2_tb/scan_mixed_star_gauges.py`.
+- The current Python environment still has `numpy`, `pandas`, and `Pillow`, while `matplotlib` and `scipy` remain absent; that does not block the present Track-1 scripts.
+- No editable manuscript source for this project is present in the current workspace snapshot, so this round still belongs to data completion rather than manuscript patching.
+- A 162-candidate non-`A-B` shared mixed-star scan has now been executed and archived locally.
+- The best exact-`Gamma` mixed-star candidate uses `c1=cyc`, `c2=anti`, `c7_first=cyc`, `c7_second=anti`, and `c7_second_conjugated=False`, reaching global RMSE `8.372 meV` with `Gamma_end` max abs delta `0.0362 meV`.
+- Relative to the previous best `k`-path-only candidate, this new candidate improves the global RMSE by `0.508 meV` and cuts the `M`-window RMSE from `8.237 meV` to `3.286 meV`.
+- The new mixed-star scan package and the updated scripts have been mirrored into the memory folder and indexed for later cloud sync.
+- Google Drive profile lookup and project search still work, but searches for `twse2 andreev prl` and `ws2 tuo andreev` continue to return no project folder or file.
+
+### Problems / Risks
+
+- The dominant mismatch is now concentrated in the `K^B / K^T` valleys rather than `M`, so the next scan must explicitly target valley-specific asymmetry instead of repeating shared mixed-star rules.
+- The current mixed-star scan still keeps `A-C` and `B-C` tied together within each distance shell; that shared assumption may be the remaining reason exact valley closure is not yet reached.
+- The current Google Drive connector surface still does not expose a generic binary upload / folder-placement path, so this round can only claim local archival plus a pending-sync queue, not cloud completion.
+
+### Stage Judgment
+
+Still in Track-1 evidence generation, but the data gap is now sharper. This round converts the old broad “mixed-star / gauge ambiguity” into a much narrower residual problem: exact-`Gamma` candidates exist and `M` is substantially improved, but the `K^B / K^T` valley sectors are still not closed.
+
+### Supports Next Stage?
+
+Yes. The next pass should start from the `8.372 meV` mixed-star baseline and run the smallest asymmetric scan that decouples the still-shared `A-C` and `B-C` phase rules or otherwise tests the next valley-specific gauge layer.
