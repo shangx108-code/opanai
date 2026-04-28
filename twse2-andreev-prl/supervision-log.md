@@ -131,3 +131,30 @@ Only after the missing local reconstruction assets are restored or re-supplied i
 ### Stage Judgment
 
 Still in Track-1 evidence generation. The project is cleaner and slightly better constrained than before, but the core closure is still unresolved.
+
+## 2026-04-28 | Constrained A-B phase-rule scan
+
+### Check Scope
+
+- Test whether the dominant `K^B / K^T` residual can be reduced by changing only the local `A-B` star phase-ordering rules
+- Enforce exact `Gamma` endpoint closure as a hard acceptance criterion for any candidate update
+
+### Confirmed Correct
+
+- A narrow scan over the nearest- and next-nearest-neighbor `A-B` three-star rules uncovers candidates that reduce the full-path RMSE from `10.25 meV` to about `8.73 meV`.
+- The `K`-sector mismatch is therefore genuinely sensitive to the `A-B` star convention, not only to the previously tested `A-A / A-C / B-C` branches.
+- Restoring the baseline script after the scan reproduces the previous exact-`Gamma` candidate and the `10.25 meV` reference metrics.
+
+### Problems / Risks
+
+- Every locally improved `A-B` phase-cycled candidate found in this scanned family also breaks the exact `Gamma` endpoint closure by about `3.51 meV`, so none of them can yet be promoted to the main faithful reconstruction.
+- A follow-up attempt to phase-cycle the longer-range `A-B` `sqrt(7)` star reduces part of the `K^T` residual but worsens the `Gamma` conflict, so that branch is also rejected.
+- The project still lacks a symmetry-completion rule that improves `K` while preserving the already matched `Gamma` endpoint.
+
+### Stage Judgment
+
+Still in Track-1 evidence generation. This pass narrows the live ambiguity but does not close the true-Tuo-TB reconstruction.
+
+### Supports Next Stage?
+
+Partially. Future search should move to convention layers not exhausted by this local scan, such as the exact `K`-point labeling, a different gauge choice, or the unpublished author-side hopping completion.

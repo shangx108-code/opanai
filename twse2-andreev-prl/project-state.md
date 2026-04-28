@@ -43,6 +43,8 @@ The planned surface Green's-function benchmark and BTK / robustness package rema
 - A new high-symmetry residual file now exists at `/workspace/output/twse2_tb_reconstruction/high_symmetry_residuals.csv`.
 - A previous 2026-04-27 workspace snapshot briefly reported a reproducibility break because the local reconstruction assets were missing there. In the current workspace snapshot, those assets are present again, so the executable evidence path is restored.
 - Additional 2026-04-27 inspection confirms that the remaining mismatch is not explained by a missing source-data sheet or an obvious alternate peer-review attachment; the ambiguity is still in the unpublished full hopping convention / code path.
+- A new 2026-04-28 constrained phase scan over the `A-B` three-star families shows that several local phase-ordering choices can reduce the global band RMSE from `10.25 meV` to about `8.73 meV`, but every such candidate found in the scanned family also breaks the exact `Gamma` endpoint closure by about `3.51 meV`.
+- Therefore the apparent `K`-sector improvement from those `A-B` phase-cycled candidates is currently classified as a rejected branch, not a new best faithful reconstruction.
 - Therefore the honest status is: partial reconstruction has been restored and modestly improved, but exact full-band reproduction remains open.
 
 ## Evidence Ledger Snapshot
@@ -58,4 +60,4 @@ The planned surface Green's-function benchmark and BTK / robustness package rema
 
 ## Immediate Next Action
 
-Continue the `K^B / K^T` convention search from the restored executable state, while keeping the fallback path open: if the remaining ambiguity cannot be removed from public materials, escalate to requesting the author-side full hopping table / code.
+Continue the `K^B / K^T` convention search with the new hard constraint that any candidate must preserve the exact `Gamma` closure. Prioritize unreduced convention questions such as the true `K`-point labeling, gauge choice, or unpublished author-side hopping completion; if the remaining ambiguity cannot be removed from public materials, escalate to requesting the author-side full hopping table / code.
