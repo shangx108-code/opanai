@@ -175,6 +175,7 @@ Partially. Future search should move to convention layers not exhausted by this 
   - band-check figure
   - reconstruction summary
 - The memory folder can be updated normally, so local persistent indexing is available this round.
+- The current Track-1 bundle has now been mirrored into `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/`, so this part of the storage requirement is satisfied locally.
 - Google account identity is reachable through the connector.
 
 ### Problems / Risks

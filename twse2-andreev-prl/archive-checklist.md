@@ -12,6 +12,7 @@ Last updated: 2026-04-29
 - [x] Band comparison CSV archived
 - [x] High-symmetry residual CSV archived
 - [x] Current reconstruction summary archived
+- [x] Current Track-1 data bundle mirrored into memory folder
 - [x] Manuscript revision package archived
 - [ ] Google Drive sync for current Track-1 artifacts completed
 - [ ] SGF data package archived

@@ -34,6 +34,17 @@ Last updated: 2026-04-29
 | `/workspace/output/twse2_tb_reconstruction/summary.md` | summary | metric summary and honesty statement for the current candidate | working main candidate | pending sync |
 | `/workspace/twse2_tb/reconstruct_tuo_tb.py` | code | reproducible Track-1 reconstruction script | working main script | pending sync |
 
+## Memory-folder mirror
+
+- Persistent local mirror created at `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/`
+- Mirrored files:
+  - `reconstructed_hopping_table.csv`
+  - `band_comparison.csv`
+  - `high_symmetry_residuals.csv`
+  - `band_reconstruction_check.png`
+  - `summary.md`
+  - `reconstruct_tuo_tb.py`
+
 ## Pending sync queue
 
 1. Use a Drive session or connector surface that exposes upload / create capability.

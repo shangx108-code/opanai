@@ -34,6 +34,7 @@ The project still does not have a complete, manuscript-grade data package. The s
   - `/workspace/output/twse2_tb_reconstruction/high_symmetry_residuals.csv`
   - `/workspace/output/twse2_tb_reconstruction/band_reconstruction_check.png`
   - `/workspace/output/twse2_tb_reconstruction/summary.md`
+- On 2026-04-29, the current Track-1 data bundle and reconstruction script were copied into the memory folder at `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/`, so local persistent storage is now in place for the current normal-state package.
 
 ## Current Best Reconstruction Status
 
@@ -61,7 +62,7 @@ The project still does not have a complete, manuscript-grade data package. The s
 - Manuscript-grade normal-state data package with indexed artifacts: partial
 - SGF benchmark data package: not started
 - BTK / robustness data package: not started
-- Memory-folder persistence for current Track-1 data artifacts: partial
+- Memory-folder persistence for current Track-1 data artifacts: closed for current Track-1 bundle
 - Google Drive persistence for current Track-1 data artifacts: blocked by permissions
 - Replace current `H_kp` with true Tuo TB: not started in local manuscript files
 - Rerun Fig. 1-4 with true Tuo TB: not started in local manuscript files
