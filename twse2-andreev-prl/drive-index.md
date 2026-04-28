@@ -6,10 +6,15 @@ Last updated: 2026-04-29
 
 - Google account identity check: passed
   - account: `Xin Shang <shangx108@gmail.com>`
-- Google Drive file discovery / search: blocked
-  - observed error: `ACCESS_TOKEN_SCOPE_INSUFFICIENT`
-  - consequence: this round cannot honestly mark project data as already indexed or synced to Google Drive
-  - required follow-up: re-authenticate / extend connector scopes before the next cloud-sync attempt
+- Google Drive read-side connectivity: restored
+  - recent documents are visible again
+  - metadata reads are working again
+- Google Drive project search:
+  - query `twse2 andreev prl`: no existing project file found
+  - query `ws2 tuo andreev`: no existing project file found
+- Current write-side limitation:
+  - in this session, the exposed Google Drive connector surface supports discovery / fetch / metadata reads, but no usable upload-or-create action is available to place the local data files into Drive directly
+  - consequence: this round cannot honestly mark the Track-1 artifacts as already uploaded, even though the connection itself has been re-established
 
 ## Current local source bundle
 
@@ -31,7 +36,7 @@ Last updated: 2026-04-29
 
 ## Pending sync queue
 
-1. Recover Google Drive write/search scope.
+1. Use a Drive session or connector surface that exposes upload / create capability.
 2. Locate or create the project folder for `twse2-andreev-prl`.
 3. Upload the Track-1 data artifacts listed above.
 4. Record Google Drive folder URL, file IDs, and version labels back into this index.
