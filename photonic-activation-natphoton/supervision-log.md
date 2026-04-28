@@ -56,3 +56,28 @@ The draft could still underperform in review if the upgraded evidence remains di
 1. Treat the rewritten abstract and introduction as stable for one cycle.
 2. Spend the next major effort on integrating Figure 3 and Figure 4 into the LPR draft.
 3. Let final manuscript assembly, bibliography cleanup, and figure captioning drive the next round rather than more exploratory benchmarking.
+
+## 2026-04-28 | Round 10 after XOR geometry extension
+
+### Overall evaluation
+The manuscript-facing task-level evidence is now less vulnerable to the criticism that the design rule was chosen by a convenient two-task contrast. A focused XOR extension added one intermediate nonlinear geometry under the same photon accounting and showed that the current picture remains selective rather than collapsing into either universal positivity or universal fragility.
+
+### Gap to target-journal standard
+- The first blocker under the fixed bottleneck order is still an evidence-chain gap, not writing polish.
+- Geometry breadth is stronger than before, but the task-level evidence still lives in a small toy-task family rather than a wider benchmark suite.
+- The paper is now better positioned to claim a bounded three-regime narrative, but not a task-generic law.
+
+### Most critical quality risk
+The new XOR evidence could be overused. It meaningfully narrows the systems-evidence gap, but it does not justify broad dataset-general claims or a full task survey framing.
+
+### Newly verified facts
+- `trainable_task_benchmark_xor_extension.py` was added and run successfully.
+- The XOR extension produced auditable CSV, JSON, and Markdown outputs in `trainable_task_benchmark_xor_extension/`.
+- Across three reseeded repeats, physical activation beat the trainable linear baseline in `14/15` scanned `(eta, budget)` settings on average.
+- `12/15` XOR settings stayed above the `+0.02` margin threshold in all three repeats.
+- The only fragile XOR conditions were the lowest-budget edge points at `eta = 0.50, budget = 1, 2` and `eta = 0.70, budget = 1`.
+
+### Plan-revision advice
+1. Update the main-text trainable-benchmark paragraph to absorb the XOR extension as a bounded geometry-breadth check rather than as a new headline benchmark family.
+2. Preserve the narrative that weak-linear-baseline tasks are strongly positive, strong-linear-baseline tasks remain fragile at low budget, and intermediate nonlinear tasks are mostly positive but soften first at the noisiest low-budget edge.
+3. Keep the next evidence pass comparably narrow, for example one architecture-side extension or one more controlled task family, instead of widening into a diffuse benchmark expansion.

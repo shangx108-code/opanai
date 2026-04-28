@@ -13,7 +13,7 @@ Build a publishable theory-and-simulation paper that turns the vague claim "phot
 LPR manuscript-assembly stage. The project now has a formal theory framework, benchmark specification, LPR style notes, a complete LPR-facing rewrite draft, citation-checked novelty positioning, a Figure-3-grade single-neuron frontier package, a first task-level benchmark, and a stronger trainable-network benchmark under common photon-budget accounting.
 
 ## Current main bottleneck
-The main bottleneck is no longer first-order evidence generation. It is manuscript integration. The project still needs a full LPR-grade main text and aligned supplement that absorb the upgraded Figure-3 and Figure-4 evidence without overclaiming, plus a cleaner full reference ledger.
+Under the required fixed bottleneck order, the first real blocker is still an evidence-chain gap rather than prose assembly: the trainable systems evidence is stronger than before, but until it reaches beyond the original `concentric_circles` / `two_moons` pair the manuscript remains vulnerable to the criticism that the task-level design rule is geometry-specific.
 
 ## Highest-priority objective for the current round
 Fuse the upgraded numerical evidence into the rewritten LPR manuscript so the paper moves from "strong components" to one submission-grade, reviewer-proof draft.
@@ -51,4 +51,4 @@ The real scalability bottleneck of photonic neural networks is not linear optics
 - Reason: the project now has a realistic venue target, a manuscript rewrite in the right journal voice, and materially stronger evidence than a concept-only draft. The main residual risk is assembly quality rather than basic scientific direction.
 
 ## Last update
-2026-04-26: merged the LPR retargeting work with the already-generated benchmark assets. The project now contains both a full LPR-facing rewrite and the stronger numerical evidence package. The next bottleneck is integrated manuscript assembly and final reviewer-safe packaging.
+2026-04-28: executed a focused trainable-benchmark geometry extension on a noisy XOR-quadrants task using `trainable_task_benchmark_xor_extension.py`. Under the same activation-photon accounting and three-repeat reseeding protocol, physical activation beats the trainable linear baseline in `14/15` scanned `(eta, budget)` settings on average, with `12/15` settings remaining above the `+0.02` margin threshold in all repeats. This narrows, but does not fully close, the remaining systems-evidence breadth gap; the manuscript was updated in place to reflect the new bounded three-regime task-geometry narrative.
