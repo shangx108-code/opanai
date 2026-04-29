@@ -54,6 +54,11 @@
 - round5b 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_panel.png`
 - strict 主文草稿：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md`
 - strict 审稿记录：`/workspace/memory/self-calibrating-diffractive-ncomms/review-round-manuscript-v1-strict.md`
+- 环境烟雾测试脚本：`/workspace/self-calibrating-diffractive-ncomms/scripts/environment_smoke_test.py`
+- 最小 D2NN 协议说明：`/workspace/self-calibrating-diffractive-ncomms/scripts/minimal_passive_d2nn_protocol.md`
+- 环境烟雾测试报告：`/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.md`
+- 环境烟雾测试 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.json`
+- 环境烟雾测试 PNG：`/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.png`
 
 ## 本轮归档状态判断
 - 已完成：主文草稿与本轮审稿记录已写入 memory 命名空间
