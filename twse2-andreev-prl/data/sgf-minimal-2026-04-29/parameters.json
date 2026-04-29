@@ -1,0 +1,9 @@
+{
+  "package_type": "finite_ribbon_edge_greens_proxy",
+  "k2_grid_size": 81,
+  "energy_grid_size": 201,
+  "eta_meV": 0.8,
+  "num_cells_open_direction": 72,
+  "edge_cells_measured": 2,
+  "note": "This is a minimal edge Green's proxy extracted from the current Track-1 tight-binding candidate; it is not yet a final semi-infinite SGF benchmark."
+}

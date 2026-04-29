@@ -13,64 +13,17 @@ Last updated: 2026-04-29
 - [x] High-symmetry residual CSV archived
 - [x] Current reconstruction summary archived
 - [x] Current Track-1 data bundle mirrored into memory folder
-- [x] Workspace reconstruction script restored with source-data fallback
-- [x] `A-B` convention scan CSV archived
-- [x] `A-B` convention top-20 CSV archived
-- [x] Best exact-`Gamma` `A-B` comparison CSV archived
-- [x] Best exact-`Gamma` `A-B` figure archived
-- [x] `A-B` convention scan summary archived
-- [x] `k`-path mapping scan CSV archived
-- [x] `k`-path mapping top-20 CSV archived
-- [x] `k`-path mapping scan summary archived
-- [x] Best exact-`Gamma` `k`-path candidate hopping CSV archived
-- [x] Best exact-`Gamma` `k`-path candidate comparison CSV archived
-- [x] Best exact-`Gamma` `k`-path candidate residual CSV archived
-- [x] Best exact-`Gamma` `k`-path candidate figure archived
-- [x] Best exact-`Gamma` `k`-path candidate summary archived
-- [x] `k`-path mapping scan script archived
-- [x] Mixed-star scan CSV archived
-- [x] Mixed-star scan top-20 CSV archived
-- [x] Mixed-star scan summary archived
-- [x] Best exact-`Gamma` mixed-star candidate hopping CSV archived
-- [x] Best exact-`Gamma` mixed-star candidate comparison CSV archived
-- [x] Best exact-`Gamma` mixed-star candidate residual CSV archived
-- [x] Best exact-`Gamma` mixed-star candidate figure archived
-- [x] Best exact-`Gamma` mixed-star candidate summary archived
-- [x] Mixed-star scan script archived
-- [x] Asymmetric short-range scan CSV archived
-- [x] Asymmetric short-range scan top-20 CSV archived
-- [x] Asymmetric short-range scan summary archived
-- [x] Best exact-`Gamma` short-range replay hopping CSV archived
-- [x] Best exact-`Gamma` short-range replay comparison CSV archived
-- [x] Best exact-`Gamma` short-range replay residual CSV archived
-- [x] Best exact-`Gamma` short-range replay figure archived
-- [x] Best exact-`Gamma` short-range replay summary archived
-- [x] Asymmetric short-range scan script archived
-- [x] Asymmetric `sqrt(7)` scan CSV archived
-- [x] Asymmetric `sqrt(7)` scan top-20 CSV archived
-- [x] Asymmetric `sqrt(7)` scan summary archived
-- [x] Best exact-`Gamma` `sqrt(7)` replay hopping CSV archived
-- [x] Best exact-`Gamma` `sqrt(7)` replay comparison CSV archived
-- [x] Best exact-`Gamma` `sqrt(7)` replay residual CSV archived
-- [x] Best exact-`Gamma` `sqrt(7)` replay figure archived
-- [x] Best exact-`Gamma` `sqrt(7)` replay summary archived
-- [x] Asymmetric `sqrt(7)` scan script archived
-- [x] Coupled path + exact-`Gamma` asymmetric `sqrt(7)` scan CSV archived
-- [x] Coupled path + exact-`Gamma` asymmetric `sqrt(7)` top-20 CSV archived
-- [x] Coupled path + exact-`Gamma` asymmetric `sqrt(7)` scan summary archived
-- [x] Best exact-`Gamma` coupled candidate hopping CSV archived
-- [x] Best exact-`Gamma` coupled candidate comparison CSV archived
-- [x] Best exact-`Gamma` coupled candidate residual CSV archived
-- [x] Best exact-`Gamma` coupled candidate figure archived
-- [x] Best exact-`Gamma` coupled candidate summary archived
-- [x] Coupled path + exact-`Gamma` asymmetric `sqrt(7)` scan script archived
-- [ ] Google Drive sync for current Track-1 artifacts completed
-- [ ] Google Drive sync for `A-B` convention scan artifacts completed
-- [ ] Google Drive sync for `k`-path mapping artifacts completed
-- [ ] Google Drive sync for mixed-star artifacts completed
-- [ ] Google Drive sync for asymmetric short-range scan artifacts completed
-- [ ] Google Drive sync for asymmetric `sqrt(7)` scan artifacts completed
-- [ ] Google Drive sync for coupled path + exact-`Gamma` asymmetric `sqrt(7)` artifacts completed
-- [ ] SGF data package archived
-- [ ] BTK / robustness data package archived
+- [x] `A-B` convention scan package archived
+- [x] `k`-path mapping scan package archived
+- [x] Shared mixed-star scan package archived
+- [x] Asymmetric short-range scan package archived
+- [x] Asymmetric `sqrt(7)` scan package archived
+- [x] Coupled path-plus-hopping scan package archived
+- [x] Track-1 convention scan package archived
+- [x] SGF minimal data package archived
+- [x] BTK minimal data package archived
+- [x] Persistent Track-1 / SGF / BTK scripts archived
+- [ ] Google Drive sync for current project artifacts completed
+- [ ] Final SGF manuscript-grade benchmark archived
+- [ ] Final BTK / robustness manuscript-grade benchmark archived
 - [ ] Final manuscript source / replacement text archived

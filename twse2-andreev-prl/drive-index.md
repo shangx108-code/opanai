@@ -11,180 +11,53 @@ Last updated: 2026-04-29
   - search queries run successfully
   - metadata reads are available
 - Google Drive project search:
-- query `twse2 andreev prl`: no existing project file found
-- query `ws2 tuo andreev`: no existing project file found
-- 2026-04-28 UTC re-check:
-  - profile lookup still works
-  - query `twse2 andreev prl`: still no existing project file found
-  - query `ws2 tuo andreev`: still no existing project file found
-- 2026-04-29 UTC scheduled-run check:
-  - no writable Google Drive connector surface was exposed through the available tools in this runtime
-  - consequence: this round cannot honestly claim that the new coupled path-plus-hopping artifacts were uploaded or indexed in Drive
+  - query `twse2 andreev prl`: no existing project file found
+  - query `ws2 tuo andreev`: no existing project file found
 - Current write-side limitation:
-  - this session exposes account lookup and search, but it still does not expose a generic binary upload / folder-placement path for the current CSV + PNG + Python artifact bundle
-  - consequence: this round cannot honestly mark the Track-1, `k`-path, or mixed-star artifacts as already uploaded into a stable project folder
+  - this session exposes account lookup, search, and metadata reads
+  - it still does not expose a generic binary upload / folder-placement path for the current CSV + PNG + Python artifact bundle
+  - consequence: this round cannot honestly mark the project artifacts as already uploaded into a stable Drive folder
 
-## Current workspace source availability check
+## Current source availability
 
-- The originally cited source bundle paths are absent in the current 2026-04-28 UTC workspace snapshot.
-- Track-1 computation remains runnable because the source-band columns are mirrored in:
+- The original workbook and archive were available in earlier workspace states.
+- Track 1 remains runnable even when those temporary paths disappear because the source-band mirror is preserved in:
   - `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/band_comparison.csv`
-- The restored main workspace script is:
-  - `/workspace/twse2_tb/reconstruct_tuo_tb.py`
-- The current mixed-star scan entrypoint is:
-  - `/workspace/twse2_tb/scan_mixed_star_gauges.py`
-- In the current 2026-04-29 UTC snapshot, `/workspace/twse2_tb/` is absent again.
-- The currently runnable Track-1 code path is instead:
-  - `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/reconstruct_tuo_tb.py`
-  - `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/scan_coupled_path_c7_exact_gamma.py`
-- Consequence:
-  - Track 1 can continue locally and honestly
-  - the original workbook and archive still need to be re-synced later when a generic upload surface is available
 
-## Current local data artifacts ready for cloud sync
+## Persistent local project-space packages
 
-| Local path | Content type | Purpose | Version status | Google Drive status |
-| --- | --- | --- | --- | --- |
-| `/workspace/output/twse2_tb_reconstruction/reconstructed_hopping_table.csv` | table | current reconstructed hopping export | working candidate | pending sync |
-| `/workspace/output/twse2_tb_reconstruction/band_comparison.csv` | table | current reconstructed band comparison | working candidate | pending sync |
-| `/workspace/output/twse2_tb_reconstruction/high_symmetry_residuals.csv` | table | current residual audit | working candidate | pending sync |
-| `/workspace/output/twse2_tb_reconstruction/band_reconstruction_check.png` | figure | current reconstruction figure | working candidate | pending sync |
-| `/workspace/output/twse2_tb_reconstruction/summary.md` | summary | current reconstruction summary | working candidate | pending sync |
-| `/workspace/output/twse2_ab_scan/ab_convention_scan.csv` | table | 162-candidate `A-B` convention ledger | exclusion dataset | pending sync |
-| `/workspace/output/twse2_ab_scan/ab_convention_scan_top20.csv` | table | ranked top-20 `A-B` candidates | exclusion dataset | pending sync |
-| `/workspace/output/twse2_ab_scan/best_exact_gamma_band_comparison.csv` | table | best exact-`Gamma` `A-B` comparison | exclusion dataset | pending sync |
-| `/workspace/output/twse2_ab_scan/best_exact_gamma_band_check.png` | figure | best exact-`Gamma` `A-B` figure | exclusion dataset | pending sync |
-| `/workspace/output/twse2_ab_scan/summary.md` | summary | `A-B` scan summary | exclusion dataset | pending sync |
-| `/workspace/output/twse2_k_path_scan/k_path_mapping_scan.csv` | table | 180-candidate `k`-path mapping ledger | exclusion dataset | pending sync |
-| `/workspace/output/twse2_k_path_scan/k_path_mapping_scan_top20.csv` | table | ranked top-20 `k`-path candidates | exclusion dataset | pending sync |
-| `/workspace/output/twse2_k_path_scan/summary.md` | summary | `k`-path scan summary | exclusion dataset | pending sync |
-| `/workspace/output/twse2_k_path_scan/best_exact_gamma_candidate/reconstructed_hopping_table.csv` | table | best exact-`Gamma` path-mapping hopping export | improved main candidate | pending sync |
-| `/workspace/output/twse2_k_path_scan/best_exact_gamma_candidate/band_comparison.csv` | table | best exact-`Gamma` path-mapping band comparison | improved main candidate | pending sync |
-| `/workspace/output/twse2_k_path_scan/best_exact_gamma_candidate/high_symmetry_residuals.csv` | table | best exact-`Gamma` path-mapping residual audit | improved main candidate | pending sync |
-| `/workspace/output/twse2_k_path_scan/best_exact_gamma_candidate/band_reconstruction_check.png` | figure | best exact-`Gamma` path-mapping figure | improved main candidate | pending sync |
-| `/workspace/output/twse2_k_path_scan/best_exact_gamma_candidate/summary.md` | summary | best exact-`Gamma` path-mapping summary | improved main candidate | pending sync |
-| `/workspace/output/twse2_mixed_star_scan/mixed_star_scan.csv` | table | 162-candidate non-`A-B` mixed-star ledger | exclusion dataset | pending sync |
-| `/workspace/output/twse2_mixed_star_scan/mixed_star_scan_top20.csv` | table | ranked top-20 mixed-star candidates | exclusion dataset | pending sync |
-| `/workspace/output/twse2_mixed_star_scan/summary.md` | summary | mixed-star scan summary | exclusion dataset | pending sync |
-| `/workspace/output/twse2_mixed_star_scan/best_exact_gamma_candidate/reconstructed_hopping_table.csv` | table | best exact-`Gamma` mixed-star hopping export | improved main candidate | pending sync |
-| `/workspace/output/twse2_mixed_star_scan/best_exact_gamma_candidate/band_comparison.csv` | table | best exact-`Gamma` mixed-star band comparison | improved main candidate | pending sync |
-| `/workspace/output/twse2_mixed_star_scan/best_exact_gamma_candidate/high_symmetry_residuals.csv` | table | best exact-`Gamma` mixed-star residual audit | improved main candidate | pending sync |
-| `/workspace/output/twse2_mixed_star_scan/best_exact_gamma_candidate/band_reconstruction_check.png` | figure | best exact-`Gamma` mixed-star figure | improved main candidate | pending sync |
-| `/workspace/output/twse2_mixed_star_scan/best_exact_gamma_candidate/summary.md` | summary | best exact-`Gamma` mixed-star summary | improved main candidate | pending sync |
-| `/workspace/output/twse2_asymmetric_short_range_scan/asymmetric_short_range_scan.csv` | table | 81-candidate `A-C / B-C` short-range asymmetry ledger | exclusion dataset | pending sync |
-| `/workspace/output/twse2_asymmetric_short_range_scan/asymmetric_short_range_scan_top20.csv` | table | ranked top-20 short-range asymmetry candidates | exclusion dataset | pending sync |
-| `/workspace/output/twse2_asymmetric_short_range_scan/summary.md` | summary | short-range asymmetry scan summary | exclusion dataset | pending sync |
-| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/reconstructed_hopping_table.csv` | table | best exact-`Gamma` short-range asymmetry hopping export | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/band_comparison.csv` | table | best exact-`Gamma` short-range asymmetry band comparison | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/high_symmetry_residuals.csv` | table | best exact-`Gamma` short-range asymmetry residual audit | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/band_reconstruction_check.png` | figure | best exact-`Gamma` short-range asymmetry figure | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_asymmetric_short_range_scan/best_exact_gamma_candidate/summary.md` | summary | best exact-`Gamma` short-range asymmetry summary | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_asymmetric_c7_scan/asymmetric_c7_scan.csv` | table | 324-candidate `sqrt(7)` asymmetry ledger | exclusion dataset | pending sync |
-| `/workspace/output/twse2_asymmetric_c7_scan/asymmetric_c7_scan_top20.csv` | table | ranked top-20 `sqrt(7)` asymmetry candidates | exclusion dataset | pending sync |
-| `/workspace/output/twse2_asymmetric_c7_scan/summary.md` | summary | `sqrt(7)` asymmetry scan summary | exclusion dataset | pending sync |
-| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/reconstructed_hopping_table.csv` | table | best exact-`Gamma` `sqrt(7)` asymmetry hopping export | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/band_comparison.csv` | table | best exact-`Gamma` `sqrt(7)` asymmetry band comparison | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/high_symmetry_residuals.csv` | table | best exact-`Gamma` `sqrt(7)` asymmetry residual audit | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/band_reconstruction_check.png` | figure | best exact-`Gamma` `sqrt(7)` asymmetry figure | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_asymmetric_c7_scan/best_exact_gamma_candidate/summary.md` | summary | best exact-`Gamma` `sqrt(7)` asymmetry summary | exclusion dataset baseline replay | pending sync |
-| `/workspace/output/twse2_coupled_path_c7_scan/coupled_path_c7_scan.csv` | table | 1160-candidate coupled path + exact-`Gamma` asymmetric `sqrt(7)` ledger | improved main candidate search | pending sync |
-| `/workspace/output/twse2_coupled_path_c7_scan/coupled_path_c7_scan_top20.csv` | table | ranked top-20 coupled candidates | improved main candidate search | pending sync |
-| `/workspace/output/twse2_coupled_path_c7_scan/summary.md` | summary | coupled scan summary | improved main candidate search | pending sync |
-| `/workspace/output/twse2_coupled_path_c7_scan/best_exact_gamma_candidate/reconstructed_hopping_table.csv` | table | best exact-`Gamma` coupled candidate hopping export | improved main candidate | pending sync |
-| `/workspace/output/twse2_coupled_path_c7_scan/best_exact_gamma_candidate/band_comparison.csv` | table | best exact-`Gamma` coupled candidate band comparison | improved main candidate | pending sync |
-| `/workspace/output/twse2_coupled_path_c7_scan/best_exact_gamma_candidate/high_symmetry_residuals.csv` | table | best exact-`Gamma` coupled candidate residual audit | improved main candidate | pending sync |
-| `/workspace/output/twse2_coupled_path_c7_scan/best_exact_gamma_candidate/band_reconstruction_check.png` | figure | best exact-`Gamma` coupled candidate figure | improved main candidate | pending sync |
-| `/workspace/output/twse2_coupled_path_c7_scan/best_exact_gamma_candidate/summary.md` | summary | best exact-`Gamma` coupled candidate summary | improved main candidate | pending sync |
-| `/workspace/twse2_tb/reconstruct_tuo_tb.py` | code | restored Track-1 reconstruction script with workbook fallback | working main script | pending sync |
-| `/workspace/twse2_tb/scan_k_path_mappings.py` | code | reproducible `k`-path mapping scan script | exclusion script | pending sync |
-| `/workspace/twse2_tb/scan_mixed_star_gauges.py` | code | reproducible mixed-star scan script on top of the best `k`-path baseline | exclusion script | pending sync |
-| `/workspace/twse2_tb/scan_asymmetric_short_range.py` | code | reproducible short-range asymmetry scan script | exclusion script | pending sync |
-| `/workspace/twse2_tb/scan_asymmetric_c7.py` | code | reproducible `sqrt(7)` asymmetry scan script | exclusion script | pending sync |
-| `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/scan_coupled_path_c7_exact_gamma.py` | code | reproducible coupled path + exact-`Gamma` asymmetric `sqrt(7)` scan script | improved main candidate script | pending sync |
+| Package path | Purpose | Status | Google Drive status |
+| --- | --- | --- | --- |
+| `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/` | baseline Track-1 faithful candidate bundle | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-ab-scan/` | `A-B` convention exclusion dataset | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-kpath-scan/` | `k`-path mapping exclusion / candidate dataset | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-kpath-best/` | best exact-`Gamma` path-mapping candidate package | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-mixed-star-scan/` | shared mixed-star exclusion / candidate dataset | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-asymmetric-short-range/` | isolated short-range asymmetry exclusion dataset | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-asymmetric-c7/` | isolated `sqrt(7)` asymmetry exclusion dataset | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-coupled-path-c7/` | coupled path-plus-hopping best-faithful dataset | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/track1-kclosure-2026-04-29/` | persistent Track-1 convention scan | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/sgf-minimal-2026-04-29/` | SGF minimal edge-spectrum proxy package | persistent local mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/data/btk-minimal-2026-04-29/` | BTK / robustness minimal proxy package | persistent local mirror | pending sync |
 
-## Memory-folder mirror
+## Persistent local code packages
 
-- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/`
-  - `reconstructed_hopping_table.csv`
-  - `band_comparison.csv`
-  - `high_symmetry_residuals.csv`
-  - `band_reconstruction_check.png`
-  - `summary.md`
-- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-ab-scan/`
-  - `ab_convention_scan.csv`
-  - `ab_convention_scan_top20.csv`
-  - `best_exact_gamma_band_comparison.csv`
-  - `best_exact_gamma_band_check.png`
-  - `summary.md`
-- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-kpath-scan/`
-  - `k_path_mapping_scan.csv`
-  - `k_path_mapping_scan_top20.csv`
-  - `summary.md`
-- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-kpath-best/`
-  - `reconstructed_hopping_table.csv`
-  - `band_comparison.csv`
-  - `high_symmetry_residuals.csv`
-  - `band_reconstruction_check.png`
-  - `summary.md`
-- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-mixed-star-scan/`
-  - `mixed_star_scan.csv`
-  - `mixed_star_scan_top20.csv`
-  - `summary.md`
-  - `reconstructed_hopping_table.csv`
-  - `band_comparison.csv`
-  - `high_symmetry_residuals.csv`
-  - `band_reconstruction_check.png`
-  - `best_exact_gamma_summary.md`
-- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-asymmetric-short-range/`
-  - `asymmetric_short_range_scan.csv`
-  - `asymmetric_short_range_scan_top20.csv`
-  - `summary.md`
-  - `best_exact_gamma_candidate/reconstructed_hopping_table.csv`
-  - `best_exact_gamma_candidate/band_comparison.csv`
-  - `best_exact_gamma_candidate/high_symmetry_residuals.csv`
-  - `best_exact_gamma_candidate/band_reconstruction_check.png`
-  - `best_exact_gamma_candidate/summary.md`
-- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-asymmetric-c7/`
-  - `asymmetric_c7_scan.csv`
-  - `asymmetric_c7_scan_top20.csv`
-  - `summary.md`
-  - `best_exact_gamma_candidate/reconstructed_hopping_table.csv`
-  - `best_exact_gamma_candidate/band_comparison.csv`
-  - `best_exact_gamma_candidate/high_symmetry_residuals.csv`
-  - `best_exact_gamma_candidate/band_reconstruction_check.png`
-  - `best_exact_gamma_candidate/summary.md`
-- Persistent local mirror: `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-coupled-path-c7/`
-  - `coupled_path_c7_scan.csv`
-  - `coupled_path_c7_scan_top20.csv`
-  - `summary.md`
-  - `best_exact_gamma_candidate/reconstructed_hopping_table.csv`
-  - `best_exact_gamma_candidate/band_comparison.csv`
-  - `best_exact_gamma_candidate/high_symmetry_residuals.csv`
-  - `best_exact_gamma_candidate/band_reconstruction_check.png`
-  - `best_exact_gamma_candidate/summary.md`
-- Persistent local code mirror: `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-28-kpath/`
-  - `reconstruct_tuo_tb.py`
-  - `scan_k_path_mappings.py`
-- Persistent local code mirror: `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-28-mixed-star/`
-  - `reconstruct_tuo_tb.py`
-  - `scan_mixed_star_gauges.py`
-- Persistent local code mirror: `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/`
-  - `reconstruct_tuo_tb.py`
-  - `scan_asymmetric_short_range.py`
-  - `scan_asymmetric_c7.py`
-  - `scan_coupled_path_c7_exact_gamma.py`
+| Code path | Purpose | Google Drive status |
+| --- | --- | --- |
+| `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-28-kpath/` | path-mapping scan code mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/` | asymmetric and coupled Track-1 scan code mirror | pending sync |
+| `/workspace/memory/twse2-andreev-prl/code/twse2_persistent_pipeline.py` | persistent shared pipeline helpers | pending sync |
+| `/workspace/memory/twse2-andreev-prl/code/run_track1_kclosure_scan.py` | persistent Track-1 convention scan entrypoint | pending sync |
+| `/workspace/memory/twse2-andreev-prl/code/generate_sgf_minimal_package.py` | SGF minimal package generator | pending sync |
+| `/workspace/memory/twse2-andreev-prl/code/generate_btk_minimal_package.py` | BTK minimal package generator | pending sync |
 
 ## Pending sync queue
 
 1. Use a Drive session or connector surface that supports generic file upload and stable folder placement.
 2. Locate or create the project folder for `twse2-andreev-prl`.
-3. Upload the current Track-1 reconstruction artifacts.
-4. Upload the `A-B` convention scan artifacts.
-5. Upload the `k`-path mapping scan artifacts and the improved best-candidate package.
-6. Upload the mixed-star scan artifacts and the improved best-candidate package.
-7. Upload the asymmetric short-range scan artifacts and the best exact-`Gamma` replay package.
-8. Upload the asymmetric `sqrt(7)` scan artifacts and the best exact-`Gamma` replay package.
-9. Upload the coupled path + exact-`Gamma` asymmetric `sqrt(7)` scan artifacts and the improved best-candidate package.
-10. Upload the restored Track-1 scripts, including the new coupled scan entrypoint.
-11. Re-upload the original workbook and archive when they become available again.
-12. Record Google Drive folder URL, file IDs, and version labels back into this index.
+3. Upload the persistent Track-1 packages, including the new convention scan and the current coupled baseline package.
+4. Upload the SGF minimal package.
+5. Upload the BTK minimal package.
+6. Upload the persistent code entrypoints used in the current project space.
+7. Re-upload the original workbook and archive when a writable surface becomes available again.
+8. Record Google Drive folder URL, file IDs, and version labels back into this index.

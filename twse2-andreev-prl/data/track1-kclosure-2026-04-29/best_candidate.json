@@ -1,0 +1,11 @@
+{
+  "best_rmse_meV": 13.014380778143309,
+  "best_K_B_choice": "K1",
+  "best_M_choice": "M1",
+  "best_K_T_choice": "K6",
+  "baseline_path_choice": {
+    "K_B": "K1",
+    "M": "M1",
+    "K_T": "K2"
+  }
+}

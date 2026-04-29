@@ -192,6 +192,37 @@ The project has moved from mainly local reconstruction triage to data-package co
 
 Yes, partially. The next hourly iterations can proceed immediately on local data completion and memory indexing, while Google Drive sync remains a live environment blocker that must be retried after permission repair.
 
+## 2026-04-29 | Persistent project-space execution pass
+
+### Check Scope
+
+- Move active computation into the long-lived project space
+- Continue Track 1 closure work
+- Generate first persistent SGF and BTK minimal data packages
+
+### Confirmed Correct
+
+- New reusable project-space scripts now live in `/workspace/memory/twse2-andreev-prl/code/`.
+- A new Track 1 convention scan package now lives in `/workspace/memory/twse2-andreev-prl/data/track1-kclosure-2026-04-29/`.
+- That scan confirms that high-symmetry relabeling alone does not close Track 1; the best candidate in this pass still has RMSE `13.014 meV`.
+- A new SGF minimal package now lives in `/workspace/memory/twse2-andreev-prl/data/sgf-minimal-2026-04-29/`.
+- A new BTK minimal package now lives in `/workspace/memory/twse2-andreev-prl/data/btk-minimal-2026-04-29/`.
+
+### Problems / Risks
+
+- Track 1 remains unresolved; the new scan narrows one more branch but does not produce exact `K^B / K^T` closure.
+- The SGF result is still a finite-ribbon edge Green's proxy, not yet a final semi-infinite benchmark.
+- The BTK result is still a BTK-like proxy weighted by the SGF minimal edge profile, not yet a multiorbital material-specific conductance calculation.
+- Google Drive persistence is still not actually complete because a usable upload/create action is still unavailable in the current connector surface.
+
+### Stage Judgment
+
+The project has advanced from “only Track 1 local reconstruction exists” to “all three lines now have persistent minimal data packages.” This is meaningful progress, but the manuscript-grade data closure is still incomplete.
+
+### Supports Next Stage?
+
+Yes. The next stage can now refine each data line on top of persistent code and persistent files instead of starting from scratch each round.
+
 ## 2026-04-28 | Runnable-chain recovery and wider A-B exclusion scan
 
 ### Check Scope
@@ -202,17 +233,14 @@ Yes, partially. The next hourly iterations can proceed immediately on local data
 
 ### Confirmed Correct
 
-- The current workspace snapshot does not contain the earlier local paths `/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx` or `/workspace/user_files/04-ws2.zip`, so direct dependence on those paths would currently break execution.
-- The current Track-1 source arrays remain recoverable from the mirrored file `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/band_comparison.csv`, so Track 1 can continue honestly without inventing data.
-- A runnable workspace script has now been restored at `/workspace/twse2_tb/reconstruct_tuo_tb.py`, and it reproduces the baseline Track-1 package while falling back to the mirrored source arrays if the original workbook is absent.
-- A wider `A-B` convention scan covering 162 candidates has now been executed and archived.
+- The current Track-1 source arrays remain recoverable from the mirrored file `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/band_comparison.csv`.
+- A runnable workspace script was restored and a wider `A-B` convention scan covering 162 candidates was executed and archived.
 - The best overall scanned candidate reaches global RMSE `8.898 meV`, confirming again that the `K`-sector mismatch is convention-sensitive.
 
 ### Problems / Risks
 
-- Every scanned branch that materially improves the global RMSE still breaks exact `Gamma` closure, with the best overall branch missing the `Gamma` constraint by about `8.19 meV`.
-- Under the hard acceptance rule `max abs delta < 0.05 meV` at both `Gamma` endpoints, no scanned `A-B` branch improves on the current baseline; the best exact-`Gamma` candidate is still the baseline all-constant branch at `10.255 meV`.
-- Google Drive still lacks a usable generic upload path in this session, so the new scan artifacts can only be claimed as locally archived, not cloud-synced.
+- Every scanned branch that materially improves the global RMSE still breaks exact `Gamma` closure.
+- Under the hard exact-`Gamma` rule, no scanned `A-B` branch improves on the baseline all-constant branch.
 
 ### Stage Judgment
 
@@ -220,129 +248,78 @@ Still in Track-1 evidence generation. This round closed a workspace reproducibil
 
 ### Supports Next Stage?
 
-Yes. The next pass should leave the exhausted `A-B` family and move to the next convention layers that could change `K^B / K^T` while preserving `Gamma`, such as non-`A-B` mixed-star gauge choices or explicit high-symmetry path mapping checks.
+Yes. The next pass should leave the exhausted `A-B` family and move to the next convention layers that could change `K^B / K^T` while preserving `Gamma`.
 
 ## 2026-04-28 | K-path mapping recovery and scan pass
 
 ### Check Scope
 
-- Verify the current technical chain before any new data-generation pass
-- Recover a runnable Track-1 script path inside the current workspace snapshot if the original workbook is absent
-- Test whether the remaining residual can be reduced by high-symmetry path mapping alone before changing the hopping table again
+- Recover a runnable Track-1 chain if the original workbook is absent
+- Test whether the remaining residual can be reduced by high-symmetry path mapping alone
 
 ### Confirmed Correct
 
-- In this workspace snapshot, the previously cited `/workspace/twse2_tb` and `/workspace/output` tree were absent, so the runnable chain did need to be rebuilt before further data work.
-- A restored workspace script now exists at `/workspace/twse2_tb/reconstruct_tuo_tb.py`, and it runs from the mirrored source-band columns when `/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx` is missing.
-- The current Python environment has `numpy`, `pandas`, and `Pillow`; `matplotlib` and `scipy` are absent, but they do not block the present Track-1 scripts.
-- A 180-candidate `k`-path mapping scan has now been executed and archived locally.
-- The best threshold-exact-`Gamma` candidate in that scan improves the global RMSE from `10.255 meV` to `8.880 meV` with `Gamma_end` max abs residual `0.0132 meV`.
-- A duplicated-boundary source-compatible variant reaches `8.900 meV` while restoring the final `Gamma` row exactly to numerical precision.
-- Google Drive profile lookup and project search are working again.
+- A restored workspace script again became runnable from mirrored source-band columns when the workbook path was absent.
+- A 180-candidate `k`-path mapping scan was executed and archived locally.
+- The best threshold-exact-`Gamma` candidate improves the global RMSE from `10.255 meV` to `8.880 meV`.
 
 ### Problems / Risks
 
-- The improved fit still does not count as true-Tuo-TB closure yet, because the project has not proved that the new `K^B / M / K^T` mapping is the physically faithful published convention rather than an equally plausible relabeling.
-- The hopping-table ambiguity is therefore narrowed but not removed; the next scan still has to move into non-`A-B` mixed-star / gauge choices on top of the improved path baseline.
-- The current Google Drive connector surface still does not expose a generic file-upload / folder-placement path for the full CSV + PNG + Python artifact bundle, so this round can only claim local archival, not cloud sync.
+- The improved fit still does not count as true-Tuo-TB closure yet, because the project has not proved that the new `K^B / M / K^T` mapping is the physically faithful published convention.
 
 ### Stage Judgment
 
-Still in Track-1 evidence generation, but the active bottleneck has shifted. The project is no longer justified in treating the old path convention as fixed; path mapping is now a verified lever inside the missing normal-state data package.
+Still in Track-1 evidence generation, but the active bottleneck shifted: path mapping is now a verified lever inside the missing normal-state data package.
 
 ### Supports Next Stage?
 
-Yes. The next pass should treat the `8.880 meV` path-mapping candidate as the new baseline and rerun the next non-`A-B` mixed-star / gauge layer rather than revisiting the exhausted old baseline.
+Yes. The next pass should treat the `8.880 meV` path-mapping candidate as the new baseline.
 
-## 2026-04-28 | Mixed-star scan and state-hardening pass
-
-### Check Scope
-
-## 2026-04-28 | Technical / environment / manuscript check plus asymmetric follow-up scans
+## 2026-04-28 | Mixed-star scan and asymmetric follow-up passes
 
 ### Check Scope
 
-- Re-run the required technical state check before generating new data
-- Re-run the environment and Google Drive availability check
-- Re-run the manuscript-state check
-- Test whether the remaining `K^B / K^T` mismatch can be improved by breaking `A-C / B-C` sharing in two isolated layers:
-  - short-range (`|R|=1, 2`)
-  - `sqrt(7)` mixed-star layer
-
-### Confirmed Correct
-
-- The current workspace snapshot initially lacked `/workspace/twse2_tb`, so the runnable Track-1 chain did need to be restored again before the new scan pass.
-- The current Python environment still has `numpy`, `pandas`, and `Pillow`, while `matplotlib` and `scipy` remain absent; the present Track-1 scans do not require the missing packages.
-- No editable manuscript source for this project is present in the current workspace snapshot, so manuscript revision remains gated by data completion plus future source recovery.
-- Google Drive profile lookup and project search are still readable in this session, and the project still has no existing Drive folder or file returned by the current searches.
-- The 81-candidate asymmetric short-range scan is now complete and archived locally.
-- The 324-candidate asymmetric `sqrt(7)` scan is now complete and archived locally.
-
-### Problems / Risks
-
-- The asymmetric short-range scan does not improve the best exact-`Gamma` candidate; the previous shared baseline remains the faithful best point.
-- The asymmetric `sqrt(7)` scan finds a lower-RMSE overall candidate (`8.283 meV`), but it violates exact `Gamma` closure by `7.885 meV`, so it is not an honest upgrade.
-- The current unresolved bottleneck is therefore no longer generic `A-C / B-C` sharing. It is a narrower coupled valley-specific gauge / path-plus-hopping ambiguity that has not yet been closed by any isolated asymmetry layer.
-- Google Drive still does not offer a generic binary upload / folder-placement path for the full CSV + PNG + Python bundle, so this round cannot honestly claim cloud archival.
-
-### Stage Judgment
-
-Still in Track-1 evidence generation, but the exclusion logic is now materially stronger. Two more plausible ambiguity layers have been closed as local exclusion datasets.
-
-### Supports Next Stage?
-
-Yes. The next data pass should move to a coupled valley-specific gauge / indexing completion rather than re-scanning any isolated `A-C / B-C` asymmetry layer.
-
-- Perform the required technical status check, environment check, and manuscript-status check before generating new data
-- Restore the runnable Track-1 chain in the current workspace snapshot
 - Test the next non-`A-B` shared mixed-star layer on top of the best exact-`Gamma` `k`-path baseline
+- Then test isolated short-range and isolated `sqrt(7)` asymmetry layers
 
 ### Confirmed Correct
 
-- The current workspace snapshot again lacked an active `/workspace/twse2_tb` chain at the start of the round, but the runnable script has now been restored at `/workspace/twse2_tb/reconstruct_tuo_tb.py`.
-- A new reproducible scan entrypoint now exists at `/workspace/twse2_tb/scan_mixed_star_gauges.py`.
-- The current Python environment still has `numpy`, `pandas`, and `Pillow`, while `matplotlib` and `scipy` remain absent; that does not block the present Track-1 scripts.
-- No editable manuscript source for this project is present in the current workspace snapshot, so this round still belongs to data completion rather than manuscript patching.
-- A 162-candidate non-`A-B` shared mixed-star scan has now been executed and archived locally.
-- The best exact-`Gamma` mixed-star candidate uses `c1=cyc`, `c2=anti`, `c7_first=cyc`, `c7_second=anti`, and `c7_second_conjugated=False`, reaching global RMSE `8.372 meV` with `Gamma_end` max abs delta `0.0362 meV`.
-- Relative to the previous best `k`-path-only candidate, this new candidate improves the global RMSE by `0.508 meV` and cuts the `M`-window RMSE from `8.237 meV` to `3.286 meV`.
-- The new mixed-star scan package and the updated scripts have been mirrored into the memory folder and indexed for later cloud sync.
-- Google Drive profile lookup and project search still work, but searches for `twse2 andreev prl` and `ws2 tuo andreev` continue to return no project folder or file.
+- A 162-candidate non-`A-B` shared mixed-star scan was executed and archived locally.
+- The best exact-`Gamma` mixed-star candidate reaches global RMSE `8.372 meV`.
+- The 81-candidate asymmetric short-range scan and the 324-candidate asymmetric `sqrt(7)` scan were both completed and archived locally.
 
 ### Problems / Risks
 
-- The dominant mismatch is now concentrated in the `K^B / K^T` valleys rather than `M`, so the next scan must explicitly target valley-specific asymmetry instead of repeating shared mixed-star rules.
-- The current mixed-star scan still keeps `A-C` and `B-C` tied together within each distance shell; that shared assumption may be the remaining reason exact valley closure is not yet reached.
-- The current Google Drive connector surface still does not expose a generic binary upload / folder-placement path, so this round can only claim local archival plus a pending-sync queue, not cloud completion.
+- The dominant mismatch is now concentrated in the `K^B / K^T` valleys rather than `M`.
+- The asymmetric short-range scan does not improve the best exact-`Gamma` candidate.
+- The asymmetric `sqrt(7)` scan finds a lower-RMSE overall candidate (`8.283 meV`), but it violates exact `Gamma` closure and is therefore not an honest upgrade.
 
 ### Stage Judgment
 
-Still in Track-1 evidence generation, but the data gap is now sharper. This round converts the old broad “mixed-star / gauge ambiguity” into a much narrower residual problem: exact-`Gamma` candidates exist and `M` is substantially improved, but the `K^B / K^T` valley sectors are still not closed.
+Still in Track-1 evidence generation, but the data gap is now sharper: exact-`Gamma` candidates exist and `M` is substantially improved, while the valley sectors remain open.
 
 ### Supports Next Stage?
 
-Yes. The next pass should start from the `8.372 meV` mixed-star baseline and run the smallest asymmetric scan that decouples the still-shared `A-C` and `B-C` phase rules or otherwise tests the next valley-specific gauge layer.
+Yes. The next pass should move to a coupled valley-specific completion rather than repeat isolated asymmetry scans.
 
 ## 2026-04-29 | Technical, environment, manuscript-status, and coupled-scan pass
 
 ### Check Scope
 
-- Re-run the mandatory technical status check, environment check, and manuscript-status check before starting a new data pass
-- Verify whether the current workspace still exposes the runnable Track-1 directory and whether the Python stack remains sufficient
+- Re-run the mandatory technical, environment, and manuscript-state checks
 - Execute the next highest-value coupled data pass instead of repeating isolated scans
 
 ### Confirmed Correct
 
-- The current Python environment still supports the active Track-1 chain with `numpy`, `pandas`, and `Pillow`; `scipy` and `matplotlib` remain absent but are not required for the current scripts.
-- The current workspace snapshot no longer contains `/workspace/twse2_tb/`, but the memory-mirrored code under `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/` remains runnable.
-- No editable manuscript source was found for this project in the current workspace scan, so manuscript modification is still not the active work surface.
-- A new coupled scan over the top 20 `k`-path candidates and the 58 exact-`Gamma` asymmetric `sqrt(7)` candidates completed successfully and produced a new faithful best candidate at global RMSE `8.367 meV`.
+- The memory-mirrored Track-1 code remained runnable even when `/workspace/twse2_tb/` disappeared again.
+- A coupled scan over the top 20 `k`-path candidates and the 58 exact-`Gamma` asymmetric `sqrt(7)` candidates completed successfully.
+- That coupled scan produced a new faithful best candidate at global RMSE `8.367 meV`.
 - The new best candidate keeps the mixed-star rule set unchanged but flips the valley labels to `K_B=K_2b1+b2` and `K_T=K_-2b1-b2`, confirming that path-plus-hopping coupling matters even after the isolated scans were exhausted.
 
 ### Problems / Risks
 
-- The improvement is real but small (`8.372 -> 8.367 meV`), so the project still lacks a materially stronger valley-sector closure.
-- The dominant mismatch remains in the two `K` windows; the coupled scan improved one valley window and slightly worsened the other, rather than closing both.
+- The improvement is real but still small (`8.372 -> 8.367 meV`), so the project still lacks a materially stronger valley-sector closure.
+- The dominant mismatch remains in the two `K` windows.
 - Google Drive still cannot be honestly treated as synced in this run because no writable connector surface was available through the exposed tools.
 - Manuscript revision remains blocked by missing manuscript source files and incomplete downstream SGF / BTK datasets.
 
@@ -353,3 +330,34 @@ Still in Track-1 evidence generation, now with a better grounded coupled baselin
 ### Supports Next Stage?
 
 Yes. The project now supports a broader coupled valley-specific scan as the next shortest data-closing action, while SGF / BTK and manuscript work remain downstream.
+
+## 2026-04-29 | Persistent project-space execution pass
+
+### Check Scope
+
+- Move active computation into the long-lived project space
+- Continue Track 1 closure work
+- Generate first persistent SGF and BTK minimal data packages
+
+### Confirmed Correct
+
+- New reusable project-space scripts now live in `/workspace/memory/twse2-andreev-prl/code/`.
+- A new Track 1 convention scan package now lives in `/workspace/memory/twse2-andreev-prl/data/track1-kclosure-2026-04-29/`.
+- That scan confirms that high-symmetry relabeling alone does not close Track 1; the best candidate in this pass still has RMSE `13.014 meV`.
+- A new SGF minimal package now lives in `/workspace/memory/twse2-andreev-prl/data/sgf-minimal-2026-04-29/`.
+- A new BTK minimal package now lives in `/workspace/memory/twse2-andreev-prl/data/btk-minimal-2026-04-29/`.
+
+### Problems / Risks
+
+- Track 1 remains unresolved; the new scan narrows one more branch but does not produce exact `K^B / K^T` closure.
+- The SGF result is still a finite-ribbon edge Green's proxy, not yet a final semi-infinite benchmark.
+- The BTK result is still a BTK-like proxy weighted by the SGF minimal edge profile, not yet a multiorbital material-specific conductance calculation.
+- Google Drive persistence is still not actually complete because a usable upload/create action is still unavailable in the current connector surface.
+
+### Stage Judgment
+
+The project has advanced from “only Track 1 local reconstruction exists” to “all three lines now have persistent minimal data packages.” This is meaningful progress, but the manuscript-grade data closure is still incomplete.
+
+### Supports Next Stage?
+
+Yes. The next stage can now refine each data line on top of persistent code and persistent files instead of starting from scratch each round.
