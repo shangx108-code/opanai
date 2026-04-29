@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Project-local virtual environments
+.venv/
+
+# Runtime-generated environment logs can be rebuilt locally
+*/logs/env_check.json
