@@ -1,10 +1,10 @@
 # Role Assignments
 
 ## Coordinator
-- Current task: lock the next round around the full-device topology upgrade and prevent Figure 4 from drifting into premature finalization
-- Inputs: topology-layer upgrade specification, venue criteria, current figure logic, manuscript package
-- Deliverable: updated project brief and single benchmark target
-- Completion standard: the project has one primary rejection risk, one primary topology-fix task, and one rebuild trigger for Figure 4
+- Current task: keep the project in strengthened recovery mode until the three-terminal bundle is locally runnable again
+- Inputs: topology-layer upgrade specification, archive checklist, current output directory state, manuscript package
+- Deliverable: updated project brief with one recovery target and one post-recovery rerun trigger
+- Completion standard: the project has one primary recovery bottleneck, one recovered provenance bundle, and one precise rerun trigger for Figure 4
 - Dependency: none
 
 ## Theory
@@ -15,25 +15,25 @@
 - Dependency: coordinator framing
 
 ## Code and Numerical Computation
-- Current task: implement the full-device ring-invariant topology label in the shared three-terminal benchmark path
-- Inputs: three-terminal operating-point table, inhomogeneous device Hamiltonians, barrier/temperature/disorder perturbations, topology-layer upgrade specification
-- Deliverable: rerun data for `G_LL`, `G_RR`, `G_LR`, reopened-gap proxy, `nu_ring`, and `P_topo`
-- Completion standard: positive, smooth-dot, impurity, and disorder families are evaluated with transport and topology on the same inhomogeneous instances
-- Dependency: theory definitions
+- Current task: recover the shared three-terminal benchmark script path and historical output bundle in the current workspace before attempting the full-device rerun
+- Inputs: archive checklist, recovered provenance manifest, topology-layer upgrade specification, persistent project storage
+- Deliverable: restored runnable script path plus recovered or regenerated bundle files
+- Completion standard: the workspace contains the executable three-terminal benchmark entry point and the rerun can begin from real inputs rather than memory-only references
+- Dependency: coordinator recovery target
 
 ## Data Analysis
-- Current task: quantify the decoupling between local-peak prevalence and topological-consistency probability
-- Inputs: rerun tables containing local-peak score, `|G_LR|`, gap proxy, `nu_ring`, and `P_topo`
-- Deliverable: analysis memo showing where false positives remain locally misleading but topologically inconsistent
-- Completion standard: can state one concise discrimination rule and one robustness summary without leaning on the old backbone proxy
-- Dependency: first-round numerics
+- Current task: stay paused until the missing three-terminal rerun tables are restored
+- Inputs: recovered bundle files once available
+- Deliverable: post-recovery analysis memo
+- Completion standard: no analysis claims are advanced from memory-only references
+- Dependency: restored bundle
 
 ## Figure Production
-- Current task: rebuild Figure 4 as a consistency-filter figure rather than a nonlocal-only rescue figure
-- Inputs: topology-layer upgrade specification and rerun numerical outputs
-- Deliverable: updated Figure 4 panel order, caption, and legend logic
-- Completion standard: the figure shows matched local anomaly, nonlocal signal, gap logic, and full-device topology on the same operating points
-- Dependency: data-analysis memo
+- Current task: hold Figure 4 in working-figure status until the bundle recovery is complete
+- Inputs: topology-layer upgrade specification, recovered provenance manifest, rerun numerical outputs after restoration
+- Deliverable: updated Figure 4 only after recovery plus rerun
+- Completion standard: no figure refresh happens against absent data files
+- Dependency: restored bundle + data-analysis memo
 
 ## Writing
 - Current task: integrate the new full-device topology language into the Results and Figure 4 caption logic without implying that the missing rerun already exists

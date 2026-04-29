@@ -194,3 +194,27 @@ The main risk is now rhetorical inflation: the figure logic is sharp enough to s
 ### Newly completed items
 - Produced a directly reusable Figure 4 rewrite pack in `figure4-full-device-topology-rewrite-v1.md`
 - Recorded the scheduled-run environment as a hard blocker for numerical execution rather than silently treating it as a soft delay
+
+## 2026-04-29 | Round 9 supervision after strengthened recovery-mode restart
+
+### Overall evaluation
+This round still does not improve the evidence base, but it does materially improve reproducibility control. The project is no longer pretending that the three-terminal bundle is simply "somewhere"; the current workspace now contains an explicit provenance reconstruction and a precise missing-file list for the historical benchmark package.
+
+### Gap to target-journal standard
+- The executable three-terminal script path is still absent from the current workspace.
+- The historical CSV and PNG outputs for the benchmark bundle are still absent from the current workspace.
+- The full-device topology rerun with `nu_ring` and `P_topo` therefore remains blocked even though its specification is now stable and locally linked to the missing asset list.
+
+### Most critical quality risk
+The project could confuse provenance recovery with evidence recovery and start writing as though the bundle had been numerically rebuilt.
+
+### Plan-revision advice
+1. Treat the recovered manifest as a recovery control document, not as scientific output.
+2. Make the next executable round about restoring the shared three-terminal script and inputs from persistent storage.
+3. Only after that restoration should the project resume the `nu_ring` and `P_topo` rerun.
+4. Keep all Figure 4 manuscript language conditional until the real rerun outputs reappear.
+
+### Newly completed items
+- Recreated `/workspace/output/three-terminal-benchmark/RECOVERY_MANIFEST.md`
+- Recreated `/workspace/output/three-terminal-benchmark/provenance_manifest.json`
+- Converted the missing-bundle state into an explicit, auditable blocker with an exact expected-file list

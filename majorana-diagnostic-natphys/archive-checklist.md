@@ -34,6 +34,8 @@
 - [x] Three-terminal selected operating-point table
 - [x] Rebuilt Figure 3 candidate from three-terminal data
 - [x] Rebuilt Figure 4 candidate from three-terminal data
+- [x] Three-terminal bundle provenance manifest rehydrated in current workspace
+- [ ] Historical three-terminal scripts and numerical assets restored in current workspace
 
 ## Figure package
 - [ ] Figure 1 conceptual diagnosis figure
@@ -86,5 +88,19 @@
 - [x] `/workspace/output/three-terminal-benchmark/positive_three_terminal_robustness.csv`
 - [x] `/workspace/output/three-terminal-benchmark/figure3_failure_local_peaks.png`
 - [x] `/workspace/output/three-terminal-benchmark/figure4_nonlocal_rescue.png`
+- [x] `/workspace/output/three-terminal-benchmark/RECOVERY_MANIFEST.md`
+- [x] `/workspace/output/three-terminal-benchmark/provenance_manifest.json`
 - [x] `topology-layer-upgrade-spec-2026-04-27.md`
 - [x] `figure4-full-device-topology-rewrite-v1.md`
+
+## Recovery status in current scheduled-run workspace
+- [x] The three-terminal bundle provenance has been restored from stable memory records
+- [ ] `/workspace/output/three-terminal-benchmark/selected_operating_points.csv` is present in the current workspace
+- [ ] `/workspace/output/three-terminal-benchmark/positive_three_terminal_scan.csv` is present in the current workspace
+- [ ] `/workspace/output/three-terminal-benchmark/positive_three_terminal_bias.csv` is present in the current workspace
+- [ ] `/workspace/output/three-terminal-benchmark/dot_three_terminal_bias.csv` is present in the current workspace
+- [ ] `/workspace/output/three-terminal-benchmark/impurity_three_terminal_bias.csv` is present in the current workspace
+- [ ] `/workspace/output/three-terminal-benchmark/disorder_three_terminal_bias.csv` is present in the current workspace
+- [ ] `/workspace/output/three-terminal-benchmark/positive_three_terminal_robustness.csv` is present in the current workspace
+- [ ] `/workspace/output/three-terminal-benchmark/figure3_failure_local_peaks.png` is present in the current workspace
+- [ ] `/workspace/output/three-terminal-benchmark/figure4_nonlocal_rescue.png` is present in the current workspace
