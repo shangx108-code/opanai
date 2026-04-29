@@ -17,3 +17,7 @@ This long-term project space now also contains the current formal workspace arti
 - `artifacts/project-outputs/`: synchronized from `/workspace/self-calibrating-diffractive-ncomms/outputs`
 - `artifacts/workspace-output/`: synchronized from selected project-relevant files under `/workspace/output`
 - `workspace-artifacts-manifest.md`: file-level manifest for the synchronized workspace artifacts
+
+## Synced Code Snapshot
+- `code/project-scripts/`: synchronized from `/workspace/self-calibrating-diffractive-ncomms/scripts`
+- `code-snapshot-manifest.md`: file-level manifest for the synchronized code snapshot

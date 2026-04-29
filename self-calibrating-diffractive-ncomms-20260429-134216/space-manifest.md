@@ -3,6 +3,7 @@
 ## Included Memory Files
 - README.md
 - archive-checklist.md
+- code-snapshot-manifest.md
 - drive-index.md
 - figure5_caption_package.md
 - iteration-log.md
@@ -25,3 +26,6 @@
 ## Included Artifact Directories
 - artifacts/project-outputs
 - artifacts/workspace-output
+
+## Included Code Directories
+- code/project-scripts
