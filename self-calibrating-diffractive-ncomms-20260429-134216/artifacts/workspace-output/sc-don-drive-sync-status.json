@@ -1,0 +1,37 @@
+{
+  "project": "self-calibrating-diffractive-ncomms",
+  "updated_at_utc": "2026-04-29T02-08-24Z",
+  "manifest_latest": "/workspace/output/sc-don-drive-sync-manifest-latest.csv",
+  "manifest_dated": "/workspace/output/sc-don-drive-sync-manifest-2026-04-29.csv",
+  "target_drive_folder": {
+    "title": "SC-DON-NatComm-data",
+    "url": "https://drive.google.com/drive/folders/1k09jiRUUyA2hRrynpoJgak0d4-5O4gSe",
+    "id": "1k09jiRUUyA2hRrynpoJgak0d4-5O4gSe"
+  },
+  "drive_ledgers": [
+    {
+      "title": "SC-DON NatComm Iteration Ledger",
+      "url": "https://docs.google.com/spreadsheets/d/1g9siXbReO87RJ_MoVqIVV3U2kha56J0IbMNPomPNdq8/edit"
+    },
+    {
+      "title": "SC-DON NatComm Iteration Ledger 2026-04-28",
+      "url": "https://docs.google.com/spreadsheets/d/1Obxm2TZxgmlYDOGXnHKEGx9NvtH9XcDBSZquEVLpTgI/edit"
+    }
+  ],
+  "summary": {
+    "local_ready_count": 28,
+    "missing_count": 5,
+    "code_count": 3,
+    "data_count": 9,
+    "figure_count": 4,
+    "memory_doc_count": 8,
+    "missing_paths": [
+      "/workspace/self-calibrating-diffractive-ncomms/outputs/round5_minimal_d2nn_metrics.csv",
+      "/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_metrics.csv",
+      "/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_panel.png",
+      "/workspace/self-calibrating-diffractive-ncomms/round5_minimal_d2nn_comparison.py",
+      "/workspace/self-calibrating-diffractive-ncomms/round5b_selfcalibrating_d2nn.py"
+    ]
+  },
+  "cloud_write_status": "blocked-no-write-endpoint"
+}

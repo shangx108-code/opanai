@@ -20,3 +20,8 @@
 - space-manifest.md
 - supervision-log.md
 - wrong-reference-design-v2.md
+- workspace-artifacts-manifest.md
+
+## Included Artifact Directories
+- artifacts/project-outputs
+- artifacts/workspace-output

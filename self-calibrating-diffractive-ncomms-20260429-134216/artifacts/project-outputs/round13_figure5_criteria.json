@@ -1,0 +1,67 @@
+{
+  "status": "ok",
+  "source_round": "round11_wrongref_v2",
+  "best_config": {
+    "config_id": 9,
+    "wrongref_mode": "anti_phase_plus_decoy",
+    "phase_mix": 0.17,
+    "reference_weight": 0.16,
+    "num_layers": 1
+  },
+  "risk_sample_summary": [
+    {
+      "sample": "frame",
+      "repeat_count": 8,
+      "common_minus_wrongref_db_mean": 0.033574,
+      "common_minus_wrongref_db_min": -0.158032,
+      "common_minus_wrongref_db_q25": -0.065174,
+      "common_minus_wrongref_db_median": -0.017237,
+      "common_minus_wrongref_positive_rate": 0.5,
+      "common_minus_ordinary_db_mean": 0.15802,
+      "common_minus_ordinary_db_min": -0.004599,
+      "common_minus_noncommon_db_mean": 0.04135,
+      "wrongref_minus_ordinary_db_mean": 0.124446,
+      "wrongref_beats_common_count": 4,
+      "noncommon_beats_common_count": 3
+    },
+    {
+      "sample": "two_spots",
+      "repeat_count": 8,
+      "common_minus_wrongref_db_mean": 0.072345,
+      "common_minus_wrongref_db_min": -0.054467,
+      "common_minus_wrongref_db_q25": -0.022208,
+      "common_minus_wrongref_db_median": 0.012339,
+      "common_minus_wrongref_positive_rate": 0.625,
+      "common_minus_ordinary_db_mean": 0.772486,
+      "common_minus_ordinary_db_min": 0.614746,
+      "common_minus_noncommon_db_mean": 0.116719,
+      "wrongref_minus_ordinary_db_mean": 0.700142,
+      "wrongref_beats_common_count": 3,
+      "noncommon_beats_common_count": 2
+    }
+  ],
+  "candidate_criteria": {
+    "legacy_mean_common_minus_wrongref_db": 0.100578,
+    "repeat_positive_fraction": 0.75,
+    "sample_pair_positive_fraction": 0.708333,
+    "sample_pair_q10_db": -0.054325,
+    "sample_pair_median_db": 0.080101,
+    "worst_sample_margin_mean_db": -0.035739,
+    "worst_sample_margin_min_db": -0.158032,
+    "risk_sample_positive_fraction": 0.5625,
+    "risk_sample_q25_db": -0.05243,
+    "risk_sample_median_db": 0.009875,
+    "risk_worst_repeat_margin_mean_db": -0.035739,
+    "risk_worst_repeat_margin_min_db": -0.158032
+  },
+  "mechanism_readout": {
+    "frame_pattern": "common remains near ordinary on frame, while wrong-reference often matches or exceeds common, so exclusion fails through edge-dominated ambiguity rather than broad reconstruction collapse",
+    "two_spots_pattern": "common strongly beats ordinary on two_spots, but wrong-reference intermittently tracks the same sparse-spot geometry, so exclusion remains positive on average but not uniformly across repeats"
+  },
+  "artifacts": {
+    "risk_csv": "/workspace/self-calibrating-diffractive-ncomms/outputs/round13_risk_sample_repeat_rows.csv",
+    "risk_summary_csv": "/workspace/self-calibrating-diffractive-ncomms/outputs/round13_risk_sample_summary.csv",
+    "criteria_json": "/workspace/self-calibrating-diffractive-ncomms/outputs/round13_figure5_criteria.json",
+    "summary_md": "/workspace/self-calibrating-diffractive-ncomms/outputs/round13_risk_mechanism_summary.md"
+  }
+}

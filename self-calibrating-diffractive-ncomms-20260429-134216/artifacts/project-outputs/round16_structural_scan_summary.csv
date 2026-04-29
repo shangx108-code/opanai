@@ -1,0 +1,13 @@
+config_id,wrongref_mode,encoding_mode,repeat_count,risk_pair_q10_db,risk_pair_min_db,risk_pair_positive_fraction,common_minus_ordinary_db_mean,common_minus_ordinary_db_min,common_minus_wrongref_db_mean,common_minus_wrongref_db_min,ranking_score
+7,sparse_tracker_decoy,occupancy_guarded,6,0.014774,-0.151228,0.916667,0.649419,0.570876,0.220889,-0.115386,1.170313
+8,sparse_tracker_decoy,hybrid_guarded,6,0.019915,-0.005826,0.916667,0.351835,0.225373,0.001354,-0.104664,1.021766
+5,sparse_tracker_decoy,baseline,6,-0.042229,-0.220051,0.666667,0.467504,0.250994,-0.024795,-0.161185,0.663802
+6,sparse_tracker_decoy,edge_guarded,6,-0.257941,-0.4548,0.25,0.087325,-0.022314,-0.208284,-0.639107,-0.503962
+12,hybrid_risk_decoy,hybrid_guarded,6,-0.224461,-0.235872,0.0,0.278302,0.089687,-0.047103,-0.228523,-0.526591
+11,hybrid_risk_decoy,occupancy_guarded,6,-0.353199,-0.468735,0.25,0.571139,0.458093,-0.012683,-0.178463,-0.538038
+3,edge_echo_decoy,occupancy_guarded,6,-0.372212,-0.669258,0.0,0.715346,0.515069,0.005397,-0.26007,-0.754977
+4,edge_echo_decoy,hybrid_guarded,6,-0.461011,-0.615738,0.0,0.272636,0.086479,-0.275008,-0.491642,-1.236779
+9,hybrid_risk_decoy,baseline,6,-0.546508,-0.699294,0.0,0.453188,0.302785,-0.46799,-0.824748,-1.442546
+1,edge_echo_decoy,baseline,6,-0.670062,-0.746083,0.0,0.331265,0.100346,-0.58959,-0.949718,-1.861586
+10,hybrid_risk_decoy,edge_guarded,6,-0.669565,-0.834924,0.0,0.025986,-0.108691,-0.286498,-0.457545,-1.921688
+2,edge_echo_decoy,edge_guarded,6,-0.956674,-1.050326,0.0,0.020302,-0.108383,-0.375774,-0.52569,-2.745721
