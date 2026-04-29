@@ -3,120 +3,234 @@
 ## 项目基本信息
 - 项目名称：Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations
 - 目标期刊：Nature Communications
-- 最近更新时间：2026-04-29（environment-bringup）
+- 最近更新时间：2026-04-29（iteration-resume）
+- 当前资料来源：
+  - `/workspace/user_files/01-markdown-1-md-3`
+  - `/workspace/self-calibrating-diffractive-ncomms/round1_theory_note.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round1_summary.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/round2_theory_note.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round3_fno_style_summary.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/round3_information_bound_note.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_summary.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/round3_experiment_feasibility_note.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/round4_tight_bound_note.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_summary.md`
 
 ## 当前运行规则
 - 默认推进主体：自研智能体
-- 自动迭代频率：每 1 小时 1 轮
-- 每轮必须写入：`iteration-log.md`
+- 自动迭代频率：研究迭代已恢复；当前按强化运行模式推进，并要求每轮强制写入迭代日志
 - 停止条件必须同时满足：
   - 所有需要补充的判据全部补齐
   - 五个审稿人的接收概率均超过 80%
   - 所有正式数据图都基于真实数据
   - 理论推导详实、可靠、可检查
   - 正文与补充材料所需图表、引用和对照组全部补齐
-
-## 研究边界
-- 当前项目按纯理论与纯仿真路线推进
-- 不把实验设备、实验数据或 benchtop 验证作为当前阶段硬依赖
-- 机制示意图可用 AI 起草，但正式结果图必须来自真实计算或真实实验数据
-- 未完成真实运行的代码、结果图和 benchmark 不得记为已完成
+- 研究边界：
+  - 当前项目按纯理论与纯仿真路线推进
+  - 不把实验设备、实验数据或 benchtop 验证作为当前阶段硬依赖
+  - 允许在论文中讨论 future experimental pathway，但不得把实验验证写成当前待补的必做证据，除非后续条件发生变化
+- 图表规则：
+  - 机制示意图、结构示意图、概念图可用 GPT-imag-2.0 生成初稿
+  - 除示意图外，所有图必须来自真实计算或真实实验数据
+  - AI 示意图不得直接视为定稿
+- 理论规则：
+  - 未完成详细推导的结论不得写成已证明
+  - 未完成真实运行的代码、结果图与 benchmark 不得记为已完成
 
 ## 研究总目标
 围绕“固定被动衍射处理器如何在动态像差/弱散射环境中通过共路 reference 实现自校准成像恢复”建立一条可投稿到 Nature Communications 的完整证据链，最终形成：
 - 主体理论：共路 pilot 如何降低瞬时退化不确定性，以及该机制在 diffractive optical neural operator 中的成立条件、边界和失效模式
-- 真实可复现的仿真链：至少覆盖 Zernike 动态像差、Kolmogorov 湍流、薄相位屏散射三类退化
+- 真实可复现实验链：至少覆盖 Zernike 动态像差、Kolmogorov 湍流、薄相位屏散射三类退化
+- 真实可复现实验链：
+  - 当前版本限定为真实可复现的理论推导、数值计算、仿真数据与仿真图表
+  - 至少覆盖 Zernike 动态像差、Kolmogorov 湍流、薄相位屏散射三类退化
 - 关键对照：ordinary D2NN、pilot-assisted D2NN、非共路 reference、错误 reference、传统 Wiener / RL / blind deconvolution、电子 U-Net、理想 phase-conjugation 上限
 - 正文与补充材料全套投稿级图表
 - 30 篇以上已核对参考文献
+- 可归档的代码、数据、图表、正文、补充材料与最终投稿包
 
 ## 当前阶段
-环境配置与数据补全优先阶段。
+强化研究迭代与严格写作并行阶段（已有第一轮弱器件级原型与连续主文骨架，但主结果仍未闭环）。
 
 说明：
-- round1-round4 的 surrogate、wave-optics、information-bound 和 cross-task 证据已建立。
-- round5 / round5b 已有第一轮器件级 prototype 结果，但强度不足以封闭主结论。
-- strict manuscript 已形成，但 Figure 5 仍然不够强。
-- 当前活动工作区缺少 round1-round5b 的底层脚本与输出文件，因此本轮先把“可持续运行环境 + 数据补全链路”补稳。
+- 当前工作区之前没有该项目的既有命名空间记忆。
+- 本轮已把上传提案正式转入项目状态，并完成第一轮最小真实数值验证。
+- 现在已进一步完成 round2：真实运行基于 Zernike pupil 的 wave-optics PSF 最小证据链。
+- 现在已进一步完成 round3：加入最小 FNO-style spectral baseline、CRLB 扫描，以及实验边界澄清。
+- 现在已进一步完成 round4：加入 task-level tight bound / theorem，以及 classification / inverse-design surrogate 的 cross-task 泛化仿真。
+- 已有 round5 两层 pure-reconstruction prototype 与 round5b 三层 self-calibrating prototype；前者中性偏负，后者仅给出弱正向 reconstruction 信号。
+- 2026-04-29 本轮已在活动工作区重建一个可运行的 round5c 后继脚本，并完成 seed / pilot-amplitude 小扫描，恢复了 processor-level 链路的本地可跑性。
+- 当前仍不是完整 D2NN，也不是投稿级证据链。
+- 已有严格写作流程骨架，但这不改变主结果仍未闭环的事实。
+- 本轮恢复研究迭代，并新增强制日志化规则。
 
 ## 当前唯一主瓶颈
-当前唯一主瓶颈是：Figure 5 相关数据补全缺少稳定可复跑环境与连续证据链。
+当前唯一主瓶颈是：虽然已经得到同一动态像差协议下的第一轮 ordinary D2NN 与 pilot-assisted D2NN 最小原型对照，但 common-path 优势过弱，且 calibration readout 没有形成一致正向证据，因此 Figure 5 仍不足以支撑主文核心论点。
 
 原因：
-- 当前已有 round5 / round5b 的第一轮弱原型结果，但 common-path 优势过弱。
-- 活动工作区缺少底层 round1-round5b 文件，限制了立即复跑和连续补数据。
-- 网络代理限制使 `matplotlib`、`scipy`、`torch` 无法在线安装，因此不能把重依赖环境当作默认可用条件。
+- 目前已证明“共路 pilot 降低动态退化不确定性”的最小机制，在 Gaussian surrogate 与 Zernike wave-optics PSF 两层模型上都成立。
+- 当前新增的最小 FNO-style spectral baseline没有自动恢复出这一优势，因此“ML 说服力”仍未闭环。
+- 尽管 round4 已在任务层面看到正向 cross-task 信号，但这一点仍然建立在 aberration-aware inverse / surrogate task maps 上，不是被动衍射处理器本身的器件级证据。
+- 当前 round5b 只显示 object-zone PSNR 的弱提升：common-path 相比 ordinary 为 `+0.204 dB`，相比 non-common-path 为 `+0.054 dB`，相比 wrong-reference 为 `+0.209 dB`；这还不是足够稳健的主结果。
+- 同一 round5b 中 coefficient readout MAE 没有变好，说明“自校准”还没有在器件级被清晰读出。
+- 若后续仍不能把 processor-level common-path 优势从“弱、可疑、架构相关”提升到“清晰、稳健、可解释”，论文主线需要重评。
 
 ## 本轮唯一最高优先级
-配置可持续运行环境，以运行代码并补全数据；这是当前最高优先级。
-
-## 当前已验证结果
-- round1：Gaussian surrogate 上 common-path pilot 相比 no-reference 有明确增益
-- round2：Zernike wave-optics PSF 模型上，OOD 集 common-path 平均 PSNR `38.422 dB`，高于 no-reference `37.069 dB` 与 non-common-path `37.078 dB`
-- round3：最小 FNO-style baseline 为中性偏负；CRLB / information-bound 已建立
-- round4：cross-task surrogate 上 reconstruction、classification residual、inverse-design surrogate 出现第一轮正向信号
-- round5：两层 pure-reconstruction D2NN 为中性偏负；common-path 相比 ordinary `-0.191 dB`
-- round5b：三层 self-calibrating D2NN 给出第一轮弱正向 reconstruction 信号；OOD 下 common-path object-zone PSNR `11.559 dB`，ordinary `11.356 dB`，non-common-path `11.505 dB`，wrong-reference `11.350 dB`
-
-## 当前环境状态
-- 可用：
-  - Python 3.12
-  - `numpy 2.3.5`
-  - `Pillow 12.2.0`
-  - 本地文件写入、JSON 输出、PNG 输出
-- 不可用：
-  - `matplotlib`
-  - `scipy`
-  - `torch` / `torchvision`
-- 已验证：
-  - `/workspace/self-calibrating-diffractive-ncomms/` 工作目录已建立
-  - `scripts/outputs/logs` 子目录已建立
-  - `environment_smoke_test.py` 已真实运行
-  - `environment_smoke_test.md/json/png` 已落盘
-- 当前判断：
-  - 现阶段应采用 `numpy + Pillow` 路线继续补数据
+在保持最小被动衍射处理器阳性对照为核心任务的前提下，恢复并强化研究迭代，使后续每一轮都留下可检查日志，并把推进重心重新压回器件级主证据。
 
 ## 本轮交付物
-- `manuscript-v1-strict.md`
-- `review-round-manuscript-v1-strict.md`
-- `iteration-log.md`
-- `iteration-round-2026-04-29.md`
-- `/workspace/self-calibrating-diffractive-ncomms/scripts/environment_smoke_test.py`
-- `/workspace/self-calibrating-diffractive-ncomms/scripts/minimal_passive_d2nn_protocol.md`
-- `/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.md`
-- `/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.json`
-- `/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.png`
+1. round1 最小机制脚本：`/workspace/self-calibrating-diffractive-ncomms/round1_pilot_selfcalibration.py`
+2. round1 理论说明：`/workspace/self-calibrating-diffractive-ncomms/round1_theory_note.md`
+3. round2 wave-optics 脚本：`/workspace/self-calibrating-diffractive-ncomms/round2_zernike_waveoptics.py`
+4. round2 理论说明：`/workspace/self-calibrating-diffractive-ncomms/round2_theory_note.md`
+5. round2 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_metrics.csv`
+6. round2 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.json`
+7. round2 汇总说明：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_summary.md`
+8. round2 结果面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round2_zernike_waveoptics_panel.png`
+9. round3 FNO-style baseline：`/workspace/self-calibrating-diffractive-ncomms/round3_fno_style_baseline.py`
+10. round3 FNO-style 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_fno_style_summary.md`
+11. round3 CRLB 脚本：`/workspace/self-calibrating-diffractive-ncomms/round3_information_bound.py`
+12. round3 理论说明：`/workspace/self-calibrating-diffractive-ncomms/round3_information_bound_note.md`
+13. round3 CRLB 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round3_crlb_summary.md`
+14. round3 实验可行性说明：`/workspace/self-calibrating-diffractive-ncomms/round3_experiment_feasibility_note.md`
+15. round4 cross-task 脚本：`/workspace/self-calibrating-diffractive-ncomms/round4_cross_task_generalization.py`
+16. round4 cross-task 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_summary.md`
+17. round4 tight bound note：`/workspace/self-calibrating-diffractive-ncomms/round4_tight_bound_note.md`
+18. 写作启动记录：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-writing-launch-2026-04-27.md`
+19. 主文骨架：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v0-structure.md`
+20. reference ledger：`/workspace/memory/self-calibrating-diffractive-ncomms/reference-ledger-v1.md`
+21. 研究迭代日志：`/workspace/memory/self-calibrating-diffractive-ncomms/iteration-log.md`
+22. 本轮迭代记录：`/workspace/memory/self-calibrating-diffractive-ncomms/iteration-round-2026-04-29.md`
+23. rebuilt round5c 脚本：`/workspace/self-calibrating-diffractive-ncomms/round5c_passive_processor_seed_pilot_scan.py`
+24. round5c 明细表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_detail.csv`
+25. round5c 汇总表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_summary.csv`
+26. round5c 汇总说明：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_summary.md`
+27. round5c 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_summary.json`
+28. round5c 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_panel.png`
+
+## 本轮完成标准
+- 已真实运行 round2 脚本并落盘结果文件
+- 已把 stronger forward model 下“共路 vs 非共路 vs 无 reference”的差异写成可检查指标
+- 已明确写出 round2 仍不是 D2NN 证据、仍不可包装成 submission-grade 结论
+- 已真实运行 round3 FNO-style baseline 与 CRLB 扫描
+- 已把简单实验验证诚实降级为“当前缺硬件与原始数据，只能先给出最小实验方案”
+- 已真实运行 round4 cross-task 泛化仿真并落盘结果
+- 已写出 round4 task-level tight bound / theorem note
+- 已建立四段式引言、正文结构、图文映射和 30+ reference ledger 初稿
+- 已恢复研究迭代模式，并建立独立迭代日志文件
+- 已在活动工作区新增并运行 rebuilt round5c processor-level 小扫描，重新形成可执行脚本和 CSV / JSON / Markdown / PNG 输出
 
 ## 下一轮立即动作
-1. 以 `numpy + Pillow` 恢复或补出 round5 / round5b 的最小可复跑脚本与数据输出链
-2. 保留“共路、非共路、错误 reference”三组关键对照
-3. 继续增强 Figure 5，优先补真实运行数据而不是等待外部依赖
-4. 每轮结束强制写入 `iteration-log.md`
+1. 固定 `pilot_amplitude ≈ 0.35` 的窄窗口，做更小范围的 layer-count 或 turbulence 局部扫描，而不是再做宽泛新分支。
+2. 明确拆分“workspace 可复跑性恢复”和“Figure 5 真正变强”这两件事，避免把前者误写成后者。
+3. 若 common-path 仍不能稳定优于 ordinary 与 non-common-path，则收紧主张边界，不再把当前 processor-level 结果包装成接近闭环。
 
-## 当前稿件状态判断
+## 技术状态检查结论
+- 已验证：
+  - 上传提案已转为当前项目主线。
+  - 最小数值证据链已真实运行并输出 CSV / JSON / Markdown / PNG。
+  - OOD stronger-aberration 集上，共路 pilot 较无 reference 有明确增益。
+  - Zernike defocus + astigmatism 的 wave-optics pupil forward model已真实运行。
+  - 在 OOD stronger-aberration 集上，共路 pilot 相比无 reference 将平均 PSNR 从 `37.069 dB` 提升到 `38.422 dB`，非共路仅为 `37.078 dB`。
+  - OOD 集上，共路 pilot 的 mean PSF MSE 为 `4.217e-06`，优于无 reference 的 `1.279e-05` 与非共路的 `1.155e-05`。
+  - round3 已真实加入最小 FNO-style spectral baseline 与 CRLB 扫描。
+  - round4 已真实加入 cross-task 泛化仿真与 task-level tight bound note。
+  - round5 两层 pure-reconstruction D2NN 已真实运行；结果为 common-path 相比 ordinary `-0.191 dB`，相比分别 non-common-path 与 wrong-reference 为 `+0.031 dB` 与 `+0.227 dB`，属于中性偏负证据。
+  - round5b 三层 self-calibrating D2NN 已真实运行；OOD 下 common-path object-zone PSNR 为 `11.559 dB`，ordinary 为 `11.356 dB`，non-common-path 为 `11.505 dB`，wrong-reference 为 `11.350 dB`。
+- 部分验证：
+  - 共路 pilot 降低动态退化不确定性的机制，在 Gaussian surrogate 与 Zernike wave-optics PSF 两层模型上成立。
+  - 该机制在 cross-task surrogate 上已有第一轮任务级正向信号：OOD 下 common-path 相比 no-reference 将 reconstruction PSNR 从 `34.837 dB` 提升到 `36.782 dB`，将 classification true-class residual 从 `0.035464` 降到 `0.034616`，并小幅改善 inverse-design target MSE。
+  - 固定被动衍射处理器层面现在已有第一轮最小原型信号，但强度很弱，且 calibration readout MAE 未优于 ordinary，因此只能记为部分验证。
+- 未验证：
+  - Zernike、湍流、薄相位屏三类真实波动光学退化。
+  - stronger processor-level robustness：包括 seed 稳定性、pilot 强度窗口、层数 / aperture 缩放后的趋势。
+  - 强 ML baseline（完整深 FNO / U-Net / 其他现代神经算子）的正面对照。
+  - 制造误差、量化误差、错位、波长漂移和 shot noise 鲁棒性。
+  - 真实实验数据（当前已从主线依赖中移除，不作为本阶段硬门槛）。
+- 存在错误：
+  - 无。
+- 待核实：
+  - 上传提案给出的部分参考文献是否全部准确、可用且与主张一致。
+
+## 环境配置负责人结论
+- 当前环境检查范围：Python 3.12、NumPy、Pillow、本地文件写入、PNG 导出
+- 已验证可运行链路：
+  - Python + NumPy 数值模拟
+  - CSV / JSON / Markdown / PNG 输出
+  - Zernike pupil PSF 生成与 wave-optics-informed 数据链
+- 已验证可生成的图片链路：
+  - Pillow 可生成结果 panel PNG
+- 已验证可编译的 PDF 链路：
+  - 本轮未测试 PDF 编译，当前记为待验证
+- 当前存在的环境问题：
+  - `matplotlib` 不可用
+  - `scipy` 不可用
+  - `torch` / `torchvision` 不可用
+- 待安装、待修复或待核实项：
+  - 若下一轮采用 D2NN / FNO 训练，需要确认是否继续使用纯 NumPy 方案，或补齐更合适的训练环境
+- 是否支持进入下一步程序运行、图片生成或论文编译：
+  - 支持继续做小规模数值验证和 PNG 图生成
+  - 尚不支持默认按深度学习训练链直接展开
+
+## 稿件状态检查结论
 - 已满足：
-  - 四段式引言
-  - Methods / Results / Discussion / Summary 主文结构
-  - 每张图在正文中被明确引用并承担论证职责
-  - 30+ 参考文献底稿
+  - 题目主线、核心主张、关键对照框架已有第一版方向定义
+  - 现在已有两轮真实证据，而不是只有选题草案
+  - 已启动严格写作流程，并建立四段式引言、正文结构、图文映射与 30+ reference ledger 初稿
+  - Figure 5 已不再是空占位，已有第一轮 processor-level prototype 可供审稿式判断
+- 部分满足：
+  - 摘要雏形和主图规划已有提案，但仍是前期构想，不可视为稿件实物
+  - “共路 pilot 优于非共路 / 无 reference”的核心机制已有两轮真实数据支撑，但仍未到稿件主结果标准
+  - 现在已有一轮 task-level theorem、一轮 cross-task 泛化结果和一轮最小器件级 prototype，但仍需要更强、更稳健的器件级主证据
+- 存在新的负面或中性证据：
+  - 最小 FNO-style spectral baseline 未显示 common-path pilot 优于 observation-only baseline，说明 ML 说服力仍未闭环
+  - 最小两层 pure-reconstruction D2NN 给出中性偏负结果，说明“只加 pilot 不显式自校准”并不会自然形成优势
+  - round5b 的 processor-level gain 仍然很弱，且 calibration readout MAE 未改善
 - 未满足：
-  - Figure 5 仍不足以承担主文核心论点
-  - 所有缺失标准未补齐
-  - 五位审稿人接收概率未全部超过 80%
+  - 正文、补充材料、正式图、图注、引用链、参考文献库均未形成投稿级实物
+  - 尽管已启动主文骨架且 Figure 5 有了原型，但仍未达到 submission-ready manuscript
+- 存在错误：
+  - 若将当前 surrogate 结果直接包装为“固定被动衍射网络已实现自校准恢复”，会构成过度陈述
+- 待核实：
+  - 目标期刊最合适的故事边界，是否更偏 Nature Communications 还是更适合 Optica / Light 级别
+- 是否支持进入下一阶段：
+  - 支持进入“增强 Figure 5 稳健性”的阶段，不支持进入正式成稿阶段
 
 ## 当前接收概率判断
 - 综合接收概率：24%–30%
-- 五审稿人最近一轮严格评估：
-  - Reviewer A：36%
-  - Reviewer B：18%
-  - Reviewer C：23%
-  - Reviewer D：41%
-  - Reviewer E：17%
+
+依据：
+- 创新构想：中到强
+- 最小机制信号：中到中强
+- 理论层强度：中
+- cross-task 任务级说服力：中
+- 理论充分性：中偏弱
+- 方法与代码可靠性：中
+- 数据与结果完整性：弱到中偏弱
+- 图表质量：弱
+- 写作成熟度：弱
+
+最拖累接收概率的短板：
+1. 真实被动衍射处理器 + 动态像差协议下虽已有第一轮对照，但优势太弱，仍不足以支撑主故事
+2. 强 ML baseline 目前没有形成正向加分证据
+3. 还没有三类退化、投稿级正文/补图/参考文献链，以及更强鲁棒性验证
 
 ## 最近一次重要更新摘要
-- 2026-04-27：完成 round5 两层 pure-reconstruction phase-only D2NN 对照，结果中性偏负
-- 2026-04-27：完成 round5b 三层 self-calibrating phase-only D2NN 原型，得到第一轮弱正向 reconstruction 信号
-- 2026-04-27：进入 strict manuscript mode，形成 `manuscript-v1-strict.md`
-- 2026-04-27：完成五审稿人严格评估，接收概率仍显著低于停止标准
-- 2026-04-29：恢复研究迭代并建立独立迭代日志
-- 2026-04-29：根据用户新指令，将“配置运行环境、运行代码、补全数据”设为当前最高优先级，并完成本地环境打通
+- 2026-04-26：基于上传提案初始化 `self-calibrating-diffractive-ncomms` 项目命名空间。
+- 2026-04-26：完成 round1 最小机制验证，使用 shared-blur Gaussian pilot surrogate 检验共路 pilot 降低动态退化不确定性的基本方向是否成立。
+- 2026-04-26：OOD stronger-aberration 集上，无 reference 平均 PSNR 为 `19.669 dB`，共路 pilot 为 `21.990 dB`，非共路 pilot 为 `20.268 dB`。
+- 2026-04-26：完成 round2 wave-optics 最小证据链，使用 Zernike defocus + astigmatism pupil 生成真实 PSF；OOD 集上，无 reference 平均 PSNR 为 `37.069 dB`，共路 pilot 为 `38.422 dB`，非共路 pilot 为 `37.078 dB`，且共路 pilot 的 mean PSF MSE 最低。
+- 2026-04-26：完成 round3 最小 FNO-style spectral baseline。当前结果为中性偏负：OOD 集上 observation-only 为 `37.286 dB`，common-path pilot 为 `37.224 dB`，说明最小线性 spectral baseline 还没有自动学会利用 pilot。
+- 2026-04-26：完成 round3 information bound / CRLB 扫描。当前 pilot-channel CRLB 在 train 与 OOD 区域的中位数 trace 分别为 `6.452e-04` 与 `1.736e-04`，说明该 pilot observation model 在大部分区域内确实携带有限 Fisher 信息。
+- 2026-04-26：根据用户最新约束，项目正式收敛为“仅理论与仿真研究”；后续不再把实验验证作为当前阶段硬依赖。
+- 2026-04-27：完成 round4 tight bound / theorem note，将 pilot-channel covariance 与下游任务损失通过局部曲率 sandwich 和 CRLB-limited floor 联系起来。
+- 2026-04-27：完成 round4 cross-task 泛化仿真。OOD 下 common-path 相比 no-reference 将 reconstruction PSNR 从 `34.837 dB` 提升到 `36.782 dB`，将 classification true-class residual 从 `0.035464` 降到 `0.034616`，并将 inverse-design target MSE 从 `0.002317` 小幅降到 `0.002315`。
+- 2026-04-27：正式启动严格写作流程，新增主文骨架、图文映射和 30+ reference ledger 初稿；同时保留“普通 D2NN vs pilot-assisted D2NN 器件级阳性对照尚未完成”的明确边界。
+- 2026-04-27：完成 round5 两层 pure-reconstruction phase-only D2NN 对照。OOD 下 common-path 相比 ordinary 为 `-0.191 dB`，给出中性偏负结果。
+- 2026-04-27：完成 round5b 三层 self-calibrating phase-only D2NN 原型。OOD 下 common-path object-zone PSNR 相比 ordinary 提升 `+0.204 dB`，但相对 non-common-path 仅 `+0.054 dB`，且 coefficient readout MAE 未改善，因此 Figure 5 只获得了第一轮弱原型证据。
+- 2026-04-27：进入 strict manuscript mode，新增连续主文草稿 `manuscript-v1-strict.md`，把四段式引言、Methods / Results / Discussion / Summary、五张图的正文引用职责和 30+ 参考文献谨慎核验状态统一到同一份稿件中。
+- 2026-04-27：完成基于 `manuscript-v1-strict.md` 的五审稿人严格评估；当前接收概率分别为 Reviewer A `36%`、Reviewer B `18%`、Reviewer C `23%`、Reviewer D `41%`、Reviewer E `17%`。
+- 2026-04-27：本轮发现新的可复现性风险：项目状态文件中记录的 round1-round5b 代码与输出路径当前不在活动工作区中，故本轮无法对这些结果做直接复跑验证；该问题已记为“证据包可访问性缺口”，但不改写既有已记录结果。
+- 2026-04-29：根据用户“进入智能体的研究迭代，强化运行”的新指令，恢复研究迭代模式，并新增独立迭代日志与本轮迭代记录文件。
+- 2026-04-29：在活动工作区新增并运行 `round5c_passive_processor_seed_pilot_scan.py`，完成 seed / pilot-amplitude 小扫描；该 rebuilt 后继链恢复了 processor-level 结果的本地可跑性，但未把 Figure 5 抬升到稳健正向。当前最佳窗口出现在 `pilot_amplitude = 0.35`，common-path 相比 ordinary 仅 `+0.061 dB`，且相对 non-common-path 仍为 `-0.046 dB`。

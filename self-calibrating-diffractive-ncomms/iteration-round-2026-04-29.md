@@ -22,3 +22,19 @@
 
 ## 下一轮立即动作
 - 以最小 NumPy 方案设计 passive diffractive processor 对照脚本接口、控制组和输出格式。
+
+## 本轮新增执行结果
+- 已在活动工作区新增并运行 `/workspace/self-calibrating-diffractive-ncomms/round5c_passive_processor_seed_pilot_scan.py`。
+- 已产出：
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_detail.csv`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_summary.csv`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_summary.json`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_summary.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_panel.png`
+
+## 本轮结果判断
+- 这轮真实恢复了 processor-level 链路的工作区可跑性。
+- 当前最佳 pilot 幅度窗口出现在 `0.35`。
+- 该窗口下 common-path 相比 ordinary 的平均 OOD object-zone PSNR 仅 `+0.061 dB`。
+- 同一窗口下 common-path 相比 non-common-path 仍为 `-0.046 dB`，因此还不能把它视为清晰稳健的 Figure 5 阳性结果。
+- 这轮的主要价值是恢复可执行链并给出诚实弱结果，而不是完成主结果闭环。

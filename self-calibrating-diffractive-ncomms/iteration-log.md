@@ -27,10 +27,8 @@
 - 本轮唯一最高优先级：打通最小本地运行链，而不是等待网络安装恢复
 - 本轮真实结果：
   - 已创建 `/workspace/self-calibrating-diffractive-ncomms/` 工作目录
-  - 已创建 `scripts/outputs/logs` 子目录
-  - 已真实运行 `environment_smoke_test.py`
-  - 已输出 `environment_smoke_test.md/json/png`
   - 已确认在线安装 `matplotlib/scipy/torch` 失败，原因为代理受限
+  - 已确认当前可用执行链为 `numpy + Pillow`
 - 当前可用环境：
   - `numpy 2.3.5`
   - `Pillow 12.2.0`
@@ -38,3 +36,21 @@
   1. 以 `numpy + Pillow` 实现或恢复最小 passive D2NN 对照脚本
   2. 优先补真实运行数据，不再等待外部依赖
   3. 按每小时一轮更新本日志
+
+## 2026-04-29 Scheduled Execution
+
+- 当前阶段：活动工作区 processor-level 链路恢复与弱结果复核
+- 当前唯一主瓶颈：Figure 5 的器件级 common-path 优势仍弱，且活动工作区此前缺少可直接运行的底层脚本
+- 本轮唯一最高优先级：先恢复一条真实可运行的 processor-level 对照链，并用最小 seed / pilot-amplitude 扫描判断它是否已经出现稳健窗口
+- 本轮真实完成：
+  - 新增并运行 `/workspace/self-calibrating-diffractive-ncomms/round5c_passive_processor_seed_pilot_scan.py`
+  - 生成 `detail.csv`、`summary.csv`、`summary.json`、`summary.md` 与 `panel.png`
+  - 清理了 `project-state.md` 中遗留的冲突标记
+- 本轮关键结果：
+  - 当前 rebuilt 后继链已经恢复了活动工作区的 processor-level 可跑性
+  - 最佳 pilot 窗口出现在 `pilot_amplitude = 0.35`
+  - 但该窗口下 common-path 相比 ordinary 仅 `+0.061 dB`，相对 non-common-path 仍为 `-0.046 dB`
+  - common-path 仅在 `8/20` 个 seed-amplitude 组合中优于 ordinary，说明稳健性仍不足
+- 当前判断：
+  - 本轮完成的是“恢复可跑链 + 给出诚实弱结果”，不是“把 Figure 5 变强”
+  - 下一轮必须继续围绕最窄窗口做局部扫描，而不是扩展新主线
