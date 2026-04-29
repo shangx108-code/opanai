@@ -1,0 +1,2 @@
+record_id,control_family,robustness_axis,axis_value,observable_name,observable_value,data_status,source_basis,notes
+positive_robustness_placeholder_001,positive_control,,,,,pending_recompute,Expected raw file name recovered from archive checklist,Placeholder row only. No numerical value has been reconstructed yet.

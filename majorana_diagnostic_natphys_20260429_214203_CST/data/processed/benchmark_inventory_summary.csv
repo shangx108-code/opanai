@@ -1,0 +1,4 @@
+group,expected,present,missing
+rashba,2,0,2
+three_terminal,7,0,7
+transport,8,0,8
