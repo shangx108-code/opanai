@@ -1,0 +1,742 @@
+{
+  "source_origin": "workbook:/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx",
+  "baseline_config": {
+    "path_mode": "exclusive_150",
+    "k_b_label": "K_2b1+b2",
+    "m_label": "M_b2",
+    "k_t_label": "K_-2b1-b2",
+    "mixed_star_config": {
+      "ac1_pattern": "cyc",
+      "bc1_pattern": "cyc",
+      "ac2_pattern": "anti",
+      "bc2_pattern": "anti",
+      "ac7_first_pattern": "cyc",
+      "bc7_first_pattern": "cyc",
+      "ac7_second_pattern": "anti",
+      "bc7_second_pattern": "anti",
+      "ac7_second_conjugated": false,
+      "bc7_second_conjugated": false
+    }
+  },
+  "common_terms": [
+    {
+      "kind": "even_pair",
+      "center_left_index": 100,
+      "center_right_index": 500,
+      "width": 0.5,
+      "amplitude_meV": -3.948711562985487
+    },
+    {
+      "kind": "central",
+      "center_index": 325,
+      "width": 0.35,
+      "amplitude_meV": -3.9928207688108106
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 100,
+      "center_right_index": 500,
+      "width": 0.12,
+      "amplitude_meV": -0.3537975301985812
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.25,
+      "amplitude_meV": -3.7129790286586535
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 125,
+      "center_right_index": 475,
+      "width": 0.12,
+      "amplitude_meV": -0.12649986756759105
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.18,
+      "amplitude_meV": -5.453066767711625
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.35,
+      "amplitude_meV": -1.3156491788492033
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.25,
+      "amplitude_meV": -3.1979044462207247
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.08,
+      "amplitude_meV": 9.443252731045487
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 175,
+      "center_right_index": 425,
+      "width": 0.18,
+      "amplitude_meV": -3.6974404125381826
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.08,
+      "amplitude_meV": -6.849404352686637
+    },
+    {
+      "kind": "central",
+      "center_index": 275,
+      "width": 0.35,
+      "amplitude_meV": -3.1515423998869463
+    },
+    {
+      "kind": "central",
+      "center_index": 300,
+      "width": 0.18,
+      "amplitude_meV": 0.8773171533472073
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.08,
+      "amplitude_meV": 2.1037457823445
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.08,
+      "amplitude_meV": 0.9080883940084009
+    },
+    {
+      "kind": "central",
+      "center_index": 275,
+      "width": 0.12,
+      "amplitude_meV": 1.1629774526547463
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 250,
+      "center_right_index": 350,
+      "width": 0.25,
+      "amplitude_meV": 0.8473405883159993
+    },
+    {
+      "kind": "gamma",
+      "center_index": 0,
+      "width": 0.5,
+      "amplitude_meV": -1.9696381170448385
+    },
+    {
+      "kind": "gamma",
+      "center_index": 0,
+      "width": 0.08,
+      "amplitude_meV": -0.49594397421756203
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.08,
+      "amplitude_meV": -2.8413867973405846
+    },
+    {
+      "kind": "central",
+      "center_index": 325,
+      "width": 0.12,
+      "amplitude_meV": 0.7473972957680581
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.12,
+      "amplitude_meV": -18.08567527149977
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 175,
+      "center_right_index": 425,
+      "width": 0.08,
+      "amplitude_meV": 1.6421714024658158
+    },
+    {
+      "kind": "gamma",
+      "center_index": 0,
+      "width": 0.18,
+      "amplitude_meV": 2.5001211566548793
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.25,
+      "amplitude_meV": 4.782545422962596
+    },
+    {
+      "kind": "central",
+      "center_index": 325,
+      "width": 0.5,
+      "amplitude_meV": 7.545026432382833
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 250,
+      "center_right_index": 350,
+      "width": 0.12,
+      "amplitude_meV": -1.2293946446298214
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.12,
+      "amplitude_meV": 5.529846549780743
+    }
+  ],
+  "orbital_terms": [
+    {
+      "kind": "odd_pair",
+      "center_left_index": 175,
+      "center_right_index": 425,
+      "width": 0.35,
+      "amplitude_meV": 91.21551076798606
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.35,
+      "amplitude_meV": -285.8261674958138
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.18,
+      "amplitude_meV": 159.45193098932478
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.08,
+      "amplitude_meV": -89.30895407175764
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.12,
+      "amplitude_meV": -23.87027398114286
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 275,
+      "center_right_index": 325,
+      "width": 0.25,
+      "amplitude_meV": -186.77167868296266
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.08,
+      "amplitude_meV": 22.99997917389918
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 125,
+      "center_right_index": 475,
+      "width": 0.18,
+      "amplitude_meV": 133.97355323784072
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 175,
+      "center_right_index": 425,
+      "width": 0.08,
+      "amplitude_meV": -1.815694021631156
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 100,
+      "center_right_index": 500,
+      "width": 0.18,
+      "amplitude_meV": -29.30394310469806
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.12,
+      "amplitude_meV": 74.03628989270712
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 250,
+      "center_right_index": 350,
+      "width": 0.35,
+      "amplitude_meV": -40.11250561250366
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 250,
+      "center_right_index": 350,
+      "width": 0.08,
+      "amplitude_meV": 1.5940861746491901
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 275,
+      "center_right_index": 325,
+      "width": 0.08,
+      "amplitude_meV": 2.835954098552273
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 175,
+      "center_right_index": 425,
+      "width": 0.18,
+      "amplitude_meV": -39.516962664189954
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 125,
+      "center_right_index": 475,
+      "width": 0.08,
+      "amplitude_meV": 2.579546355448904
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.25,
+      "amplitude_meV": 1693.8845675112816
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.5,
+      "amplitude_meV": -123.1673920722007
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.08,
+      "amplitude_meV": 28.341523761555518
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.08,
+      "amplitude_meV": -12.759555966566403
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.08,
+      "amplitude_meV": 4.495312386672131
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.12,
+      "amplitude_meV": 380.0293644381459
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 275,
+      "center_right_index": 325,
+      "width": 0.12,
+      "amplitude_meV": -27.30745214994914
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 125,
+      "center_right_index": 475,
+      "width": 0.12,
+      "amplitude_meV": -40.47496969115138
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 100,
+      "center_right_index": 500,
+      "width": 0.08,
+      "amplitude_meV": -15.86620498953524
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 100,
+      "center_right_index": 500,
+      "width": 0.12,
+      "amplitude_meV": 52.241498006581324
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.12,
+      "amplitude_meV": -47.72278520476264
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.25,
+      "amplitude_meV": -706.9048588532903
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.18,
+      "amplitude_meV": -211.3696714590625
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 250,
+      "center_right_index": 350,
+      "width": 0.18,
+      "amplitude_meV": 26.606948055555222
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 175,
+      "center_right_index": 425,
+      "width": 0.12,
+      "amplitude_meV": 46.278948934002145
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.18,
+      "amplitude_meV": 128.20636533275214
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 125,
+      "center_right_index": 475,
+      "width": 0.25,
+      "amplitude_meV": -296.97737773008913
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.18,
+      "amplitude_meV": -1029.6407862840072
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.25,
+      "amplitude_meV": -110.0914151711134
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.12,
+      "amplitude_meV": -89.84669843883044
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.18,
+      "amplitude_meV": 212.68598604825956
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 250,
+      "center_right_index": 350,
+      "width": 0.12,
+      "amplitude_meV": -5.464819098312138
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 100,
+      "center_right_index": 500,
+      "width": 0.35,
+      "amplitude_meV": 28.776813875642965
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 275,
+      "center_right_index": 325,
+      "width": 0.5,
+      "amplitude_meV": 138.4770567813248
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 275,
+      "center_right_index": 325,
+      "width": 0.18,
+      "amplitude_meV": 119.14881100926388
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.25,
+      "amplitude_meV": -226.90129533098292
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.35,
+      "amplitude_meV": -972.6169734906725
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.35,
+      "amplitude_meV": 844.1926773786627
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.5,
+      "amplitude_meV": -485.369595634674
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 125,
+      "center_right_index": 475,
+      "width": 0.5,
+      "amplitude_meV": 308.93003009997614
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.35,
+      "amplitude_meV": 261.8035893170812
+    },
+    {
+      "kind": "odd_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.25,
+      "amplitude_meV": 556.894880516539
+    }
+  ],
+  "c_terms": [
+    {
+      "kind": "even_pair",
+      "center_left_index": 100,
+      "center_right_index": 500,
+      "width": 0.5,
+      "amplitude_meV": 9.353906146135056
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 100,
+      "center_right_index": 500,
+      "width": 0.12,
+      "amplitude_meV": -1.568146116455868
+    },
+    {
+      "kind": "central",
+      "center_index": 325,
+      "width": 0.35,
+      "amplitude_meV": 6.487720555289148
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.35,
+      "amplitude_meV": 2.9043879193569277
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.12,
+      "amplitude_meV": -5.712031597385884
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 125,
+      "center_right_index": 475,
+      "width": 0.12,
+      "amplitude_meV": -10.346254638828198
+    },
+    {
+      "kind": "gamma",
+      "center_index": 0,
+      "width": 0.5,
+      "amplitude_meV": 1.7290109857820606
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 225,
+      "center_right_index": 375,
+      "width": 0.08,
+      "amplitude_meV": 6.256425695123257
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.25,
+      "amplitude_meV": 9.886943657385485
+    },
+    {
+      "kind": "central",
+      "center_index": 275,
+      "width": 0.35,
+      "amplitude_meV": 6.226895973462943
+    },
+    {
+      "kind": "central",
+      "center_index": 300,
+      "width": 0.18,
+      "amplitude_meV": -2.9102981259088665
+    },
+    {
+      "kind": "gamma",
+      "center_index": 0,
+      "width": 0.12,
+      "amplitude_meV": -2.2559062420454454
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.08,
+      "amplitude_meV": -18.986598519498354
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 175,
+      "center_right_index": 425,
+      "width": 0.18,
+      "amplitude_meV": 2.3355825350216266
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.08,
+      "amplitude_meV": 5.252332285017157
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 150,
+      "center_right_index": 450,
+      "width": 0.25,
+      "amplitude_meV": 11.909820050902425
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.08,
+      "amplitude_meV": 4.772308272099258
+    },
+    {
+      "kind": "central",
+      "center_index": 275,
+      "width": 0.12,
+      "amplitude_meV": -2.2735555859065224
+    },
+    {
+      "kind": "central",
+      "center_index": 325,
+      "width": 0.12,
+      "amplitude_meV": -0.959587181085389
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 50,
+      "center_right_index": 550,
+      "width": 0.35,
+      "amplitude_meV": 3.414683831034875
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.12,
+      "amplitude_meV": 37.35261917041766
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 75,
+      "center_right_index": 525,
+      "width": 0.25,
+      "amplitude_meV": -14.02126326792612
+    },
+    {
+      "kind": "central",
+      "center_index": 325,
+      "width": 0.5,
+      "amplitude_meV": -13.818523849934081
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 250,
+      "center_right_index": 350,
+      "width": 0.12,
+      "amplitude_meV": 1.3582790451852915
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 175,
+      "center_right_index": 425,
+      "width": 0.08,
+      "amplitude_meV": -0.03613444090538038
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 125,
+      "center_right_index": 475,
+      "width": 0.08,
+      "amplitude_meV": 7.8277684741771285
+    },
+    {
+      "kind": "central",
+      "center_index": 300,
+      "width": 0.08,
+      "amplitude_meV": 1.6905581075879619
+    },
+    {
+      "kind": "even_pair",
+      "center_left_index": 200,
+      "center_right_index": 400,
+      "width": 0.12,
+      "amplitude_meV": -10.255737812819685
+    }
+  ],
+  "channel_profile_rmse_meV": {
+    "v3_ab_common_meV": 1.6582240110745112,
+    "v3_ab_orbital_selective_meV": 4.986523303755131,
+    "v3_c_meV": 3.304855914167784
+  }
+}

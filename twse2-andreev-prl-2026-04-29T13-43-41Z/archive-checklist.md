@@ -19,8 +19,6 @@ Last updated: 2026-04-29
 - [x] Asymmetric short-range scan package archived
 - [x] Asymmetric `sqrt(7)` scan package archived
 - [x] Coupled path-plus-hopping scan package archived
-- [x] Coupled path + short-range + `sqrt(7)` exploratory scan package archived
-- [x] Coupled path + short-range + `sqrt(7)` full exact-`Gamma` scan package archived
 - [x] Track-1 convention scan package archived
 - [x] SGF minimal data package archived
 - [x] Validated semi-infinite SGF package archived

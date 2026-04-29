@@ -1,0 +1,27 @@
+{
+  "package_type": "btk_proxy",
+  "energy_window_meV": [
+    -8.0,
+    8.0
+  ],
+  "energy_grid_size": 321,
+  "pairings": [
+    "s_wave",
+    "nodal_even",
+    "odd_proxy"
+  ],
+  "barrier_values": [
+    0.0,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "eta_values_meV": [
+    0.05,
+    0.2,
+    0.5
+  ],
+  "delta0_meV": 1.5,
+  "normal_state_weight_source": "/workspace/memory/twse2-andreev-prl/data/sgf-minimal-2026-04-29/zero_bias_edge_profile.csv",
+  "note": "This is a minimal BTK-like proxy package built on the SGF minimal edge weights, not yet a full multiorbital material-specific BTK calculation."
+}

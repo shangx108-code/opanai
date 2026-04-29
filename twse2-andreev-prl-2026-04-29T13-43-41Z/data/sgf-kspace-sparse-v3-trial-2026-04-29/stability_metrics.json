@@ -1,0 +1,22 @@
+{
+  "package_type": "finite_ribbon_edge_greens_proxy_with_kspace_sparse_v3",
+  "model_path": "/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-v3-kspace-sparse-model/kspace_sparse_model.json",
+  "k2_grid_size": 41,
+  "energy_grid_size": 121,
+  "eta_meV": 0.8,
+  "num_cells_open_direction": 48,
+  "edge_cells_measured": 2,
+  "baseline_all_finite": true,
+  "corrected_all_finite": true,
+  "baseline_min_weight": -0.5486946145934153,
+  "corrected_min_weight": -0.9420370870840165,
+  "baseline_max_weight": 2.302129533061926,
+  "corrected_max_weight": 1.7510112557081468,
+  "zero_bias_delta_l2": 1.024246304417307,
+  "full_map_delta_l2": 4.154091211764629,
+  "zero_bias_baseline_mean": 0.06006672172170021,
+  "zero_bias_corrected_mean": 0.058547252189276665,
+  "zero_bias_baseline_max": 0.7834369487050755,
+  "zero_bias_corrected_max": 1.7510112557081468,
+  "note": "This is a downstream SGF stability trial using the k-space sparse compressed-V3 model inside the same finite-ribbon proxy framework. It is a stability check, not yet a final semi-infinite manuscript-grade SGF benchmark."
+}

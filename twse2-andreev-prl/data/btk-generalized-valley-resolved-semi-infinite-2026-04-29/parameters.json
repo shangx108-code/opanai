@@ -1,0 +1,44 @@
+{
+  "package_type": "valley_resolved_generalized_btk_semi_infinite_proxy",
+  "normal_state_source": "/workspace/memory/twse2-andreev-prl/data/sgf-semi-infinite-kspace-sparse-v3-2026-04-29/edge_spectral_map_comparison.csv",
+  "model_variants": [
+    "baseline",
+    "compressed_v3"
+  ],
+  "pairings": [
+    "s_wave",
+    "nodal_even",
+    "valley_even",
+    "valley_odd"
+  ],
+  "barrier_values": [
+    0.0,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "eta_values_meV": [
+    0.05,
+    0.2,
+    0.5
+  ],
+  "delta0_meV": 1.5,
+  "valley_centers_reduced_k2": {
+    "K_B": 0.3333333333333333,
+    "K_T": 0.6666666666666666
+  },
+  "valley_projector_width_reduced_k2": 0.085,
+  "note": "This package upgrades the older BTK minimal average into a valley-resolved generalized BTK proxy. It is explicitly anchored to the validated semi-infinite SGF compressed-V3 normal-state spectral map, but it still remains a proxy rather than a final multiorbital conductance benchmark.",
+  "best_total_peak_gain_case": {
+    "pairing": "valley_odd",
+    "barrier_Z": 2.0,
+    "eta_meV": 0.5,
+    "delta_peak_minus_background": 0.08505527304700666
+  },
+  "strongest_valley_asymmetry_case": {
+    "pairing": "s_wave",
+    "barrier_Z": 0.0,
+    "eta_meV": 0.05,
+    "kb_minus_kt_peak_contrast": -4.187808173426287
+  }
+}

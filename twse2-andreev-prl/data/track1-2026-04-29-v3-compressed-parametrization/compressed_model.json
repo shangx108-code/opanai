@@ -1,0 +1,138 @@
+{
+  "source_origin": "workbook:/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx",
+  "baseline_config": {
+    "path_mode": "exclusive_150",
+    "k_b_label": "K_2b1+b2",
+    "m_label": "M_b2",
+    "k_t_label": "K_-2b1-b2",
+    "mixed_star_config": {
+      "ac1_pattern": "cyc",
+      "bc1_pattern": "cyc",
+      "ac2_pattern": "anti",
+      "bc2_pattern": "anti",
+      "ac7_first_pattern": "cyc",
+      "bc7_first_pattern": "cyc",
+      "ac7_second_pattern": "anti",
+      "bc7_second_pattern": "anti",
+      "ac7_second_conjugated": false,
+      "bc7_second_conjugated": false
+    }
+  },
+  "max_terms_per_channel": 5,
+  "channels": {
+    "v3_ab_common_meV": [
+      {
+        "kind": "even_pair",
+        "center_left": 125,
+        "center_right": 475,
+        "width": 60,
+        "amplitude_meV": -5.179803032473914
+      },
+      {
+        "kind": "central",
+        "center": 325,
+        "width": 20,
+        "amplitude_meV": 4.896884728617231
+      },
+      {
+        "kind": "even_pair",
+        "center_left": 200,
+        "center_right": 400,
+        "width": 20,
+        "amplitude_meV": -2.7461040755080117
+      },
+      {
+        "kind": "even_pair",
+        "center_left": 75,
+        "center_right": 525,
+        "width": 12,
+        "amplitude_meV": -4.096997307884397
+      },
+      {
+        "kind": "even_pair",
+        "center_left": 100,
+        "center_right": 500,
+        "width": 12,
+        "amplitude_meV": 2.2923032156014505
+      }
+    ],
+    "v3_ab_orbital_selective_meV": [
+      {
+        "kind": "odd_pair",
+        "center_left": 150,
+        "center_right": 450,
+        "width": 35,
+        "amplitude_meV": 17.522034376753428
+      },
+      {
+        "kind": "odd_pair",
+        "center_left": 225,
+        "center_right": 375,
+        "width": 12,
+        "amplitude_meV": -26.675735467835025
+      },
+      {
+        "kind": "odd_pair",
+        "center_left": 75,
+        "center_right": 525,
+        "width": 12,
+        "amplitude_meV": -8.814177656514603
+      },
+      {
+        "kind": "odd_pair",
+        "center_left": 175,
+        "center_right": 425,
+        "width": 12,
+        "amplitude_meV": 13.480460869317659
+      },
+      {
+        "kind": "odd_pair",
+        "center_left": 275,
+        "center_right": 325,
+        "width": 20,
+        "amplitude_meV": -6.965136359533389
+      }
+    ],
+    "v3_c_meV": [
+      {
+        "kind": "even_pair",
+        "center_left": 125,
+        "center_right": 475,
+        "width": 60,
+        "amplitude_meV": 9.77605705325546
+      },
+      {
+        "kind": "central",
+        "center": 325,
+        "width": 20,
+        "amplitude_meV": -9.15244289848691
+      },
+      {
+        "kind": "even_pair",
+        "center_left": 200,
+        "center_right": 400,
+        "width": 20,
+        "amplitude_meV": 5.952040107378274
+      },
+      {
+        "kind": "even_pair",
+        "center_left": 75,
+        "center_right": 525,
+        "width": 12,
+        "amplitude_meV": 6.4500972355667505
+      },
+      {
+        "kind": "even_pair",
+        "center_left": 100,
+        "center_right": 500,
+        "width": 12,
+        "amplitude_meV": -5.640374810227804
+      }
+    ]
+  },
+  "channel_profile_rmse_meV": {
+    "v3_ab_common_meV": 1.8200882295328948,
+    "v3_ab_orbital_selective_meV": 6.480966835762257,
+    "v3_c_meV": 3.685150071228724
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "source_origin": "workbook:/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx",
+  "kpath_ledger": "/workspace/memory/twse2-andreev-prl/data/track1-2026-04-28-kpath-scan/k_path_mapping_scan.csv",
+  "top_kpaths": 4,
+  "path_rank_start": 3,
+  "path_rank_stop": 3,
+  "current_path_rank": 3,
+  "last_completed_config_rank": 1000,
+  "total_configs_per_path": 26244,
+  "chunk_size": 1000,
+  "gamma_threshold_meV": 0.05
+}

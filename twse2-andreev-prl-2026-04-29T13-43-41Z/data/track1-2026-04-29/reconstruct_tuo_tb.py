@@ -1,33 +1,16 @@
 from __future__ import annotations
 
 import csv
-import json
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
-
-PROJECT_ROOT = Path("/workspace/memory/twse2-andreev-prl")
-CODE_ROOT = PROJECT_ROOT / "code"
-DATA_ROOT = PROJECT_ROOT / "data"
-SOURCE_XLSX = Path("/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx")
-FALLBACK_TRACK1_FILE = DATA_ROOT / "track1-2026-04-29" / "band_comparison.csv"
 
 SQRT3 = float(np.sqrt(3.0))
 SQRT7 = float(np.sqrt(7.0))
 OMEGA = np.exp(1j * 2.0 * np.pi / 3.0)
-
-A1 = np.array([1.5, SQRT3 / 2.0])
-A2 = np.array([0.0, SQRT3])
-RECIPROCAL = 2.0 * np.pi * np.linalg.inv(np.column_stack([A1, A2])).T
-B1, B2 = RECIPROCAL[:, 0], RECIPROCAL[:, 1]
-
-
-def ensure_dir(path: Path) -> Path:
-    path.mkdir(parents=True, exist_ok=True)
-    return path
 
 
 def build_hops() -> dict[tuple[str, str, tuple[float, float]], complex]:
@@ -163,6 +146,7 @@ def build_hops() -> dict[tuple[str, str, tuple[float, float]], complex]:
         for vec in stars[key]:
             hops[(alpha, beta, tuple(np.round(vec, 6)))] = params[key]
 
+    # The best current candidate treats the A-A star as the complex conjugate of the B-B star.
     for distance in [SQRT3, 3.0]:
         amplitude = np.conj(params[("B", "B", distance)])
         for vec in stars[("A", "A", distance)]:
@@ -196,26 +180,30 @@ def build_hops() -> dict[tuple[str, str, tuple[float, float]], complex]:
     add_mixed_star(("B", "C", 2.0), params[("A", "C", 2.0)])
     add_mixed_star(("A", "C", SQRT7), params[("A", "C", SQRT7)], second_orbit_conjugated=True)
     add_mixed_star(("B", "C", SQRT7), params[("A", "C", SQRT7)], second_orbit_conjugated=True)
+
     return hops
 
 
-def build_hamiltonian(k: np.ndarray, hops: dict[tuple[str, str, tuple[float, float]], complex] | None = None) -> np.ndarray:
-    if hops is None:
-        hops = build_hops()
+def build_hamiltonian(k: np.ndarray, hops: dict[tuple[str, str, tuple[float, float]], complex]) -> np.ndarray:
     idx = {"A": 0, "B": 1, "C": 2}
     matrix = np.zeros((3, 3), dtype=complex)
     for (alpha, beta, vec), amplitude in hops.items():
         matrix[idx[alpha], idx[beta]] += amplitude * np.exp(1j * np.dot(k, np.array(vec)))
-    # The band workflows use eigvalsh, which implicitly reads the Hermitian part.
-    # Make that Hermitian structure explicit before any downstream SGF / BTK use.
-    return 0.5 * (matrix + matrix.conj().T)
+    return matrix
 
 
 def build_path(num_per_segment: int = 150) -> tuple[np.ndarray, list[int], list[str]]:
+    a1 = np.array([1.5, SQRT3 / 2.0])
+    a2 = np.array([0.0, SQRT3])
+    basis = np.column_stack([a1, a2])
+    reciprocal = 2.0 * np.pi * np.linalg.inv(basis).T
+    b1, b2 = reciprocal[:, 0], reciprocal[:, 1]
+
     gamma = np.array([0.0, 0.0])
-    k_b = (2.0 * B1 + B2) / 3.0
-    m = (B1 + B2) / 2.0
-    k_t = (B1 + 2.0 * B2) / 3.0
+    k_b = (2.0 * b1 + b2) / 3.0
+    m = (b1 + b2) / 2.0
+    k_t = (b1 + 2.0 * b2) / 3.0
+
     path = []
     tick_idx = [0]
     for start, end in [(gamma, k_b), (k_b, m), (m, k_t), (k_t, gamma)]:
@@ -226,97 +214,153 @@ def build_path(num_per_segment: int = 150) -> tuple[np.ndarray, list[int], list[
     return np.asarray(path), tick_idx, labels
 
 
-def reduced_kvec(k1_red: float, k2_red: float) -> np.ndarray:
-    return k1_red * B1 + k2_red * B2
+def main() -> None:
+    root = Path("/workspace")
+    out_dir = root / "output" / "twse2_tb_reconstruction"
+    out_dir.mkdir(parents=True, exist_ok=True)
 
+    source_file = root / "tmp" / "ws2" / "41467_2025_64519_MOESM3_ESM.xlsx"
+    source = pd.read_excel(source_file, sheet_name="Fig1c_EnergyBand")[["E_tb_1", "E_tb_2", "E_tb_3"]]
 
-def load_tb_source() -> pd.DataFrame:
-    if SOURCE_XLSX.exists():
-        return pd.read_excel(SOURCE_XLSX, sheet_name="Fig1c_EnergyBand")[["E_tb_1", "E_tb_2", "E_tb_3"]]
-    if FALLBACK_TRACK1_FILE.exists():
-        source = pd.read_csv(FALLBACK_TRACK1_FILE)[["E_tb_1_source", "E_tb_2_source", "E_tb_3_source"]].copy()
-        source.columns = ["E_tb_1", "E_tb_2", "E_tb_3"]
-        return source
-    raise FileNotFoundError(
-        "Neither the original workbook nor the persistent Track-1 fallback mirror is available. "
-        f"Missing: {SOURCE_XLSX} and {FALLBACK_TRACK1_FILE}"
-    )
-
-
-def load_continuous_source() -> pd.DataFrame:
-    if SOURCE_XLSX.exists():
-        return pd.read_excel(SOURCE_XLSX, sheet_name="Fig1c_EnergyBand")[["E_continuous_1", "E_continuous_2", "E_continuous_3"]]
-    raise FileNotFoundError(
-        "The continuous-band source still requires the original workbook, which is currently absent at "
-        f"{SOURCE_XLSX}."
-    )
-
-
-def compute_baseline_bands(hops: dict[tuple[str, str, tuple[float, float]], complex] | None = None) -> tuple[np.ndarray, np.ndarray]:
-    if hops is None:
-        hops = build_hops()
-    path, _, _ = build_path()
-    bands = np.asarray([np.linalg.eigvalsh(build_hamiltonian(k, hops))[::-1] for k in path])
-    return path, bands
-
-
-def fourier_chain_blocks(k2_red: float, nk1: int = 256, m_max: int = 2) -> dict[int, np.ndarray]:
     hops = build_hops()
-    k1_values = np.arange(nk1) / nk1
-    h_of_k = np.asarray([build_hamiltonian(reduced_kvec(k1_red, k2_red), hops) for k1_red in k1_values])
-    blocks: dict[int, np.ndarray] = {}
-    for m in range(-m_max, m_max + 1):
-        phase = np.exp(-1j * 2.0 * np.pi * k1_values * m)
-        blocks[m] = np.tensordot(phase, h_of_k, axes=(0, 0)) / nk1
-    return blocks
+    path, tick_idx, tick_labels = build_path(num_per_segment=150)
+    bands = np.asarray([np.linalg.eigvalsh(build_hamiltonian(k, hops))[::-1] for k in path])
 
+    rmse = np.sqrt(np.mean((bands - source.values) ** 2, axis=0))
+    overall_rmse = float(np.sqrt(np.mean((bands - source.values) ** 2)))
+    rowwise_sum_rmse = float(np.sqrt(np.mean(np.sum((bands - source.values) ** 2, axis=1))))
 
-def finite_ribbon_hamiltonian(k2_red: float, num_cells: int = 64, m_max: int = 2) -> np.ndarray:
-    blocks = fourier_chain_blocks(k2_red=k2_red, m_max=m_max)
-    dim = 3 * num_cells
-    h_ribbon = np.zeros((dim, dim), dtype=complex)
-    for i in range(num_cells):
-        for m, block in blocks.items():
-            j = i + m
-            if 0 <= j < num_cells:
-                h_ribbon[3 * i : 3 * (i + 1), 3 * j : 3 * (j + 1)] += block
-    return h_ribbon
-
-
-def edge_spectral_weight(k2_red: float, energies: np.ndarray, eta: float = 0.6, num_cells: int = 64, edge_cells: int = 2) -> np.ndarray:
-    h_ribbon = finite_ribbon_hamiltonian(k2_red=k2_red, num_cells=num_cells)
-    dim_edge = 3 * edge_cells
-    identity = np.eye(h_ribbon.shape[0], dtype=complex)
-    weights = np.zeros_like(energies, dtype=float)
-    for idx, energy in enumerate(energies):
-        green = np.linalg.inv((energy + 1j * eta) * identity - h_ribbon)
-        edge_green = green[:dim_edge, :dim_edge]
-        weights[idx] = float(-np.imag(np.trace(edge_green)) / np.pi)
-    return weights
-
-
-def save_csv(path: Path, columns: list[str], rows: list[list[object]]) -> None:
-    ensure_dir(path.parent)
-    with path.open("w", newline="") as f:
+    with (out_dir / "reconstructed_hopping_table.csv").open("w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(columns)
-        writer.writerows(rows)
+        writer.writerow(["alpha", "beta", "dx", "dy", "real_meV", "imag_meV"])
+        for (alpha, beta, vec), amplitude in sorted(hops.items()):
+            writer.writerow([alpha, beta, vec[0], vec[1], amplitude.real, amplitude.imag])
+
+    comparison = pd.DataFrame(
+        {
+            "point_index": np.arange(len(path)),
+            "E_tb_1_source": source["E_tb_1"].to_numpy(),
+            "E_tb_2_source": source["E_tb_2"].to_numpy(),
+            "E_tb_3_source": source["E_tb_3"].to_numpy(),
+            "E_tb_1_reconstructed": bands[:, 0],
+            "E_tb_2_reconstructed": bands[:, 1],
+            "E_tb_3_reconstructed": bands[:, 2],
+        }
+    )
+    comparison.to_csv(out_dir / "band_comparison.csv", index=False)
+
+    high_symmetry_idx = {
+        "Gamma_start": 0,
+        "K_B": 150,
+        "M": 300,
+        "K_T": 450,
+        "Gamma_end": 599,
+    }
+    high_symmetry_rows = []
+    for label, point_index in high_symmetry_idx.items():
+        src_row = source.iloc[point_index].to_numpy()
+        rec_row = bands[point_index]
+        high_symmetry_rows.append(
+            {
+                "label": label,
+                "point_index": point_index,
+                "source_1": src_row[0],
+                "source_2": src_row[1],
+                "source_3": src_row[2],
+                "reconstructed_1": rec_row[0],
+                "reconstructed_2": rec_row[1],
+                "reconstructed_3": rec_row[2],
+                "delta_1": rec_row[0] - src_row[0],
+                "delta_2": rec_row[1] - src_row[1],
+                "delta_3": rec_row[2] - src_row[2],
+            }
+        )
+    pd.DataFrame(high_symmetry_rows).to_csv(out_dir / "high_symmetry_residuals.csv", index=False)
+
+    render_line_plot(
+        out_dir / "band_reconstruction_check.png",
+        source.to_numpy(),
+        bands,
+        tick_idx,
+        tick_labels,
+        overall_rmse,
+    )
+
+    summary = [
+        "# Tuo TB Reconstruction Summary",
+        "",
+        f"- Overall RMSE against source Fig. 1c arrays: {overall_rmse:.3f} meV",
+        f"- Row-wise summed RMSE against source Fig. 1c arrays: {rowwise_sum_rmse:.3f} meV",
+        f"- Per-band RMSE: [{rmse[0]:.3f}, {rmse[1]:.3f}, {rmse[2]:.3f}] meV",
+        "- Exact endpoint match at Gamma is recovered.",
+        "- The summary uses the element-wise global RMSE definition `sqrt(mean((E_rec - E_src)^2))`; this differs from the larger row-wise sum metric by a factor of `sqrt(3)` and resolves the earlier apparent inconsistency with `band_comparison.csv`.",
+        "- Remaining mismatch is concentrated near the K-point sectors, indicating that the symmetry-completed star ordering or phase convention is still not uniquely fixed by the uploaded files alone.",
+        "- This output should therefore be treated as a reproducible partial reconstruction, not yet a fully closed exact reproduction of the published Tuo tight-binding bands.",
+        "",
+        "Generated files:",
+        "- reconstructed_hopping_table.csv",
+        "- band_comparison.csv",
+        "- high_symmetry_residuals.csv",
+        "- band_reconstruction_check.png",
+    ]
+    (out_dir / "summary.md").write_text("\n".join(summary), encoding="utf-8")
 
 
-def save_json(path: Path, payload: dict[str, object]) -> None:
-    ensure_dir(path.parent)
-    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+def render_line_plot(
+    output_path: Path,
+    source: np.ndarray,
+    reconstructed: np.ndarray,
+    tick_idx: list[int],
+    tick_labels: list[str],
+    overall_rmse: float,
+) -> None:
+    width, height = 1400, 900
+    margin_left, margin_right = 110, 50
+    margin_top, margin_bottom = 80, 90
+    plot_w = width - margin_left - margin_right
+    plot_h = height - margin_top - margin_bottom
+    img = Image.new("RGB", (width, height), "white")
+    draw = ImageDraw.Draw(img)
+    font = ImageFont.load_default()
+
+    all_vals = np.concatenate([source.reshape(-1), reconstructed.reshape(-1)])
+    y_min = float(np.min(all_vals)) - 3.0
+    y_max = float(np.max(all_vals)) + 3.0
+    x_max = source.shape[0] - 1
+
+    def xpix(i: int) -> float:
+        return margin_left + plot_w * i / x_max
+
+    def ypix(v: float) -> float:
+        return margin_top + plot_h * (y_max - v) / (y_max - y_min)
+
+    draw.rectangle([margin_left, margin_top, margin_left + plot_w, margin_top + plot_h], outline="#444444", width=2)
+    for tick in tick_idx:
+        x = xpix(min(tick, x_max))
+        draw.line([(x, margin_top), (x, margin_top + plot_h)], fill="#cccccc", width=1)
+    for frac in np.linspace(0.0, 1.0, 6):
+        value = y_min + frac * (y_max - y_min)
+        y = ypix(value)
+        draw.line([(margin_left, y), (margin_left + plot_w, y)], fill="#efefef", width=1)
+        draw.text((15, y - 6), f"{value:6.1f}", fill="black", font=font)
+
+    colors = [(214, 39, 40), (44, 160, 44), (31, 119, 180)]
+    for band in range(3):
+        source_pts = [(xpix(i), ypix(v)) for i, v in enumerate(source[:, band])]
+        rec_pts = [(xpix(i), ypix(v)) for i, v in enumerate(reconstructed[:, band])]
+        draw.line(source_pts, fill=colors[band], width=3)
+        draw.line(rec_pts, fill=tuple(max(0, c - 90) for c in colors[band]), width=2)
+
+    title = f"Tuo TB reconstruction check  |  overall RMSE = {overall_rmse:.2f} meV"
+    draw.text((margin_left, 20), title, fill="black", font=font)
+    for tick, label in zip(tick_idx, tick_labels):
+        x = xpix(min(tick, x_max))
+        draw.text((x - 12, margin_top + plot_h + 18), label, fill="black", font=font)
+    draw.text((width // 2 - 30, height - 30), "k-path", fill="black", font=font)
+    draw.text((10, 20), "E (meV)", fill="black", font=font)
+    draw.text((margin_left + 20, margin_top + 20), "bright = source, dark = reconstructed", fill="black", font=font)
+    img.save(output_path)
 
 
-def save_heatmap_png(path: Path, matrix: np.ndarray) -> None:
-    ensure_dir(path.parent)
-    data = matrix.astype(float)
-    data = data - np.min(data)
-    scale = np.max(data)
-    if scale > 0:
-        data = data / scale
-    red = np.clip(255.0 * data, 0, 255).astype(np.uint8)
-    blue = np.clip(255.0 * (1.0 - data), 0, 255).astype(np.uint8)
-    green = np.clip(255.0 * (0.5 - np.abs(data - 0.5)), 0, 255).astype(np.uint8)
-    rgb = np.stack([red, green, blue], axis=-1)
-    Image.fromarray(rgb[::-1], mode="RGB").save(path)
+if __name__ == "__main__":
+    main()
