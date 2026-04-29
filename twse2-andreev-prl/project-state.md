@@ -13,25 +13,30 @@ Complete a manuscript-grade data package for the twse2-Andreev project: reconstr
 
 ## Single Main Bottleneck
 
-The project still does not have a complete, manuscript-grade normal-state data package. The current best faithful exact-`Gamma` candidate has improved to `8.367 meV` global RMSE, so the bottleneck is now a broader coupled valley-specific completion that can reduce the persistent `K^B / K^T` mismatch materially without breaking exact `Gamma` closure.
+The project still does not have a complete, manuscript-grade normal-state data package. The current best faithful exact-`Gamma` candidate remains `8.367 meV` global RMSE even after the new full coupled path + short-range + `sqrt(7)` exact-`Gamma` scan, so the bottleneck is now the next unscanned coupled convention family that could reduce the persistent `K^B / K^T` mismatch without breaking exact `Gamma` closure.
 
 ## Newly Verified Facts
 
 - The uploaded Tuo bundle originally provided the article, SI, and source workbook.
 - In later workspace snapshots, the original workbook paths were intermittently absent, so Track 1 can no longer rely on temporary workspace paths alone.
 - Track 1 remains runnable because the source-band columns are mirrored in `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/band_comparison.csv`.
+- The shared persistent pipeline now falls back to that mirrored Track-1 source table automatically, so the technical chain no longer depends on the temporary workbook path for current Track-1 scans.
 - The user explicitly redirected the project so that “补齐所有数据” is the unique top priority.
 - The user set the project iteration cadence to once per hour.
 - All new computation and data generation in this round have been moved into the long-lived project space `/workspace/memory/twse2-andreev-prl/`.
 - Google Drive read-side connectivity is available again, but the current connector surface still does not expose a usable generic upload / create path for the project artifact bundle.
+- Google Drive search still finds no existing project file or folder for query `twse2 andreev prl`, so this round still cannot rely on a pre-existing cloud project location.
 - The broader `A-B` exclusion scan remains a valid local exclusion dataset, but no materially improved branch in that family satisfies the exact-`Gamma` acceptance rule.
 - The `k`-path mapping scan improved the faithful candidate to `8.880 meV`.
 - The shared mixed-star scan improved the faithful candidate further to `8.372 meV`.
 - Independent short-range `A-C / B-C` asymmetry and independent `sqrt(7)` asymmetry were both tested as isolated layers and neither improved the best exact-`Gamma` candidate honestly.
 - A coupled path-plus-hopping scan over the best path mappings and exact-`Gamma` asymmetric `sqrt(7)` branches improved the faithful baseline again to `8.367 meV`.
+- A new exploratory coupled path + short-range + `sqrt(7)` scan over the top exact-`Gamma` branches produced 2400 candidates and did not improve on the current `8.367 meV` baseline.
+- A superseding full coupled path + short-range + `sqrt(7)` exact-`Gamma` scan over 6960 candidates also reproduced the same `8.367 meV` best candidate, so this combined family is now substantially better constrained.
 - A new persistent Track-1 convention scan now lives at `/workspace/memory/twse2-andreev-prl/data/track1-kclosure-2026-04-29/` and confirms that high-symmetry-point relabeling alone does not close Track 1; its best candidate still has `13.014 meV` high-symmetry RMSE.
 - A new persistent SGF minimal package now lives at `/workspace/memory/twse2-andreev-prl/data/sgf-minimal-2026-04-29/`.
 - A new persistent BTK minimal package now lives at `/workspace/memory/twse2-andreev-prl/data/btk-minimal-2026-04-29/`.
+- No editable manuscript source file is present in the current workspace, so manuscript text replacement remains blocked even when new data land.
 
 ## Current Best Reconstruction Status
 
@@ -40,6 +45,7 @@ The project still does not have a complete, manuscript-grade normal-state data p
 - The best exact-`Gamma` path-mapping candidate improved that to `8.880 meV`.
 - The best exact-`Gamma` shared mixed-star candidate improved that further to `8.372 meV`.
 - The current best faithful coupled path-plus-hopping candidate improves the exact-`Gamma` baseline again to `8.367 meV`.
+- The full 6960-candidate coupled path + short-range + `sqrt(7)` exact-`Gamma` scan does not improve on that `8.367 meV` candidate.
 - The dominant unresolved residual is no longer at `M`; it remains concentrated in the two valley windows `K^B / K^T`.
 - The honest status is: Track 1 is materially stronger and much better indexed than before, but exact full-band faithful reproduction is still open.
 
@@ -55,6 +61,8 @@ The project still does not have a complete, manuscript-grade normal-state data p
 - Asymmetric short-range exclusion scan package: closed locally, pending cloud sync
 - Asymmetric `sqrt(7)` exclusion scan package: closed locally, pending cloud sync
 - Coupled path-plus-hopping scan package: closed locally, pending cloud sync
+- Coupled path + short-range + `sqrt(7)` exploratory scan package: closed locally, pending cloud sync
+- Coupled path + short-range + `sqrt(7)` full exact-`Gamma` scan package: closed locally, pending cloud sync
 - Track-1 convention-scan package in persistent project space: closed locally, pending cloud sync
 - Manuscript-grade normal-state data package with indexed artifacts: partial
 - SGF benchmark data package: partial
@@ -67,7 +75,7 @@ The project still does not have a complete, manuscript-grade normal-state data p
 ## Immediate Next Action
 
 1. Keep the `8.367 meV` coupled path-plus-hopping candidate as the faithful Track-1 baseline.
-2. Continue coupled valley-specific completion in the persistent project space instead of reopening exhausted isolated scans.
-3. Upgrade the SGF minimal package from a finite-ribbon edge proxy toward a manuscript-grade semi-infinite benchmark.
-4. Upgrade the BTK minimal package from a proxy package toward a material-specific conductance benchmark.
+2. Treat the short-range + `sqrt(7)` exact-`Gamma` coupled family as substantially scanned rather than reopening it again immediately.
+3. Shift the next Track-1 data pass to a different coupled convention family that is still unscanned under the exact-`Gamma` rule.
+4. Keep SGF and BTK upgrades secondary until the next highest-value Track-1 normal-state data gap is closed.
 5. Mirror every newly accepted artifact into memory immediately and keep Google Drive sync in the explicit pending queue until a writable connector surface becomes available.

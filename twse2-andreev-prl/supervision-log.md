@@ -223,6 +223,39 @@ The project has advanced from “only Track 1 local reconstruction exists” to 
 
 Yes. The next stage can now refine each data line on top of persistent code and persistent files instead of starting from scratch each round.
 
+## 2026-04-29 | Mandatory status-check and full joint coupled-scan pass
+
+### Check Scope
+
+- Re-run the mandatory technical status, environment configuration, and manuscript-state checks before new data generation
+- Repair any shared Track-1 execution fragility exposed by the missing workbook path
+- Execute a fuller coupled Track-1 data pass instead of reopening already exhausted isolated scans
+
+### Confirmed Correct
+
+- The shared Track-1 persistent pipeline now falls back directly to `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29/band_comparison.csv`, so the current `k`-closure chain is runnable even when `/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx` is absent.
+- The mandatory environment check shows that the current Track-1 path has usable `numpy`, `pandas`, and `PIL`; `matplotlib` and `scipy` are still absent, but they do not block the current Track-1 reconstruction scans that ran this round.
+- The manuscript-state check again finds no editable twse2 manuscript source in the current workspace.
+- An exploratory 2400-candidate coupled path + short-range + `sqrt(7)` exact-`Gamma` scan was completed and archived locally.
+- A superseding fuller 6960-candidate coupled path + short-range + `sqrt(7)` exact-`Gamma` scan was then completed and archived locally.
+- Both coupled scans reproduce the same best faithful exact-`Gamma` candidate already known from the path + `sqrt(7)` layer: `8.366681 meV` overall RMSE with `0.035062 meV` gamma-end max-abs delta, path mode `exclusive_150`, `K_B=K_2b1+b2`, `M=M_b2`, `K_T=K_-2b1-b2`, and short-range / `sqrt(7)` settings equal to the current baseline exact-`Gamma` branch.
+- Google Drive account lookup still works and search still returns no existing project file for query `twse2 andreev prl`.
+
+### Problems / Risks
+
+- The new full joint coupled scan does not materially reduce the remaining `K^B / K^T` residual, so the current short-range + `sqrt(7)` exact-`Gamma` family is no longer a promising first lever.
+- The dominant mismatch still lives in the two valley windows, so honest Track-1 closure remains open.
+- Google Drive still cannot be honestly treated as synced in this run because the available connector surface still lacks a usable generic upload / folder-placement path for the project bundle.
+- Manuscript revision remains blocked both by the missing manuscript source files and by the still-incomplete normal-state / downstream data closure.
+
+### Stage Judgment
+
+Still in Track-1 evidence generation. This round materially hardens the negative result: the currently scanned short-range + `sqrt(7)` exact-`Gamma` coupled family has now been searched much more broadly without beating the `8.367 meV` faithful baseline.
+
+### Supports Next Stage?
+
+Yes. The next Track-1 data pass should move to a different coupled convention family or an external author-side table / code recovery route rather than re-running the same short-range + `sqrt(7)` layer.
+
 ## 2026-04-28 | Runnable-chain recovery and wider A-B exclusion scan
 
 ### Check Scope

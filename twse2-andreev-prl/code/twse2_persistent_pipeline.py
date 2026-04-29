@@ -13,6 +13,7 @@ PROJECT_ROOT = Path("/workspace/memory/twse2-andreev-prl")
 CODE_ROOT = PROJECT_ROOT / "code"
 DATA_ROOT = PROJECT_ROOT / "data"
 SOURCE_XLSX = Path("/workspace/tmp/ws2/41467_2025_64519_MOESM3_ESM.xlsx")
+FALLBACK_TRACK1_FILE = DATA_ROOT / "track1-2026-04-29" / "band_comparison.csv"
 
 SQRT3 = float(np.sqrt(3.0))
 SQRT7 = float(np.sqrt(7.0))
@@ -228,11 +229,25 @@ def reduced_kvec(k1_red: float, k2_red: float) -> np.ndarray:
 
 
 def load_tb_source() -> pd.DataFrame:
-    return pd.read_excel(SOURCE_XLSX, sheet_name="Fig1c_EnergyBand")[["E_tb_1", "E_tb_2", "E_tb_3"]]
+    if SOURCE_XLSX.exists():
+        return pd.read_excel(SOURCE_XLSX, sheet_name="Fig1c_EnergyBand")[["E_tb_1", "E_tb_2", "E_tb_3"]]
+    if FALLBACK_TRACK1_FILE.exists():
+        source = pd.read_csv(FALLBACK_TRACK1_FILE)[["E_tb_1_source", "E_tb_2_source", "E_tb_3_source"]].copy()
+        source.columns = ["E_tb_1", "E_tb_2", "E_tb_3"]
+        return source
+    raise FileNotFoundError(
+        "Neither the original workbook nor the persistent Track-1 fallback mirror is available. "
+        f"Missing: {SOURCE_XLSX} and {FALLBACK_TRACK1_FILE}"
+    )
 
 
 def load_continuous_source() -> pd.DataFrame:
-    return pd.read_excel(SOURCE_XLSX, sheet_name="Fig1c_EnergyBand")[["E_continuous_1", "E_continuous_2", "E_continuous_3"]]
+    if SOURCE_XLSX.exists():
+        return pd.read_excel(SOURCE_XLSX, sheet_name="Fig1c_EnergyBand")[["E_continuous_1", "E_continuous_2", "E_continuous_3"]]
+    raise FileNotFoundError(
+        "The continuous-band source still requires the original workbook, which is currently absent at "
+        f"{SOURCE_XLSX}."
+    )
 
 
 def compute_baseline_bands(hops: dict[tuple[str, str, tuple[float, float]], complex] | None = None) -> tuple[np.ndarray, np.ndarray]:
