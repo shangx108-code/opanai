@@ -10,15 +10,17 @@
 - Expanded the recovery search across the live workspace/container and connected Google Drive metadata, and did not recover `three_terminal_benchmark.py` or any of the nine expected bundle assets. [verified]
 - Confirmed that the current scheduled-run environment imports `numpy` and `pandas` but is missing `scipy` and `matplotlib`, so the benchmark rerun environment is still incomplete even before historical data restoration. [active blocker]
 - Confirmed that no three-terminal benchmark entry script is present at the searched recovery paths and that all nine expected benchmark assets remain absent from the current workspace. [active blocker]
+- Executed a direct environment-recovery attempt with `python -m pip install scipy matplotlib`, and the install failed because the scheduled container cannot reach the configured package index proxy (`403 Forbidden`), so dependency restoration is currently blocked upstream of the benchmark rerun. [active blocker]
 
 ## Rejected from long-term state
 - Any claim that the three-terminal numerical bundle itself has been regenerated. [unverified - do not commit]
 - Any claim that `nu_ring` or `P_topo` were recomputed in this round. [unverified - do not commit]
 - Any manuscript-strength interpretation upgrade based only on the recovered provenance files. [unverified - do not commit]
 - Any claim that the environment is now fully ready for the three-terminal rerun. [unverified - do not commit]
+- Any claim that the missing dependencies can be fixed from this scheduled container by a normal online `pip install` path. [unverified - do not commit]
 
 ## Current stable bottleneck
-- The current workspace still lacks the shared three-terminal benchmark entry script and all historical bundle assets, the broader local/container and connected Google Drive search did not surface a recoverable copy, and the scheduled-run Python environment is missing `scipy` and `matplotlib`, so the full-device topology rerun cannot yet start.
+- The current workspace still lacks the shared three-terminal benchmark entry script and all historical bundle assets, and the scheduled-run Python environment still lacks `scipy` and `matplotlib`; this round additionally verified that the container cannot fetch those packages from its configured package index proxy, so both code recovery and dependency restoration remain blocked before the full-device topology rerun can start.
 
 ## Next durable action
-- Restore the shared three-terminal benchmark script and historical bundle from a persistent source that is not yet mounted into the current workspace or indexed in connected Google Drive search, then complete the missing scientific Python stack required by that script and start the matched transport-plus-topology rerun.
+- Restore the shared three-terminal benchmark script and historical bundle from a persistent source that is not yet mounted into the current workspace or indexed in connected Google Drive search, and pair that recovery with an offline or prebundled path for `scipy` and `matplotlib` before attempting the matched transport-plus-topology rerun.

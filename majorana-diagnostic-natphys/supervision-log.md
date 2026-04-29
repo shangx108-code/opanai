@@ -267,3 +267,27 @@ The project could waste more rounds treating the blocker as a manuscript problem
 - Re-ran `majorana_recovery_bootstrap.py` and regenerated the recovery provenance files in `/workspace/output/three-terminal-benchmark/`
 - Confirmed by broader local/container search that no recoverable three-terminal script or bundle assets exist in the mounted workspace
 - Confirmed by connected Google Drive metadata search that no directly searchable archived copy of the missing three-terminal bundle is currently exposed there
+
+## 2026-04-29 | Round 12 supervision after direct environment-recovery attempt
+
+### Overall evaluation
+This round still does not restore benchmark data, but it turns the environment question into a concrete upstream blocker instead of a vague missing-package note. The project now knows that a normal online dependency-repair path is not currently available from this scheduled container.
+
+### Gap to target-journal standard
+- The shared three-terminal benchmark entry script is still absent from the current workspace.
+- All nine expected three-terminal benchmark assets remain absent from the current workspace.
+- The scheduled-run Python stack still lacks `scipy` and `matplotlib`, and a direct `pip install` attempt failed because the configured package-index proxy returned `403 Forbidden`.
+
+### Most critical quality risk
+The project could waste additional rounds retrying the same online install path instead of switching to an offline wheel, prebuilt environment, or recovered script bundle that already carries its own executable stack assumptions.
+
+### Plan-revision advice
+1. Keep the recovery bootstrap as the first command in future scheduled runs.
+2. Make the next execution round about recovering the shared three-terminal script and bundle from persistent storage together with an offline or prebundled dependency path.
+3. Do not spend another round retrying a plain online `pip install` from this container unless the proxy or package source has actually changed.
+4. Continue blocking manuscript-final language until the live rerun path and its dependencies both exist in the same workspace.
+
+### Newly completed items
+- Re-ran `majorana_recovery_bootstrap.py` and refreshed the environment audit in `/workspace/output/three-terminal-benchmark/`
+- Attempted direct dependency restoration with `python -m pip install scipy matplotlib`
+- Verified that the scheduled container cannot currently reach the configured package-index proxy for those installs
