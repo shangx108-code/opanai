@@ -1,7 +1,11 @@
 # 角色任务表：self-calibrating-diffractive-ncomms
 
 ## 当前阶段
+<<<<<<< Updated upstream
 严格主文草稿已形成，且已有 round5/round5b 第一轮最小被动衍射处理器原型；下一步仍转入“增强 Figure 5 稳健性”，并补回活动工作区的可复跑证据链。
+=======
+已恢复强化研究迭代模式；wave-optics 最小阳性对照、round3 理论补强和 round4 cross-task 验证已完成，下一步继续进入最小被动衍射处理器对照构建。
+>>>>>>> Stashed changes
 
 ## 当前唯一主瓶颈
 已有 ordinary D2NN vs pilot-assisted D2NN 的真实最小原型对照，但优势太弱，且 calibration readout 没有形成一致正向结果。
@@ -9,10 +13,17 @@
 ## 角色任务
 
 ### 统筹者
+<<<<<<< Updated upstream
 - 当前任务：把已存在的 round5/round5b 弱原型推进到更稳健的 Figure 5 结果，并优先解决活动工作区缺少底层文件的证据包可访问性问题
 - 输入：round1-round5b 结果、环境状态
 - 输出：Figure 5 增强路线、完成标准、风险边界
 - 完成标准：后续所有任务只围绕 processor-level 优势增强展开
+=======
+- 当前任务：把已验证的 wave-optics 机制推进到被动衍射处理器层面的最小阳性对照，并强制维护逐轮迭代日志
+- 输入：上传提案、round1/round2 结果、环境状态
+- 输出：round3 唯一目标、完成标准、风险边界
+- 完成标准：后续所有任务只围绕最小 ordinary vs pilot-assisted 被动衍射处理器对照推进
+>>>>>>> Stashed changes
 - 优先级：最高
 
 ### 理论人员
@@ -23,10 +34,17 @@
 - 优先级：高
 
 ### 代码与数值计算人员
+<<<<<<< Updated upstream
 - 当前任务：先恢复 round5 / round5b 可复跑脚本与输出，再增强 round5b self-calibrating D2NN，使 common-path 相比 ordinary / non-common-path / wrong-reference 的优势更清晰
 - 输入：`round5_minimal_d2nn_comparison.py`、`round5b_selfcalibrating_d2nn.py`
 - 输出：稳健性扫描脚本、更新后的 Figure 5 指标表与图文件
 - 完成标准：processor-level gain 不再只是弱单点信号
+=======
+- 当前任务：实现最小 passive diffractive processor + dynamic aberration + ordinary / pilot-assisted 对照
+- 输入：上传提案中的 Result 1 / Result 2 框架，round1/round2 结果
+- 输出：新一轮脚本、CSV、summary、图文件、运行日志
+- 完成标准：至少得到一轮真实可复核的 ordinary vs pilot-assisted OOD 对照
+>>>>>>> Stashed changes
 - 优先级：最高
 
 ### 数据分析人员
@@ -63,8 +81,12 @@
 - 优先级：高
 
 ### 监督 / 审稿环节
+<<<<<<< Updated upstream
 - 当前任务：每轮检查是否把 surrogate 结果误写成 D2NN 结果，并检查主文引用的底层文件是否在活动工作区可访问
+=======
+- 当前任务：每轮检查是否把 surrogate 结果误写成 D2NN 结果，并检查该轮是否留下独立日志
+>>>>>>> Stashed changes
 - 输入：代码、summary、状态文件
 - 输出：监督意见与接收概率更新
-- 完成标准：发现过度陈述立即纠偏
+- 完成标准：发现过度陈述立即纠偏；无日志则该轮不算有效推进
 - 优先级：最高

@@ -3,7 +3,7 @@
 ## 项目基本信息
 - 项目名称：Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations
 - 目标期刊：Nature Communications
-- 最近更新时间：2026-04-27（writing-launch）
+- 最近更新时间：2026-04-29（iteration-resume）
 - 当前资料来源：
   - `/workspace/user_files/01-markdown-1-md-3`
   - `/workspace/self-calibrating-diffractive-ncomms/round1_theory_note.md`
@@ -19,10 +19,10 @@
 
 ## 当前运行规则
 - 默认推进主体：自研智能体
-- 自动迭代频率：每 1 小时 1 轮
+- 自动迭代频率：研究迭代已恢复；当前按强化运行模式推进，并要求每轮强制写入迭代日志
 - 停止条件必须同时满足：
-  - 保守五审稿人接收概率均超过 70%
-  - 所有需要补的 evidence 全部补齐
+  - 所有需要补充的判据全部补齐
+  - 五个审稿人的接收概率均超过 80%
   - 所有正式数据图都基于真实数据
   - 理论推导详实、可靠、可检查
   - 正文与补充材料所需图表、引用和对照组全部补齐
@@ -51,7 +51,11 @@
 - 可归档的代码、数据、图表、正文、补充材料与最终投稿包
 
 ## 当前阶段
+<<<<<<< Updated upstream
 严格写作与器件级主结果校准并行阶段（已得到第一轮最小 D2NN 原型对照，但强度不足以封闭主结论）。
+=======
+强化研究迭代阶段（在保留严格写作骨架的同时，恢复以主证据补强为中心的日志化推进）。
+>>>>>>> Stashed changes
 
 说明：
 - 当前工作区之前没有该项目的既有命名空间记忆。
@@ -59,9 +63,15 @@
 - 现在已进一步完成 round2：真实运行基于 Zernike pupil 的 wave-optics PSF 最小证据链。
 - 现在已进一步完成 round3：加入最小 FNO-style spectral baseline、CRLB 扫描，以及实验边界澄清。
 - 现在已进一步完成 round4：加入 task-level tight bound / theorem，以及 classification / inverse-design surrogate 的 cross-task 泛化仿真。
+<<<<<<< Updated upstream
 - 本轮已新增第一轮真实器件级 prototype：先做了纯重建型两层 D2NN，对 common-path pilot 给出中性偏负结果；随后升级为带 calibration readout 区的三层相位型 D2NN，得到弱正向 reconstruction 信号。
 - 当前仍不是完整 submission-grade D2NN 主结果，也不是投稿级证据链。
 - 写作骨架仍有效，但 Figure 5 不再是“完全缺失”，而是“已有第一轮弱原型，不足以承担主文 pivot”。
+=======
+- 当前仍不是完整 D2NN，也不是投稿级证据链。
+- 已有严格写作流程骨架，但这不改变主结果仍未闭环的事实。
+- 本轮恢复研究迭代，并新增强制日志化规则。
+>>>>>>> Stashed changes
 
 ## 当前唯一主瓶颈
 当前唯一主瓶颈是：虽然已经得到同一动态像差协议下的第一轮 ordinary D2NN 与 pilot-assisted D2NN 最小原型对照，但 common-path 优势过弱，且 calibration readout 没有形成一致正向证据，因此 Figure 5 仍不足以支撑主文核心论点。
@@ -75,7 +85,11 @@
 - 若后续仍不能把 processor-level common-path 优势从“弱、可疑、架构相关”提升到“清晰、稳健、可解释”，论文主线需要重评。
 
 ## 本轮唯一最高优先级
+<<<<<<< Updated upstream
 用真实最小 phase-only D2NN 原型把 Figure 5 从“完全缺失”推进到“已有第一轮可审查结果”，并据此重写稿件边界与下一轮任务，而不是继续把该缺口当作纯占位项。
+=======
+在保持最小被动衍射处理器阳性对照为核心任务的前提下，恢复并强化研究迭代，使后续每一轮都留下可检查日志，并把推进重心重新压回器件级主证据。
+>>>>>>> Stashed changes
 
 ## 本轮交付物
 1. round1 最小机制脚本：`/workspace/self-calibrating-diffractive-ncomms/round1_pilot_selfcalibration.py`
@@ -98,6 +112,7 @@
 18. 写作启动记录：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-writing-launch-2026-04-27.md`
 19. 主文骨架：`/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v0-structure.md`
 20. reference ledger：`/workspace/memory/self-calibrating-diffractive-ncomms/reference-ledger-v1.md`
+<<<<<<< Updated upstream
 21. round5 两层重建型 D2NN 脚本：`/workspace/self-calibrating-diffractive-ncomms/round5_minimal_d2nn_comparison.py`
 22. round5 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5_minimal_d2nn_metrics.csv`
 23. round5 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5_minimal_d2nn_summary.md`
@@ -106,6 +121,10 @@
 26. round5b 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_metrics.csv`
 27. round5b 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_summary.md`
 28. round5b 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_panel.png`
+=======
+21. 研究迭代日志：`/workspace/memory/self-calibrating-diffractive-ncomms/iteration-log.md`
+22. 本轮迭代记录：`/workspace/memory/self-calibrating-diffractive-ncomms/iteration-round-2026-04-29.md`
+>>>>>>> Stashed changes
 
 ## 本轮完成标准
 - 已真实运行 round2 脚本并落盘结果文件
@@ -116,6 +135,7 @@
 - 已真实运行 round4 cross-task 泛化仿真并落盘结果
 - 已写出 round4 task-level tight bound / theorem note
 - 已建立四段式引言、正文结构、图文映射和 30+ reference ledger 初稿
+<<<<<<< Updated upstream
 - 已真实运行 round5 两层 phase-only D2NN 最小对照，并记录其对 common-path pilot 的中性偏负结果
 - 已真实运行 round5b 带 calibration readout 的三层 phase-only D2NN，并得到第一轮弱正向 processor-level reconstruction 信号
 - 已把 Figure 5 从“缺失”更新为“已有第一轮原型，但仍不足以作为最终主结果”
@@ -125,6 +145,15 @@
 2. 明确拆分“reconstruction gain”和“calibration readout gain”，避免把前者误写成后者。
 3. 在不引入新主线的前提下做最小稳健性检查，例如 seed / pilot amplitude / layer count 的局部扫描。
 4. 若 processor-level 优势变强，再扩展到 turbulence / thin phase screen；若仍弱，则考虑收缩期刊目标或重写主张边界。
+=======
+- 已恢复研究迭代模式，并建立独立迭代日志文件
+
+## 下一轮立即动作
+1. 在当前工作区写出 ordinary D2NN 与 pilot-assisted D2NN 的最小可运行对照脚本。
+2. 保留“共路、非共路、错误 reference”三组关键对照，不满足就及时止损。
+3. 每轮结束强制写入 `iteration-log.md`，确保后续运行状态可检查。
+4. 若最小被动衍射对照仍为阳性，再扩展到 turbulence / thin phase screen，并回填主文 Figure 5。
+>>>>>>> Stashed changes
 
 ## 技术状态检查结论
 - 已验证：
@@ -227,6 +256,7 @@
 - 2026-04-27：完成 round4 tight bound / theorem note，将 pilot-channel covariance 与下游任务损失通过局部曲率 sandwich 和 CRLB-limited floor 联系起来。
 - 2026-04-27：完成 round4 cross-task 泛化仿真。OOD 下 common-path 相比 no-reference 将 reconstruction PSNR 从 `34.837 dB` 提升到 `36.782 dB`，将 classification true-class residual 从 `0.035464` 降到 `0.034616`，并将 inverse-design target MSE 从 `0.002317` 小幅降到 `0.002315`。
 - 2026-04-27：正式启动严格写作流程，新增主文骨架、图文映射和 30+ reference ledger 初稿；同时保留“普通 D2NN vs pilot-assisted D2NN 器件级阳性对照尚未完成”的明确边界。
+<<<<<<< Updated upstream
 - 2026-04-27：完成 round5 两层 pure-reconstruction phase-only D2NN 对照。OOD 下 common-path 相比 ordinary 为 `-0.191 dB`，给出中性偏负结果。
 - 2026-04-27：完成 round5b 三层 self-calibrating phase-only D2NN 原型。OOD 下 common-path object-zone PSNR 相比 ordinary 提升 `+0.204 dB`，但相对 non-common-path 仅 `+0.054 dB`，且 coefficient readout MAE 未改善，因此 Figure 5 只获得了第一轮弱原型证据。
 - 2026-04-27：进入 strict manuscript mode，新增连续主文草稿 `manuscript-v1-strict.md`，把四段式引言、Methods / Results / Discussion / Summary、五张图的正文引用职责和 30+ 参考文献谨慎核验状态统一到同一份稿件中。
@@ -249,3 +279,6 @@
   - 30+ 参考文献并区分谨慎核验状态：已满足
   - 所有缺失标准完全满足：未满足
   - 五位审稿人接收概率全部超过 80%：未满足
+=======
+- 2026-04-29：根据用户“进入智能体的研究迭代，强化运行”的新指令，恢复研究迭代模式，并新增独立迭代日志与本轮迭代记录文件。
+>>>>>>> Stashed changes
