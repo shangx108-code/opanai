@@ -322,3 +322,34 @@ Still in Track-1 evidence generation, but the data gap is now sharper. This roun
 ### Supports Next Stage?
 
 Yes. The next pass should start from the `8.372 meV` mixed-star baseline and run the smallest asymmetric scan that decouples the still-shared `A-C` and `B-C` phase rules or otherwise tests the next valley-specific gauge layer.
+
+## 2026-04-29 | Technical, environment, manuscript-status, and coupled-scan pass
+
+### Check Scope
+
+- Re-run the mandatory technical status check, environment check, and manuscript-status check before starting a new data pass
+- Verify whether the current workspace still exposes the runnable Track-1 directory and whether the Python stack remains sufficient
+- Execute the next highest-value coupled data pass instead of repeating isolated scans
+
+### Confirmed Correct
+
+- The current Python environment still supports the active Track-1 chain with `numpy`, `pandas`, and `Pillow`; `scipy` and `matplotlib` remain absent but are not required for the current scripts.
+- The current workspace snapshot no longer contains `/workspace/twse2_tb/`, but the memory-mirrored code under `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/` remains runnable.
+- No editable manuscript source was found for this project in the current workspace scan, so manuscript modification is still not the active work surface.
+- A new coupled scan over the top 20 `k`-path candidates and the 58 exact-`Gamma` asymmetric `sqrt(7)` candidates completed successfully and produced a new faithful best candidate at global RMSE `8.367 meV`.
+- The new best candidate keeps the mixed-star rule set unchanged but flips the valley labels to `K_B=K_2b1+b2` and `K_T=K_-2b1-b2`, confirming that path-plus-hopping coupling matters even after the isolated scans were exhausted.
+
+### Problems / Risks
+
+- The improvement is real but small (`8.372 -> 8.367 meV`), so the project still lacks a materially stronger valley-sector closure.
+- The dominant mismatch remains in the two `K` windows; the coupled scan improved one valley window and slightly worsened the other, rather than closing both.
+- Google Drive still cannot be honestly treated as synced in this run because no writable connector surface was available through the exposed tools.
+- Manuscript revision remains blocked by missing manuscript source files and incomplete downstream SGF / BTK datasets.
+
+### Stage Judgment
+
+Still in Track-1 evidence generation, now with a better grounded coupled baseline and a sharper proof that the remaining blocker is a higher-order valley-specific completion rather than an `M`-point or isolated-layer problem.
+
+### Supports Next Stage?
+
+Yes. The project now supports a broader coupled valley-specific scan as the next shortest data-closing action, while SGF / BTK and manuscript work remain downstream.

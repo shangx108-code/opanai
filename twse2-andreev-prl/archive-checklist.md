@@ -1,6 +1,6 @@
 # Archive Checklist
 
-Last updated: 2026-04-28
+Last updated: 2026-04-29
 
 - [x] Reference bundle inspected
 - [x] Tuo article metadata verified
@@ -55,12 +55,22 @@ Last updated: 2026-04-28
 - [x] Best exact-`Gamma` `sqrt(7)` replay figure archived
 - [x] Best exact-`Gamma` `sqrt(7)` replay summary archived
 - [x] Asymmetric `sqrt(7)` scan script archived
+- [x] Coupled path + exact-`Gamma` asymmetric `sqrt(7)` scan CSV archived
+- [x] Coupled path + exact-`Gamma` asymmetric `sqrt(7)` top-20 CSV archived
+- [x] Coupled path + exact-`Gamma` asymmetric `sqrt(7)` scan summary archived
+- [x] Best exact-`Gamma` coupled candidate hopping CSV archived
+- [x] Best exact-`Gamma` coupled candidate comparison CSV archived
+- [x] Best exact-`Gamma` coupled candidate residual CSV archived
+- [x] Best exact-`Gamma` coupled candidate figure archived
+- [x] Best exact-`Gamma` coupled candidate summary archived
+- [x] Coupled path + exact-`Gamma` asymmetric `sqrt(7)` scan script archived
 - [ ] Google Drive sync for current Track-1 artifacts completed
 - [ ] Google Drive sync for `A-B` convention scan artifacts completed
 - [ ] Google Drive sync for `k`-path mapping artifacts completed
 - [ ] Google Drive sync for mixed-star artifacts completed
 - [ ] Google Drive sync for asymmetric short-range scan artifacts completed
 - [ ] Google Drive sync for asymmetric `sqrt(7)` scan artifacts completed
+- [ ] Google Drive sync for coupled path + exact-`Gamma` asymmetric `sqrt(7)` artifacts completed
 - [ ] SGF data package archived
 - [ ] BTK / robustness data package archived
 - [ ] Final manuscript source / replacement text archived

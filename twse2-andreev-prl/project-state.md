@@ -1,11 +1,11 @@
 # Project State
 
 Project: `twse2-andreev-prl`
-Last updated: 2026-04-28
+Last updated: 2026-04-29
 
 ## Current Stage
 
-Track-1 normal-state data completion, executable-chain recovery, and storage hardening for a PRL-oriented twisted bilayer WSe2 Andreev manuscript.
+Track-1 normal-state data completion, coupled path-plus-hopping refinement, and storage hardening for a PRL-oriented twisted bilayer WSe2 Andreev manuscript.
 
 ## Current Overall Goal
 
@@ -13,7 +13,7 @@ Complete a manuscript-grade data package for the twse2-Andreev project: reconstr
 
 ## Single Main Bottleneck
 
-The project still does not have a complete, manuscript-grade normal-state data package. After two new asymmetric follow-up scans on top of the best shared mixed-star baseline, the sharpest unresolved data gap is now narrower: independent `A-C / B-C` short-range phase rules and independent `sqrt(7)` mixed-star rules both fail to improve the exact-`Gamma` candidate. The next highest-value data pass must therefore move to a coupled valley-specific gauge / path-plus-hopping layer rather than revisit `M`, the old path baseline, exhausted `A-B` scans, or now-exhausted one-layer `A-C / B-C` asymmetry scans.
+The project still does not have a complete, manuscript-grade normal-state data package. A new coupled `k`-path plus exact-`Gamma` asymmetric `sqrt(7)` scan has now improved the faithful candidate slightly, so the bottleneck is no longer whether path-plus-hopping coupling matters. The remaining highest-value gap is a broader coupled valley-specific completion that can beat the new swapped-valley exact-`Gamma` baseline by more than a marginal `0.006 meV` and materially reduce the persistent `K`-sector mismatch without breaking `Gamma`.
 
 ## Newly Verified Facts
 
@@ -37,6 +37,11 @@ The project still does not have a complete, manuscript-grade normal-state data p
 - The best overall asymmetric `sqrt(7)` candidate (`ac7_first=const`, `bc7_first=cyc`, `ac7_second=anti`, `bc7_second=const`, both non-conjugated) lowers the global RMSE to `8.283 meV`, but it breaks exact-`Gamma` closure by `7.885 meV`, so it cannot be promoted honestly.
 - Within the hard exact-`Gamma` tolerance, the asymmetric `sqrt(7)` scan also leaves the previous shared mixed-star baseline unchanged as the best faithful candidate at global RMSE `8.372 meV`.
 - The current workspace runnable chain has been restored again at `/workspace/twse2_tb/`, now including `reconstruct_tuo_tb.py`, `scan_asymmetric_short_range.py`, and `scan_asymmetric_c7.py`, all mirrored into `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/`.
+- In the current 2026-04-29 UTC workspace snapshot, `/workspace/twse2_tb/` is absent again; the runnable Track-1 code now lives only in the memory mirror under `/workspace/memory/twse2-andreev-prl/code/track1-2026-04-29-asymmetry/`.
+- On 2026-04-29 UTC, a new 1160-candidate coupled scan over the top 20 `k`-path mappings and the 58 exact-`Gamma` asymmetric `sqrt(7)` candidates was executed at `/workspace/output/twse2_coupled_path_c7_scan/` and mirrored into `/workspace/memory/twse2-andreev-prl/data/track1-2026-04-29-coupled-path-c7/`.
+- The coupled scan verifies that path-plus-hopping coupling is a real improvement path: the best exact-`Gamma` candidate switches the valley labels to `K_B=K_2b1+b2`, `M=M_b2`, `K_T=K_-2b1-b2` while keeping the same shared mixed-star rule set (`c1=cyc`, `c2=anti`, `c7_first=cyc`, `c7_second=anti`, non-conjugated), improving the global RMSE from `8.372 meV` to `8.367 meV`.
+- Relative to the previous faithful baseline, the new coupled candidate improves `Gamma_end` max-abs residual from `0.03618 meV` to `0.03506 meV` and improves the `K_B`-window RMSE from `15.056 meV` to `14.950 meV`, while leaving the `M` window unchanged and slightly worsening the opposite valley window. The dominant unresolved mismatch therefore remains a valley-sector closure problem, not an `M`-point problem.
+- No editable manuscript source was found for this project in the current 2026-04-29 UTC workspace scan, so manuscript revision is still blocked by both missing source files and incomplete downstream data.
 
 ## Current Best Reconstruction Status
 
@@ -44,10 +49,11 @@ The project still does not have a complete, manuscript-grade normal-state data p
 - A symmetry-completed candidate hopping table exists locally and remains executable through `/workspace/twse2_tb/reconstruct_tuo_tb.py`.
 - The previous exact-`Gamma` baseline was the all-constant `A-B` branch at global RMSE `10.255 meV`.
 - The best exact-`Gamma` path-mapping candidate improves that to `8.880 meV`.
-- The best exact-`Gamma` shared mixed-star candidate improves that further to `8.372 meV`.
-- The dominant remaining residual is no longer at `M`; it is now concentrated in the `K^B / K^T` valleys.
+- The best exact-`Gamma` shared mixed-star candidate improved that further to `8.372 meV`.
+- A new coupled path-plus-hopping candidate now improves the faithful exact-`Gamma` baseline again to `8.367 meV`.
+- The dominant remaining residual is still no longer at `M`; it remains concentrated in the `K^B / K^T` valleys even after the coupled scan.
 - Independent short-range `A-C / B-C` asymmetry and independent `sqrt(7)` asymmetry have now both been tested as isolated layers and neither improves the best exact-`Gamma` candidate.
-- The honest status is therefore no longer “only path labeling remains.” The path-label / indexing layer and the shared non-`A-B` mixed-star convention are verified contributors, while the unresolved gap has narrowed to a higher-order coupled valley-specific gauge / indexing completion that is still open.
+- The honest status is therefore no longer “only path labeling remains.” The path-label / indexing layer and the shared non-`A-B` mixed-star convention are verified contributors, and the new coupled scan confirms that their interaction matters, but the broader valley-specific completion is still open.
 
 ## Evidence Ledger Snapshot
 
@@ -61,16 +67,18 @@ The project still does not have a complete, manuscript-grade normal-state data p
 - non-`A-B` mixed-star exclusion / candidate scan package: closed locally, pending cloud sync
 - asymmetric short-range exclusion / candidate scan package: closed locally, pending cloud sync
 - asymmetric `sqrt(7)` exclusion / candidate scan package: closed locally, pending cloud sync
+- coupled path + exact-`Gamma` asymmetric `sqrt(7)` scan package: closed locally, pending cloud sync
 - Manuscript-grade normal-state data package with indexed artifacts: partial
 - SGF benchmark data package: not started
 - BTK / robustness data package: not started
 - Memory-folder persistence for current Track-1 artifacts: closed
 - Memory-folder persistence for current `k`-path mapping artifacts: closed
 - Memory-folder persistence for current mixed-star artifacts: closed
+- Memory-folder persistence for current coupled path + exact-`Gamma` asymmetric `sqrt(7)` artifacts: closed
 - Google Drive persistence for current Track-1 artifacts: blocked by connector write-surface limits
 - Replace current `H_kp` with true Tuo TB in local manuscript files: not started
 - Rerun Fig. 1-4 with true Tuo TB in local manuscript files: not started
 
 ## Immediate Next Action
 
-Keep the `8.372 meV` shared mixed-star candidate as the faithful Track-1 baseline. The next data pass should stop scanning isolated `A-C / B-C` asymmetry layers and instead test the next coupled valley-specific gauge / path-plus-hopping completion, because both the short-range-only and `sqrt(7)`-only asymmetric scans are now closed as exclusion datasets. Every newly accepted artifact should continue to be mirrored into the memory folder immediately, and Google Drive sync should remain an explicit pending queue item until a generic upload surface becomes available.
+Promote the new `8.367 meV` coupled path-plus-hopping candidate as the faithful Track-1 baseline. The next data pass should stay on the coupled valley-specific completion line and test whether broader coupled short-range plus `sqrt(7)` asymmetry can reduce the remaining `K`-sector mismatch beyond the current marginal gain, rather than reopening exhausted isolated scans or drifting into SGF / BTK before Track 1 is strong enough. Every newly accepted artifact should continue to be mirrored into the memory folder immediately, and Google Drive sync should remain an explicit pending queue item until a writable connector surface becomes available again.
