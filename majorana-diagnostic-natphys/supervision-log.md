@@ -218,3 +218,28 @@ The project could confuse provenance recovery with evidence recovery and start w
 - Recreated `/workspace/output/three-terminal-benchmark/RECOVERY_MANIFEST.md`
 - Recreated `/workspace/output/three-terminal-benchmark/provenance_manifest.json`
 - Converted the missing-bundle state into an explicit, auditable blocker with an exact expected-file list
+
+## 2026-04-29 | Round 10 supervision after runnable recovery-bootstrap setup
+
+### Overall evaluation
+This round still does not restore scientific evidence, but it materially improves execution readiness. The project now has a real recovery bootstrap that can be rerun in an empty scheduled workspace and will deterministically rebuild the recovery folder, inspect the live Python stack, and restate the exact missing benchmark assets without relying on conversational memory.
+
+### Gap to target-journal standard
+- The shared three-terminal benchmark entry script is still absent from the current workspace.
+- All nine expected three-terminal benchmark assets remain absent from the current workspace.
+- The scheduled-run Python stack is incomplete for a likely rerun path because `scipy` and `matplotlib` are not currently importable.
+
+### Most critical quality risk
+The project could continue assuming that "restoring the old bundle" is one blocker, when in fact the runnable environment itself has drifted enough that the eventual bundle restoration may still fail on import before any data are recomputed.
+
+### Plan-revision advice
+1. Keep the recovery bootstrap as the required first command in future scheduled runs until the real script bundle is restored.
+2. Make the next execution round about recovering `three_terminal_benchmark.py` and the historical CSV inputs or outputs from persistent storage, not about manuscript work.
+3. Immediately after script restoration, close the missing `scipy` and `matplotlib` dependencies before attempting the `nu_ring` and `P_topo` rerun.
+4. Continue treating all figure and manuscript language as conditional until the benchmark files are regenerated from a live runnable path.
+
+### Newly completed items
+- Added `memory/majorana-diagnostic-natphys/code/majorana_recovery_bootstrap.py`
+- Regenerated `/workspace/output/three-terminal-benchmark/RECOVERY_MANIFEST.md`
+- Generated `/workspace/output/three-terminal-benchmark/environment_audit.json`
+- Generated `/workspace/output/three-terminal-benchmark/missing_assets.json`

@@ -9,18 +9,19 @@
 Build a publishable theory paper that does not merely restate that nonlocal conductance helps, but establishes a genuinely new and experimentally actionable diagnostic hierarchy that separates topological Majorana zero modes from trivial zero-energy states across multiple superconducting hybrid platforms. The project is not considered complete until the estimated Nature Physics acceptance probability exceeds 70% and all required evidence layers are closed with auditable support.
 
 ## Current stage
-Strengthened recovery stage inside the pilot-manuscript phase. The project still rests on literature-verified repositioning, theory-standard fixing, expanded transport numerics, a first three-terminal figure-grade benchmark, and a frozen topology-layer upgrade specification for the next Figure 4 rebuild, but the current scheduled-run workspace had lost the executable three-terminal bundle. This round restored the local bundle provenance under `/workspace/output/three-terminal-benchmark/` without fabricating missing numerical assets, so the project is now back to an auditable recovery state rather than an untracked missing-output state.
+Strengthened recovery stage inside the pilot-manuscript phase. The project still rests on literature-verified repositioning, theory-standard fixing, expanded transport numerics, a first three-terminal figure-grade benchmark, and a frozen topology-layer upgrade specification for the next Figure 4 rebuild, but the current scheduled-run workspace had lost the executable three-terminal bundle. The recovery state is now at least runnable and auditable again: the workspace contains a recovery bootstrap under `memory/majorana-diagnostic-natphys/code/majorana_recovery_bootstrap.py`, and rerunning it rebuilds `/workspace/output/three-terminal-benchmark/` with environment and missing-asset manifests without fabricating numerical results.
 
 ## Current main bottleneck
-The main bottleneck is now the missing executable three-terminal benchmark bundle in the current workspace. The scientific bottleneck is still the weak topology layer in Figure 4, but the immediate submission-blocking constraint is more basic: the script path and historical outputs required to rerun `nu_ring` and `P_topo` on the shared inhomogeneous transport instances are not present here. Until that bundle is restored, the topology upgrade remains specified but not executable.
+The main bottleneck is now the still-missing executable three-terminal benchmark bundle in the current workspace. The scientific bottleneck is still the weak topology layer in Figure 4, but the immediate submission-blocking constraint is more basic: the script path and historical outputs required to rerun `nu_ring` and `P_topo` on the shared inhomogeneous transport instances are not present here, and the recovery audit also shows that the scheduled-run Python stack currently lacks `scipy` and `matplotlib`. Until the entry script, historical bundle, and missing runtime dependencies are restored, the topology upgrade remains specified but not executable.
 
 ## Highest-priority objective for the current round
-Re-establish the three-terminal benchmark as an auditable object in the current workspace before attempting any further manuscript inflation:
+Re-establish the three-terminal benchmark as an auditable and execution-ready object in the current workspace before attempting any further manuscript inflation:
 
 1. regenerate the bundle provenance and exact expected-file list from stable project memory;
 2. make the current absence of scripts and historical outputs explicit rather than leaving the bundle in a silent missing state;
-3. keep the next executable target fixed on restoring the shared rerun path for `nu_ring` and `P_topo`;
-4. avoid treating provenance recovery as evidence recovery.
+3. audit the actual scheduled-run Python stack rather than assuming the old environment still exists;
+4. keep the next executable target fixed on restoring the shared rerun path for `nu_ring` and `P_topo`;
+5. avoid treating provenance recovery as evidence recovery.
 
 ## Proposed central claim
 Local zero-bias peaks are neither sufficient nor stably informative in realistic hybrid superconductors; a topological diagnosis requires the joint consistency of end-to-end correlation, nonlocal transport, bulk-gap reopening, and scattering-matrix topology, and this hierarchy remains discriminating across dot-induced ABS, impurity-induced YSR-like states, and disorder-induced near-zero modes.
@@ -66,4 +67,4 @@ Local zero-bias peaks are neither sufficient nor stably informative in realistic
 - Reason: numerical coverage and figure readiness improved, but the evidence is still not selective enough, and the topology layer remains below the threshold needed for a top-tier theory paper
 
 ## Last update
-2026-04-29: ran Majorana Nature Physics strengthened recovery mode. Confirmed that the current scheduled-run workspace still lacks the executable three-terminal scripts and historical numerical outputs, so a real topology rerun remains blocked. Recovered the bundle provenance into `/workspace/output/three-terminal-benchmark/RECOVERY_MANIFEST.md` and `/workspace/output/three-terminal-benchmark/provenance_manifest.json`, recorded the exact expected asset list from stable memory, and updated the project bottleneck from a generic missing-rerun description to a concrete missing-bundle recovery state.
+2026-04-29: ran Majorana Nature Physics hourly recovery mode. Added and executed `majorana_recovery_bootstrap.py`, which rebuilt `/workspace/output/three-terminal-benchmark/` as a runnable recovery folder and regenerated `RECOVERY_MANIFEST.md`, `provenance_manifest.json`, `environment_audit.json`, and `missing_assets.json` from stable memory plus direct environment inspection. Confirmed that all nine expected three-terminal benchmark assets are still absent, no shared benchmark entry script is present in the searched recovery paths, and the scheduled-run Python stack is missing `scipy` and `matplotlib`, so the full-device topology rerun remains blocked.
