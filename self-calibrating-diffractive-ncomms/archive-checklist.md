@@ -59,6 +59,12 @@
 - 环境烟雾测试报告：`/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.md`
 - 环境烟雾测试 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.json`
 - 环境烟雾测试 PNG：`/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.png`
+- round6 NumPy D2NN 脚本：`/workspace/self-calibrating-diffractive-ncomms/scripts/round6_numpy_passive_d2nn.py`
+- round6 指标表：`/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_metrics.csv`
+- round6 汇总：`/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_summary.md`
+- round6 汇总 JSON：`/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_summary.json`
+- round6 面板：`/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_panel.png`
+- round6 训练历史：`/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_training_history.json`
 
 ## 本轮归档状态判断
 - 已完成：主文草稿与本轮审稿记录已写入 memory 命名空间

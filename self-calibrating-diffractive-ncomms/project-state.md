@@ -3,6 +3,7 @@
 ## 项目基本信息
 - 项目名称：Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations
 - 目标期刊：Nature Communications
+<<<<<<< Updated upstream
 - 最近更新时间：2026-04-29（iteration-resume）
 - 当前资料来源：
   - `/workspace/user_files/01-markdown-1-md-3`
@@ -16,6 +17,9 @@
   - `/workspace/self-calibrating-diffractive-ncomms/round3_experiment_feasibility_note.md`
   - `/workspace/self-calibrating-diffractive-ncomms/round4_tight_bound_note.md`
   - `/workspace/self-calibrating-diffractive-ncomms/outputs/round4_cross_task_summary.md`
+=======
+- 最近更新时间：2026-04-29（round6-numpy-rebuild）
+>>>>>>> Stashed changes
 
 ## 当前运行规则
 - 默认推进主体：自研智能体
@@ -51,6 +55,7 @@
 - 可归档的代码、数据、图表、正文、补充材料与最终投稿包
 
 ## 当前阶段
+<<<<<<< Updated upstream
 强化研究迭代与严格写作并行阶段（已有第一轮弱器件级原型与连续主文骨架，但主结果仍未闭环）。
 
 说明：
@@ -125,6 +130,79 @@
 1. 固定 `pilot_amplitude ≈ 0.35` 的窄窗口，做更小范围的 layer-count 或 turbulence 局部扫描，而不是再做宽泛新分支。
 2. 明确拆分“workspace 可复跑性恢复”和“Figure 5 真正变强”这两件事，避免把前者误写成后者。
 3. 若 common-path 仍不能稳定优于 ordinary 与 non-common-path，则收紧主张边界，不再把当前 processor-level 结果包装成接近闭环。
+=======
+最小可复跑数据链恢复阶段。
+
+说明：
+- round1-round4 的 surrogate、wave-optics、information-bound 和 cross-task 证据已建立。
+- round5 / round5b 已有第一轮器件级 prototype 结果，但强度不足以封闭主结论。
+- strict manuscript 已形成，但 Figure 5 仍然不够强。
+- 当前活动工作区缺少 round1-round5b 的底层脚本与输出文件，因此本轮先把“可持续运行环境 + 数据补全链路”补稳。
+- round6 已在当前活动工作区恢复出最小 NumPy 可复跑链。
+
+## 当前唯一主瓶颈
+当前唯一主瓶颈是：虽然最小可复跑环境与数据链已经恢复，但器件级 common-path 优势仍未形成稳健正信号，因此 Figure 5 仍然不够强。
+
+原因：
+- 当前已有 round5 / round5b 的第一轮弱原型结果，但 common-path 优势过弱。
+- 活动工作区缺少底层 round1-round5b 文件，限制了与既有记录完全对齐的连续补数据。
+- 网络代理限制使 `matplotlib`、`scipy`、`torch` 无法在线安装，因此不能把重依赖环境当作默认可用条件。
+- round6 的最小 NumPy 重建结果显示 common-path 相比 ordinary 仍为负向，因此当前恢复的是可复跑基线，而不是正向主证据。
+
+## 本轮唯一最高优先级
+在当前可持续运行环境上，继续补 Figure 5 所需的真实数据，并诚实筛查 common-path 是否能形成稳健优势。
+
+## 当前已验证结果
+- round1：Gaussian surrogate 上 common-path pilot 相比 no-reference 有明确增益
+- round2：Zernike wave-optics PSF 模型上，OOD 集 common-path 平均 PSNR `38.422 dB`，高于 no-reference `37.069 dB` 与 non-common-path `37.078 dB`
+- round3：最小 FNO-style baseline 为中性偏负；CRLB / information-bound 已建立
+- round4：cross-task surrogate 上 reconstruction、classification residual、inverse-design surrogate 出现第一轮正向信号
+- round5：两层 pure-reconstruction D2NN 为中性偏负；common-path 相比 ordinary `-0.191 dB`
+- round5b：三层 self-calibrating D2NN 给出第一轮弱正向 reconstruction 信号；OOD 下 common-path object-zone PSNR `11.559 dB`，ordinary `11.356 dB`，non-common-path `11.505 dB`，wrong-reference `11.350 dB`
+- round6：当前活动工作区的最小 NumPy 可复跑链已恢复；OOD 下 ordinary `11.884 dB`，common-path `10.754 dB`，non-common-path `10.690 dB`，wrong-reference `10.831 dB`
+
+## 当前环境状态
+- 可用：
+  - Python 3.12
+  - `numpy 2.3.5`
+  - `Pillow 12.2.0`
+  - 本地文件写入、JSON 输出、PNG 输出
+  - 最小 D2NN 对照脚本真实运行与结果落盘
+- 不可用：
+  - `matplotlib`
+  - `scipy`
+  - `torch` / `torchvision`
+- 已验证：
+  - `/workspace/self-calibrating-diffractive-ncomms/` 工作目录已建立
+  - `scripts/outputs/logs` 子目录已建立
+  - `environment_smoke_test.py` 已真实运行
+  - `environment_smoke_test.md/json/png` 已落盘
+- 当前判断：
+  - 现阶段应采用 `numpy + Pillow` 路线继续补数据
+
+## 本轮交付物
+- `manuscript-v1-strict.md`
+- `review-round-manuscript-v1-strict.md`
+- `iteration-log.md`
+- `iteration-round-2026-04-29.md`
+- `/workspace/self-calibrating-diffractive-ncomms/scripts/environment_smoke_test.py`
+- `/workspace/self-calibrating-diffractive-ncomms/scripts/minimal_passive_d2nn_protocol.md`
+- `/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.md`
+- `/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.json`
+- `/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.png`
+- `/workspace/self-calibrating-diffractive-ncomms/scripts/round6_numpy_passive_d2nn.py`
+- `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_metrics.csv`
+- `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_summary.md`
+- `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_summary.json`
+- `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_panel.png`
+- `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_training_history.json`
+
+## 下一轮立即动作
+1. 从 round6 基线出发，调整 reference 权重、层数或任务定义，继续增强 Figure 5
+2. 保留“共路、非共路、错误 reference”三组关键对照
+3. 优先补真实运行数据而不是等待外部依赖
+4. 每轮结束强制写入 `iteration-log.md`
+>>>>>>> Stashed changes
 
 ## 技术状态检查结论
 - 已验证：
@@ -217,6 +295,7 @@
 3. 还没有三类退化、投稿级正文/补图/参考文献链，以及更强鲁棒性验证
 
 ## 最近一次重要更新摘要
+<<<<<<< Updated upstream
 - 2026-04-26：基于上传提案初始化 `self-calibrating-diffractive-ncomms` 项目命名空间。
 - 2026-04-26：完成 round1 最小机制验证，使用 shared-blur Gaussian pilot surrogate 检验共路 pilot 降低动态退化不确定性的基本方向是否成立。
 - 2026-04-26：OOD stronger-aberration 集上，无 reference 平均 PSNR 为 `19.669 dB`，共路 pilot 为 `21.990 dB`，非共路 pilot 为 `20.268 dB`。
@@ -234,3 +313,12 @@
 - 2026-04-27：本轮发现新的可复现性风险：项目状态文件中记录的 round1-round5b 代码与输出路径当前不在活动工作区中，故本轮无法对这些结果做直接复跑验证；该问题已记为“证据包可访问性缺口”，但不改写既有已记录结果。
 - 2026-04-29：根据用户“进入智能体的研究迭代，强化运行”的新指令，恢复研究迭代模式，并新增独立迭代日志与本轮迭代记录文件。
 - 2026-04-29：在活动工作区新增并运行 `round5c_passive_processor_seed_pilot_scan.py`，完成 seed / pilot-amplitude 小扫描；该 rebuilt 后继链恢复了 processor-level 结果的本地可跑性，但未把 Figure 5 抬升到稳健正向。当前最佳窗口出现在 `pilot_amplitude = 0.35`，common-path 相比 ordinary 仅 `+0.061 dB`，且相对 non-common-path 仍为 `-0.046 dB`。
+=======
+- 2026-04-27：完成 round5 两层 pure-reconstruction phase-only D2NN 对照，结果中性偏负
+- 2026-04-27：完成 round5b 三层 self-calibrating phase-only D2NN 原型，得到第一轮弱正向 reconstruction 信号
+- 2026-04-27：进入 strict manuscript mode，形成 `manuscript-v1-strict.md`
+- 2026-04-27：完成五审稿人严格评估，接收概率仍显著低于停止标准
+- 2026-04-29：恢复研究迭代并建立独立迭代日志
+- 2026-04-29：根据用户新指令，将“配置运行环境、运行代码、补全数据”设为当前最高优先级，并完成本地环境打通
+- 2026-04-29：完成 `round6_numpy_passive_d2nn.py` 的真实运行，恢复最小 ordinary / common-path / non-common-path / wrong-reference 对照数据链；结果显示 common-path 相比 ordinary 仍为负向 `-1.131 dB`，当前只能记为可复跑基线，不可记为正向主证据。
+>>>>>>> Stashed changes

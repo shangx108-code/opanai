@@ -37,6 +37,7 @@
   2. 优先补真实运行数据，不再等待外部依赖
   3. 按每小时一轮更新本日志
 
+<<<<<<< Updated upstream
 ## 2026-04-29 Scheduled Execution
 
 - 当前阶段：活动工作区 processor-level 链路恢复与弱结果复核
@@ -54,3 +55,26 @@
 - 当前判断：
   - 本轮完成的是“恢复可跑链 + 给出诚实弱结果”，不是“把 Figure 5 变强”
   - 下一轮必须继续围绕最窄窗口做局部扫描，而不是扩展新主线
+=======
+## 2026-04-29 Round 6 NumPy Rebuild
+
+- 当前阶段：最小可复跑数据链恢复
+- 当前唯一主瓶颈：器件级 common-path 优势仍未形成稳健正信号
+- 本轮唯一最高优先级：在当前 `numpy + Pillow` 环境下恢复最小 ordinary / common-path / non-common-path / wrong-reference 对照
+- 本轮真实结果：
+  - 已新增 `round6_numpy_passive_d2nn.py`
+  - 已真实运行并输出 `metrics.csv`、`summary.md/json`、`panel.png`、`training_history.json`
+  - ordinary OOD mean PSNR：`11.884 dB`
+  - common-path OOD mean PSNR：`10.754 dB`
+  - non-common-path OOD mean PSNR：`10.690 dB`
+  - wrong-reference OOD mean PSNR：`10.831 dB`
+  - common minus ordinary：`-1.131 dB`
+  - common minus non-common-path：`+0.063 dB`
+- 当前判断：
+  - 最小 NumPy 数据补全链已经恢复成功
+  - 但这轮结果不支持把 common-path 写成优于 ordinary 的器件级主证据
+- 下一轮立即动作：
+  1. 保留本轮脚本与数据链作为可复跑基线
+  2. 调整 reference 权重、层数或任务定义，再做小范围稳健性扫描
+  3. 继续按每小时一轮记录，不把本轮负结果包装成正向亮点
+>>>>>>> Stashed changes

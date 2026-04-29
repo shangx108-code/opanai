@@ -243,6 +243,7 @@
 
 ## 2026-04-29 Iteration Resume
 
+<<<<<<< Updated upstream
 ### 当前检查范围
 - 用户是否要求重新进入研究迭代并强化运行
 
@@ -288,3 +289,30 @@
 ### 是否支持进入下一阶段
 - 支持围绕 `pilot_amplitude ≈ 0.35` 做最窄局部扫描。
 - 不支持切换到更宽的新主线，也不支持把 Figure 5 视为已闭环。
+=======
+## 2026-04-29 Environment Bring-up
+- 已确认：
+  - 用户把“配置运行环境、运行代码、补全数据”提升为当前最高优先级
+  - `/workspace/self-calibrating-diffractive-ncomms/` 工作目录已建立
+  - `scripts/outputs/logs` 子目录已建立
+  - `environment_smoke_test.py` 已真实运行
+  - `numpy + Pillow` 复数 FFT、JSON 输出、PNG 输出链路可用
+- 当前问题：
+  - 在线安装 `matplotlib`、`scipy`、`torch` 失败，原因是网络代理限制
+  - 活动工作区仍缺少 round1-round5b 底层脚本与输出文件
+- 结论：
+  - 当前环境已足以支持最小 NumPy 路线继续补数据
+  - 当前环境仍不足以直接展开依赖 `torch/scipy/matplotlib` 的更重训练路线
+
+## 2026-04-29 Round 6 NumPy Rebuild
+- 已确认：
+  - `round6_numpy_passive_d2nn.py` 已真实运行
+  - `metrics.csv`、`summary.md/json`、`panel.png`、`training_history.json` 已落盘
+  - 当前活动工作区已重新具备最小器件级对照的数据生成能力
+- 当前问题：
+  - common-path OOD mean PSNR `10.754 dB`，低于 ordinary `11.884 dB`
+  - common-path 仅略高于 non-common-path `+0.063 dB`
+- 结论：
+  - 本轮完成的是“可复跑基线恢复”，不是“主结果增强”
+  - 当前结果不能被包装成 common-path 的正向器件级证据
+>>>>>>> Stashed changes
