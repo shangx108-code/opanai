@@ -1,40 +1,33 @@
 # 2026-04-29 研究迭代轮
 
 ## 当前阶段
-- 从“已停止自动迭代”切换为“强化研究迭代模式”。
+- 最小 runnable chain 稳定后的 Figure 5 局部增强阶段。
 
 ## 当前主瓶颈
-- 尚未获得 ordinary D2NN 与 pilot-assisted D2NN 在统一动态像差协议下的最小器件级阳性对照。
+- common-path 仍未在 processor level 上稳健优于 ordinary D2NN。
 
 ## 本轮最高优先级
-- 恢复研究迭代，并把后续每轮推进改成可追溯、可检查、可审计的执行模式。
-
-## 本轮新增规则
-1. 每轮必须只围绕一个主瓶颈推进。
-2. 每轮必须产出可检查交付物或明确阻塞点。
-3. 每轮必须写入 `iteration-log.md`。
-4. 若无新结果，不得制造“已在运行”的假象。
-
-## 当前真实状态
-- 已验证的 strongest evidence 仍停留在 surrogate、wave-optics 和 cross-task 层。
-- 器件级主结果仍未完成。
-- 自动排程是否正在外部持续触发，当前没有可检查日志证明。
-
-## 下一轮立即动作
-- 以最小 NumPy 方案设计 passive diffractive processor 对照脚本接口、控制组和输出格式。
+- 先把环境 readiness 从阻塞项降级为已解决项，再用真实运行结果判断 Figure 5 是否存在可用局部窗口。
 
 ## 本轮新增执行结果
-- 已在活动工作区新增并运行 `/workspace/self-calibrating-diffractive-ncomms/round5c_passive_processor_seed_pilot_scan.py`。
+- 已创建并验证：
+  - `/workspace/self-calibrating-diffractive-ncomms/scripts/environment_smoke_test.py`
+  - `/workspace/self-calibrating-diffractive-ncomms/scripts/minimal_passive_d2nn_protocol.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/scripts/round6_numpy_passive_d2nn.py`
 - 已产出：
-  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_detail.csv`
-  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_summary.csv`
-  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_summary.json`
-  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_summary.md`
-  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round5c_passive_processor_seed_scan_panel.png`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.json`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.png`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_metrics.csv`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_summary.md`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_summary.json`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_panel.png`
+  - `/workspace/self-calibrating-diffractive-ncomms/outputs/round6_numpy_passive_d2nn_training_history.json`
 
 ## 本轮结果判断
-- 这轮真实恢复了 processor-level 链路的工作区可跑性。
-- 当前最佳 pilot 幅度窗口出现在 `0.35`。
-- 该窗口下 common-path 相比 ordinary 的平均 OOD object-zone PSNR 仅 `+0.061 dB`。
-- 同一窗口下 common-path 相比 non-common-path 仍为 `-0.046 dB`，因此还不能把它视为清晰稳健的 Figure 5 阳性结果。
-- 这轮的主要价值是恢复可执行链并给出诚实弱结果，而不是完成主结果闭环。
+- 环境已稳定到足以支持后续持续补 Figure 5 数据。
+- best common-path 与 best ordinary 在当前最优点上近似持平，不支持“common-path 已稳健领先 ordinary”。
+- common-path 在 matched 配置下出现了 `+0.214 dB` 的 local common-vs-noncommon 优势，这说明共路信息并未消失，但仍不足以封闭主文结论。
+
+## 下一轮立即动作
+- 固定低 pilot 幅度窗口，继续做 matched 局部扫描，优先验证 common-path 是否能稳定跨过 ordinary。

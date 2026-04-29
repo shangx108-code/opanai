@@ -1,18 +1,18 @@
 # 角色任务表：self-calibrating-diffractive-ncomms
 
 ## 当前阶段
-环境配置与数据补全优先阶段。
+最小 runnable chain 稳定后的 Figure 5 局部增强阶段。
 
 ## 当前唯一主瓶颈
-Figure 5 相关数据补全缺少稳定可复跑环境与连续证据链。
+Figure 5 仍缺少相对 ordinary D2NN 的稳健 common-path 优势。
 
 ## 角色任务
 
 ### 统筹者
-- 当前任务：先把可复跑环境和数据落盘链恢复稳定，再推进 Figure 5 稳健性增强
+- 当前任务：保持最小可复跑链稳定，并把推进重心压到 common-path vs ordinary 的局部增强
 - 输入：round1-round5b 已记录结果、环境状态、活动工作区可见文件
 - 输出：环境就绪结论、Figure 5 增强路线、风险边界
-- 完成标准：后续任务都围绕“稳定补数据 + processor-level 优势增强”展开
+- 完成标准：后续任务都围绕“窄窗补数据 + processor-level 优势增强”展开
 - 优先级：最高
 
 ### 理论人员
@@ -23,10 +23,10 @@ Figure 5 相关数据补全缺少稳定可复跑环境与连续证据链。
 - 优先级：高
 
 ### 代码与数值计算人员
-- 当前任务：在 `numpy + Pillow` 环境下恢复或补出 round5 / round5b 最小可复跑脚本，并继续增强 Figure 5
+- 当前任务：沿当前 `numpy + Pillow` 管线继续做低 pilot 幅度、少量层数的 matched 局部扫描
 - 输入：round5 / round5b 已记录指标、最小协议说明、当前工作区环境
 - 输出：可复跑脚本、CSV、summary、图文件、运行日志
-- 完成标准：先满足“可稳定运行”；随后 processor-level gain 不再只是弱单点信号
+- 完成标准：最小链保持稳定，且 common-path 相对 ordinary 的增益不再只是近似持平或弱单点信号
 - 优先级：最高
 
 ### 数据分析人员
@@ -49,14 +49,14 @@ Figure 5 相关数据补全缺少稳定可复跑环境与连续证据链。
 - 优先级：高
 
 ### 画图人员
-- 当前任务：继续把 round5b 面板当作 Figure 5 原型，而不是终稿；环境恢复前不升级为正式投稿图
+- 当前任务：把 round6 NumPy 面板当作最新 Figure 5 基线，并明确标注其局部窗口与证据边界
 - 输入：round5 / round5b 已记录输出与后续新数据
 - 输出：真实数据图更新版
 - 完成标准：Figure 5 每个条件都必须有论证职责
 - 优先级：中
 
 ### 论文撰写人员
-- 当前任务：维护 `manuscript-v1-strict.md` 的证据边界，只在器件级结果真正增强后再升级 Figure 5 的叙述强度
+- 当前任务：维护 `manuscript-v1-strict.md` 的证据边界，把 Figure 5 更新为“可复跑基线 + 局部窗口”而不是“稳健优势”
 - 输入：项目主张、round1-round5b 证据边界、目标期刊要求
 - 输出：更新后的主文结构或正文
 - 完成标准：Figure 5 被明确引用，但不越过证据强度
