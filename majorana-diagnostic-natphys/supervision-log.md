@@ -243,3 +243,27 @@ The project could continue assuming that "restoring the old bundle" is one block
 - Regenerated `/workspace/output/three-terminal-benchmark/RECOVERY_MANIFEST.md`
 - Generated `/workspace/output/three-terminal-benchmark/environment_audit.json`
 - Generated `/workspace/output/three-terminal-benchmark/missing_assets.json`
+
+## 2026-04-29 | Round 11 supervision after persistent-storage recovery search
+
+### Overall evaluation
+This round still does not restore scientific evidence, but it sharpens the recovery state into a true upstream blocker. The project now knows that the three-terminal bundle is not merely missing from the immediate workspace path: the live workspace/container search and connected Google Drive metadata search both failed to recover the shared script or any historical bundle assets, while the recovery provenance was successfully regenerated again in the current workspace.
+
+### Gap to target-journal standard
+- The shared three-terminal benchmark entry script is still absent from every searched local recovery path.
+- All nine expected benchmark CSV/PNG assets remain absent from the current workspace.
+- The scheduled-run Python stack still lacks `scipy` and `matplotlib`, so even a restored script would not yet rerun cleanly in the present environment.
+
+### Most critical quality risk
+The project could waste more rounds treating the blocker as a manuscript problem or a vague archive problem when it is now specifically a missing persistent-source recovery problem for the three-terminal rerun path.
+
+### Plan-revision advice
+1. Keep the regenerated recovery bundle as the canonical proof of absence in the current workspace, not as a substitute for data.
+2. Make the next execution round about recovering `three_terminal_benchmark.py` and the nine expected bundle files from a persistent source outside the currently mounted workspace or searchable Drive index.
+3. Immediately after script recovery, restore `scipy` and `matplotlib` before attempting the `nu_ring`/`P_topo` rerun.
+4. Continue blocking manuscript-final language until the live rerun path exists again.
+
+### Newly completed items
+- Re-ran `majorana_recovery_bootstrap.py` and regenerated the recovery provenance files in `/workspace/output/three-terminal-benchmark/`
+- Confirmed by broader local/container search that no recoverable three-terminal script or bundle assets exist in the mounted workspace
+- Confirmed by connected Google Drive metadata search that no directly searchable archived copy of the missing three-terminal bundle is currently exposed there

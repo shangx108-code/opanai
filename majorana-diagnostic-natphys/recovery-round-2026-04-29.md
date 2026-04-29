@@ -7,6 +7,7 @@
 - Updated the project bottleneck from a generic "missing rerun" description to a concrete missing-bundle recovery state. [verified]
 - Added a runnable recovery bootstrap at `/workspace/memory/majorana-diagnostic-natphys/code/majorana_recovery_bootstrap.py` that rebuilds the recovery folder and audits the scheduled-run environment. [verified]
 - Re-ran the recovery bootstrap and regenerated `RECOVERY_MANIFEST.md`, `provenance_manifest.json`, `environment_audit.json`, and `missing_assets.json` in the current workspace. [verified]
+- Expanded the recovery search across the live workspace/container and connected Google Drive metadata, and did not recover `three_terminal_benchmark.py` or any of the nine expected bundle assets. [verified]
 - Confirmed that the current scheduled-run environment imports `numpy` and `pandas` but is missing `scipy` and `matplotlib`, so the benchmark rerun environment is still incomplete even before historical data restoration. [active blocker]
 - Confirmed that no three-terminal benchmark entry script is present at the searched recovery paths and that all nine expected benchmark assets remain absent from the current workspace. [active blocker]
 
@@ -17,7 +18,7 @@
 - Any claim that the environment is now fully ready for the three-terminal rerun. [unverified - do not commit]
 
 ## Current stable bottleneck
-- The current workspace still lacks the shared three-terminal benchmark entry script and all historical bundle assets, and the scheduled-run Python environment is missing `scipy` and `matplotlib`, so the full-device topology rerun cannot yet start.
+- The current workspace still lacks the shared three-terminal benchmark entry script and all historical bundle assets, the broader local/container and connected Google Drive search did not surface a recoverable copy, and the scheduled-run Python environment is missing `scipy` and `matplotlib`, so the full-device topology rerun cannot yet start.
 
 ## Next durable action
-- Restore the shared three-terminal benchmark script and historical bundle from persistent storage, then complete the missing scientific Python stack required by that script and start the matched transport-plus-topology rerun.
+- Restore the shared three-terminal benchmark script and historical bundle from a persistent source that is not yet mounted into the current workspace or indexed in connected Google Drive search, then complete the missing scientific Python stack required by that script and start the matched transport-plus-topology rerun.
