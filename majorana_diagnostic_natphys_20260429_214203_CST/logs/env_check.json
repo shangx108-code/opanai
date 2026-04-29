@@ -1,0 +1,46 @@
+{
+  "project_root": "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST",
+  "python": "3.12.13",
+  "platform": "Linux-6.12.47-x86_64-with-glibc2.39",
+  "executable": "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/.venv/bin/python",
+  "cwd": "/workspace",
+  "venv": "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/.venv",
+  "commands": {
+    "python": "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/.venv/bin/python",
+    "python3": "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/.venv/bin/python3",
+    "git": "/usr/local/bin/git",
+    "node": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "rg": "/usr/bin/rg"
+  },
+  "modules": {
+    "numpy": {
+      "status": "available",
+      "version": "2.3.5"
+    },
+    "pandas": {
+      "status": "available",
+      "version": "2.2.3"
+    },
+    "scipy": {
+      "status": "missing",
+      "error": "No module named 'scipy'"
+    },
+    "matplotlib": {
+      "status": "missing",
+      "error": "No module named 'matplotlib'"
+    },
+    "seaborn": {
+      "status": "missing",
+      "error": "No module named 'seaborn'"
+    }
+  },
+  "directories": {
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/code": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/data/raw": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/data/processed": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/figures": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/derivations": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/manuscript": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260429_214203_CST/logs": true
+  }
+}
