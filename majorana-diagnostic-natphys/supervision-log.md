@@ -291,3 +291,27 @@ The project could waste additional rounds retrying the same online install path 
 - Re-ran `majorana_recovery_bootstrap.py` and refreshed the environment audit in `/workspace/output/three-terminal-benchmark/`
 - Attempted direct dependency restoration with `python -m pip install scipy matplotlib`
 - Verified that the scheduled container cannot currently reach the configured package-index proxy for those installs
+
+## 2026-04-29 | Round 13 supervision after targeted archive recovery retry
+
+### Overall evaluation
+This round still does not restore scientific evidence, but it does strengthen the recovery diagnosis into one narrower and more actionable statement. The project refreshed the three-terminal recovery provenance again and then rechecked connected project storage with focused archive queries rather than relying only on older broad-search notes.
+
+### Gap to target-journal standard
+- The shared three-terminal benchmark entry script is still absent from the live workspace.
+- All nine expected three-terminal benchmark CSV/PNG assets remain absent from the live workspace after a fresh recovery-bootstrap run.
+- A targeted connected-Google-Drive search for `majorana three terminal benchmark` and `majorana three terminal figures` returned no recoverable archive result.
+
+### Most critical quality risk
+The project could still waste a round searching the same indexed locations again, even though the current evidence now points more specifically to a non-mounted or otherwise non-indexed persistent source as the missing recovery location.
+
+### Plan-revision advice
+1. Keep `majorana_recovery_bootstrap.py` as the first command in future recovery runs.
+2. Treat the canonical next action as restoring the three-terminal script bundle from non-mounted persistent storage rather than repeating the same workspace or indexed-Drive queries.
+3. Pair any recovered script or asset bundle with an offline or prebundled `scipy`/`matplotlib` path before attempting the matched `nu_ring`/`P_topo` rerun.
+4. Continue blocking any manuscript-final interpretation until the live rerun path and its data bundle are restored together.
+
+### Newly completed items
+- Re-ran `majorana_recovery_bootstrap.py` and reconfirmed `Missing assets: 9` with `Ready for topology rerun: False`
+- Repeated targeted connected-Google-Drive archive searches for the missing three-terminal bundle using benchmark-specific queries
+- Verified that the indexed archive path still does not expose a recoverable copy of the missing script or bundle
