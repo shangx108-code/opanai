@@ -1,0 +1,17 @@
+{
+  "schedule": {
+    "frequency": "hourly",
+    "interval": 1,
+    "timezone": "Asia/Shanghai"
+  },
+  "stop_criterion": {
+    "all_reviewers_acceptance_probability_gt": 0.8,
+    "reviewer_count": 5,
+    "evidence_chain_complete": true
+  },
+  "completion_outputs": [
+    "submission_package",
+    "compiled_main_pdf",
+    "compiled_supplement_pdf"
+  ]
+}
