@@ -29,7 +29,7 @@ Complete a manuscript-grade data package for the twse2-Andreev project: reconstr
 
 ## Single Main Bottleneck
 
-The project now has a faithful coupled baseline, a full V3 closure, a portable k-space sparse compressed-V3 approximation, a verified SGF stability trial, a first valley-resolved generalized BTK package, a validated semi-infinite SGF benchmark, a new valley-resolved generalized BTK rerun anchored to that semi-infinite SGF data, and a manuscript-language interpretation note that separates robust BTK statements from obsolete proxy-era claims. The single main bottleneck has therefore shifted again: the next highest-priority task is manuscript integration and deciding whether the current BTK kernel itself needs a deeper upgrade for journal-standard claims.
+The BTK adequacy check is now closed. The current semi-infinite-informed BTK package preserves a real valley-resolved response, but the kernel is still a proxy benchmark and cannot yet support PRL-grade phase-sensitive exclusion claims. The single active bottleneck is therefore a deeper BTK kernel upgrade before manuscript-level exclusion of ordinary same-sign `s`-wave.
 
 ## Newly Verified Facts
 
@@ -39,9 +39,12 @@ The project now has a faithful coupled baseline, a full V3 closure, a portable k
 - The long-term root now includes a reproducible environment bootstrap script, a minimal requirements file, and an hourly iteration driver.
 - The local hourly iteration driver now reports `ready_for_hourly_iteration: true`.
 - An older overlapping two-hour schedule has been disabled so the new one-hour project loop is the only active cadence for this project.
+- The BTK adequacy review is now closed: the present semi-infinite-informed BTK package is scientifically usable as a proxy diagnostic, but not yet strong enough for PRL-grade phase-sensitive exclusion wording.
+- The strongest current valley peak-contrast asymmetry still appears in the `s_wave` channel inside the proxy kernel, so the current BTK line does not yet exclude ordinary same-sign `s`-wave.
 
 ## Immediate Next Action
 
 1. Keep the `8.367 meV` coupled path-plus-hopping candidate as the faithful baseline, the `1.503 meV` full V3 package as the strongest closure, and the `2.726 meV` k-space sparse model as the current best portable compressed approximation for downstream work.
 2. Treat the semi-infinite-informed BTK package as the only active manuscript branch.
-3. Compare the BTK observables against the PRL claim boundary and decide whether the BTK kernel itself must be upgraded beyond the current proxy model before text integration.
+3. Use `btk-kernel-prl-adequacy-assessment-2026-04-30.md` as the ruling memo for what the current BTK package can and cannot claim.
+4. Upgrade the BTK kernel from the current scalar proxy into a channel-resolved multiorbital generalized BTK engine before attempting PRL-grade exclusion wording.
