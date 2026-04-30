@@ -9,7 +9,7 @@
 
 ## Current single bottleneck
 
-The project now has a runnable physical baseline, but it still lacks the first trainable optical-frontend surrogate or differentiable diffractive baseline needed to test whether the reference advantage survives beyond post-detection adaptive deconvolution.
+The project now has both a runnable physical baseline and a first trainable surrogate, but the evidence chain still lacks a harder generalization test with held-out object families and a more optical-faithful differentiable frontend.
 
 ## Confirmed core story
 
@@ -24,13 +24,15 @@ A fixed passive diffractive optical processor co-propagates an object wave and a
 
 ## Immediate next action
 
-Implement the first trainable surrogate baseline on top of the same perturbation generator and metrics ledger, then compare it against the fixed and reference-guided restoration baselines already produced in `baseline-001-reference-psf`.
+Harden the current learned-calibration result by introducing held-out object families and then replace the linear low-resolution surrogate with a more optical-faithful differentiable frontend baseline.
 
 ## Verified progress
 
 - `baseline-001-reference-psf` completed as the first executable evidence package.
 - Under 8 dynamic aberration cases and 6 synthetic objects, the reference-guided baseline outperformed the fixed baseline by mean PSNR gain `4.270 dB` and mean SSIM gain `0.0088`.
 - The current result supports the narrower calibration premise but does not yet validate the full passive diffractive neural-operator claim.
+- `baseline-002-trainable-surrogate` completed as the first learned-calibration package.
+- On held-out aberration cases, the trainable surrogate achieved mean low-resolution PSNR `50.703 dB` versus `37.541 dB` for the fixed low-resolution baseline, but this comparison still shares the same small object family between train and test and is therefore not yet strong enough for manuscript evidence.
 
 ## Automation
 
