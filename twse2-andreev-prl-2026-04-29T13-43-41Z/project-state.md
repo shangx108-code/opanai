@@ -21,30 +21,26 @@ Last updated: 2026-04-30
 
 ## Current Stage
 
-Track-1 effective closure via V3 orbital-selective valley correction is in place, and the project is now in downstream BTK interpretation and hardening on top of a validated semi-infinite SGF benchmark for the PRL-oriented twisted bilayer WSe2 Andreev manuscript.
+Track-1 closure and semi-infinite SGF validation are already in place. The project has now moved into upgraded BTK discrimination work using a channel-resolved multiorbital kernel.
 
 ## Current Overall Goal
 
-Complete a manuscript-grade data package for the twse2-Andreev project: reconstruct the true-or-closest faithful Tuo tight-binding input, then generate and durably store the Fig. 1-4 evidence chain, including normal-state band benchmarks, downstream SGF / BTK / robustness arrays, and their file-level indexes in both the memory folder and GitHub.
+Complete a manuscript-grade data package for the twse2-Andreev project and convert the upgraded BTK line into a PRL-grade exclusion chain against ordinary same-sign `s`-wave.
 
 ## Single Main Bottleneck
 
-The BTK adequacy check is now closed. The current semi-infinite-informed BTK package preserves a real valley-resolved response, but the kernel is still a proxy benchmark and cannot yet support PRL-grade phase-sensitive exclusion claims. The single active bottleneck is therefore a deeper BTK kernel upgrade before manuscript-level exclusion of ordinary same-sign `s`-wave.
+The BTK kernel upgrade is now complete. The single active bottleneck is to use the upgraded kernel to construct a discriminating null-model scan that forces ordinary same-sign `s`-wave to fail on at least one robust observable.
 
 ## Newly Verified Facts
 
-- The user explicitly redirected the project so that `补齐所有数据` is the unique top priority.
-- The user set the project iteration cadence to once per hour.
-- The canonical GitHub long-term root has now been created under `shangx108-code/opanai` on branch `open-ai` at `twse2-andreev-prl-2026-04-29T13-43-41Z/`.
-- The long-term root now includes a reproducible environment bootstrap script, a minimal requirements file, and an hourly iteration driver.
-- The local hourly iteration driver now reports `ready_for_hourly_iteration: true`.
-- An older overlapping two-hour schedule has been disabled so the new one-hour project loop is the only active cadence for this project.
-- The BTK adequacy review is now closed: the present semi-infinite-informed BTK package is scientifically usable as a proxy diagnostic, but not yet strong enough for PRL-grade phase-sensitive exclusion wording.
-- The strongest current valley peak-contrast asymmetry still appears in the `s_wave` channel inside the proxy kernel, so the current BTK line does not yet exclude ordinary same-sign `s`-wave.
+- The one-hour project schedule remains the only active schedule for this chat.
+- The upgraded BTK engine has now been generated in `btk-channel-resolved-multiorbital-semi-infinite-2026-04-30`.
+- This package replaces the scalar conductance proxy with channel-resolved reflection amplitudes, multiorbital BdG pairing matrices, explicit interface orientation `alpha`, and explicit interface mixing `mixing_lambda`.
+- In the upgraded package, the strongest total peak contrast still appears in `s_wave`, while the strongest valley asymmetry shifts to `valley_odd`.
+- Kernel existence is therefore no longer the blocker; discriminating exclusion is.
 
 ## Immediate Next Action
 
-1. Keep the `8.367 meV` coupled path-plus-hopping candidate as the faithful baseline, the `1.503 meV` full V3 package as the strongest closure, and the `2.726 meV` k-space sparse model as the current best portable compressed approximation for downstream work.
-2. Treat the semi-infinite-informed BTK package as the only active manuscript branch.
-3. Use `btk-kernel-prl-adequacy-assessment-2026-04-30.md` as the ruling memo for what the current BTK package can and cannot claim.
-4. Upgrade the BTK kernel from the current scalar proxy into a channel-resolved multiorbital generalized BTK engine before attempting PRL-grade exclusion wording.
+1. Treat `btk-channel-resolved-multiorbital-semi-infinite-2026-04-30` as the active BTK working package.
+2. Use `btk-upgrade-result-2026-04-30.md` as the handoff note for what the upgraded kernel now establishes and what it still does not establish.
+3. Run a selection-rule null-model scan with the upgraded kernel, targeting one observable on which ordinary same-sign `s`-wave fails robustly while at least one unconventional family survives.
