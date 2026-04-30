@@ -25,3 +25,9 @@ A fixed passive diffractive optical processor co-propagates an object wave and a
 ## Immediate next action
 
 Build and verify the minimal simulation environment, then start the first quantitative package around propagation, perturbation generation, and baseline comparison.
+
+## Automation
+
+- Hourly iteration schedule: enabled
+- Schedule timezone: `Asia/Shanghai`
+- Stop condition: all 5 reviewer-style acceptance estimates exceed 0.80 and the evidence chain is complete
