@@ -12,28 +12,36 @@ Last updated: 2026-04-30
 - Local long-term root: `/workspace/memory/twse2-andreev-prl-2026-04-29T13-43-41Z`
 - Active compute mirror: `/workspace/memory/twse2-andreev-prl`
 
+## Iteration Control
+
+- Cadence: once per hour
+- Stop criterion:
+  - Five reviewer-style acceptance estimates must all exceed `80%`
+  - Evidence chain must be complete enough to produce the submission package, compiled main-text PDF, and compiled supplementary PDF
+
 ## Current Stage
 
-Manuscript-facing BTK hardening and evidence-chain closure on top of a validated semi-infinite SGF benchmark for the PRL-oriented twisted bilayer WSe2 Andreev manuscript.
+Track-1 effective closure via V3 orbital-selective valley correction is in place, and the project is now in downstream BTK interpretation and hardening on top of a validated semi-infinite SGF benchmark for the PRL-oriented twisted bilayer WSe2 Andreev manuscript.
 
 ## Current Overall Goal
 
-Complete a manuscript-grade data package and convert the surviving semi-infinite-informed BTK branch into a submission-grade PRL evidence chain, then assemble the final main-text and supplementary submission files.
+Complete a manuscript-grade data package for the twse2-Andreev project: reconstruct the true-or-closest faithful Tuo tight-binding input, then generate and durably store the Fig. 1-4 evidence chain, including normal-state band benchmarks, downstream SGF / BTK / robustness arrays, and their file-level indexes in both the memory folder and GitHub.
 
 ## Single Main Bottleneck
 
-The active bottleneck is no longer Track-1 reconstruction alone. The current decision point is whether the present BTK kernel and its semi-infinite-informed interpretation are already strong enough for journal-standard claims, or whether a deeper BTK upgrade is still required before manuscript integration.
+The project now has a faithful coupled baseline, a full V3 closure, a portable k-space sparse compressed-V3 approximation, a verified SGF stability trial, a first valley-resolved generalized BTK package, a validated semi-infinite SGF benchmark, a new valley-resolved generalized BTK rerun anchored to that semi-infinite SGF data, and a manuscript-language interpretation note that separates robust BTK statements from obsolete proxy-era claims. The single main bottleneck has therefore shifted again: the next highest-priority task is manuscript integration and deciding whether the current BTK kernel itself needs a deeper upgrade for journal-standard claims.
 
 ## Newly Verified Facts
 
-- The canonical long-term project slug has been locked to the inherited first-start timestamp.
-- The long-term root now includes a reproducible bootstrap script, a minimal requirements file, and an hourly iteration driver.
-- The hourly driver reports `ready_for_hourly_iteration: true` in the current workspace.
-- The project iteration cadence is fixed at once per hour.
-- The scheduled loop should stop only after five reviewer-style acceptance estimates all exceed 80 percent and the evidence chain is complete enough to produce the submission package plus compiled main-text and supplementary PDFs.
+- The user explicitly redirected the project so that `补齐所有数据` is the unique top priority.
+- The user set the project iteration cadence to once per hour.
+- The canonical GitHub long-term root has now been created under `shangx108-code/opanai` on branch `open-ai` at `twse2-andreev-prl-2026-04-29T13-43-41Z/`.
+- The long-term root now includes a reproducible environment bootstrap script, a minimal requirements file, and an hourly iteration driver.
+- The local hourly iteration driver now reports `ready_for_hourly_iteration: true`.
+- An older overlapping two-hour schedule has been disabled so the new one-hour project loop is the only active cadence for this project.
 
 ## Immediate Next Action
 
-1. Keep the semi-infinite-informed BTK package as the only active manuscript branch.
-2. Test whether the current BTK kernel supports PRL-grade claims without overstatement.
-3. If not, upgrade the BTK kernel before text integration; if yes, move immediately into manuscript assembly and reviewer-style pressure testing.
+1. Keep the `8.367 meV` coupled path-plus-hopping candidate as the faithful baseline, the `1.503 meV` full V3 package as the strongest closure, and the `2.726 meV` k-space sparse model as the current best portable compressed approximation for downstream work.
+2. Treat the semi-infinite-informed BTK package as the only active manuscript branch.
+3. Compare the BTK observables against the PRL claim boundary and decide whether the BTK kernel itself must be upgraded beyond the current proxy model before text integration.
