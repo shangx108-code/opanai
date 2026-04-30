@@ -1,7 +1,7 @@
 # Journal Criteria
 
 Target venue: PRL-oriented theory manuscript on twisted bilayer WSe2 Andreev diagnostics
-Last updated: 2026-04-26
+Last updated: 2026-04-30
 
 ## Current bar
 
@@ -14,5 +14,6 @@ Last updated: 2026-04-26
 - Exact closure of the true Tuo TB replacement chain
 - Manuscript-facing rerun of Fig. 1-4 with the reconstructed TB input
 - Editable main-text source for direct patching in the local workspace
+- Channel-resolved multiorbital BTK upgrade beyond the current proxy kernel
 - Five independent reviewer-style acceptance estimates above `80%`
 - Complete submission package with compiled main-text and supplementary PDFs
