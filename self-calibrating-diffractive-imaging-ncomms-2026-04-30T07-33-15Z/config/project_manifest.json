@@ -1,0 +1,15 @@
+{
+  "project_id": "self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "project_slug": "self-calibrating-diffractive-imaging-ncomms",
+  "created_at_utc": "2026-04-30T07-33-15Z",
+  "title": "Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations",
+  "target_journal": "Nature Communications",
+  "stage": "early framing",
+  "concept_source": "/workspace/user_files/01-1-.txt",
+  "local_root": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "github_repository": "shangx108-code/opanai",
+  "github_branch": "open-ai",
+  "github_root": "self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "primary_bottleneck": "missing_canonical_project_root_and_runnable_environment",
+  "next_shortest_path_action": "bootstrap_simulation_scaffold_and_start_first_quantitative_baseline"
+}
