@@ -1,6 +1,6 @@
 # Archive Checklist
 
-Last updated: 2026-04-29
+Last updated: 2026-04-30
 
 - [x] Reference bundle inspected
 - [x] Tuo article metadata verified
@@ -27,6 +27,7 @@ Last updated: 2026-04-29
 - [x] BTK minimal data package archived
 - [x] Valley-resolved generalized BTK data package archived
 - [x] Semi-infinite-informed valley-resolved generalized BTK package archived
+- [x] Channel-resolved multiorbital generalized BTK upgrade package archived
 - [x] Persistent Track-1 / SGF / BTK scripts archived
 - [ ] Google Drive sync for current project artifacts completed
 - [ ] Final SGF manuscript-grade benchmark archived
