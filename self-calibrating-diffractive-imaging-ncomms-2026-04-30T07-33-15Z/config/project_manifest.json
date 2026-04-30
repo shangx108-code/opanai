@@ -16,6 +16,6 @@
     "freq": "hourly",
     "interval": 1
   },
-  "primary_bottleneck": "missing_trainable_optical_frontend_surrogate_baseline",
-  "next_shortest_path_action": "implement_differentiable_or_trainable_baseline_on_top_of_reference_psf_scaffold"
+  "primary_bottleneck": "missing_harder_generalization_test_and_optical_faithful_frontend_baseline",
+  "next_shortest_path_action": "add_heldout_object_family_split_then_upgrade_linear_surrogate_to_more_optical_faithful_differentiable_frontend"
 }
