@@ -1,11 +1,12 @@
 {
-  "description": "Initial reproducible bulk-gap scaffold summary. This is a v0 setup artifact, not publication-grade evidence.",
+  "description": "Initial reproducible interface-sensitive surrogate scan. This is a toy v1 evidence scaffold, not a full BTK calculation.",
   "config": {
     "k_mesh": 96,
     "mu": 0.05,
     "displacement_field": 0.12,
     "zeeman_field": 0.02,
     "intervalley_mixing": 0.08,
+    "outer_gap_offset": 0.055,
     "candidate_states": [
       "s_wave",
       "valley_odd",
@@ -15,6 +16,25 @@
       0.02,
       0.05,
       0.08
+    ],
+    "barrier_values": [
+      0.2,
+      0.8,
+      1.6,
+      2.8
+    ],
+    "orientation_values": [
+      0.0,
+      0.7853981634
+    ],
+    "intervalley_scan_values": [
+      0.0,
+      0.2,
+      0.45
+    ],
+    "field_angle_values": [
+      0.0,
+      1.5707963268
     ]
   },
   "summaries": [
@@ -42,5 +62,56 @@
       "min_gap_amplitude": 7.754514235072609e-06,
       "max_gap_amplitude": 0.023333333333333338
     }
-  ]
+  ],
+  "constraint_summaries": [
+    {
+      "candidate": "s_wave",
+      "best_inner_selectivity": 2.0102391812610545,
+      "orientation_contrast": 0.9817462364522951,
+      "intervalley_contrast": 1.0140543777930546,
+      "field_contrast": 0.9803158348479514,
+      "high_barrier_outer_to_inner": 1.2009443302375797
+    },
+    {
+      "candidate": "valley_odd",
+      "best_inner_selectivity": 2.080605893781943,
+      "orientation_contrast": 1.204242390693083,
+      "intervalley_contrast": 1.164032102935197,
+      "field_contrast": 0.8971327974707668,
+      "high_barrier_outer_to_inner": 1.0480687421555233
+    },
+    {
+      "candidate": "chiral_d",
+      "best_inner_selectivity": 2.085884608787942,
+      "orientation_contrast": 1.2342387796069256,
+      "intervalley_contrast": 1.1207093987200007,
+      "field_contrast": 1.2184868803157587,
+      "high_barrier_outer_to_inner": 1.0343546727341781
+    }
+  ],
+  "ordinary_s_wave_failure_candidate": {
+    "candidate": "s_wave",
+    "status": "failure_candidate",
+    "failed_constraints": [
+      {
+        "constraint": "orientation_contrast",
+        "s_wave_value": 0.9817462364522951,
+        "threshold": 1.15,
+        "unconventional_reference": 1.2342387796069256
+      },
+      {
+        "constraint": "intervalley_contrast",
+        "s_wave_value": 1.0140543777930546,
+        "threshold": 1.12,
+        "unconventional_reference": 1.1207093987200007
+      },
+      {
+        "constraint": "field_contrast",
+        "s_wave_value": 0.9803158348479514,
+        "threshold": 1.08,
+        "unconventional_reference": 1.2184868803157587
+      }
+    ],
+    "reference_candidate": "chiral_d"
+  }
 }

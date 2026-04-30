@@ -12,8 +12,8 @@
 - [x] journal criteria initialized
 - [x] runnable v0 executable scaffold added
 - [x] first scaffold outputs generated
-- [ ] Andreev-selectivity scan package
-- [ ] ordinary s-wave failure map
+- [x] first interface-sensitive scan package
+- [x] first ordinary s-wave failure candidate
 - [ ] robustness package
 - [ ] manuscript v0
 - [ ] figure set
