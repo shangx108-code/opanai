@@ -14,6 +14,7 @@
 3. Added a minimal Python environment check script.
 4. Prepared the project for hourly scheduled iteration.
 5. Adjusted the minimal dependency set to the packages already available in the current container after external package installation was blocked.
+6. Created the hourly Hermes schedule with the reviewer-gated stop criterion.
 
 ## Next shortest-path action
 
