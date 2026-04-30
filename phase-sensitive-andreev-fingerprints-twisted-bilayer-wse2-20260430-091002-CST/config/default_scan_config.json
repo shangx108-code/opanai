@@ -1,0 +1,17 @@
+{
+  "k_mesh": 96,
+  "mu": 0.05,
+  "displacement_field": 0.12,
+  "zeeman_field": 0.02,
+  "intervalley_mixing": 0.08,
+  "candidate_states": [
+    "s_wave",
+    "valley_odd",
+    "chiral_d"
+  ],
+  "broadening_values": [
+    0.02,
+    0.05,
+    0.08
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "description": "Initial reproducible bulk-gap scaffold summary. This is a v0 setup artifact, not publication-grade evidence.",
+  "config": {
+    "k_mesh": 96,
+    "mu": 0.05,
+    "displacement_field": 0.12,
+    "zeeman_field": 0.02,
+    "intervalley_mixing": 0.08,
+    "candidate_states": [
+      "s_wave",
+      "valley_odd",
+      "chiral_d"
+    ],
+    "broadening_values": [
+      0.02,
+      0.05,
+      0.08
+    ]
+  },
+  "summaries": [
+    {
+      "candidate": "s_wave",
+      "min_quasiparticle_energy": 0.04000000235177162,
+      "median_quasiparticle_energy": 0.1988741013795235,
+      "max_quasiparticle_energy": 0.925423314621147,
+      "min_gap_amplitude": 0.04,
+      "max_gap_amplitude": 0.04
+    },
+    {
+      "candidate": "valley_odd",
+      "min_quasiparticle_energy": 0.016827349461848516,
+      "median_quasiparticle_energy": 0.19749529632333823,
+      "max_quasiparticle_energy": 0.9256268360580664,
+      "min_gap_amplitude": 0.015539586298862746,
+      "max_gap_amplitude": 0.04446041370113725
+    },
+    {
+      "candidate": "chiral_d",
+      "min_quasiparticle_energy": 0.011216942540656794,
+      "median_quasiparticle_energy": 0.1951428430676579,
+      "max_quasiparticle_energy": 0.9248528292051849,
+      "min_gap_amplitude": 7.754514235072609e-06,
+      "max_gap_amplitude": 0.023333333333333338
+    }
+  ]
+}
