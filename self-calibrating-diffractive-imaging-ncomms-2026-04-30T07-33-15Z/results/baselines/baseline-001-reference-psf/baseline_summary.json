@@ -1,0 +1,23 @@
+{
+  "config": {
+    "image_size": 128,
+    "pupil_size": 128,
+    "wavelength": 1.0,
+    "nominal_wiener_k": 0.001,
+    "guided_wiener_k": 0.0005,
+    "seed": 7,
+    "noise_sigma": 0.01,
+    "object_count": 6,
+    "case_count": 8
+  },
+  "sample_count": 48,
+  "mean_fixed_psnr": 27.01882008295384,
+  "mean_guided_psnr": 31.289204489078177,
+  "mean_psnr_gain": 4.270384406124336,
+  "median_psnr_gain": 4.772915025511857,
+  "mean_fixed_ssim": 0.9818330644691778,
+  "mean_guided_ssim": 0.9906817216411644,
+  "mean_ssim_gain": 0.008848657171986686,
+  "guided_better_fraction_psnr": 0.8958333333333334,
+  "guided_better_fraction_ssim": 0.7708333333333334
+}
