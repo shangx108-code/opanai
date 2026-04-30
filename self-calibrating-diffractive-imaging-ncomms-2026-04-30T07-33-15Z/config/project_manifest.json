@@ -10,6 +10,12 @@
   "github_repository": "shangx108-code/opanai",
   "github_branch": "open-ai",
   "github_root": "self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "schedule_id": "69f3087ca9c0819190e328bcfe7ac391",
+  "schedule_timezone": "Asia/Shanghai",
+  "schedule_rule": {
+    "freq": "hourly",
+    "interval": 1
+  },
   "primary_bottleneck": "missing_canonical_project_root_and_runnable_environment",
   "next_shortest_path_action": "bootstrap_simulation_scaffold_and_start_first_quantitative_baseline"
 }
