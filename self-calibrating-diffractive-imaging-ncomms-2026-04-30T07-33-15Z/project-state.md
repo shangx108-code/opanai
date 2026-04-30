@@ -9,7 +9,7 @@
 
 ## Current single bottleneck
 
-The project now has both a runnable physical baseline and a first trainable surrogate, but the evidence chain still lacks a harder generalization test with held-out object families and a more optical-faithful differentiable frontend.
+The project now has an explicit angular-spectrum propagation kernel and a minimum multi-seed robustness package, but the evidence chain still lacks a harder held-out object-family generalization test and a more optical-faithful differentiable frontend.
 
 ## Confirmed core story
 
@@ -24,15 +24,17 @@ A fixed passive diffractive optical processor co-propagates an object wave and a
 
 ## Immediate next action
 
-Harden the current learned-calibration result by introducing held-out object families and then replace the linear low-resolution surrogate with a more optical-faithful differentiable frontend baseline.
+Freeze the new physical baseline as the reference ledger, then harden the learned-calibration result with held-out object families and replace the linear low-resolution surrogate with a more optical-faithful differentiable frontend baseline.
 
 ## Verified progress
 
-- `baseline-001-reference-psf` completed as the first executable evidence package.
-- Under 8 dynamic aberration cases and 6 synthetic objects, the reference-guided baseline outperformed the fixed baseline by mean PSNR gain `4.270 dB` and mean SSIM gain `0.0088`.
-- The current result supports the narrower calibration premise but does not yet validate the full passive diffractive neural-operator claim.
+- `baseline-001-reference-psf` has been promoted from an early scaffold to the current physical reference baseline.
+- The current physical baseline now uses an explicit angular-spectrum propagation kernel with declared `Δx`, `λ`, `z`, and frequency-coordinate ranges.
+- `baseline-001-reference-psf-multiseed` completed across 5 seeds and produced `multiseed_summary.csv`, per-seed sample metrics, seed logs, and a SHA-256 manifest.
+- Across 5 seeds, the physical baseline achieved mean PSNR gain `1.661 ± 0.122` dB (95% CI half-width) and mean SSIM gain `0.1133 ± 0.0075`, with guided improvement fraction `1.0` for both PSNR and SSIM.
 - `baseline-002-trainable-surrogate` completed as the first learned-calibration package.
 - On held-out aberration cases, the trainable surrogate achieved mean low-resolution PSNR `50.703 dB` versus `37.541 dB` for the fixed low-resolution baseline, but this comparison still shares the same small object family between train and test and is therefore not yet strong enough for manuscript evidence.
+- The current result supports the narrower calibration premise and the learnability premise, but does not yet validate the full passive diffractive neural-operator claim.
 
 ## Automation
 
