@@ -1,0 +1,21 @@
+{
+  "run_id": "round6-rerun-20260430T010105Z",
+  "project_name": "self-calibrating-diffractive-ncomms",
+  "script": "code/project-scripts/round6_numpy_passive_d2nn.py",
+  "outputs_dir": "artifacts/project-outputs",
+  "expected_artifacts": [
+    "round6_numpy_passive_d2nn_metrics.csv",
+    "round6_numpy_passive_d2nn_summary.md",
+    "round6_numpy_passive_d2nn_summary.json",
+    "round6_numpy_passive_d2nn_panel.png",
+    "round6_numpy_passive_d2nn_training_history.json"
+  ],
+  "environment": {
+    "python": "3.12",
+    "packages": {
+      "numpy": "2.3.5",
+      "Pillow": "12.2.0"
+    }
+  },
+  "notes": "Template for rerunning the restored round6 NumPy passive D2NN baseline inside this long-term project space."
+}

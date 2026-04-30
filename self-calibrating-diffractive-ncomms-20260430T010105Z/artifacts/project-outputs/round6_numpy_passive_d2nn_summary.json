@@ -1,0 +1,49 @@
+{
+  "status": "ok",
+  "environment": {
+    "numpy": "2.3.5",
+    "uses_pillow": true,
+    "num_layers": 2,
+    "train_steps": 18,
+    "grid_size": 24
+  },
+  "summary_rows": [
+    {
+      "condition": "ordinary",
+      "ood_mean_psnr_db": 11.884343,
+      "ood_mean_mse": 0.06864072,
+      "train_final_mse": 0.07346763
+    },
+    {
+      "condition": "common_path",
+      "ood_mean_psnr_db": 10.75376,
+      "ood_mean_mse": 0.08969346,
+      "train_final_mse": 0.13244554
+    },
+    {
+      "condition": "noncommon_path",
+      "ood_mean_psnr_db": 10.690498,
+      "ood_mean_mse": 0.09019844,
+      "train_final_mse": 0.1424268
+    },
+    {
+      "condition": "wrong_reference",
+      "ood_mean_psnr_db": 10.830944,
+      "ood_mean_mse": 0.08984826,
+      "train_final_mse": 0.12097979
+    }
+  ],
+  "deltas_db": {
+    "common_minus_ordinary_db": -1.130583,
+    "common_minus_noncommon_db": 0.063262,
+    "common_minus_wrongref_db": -0.077184
+  },
+  "artifacts": {
+    "metrics_csv": "/workspace/opanai/self-calibrating-diffractive-ncomms-20260430T010105Z/artifacts/project-outputs/round6_numpy_passive_d2nn_metrics.csv",
+    "summary_md": "/workspace/opanai/self-calibrating-diffractive-ncomms-20260430T010105Z/artifacts/project-outputs/round6_numpy_passive_d2nn_summary.md",
+    "summary_json": "/workspace/opanai/self-calibrating-diffractive-ncomms-20260430T010105Z/artifacts/project-outputs/round6_numpy_passive_d2nn_summary.json",
+    "panel_png": "/workspace/opanai/self-calibrating-diffractive-ncomms-20260430T010105Z/artifacts/project-outputs/round6_numpy_passive_d2nn_panel.png",
+    "training_history_json": "/workspace/opanai/self-calibrating-diffractive-ncomms-20260430T010105Z/artifacts/project-outputs/round6_numpy_passive_d2nn_training_history.json"
+  },
+  "note": "This is a minimal numpy-based passive D2NN rebuild intended to restore a reproducible data pipeline, not a submission-grade final result."
+}
