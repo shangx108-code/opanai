@@ -3,13 +3,13 @@
 - Project ID: `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
 - Locked title: `Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations`
 - Target journal: `Nature Communications`
-- Stage: `early framing`
+- Stage: `active calculation/verification`
 - First formal execution time: `2026-04-30T07-33-15Z`
 - Authoritative concept source: `/workspace/user_files/01-1-.txt`
 
 ## Current single bottleneck
 
-No canonical GitHub long-term space and no minimal executable environment had been established, so the project could not yet enter reproducible quantitative iteration.
+The project now has a runnable physical baseline, but it still lacks the first trainable optical-frontend surrogate or differentiable diffractive baseline needed to test whether the reference advantage survives beyond post-detection adaptive deconvolution.
 
 ## Confirmed core story
 
@@ -24,7 +24,13 @@ A fixed passive diffractive optical processor co-propagates an object wave and a
 
 ## Immediate next action
 
-Build and verify the minimal simulation environment, then start the first quantitative package around propagation, perturbation generation, and baseline comparison.
+Implement the first trainable surrogate baseline on top of the same perturbation generator and metrics ledger, then compare it against the fixed and reference-guided restoration baselines already produced in `baseline-001-reference-psf`.
+
+## Verified progress
+
+- `baseline-001-reference-psf` completed as the first executable evidence package.
+- Under 8 dynamic aberration cases and 6 synthetic objects, the reference-guided baseline outperformed the fixed baseline by mean PSNR gain `4.270 dB` and mean SSIM gain `0.0088`.
+- The current result supports the narrower calibration premise but does not yet validate the full passive diffractive neural-operator claim.
 
 ## Automation
 
