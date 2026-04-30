@@ -46,8 +46,7 @@ def main() -> int:
     }
     report["all_required_modules_available"] = all(report["required_modules"].values())
 
-    report_path = output_dir / "environment/environment_check.json"
-    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path = output_dir / "environment_check.json"
     report_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
 
     print(json.dumps(report, indent=2))
