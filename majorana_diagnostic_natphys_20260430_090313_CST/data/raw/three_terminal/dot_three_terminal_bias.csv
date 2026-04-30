@@ -1,0 +1,2 @@
+record_id,control_family,bias,g_ll,g_rr,g_lr,data_status,source_basis,notes
+smooth_dot_bias_placeholder_001,smooth_dot,,,,,pending_recompute,Expected raw file name recovered from archive checklist,Smooth-dot false-positive bias trace expected by archive checklist. Placeholder row only.
