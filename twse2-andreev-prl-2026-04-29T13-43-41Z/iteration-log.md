@@ -16,3 +16,11 @@
 - Confirmed from the active kernel implementation that the present BTK engine is still a scalar proxy rather than a channel-resolved multiorbital scattering calculation.
 - Closed the adequacy question with a negative result: the current BTK line is good enough to preserve the project direction, but not strong enough yet for PRL-grade phase-sensitive exclusion wording.
 - Promoted `BTK kernel upgrade required` to the single active bottleneck.
+
+## 2026-04-30T10:10:00Z
+
+- Implemented and ran `generate_channel_resolved_multiorbital_btk.py`.
+- Generated a new package `btk-channel-resolved-multiorbital-semi-infinite-2026-04-30` with channel-resolved reflection amplitudes, multiorbital BdG pairing matrices, interface orientation dependence, and interface mixing dependence.
+- Verified that the upgrade itself is real: the project no longer depends on the old scalar BTK proxy as its only BTK line.
+- Verified that exclusion is still not closed: the upgraded package still gives the strongest total peak contrast in `s_wave`, while the strongest valley asymmetry shifts to `valley_odd`.
+- Promoted `selection-rule null-model scan with upgraded BTK kernel` to the new single active bottleneck.
