@@ -20,3 +20,6 @@ This directory is the long-term project space for all future materials generated
 - restore and rerun `round6_numpy_passive_d2nn.py`
 - rebuild `figure5_source_data.csv` from actual raw round6 outputs
 - keep file hashes and registries synchronized inside this project space
+
+## Active Figure 5 Package
+The current manuscript-support package for Fig. 5 is the raw-output-driven package described in `figure5_package_status.md` and stored under `artifacts/submission-package/`.
