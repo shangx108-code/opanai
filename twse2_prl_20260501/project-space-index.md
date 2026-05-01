@@ -22,3 +22,7 @@ stable repository location.
 
 From this point onward, new project data for this chat should be saved here
 first, then mirrored elsewhere only when needed.
+
+All future data, scripts, results, notes, manuscript files, and other project
+artifacts generated in this chat must be synchronized into this directory as
+the canonical GitHub-backed long-term project space.
