@@ -1,0 +1,11 @@
+figure,panel,claim_supported,data_file,script,status,notes
+Figure 2,a,Common-path pilot improves Gaussian surrogate OOD reconstruction PSNR,data/fig2_mechanism_waveoptics.csv,scripts/render_figures.py,complete,Derived from verified manuscript ledger values
+Figure 2,b,Common-path pilot improves Zernike wave-optics OOD reconstruction PSNR,data/fig2_mechanism_waveoptics.csv,scripts/render_figures.py,complete,Derived from verified manuscript ledger values
+Figure 2,c,Common-path pilot lowers Zernike wave-optics PSF mismatch,data/fig2_mechanism_waveoptics.csv,scripts/render_figures.py,complete,Derived from verified manuscript ledger values
+Figure 3,a,Pilot observation retains finite local information in train and OOD regimes,data/fig3_information_transfer.csv,scripts/render_figures.py,complete,Derived from verified manuscript ledger values
+Figure 3,b,Reconstruction is the clearest positive downstream regime,data/fig3_information_transfer.csv,scripts/render_figures.py,complete,Derived from verified manuscript ledger values
+Figure 3,c,Classification residual improvement is modest,data/fig3_information_transfer.csv,scripts/render_figures.py,complete,Derived from verified manuscript ledger values
+Figure 3,d,Inverse-design improvement remains weak,data/fig3_information_transfer.csv,scripts/render_figures.py,complete,Derived from verified manuscript ledger values
+Figure 4,a,Processor-level gain is stage dependent and bounded,data/fig4_processor_boundary.csv,scripts/render_figures.py,complete,Derived from verified and partially verified manuscript ledger values
+Figure 4,b,Round6 matched common-path advantage is local rather than global,data/fig4_processor_boundary.csv,scripts/render_figures.py,complete,Derived from verified and partially verified manuscript ledger values
+Supplementary Table 1,all,Method fairness and evidence boundary summary,data/method_fairness_table.csv,none,complete,Structured from manuscript and review notes
