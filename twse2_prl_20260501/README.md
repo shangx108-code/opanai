@@ -19,6 +19,7 @@ the paper outline into an executable starting point that already produces:
 - `scripts/run_wp1_wp2.py`: runs the first two work packages
 - `scripts/update_sync_status.py`: refreshes the project sync audit
 - `results/`: generated summary tables and markdown
+- `prl-manuscript-draft-v1.md`: PRL-style manuscript draft based on the current minimal results
 - `sync-status.md`: current sync checklist for the long-term project space
 
 ## Run

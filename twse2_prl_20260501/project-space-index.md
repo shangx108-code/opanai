@@ -16,6 +16,7 @@ stable repository location.
 - runnable source code for the minimal model
 - shared parameter configuration
 - generated WP1 and WP2 result files
+- a PRL-style manuscript draft derived from the current minimal outputs
 - top-level README for rerunning the scaffold
 
 ## Working rule
