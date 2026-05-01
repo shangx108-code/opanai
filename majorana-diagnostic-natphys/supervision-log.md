@@ -1,5 +1,24 @@
 # Supervision Log
 
+## 2026-05-01 | Round 22 supervision after Figure 5 manuscript integration page
+
+### Overall evaluation
+This round handled a real workspace limitation sensibly. The requested Figure 5 text was pushed as far toward direct manuscript integration as the current project state allowed, without pretending that a missing master manuscript file had been edited in place.
+
+### Gap to target-journal standard
+- The Figure 5 broad-window prose is now assembled in a single manuscript-ready integration page.
+- The remaining limitation is archival, not conceptual: the long-term space still needs the master manuscript source file restored if future edits are to happen directly inside that source rather than through integration pages.
+
+### Most critical quality risk
+The team could mistake the existence of an integration page for complete manuscript integration. The text is ready, but the master source still needs to be present in the long-term project space for true in-place editing.
+
+### Plan-revision advice
+1. Treat `manuscript-figure5-broad-window-integration-v1.md` as the direct replacement source for Figure 5 until the master manuscript file is restored.
+2. When the master source returns, merge from this file rather than re-drafting the same section again.
+
+### Newly completed items
+- Added `manuscript-figure5-broad-window-integration-v1.md`
+
 ## 2026-05-01 | Round 21 supervision after locking the Figure 5 broad-window version
 
 ### Overall evaluation

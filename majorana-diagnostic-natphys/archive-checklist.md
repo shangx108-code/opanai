@@ -99,6 +99,7 @@
 - [x] `memory/majorana-diagnostic-natphys/data/fig5-observable-upgrade-2026-05-01/fig5b_dot_candidate_observable_heatmap.csv`
 - [x] `memory/majorana-diagnostic-natphys/data/fig5-observable-upgrade-2026-05-01/fig5c_impurity_candidate_observable_heatmap.csv`
 - [x] `memory/majorana-diagnostic-natphys/figure5-broad-window-caption-and-method-v1.md`
+- [x] `memory/majorana-diagnostic-natphys/manuscript-figure5-broad-window-integration-v1.md`
 - [x] `memory/majorana-diagnostic-natphys/cmjj-first-pass-panel-triage-2026-05-01.md`
 - [x] `/workspace/output/nature-physics-manuscript-package.docx`
 - [x] `/workspace/output/compensated-magnetic-majorana-draft.tex`
