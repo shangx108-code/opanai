@@ -53,6 +53,7 @@ In a compensated-magnetic Josephson junction, field-free topological superconduc
 - A candidate-based Fig. 4 / Fig. 5 rebuild bundle now exists under `data/fig4-fig5-candidate-rebuild-2026-05-01/`, including the updated control summary table and regenerated positive/dot/impurity heatmaps
 - A window-discrimination judgment now exists under `data/fig4-fig5-candidate-rebuild-2026-05-01/`, showing that the current Fig. 5 proxy is much stronger near zero bias than over the full bias window
 - A Fig. 5 observable-upgrade bundle now exists under `data/fig5-observable-upgrade-2026-05-01/`, with `symmetric_nonlocal_score` currently giving the strongest worst-case full-bias median separation across the tested controls
+- A manuscript-facing Figure 5 broad-window text package now exists in `figure5-broad-window-caption-and-method-v1.md`
 - A first manuscript package and LaTeX draft now exist in `/workspace/output`
 - Literature positioning now reflects the 2026 TAJJ overlap explicitly
 - A formal internal theory note now defines the diagnostic hierarchy and evidence-completion criteria
@@ -71,8 +72,7 @@ In a compensated-magnetic Josephson junction, field-free topological superconduc
 - A benchmark where nonlocal transport, gap reopening, and a stronger topology label are evaluated together in the compensated-magnetic branch with the final chosen observable definitions
 - One more false-positive family, preferably impurity- or YSR-like, implemented in the compensated-magnetic branch itself
 - Stronger experimental observability windows for temperature and barrier scans
-- A final manuscript choice between the already-supported near-zero-bias framing and the upgraded broad-window readout framing
-- If the upgraded broad-window readout is adopted, a short methods-level definition and rationale for `symmetric_nonlocal_score`
+- Final integration of the selected broad-window Figure 5 text into the manuscript source
 
 ## Acceptance probability (stage estimate)
 - Nature Physics: 14-22% in the current manuscript-package state
@@ -81,4 +81,4 @@ In a compensated-magnetic Josephson junction, field-free topological superconduc
 - Reason: the framing is now healthier, but the compensated-magnetic branch still lacks a real figure-grade evidence bundle and the reproducibility layer is not yet complete
 
 ## Last update
-2026-05-01: completed a Fig. 5 readout-layer observable upgrade and stored it under `data/fig5-observable-upgrade-2026-05-01/`. Among the tested broad-window readouts, `symmetric_nonlocal_score` produced the strongest worst-case full-bias median separation across the dot and impurity controls, improving the broad-window discrimination over raw `|G_LR|` without changing the underlying transport solver.
+2026-05-01: locked Figure 5 to the upgraded broad-window version and stored a manuscript-facing caption, Results paragraph, and Methods paragraph in `figure5-broad-window-caption-and-method-v1.md`. The selected readout remains `symmetric_nonlocal_score`, used explicitly as a derived broad-window nonlocal score rather than as a new transport solver.

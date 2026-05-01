@@ -1,5 +1,25 @@
 # Supervision Log
 
+## 2026-05-01 | Round 21 supervision after locking the Figure 5 broad-window version
+
+### Overall evaluation
+This round finally turned the Figure 5 readout choice into manuscript-facing language. The project no longer merely has a preferred observable; it now has reusable caption, Results, and Methods text that match that choice.
+
+### Gap to target-journal standard
+- The broad-window Figure 5 path is now internally consistent: chosen readout, supporting data package, and replacement prose all align.
+- What remains is manuscript integration and final claim discipline, not more indecision about which Figure 5 branch to use.
+
+### Most critical quality risk
+The new wording must continue to present `symmetric_nonlocal_score` as a derived readout from the same heatmaps, not as if it were a deeper microscopic transport calculation.
+
+### Plan-revision advice
+1. Use `figure5-broad-window-caption-and-method-v1.md` as the default insertion source for the next manuscript rewrite.
+2. Keep the zero-bias wording only as supporting context, not as a competing main-text Figure 5 framing.
+3. Do not reopen the Figure 5 branch choice unless a later full-manuscript pass reveals a direct inconsistency.
+
+### Newly completed items
+- Added `figure5-broad-window-caption-and-method-v1.md`
+
 ## 2026-05-01 | Round 20 supervision after Fig. 5 observable upgrade
 
 ### Overall evaluation
