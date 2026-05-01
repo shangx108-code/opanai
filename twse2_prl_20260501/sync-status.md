@@ -1,6 +1,6 @@
 # Sync Status
 
-Generated: `2026-05-01T13:39:06+00:00`
+Generated: `2026-05-01T13:55:23+00:00`
 Project: `twse2_prl_20260501`
 Canonical path: `/workspace/memory/twse2_prl_20260501`
 
@@ -35,6 +35,9 @@ Canonical path: `/workspace/memory/twse2_prl_20260501`
 - `README.md`
 - `config/default_params.json`
 - `document-plan.md`
+- `kernel-alpha-collapse-figure-spec-v1.md`
+- `manuscript/wp3-prl-figure-callout-caption-2026-05-01.md`
+- `manuscript/wp3-prl-figure-callout-caption-2026-05-01.tex`
 - `prl-manuscript-draft-v1.md`
 - `project-space-index.md`
 - `results/wp1_dos.csv`
