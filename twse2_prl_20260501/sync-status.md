@@ -1,6 +1,6 @@
 # Sync Status
 
-Generated: `2026-05-01T13:55:23+00:00`
+Generated: `2026-05-01T14:51:25+00:00`
 Project: `twse2_prl_20260501`
 Canonical path: `/workspace/memory/twse2_prl_20260501`
 
@@ -40,6 +40,11 @@ Canonical path: `/workspace/memory/twse2_prl_20260501`
 - `manuscript/wp3-prl-figure-callout-caption-2026-05-01.tex`
 - `prl-manuscript-draft-v1.md`
 - `project-space-index.md`
+- `results/kernel_alpha_validation_collapse_summary.csv`
+- `results/kernel_alpha_validation_curves.csv`
+- `results/kernel_alpha_validation_figure.svg`
+- `results/kernel_alpha_validation_metrics.csv`
+- `results/kernel_alpha_validation_summary.md`
 - `results/wp1_dos.csv`
 - `results/wp1_summary.json`
 - `results/wp1_wp2_summary.md`
@@ -52,6 +57,7 @@ Canonical path: `/workspace/memory/twse2_prl_20260501`
 - `results/wp3_prl_figure_slice_notes.md`
 - `results/wp3_prl_figure_slice_source_data.csv`
 - `scripts/build_wp3_figure_slice.py`
+- `scripts/run_kernel_alpha_validation.py`
 - `scripts/run_wp1_wp2.py`
 - `scripts/run_wp3_minimal_btk.py`
 - `scripts/update_sync_status.py`
