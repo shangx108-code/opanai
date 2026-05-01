@@ -11,3 +11,7 @@ Execution rule: all future data, scripts, results, notes, manuscript files, and
 other project artifacts generated in this chat must be synchronized into
 `/workspace/memory/twse2_prl_20260501` as the GitHub-backed long-term project
 space.
+
+Push rule: all project data saved into this long-term project space should be
+committed and pushed to the attached GitHub remote after each substantive
+update, so the latest data remain available for later inspection.

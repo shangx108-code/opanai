@@ -26,3 +26,7 @@ first, then mirrored elsewhere only when needed.
 All future data, scripts, results, notes, manuscript files, and other project
 artifacts generated in this chat must be synchronized into this directory as
 the canonical GitHub-backed long-term project space.
+
+All substantive project data updates in this directory should also be committed
+and pushed to the attached GitHub remote, so later sessions can inspect the
+latest available files directly from the long-term project space.
