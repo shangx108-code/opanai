@@ -26,8 +26,8 @@ Project layout:
 
 Current primary bottleneck:
 
-- The canonical long-term main space is defined, but the current local mirror is not yet fully pushed and tracked in that GitHub root, and benchmark-root natural-image evidence is still proxy-only.
+- Benchmark-root natural-image evidence is still proxy-only, and the tolerance package remains short of the figure-ready export tables needed for submission-grade closure.
 
 Current first advancing action:
 
-- Keep all new authoritative files aligned to the GitHub `open-ai` branch project root, then close the benchmark-root realism gap with licensed natural-image execution.
+- Stage licensed benchmark-root natural-image files, rerun the frozen natural-object evaluation, and then expand the tolerance exports into figure-ready tables.
