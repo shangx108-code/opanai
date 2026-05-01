@@ -1,0 +1,10 @@
+panel,condition,metric,value,unit,source_note
+Fig2a,no_reference,psnr,19.669,dB,Gaussian surrogate OOD stronger-aberration set from manuscript-v1-strict
+Fig2a,non_common_path,psnr,20.268,dB,Gaussian surrogate OOD stronger-aberration set from manuscript-v1-strict
+Fig2a,common_path,psnr,21.990,dB,Gaussian surrogate OOD stronger-aberration set from manuscript-v1-strict
+Fig2b,no_reference,psnr,37.069,dB,Zernike wave-optics OOD set from manuscript-v1-strict
+Fig2b,non_common_path,psnr,37.078,dB,Zernike wave-optics OOD set from manuscript-v1-strict
+Fig2b,common_path,psnr,38.422,dB,Zernike wave-optics OOD set from manuscript-v1-strict
+Fig2c,no_reference,psf_mse,1.279e-05,arb,Zernike wave-optics OOD set from manuscript-v1-strict
+Fig2c,non_common_path,psf_mse,1.155e-05,arb,Zernike wave-optics OOD set from manuscript-v1-strict
+Fig2c,common_path,psf_mse,4.217e-06,arb,Zernike wave-optics OOD set from manuscript-v1-strict
