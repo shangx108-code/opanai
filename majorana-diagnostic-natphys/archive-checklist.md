@@ -40,6 +40,8 @@
 - [x] Rebuilt Figure 3 candidate from three-terminal data
 - [x] Rebuilt Figure 4 candidate from three-terminal data
 - [x] Three-terminal bundle provenance manifest rehydrated in current workspace
+- [x] Targeted Fig. 4 / Fig. 5 control-retune script
+- [x] Targeted Fig. 4 / Fig. 5 candidate-control table
 - [ ] Historical three-terminal scripts and numerical assets restored in current workspace
 
 ## Figure package
@@ -78,6 +80,9 @@
 - [x] `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig3/fig3a_open_boundary_spectrum_vs_phi.csv`
 - [x] `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig4/fig4c_disorder_ensemble.csv`
 - [x] `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig5/fig5a_positive_transport_heatmap.csv`
+- [x] `memory/majorana-diagnostic-natphys/code/retune_fig4_fig5_targeted.py`
+- [x] `memory/majorana-diagnostic-natphys/data/fig4-fig5-targeted-retune-2026-05-01/candidate_controls.csv`
+- [x] `memory/majorana-diagnostic-natphys/data/fig4-fig5-targeted-retune-2026-05-01/summary.md`
 - [x] `memory/majorana-diagnostic-natphys/cmjj-first-pass-panel-triage-2026-05-01.md`
 - [x] `/workspace/output/nature-physics-manuscript-package.docx`
 - [x] `/workspace/output/compensated-magnetic-majorana-draft.tex`
