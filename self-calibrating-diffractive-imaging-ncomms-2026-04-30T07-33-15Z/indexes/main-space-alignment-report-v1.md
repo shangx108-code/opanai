@@ -52,23 +52,22 @@ The canonical long-term root now contains the currently visible project history 
 
 ## What is still not complete
 
-Local alignment does **not** yet mean full GitHub archival closure into the canonical `open-ai` branch path.
+GitHub archival closure into the canonical `open-ai` branch path is now complete for the current local working mirror, excluding non-authoritative Python cache files under `scripts/__pycache__/`.
 
 The remaining highest-priority gaps are:
 
-1. the local working mirror is still not fully pushed and tracked in the canonical GitHub long-term main space
-2. licensed benchmark-root `ImageNet-1k / ILSVRC2012 validation` files are still missing
-3. licensed benchmark-root `COCO 2017 validation` files are still missing
-4. benchmark-root natural-image result files are still absent:
+1. licensed benchmark-root `ImageNet-1k / ILSVRC2012 validation` files are still missing
+2. licensed benchmark-root `COCO 2017 validation` files are still missing
+3. benchmark-root natural-image result files are still absent:
    - `results/natural_objects/benchmark_root_metrics.csv`
    - `results/natural_objects/benchmark_root_per_seed.csv`
-5. tolerance-closure exports are still absent:
+4. tolerance-closure exports are still absent:
    - `results/tolerance/tolerance_curve_summary.csv`
    - `results/tolerance/tolerance_curve_detail.csv`
    - `results/tolerance/tolerance_plot_manifest.csv`
    - `results/tolerance/hardware_tolerance_metrics.csv`
-6. figure-level source-data folders are still absent
-7. authoritative LaTeX manuscript files are still absent:
+5. figure-level source-data folders are still absent
+6. authoritative LaTeX manuscript files are still absent:
    - `manuscript/main.tex`
    - `manuscript/supplement.tex`
 
@@ -84,4 +83,4 @@ The GitHub-backed main-space consistency audit remains:
 
 ## Shortest next executable action
 
-Track the current local mirror inside the canonical GitHub long-term main space on branch `open-ai`, then prioritize the `P1.1` benchmark-root natural-image files because they are the strongest remaining evidence blocker.
+Prioritize the `P1.1` benchmark-root natural-image files because they are the strongest remaining evidence blocker, then regenerate the missing tolerance export tables.

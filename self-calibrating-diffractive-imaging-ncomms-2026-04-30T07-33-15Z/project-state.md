@@ -9,7 +9,7 @@
 
 ## Current single bottleneck
 
-The fairness-comparator gap is now closed at the digital-capacity level, but two structural blockers remain above the realism branch: the canonical long-term main space is fixed to GitHub `shangx108-code/opanai` on branch `open-ai`, while the current local mirror has not yet been fully pushed and tracked there, and the active root still lacks licensed benchmark-root natural-image execution. The immediate blocker is therefore no longer synthetic-ledger fairness; it is GitHub archival incompleteness plus the absence of auditable benchmark-root realism evidence that can be cited without the `proxy-only` qualifier.
+The fairness-comparator gap is now closed at the digital-capacity level, and the GitHub long-term main space is aligned with the active local project root. The immediate blocker is now the remaining evidence gap above the realism branch: the active root still lacks licensed benchmark-root natural-image execution, and the tolerance package still lacks the dense figure-ready exports required for submission-grade closure.
 
 ## Confirmed core story
 
@@ -25,7 +25,7 @@ A fixed passive diffractive optical processor co-propagates an object wave and a
 
 ## Immediate next action
 
-Push and track the current local mirror into the canonical GitHub long-term main space at `shangx108-code/opanai` branch `open-ai` under root `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`, then stage the licensed natural-image inputs into the audited dataset roots required by step 2, rerun `scripts/run_natural_object_evaluation.py` until it produces benchmark-root metrics, and then replace the remaining proxy-natural wording in the manuscript and source-data index.
+Stage the licensed natural-image inputs into the audited dataset roots required by step 2, rerun `scripts/run_natural_object_evaluation.py` until it produces benchmark-root metrics, then expand `scripts/run_mixed_train_tolerance.py` into the missing figure-ready exports and replace the remaining proxy-natural wording in the manuscript and source-data index.
 
 ## Verified progress
 
@@ -92,8 +92,7 @@ Push and track the current local mirror into the canonical GitHub long-term main
 - This audit verifies that:
   - the project manifest already points to repository `shangx108-code/opanai`, branch `open-ai`, and GitHub root `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
   - that GitHub path is the canonical long-term main space for this project, while the `/workspace/memory/...` directory is only the current working mirror
-  - the actual git-backed local carrier currently exposes only `master` / `origin/master`
-  - the active project directory is still untracked in that git-backed carrier
+  - the substantive tracked project files are aligned between the current local mirror and the GitHub long-term main space
   - the missing-data inventory is now explicit rather than implicit
 - A robust-mask mitigation training pass has now been executed with in-loop perturbation exposure to:
   - unperturbed masks

@@ -1,5 +1,30 @@
 # Supervision Log
 
+## 2026-05-01 | Round 17 supervision after targeted Fig. 4 / Fig. 5 retune
+
+### Overall evaluation
+This round did the right narrow thing. Instead of rerunning the whole CMJJ branch or continuing vague parameter hunting, it isolated the actual failure mode in Figures 4 and 5 and converted it into a reusable control-retune table. The project now has explicit dot and impurity settings that keep the controls near-zero while returning them to the trivial topology sector and nearly extinguishing the probe-bias nonlocal response.
+
+### Gap to target-journal standard
+- The project still does not yet have the final rebuilt Fig. 4 summary rows or final Fig. 5 heatmaps at those candidate settings.
+- The current transport observable is still a proxy layer; it now looks more usable, but the final figure burden still depends on how clean the rebuilt panels look.
+- Disorder remains scientifically relevant, but it should no longer dictate the next iteration; the immediate task is candidate-based panel rebuilding.
+
+### Most critical quality risk
+The new retune table could be underused if the next round drifts back into broad scanning rather than immediately rebuilding the weak panels around the now-identified candidate windows.
+
+### Plan-revision advice
+1. Freeze `data/fig4-fig5-targeted-retune-2026-05-01/` as the current control-selection record.
+2. Rebuild only Fig. 4 and Fig. 5 around one top-ranked dot candidate and one top-ranked impurity candidate.
+3. Keep Figures 2 and 3 untouched during that rebuild so the project does not lose focus.
+4. After the targeted rebuild, judge whether the present transport proxy is now sufficient or whether only the observable definition still needs upgrading.
+
+### Newly completed items
+- Added `code/retune_fig4_fig5_targeted.py`
+- Added `data/fig4-fig5-targeted-retune-2026-05-01/full_scan.csv`
+- Added `data/fig4-fig5-targeted-retune-2026-05-01/candidate_controls.csv`
+- Added `data/fig4-fig5-targeted-retune-2026-05-01/summary.md`
+
 ## 2026-05-01 | Round 16 supervision after CMJJ panel triage
 
 ### Overall evaluation
