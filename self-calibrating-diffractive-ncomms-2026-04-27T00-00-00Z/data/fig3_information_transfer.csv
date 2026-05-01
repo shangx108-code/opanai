@@ -1,0 +1,9 @@
+panel,condition,metric,value,unit,source_note
+Fig3a,train,fisher_trace_median,6.452e-04,arb,CRLB-style scan median from manuscript-v1-strict
+Fig3a,ood,fisher_trace_median,1.736e-04,arb,CRLB-style scan median from manuscript-v1-strict
+Fig3b,no_reference,reconstruction_psnr,34.837,dB,Cross-task surrogate result from manuscript-v1-strict
+Fig3b,common_path,reconstruction_psnr,36.782,dB,Cross-task surrogate result from manuscript-v1-strict
+Fig3c,no_reference,classification_residual,0.035464,arb,Cross-task surrogate result from manuscript-v1-strict
+Fig3c,common_path,classification_residual,0.034616,arb,Cross-task surrogate result from manuscript-v1-strict
+Fig3d,no_reference,inverse_design_mse,0.002317,arb,Cross-task surrogate result from manuscript-v1-strict
+Fig3d,common_path,inverse_design_mse,0.002315,arb,Cross-task surrogate result from manuscript-v1-strict
