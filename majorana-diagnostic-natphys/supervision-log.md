@@ -1,5 +1,31 @@
 # Supervision Log
 
+## 2026-05-01 | Round 20 supervision after Fig. 5 observable upgrade
+
+### Overall evaluation
+This was the right kind of transport-observable escalation. The project did not reopen the solver or drift back into control-parameter scans. It upgraded the readout layer on top of the rebuilt candidate heatmaps and tested several broad-window observables side by side.
+
+### Gap to target-journal standard
+- The project now has a concrete broad-window readout candidate rather than only a complaint that raw `|G_LR|` leaks too much away from zero bias.
+- Among the tested choices, `symmetric_nonlocal_score` is currently the strongest wide-window discriminator by worst-case median separation across the dot and impurity controls.
+- What remains is not exploratory coding, but manuscript judgment: whether this readout is already clean enough to justify the broader-bias framing, or whether the paper should still prefer the narrower near-zero-bias framing for maximal caution.
+
+### Most critical quality risk
+The new readout should not be described as a fundamentally new transport calculation. It is a readout-layer normalization and balancing step built from the same underlying heatmaps.
+
+### Plan-revision advice
+1. Treat `symmetric_nonlocal_score` as the current leading broad-window Fig. 5 readout.
+2. When writing methods, define it plainly as a balanced nonlocal score derived from `|G_LR|`, `G_LL`, and `G_RR`.
+3. Keep the near-zero-bias framing available as the lower-risk fallback until the final figure and caption pass decide which story is cleaner.
+
+### Newly completed items
+- Added `code/upgrade_fig5_observable_from_heatmaps.py`
+- Added `data/fig5-observable-upgrade-2026-05-01/observable_selection_table.csv`
+- Added `data/fig5-observable-upgrade-2026-05-01/fig5a_positive_observable_heatmap.csv`
+- Added `data/fig5-observable-upgrade-2026-05-01/fig5b_dot_candidate_observable_heatmap.csv`
+- Added `data/fig5-observable-upgrade-2026-05-01/fig5c_impurity_candidate_observable_heatmap.csv`
+- Added `data/fig5-observable-upgrade-2026-05-01/summary.md`
+
 ## 2026-05-01 | Round 19 supervision after Fig. 5 window judgment
 
 ### Overall evaluation
