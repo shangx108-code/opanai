@@ -1,5 +1,27 @@
 # Supervision Log
 
+## 2026-05-01 | Round 19 supervision after Fig. 5 window judgment
+
+### Overall evaluation
+This was the right follow-through after the candidate rebuild. The project did not immediately jump into rewriting the transport observable. It first asked the narrower question: whether the present proxy is already good enough if the figure is framed around the physically central near-zero-bias regime. That is a strong judgment move.
+
+### Gap to target-journal standard
+- The current proxy now looks defensible for a zero-bias or tight near-zero-bias Fig. 5 discriminator.
+- It still does not look equally strong as a full bias-window discriminator.
+- So the scientific bottleneck has split cleanly into two possible manuscript paths: a narrower but already supported near-zero-bias path, or a broader bias-window path that would still require an observable upgrade.
+
+### Most critical quality risk
+The main risk now is rhetorical rather than numerical: the manuscript could quietly imply a broad-bias transport discriminator even though the current numbers support a near-zero-bias discriminator much more strongly.
+
+### Plan-revision advice
+1. Frame the next Fig. 5 writing pass around zero bias or a small near-zero-bias window by default.
+2. Only reopen transport-code development if the paper truly needs a broader bias-window claim.
+3. Do not reopen dot/impurity parameter scans unless the observable is fixed and clearly still inadequate.
+
+### Newly completed items
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/window_discrimination_metrics.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/window_judgment.md`
+
 ## 2026-05-01 | Round 18 supervision after candidate-based Fig. 4 / Fig. 5 rebuild
 
 ### Overall evaluation

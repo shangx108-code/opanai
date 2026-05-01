@@ -89,6 +89,8 @@
 - [x] `memory/majorana-diagnostic-natphys/data/fig4-fig5-candidate-rebuild-2026-05-01/fig4d_control_summary_table.csv`
 - [x] `memory/majorana-diagnostic-natphys/data/fig4-fig5-candidate-rebuild-2026-05-01/fig5b_dot_candidate_transport_heatmap.csv`
 - [x] `memory/majorana-diagnostic-natphys/data/fig4-fig5-candidate-rebuild-2026-05-01/fig5c_impurity_candidate_transport_heatmap.csv`
+- [x] `memory/majorana-diagnostic-natphys/data/fig4-fig5-candidate-rebuild-2026-05-01/window_discrimination_metrics.csv`
+- [x] `memory/majorana-diagnostic-natphys/data/fig4-fig5-candidate-rebuild-2026-05-01/window_judgment.md`
 - [x] `memory/majorana-diagnostic-natphys/cmjj-first-pass-panel-triage-2026-05-01.md`
 - [x] `/workspace/output/nature-physics-manuscript-package.docx`
 - [x] `/workspace/output/compensated-magnetic-majorana-draft.tex`
