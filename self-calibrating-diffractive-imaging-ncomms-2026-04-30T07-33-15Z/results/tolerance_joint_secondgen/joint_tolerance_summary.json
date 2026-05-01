@@ -1,0 +1,52 @@
+{
+  "status": "completed",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "train_case_count": 24,
+  "eval_case_count": 6,
+  "monte_carlo_repeats": 4,
+  "train_search_steps": 3,
+  "train_variants": [
+    {
+      "label": "clean",
+      "phase_noise_sigma_rad": 0.0,
+      "shift_sigma_px": 0.0,
+      "rotation_sigma_deg": 0.0,
+      "wavelength_drift_fraction": 0.0
+    },
+    {
+      "label": "joint_mild",
+      "phase_noise_sigma_rad": 0.05,
+      "shift_sigma_px": 0.25,
+      "rotation_sigma_deg": 0.5,
+      "wavelength_drift_fraction": 0.005
+    },
+    {
+      "label": "joint_moderate",
+      "phase_noise_sigma_rad": 0.1,
+      "shift_sigma_px": 0.5,
+      "rotation_sigma_deg": 1.0,
+      "wavelength_drift_fraction": 0.01
+    }
+  ],
+  "training_mix_counts": {
+    "synthetic_training_objects": 50,
+    "public_natural_training_objects": 24,
+    "public_Kodak-PCD0992": 12,
+    "public_UCID": 12
+  },
+  "failure_threshold_gain_db": 0.0,
+  "output_files": {
+    "joint_tolerance_metrics_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance_joint_secondgen/joint_tolerance_metrics.csv",
+    "joint_tolerance_seed_detail_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance_joint_secondgen/joint_tolerance_seed_detail.csv",
+    "joint_tolerance_curve_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance_joint_secondgen/joint_tolerance_curve.csv",
+    "degradation_ci_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance_joint_secondgen/degradation_ci.csv",
+    "failure_boundary_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance_joint_secondgen/failure_boundary.csv",
+    "axis_tolerance_curves_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance_joint_secondgen/axis_tolerance_curves.csv",
+    "boundary_comparison_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance_joint_secondgen/boundary_comparison.csv",
+    "summary_md": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance_joint_secondgen/joint_tolerance_summary.md"
+  }
+}

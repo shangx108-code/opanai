@@ -1,18 +1,20 @@
-# Natural-Object Evaluation Blocker Report
+# Natural-Object Evaluation Status Note
 
 ## Status
 
 - Execution attempted: `yes`
-- Evaluation completed: `no`
-- Reason: required raw natural-image datasets are missing from the project-space staging root.
+- Execution completed: `yes`
+- Active data route: `public-open-data Kodak/UCID subset`
 
-## Missing inputs
+## Resolution
 
-- `ImageNet-1k / ILSVRC2012 validation`
-  - expected path: `/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation`
-- `COCO / 2017 validation`
-  - expected path: `/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation`
+The earlier benchmark-root ImageNet/COCO blocker is no longer the active natural-image execution path in this project root. The natural-image branch now uses staged public-open-data subsets:
 
-## Rule
+- `Kodak-PCD0992 / unrestricted public release`
+- `UCID / 1338 public citation subset`
 
-Strict 1->2->3 execution forbids moving to step 3 before step 2 has real inputs and produces metrics.
+Both subsets are frozen in `results/natural_objects/natural_object_subset_index.csv` and traced file-by-file in `results/natural_objects/public_dataset_download_manifest.csv`.
+
+## Interpretation boundary
+
+These runs are real public-data evaluations, not benchmark-root ImageNet/COCO evaluations. Manuscript language should therefore name the Kodak/UCID public protocol explicitly and avoid implying benchmark-root ImageNet/COCO validation.

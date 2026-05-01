@@ -26,8 +26,8 @@ Project layout:
 
 Current primary bottleneck:
 
-- Benchmark-root natural-image evidence is still proxy-only because no licensed ImageNet/COCO benchmark-root files are staged in the audited dataset roots.
+- The linked fabrication-style tolerance scan is now executed, and it shows that the unmitigated stack has only a narrow clean-hardware positive region on `UCID`; mild phase noise or mild layer misalignment already closes that region.
 
 Current first advancing action:
 
-- Stage licensed benchmark-root natural-image files and rerun the frozen natural-object evaluation so the project can replace the remaining proxy-only natural-image claims with benchmark-root evidence.
+- Use the new `results/tolerance_joint/` boundary tables together with the Kodak/UCID public-data results to rewrite the manuscript and reviewer-facing claim boundary around a dataset-dependent public-data story plus a narrow clean-stack fabrication-tolerance window.

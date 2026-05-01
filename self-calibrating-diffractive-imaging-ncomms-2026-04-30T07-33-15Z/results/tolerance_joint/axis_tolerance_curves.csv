@@ -1,0 +1,27 @@
+dataset_name,dataset_version,curve_family,curve_level,phase_noise_sigma_rad,misalignment_label,shift_sigma_px,rotation_sigma_deg,wavelength_drift_fraction,mean_psnr_gain_over_fixed_lowres,gain_ci95_half_width,mean_degradation_vs_clean_db,degradation_ci95_half_width,pass_state
+Kodak-PCD0992,unrestricted public release,clean_point,0.0,0.0,clean,0.0,0.0,0.0,-1.1083978907880478,0.19632099800310518,0.0,0.0,fail
+UCID,1338 public citation subset,clean_point,0.0,0.0,clean,0.0,0.0,0.0,1.640902872982333,0.34071863432799987,0.0,0.0,pass
+Kodak-PCD0992,unrestricted public release,phase_noise_only,0.0,0.0,clean,0.0,0.0,0.0,-1.1083978907880478,0.19632099800310518,0.0,0.0,fail
+Kodak-PCD0992,unrestricted public release,phase_noise_only,0.05,0.05,clean,0.0,0.0,0.0,-7.725517566108668,1.840614678718147,6.6171196753206205,2.0118281597605208,fail
+Kodak-PCD0992,unrestricted public release,phase_noise_only,0.1,0.1,clean,0.0,0.0,0.0,-11.530534820006961,1.1195914042306947,10.422136929218913,1.1689947356681771,fail
+Kodak-PCD0992,unrestricted public release,phase_noise_only,0.2,0.2,clean,0.0,0.0,0.0,-14.046162212127555,0.8123064878462462,12.93776432133951,0.9801913487647855,fail
+UCID,1338 public citation subset,phase_noise_only,0.0,0.0,clean,0.0,0.0,0.0,1.640902872982333,0.34071863432799987,0.0,0.0,pass
+UCID,1338 public citation subset,phase_noise_only,0.05,0.05,clean,0.0,0.0,0.0,-3.630260229214859,1.4410719578022158,5.2711631021971925,1.7790659986343071,fail
+UCID,1338 public citation subset,phase_noise_only,0.1,0.1,clean,0.0,0.0,0.0,-7.088061235243842,0.9170950984258481,8.728964108226174,1.2117129493037566,fail
+UCID,1338 public citation subset,phase_noise_only,0.2,0.2,clean,0.0,0.0,0.0,-9.680062279602339,0.6189247072879737,11.320965152584671,0.9582706347400531,fail
+Kodak-PCD0992,unrestricted public release,misalignment_only,0.0,0.0,clean,0.0,0.0,0.0,-1.1083978907880478,0.19632099800310518,0.0,0.0,fail
+Kodak-PCD0992,unrestricted public release,misalignment_only,0.25,0.0,mild,0.25,0.5,0.0,-11.965049813111795,0.6140356447118364,10.856651922323744,0.7773110205242068,fail
+Kodak-PCD0992,unrestricted public release,misalignment_only,0.5,0.0,moderate,0.5,1.0,0.0,-14.043373322706671,1.3129904683912852,12.934975431918625,1.280486677301382,fail
+Kodak-PCD0992,unrestricted public release,misalignment_only,1.0,0.0,severe,1.0,2.0,0.0,-15.625619192475634,0.2497756585870814,14.51722130168759,0.25752831576102364,fail
+UCID,1338 public citation subset,misalignment_only,0.0,0.0,clean,0.0,0.0,0.0,1.640902872982333,0.34071863432799987,0.0,0.0,pass
+UCID,1338 public citation subset,misalignment_only,0.25,0.0,mild,0.25,0.5,0.0,-7.594903811601263,0.48960282373989167,9.235806684583595,0.8302889582754346,fail
+UCID,1338 public citation subset,misalignment_only,0.5,0.0,moderate,0.5,1.0,0.0,-9.804542204893403,1.3532778794996259,11.445445077875734,1.0996565081099858,fail
+UCID,1338 public citation subset,misalignment_only,1.0,0.0,severe,1.0,2.0,0.0,-11.429345136820388,0.43024731101203884,13.07024800980272,0.4037555556303642,fail
+Kodak-PCD0992,unrestricted public release,wavelength_drift_only,0.0,0.0,clean,0.0,0.0,0.0,-1.1083978907880478,0.19632099800310518,0.0,0.0,fail
+Kodak-PCD0992,unrestricted public release,wavelength_drift_only,0.005,0.0,clean,0.0,0.0,0.005,-1.1159939258026954,0.2018633663267729,0.007596035014647525,0.011084670302576313,fail
+Kodak-PCD0992,unrestricted public release,wavelength_drift_only,0.01,0.0,clean,0.0,0.0,0.01,-1.1286427987511443,0.21303280394568794,0.020244907963096304,0.020662591724825322,fail
+Kodak-PCD0992,unrestricted public release,wavelength_drift_only,0.02,0.0,clean,0.0,0.0,0.02,-1.1919568950113224,0.246478266119779,0.08355900422327449,0.051211519219890755,fail
+UCID,1338 public citation subset,wavelength_drift_only,0.0,0.0,clean,0.0,0.0,0.0,1.640902872982333,0.34071863432799987,0.0,0.0,pass
+UCID,1338 public citation subset,wavelength_drift_only,0.005,0.0,clean,0.0,0.0,0.005,1.646999335683482,0.33728612407139474,-0.006096462701148979,0.005523147521984008,pass
+UCID,1338 public citation subset,wavelength_drift_only,0.01,0.0,clean,0.0,0.0,0.01,1.6454012231294632,0.33544530639498576,-0.004498350147130366,0.009593297792689439,pass
+UCID,1338 public citation subset,wavelength_drift_only,0.02,0.0,clean,0.0,0.0,0.02,1.6254651157339113,0.3338644633497675,0.015437757248421743,0.007626035879978335,pass

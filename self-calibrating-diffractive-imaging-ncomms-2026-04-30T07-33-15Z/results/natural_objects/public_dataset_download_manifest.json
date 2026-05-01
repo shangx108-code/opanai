@@ -1,0 +1,223 @@
+{
+  "status": "completed",
+  "dataset_count": 2,
+  "file_count": 24,
+  "files": [
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim01.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim01.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim01.png",
+      "size_bytes": 736501,
+      "sha256": "a56e27cbf5f843c048b6af1d6e090760e9c92fadba88b7dee0205918a37523bd"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim02.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim02.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim02.png",
+      "size_bytes": 617995,
+      "sha256": "4f4b74a79237e311d72cad958237b5f7088d8bce1c82305ebefe1a70e3022dfd"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim03.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim03.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim03.png",
+      "size_bytes": 502888,
+      "sha256": "e25ca1ff2f0c0cb5fdfd5f9b0a0bb21ac4c3de3c84a67f35b09a85d3306249db"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim04.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim04.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim04.png",
+      "size_bytes": 637432,
+      "sha256": "e3b946107c5d3441c022f678d0c3caf1e224d81b1604ba840a4f88e562de61aa"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim05.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim05.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim05.png",
+      "size_bytes": 785610,
+      "sha256": "10349e963c5c813d327852f82c1795fa4148d69fedffc4c589bee458e3ac3d53"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim06.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim06.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim06.png",
+      "size_bytes": 618959,
+      "sha256": "363510303b715d4cbc384e1ce227e466b613a09e1b71ae985882bf8e7fbd9b18"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim07.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim07.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim07.png",
+      "size_bytes": 566322,
+      "sha256": "b77d3f006f42414bb242222e0482e750c0fb9e5ee8d4bed2f6f11c5605fe54a4"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim08.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim08.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim08.png",
+      "size_bytes": 788470,
+      "sha256": "ba23983c76b4832ee0e8af0592664756841a16779acd69f792e268fb6d13d6e7"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim09.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim09.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim09.png",
+      "size_bytes": 582899,
+      "sha256": "6a4361c2fc194feb4edaa9f9a4a0620fb9943e460ac7fdf037fb0f6dd6607a7d"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim10.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim10.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim10.png",
+      "size_bytes": 593463,
+      "sha256": "9dfb70f5867c29ff9ed6313683f19b3d867849e40fbc0c4c54a4a89df341cf23"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim11.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim11.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim11.png",
+      "size_bytes": 621023,
+      "sha256": "7936814b58b5387fce2e4e2488b4ec830dadd95fa9520f358ddb30990b50f2b6"
+    },
+    {
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "filename": "kodim12.png",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/Kodak-PCD0992/kodim12.png",
+      "local_path": "data/natural_objects/kodak-pcd0992-unrestricted-public-release/kodim12.png",
+      "size_bytes": 531024,
+      "sha256": "d78c37c2f04f23761ed2367dd77e2db584ddd4c3950833fecf89f199a8126980"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "1.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/1.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/1.tif",
+      "size_bytes": 590864,
+      "sha256": "8b40b5aeb1fafcd783669ef5d6dea28a266eb7ee72af6115134f46e076e10a11"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "2.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/2.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/2.tif",
+      "size_bytes": 590840,
+      "sha256": "801b51d78abb1872f8c8086c3285698de54ae7faf5d649ddbaaba184cd446438"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "3.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/3.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/3.tif",
+      "size_bytes": 590864,
+      "sha256": "f95cbc0d728c30eb2aabeeea36ecec968a2f414b4ab3d1538828ba2482a89d89"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "4.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/4.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/4.tif",
+      "size_bytes": 590864,
+      "sha256": "04d3a97c44cbe5ed4b12cded1e0ad489c37244bb6cbe19de1b9f6af56a93ece6"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "5.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/5.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/5.tif",
+      "size_bytes": 590864,
+      "sha256": "fd5784f131777eb7e83aec5c902607a9a3235aff3619c1c76eaeacdcb4adf128"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "6.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/6.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/6.tif",
+      "size_bytes": 590864,
+      "sha256": "06ac4daad4ef1fbe77d09b208f0822cb75a38ff88c764803f9c76c40c45fd994"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "7.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/7.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/7.tif",
+      "size_bytes": 590864,
+      "sha256": "1b642bfd89fb284c286397bca6c5515c126a27f22674d75838bab42cb288d18a"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "8.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/8.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/8.tif",
+      "size_bytes": 590864,
+      "sha256": "aa562f773d7e1b965602328119ce93f45c0479c02b16909e20612fe027e4aa7e"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "9.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/9.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/9.tif",
+      "size_bytes": 590840,
+      "sha256": "c3c93545aaa4f3b08ea308b355cc4637bc106f72efd6287e2574d98ea0015570"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "10.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/10.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/10.tif",
+      "size_bytes": 590864,
+      "sha256": "8d1a5651084a181101a7d495686b90e3cf730a9f088c33d347994a29e844fa46"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "11.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/11.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/11.tif",
+      "size_bytes": 590864,
+      "sha256": "a089706f53822d3118e0c8e2df971372e0bd604840fd5d6ba63fd191c7226c60"
+    },
+    {
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "filename": "12.tif",
+      "source_url": "https://raw.githubusercontent.com/girfa/ColorImageDatasets/main/UCID-1338/12.tif",
+      "local_path": "data/natural_objects/ucid-1338-public-citation-subset/12.tif",
+      "size_bytes": 590864,
+      "sha256": "53feee2a5c2113200d67ad1ab7dc6124102fbf2dd5f7b39725043ac45e3f2540"
+    }
+  ]
+}

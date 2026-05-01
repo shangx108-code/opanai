@@ -1,5 +1,19 @@
 # Benchmark-Root Natural-Image Status Note
 
+## Historical status
+
+This note is retained as a historical record of why the benchmark-root `ImageNet-1k` / `COCO` branch was not executable in the active root on `2026-05-01`. It is no longer the active natural-image execution path for the manuscript.
+
+## Active replacement path
+
+The active natural-image branch now uses staged public-open-data subsets from `Kodak-PCD0992` and `UCID-1338`, with frozen manifests under:
+
+- `results/natural_objects/public_dataset_protocol.md`
+- `results/natural_objects/public_dataset_download_manifest.csv`
+- `results/natural_objects/public_dataset_download_manifest.json`
+
+Current manuscript wording should therefore follow the public Kodak/UCID protocol rather than the old proxy-only benchmark-root contingency described below.
+
 ## Purpose
 
 This note consolidates the current status of the planned benchmark-root natural-image evaluation for `ImageNet-1k / ILSVRC2012 validation` and `COCO 2017 validation`. It is intended to support manuscript-safe wording, supplementary clarification, and the next execution handoff.

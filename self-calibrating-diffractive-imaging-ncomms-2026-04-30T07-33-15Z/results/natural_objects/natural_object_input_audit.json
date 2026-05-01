@@ -3,18 +3,24 @@
   "staging_root": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects",
   "datasets": [
     {
-      "dataset_name": "ImageNet-1k",
-      "dataset_version": "ILSVRC2012 validation",
-      "expected_dir": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation",
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
+      "expected_dir": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/kodak-pcd0992-unrestricted-public-release",
       "image_count": 12,
+      "detected_extensions": [
+        ".png"
+      ],
       "exists": true,
       "status": "ready"
     },
     {
-      "dataset_name": "COCO",
-      "dataset_version": "2017 validation",
-      "expected_dir": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation",
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
+      "expected_dir": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/ucid-1338-public-citation-subset",
       "image_count": 12,
+      "detected_extensions": [
+        ".tif"
+      ],
       "exists": true,
       "status": "ready"
     }

@@ -1,0 +1,119 @@
+{
+  "profiles": [
+    {
+      "profile_name": "slm_lcos_visible_reflective",
+      "device_class": "single-plane reflective LCoS SLM",
+      "simulation_binding_status": {
+        "phase_noise_sigma_rad": "bound",
+        "shift_sigma_px": "not_fabrication_native_for_single_plane_device",
+        "rotation_sigma_deg": "not_fabrication_native_for_single_plane_device",
+        "wavelength_drift_fraction": "external_source_or_recalibration_dependent"
+      },
+      "device_geometry": {
+        "example_panel_pitch_um": 8.0,
+        "alternate_wss_pitch_um": 3.74,
+        "fill_factor_percent": 87.0
+      },
+      "phase_noise_prior": {
+        "family": "lognormal",
+        "median_sigma_rad": 0.19477874452256716,
+        "p95_sigma_rad": 0.6108652381980153,
+        "mu_log": -1.6358910080876454,
+        "sigma_log": 0.6949020179106618,
+        "derivation": "Median from 3.1% average phase stability times 2pi; 95th anchor from 35 degree maximum flicker."
+      },
+      "wavelength_prior": {
+        "family": "qualitative_close_wavelength_recalibration_regime",
+        "status": "not numerically fixed from panel fabrication alone",
+        "note": "Panel calibration must be wavelength-specific; close calibrated wavelengths can remain similar, but the relevant quantitative prior belongs to the source and calibration stack rather than the fabricated panel itself."
+      },
+      "source_refs": [
+        {
+          "short_name": "slm_flicker_2021",
+          "title": "Fast measurement of the phase flicker of a digitally addressable LCoS-SLM",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0030402621009219",
+          "note": "Average phase stability about 3.1%; maximal phase flicker about 30 degrees for a HOLOEYE Pluto device at 633 nm."
+        },
+        {
+          "short_name": "slm_photonics_2017",
+          "title": "LCoS SLM Study and Its Application in Wavelength Selective Switch",
+          "url": "https://www.mdpi.com/2304-6732/4/2/22",
+          "note": "GAEA device with 3.74 um pitch shows maximum flicker about 35 degrees; cooling to -8 C can reduce flicker by up to 80%."
+        },
+        {
+          "short_name": "slm_nonuniformity_2021",
+          "title": "Phase Compensation of the Non-Uniformity of the Liquid Crystal on Silicon Spatial Light Modulator at Pixel Level",
+          "url": "https://www.mdpi.com/1424-8220/21/3/967",
+          "note": "HOLOEYE device with 8 um pitch and 87% fill factor; phase response must be recalibrated across wavelength and temperature."
+        },
+        {
+          "short_name": "slm_close_wavelength_2019",
+          "title": "Liquid Crystal Spatial Light Modulator with Optimized Phase Modulation Ranges to Display Multiorder Diffractive Elements",
+          "url": "https://www.mdpi.com/2076-3417/9/13/2592/html",
+          "note": "Phase response does not vary remarkably for a different but close illuminating wavelength after calibration."
+        }
+      ]
+    },
+    {
+      "profile_name": "bilayer_tio2_metasurface_visible",
+      "device_class": "stacked dielectric metasurface",
+      "simulation_binding_status": {
+        "phase_noise_sigma_rad": "bound",
+        "shift_sigma_px": "bound",
+        "rotation_sigma_deg": "partially_bound_via_stacked_layer_alignment_class",
+        "wavelength_drift_fraction": "bound"
+      },
+      "device_geometry": {
+        "unit_cell_pitch_nm": 420.0,
+        "visible_device_reference_wavelength_nm": 560.0,
+        "alternate_beam_deflector_reference_wavelength_nm": 750.0
+      },
+      "phase_noise_prior": {
+        "family": "gaussian_pushforward",
+        "sigma_rad": 0.7853981633974483,
+        "physical_origin": "10 nm diameter variation mapped to about pi/4 dephasing."
+      },
+      "lateral_misalignment_prior": {
+        "family": "gaussian_pushforward",
+        "sigma_nm": 50.0,
+        "sigma_pitch_fraction": 0.11904761904761904,
+        "stress_anchors_pitch_fraction": {
+          "100nm": 0.23809523809523808,
+          "250nm": 0.5952380952380952
+        },
+        "physical_origin": "50 nm bilayer misalignment tolerance; 100 nm and 250 nm explicitly studied as stronger displacement cases."
+      },
+      "rotation_prior": {
+        "family": "surrogate_from_lateral_registration_class",
+        "status": "requires device-specific overlay metrology for exact degree-scale calibration",
+        "note": "Current simulation rotation term should be interpreted as a companion variable to bilayer overlay error rather than as an independently measured literature distribution."
+      },
+      "wavelength_prior": {
+        "family": "gaussian_pushforward",
+        "sigma_fraction": 0.03333333333333333,
+        "sigma_nm_at_750nm": 25.0,
+        "physical_origin": "10 nm geometry error induces about 25 nm shift of the wavelength of maximum diffraction efficiency at 750 nm."
+      },
+      "source_refs": [
+        {
+          "short_name": "meta_fabrication_2021",
+          "title": "Challenges in nanofabrication for efficient optical metasurfaces",
+          "url": "https://www.nature.com/articles/s41598-021-84666-z",
+          "note": "10 nm diameter error yields dephasing close to pi/4 and about 25 nm peak-wavelength shift at 750 nm; high-performance devices require better than 10 nm precision."
+        },
+        {
+          "short_name": "meta_bilayer_visible_2025",
+          "title": "Free-standing bilayer metasurfaces in the visible",
+          "url": "https://www.nature.com/articles/s41467-025-58205-7",
+          "note": "Bilayer structures show robust performance under misalignment tolerance within 50 nm; unit-cell size is 420 nm."
+        },
+        {
+          "short_name": "meta_bilayer_nonlinear_2025",
+          "title": "Bilayer optical metasurfaces with multiple broken symmetries for nonlinear wavelength generation",
+          "url": "https://www.nature.com/articles/s44455-025-00016-3",
+          "note": "Controlled horizontal-displacement studies explicitly evaluate 100 nm and 250 nm layer offsets in a bilayer metasurface."
+        }
+      ]
+    }
+  ]
+}

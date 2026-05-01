@@ -1,0 +1,33 @@
+dataset_name,dataset_version,phase_noise_sigma_rad,misalignment_label,shift_sigma_px,rotation_sigma_deg,max_passing_wavelength_drift_fraction,first_mean_fail_wavelength_drift_fraction,first_certain_fail_wavelength_drift_fraction,clean_point_gain_db,clean_point_state,failure_threshold_gain_db
+Kodak-PCD0992,unrestricted public release,0.0,clean,0.0,0.0,,0.0,0.0,-1.1083978907880478,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.0,mild,0.25,0.5,,0.0,0.0,-11.965049813111795,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.0,moderate,0.5,1.0,,0.0,0.0,-14.043373322706671,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.0,severe,1.0,2.0,,0.0,0.0,-15.625619192475634,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.05,clean,0.0,0.0,,0.0,0.0,-7.725517566108668,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.05,mild,0.25,0.5,,0.0,0.0,-12.15871393135563,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.05,moderate,0.5,1.0,,0.0,0.0,-14.092729720373908,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.05,severe,1.0,2.0,,0.0,0.0,-15.738799464460891,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.1,clean,0.0,0.0,,0.0,0.0,-11.530534820006961,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.1,mild,0.25,0.5,,0.0,0.0,-13.267958008297597,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.1,moderate,0.5,1.0,,0.0,0.0,-14.447396387142424,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.1,severe,1.0,2.0,,0.0,0.0,-15.975174359231636,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.2,clean,0.0,0.0,,0.0,0.0,-14.046162212127555,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.2,mild,0.25,0.5,,0.0,0.0,-14.58599758890596,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.2,moderate,0.5,1.0,,0.0,0.0,-14.92826559467038,fail,0.0
+Kodak-PCD0992,unrestricted public release,0.2,severe,1.0,2.0,,0.0,0.0,-15.91450672652964,fail,0.0
+UCID,1338 public citation subset,0.0,clean,0.0,0.0,0.02,,,1.640902872982333,pass,0.0
+UCID,1338 public citation subset,0.0,mild,0.25,0.5,,0.0,0.0,-7.594903811601263,fail,0.0
+UCID,1338 public citation subset,0.0,moderate,0.5,1.0,,0.0,0.0,-9.804542204893403,fail,0.0
+UCID,1338 public citation subset,0.0,severe,1.0,2.0,,0.0,0.0,-11.429345136820388,fail,0.0
+UCID,1338 public citation subset,0.05,clean,0.0,0.0,,0.0,0.0,-3.630260229214859,fail,0.0
+UCID,1338 public citation subset,0.05,mild,0.25,0.5,,0.0,0.0,-7.765491159980706,fail,0.0
+UCID,1338 public citation subset,0.05,moderate,0.5,1.0,,0.0,0.0,-9.815734281554834,fail,0.0
+UCID,1338 public citation subset,0.05,severe,1.0,2.0,,0.0,0.0,-11.527719796982856,fail,0.0
+UCID,1338 public citation subset,0.1,clean,0.0,0.0,,0.0,0.0,-7.088061235243842,fail,0.0
+UCID,1338 public citation subset,0.1,mild,0.25,0.5,,0.0,0.0,-8.878718905675521,fail,0.0
+UCID,1338 public citation subset,0.1,moderate,0.5,1.0,,0.0,0.0,-10.194243580667253,fail,0.0
+UCID,1338 public citation subset,0.1,severe,1.0,2.0,,0.0,0.0,-11.741114968225775,fail,0.0
+UCID,1338 public citation subset,0.2,clean,0.0,0.0,,0.0,0.0,-9.680062279602339,fail,0.0
+UCID,1338 public citation subset,0.2,mild,0.25,0.5,,0.0,0.0,-10.23222149132129,fail,0.0
+UCID,1338 public citation subset,0.2,moderate,0.5,1.0,,0.0,0.0,-10.57501192764359,fail,0.0
+UCID,1338 public citation subset,0.2,severe,1.0,2.0,,0.0,0.0,-11.681163431284205,fail,0.0

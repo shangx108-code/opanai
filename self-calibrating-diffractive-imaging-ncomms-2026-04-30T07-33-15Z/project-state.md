@@ -9,126 +9,131 @@
 
 ## Current single bottleneck
 
-The fairness-comparator gap is now closed at the digital-capacity level, the GitHub long-term main space is aligned with the active local project root, and the tolerance/source-data/reproducibility packaging tasks requested in this round are complete. The immediate blocker is now narrower: the active root still lacks licensed benchmark-root natural-image execution, so the natural-image branch remains proxy-only and cannot be promoted to benchmark-root evidence.
+The project no longer lacks either an unmitigated, robust-mask, or second-generation linked tolerance result. The sharper bottleneck is now that neither the first-order robust-mask strategy nor a first-pass second-generation joint-perturbation training objective expands the linked pass region beyond the same clean `UCID` branch.
 
 ## Confirmed core story
 
-A fixed passive diffractive optical processor co-propagates an object wave and a known reference wave, uses coherent interference to encode the instantaneous distortion state, and aims to restore images under dynamic aberrations without iterative adaptive optics or heavy electronic post-processing.
+1. A fixed passive diffractive optical processor co-propagates an object wave and a known reference wave, uses coherent interference to encode the instantaneous distortion state, and aims to restore images under dynamic aberrations without iterative adaptive optics.
+2. Under the registered synthetic dual-ledger benchmark, `phase_only_stack` still provides the strongest overall average PSNR gain.
+3. That benchmark advantage is carried mainly by held-out aberration generalization; held-out object-family shift remains much harder.
+4. The public-data natural-image branch no longer rests on proxy placeholders. It now uses staged public subsets from `Kodak-PCD0992` and `UCID-1338`, with frozen file manifests and reproducibility hashes.
 
-## Working manuscript spine
+## New public-data execution results
 
-1. Problem: dynamic aberrations and weak scattering limit fast optical imaging.
-2. Gap: most diffractive optical neural networks assume static or distribution-averaged degradation and lack true self-calibration.
-3. Claim: a passive reference-assisted diffractive operator can perform distribution-level self-calibrated image restoration within a bounded family of dynamic optical distortions.
-4. Required evidence: quantitative comparison against conventional D2NN, classical restoration, and digital neural reconstruction under Zernike, Kolmogorov, and thin phase-screen perturbations.
-5. Remaining realism evidence: executed natural-object evaluation and executed method-fair tolerance tables under frozen perturbation rules.
+- Synthetic-only public-data run:
+  - `Kodak-PCD0992`: mean PSNR gain over fixed `-16.1404 dB`, better-than-fixed fraction `0.0`
+  - `UCID`: mean PSNR gain over fixed `-12.1478 dB`, better-than-fixed fraction `0.0`
+- Mixed-train public-data rerun:
+  - `Kodak-PCD0992`: mean PSNR gain over fixed `-1.1311 dB`, better-than-fixed fraction `0.1111`
+  - `UCID`: mean PSNR gain over fixed `+1.3828 dB`, better-than-fixed fraction `0.7917`
+- Mixed-train public-data thickstats (`5` seeds, `12` held-out cases per seed):
+  - `Kodak-PCD0992`: mean PSNR gain over fixed `-1.0544 ± 0.1434 dB` (95% CI half-width)
+  - `UCID`: mean PSNR gain over fixed `+1.7261 ± 0.2319 dB` (95% CI half-width)
 
-## Immediate next action
+## Updated interpretation
 
-Stage the licensed natural-image inputs into the audited dataset roots required by step 2, rerun `scripts/run_natural_object_evaluation.py` until it produces benchmark-root metrics, and then replace the remaining proxy-natural wording in the manuscript and source-data index.
+- The old proxy-natural story of “positive gain on both datasets after mixed training” no longer survives contact with the public-data rerun.
+- The new real-data interpretation is narrower:
+  - mixed training materially reduces the natural-image failure
+  - the recovery is dataset-dependent rather than universal
+  - `UCID` becomes reproducibly positive
+  - `Kodak-PCD0992` remains mildly negative even after mixed training
+- Therefore the natural-image branch now supports a claim about training-distribution dependence and dataset heterogeneity, not a broad positive natural-image generalization claim.
 
-## Verified progress
+## Tolerance and robustness results on the public-data branch
 
-- `baseline-001-reference-psf` has been promoted from an early scaffold to the current physical reference baseline.
-- The current physical baseline now uses an explicit angular-spectrum propagation kernel with declared `Δx`, `λ`, `z`, and frequency-coordinate ranges.
-- `baseline-001-reference-psf-multiseed` completed across 5 seeds and produced `multiseed_summary.csv`, per-seed sample metrics, seed logs, and a SHA-256 manifest.
-- Across 5 seeds, the physical baseline achieved mean PSNR gain `1.661 ± 0.122` dB (95% CI half-width) and mean SSIM gain `0.1133 ± 0.0075`, with guided improvement fraction `1.0` for both PSNR and SSIM.
-- `baseline-002-trainable-surrogate` completed as the first learned-calibration package.
-- On held-out aberration cases, the trainable surrogate achieved mean low-resolution PSNR `50.703 dB` versus `37.541 dB` for the fixed low-resolution baseline, but this comparison still shares the same small object family between train and test and is therefore not yet strong enough for manuscript evidence.
-- The thick-statistics rerun confirmed a positive mean PSNR gain of `+0.484 dB` on `new_family_heldout_object_family` with 5 seeds and 24 held-out cases per seed, so the sign-stability bottleneck is closed.
-- A dedicated reviewer-facing failure-case package now exists under `results/failure_cases/`, with `diag_x`, `checker_blocks`, and `crescent` identified as the main structured negative-tail families.
-- Minimal auditable scaffolds now exist for:
-  - `results/natural_objects/natural_object_subset_index.csv`
-  - `results/natural_objects/natural_object_package.md`
-  - `results/tolerance/method_fair_tolerance_matrix.csv`
-  - `results/tolerance/hardware_tolerance_package.md`
-- A unified executable pipeline now exists in `scripts/run_real_pipeline.py`, and the first end-to-end smoke run on `new_family_heldout_object_family` completed with mean PSNR gain `+0.1849 dB` over fixed on `24` evaluation samples.
-- Strict step-2 execution has now been attempted with `scripts/run_natural_object_evaluation.py`, and it is currently blocked only by missing raw natural-image dataset roots in:
-  - this blocker has been bypassed for execution purposes by constructing project-local proxy image files under the required dataset roots
-- Step 2 now completes with project-local proxy natural images and yields a strongly negative result for the current pipeline:
-  - baseline proxy-natural run:
-    - ImageNet-proxy mean PSNR gain over fixed: `-10.3924 dB`
-    - COCO-proxy mean PSNR gain over fixed: `-12.8547 dB`
-  - mixed-train proxy-natural rerun:
-    - ImageNet-proxy mean PSNR gain over fixed: `+0.7458 dB`
-    - COCO-proxy mean PSNR gain over fixed: `+1.3334 dB`
-  - mixed-train proxy-natural thickstats (`5` seeds, `12` held-out cases per seed):
-    - ImageNet-proxy mean PSNR gain over fixed: `+0.9841 ± 0.2501 dB` (95% CI half-width)
-    - COCO-proxy mean PSNR gain over fixed: `+1.4520 ± 0.1370 dB` (95% CI half-width)
-- These numbers are execution-valid but must remain explicitly labeled as proxy natural-image stress-test results rather than official ImageNet/COCO evidence.
-- The strongest current inference is that the natural-object failure is primarily a training-distribution mismatch, not a total failure of the optical frontend itself.
-- Step 3 tolerance execution has now started and produced a first executable mixed-train tolerance table:
-  - under common reference-noise perturbations, `phase_only_stack` remains positive but trails `reference_psf_deconvolution`
-  - under `propagation_distance_error` of `±5%`, `phase_only_stack` remains positive on both proxy-natural datasets and does not show catastrophic collapse
-  - under phase-mask quantization and lateral-shift engineering perturbations, `phase_only_stack` collapses strongly negative on both proxy-natural datasets
-  - the dominant current tolerance risk is therefore optical-mask engineering sensitivity rather than mild common reference noise
-- The fairness matrix is now materially filled for the key branches:
-  - reference-channel misregistration
-  - reference-channel intensity noise
-  - propagation-distance error
-  - phase-mask quantization
-  - phase-mask lateral shift
-- A parameter-matched digital-only comparator now exists under `results/baselines/baseline-010-parameter-matched-digital-surrogate/` and closes the strongest remaining fairness-control gap:
-  - digital trainable parameters matched exactly to the `phase_only_stack` ridge stage: `145296`
-  - pooled dual-ledger mean PSNR gain: `+2.3931 dB`
-  - held-out aberration ledger mean PSNR gain: `+4.3264 dB`
-  - held-out object-family ledger mean PSNR gain: `+0.4598 dB`
-- This comparator materially strengthens the fairness interpretation:
-  - the hybrid phase-only method remains stronger in the pooled benchmark and on the held-out aberration ledger
-  - the object-family ledger gap between `phase_only_stack` and the parameter-matched digital surrogate is narrow and must be described conservatively
-- A benchmark-root natural-object audit package now exists under `results/natural_objects/`:
-  - `benchmark_root_subset_manifest.csv`
-  - `benchmark_root_summary.csv`
-  - `benchmark_root_readme.md`
-  - `benchmark_root_audit.json`
-- The audit closes an ambiguity in the realism pipeline:
-  - both expected dataset directories exist
-  - both currently contain only proxy-named placeholder PNG files
-  - therefore benchmark-root readiness remains `false` for both `ImageNet-1k / ILSVRC2012 validation` and `COCO / 2017 validation`
-  - the realism evidence must remain labeled `proxy-only` until licensed benchmark-root files are actually staged
-- A GitHub main-space audit now exists under `indexes/`:
-  - `github-main-space-gap-audit-v1.md`
-  - `data-gap-inventory-v1.csv`
-- This audit verifies that:
-  - the project manifest already points to repository `shangx108-code/opanai`, branch `open-ai`, and GitHub root `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
-  - that GitHub path is the canonical long-term main space for this project, while the `/workspace/memory/...` directory is only the current working mirror
-  - the substantive tracked project files are aligned between the current local mirror and the GitHub long-term main space
-  - the missing-data inventory is now explicit rather than implicit
-- A robust-mask mitigation training pass has now been executed with in-loop perturbation exposure to:
-  - unperturbed masks
-  - `4`-bit quantization
-  - `3`-bit quantization
-  - `1 px` lateral shift
-- This mitigation materially repairs the dominant first-order engineering failures:
-  - `1 px` shift and `3/4`-bit quantization move from large negative gains to positive gains on both proxy-natural datasets
-  - `2 px` lateral shift remains a strong failure mode
-- The current result supports the narrower calibration premise and the learnability premise, but still does not justify claims about real natural-image performance or hardware robustness until the frozen protocols are actually executed.
-- The tolerance package now includes the previously missing figure-ready exports:
-  - `results/tolerance/tolerance_curve_summary.csv`
-  - `results/tolerance/tolerance_curve_detail.csv`
-  - `results/tolerance/tolerance_plot_manifest.csv`
-  - `results/tolerance/hardware_tolerance_metrics.csv`
-- Figure-level source-data folders now exist under:
-  - `source_data/Fig1/`
-  - `source_data/Fig2/`
-  - `source_data/Fig3/`
-  - `source_data/Fig4/`
-  - `source_data/FigS1/`
-- Each figure-level source-data folder now includes:
-  - panel-level copied artifacts
-  - per-panel README files
-  - config snapshots
-  - checksum manifest
-  - claim-boundary notes
-- A project-wide reproducibility manifest now exists at:
+- In the mixed-train tolerance package, `phase_only_stack` remains positive on `UCID` under mild shared perturbations, but stays negative on `Kodak-PCD0992` even at clean reference and `±5%` propagation-distance error.
+- `reference_psf_deconvolution` remains positive on both public datasets across the executed common perturbations.
+- Phase-mask-specific perturbations remain the dominant engineering vulnerability:
+  - `1 px` and `2 px` lateral shift are strongly negative on both datasets before mitigation
+  - `3`-bit and `4`-bit quantization are also strongly negative on both datasets before mitigation
+- Robust-mask training changes the picture asymmetrically:
+  - `UCID` becomes strongly positive for clean reference, `1 px` shift, `3`-bit quantization, and `4`-bit quantization
+  - `Kodak-PCD0992` improves dramatically relative to the unmitigated baseline, but remains slightly negative in clean reference and first-order perturbation cases
+  - `2 px` lateral shift remains strongly negative on both datasets after mitigation
+
+## New joint fabrication-tolerance execution results
+
+- A linked three-factor scan is now executed in `results/tolerance_joint/` over:
+  - phase-noise RMS: `0`, `0.05`, `0.10`, `0.20 rad`
+  - layer misalignment levels:
+    - clean: `0 px`, `0 deg`
+    - mild: `0.25 px`, `0.5 deg`
+    - moderate: `0.50 px`, `1.0 deg`
+    - severe: `1.0 px`, `2.0 deg`
+  - wavelength drift: `0`, `0.5%`, `1%`, `2%`
+- `UCID` retains a positive gain-over-fixed region only for the clean-mask branch:
+  - clean, `0%` drift: `+1.6409 ± 0.3407 dB`
+  - clean, `0.5%` drift: `+1.6470 ± 0.3373 dB`
+  - clean, `1.0%` drift: `+1.6454 ± 0.3354 dB`
+  - clean, `2.0%` drift: `+1.6255 ± 0.3339 dB`
+- `UCID` fails immediately once either fabrication-noise axis becomes nonzero in the current unmitigated stack:
+  - phase noise only, `0.05 rad`: `-3.6303 ± 1.4411 dB`
+  - mild misalignment only, `0.25 px / 0.5 deg`: `-7.5949 ± 0.4896 dB`
+- `Kodak-PCD0992` has no passing region even at the clean point:
+  - clean, `0%` drift: `-1.1084 ± 0.1963 dB`
+- The dominant fragility is therefore fabrication-style phase/mask error, not wavelength drift.
+
+## New robust-mask joint tolerance results
+
+- A matched robust-mask version of the same linked three-factor scan now exists in `results/tolerance_joint_robust/`.
+- The clean branch improves, but the pass region does not expand:
+  - `UCID`, clean, `0%` drift: from `+1.6409 ± 0.3407 dB` to `+2.5993 ± 0.0812 dB`
+  - `UCID`, clean, `2%` drift: from `+1.6255 ± 0.3339 dB` to `+2.5192 ± 0.1570 dB`
+  - `Kodak-PCD0992`, clean, `0%` drift: from `-1.1084 ± 0.1963 dB` to `-0.2182 ± 0.0935 dB`, still below zero
+- The same previously failing linked perturbation branches remain failing after robust-mask training:
+  - `UCID`, phase noise only `0.05 rad`: `-4.3309 ± 1.7409 dB`
+  - `UCID`, mild misalignment only `0.25 px / 0.5 deg`: `-7.4303 ± 0.5466 dB`
+- Therefore the present robust-mask strategy improves clean-headroom and single-factor first-order cases, but does not open a broader linked fabrication-tolerance window.
+
+## New second-generation joint-training results
+
+- A first-pass second-generation training objective now exists in `results/tolerance_joint_secondgen/`.
+- This objective injects linked perturbation variants during training itself rather than only first-order quantization and `1 px` shift exposure:
+  - clean
+  - joint mild: `0.05 rad`, `0.25 px`, `0.5 deg`, `0.5%`
+  - joint moderate: `0.10 rad`, `0.50 px`, `1.0 deg`, `1.0%`
+- The result does not widen the linked pass region:
+  - `UCID`, clean, `0%` drift: `+2.3951 ± 0.2853 dB`
+  - `UCID`, clean, `2%` drift: `+2.3037 ± 0.3357 dB`
+  - `UCID`, phase noise only `0.05 rad`: `-4.7289 ± 1.9562 dB`
+  - `UCID`, mild misalignment only `0.25 px / 0.5 deg`: `-8.3056 ± 2.1266 dB`
+  - `Kodak-PCD0992`, clean, `0%` drift: `-0.4409 ± 0.1989 dB`
+- Relative to the first robust-mask strategy, the second-generation objective remains positive on the same clean `UCID` branch but does not expand the pass set and underperforms the robust-mask clean point.
+
+## Active manuscript-safe claim boundary
+
+- Safe:
+  - the hybrid diffractive frontend provides the best average trade-off in the registered synthetic dual-ledger benchmark
+  - mixed training substantially reduces the natural-image transfer failure on real public data
+  - public natural-image performance is strongly dataset-dependent
+  - robust-mask training repairs first-order perturbation failures on `UCID` and sharply reduces them on `Kodak-PCD0992`, but does not establish broad hardware robustness
+  - in the unmitigated stack, wavelength drift up to `2%` is comparatively mild when the hardware is otherwise clean, whereas phase noise and layer misalignment dominate the failure boundary
+  - the robust-mask variant increases clean-branch margin on `UCID` and narrows the clean-point deficit on `Kodak-PCD0992`, but still does not expand the linked pass region beyond the clean `UCID` branch
+  - the current second-generation joint-perturbation training objective is a valid negative result: it preserves only the same clean `UCID` pass branch and does not currently outperform the simpler robust-mask strategy on the linked boundary metric
+- Unsafe:
+  - claiming benchmark-root ImageNet/COCO validation
+  - claiming broadly positive natural-image generalization across public datasets
+  - claiming hardware robustness beyond first-order simulated perturbation repair
+  - claiming a broad positive fabrication-tolerance window for the unmitigated phase-only stack
+  - claiming that the current robust-mask strategy has solved linked fabrication tolerance
+  - claiming that the present second-generation training objective has opened a broader fabrication-tolerance safety window
+
+## Public-data protocol status
+
+- Active natural-image protocol:
+  - `Kodak-PCD0992 / unrestricted public release`
+  - `UCID / 1338 public citation subset`
+- Frozen subset size:
+  - `12 + 12` images
+- Traceability files:
+  - `results/natural_objects/public_dataset_download_manifest.csv`
+  - `results/natural_objects/public_dataset_download_manifest.json`
+  - `results/natural_objects/public_dataset_protocol.md`
   - `archive/reproducibility_manifest.json`
-- A real-data availability check for benchmark-root natural images remains negative:
-  - audited staging roots contain only proxy-named placeholder PNG files
-  - a connected Drive search in this round did not return accessible licensed benchmark-root ImageNet/COCO files
-  - therefore `scripts/run_natural_object_evaluation.py` cannot yet be honestly promoted to a benchmark-root rerun
 
 ## Automation
 
 - Hourly iteration schedule: enabled
 - Schedule timezone: `Asia/Shanghai`
-- Stop condition: all 5 reviewer-style acceptance estimates exceed 0.80 and the evidence chain is complete
+- Stop condition: the manuscript, source-data package, and long-term GitHub project space all reflect the public-data recomputation and updated claim boundary.

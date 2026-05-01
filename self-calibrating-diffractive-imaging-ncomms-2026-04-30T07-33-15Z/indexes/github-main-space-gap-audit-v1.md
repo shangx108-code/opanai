@@ -32,7 +32,7 @@ The current alignment check shows:
 - local project files: `475`
 - GitHub-tracked project files: `465`
 - missing GitHub-side substantive files: `0`
-- local-only non-authoritative files: `10` under `scripts/__pycache__`
+- local-only non-authoritative files: `10` under `scripts/__pycache__/`
 
 Blob-hash comparison across the shared file set shows that the substantive tracked project files are now aligned between the active local mirror and the GitHub long-term main space. Therefore the current project **is now present in the GitHub-backed long-term main space**.
 

@@ -45,9 +45,9 @@ def build_mixed_training_objects() -> tuple[list[np.ndarray], dict[str, int]]:
         proxy_objects.extend(arr for _, arr in proxy_rows)
     counts = {
         "synthetic_training_objects": len(synthetic_objects),
-        "proxy_training_objects": len(proxy_objects),
+        "public_natural_training_objects": len(proxy_objects),
     }
-    counts.update({f"proxy_{k}": v for k, v in per_dataset_counts.items()})
+    counts.update({f"public_{k}": v for k, v in per_dataset_counts.items()})
     return synthetic_objects + proxy_objects, counts
 
 
@@ -75,14 +75,14 @@ def run_mixed_train_rerun() -> dict[str, object]:
         metrics_df, summary = compute_psnr(eval_samples, recon, state)
         metrics_df["dataset_name"] = spec.dataset_name
         metrics_df["dataset_version"] = spec.dataset_version
-        metrics_df["training_regime"] = "mixed_synthetic_plus_proxy_natural"
+        metrics_df["training_regime"] = "mixed_synthetic_plus_public_natural"
         all_rows.append(metrics_df)
         summary_rows.append(
             {
                 "dataset_name": spec.dataset_name,
                 "dataset_version": spec.dataset_version,
                 "image_count": len(objects_with_names),
-                "training_regime": "mixed_synthetic_plus_proxy_natural",
+                "training_regime": "mixed_synthetic_plus_public_natural",
                 **summary,
             }
         )

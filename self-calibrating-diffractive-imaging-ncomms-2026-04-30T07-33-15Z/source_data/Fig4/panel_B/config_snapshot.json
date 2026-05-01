@@ -1,0 +1,8 @@
+{
+  "figure": "Fig4",
+  "panel": "B",
+  "config_reference": "pending/configs/robust_mask_tolerance_compare.yaml",
+  "resolved_config_exists": false,
+  "evidence_status": "simulation-only",
+  "last_verified_utc": "2026-05-01T13:54:00Z"
+}

@@ -2,34 +2,34 @@
   "status": "completed",
   "training_mix_counts": {
     "synthetic_training_objects": 50,
-    "proxy_training_objects": 24,
-    "proxy_ImageNet-1k": 12,
-    "proxy_COCO": 12
+    "public_natural_training_objects": 24,
+    "public_Kodak-PCD0992": 12,
+    "public_UCID": 12
   },
   "summary_rows": [
     {
-      "dataset_name": "ImageNet-1k",
-      "dataset_version": "ILSVRC2012 validation",
+      "dataset_name": "Kodak-PCD0992",
+      "dataset_version": "unrestricted public release",
       "image_count": 12,
-      "training_regime": "mixed_synthetic_plus_proxy_natural",
+      "training_regime": "mixed_synthetic_plus_public_natural",
       "sample_count": 72,
-      "mean_fixed_psnr_lowres": 19.786197545547022,
-      "mean_guided_psnr_lowres": 22.34064553718626,
-      "mean_pipeline_psnr_lowres": 20.531952487763583,
-      "mean_psnr_gain_over_fixed_lowres": 0.7457549422165576,
-      "better_than_fixed_fraction": 0.7638888888888888
+      "mean_fixed_psnr_lowres": 25.16866475074103,
+      "mean_guided_psnr_lowres": 26.980283997320132,
+      "mean_pipeline_psnr_lowres": 24.037520662862512,
+      "mean_psnr_gain_over_fixed_lowres": -1.1311440878785202,
+      "better_than_fixed_fraction": 0.1111111111111111
     },
     {
-      "dataset_name": "COCO",
-      "dataset_version": "2017 validation",
+      "dataset_name": "UCID",
+      "dataset_version": "1338 public citation subset",
       "image_count": 12,
-      "training_regime": "mixed_synthetic_plus_proxy_natural",
+      "training_regime": "mixed_synthetic_plus_public_natural",
       "sample_count": 72,
-      "mean_fixed_psnr_lowres": 22.94124686886554,
-      "mean_guided_psnr_lowres": 24.983081013054687,
-      "mean_pipeline_psnr_lowres": 24.27463445948438,
-      "mean_psnr_gain_over_fixed_lowres": 1.3333875906188395,
-      "better_than_fixed_fraction": 0.875
+      "mean_fixed_psnr_lowres": 20.982562885254296,
+      "mean_guided_psnr_lowres": 23.064116308821795,
+      "mean_pipeline_psnr_lowres": 22.365326013219985,
+      "mean_psnr_gain_over_fixed_lowres": 1.382763127965692,
+      "better_than_fixed_fraction": 0.7916666666666666
     }
   ],
   "metrics_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/natural_objects/mixed_train_natural_object_metrics.csv",

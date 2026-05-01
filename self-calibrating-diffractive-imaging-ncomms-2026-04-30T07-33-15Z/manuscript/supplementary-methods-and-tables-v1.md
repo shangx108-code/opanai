@@ -99,8 +99,8 @@ Preferred wording:
 
 The current revision materially improves claim discipline and fairness transparency, but the following items remain open blockers for a stronger submission package:
 
-1. The executed natural-image evidence is still limited to project-local proxy subsets rather than licensed benchmark roots, so it should support claim-boundary arguments rather than be presented as finalized `ImageNet-1k` or `COCO` benchmark evidence.
-2. The executed tolerance evidence supports a constrained engineering conclusion, but it does not yet justify a broad hardware-robustness claim, especially because the `2 px` lateral-shift failure mode remains unresolved.
+1. The executed natural-image evidence now comes from staged public Kodak/UCID subsets rather than from benchmark-root `ImageNet-1k` or `COCO`, so it should be presented explicitly as a public-open-data protocol with dataset-dependent outcomes, not as finalized benchmark-root evidence.
+2. The executed tolerance evidence supports a constrained engineering conclusion, but it does not yet justify a broad hardware-robustness claim. The linked fabrication-style scan shows that robust-mask training raises the clean `UCID` margin but does not widen the pass region beyond the clean `UCID` branch, and the `2 px` lateral-shift failure mode also remains unresolved.
 3. The current project space does not yet contain a fabricated-device experiment.
 
 These items should appear as explicit future-work or revision requirements rather than being implied as already complete.

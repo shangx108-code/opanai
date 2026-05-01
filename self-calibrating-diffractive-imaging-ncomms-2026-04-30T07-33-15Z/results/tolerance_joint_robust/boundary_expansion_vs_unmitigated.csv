@@ -1,0 +1,33 @@
+dataset_name,dataset_version,phase_noise_sigma_rad,misalignment_label,shift_sigma_px,rotation_sigma_deg,max_passing_wavelength_drift_fraction,first_mean_fail_wavelength_drift_fraction,first_certain_fail_wavelength_drift_fraction,clean_point_gain_db,clean_point_state,failure_threshold_gain_db,baseline_max_passing_wavelength_drift_fraction,baseline_first_mean_fail_wavelength_drift_fraction,baseline_first_certain_fail_wavelength_drift_fraction,baseline_clean_point_gain_db,baseline_clean_point_state,clean_point_gain_delta_db
+Kodak-PCD0992,unrestricted public release,0.0,clean,0.0,0.0,,0.0,0.0,-0.21820670070948153,fail,0.0,,0.0,0.0,-1.1083978907880478,fail,0.8901911900785663
+Kodak-PCD0992,unrestricted public release,0.0,mild,0.25,0.5,,0.0,0.0,-11.789171148285304,fail,0.0,,0.0,0.0,-11.965049813111795,fail,0.17587866482649162
+Kodak-PCD0992,unrestricted public release,0.0,moderate,0.5,1.0,,0.0,0.0,-14.423768855872526,fail,0.0,,0.0,0.0,-14.043373322706673,fail,-0.38039553316585284
+Kodak-PCD0992,unrestricted public release,0.0,severe,1.0,2.0,,0.0,0.0,-15.965744893378984,fail,0.0,,0.0,0.0,-15.625619192475634,fail,-0.34012570090335004
+Kodak-PCD0992,unrestricted public release,0.05,clean,0.0,0.0,,0.0,0.0,-8.699911459557878,fail,0.0,,0.0,0.0,-7.725517566108668,fail,-0.9743938934492098
+Kodak-PCD0992,unrestricted public release,0.05,mild,0.25,0.5,,0.0,0.0,-12.679824339929946,fail,0.0,,0.0,0.0,-12.15871393135563,fail,-0.5211104085743159
+Kodak-PCD0992,unrestricted public release,0.05,moderate,0.5,1.0,,0.0,0.0,-14.04829207524161,fail,0.0,,0.0,0.0,-14.092729720373908,fail,0.04443764513229809
+Kodak-PCD0992,unrestricted public release,0.05,severe,1.0,2.0,,0.0,0.0,-16.091434507041473,fail,0.0,,0.0,0.0,-15.738799464460891,fail,-0.352635042580582
+Kodak-PCD0992,unrestricted public release,0.1,clean,0.0,0.0,,0.0,0.0,-12.288683730827193,fail,0.0,,0.0,0.0,-11.53053482000696,fail,-0.7581489108202337
+Kodak-PCD0992,unrestricted public release,0.1,mild,0.25,0.5,,0.0,0.0,-13.41302414101042,fail,0.0,,0.0,0.0,-13.267958008297596,fail,-0.14506613271282376
+Kodak-PCD0992,unrestricted public release,0.1,moderate,0.5,1.0,,0.0,0.0,-14.853354284212438,fail,0.0,,0.0,0.0,-14.447396387142424,fail,-0.40595789707001373
+Kodak-PCD0992,unrestricted public release,0.1,severe,1.0,2.0,,0.0,0.0,-16.310343918857544,fail,0.0,,0.0,0.0,-15.975174359231636,fail,-0.3351695596259088
+Kodak-PCD0992,unrestricted public release,0.2,clean,0.0,0.0,,0.0,0.0,-14.985977857223636,fail,0.0,,0.0,0.0,-14.046162212127555,fail,-0.9398156450960808
+Kodak-PCD0992,unrestricted public release,0.2,mild,0.25,0.5,,0.0,0.0,-15.229541698792756,fail,0.0,,0.0,0.0,-14.58599758890596,fail,-0.6435441098867969
+Kodak-PCD0992,unrestricted public release,0.2,moderate,0.5,1.0,,0.0,0.0,-15.930374210171744,fail,0.0,,0.0,0.0,-14.92826559467038,fail,-1.0021086155013634
+Kodak-PCD0992,unrestricted public release,0.2,severe,1.0,2.0,,0.0,0.0,-16.413119729354943,fail,0.0,,0.0,0.0,-15.91450672652964,fail,-0.4986130028253033
+UCID,1338 public citation subset,0.0,clean,0.0,0.0,0.02,,,2.5992926149610134,pass,0.0,0.02,,,1.640902872982333,pass,0.9583897419786804
+UCID,1338 public citation subset,0.0,mild,0.25,0.5,,0.0,0.0,-7.430296191870082,fail,0.0,,0.0,0.0,-7.594903811601263,fail,0.1646076197311812
+UCID,1338 public citation subset,0.0,moderate,0.5,1.0,,0.0,0.0,-9.981700646520745,fail,0.0,,0.0,0.0,-9.804542204893403,fail,-0.1771584416273413
+UCID,1338 public citation subset,0.0,severe,1.0,2.0,,0.0,0.0,-11.812644106865664,fail,0.0,,0.0,0.0,-11.429345136820388,fail,-0.383298970045276
+UCID,1338 public citation subset,0.05,clean,0.0,0.0,,0.0,0.0,-4.330870185688018,fail,0.0,,0.0,0.0,-3.630260229214859,fail,-0.7006099564731589
+UCID,1338 public citation subset,0.05,mild,0.25,0.5,,0.0,0.0,-8.168474573594944,fail,0.0,,0.0,0.0,-7.765491159980706,fail,-0.40298341361423784
+UCID,1338 public citation subset,0.05,moderate,0.5,1.0,,0.0,0.0,-9.611652998964077,fail,0.0,,0.0,0.0,-9.815734281554834,fail,0.20408128259075653
+UCID,1338 public citation subset,0.05,severe,1.0,2.0,,0.0,0.0,-11.792123948136085,fail,0.0,,0.0,0.0,-11.527719796982856,fail,-0.26440415115322935
+UCID,1338 public citation subset,0.1,clean,0.0,0.0,,0.0,0.0,-7.770245915338809,fail,0.0,,0.0,0.0,-7.088061235243842,fail,-0.6821846800949674
+UCID,1338 public citation subset,0.1,mild,0.25,0.5,,0.0,0.0,-8.94720217330998,fail,0.0,,0.0,0.0,-8.878718905675521,fail,-0.06848326763445911
+UCID,1338 public citation subset,0.1,moderate,0.5,1.0,,0.0,0.0,-10.510753598043856,fail,0.0,,0.0,0.0,-10.194243580667251,fail,-0.3165100173766042
+UCID,1338 public citation subset,0.1,severe,1.0,2.0,,0.0,0.0,-12.08525984077756,fail,0.0,,0.0,0.0,-11.741114968225776,fail,-0.3441448725517837
+UCID,1338 public citation subset,0.2,clean,0.0,0.0,,0.0,0.0,-10.650341810465845,fail,0.0,,0.0,0.0,-9.68006227960234,fail,-0.9702795308635039
+UCID,1338 public citation subset,0.2,mild,0.25,0.5,,0.0,0.0,-10.866653323036081,fail,0.0,,0.0,0.0,-10.23222149132129,fail,-0.6344318317147906
+UCID,1338 public citation subset,0.2,moderate,0.5,1.0,,0.0,0.0,-11.675352534099673,fail,0.0,,0.0,0.0,-10.57501192764359,fail,-1.1003406064560828
+UCID,1338 public citation subset,0.2,severe,1.0,2.0,,0.0,0.0,-12.191282558463397,fail,0.0,,0.0,0.0,-11.681163431284205,fail,-0.5101191271791929
