@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-05-01T11:01:33Z",
+  "python_version": "3.12.13",
+  "platform": "Linux-6.12.47-x86_64-with-glibc2.39",
+  "project_root": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "required_modules": {
+    "numpy": true,
+    "pandas": true,
+    "PIL": true,
+    "reportlab": true,
+    "pypdf": true
+  },
+  "all_required_modules_available": true
+}

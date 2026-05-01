@@ -1,0 +1,87 @@
+{
+  "status": "ok",
+  "source_round": "round11_wrongref_v2",
+  "best_config": {
+    "config_id": 9,
+    "wrongref_mode": "anti_phase_plus_decoy",
+    "phase_mix": 0.17,
+    "reference_weight": 0.16,
+    "num_layers": 1
+  },
+  "repeat_level": {
+    "repeat_count": 8,
+    "common_minus_wrongref_all_positive": false,
+    "common_minus_wrongref_positive_repeat_count": 6,
+    "common_minus_wrongref_positive_repeat_fraction": 0.75,
+    "common_minus_wrongref_worst_repeat_db": -0.013324,
+    "common_minus_ordinary_all_positive": true
+  },
+  "sample_level": {
+    "sample_repeat_pair_count": 24,
+    "common_minus_wrongref_db_mean": 0.100578,
+    "common_minus_wrongref_db_min": -0.158032,
+    "common_minus_wrongref_db_q10": -0.054325,
+    "common_minus_wrongref_db_median": 0.080101,
+    "common_minus_wrongref_positive_rate": 0.708333,
+    "common_minus_ordinary_db_mean": 0.491473,
+    "common_minus_ordinary_db_min": -0.035519,
+    "common_minus_ordinary_positive_rate": 0.916667,
+    "worst_sample_frequency": {
+      "frame": 5,
+      "two_spots": 3
+    },
+    "most_frequent_worst_sample": "frame"
+  },
+  "top_risk_samples": [
+    {
+      "sample": "frame",
+      "repeat_count": 8,
+      "common_minus_wrongref_db_mean": 0.033574,
+      "common_minus_wrongref_db_min": -0.158032,
+      "common_minus_wrongref_db_q10": -0.116511,
+      "common_minus_wrongref_db_median": -0.017237,
+      "common_minus_wrongref_db_max": 0.253793,
+      "common_minus_wrongref_positive_rate": 0.5,
+      "common_minus_wrongref_db_std": 0.142465,
+      "common_minus_ordinary_db_mean": 0.15802,
+      "common_minus_ordinary_db_min": -0.004599,
+      "common_minus_ordinary_positive_rate": 0.875
+    },
+    {
+      "sample": "two_spots",
+      "repeat_count": 8,
+      "common_minus_wrongref_db_mean": 0.072345,
+      "common_minus_wrongref_db_min": -0.054467,
+      "common_minus_wrongref_db_q10": -0.041689,
+      "common_minus_wrongref_db_median": 0.01234,
+      "common_minus_wrongref_db_max": 0.280799,
+      "common_minus_wrongref_positive_rate": 0.625,
+      "common_minus_wrongref_db_std": 0.123443,
+      "common_minus_ordinary_db_mean": 0.772487,
+      "common_minus_ordinary_db_min": 0.614746,
+      "common_minus_ordinary_positive_rate": 1.0
+    },
+    {
+      "sample": "disk",
+      "repeat_count": 8,
+      "common_minus_wrongref_db_mean": 0.195815,
+      "common_minus_wrongref_db_min": 0.031089,
+      "common_minus_wrongref_db_q10": 0.034794,
+      "common_minus_wrongref_db_median": 0.211566,
+      "common_minus_wrongref_db_max": 0.466522,
+      "common_minus_wrongref_positive_rate": 1.0,
+      "common_minus_wrongref_db_std": 0.131098,
+      "common_minus_ordinary_db_mean": 0.543913,
+      "common_minus_ordinary_db_min": -0.035519,
+      "common_minus_ordinary_positive_rate": 0.875
+    }
+  ],
+  "artifacts": {
+    "sample_csv": "/workspace/self-calibrating-diffractive-ncomms/outputs/round12_margin_sample_stats.csv",
+    "repeat_csv": "/workspace/self-calibrating-diffractive-ncomms/outputs/round12_margin_repeat_stats.csv",
+    "repeat_worst_csv": "/workspace/self-calibrating-diffractive-ncomms/outputs/round12_margin_repeat_worst_samples.csv",
+    "summary_json": "/workspace/self-calibrating-diffractive-ncomms/outputs/round12_margin_summary.json",
+    "summary_md": "/workspace/self-calibrating-diffractive-ncomms/outputs/round12_margin_summary.md"
+  },
+  "note": "Round12 is a diagnostic pass only; it reuses round11 assets and does not retrain any processor."
+}

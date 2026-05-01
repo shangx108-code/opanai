@@ -1,0 +1,3 @@
+dataset_name,dataset_version,expected_dir,file_count,proxy_named_count,inferred_status,benchmark_root_ready,blocker_reason
+ImageNet-1k,ILSVRC2012 validation,/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation,12,12,proxy_only,False,all staged files are proxy-named placeholders rather than benchmark-root images
+COCO,2017 validation,/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation,12,12,proxy_only,False,all staged files are proxy-named placeholders rather than benchmark-root images

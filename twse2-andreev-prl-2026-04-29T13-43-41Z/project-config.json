@@ -1,0 +1,27 @@
+{
+  "project_id": "twse2-andreev-prl",
+  "project_slug": "twse2-andreev-prl-2026-04-29T13-43-41Z",
+  "first_started_at_utc": "2026-04-29T13:43:41Z",
+  "working_title": "Phase-sensitive Andreev fingerprints of unconventional pairing in twisted bilayer WSe2",
+  "target_journal": "Physical Review Letters",
+  "local_long_term_root": "/workspace/memory/twse2-andreev-prl-2026-04-29T13-43-41Z",
+  "active_compute_root": "/workspace/memory/twse2-andreev-prl",
+  "github_repo": "shangx108-code/opanai",
+  "github_branch": "open-ai",
+  "github_root_path": "twse2-andreev-prl-2026-04-29T13-43-41Z",
+  "iteration": {
+    "cadence": "hourly",
+    "timezone": "Asia/Shanghai",
+    "one_main_bottleneck_only": true
+  },
+  "stop_criterion": {
+    "reviewer_count": 5,
+    "min_acceptance_probability": 0.8,
+    "evidence_chain_complete": true
+  },
+  "final_outputs": [
+    "submission_package",
+    "main_manuscript_pdf",
+    "supplementary_pdf"
+  ]
+}

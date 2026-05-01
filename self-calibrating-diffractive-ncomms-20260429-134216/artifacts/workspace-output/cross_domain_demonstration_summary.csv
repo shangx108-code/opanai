@@ -1,0 +1,4 @@
+domain,task_metric,no_reference,common_path,delta_common_minus_no_reference,unit,interpretation,verification_status,source
+reconstruction,OOD reconstruction PSNR,34.837,36.782,1.945,dB,strongest positive domain in current surrogate package,verified,/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md
+classification,OOD true-class residual,0.035464,0.034616,-0.000848,a.u.,mild positive domain under common-path pilot,verified,/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md
+inverse_design,OOD target MSE,0.002317,0.002315,-0.000002,a.u.,near-neutral domain with only marginal improvement,verified,/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md

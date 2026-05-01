@@ -1,0 +1,28 @@
+{
+  "generated_at_utc": "2026-05-01T11:48:07.952740+00:00",
+  "project": "majorana-diagnostic-natphys",
+  "branch": "compensated-magnetic-cmjj",
+  "source_data_root": "/workspace/memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01",
+  "script": "/workspace/memory/majorana-diagnostic-natphys/code/generate_cmjj_source_data.py",
+  "config": "/workspace/memory/majorana-diagnostic-natphys/config/cmjj_source_data_config.json",
+  "model_params": {
+    "t": 1.0,
+    "alpha": 0.8,
+    "mc": 1.0,
+    "bphi": 1.8,
+    "delta": 0.5,
+    "eta": 0.001,
+    "gamma_lead": 0.25
+  },
+  "outputs": {
+    "fig2_dir": "/workspace/memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig2",
+    "fig3_dir": "/workspace/memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig3",
+    "fig4_dir": "/workspace/memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig4",
+    "fig5_dir": "/workspace/memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig5"
+  },
+  "notes": [
+    "This source-data package is generated from a minimal 1D effective compensated-magnetic Josephson-junction chain.",
+    "Topology maps in Fig. 2 and inhomogeneous control labels in Fig. 4 are both computed numerically rather than inserted by hand.",
+    "Transport observables are wide-band lead proxies generated without scipy/matplotlib so the package can be reproduced in the current container."
+  ]
+}

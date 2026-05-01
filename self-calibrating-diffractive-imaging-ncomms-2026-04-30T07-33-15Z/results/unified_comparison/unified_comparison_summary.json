@@ -1,0 +1,29 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "seed_count": 10,
+  "ledgers": [
+    "same_family_heldout_aberration",
+    "new_family_heldout_object_family"
+  ],
+  "phase_only_config": {
+    "training_object_family_count": 50,
+    "layer_count": 5,
+    "phase_basis_count": 10,
+    "lowres_size": 12,
+    "train_case_count": 96,
+    "heldout_case_count": 24
+  },
+  "spectral_frontend_crop_size": 6,
+  "output_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/unified_comparison_ci.csv"
+}

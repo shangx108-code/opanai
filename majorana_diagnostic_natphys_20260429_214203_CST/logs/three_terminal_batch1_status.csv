@@ -1,0 +1,8 @@
+filename,kind,status,contains_physical_numerical_results,notes
+selected_operating_points.csv,recovery_metadata_seed,created,no,Contains control-family metadata and blank numerical slots pending recomputation.
+positive_three_terminal_scan.csv,recovery_placeholder,created,no,Uses archive-backed filename with placeholder row only.
+positive_three_terminal_robustness.csv,recovery_placeholder,created,no,Uses archive-backed filename with placeholder row only.
+positive_three_terminal_bias.csv,recovery_placeholder,created,no,Uses archive-backed filename with placeholder row only.
+dot_three_terminal_bias.csv,recovery_placeholder,created,no,Uses archive-backed filename with placeholder row only.
+impurity_three_terminal_bias.csv,recovery_placeholder,created,no,Uses archive-backed filename with placeholder row only.
+disorder_three_terminal_bias.csv,recovery_placeholder,created,no,Uses archive-backed filename with placeholder row only.

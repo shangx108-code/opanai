@@ -1,0 +1,15 @@
+repeat_seed,wrongref_mode,encoding_mode,common_minus_ordinary_db,common_minus_wrongref_db,risk_pair_q10_repeat,risk_pair_min_repeat,risk_pair_positive_fraction_repeat
+0,sparse_tracker_decoy,occupancy_guarded,0.587149,0.237188,0.110587,0.104591,1.0
+1,sparse_tracker_decoy,occupancy_guarded,0.412787,0.358563,0.250173,0.245286,1.0
+2,sparse_tracker_decoy,occupancy_guarded,0.780725,0.156644,0.065379,0.061192,1.0
+3,sparse_tracker_decoy,occupancy_guarded,0.723101,0.520178,0.309555,0.27524,1.0
+4,sparse_tracker_decoy,occupancy_guarded,0.609923,0.152257,0.146638,0.13581,1.0
+5,sparse_tracker_decoy,occupancy_guarded,0.74149,0.226941,0.231043,0.194377,1.0
+6,sparse_tracker_decoy,occupancy_guarded,0.693984,0.047469,0.224149,0.217376,1.0
+7,sparse_tracker_decoy,occupancy_guarded,0.773943,0.493087,0.284519,0.258952,1.0
+8,sparse_tracker_decoy,occupancy_guarded,0.562393,0.464701,0.217748,0.171705,1.0
+9,sparse_tracker_decoy,occupancy_guarded,0.861762,0.366606,0.014002,-0.024772,0.5
+10,sparse_tracker_decoy,occupancy_guarded,0.591059,0.226429,0.195117,0.150747,1.0
+11,sparse_tracker_decoy,occupancy_guarded,0.430752,0.214186,0.022451,0.010357,1.0
+12,sparse_tracker_decoy,occupancy_guarded,0.60875,0.33848,0.323722,0.295963,1.0
+13,sparse_tracker_decoy,occupancy_guarded,0.556962,0.088768,0.227583,0.200693,1.0

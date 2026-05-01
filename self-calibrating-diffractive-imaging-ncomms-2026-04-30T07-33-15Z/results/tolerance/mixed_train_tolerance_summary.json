@@ -1,0 +1,486 @@
+{
+  "status": "completed",
+  "config": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "train_case_count": 24,
+    "eval_case_count": 6
+  },
+  "training_mix_counts": {
+    "synthetic_training_objects": 50,
+    "proxy_training_objects": 24,
+    "proxy_ImageNet-1k": 12,
+    "proxy_COCO": 12
+  },
+  "summary_rows": [
+    {
+      "perturbation_family": "phase_mask_lateral_shift",
+      "level": 1.0,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": -13.767274316428265,
+      "better_than_fixed_fraction": 0.0
+    },
+    {
+      "perturbation_family": "phase_mask_lateral_shift",
+      "level": 1.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": -10.812630582823578,
+      "better_than_fixed_fraction": 0.0
+    },
+    {
+      "perturbation_family": "phase_mask_lateral_shift",
+      "level": 2.0,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": -13.904498004839096,
+      "better_than_fixed_fraction": 0.0
+    },
+    {
+      "perturbation_family": "phase_mask_lateral_shift",
+      "level": 2.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": -11.001795834385776,
+      "better_than_fixed_fraction": 0.0
+    },
+    {
+      "perturbation_family": "phase_mask_quantization",
+      "level": 3.0,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": -13.022355643128359,
+      "better_than_fixed_fraction": 0.0
+    },
+    {
+      "perturbation_family": "phase_mask_quantization",
+      "level": 3.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": -10.51610119723324,
+      "better_than_fixed_fraction": 0.0
+    },
+    {
+      "perturbation_family": "phase_mask_quantization",
+      "level": 4.0,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": -11.046511838252364,
+      "better_than_fixed_fraction": 0.0
+    },
+    {
+      "perturbation_family": "phase_mask_quantization",
+      "level": 4.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": -8.441047646379854,
+      "better_than_fixed_fraction": 0.0
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": -0.05,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.4574927713707282,
+      "better_than_fixed_fraction": 0.8981481481481481
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": -0.05,
+      "dataset_name": "COCO",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.142281350338811,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": -0.05,
+      "dataset_name": "COCO",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 1.432236288861054,
+      "better_than_fixed_fraction": 0.8564814814814815
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": -0.05,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.0587147643494201,
+      "better_than_fixed_fraction": 0.7962962962962963
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": -0.05,
+      "dataset_name": "ImageNet-1k",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.7122318220743447,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": -0.05,
+      "dataset_name": "ImageNet-1k",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 2.169361144972077,
+      "better_than_fixed_fraction": 0.8611111111111112
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.0,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.4539546724226666,
+      "better_than_fixed_fraction": 0.9027777777777778
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.0,
+      "dataset_name": "COCO",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.2099294667962313,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.0,
+      "dataset_name": "COCO",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 1.39946086258836,
+      "better_than_fixed_fraction": 0.8657407407407407
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.0733314018015745,
+      "better_than_fixed_fraction": 0.7916666666666666
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.8240893469238952,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 2.1273272962562157,
+      "better_than_fixed_fraction": 0.8564814814814815
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.05,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.4517621532893696,
+      "better_than_fixed_fraction": 0.8935185185185185
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.05,
+      "dataset_name": "COCO",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.275958276800599,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.05,
+      "dataset_name": "COCO",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 1.3840089051668594,
+      "better_than_fixed_fraction": 0.8611111111111112
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.05,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.0783685935432767,
+      "better_than_fixed_fraction": 0.8009259259259259
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.05,
+      "dataset_name": "ImageNet-1k",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.932372526840046,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "propagation_distance_error",
+      "level": 0.05,
+      "dataset_name": "ImageNet-1k",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 2.0825612954092056,
+      "better_than_fixed_fraction": 0.8518518518518519
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.01,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.3593569967004318,
+      "better_than_fixed_fraction": 0.8611111111111112
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.01,
+      "dataset_name": "COCO",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.2099294667962313,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.01,
+      "dataset_name": "COCO",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 1.39946086258836,
+      "better_than_fixed_fraction": 0.8657407407407407
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.01,
+      "dataset_name": "COCO",
+      "method": "trainable_surrogate_ridge",
+      "mean_psnr_gain_over_fixed_lowres": -0.24328736410783677,
+      "better_than_fixed_fraction": 0.4537037037037037
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.01,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.0431789119148955,
+      "better_than_fixed_fraction": 0.7916666666666666
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.01,
+      "dataset_name": "ImageNet-1k",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.8240893469238952,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.01,
+      "dataset_name": "ImageNet-1k",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 2.1273272962562157,
+      "better_than_fixed_fraction": 0.8564814814814815
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.01,
+      "dataset_name": "ImageNet-1k",
+      "method": "trainable_surrogate_ridge",
+      "mean_psnr_gain_over_fixed_lowres": -1.5844295002554514,
+      "better_than_fixed_fraction": 0.13425925925925927
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.02,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.1404955424536558,
+      "better_than_fixed_fraction": 0.8240740740740741
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.02,
+      "dataset_name": "COCO",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.2099294667962313,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.02,
+      "dataset_name": "COCO",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 1.39946086258836,
+      "better_than_fixed_fraction": 0.8657407407407407
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.02,
+      "dataset_name": "COCO",
+      "method": "trainable_surrogate_ridge",
+      "mean_psnr_gain_over_fixed_lowres": -0.24328736410783677,
+      "better_than_fixed_fraction": 0.4537037037037037
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.02,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 0.9048111886693,
+      "better_than_fixed_fraction": 0.7731481481481481
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.02,
+      "dataset_name": "ImageNet-1k",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.8240893469238952,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.02,
+      "dataset_name": "ImageNet-1k",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 2.1273272962562157,
+      "better_than_fixed_fraction": 0.8564814814814815
+    },
+    {
+      "perturbation_family": "reference_channel_intensity_noise",
+      "level": 0.02,
+      "dataset_name": "ImageNet-1k",
+      "method": "trainable_surrogate_ridge",
+      "mean_psnr_gain_over_fixed_lowres": -1.5844295002554514,
+      "better_than_fixed_fraction": 0.13425925925925927
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 0.0,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.4539546724226666,
+      "better_than_fixed_fraction": 0.9027777777777778
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 0.0,
+      "dataset_name": "COCO",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.2099294667962313,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 0.0,
+      "dataset_name": "COCO",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 1.39946086258836,
+      "better_than_fixed_fraction": 0.8657407407407407
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 0.0,
+      "dataset_name": "COCO",
+      "method": "trainable_surrogate_ridge",
+      "mean_psnr_gain_over_fixed_lowres": -0.24328736410783677,
+      "better_than_fixed_fraction": 0.4537037037037037
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 0.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.0733314018015745,
+      "better_than_fixed_fraction": 0.7916666666666666
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 0.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.8240893469238952,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 0.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 2.1273272962562157,
+      "better_than_fixed_fraction": 0.8564814814814815
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 0.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "trainable_surrogate_ridge",
+      "mean_psnr_gain_over_fixed_lowres": -1.5844295002554514,
+      "better_than_fixed_fraction": 0.13425925925925927
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 1.0,
+      "dataset_name": "COCO",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.4539546724226666,
+      "better_than_fixed_fraction": 0.9027777777777778
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 1.0,
+      "dataset_name": "COCO",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.2099294667962313,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 1.0,
+      "dataset_name": "COCO",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 1.39946086258836,
+      "better_than_fixed_fraction": 0.8657407407407407
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 1.0,
+      "dataset_name": "COCO",
+      "method": "trainable_surrogate_ridge",
+      "mean_psnr_gain_over_fixed_lowres": -0.24328736410783677,
+      "better_than_fixed_fraction": 0.4537037037037037
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 1.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "phase_only_stack",
+      "mean_psnr_gain_over_fixed_lowres": 1.0733314018015745,
+      "better_than_fixed_fraction": 0.7916666666666666
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 1.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "reference_psf_deconvolution",
+      "mean_psnr_gain_over_fixed_lowres": 2.8240893469238952,
+      "better_than_fixed_fraction": 1.0
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 1.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "spectral_frontend",
+      "mean_psnr_gain_over_fixed_lowres": 2.1273272962562157,
+      "better_than_fixed_fraction": 0.8564814814814815
+    },
+    {
+      "perturbation_family": "reference_channel_misregistration",
+      "level": 1.0,
+      "dataset_name": "ImageNet-1k",
+      "method": "trainable_surrogate_ridge",
+      "mean_psnr_gain_over_fixed_lowres": -1.5844295002554514,
+      "better_than_fixed_fraction": 0.13425925925925927
+    }
+  ],
+  "metrics_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance/mixed_train_tolerance_metrics.csv",
+  "summary_json": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance/mixed_train_tolerance_summary.json"
+}

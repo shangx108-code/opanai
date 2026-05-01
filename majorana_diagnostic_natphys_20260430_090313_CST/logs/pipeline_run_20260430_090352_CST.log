@@ -1,0 +1,77 @@
+Pipeline start: 2026-04-30 09:03:52 CST
+Project root: /workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST
+{
+  "project_root": "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST",
+  "python": "3.12.13",
+  "platform": "Linux-6.12.47-x86_64-with-glibc2.39",
+  "executable": "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/.venv/bin/python",
+  "cwd": "/workspace",
+  "venv": "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/.venv",
+  "commands": {
+    "python": "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/.venv/bin/python",
+    "python3": "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/.venv/bin/python3",
+    "git": "/usr/local/bin/git",
+    "node": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "rg": "/usr/bin/rg"
+  },
+  "modules": {
+    "numpy": {
+      "status": "available",
+      "version": "2.3.5"
+    },
+    "pandas": {
+      "status": "available",
+      "version": "2.2.3"
+    },
+    "scipy": {
+      "status": "missing",
+      "error": "No module named 'scipy'"
+    },
+    "matplotlib": {
+      "status": "missing",
+      "error": "No module named 'matplotlib'"
+    },
+    "seaborn": {
+      "status": "missing",
+      "error": "No module named 'seaborn'"
+    }
+  },
+  "directories": {
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/code": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/processed": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/figures": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/derivations": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/manuscript": true,
+    "/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/logs": true
+  }
+}
+Project runtime bootstrap complete.
+
+Project root:
+  /workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST
+
+Virtual environment:
+  /workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/.venv
+
+Environment report:
+  /workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/logs/env_check.json
+
+Current rule:
+  Refill raw and processed benchmark data before figure rendering.
+Wrote /workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/benchmark_inventory.csv
+Wrote /workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/benchmark_recovery_priority.csv
+Wrote /workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/processed/benchmark_inventory_summary.csv
+Wrote first-batch three-terminal recovery CSV stubs.
+Generated files:
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/processed/benchmark_inventory_summary.csv
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/benchmark_inventory.csv
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/benchmark_recovery_priority.csv
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/three_terminal/disorder_three_terminal_bias.csv
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/three_terminal/dot_three_terminal_bias.csv
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/three_terminal/impurity_three_terminal_bias.csv
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/three_terminal/positive_three_terminal_bias.csv
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/three_terminal/positive_three_terminal_robustness.csv
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/three_terminal/positive_three_terminal_scan.csv
+/workspace/github_opanai/majorana_diagnostic_natphys_20260430_090313_CST/data/raw/three_terminal/selected_operating_points.csv
+Pipeline end: 2026-04-30 09:03:56 CST

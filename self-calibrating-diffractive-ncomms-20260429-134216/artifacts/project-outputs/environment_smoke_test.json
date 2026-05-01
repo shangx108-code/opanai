@@ -1,0 +1,31 @@
+{
+  "status": "ok",
+  "packages": {
+    "numpy": "2.3.5",
+    "Pillow": "12.2.0"
+  },
+  "artifacts": {
+    "preview_png": "/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.png",
+    "summary_json": "/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.json",
+    "summary_md": "/workspace/self-calibrating-diffractive-ncomms/outputs/environment_smoke_test.md"
+  },
+  "checks": {
+    "complex_fft_pipeline": true,
+    "png_write": true,
+    "json_write": true,
+    "workspace_ready": true
+  },
+  "metrics": {
+    "shape": [
+      96,
+      96
+    ],
+    "mean_intensity": 0.08545480894756675,
+    "max_intensity": 0.9980075277795944
+  },
+  "blocked_dependencies": {
+    "matplotlib": "not installed",
+    "scipy": "not installed",
+    "torch": "not installed"
+  }
+}

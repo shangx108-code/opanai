@@ -1,0 +1,60 @@
+{
+  "project_name": "self-calibrating-diffractive-ncomms",
+  "project_root": "/workspace/self-calibrating-diffractive-ncomms",
+  "memory_root": "/workspace/memory/self-calibrating-diffractive-ncomms",
+  "output_root": "/workspace/output",
+  "target_drive_folder": {
+    "title": "SC-DON-NatComm-data",
+    "url": "https://drive.google.com/drive/folders/1k09jiRUUyA2hRrynpoJgak0d4-5O4gSe",
+    "id": "1k09jiRUUyA2hRrynpoJgak0d4-5O4gSe"
+  },
+  "drive_ledgers": [
+    {
+      "title": "SC-DON NatComm Iteration Ledger",
+      "url": "https://docs.google.com/spreadsheets/d/1g9siXbReO87RJ_MoVqIVV3U2kha56J0IbMNPomPNdq8/edit"
+    },
+    {
+      "title": "SC-DON NatComm Iteration Ledger 2026-04-28",
+      "url": "https://docs.google.com/spreadsheets/d/1Obxm2TZxgmlYDOGXnHKEGx9NvtH9XcDBSZquEVLpTgI/edit"
+    }
+  ],
+  "local_ready_globs": [
+    "scripts/environment_smoke_test.py",
+    "scripts/minimal_passive_d2nn_protocol.md",
+    "scripts/round6_numpy_passive_d2nn.py",
+    "scripts/round7_parameter_scan.py",
+    "outputs/environment_smoke_test.json",
+    "outputs/environment_smoke_test.md",
+    "outputs/environment_smoke_test.png",
+    "outputs/round6_numpy_passive_d2nn_metrics.csv",
+    "outputs/round6_numpy_passive_d2nn_panel.png",
+    "outputs/round6_numpy_passive_d2nn_summary.json",
+    "outputs/round6_numpy_passive_d2nn_summary.md",
+    "outputs/round6_numpy_passive_d2nn_training_history.json",
+    "outputs/round7_best_config_panel.png",
+    "outputs/round7_best_config_training_history.json",
+    "outputs/round7_parameter_scan_detail.csv",
+    "outputs/round7_parameter_scan_heatmap.png",
+    "outputs/round7_parameter_scan_summary.csv",
+    "outputs/round7_parameter_scan_summary.json",
+    "outputs/round7_parameter_scan_summary.md",
+    "outputs/round7_parameter_scan_top10.csv"
+  ],
+  "memory_docs": [
+    "manuscript-v1-strict.md",
+    "review-round-manuscript-v1-strict.md",
+    "reference-ledger-v1.md",
+    "project-state.md",
+    "drive-index.md",
+    "archive-checklist.md",
+    "iteration-log.md",
+    "supervision-log.md"
+  ],
+  "missing_expected": [
+    "/workspace/self-calibrating-diffractive-ncomms/round5_minimal_d2nn_comparison.py",
+    "/workspace/self-calibrating-diffractive-ncomms/round5b_selfcalibrating_d2nn.py",
+    "/workspace/self-calibrating-diffractive-ncomms/outputs/round5_minimal_d2nn_metrics.csv",
+    "/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_metrics.csv",
+    "/workspace/self-calibrating-diffractive-ncomms/outputs/round5b_selfcalibrating_d2nn_panel.png"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "wrongref_mode": "sparse_tracker_decoy",
+  "encoding_mode": "occupancy_guarded",
+  "repeat_count": 14,
+  "fixed_phase_mix": 0.16,
+  "fixed_reference_weight": 0.16,
+  "fixed_input_phase_coupling": 0.9,
+  "risk_pair_q10_db": 0.090496,
+  "risk_pair_min_db": -0.024772,
+  "risk_pair_positive_fraction": 0.964286,
+  "common_minus_ordinary_db_mean": 0.638199,
+  "common_minus_ordinary_db_min": 0.412787,
+  "common_minus_wrongref_db_mean": 0.277964,
+  "common_minus_wrongref_db_min": 0.047469
+}

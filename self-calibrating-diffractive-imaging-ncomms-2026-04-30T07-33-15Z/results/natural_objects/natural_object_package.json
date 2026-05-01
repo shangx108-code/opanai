@@ -1,0 +1,19 @@
+{
+  "package_name": "natural_object_package",
+  "status": "protocol_frozen_but_not_executed",
+  "active_root_has_raw_images": false,
+  "deliverables": [
+    "results/natural_objects/natural_object_subset_index.csv",
+    "results/natural_objects/natural_object_package.md",
+    "results/natural_objects/natural_object_package.json"
+  ],
+  "frozen_protocol": {
+    "shared_preprocessing": "All methods will see the same resized grayscale inputs and the same held-out image list.",
+    "primary_datasets": [
+      "ImageNet-1k ILSVRC2012 validation",
+      "COCO 2017 validation"
+    ],
+    "frontend_resolution": "12x12 low-resolution target grid"
+  },
+  "true_blocker": "The active project root does not contain the licensed raw natural-image files, so no reproducible natural-object metrics can be generated in this round."
+}

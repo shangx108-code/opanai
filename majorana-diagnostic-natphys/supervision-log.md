@@ -1,5 +1,78 @@
 # Supervision Log
 
+## 2026-05-01 | Round 16 supervision after CMJJ panel triage
+
+### Overall evaluation
+This round did exactly what the project needed after the first source-data run: it separated "real numerical progress" from "final figure readiness." That is a healthy move. The CMJJ branch is no longer blocked by absence of data, but it is still bottlenecked by panel selectivity.
+
+### Gap to target-journal standard
+- Figures 2 and 3 are now close enough to treat as candidate manuscript assets.
+- Figures 4 and 5 are still not sharp enough to carry the full false-positive-resistant claim without another numerical round.
+- The project still needs one cleaner negative-control/transport consistency story before venue-level framing should rise further.
+
+### Most critical quality risk
+The current risk is now overpromoting the transport and negative-control panels simply because they exist. Existence is not enough; they still need to discriminate cleanly.
+
+### Plan-revision advice
+1. Keep Figures 2 and 3 on the "plot next" track.
+2. Put Figures 4 and 5 on the "retune before plotting" track.
+3. Frame the next coding round around one narrow objective: preserve misleading local near-zero structure in the controls while making the topology-plus-nonlocal failure more decisive.
+4. Delay venue-language inflation until that specific upgrade is achieved.
+
+### Newly completed items
+- Added `cmjj-first-pass-panel-triage-2026-05-01.md`
+- Updated `project-state.md` to reflect that Figures 4 and 5 are now the active bottleneck
+
+## 2026-05-01 | Round 15 supervision after first CMJJ source-data run
+
+### Overall evaluation
+This round converted the compensated-magnetic branch from a planning object into a real numerical object. The project now has a reproducible first-pass Figures 2-5 source-data bundle for the CMJJ application, generated in the current runtime without waiting for missing plotting or scipy dependencies.
+
+### Gap to target-journal standard
+- The project now has real CMJJ data, but the package is still a first-pass minimal effective-model implementation rather than the final manuscript-grade model stack.
+- The transport layer is usable as a reproducible proxy bundle, but it still needs a scientific judgment call on whether the current observable definitions are strong enough for the final paper.
+- Plotting, panel selection, and caption discipline remain open; source data alone is not yet a finished figure package.
+
+### Most critical quality risk
+The next drift risk is subtler than before: the project could mistake "first real data exist" for "the figures are already final." They are not final yet; they are now real enough to critique and upgrade.
+
+### Plan-revision advice
+1. Freeze `generate_cmjj_source_data.py` and `cmjj_source_data_config.json` as the reproducible baseline.
+2. Use the current CSV bundle to inspect which panels already support the intended story and which ones need stronger observable definitions or parameter retuning.
+3. Only after that add rendered figures and manuscript-facing captions.
+4. Keep the venue claim level tied to the strongest surviving panels, not to the full ambition of the original branch note.
+
+### Newly completed items
+- Added `code/generate_cmjj_source_data.py`
+- Added `config/cmjj_source_data_config.json`
+- Generated `data/cmjj-source-data-2026-05-01/manifest.json`
+- Generated first-pass source-data CSV bundles for Figures 2-5 in the CMJJ branch
+
+## 2026-05-01 | Round 14 supervision after compensated-magnetic intake lock
+
+### Overall evaluation
+This round produced a real project-state improvement even without new numerics. The project no longer treats the compensated-magnetic Josephson-junction idea and the NC repack path as loose prose floating in user files; both are now frozen as canonical long-term-space objects tied to the same Majorana diagnostic project.
+
+### Gap to target-journal standard
+- The compensated-magnetic branch is now clearly defined, but it still lacks a real figure-grade source-data package.
+- The project now has an NC-safe claim stack, but it still lacks the reproducibility bundle that would make that venue path credible.
+- The paper still does not have the compensated-magnetic Figures 2-5 outputs needed to replace narrative ambition with auditable evidence.
+
+### Most critical quality risk
+The project could still confuse "better framing" with "submission progress" if it does not now move immediately into a compensated-magnetic evidence sprint.
+
+### Plan-revision advice
+1. Treat `A-compensated-magnetic-cmjj-blueprint-2026-05-01.md` as the fixed application brief for the next coding round.
+2. Treat `B-nc-repositioning-and-reproducibility-plan-2026-05-01.md` as the fixed packaging brief for manuscript and archive work.
+3. Make the next execution round produce real source data for bulk topology, open-boundary ambiguity, nonlocal transport, and at least ABS plus impurity/disorder controls in the compensated-magnetic setting.
+4. Keep all venue-language upgrades blocked until that figure bundle exists with scripts and parameter records.
+
+### Newly completed items
+- Corrected `memory/CURRENT-PROJECT-SPACE.md` to point to `majorana-diagnostic-natphys`
+- Added `A-compensated-magnetic-cmjj-blueprint-2026-05-01.md`
+- Added `B-nc-repositioning-and-reproducibility-plan-2026-05-01.md`
+- Updated `project-state.md` and `archive-checklist.md` to reflect the new application and packaging lock
+
 ## 2026-04-24 | Round 1 initialization
 
 ### Overall evaluation

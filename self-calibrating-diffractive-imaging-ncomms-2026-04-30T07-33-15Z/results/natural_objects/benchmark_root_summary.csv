@@ -1,0 +1,3 @@
+dataset_name,dataset_version,benchmark_root_ready,inferred_status,file_count
+ImageNet-1k,ILSVRC2012 validation,False,proxy_only,12
+COCO,2017 validation,False,proxy_only,12

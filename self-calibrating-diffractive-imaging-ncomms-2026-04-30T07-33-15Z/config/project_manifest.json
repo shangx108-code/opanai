@@ -1,0 +1,23 @@
+{
+  "project_id": "self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "project_slug": "self-calibrating-diffractive-imaging-ncomms",
+  "created_at_utc": "2026-04-30T07-33-15Z",
+  "title": "Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations",
+  "target_journal": "Nature Communications",
+  "stage": "active calculation/verification",
+  "concept_source": "/workspace/user_files/01-1-.txt",
+  "local_root": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "github_repository": "shangx108-code/opanai",
+  "github_branch": "open-ai",
+  "github_root": "self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "long_term_main_space": "github:shangx108-code/opanai/open-ai/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "long_term_main_space_policy": "The GitHub repository shangx108-code/opanai on branch open-ai is the only canonical long-term main space. The local_root is a working mirror and does not replace GitHub archival closure.",
+  "schedule_id": "69f3087ca9c0819190e328bcfe7ac391",
+  "schedule_timezone": "Asia/Shanghai",
+  "schedule_rule": {
+    "freq": "hourly",
+    "interval": 1
+  },
+  "primary_bottleneck": "missing_executed_natural_object_and_method_fair_tolerance_results",
+  "next_shortest_path_action": "stage_licensed_natural_images_then_run_frozen_method_fair_tolerance_protocol"
+}

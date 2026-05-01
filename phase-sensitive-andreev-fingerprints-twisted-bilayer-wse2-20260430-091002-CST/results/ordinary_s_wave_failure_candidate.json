@@ -1,0 +1,25 @@
+{
+  "candidate": "s_wave",
+  "status": "failure_candidate",
+  "failed_constraints": [
+    {
+      "constraint": "orientation_contrast",
+      "s_wave_value": 0.9817462364522951,
+      "threshold": 1.15,
+      "unconventional_reference": 1.2342387796069256
+    },
+    {
+      "constraint": "intervalley_contrast",
+      "s_wave_value": 1.0140543777930546,
+      "threshold": 1.12,
+      "unconventional_reference": 1.1207093987200007
+    },
+    {
+      "constraint": "field_contrast",
+      "s_wave_value": 0.9803158348479514,
+      "threshold": 1.08,
+      "unconventional_reference": 1.2184868803157587
+    }
+  ],
+  "reference_candidate": "chiral_d"
+}

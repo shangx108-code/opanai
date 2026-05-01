@@ -1,0 +1,242 @@
+\documentclass[aps,prl,twocolumn,superscriptaddress,longbibliography]{revtex4-2}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\begin{document}
+
+\title{Phase-Sensitive Andreev Diagnostics for Unconventional Pairing in Twisted Bilayer WSe$_2$}
+
+\author{Author A}
+\affiliation{Institute Placeholder}
+\author{Author B}
+\affiliation{Institute Placeholder}
+\author{Author C}
+\affiliation{Institute Placeholder}
+
+\date{May 1, 2026}
+
+\begin{abstract}
+Twisted bilayer WSe$_2$ has recently emerged as a non-graphene moir\'e
+superconductor with a phase diagram shaped by strong correlations, displacement
+field tuning, and twist-angle evolution. The pairing symmetry, however, remains
+unresolved because ordinary tunnelling features can mix superconducting and
+correlation-driven energy scales. We develop a generalized
+phase-sensitive Andreev framework for twisted bilayer WSe$_2$ in which the
+normal correlated background and the anomalous superconducting self-energy are
+kept distinct from the outset. The resulting theory yields three main results.
+First, Andreev response selectively tracks the inner superconducting scale,
+whereas high-barrier tunnelling retains sensitivity to outer correlated
+features. Second, ordinary same-sign $s$ wave fails structurally once barrier,
+field angle, and interface orientation are constrained on the same
+$\alpha$-$Z$-$\phi$ grid. Third, finite-bias peaks alone are not a sufficient
+indicator of chirality: only the chiral branch exhibits phase-locked drift of
+the peak position together with $\alpha$-coupled peak splitting, whereas a
+phase-blind symmetric double-peak control reproduces finite-bias peaks but not
+their phase-sensitive evolution. These results define an experimentally usable
+decision tree for separating ordinary pairing, sign-changing channels, and a
+chiral candidate family in twisted bilayer WSe$_2$.
+\end{abstract}
+
+\maketitle
+
+Twisted moir\'e materials provide a route to superconductivity in flat bands
+beyond graphene, but they also compress correlation scales and pairing scales
+into the same narrow energy window~\cite{Cao2018SC,Cao2018CI,Yankowitz2019,Lu2019,Park2021,Balents2020}.
+The problem is especially severe in semiconducting moir\'e transition-metal
+dichalcogenides, where filling, bandwidth, valley structure, and interaction
+content all shift under the same electrostatic controls~\cite{Tang2020,Regan2020,Xu2022BilayerHubbard}.
+
+Twisted bilayer WSe$_2$ is now the sharpest test case in this class. Robust
+superconductivity has been established near $3.5^\circ$-$3.65^\circ$ and again
+near $5.0^\circ$, and later measurements connected these windows through angle
+evolution and bandwidth-tuned Mottness within one materials
+family~\cite{Xia2025SC,Hone2025SC5,Angle2026,Bandwidth2026}. Spectroscopy on
+moir\'e superconductors has also made a crucial point: outer correlation-driven
+features and inner superconducting gaps need not be probed by the same
+transport channel~\cite{Kim2026Intervalley}. A pairing claim based only on the
+presence of a low-energy peak is therefore not yet diagnostic.
+
+The opportunity is therefore to use Andreev spectroscopy as a phase-sensitive
+probe rather than as a refined fitting exercise. In conventional BTK theory,
+subgap conductance is set by the competition among Andreev reflection, normal
+reflection, and interface transparency~\cite{BTK1982,Octavio1983,Beenakker1997}.
+For unconventional superconductors, the same interface problem can project the
+order-parameter phase structure into bound-state formation, peak shifts, and
+anisotropic conductance~\cite{Hu1994,TanakaKashiwaya1995,KashiwayaTanaka2000,Linder2010,Wu2018Shift,Wang2023STM}.
+The relevant question for twisted bilayer WSe$_2$ is therefore not whether
+finite-bias structure can be produced, but whether that structure must inherit
+phase-sensitive locking among field angle, interface orientation, and barrier
+evolution.
+
+Here we formulate a generalized phase-sensitive Andreev framework for twisted
+bilayer WSe$_2$ and use it to build a decision tree for pairing
+identification. We first separate the correlated normal background from the
+anomalous superconducting channel and show that Andreev response selectively
+tracks the inner superconducting scale. We then compare ordinary same-sign
+$s$ wave, an intervalley sign-changing channel, and a chiral candidate family
+on the same $\alpha$-$Z$-$\phi$ grid. Finally, we introduce a non-chiral
+control kernel with symmetric peaks at $\pm V$ to test whether finite-bias
+peaks alone diagnose chirality. They do not: only the chiral branch shows
+phase-locked peak-position drift together with $\alpha$-coupled peak splitting,
+which the control channel cannot reproduce.
+
+\begin{figure}[t]
+  \centering
+  % \includegraphics[width=\columnwidth]{fig1_schematic.pdf}
+  \fbox{\parbox[c][4.8cm][c]{0.95\columnwidth}{\centering
+  Figure 1 schematic placeholder:\\
+  minimal normal-state model, separation of $\Sigma_{\rm corr}$ and $\Delta$,
+  candidate pairing families, and measurement geometry for the
+  $\alpha$-$Z$-$\phi$ scan.}}
+  \caption{\textbf{Minimal model and observable hierarchy.}
+  Schematic-only figure. The normal correlated background
+  $\Sigma_{\rm corr}$ and the anomalous superconducting sector $\Delta$ are
+  separated at the Hamiltonian level so that high-barrier tunnelling and
+  Andreev-dominated conductance can be compared without assuming a single common
+  energy scale. The figure also defines the three candidate pairing families
+  used below---ordinary same-sign $s$ wave, an intervalley sign-changing
+  channel, and a chiral family---together with the interface orientation
+  $\alpha$, barrier strength $Z$, and in-plane field angle $\phi$ that enter the
+  generalized BTK analysis.}
+  \label{fig:model}
+\end{figure}
+
+The starting point is a low-energy moir\'e Hamiltonian in which the normal-state
+sector, valley structure, and correlated background are retained separately from
+the anomalous self-energy,
+\begin{equation}
+H_{\rm BdG}(\mathbf{k})=
+\begin{pmatrix}
+H_N(\mathbf{k})-\mu+\Sigma_{\rm corr}(E,\mathbf{k}) & \Delta(\mathbf{k}) \\
+\Delta^\dagger(\mathbf{k}) &
+-H_N^{T}(-\mathbf{k})+\mu-\Sigma_{\rm corr}^{T}(-E,-\mathbf{k})
+\end{pmatrix}.
+\end{equation}
+This separation is not cosmetic. It is required if the tunnelling channel is to
+retain sensitivity to outer correlated features while the Andreev channel is
+allowed to track the anomalous sector more directly. Guided by recent
+experimental and theoretical work on twisted WSe$_2$ and related moir\'e
+platforms, we keep three candidate families in the reduced pairing library:
+ordinary same-sign $s$ wave, an intervalley sign-changing channel, and a chiral
+family representing a phase-winding unconventional branch~\cite{Schrade2024,TopologicalWSe22025,NuOne2025,ChiralBandsMoTe22025,ReadGreen2000,SigristUeda1991,SatoAndo2017}.
+
+\begin{figure}[t]
+  \centering
+  % \includegraphics[width=\columnwidth]{fig2_selectivity.pdf}
+  \fbox{\parbox[c][5.0cm][c]{0.95\columnwidth}{\centering
+  Figure 2 data placeholder:\\
+  high-barrier tunnelling versus Andreev-dominated conductance;\\
+  $E_{\rm out}$, $\Delta_{\rm in}$, and $E_{\rm AR}$ across control parameters.}}
+  \caption{\textbf{Inner-gap selectivity of the Andreev channel.}
+  High-barrier tunnelling retains the outer correlated feature $E_{\rm out}$,
+  whereas the Andreev-dominated response follows the inner superconducting scale
+  $\Delta_{\rm in}$. The key statement is channel selectivity, not a two-peak
+  fit: within the same normal-state benchmark, $E_{\rm AR}$ tracks the anomalous
+  scale more closely than the outer correlated feature. This establishes the
+  transport logic needed for the later phase-sensitive analysis.}
+  \label{fig:selectivity}
+\end{figure}
+
+Figure~\ref{fig:selectivity} summarizes the first step of that logic. Once
+$\Sigma_{\rm corr}$ and $\Delta$ are separated at the model level, the
+high-barrier tunnelling response retains the outer correlated scale
+$E_{\rm out}$, while the Andreev-dominated response follows the inner
+superconducting scale $\Delta_{\rm in}$. This distinction is the minimal
+evidence required before any pairing claim can be made. Without it, low-energy
+structure in the conductance could still be reinterpreted as a correlated
+normal-state feature rather than a superconducting diagnostic~\cite{Kim2026Intervalley}.
+
+\begin{figure}[t]
+  \centering
+  % \includegraphics[width=\columnwidth]{fig3_fingerprints.pdf}
+  \fbox{\parbox[c][5.0cm][c]{0.95\columnwidth}{\centering
+  Figure 3 data placeholder:\\
+  generalized BTK fingerprints on the $\alpha$-$Z$-$\phi$ grid and their
+  reduction to a small set of observables.}}
+  \caption{\textbf{Phase-sensitive fingerprints on the $\alpha$-$Z$-$\phi$
+  grid.} Barrier evolution, interface orientation, and in-plane field angle are
+  scanned on the same grid for the three candidate pairing families. Ordinary
+  same-sign $s$ wave remains comparatively smooth, whereas unconventional
+  channels develop stronger barrier sensitivity and orientation dependence. The
+  figure should be read through reduced observables such as subgap average,
+  finite-bias peak position, and peak splitting rather than through curve
+  counting alone.}
+  \label{fig:fingerprints}
+\end{figure}
+
+The generalized BTK scan on the common $\alpha$-$Z$-$\phi$ grid then separates
+two distinct types of unconventional response. The sign-changing channel first
+breaks the monotonic barrier trend that characterizes ordinary $s$ wave under
+the same constraints, thereby establishing the exclusion step. The chiral branch
+goes further by reorganizing the interface spectrum around finite-bias edge
+states, so that the dominant spectral weight no longer remains pinned to
+zero bias. Figure~\ref{fig:fingerprints} therefore serves as the bridge between
+the scale-selectivity logic of Fig.~\ref{fig:selectivity} and the control-based
+chirality test of Fig.~\ref{fig:control}.
+
+\begin{figure}[t]
+  \centering
+  % \includegraphics[width=\columnwidth]{fig4_control_discriminant.pdf}
+  \fbox{\parbox[c][5.2cm][c]{0.95\columnwidth}{\centering
+  Figure 4 data placeholder:\\
+  chiral branch versus phase-blind symmetric double-peak control;\\
+  positive-peak drift, peak splitting, and barrier evolution.}}
+  \caption{\textbf{Control discriminant for chiral finite-bias peaks.}
+  Comparison between the chiral finite-bias edge-state kernel and a non-chiral
+  control kernel with symmetric peaks at $\pm V$, tunable width, and tunable
+  spectral weight, evaluated on the same $\alpha$-$Z$-$\phi$ grid. The control
+  channel generates finite-bias double peaks but remains phase blind: the
+  positive-bias peak position does not drift with $\phi$, and the peak splitting
+  does not couple to $\alpha$. By contrast, the chiral channel exhibits both
+  phase-locked peak-position drift and $\alpha$-coupled peak splitting. In the
+  present scan, the maximum positive-peak drift is $0.0928$ for the chiral
+  channel and $0$ for the control, while the maximum $\alpha$-coupled change in
+  peak splitting is $0.1856$ for the chiral channel and $0$ for the control.
+  The chiral branch is also non-monotonic over the full tested configuration
+  set, whereas the control channel retains a monotonic fraction of $0.67$.
+  Finite-bias peaks alone are therefore insufficient: the manuscript claim rests
+  on the phase-sensitive coupling among peak position, interface orientation,
+  and barrier evolution, which the trivial double-peak control fails to
+  reproduce.}
+  \label{fig:control}
+\end{figure}
+
+Figure~\ref{fig:control} supplies the control test that converts finite-bias
+structure from a suggestive spectral feature into a phase-sensitive statement.
+The non-chiral control kernel reproduces finite-bias double peaks, but it
+remains phase blind: the positive-bias peak position shows no $\phi$-dependent
+drift, and the peak splitting shows no coupling to $\alpha$. The chiral branch
+shows both on the same grid. In the present scan, the maximum drift of the
+positive-bias peak position reaches $0.0928$, while the maximum
+$\alpha$-coupled change in peak splitting reaches $0.1856$; both quantities
+vanish in the control channel. The chiral branch is also non-monotonic
+throughout the tested configuration set, whereas the control channel retains a
+monotonic fraction of $0.67$. Finite-bias peaks are therefore not enough by
+themselves. What distinguishes the chiral branch is the phase-sensitive locking
+among peak position, interface orientation, and barrier evolution.
+
+Taken together, Figs.~\ref{fig:selectivity}--\ref{fig:control} support a
+layered conclusion. The present evidence is strong enough to exclude ordinary
+same-sign $s$ wave and to identify an unconventional family. The control test
+then isolates what is special about the chiral branch within that family: not
+the existence of finite-bias peaks, but their phase-sensitive coupling to
+$\phi$, $\alpha$, and $Z$. This remains more conservative than a full
+topological identification, which would require an additional invariant,
+phase-bias, or independent boundary-mode benchmark~\cite{ReadGreen2000,FuBerg2010,SatoAndo2017}.
+
+The remaining limitations are equally clear. The present draft still relies on
+the strongest available compressed benchmark rather than on a fully rerun
+true-Tuo-TB figure set, and the BTK kernel remains a physically motivated
+reduced model rather than a complete multiorbital scattering solver. These
+limitations do not erase the control discriminant developed here, but they do
+set the boundary of the claim. What is established at this stage is a
+phase-sensitive diagnostic structure that excludes ordinary pairing and
+separates a chiral candidate from a trivial finite-bias control on the same
+observable grid.
+
+\bibliographystyle{apsrev4-2}
+\bibliography{prl-manuscript-draft-2026-05-01}
+
+\end{document}

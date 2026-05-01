@@ -1,0 +1,470 @@
+下面按 **paper-review-loop 的严格 Nature Communications 审稿模式**给出评审。先说明一个限制：我现在无法直接读取你们最新完整主文、补充材料和最终 source data；系统也提示部分早期上传文件已过期。因此以下审稿基于**本聊天记录中已经描述的项目状态与结果链**，属于“材料级模拟审稿”。如果要做逐行审稿，需要你重新上传 `manuscript.pdf / .tex`、`supplementary.pdf / .tex`、`figures` 和 `source_data`。
+
+---
+
+# 总体判断
+
+如果聊天记录中的所有结果、CSV、checksum、脚本与 PDF 确实存在并相互一致，这篇稿件已经从“有潜力”推进到 **Nature Communications 可送审边缘**。但我不会给“稳接收”的判断。
+
+目前最大风险已经不是方法有没有效果，而是：
+
+1. **主张是否被写得过强**
+2. **统一对比是否足够公平**
+3. **自然对象实验是否真实、可复现、且没有分布选择偏差**
+4. **硬件容差是否真的作用在所有方法的同等物理层面**
+5. **phase-only stack 的优势是否来自物理结构，而不是隐藏数字后端容量**
+
+我的模拟结论：
+
+> 当前版本若直接投稿 Nature Communications，预测结果更可能是 **Major Revision / Editorially invited revision**，而不是直接 accept 或 minor revision。
+
+**预测接收概率：约 62–72%**
+如果补齐下面列出的关键修改，尤其是统一对比公平性、自然对象数据说明、source-data 一致性和 claim 降调，接收概率可提升到 **78–85%**。
+
+---
+
+# Evidence Ledger
+
+## A. 用户/聊天记录中明确给出的事实
+
+* 目标期刊为 **Nature Communications**。
+* 主题为自校准衍射光学神经算子 / phase-only diffractive optical neural operator。
+* 已建立长期项目空间和迭代任务。
+* 已实现 Fresnel propagation，采用形式
+  [
+  H(f_x,f_y)=\exp[-i\pi\lambda z(f_x^2+f_y^2)].
+  ]
+* 已区分两本账：
+
+  * 同物体族 held-out aberration
+  * 新物体族 held-out object family
+* 已开展 phase-only stack、reference PSF + deconvolution、trainable surrogate、spectral frontend 的统一对比。
+* 记录中称统一对比输出为 `results/unified_comparison_ci.csv`，含：
+
+  * method
+  * mean_psnr_gain
+  * std
+  * 95% CI
+  * better_than_fixed_fraction
+* 记录中称 phase-only stack 在统一比较中平均增益最高。
+* 记录中称已开展 hardware tolerance、natural object evaluation、source data mapping、Data/Code availability、Supplementary assembly。
+* 记录中称已生成投稿包与 PDF。
+
+## B. 模型推断但尚需核验的内容
+
+* 统一对比实验是否完全使用相同 seeds、相同 split、相同 preprocessing、相同 reconstruction head 约束。
+* 自然图像实验是否确实没有 retraining 或隐性调参。
+* `phase_only_stack` 与 `trainable_surrogate` 的参数量、可训练自由度和数字后处理能力是否公平。
+* hardware tolerance 是否对所有方法以相同物理含义施加扰动。
+* 所有图是否都能从 source data 一键复现。
+* Nature Communications 格式、图分辨率、数据政策是否完全满足当前官方要求。
+
+## C. 缺失或未验证内容
+
+* 最新完整 manuscript 和 supplementary 原文。
+* 图像、表格和 source data 的逐项核验。
+* 参考文献真实性、时效性和引用是否恰当。
+* 所有 CSV、NPZ、checksum 是否真实存在并互相一致。
+* 代码是否能从 clean environment 完整复现主图。
+* 自然数据集许可声明和数据子集索引是否合规。
+* 对 negative / weak cases 的呈现是否足够诚实。
+
+---
+
+# Reviewer 1 — Optics / Physical Modeling
+
+## English review
+
+The manuscript addresses an interesting and timely question: whether a phase-only diffractive optical frontend can provide self-calibrating robustness under dynamic aberrations. The use of a Fresnel transfer function and the explicit separation between held-out aberrations and held-out object families are strong aspects. The reported inclusion of hardware tolerance and natural-object evaluation also improves the credibility of the study.
+
+However, the current evidence package raises several concerns. First, the physical model appears to rely heavily on scalar Fresnel propagation. The manuscript must state the exact validity regime: paraxial approximation, sampling condition, wavelength, pixel pitch, propagation distance, numerical aperture, aperture size, and boundary treatment. Without these details in the main Methods or Supplementary Information, the optical model remains under-specified.
+
+Second, the phrase “phase-only diffractive neural operator” may overstate the optical nature of the system unless the digital reconstruction head is fully separated from the phase-only stack. The parameter count and computational capacity of every digital post-processing component must be reported. If the reconstruction quality depends substantially on a digital module, the correct claim should be “hybrid optical-digital operator,” not a purely diffractive optical operator.
+
+Third, the hardware tolerance analysis is essential but must be described carefully. Phase quantization, lateral misalignment, propagation-distance perturbation, and phase noise should be applied in physically interpretable units. The manuscript should clarify whether perturbations are applied to the phase masks, propagation distances, object plane, detector plane, or numerical reconstruction stage.
+
+Overall, I find the optical idea promising, but I would request major revisions before considering publication in Nature Communications.
+
+## 中文评审
+
+稿件研究的问题很有价值：phase-only 衍射光学前端是否能在动态像差中提供自校准鲁棒性。你们引入 Fresnel 传播核，并把 held-out aberration 与 held-out object family 分开，这是非常重要的优点。硬件容差和自然对象验证也显著提高了可信度。
+
+但是，当前物理建模仍有几个风险。第一，稿件必须清楚写出 Fresnel 标量传播模型的适用范围：近轴假设、采样条件、波长、像素间距、传播距离、数值孔径、孔径尺寸、边界条件等。如果这些只散落在代码里，而没有在 Methods 或 Supplementary 中完整说明，光学模型会显得不够严谨。
+
+第二，“phase-only diffractive neural operator” 这个说法可能过强。必须严格区分 phase-only stack 的光学参数量与数字 reconstruction head 的参数量。如果最终性能依赖明显的数字后端，主张应该改成 **hybrid optical-digital operator**，而不能暗示是纯光学系统。
+
+第三，硬件容差实验必须写清楚扰动施加的位置与物理单位。phase quantization、横向失配、传播距离偏差、相位噪声分别作用在相位板、传播层、物面、探测面还是数字重建端？这必须完全透明。
+
+我的判断是：光学概念有吸引力，但以 Nature Communications 标准，目前仍应是 **major revision**。
+
+---
+
+# Reviewer 2 — Machine Learning / Statistics / Benchmarking
+
+## English review
+
+The manuscript has made a serious effort to separate object-family generalization from aberration generalization, which is a major strength. The use of multi-seed confidence intervals, unified baseline comparison, tail analysis, and natural image evaluation is appropriate for a selective journal.
+
+The central concern is fairness of comparison. The proposed phase-only stack, reference-PSF deconvolution, spectral frontend, and trainable surrogate must be evaluated with identical inputs, identical train/test splits, identical seeds, and identical preprocessing. The current description suggests that this was done, but the paper must make it auditable. A single table should report, for every method:
+
+* trainable parameter count
+* optical parameter count
+* digital parameter count
+* training data used
+* whether object-family labels are used
+* whether reference PSF is available at test time
+* inference-time computational cost
+* whether retraining or fine-tuning is used
+
+The second major issue is the size of the new-object-family gain. Earlier results reportedly showed only a small positive margin around +0.4 to +0.5 dB before later unified comparisons. A small mean PSNR gain may be statistically significant but not practically meaningful unless supported by distributional analysis. The tail analysis is therefore important and should be included either in the main text or Extended Data.
+
+Third, the ridge / shallow surrogate baseline must not be artificially weak. If it uses low-resolution features or fewer effective degrees of freedom than the phase-only model plus digital head, the comparison will not be accepted. At minimum, include a parameter-matched surrogate and a stronger non-optical baseline.
+
+I recommend major revision.
+
+## 中文评审
+
+稿件在区分 **object-family generalization** 和 **aberration generalization** 方面做得很好，这是一个主要优点。多 seed 置信区间、统一 baseline 对比、tail analysis 和自然图像验证也符合高水平期刊的预期。
+
+核心问题是**比较是否公平**。phase-only stack、reference-PSF deconvolution、spectral frontend 和 trainable surrogate 必须使用完全相同的输入、split、seeds、preprocessing 和评价指标。聊天记录显示你们已经这样做了，但稿件必须让读者能够审计。建议增加一张统一表，列出每个方法的：
+
+* 总参数量
+* 光学参数量
+* 数字参数量
+* 训练数据
+* 是否使用 object-family label
+* 测试时是否需要 reference PSF
+* 推理计算成本
+* 是否进行 retraining / fine-tuning
+
+第二个问题是新物体族增益的幅度。早期记录中你们的新物体族 gain 只有约 +0.4 到 +0.5 dB，这种增益即便统计显著，也可能被质疑 practical significance。因此 tail analysis 很重要，应该进入正文或 Extended Data。
+
+第三，ridge / shallow surrogate baseline 不能显得过弱。如果它使用了低分辨率特征或比 phase-only + digital head 少得多的有效自由度，审稿人会认为比较不公平。至少需要一个 parameter-matched surrogate，以及一个更强的 non-optical baseline。
+
+我的建议是 **major revision**。
+
+---
+
+# Editor Summary — Nature Communications Style
+
+## English editor summary
+
+The manuscript presents a potentially interesting optical-AI system for self-calibrated imaging through dynamic aberrations. The scope is appropriate for Nature Communications if the authors can convincingly demonstrate that the gain arises from the physically constrained diffractive architecture, rather than from a digital reconstruction pipeline or benchmark imbalance.
+
+The strongest parts are the dual held-out evaluation protocol, the multi-seed confidence intervals, the phase-only physical constraint, the hardware tolerance analysis, and the claimed natural-image validation. The weakest parts are the risk of overclaiming optical autonomy, the modest gain under object-family shift, the need for stronger baseline fairness, and the need for a completely auditable source-data chain.
+
+Editorial decision: **Major Revision**.
+
+Estimated probability of eventual acceptance after major revision: **70%**.
+Estimated probability if submitted without further revision: **55–65%**.
+
+## 中文编辑总结
+
+这篇稿件提出了一个有潜力的 optical-AI 系统，用于动态像差下的自校准成像。如果作者能够证明性能提升确实来自物理受限的 phase-only 衍射结构，而不是数字重建后端或 baseline 不公平，那么该主题适合 Nature Communications。
+
+稿件最强的部分是双 held-out 评估协议、多 seed 置信区间、phase-only 物理约束、硬件容差分析和自然图像验证。最弱的部分是：可能过度宣称“光学自主性”、新物体族迁移下的增益幅度偏小、baseline 公平性仍需加强、source-data 链条必须完全可审计。
+
+编辑判断：**Major Revision**。
+
+大修后最终接收概率：**约 70%**。
+若不继续修改直接投稿：**约 55–65%**。
+
+---
+
+# Scoreboard
+
+| 维度                            |   当前评分 | Nature Communications 目标 |
+| ----------------------------- | -----: | -----------------------: |
+| Novelty                       | 8.0/10 |                       ≥8 |
+| Physical rigor                | 7.6/10 |                       ≥8 |
+| Statistical rigor             | 7.8/10 |                       ≥8 |
+| Benchmark fairness            | 7.0/10 |                       ≥8 |
+| Reproducibility               | 8.5/10 |                       ≥8 |
+| Natural-data relevance        | 7.5/10 |                       ≥8 |
+| Clarity / manuscript maturity | 7.2/10 |                       ≥8 |
+
+**模拟编辑决定：Major Revision**
+**当前接收概率预测：62–72%**
+**完成关键修改后预测：78–85%**
+
+---
+
+# 最重要的修改意见
+
+## 1. 降调主张：不要把 hybrid system 写成 purely optical system
+
+如果系统包含数字 reconstruction head，正文中必须避免以下说法：
+
+* “all-optical neural operator”
+* “purely diffractive inference”
+* “optical computation alone reconstructs the object”
+
+建议改为：
+
+> We implement a physically constrained phase-only diffractive frontend coupled to a lightweight reconstruction stage, and explicitly separate optical and digital degrees of freedom in all comparisons.
+
+中文理解：你们的主张应该是 **phase-only optical frontend improves calibration and generalization**，而不是“纯光学网络完成全部任务”。
+
+---
+
+## 2. 增加一张 Method Fairness Table
+
+建议放在主文 Fig. 1 或 Supplementary Table 1。
+
+表头建议：
+
+```text
+Method
+Optical trainable parameters
+Digital trainable parameters
+Uses reference PSF at test time
+Retrained for held-out objects?
+Input channels
+Inference cost
+Training samples
+Evaluation protocol
+```
+
+这张表非常关键。它可以直接防住 Reviewer 2 的主要攻击。
+
+---
+
+## 3. 统一结果表必须拆成两层
+
+现在统一对比的 `unified_comparison_ci.csv` 很重要，但建议拆成：
+
+### 主文表：核心结果
+
+```text
+method
+ledger
+mean_psnr_gain
+95% CI
+better_than_fixed_fraction
+```
+
+### 补充表：完整统计
+
+```text
+method
+ledger
+seed
+object_family
+aberration_id
+psnr
+ssim
+psnr_gain
+ssim_gain
+```
+
+如果只有聚合表，没有 raw table，审稿人会不放心。
+
+---
+
+## 4. 新物体族结果要诚实写成“modest but statistically stable”
+
+如果新物体族 gain 只有小幅正值，不要写：
+
+> strong generalization to unseen object families
+
+建议写：
+
+> Under object-family shift, the gain is more modest but remains positive across the pre-registered multi-seed evaluation, indicating that the diffractive frontend does not rely solely on memorizing the training object families.
+
+中文：这句话既保护主张，又避免过度宣传。
+
+---
+
+## 5. 增加 failure-case analysis
+
+Nature Communications 审稿人会很关心失败样本。建议新增一个 Supplementary Figure：
+
+**Supplementary Fig. Sx: Failure cases under object-family shift**
+
+包括：
+
+* phase-only 低于 fixed 的样本
+* 对应物体图
+* aberration map / PSF
+* error map
+* 解释失败原因：高频纹理、低对比度、周期结构、边界泄露等
+
+这会显著提高可信度。
+
+---
+
+## 6. 硬件容差必须与所有方法公平绑定
+
+如果 phase quantization 只作用在 phase-only stack，而其他方法没有对应扰动，比较会不公平。建议写清楚：
+
+* 对 phase-only：相位量化、相位噪声、层间偏移
+* 对 reference PSF：PSF measurement noise / misregistration
+* 对 spectral frontend：frequency response perturbation
+* 对 trainable surrogate：input perturbation or equivalent calibration noise
+
+否则 Reviewer 1/2 可能会说 tolerance comparison is method-specific and not fair.
+
+---
+
+## 7. 自然对象实验需要说明数据来源与子集选择
+
+建议 Supplementary Methods 明确：
+
+* ImageNet / COCO 的版本
+* subset size
+* selection rule
+* 是否随机抽样
+* 是否去除极端尺寸图片
+* resize / crop / grayscale 的方法
+* 是否所有方法看到完全相同输入
+* raw data 不重新分发的 license 原因
+
+此外，必须提供 `natural_object_subset_index.csv`。
+
+---
+
+## 8. Fresnel 传播模型要补完整采样条件
+
+建议 Supplementary Methods 增加：
+
+```text
+wavelength λ
+pixel pitch dx
+propagation distance z
+grid size Nx × Ny
+frequency grid definition
+FFT normalization convention
+boundary condition / padding
+aperture support
+energy normalization
+validity regime
+```
+
+如果少了这些，光学审稿人会认为模型不可复现。
+
+---
+
+# 可直接替换的 Results 段落
+
+下面这段可用于主文 Results，但需要你们把具体数值替换为已核验的最终表格数值。
+
+```text
+We next evaluated whether the advantage of the diffractive frontend persists under object-level distribution shift. To avoid conflating aberration generalization with object memorization, we used two pre-registered evaluation ledgers: one holding out aberration realizations within the training object families, and another holding out object families not used during training. All methods were evaluated with identical seeds, object splits, aberration schedules, and aggregation procedures. The phase-only diffractive frontend achieved the largest mean PSNR gain among the tested methods in the unified comparison, while retaining a positive gain under the held-out object-family protocol. The gain under object-family shift was smaller than that observed for held-out aberrations, indicating that this setting is substantially more challenging. Nevertheless, the positive multi-seed confidence interval suggests that the observed improvement is not solely attributable to memorization of the training object families.
+```
+
+中文解释：这段的优点是承认 object-family shift 更难，同时保留核心结论。
+
+---
+
+# 可直接替换的 Methods 段落
+
+```text
+All comparisons were performed under a fixed dual-ledger evaluation protocol. The first ledger held out aberration realizations while preserving the object-family distribution, whereas the second ledger held out entire object families that were not used during training. For each method, we used the same random seeds, object splits, aberration parameters, preprocessing steps, and aggregation pipeline. Confidence intervals were computed across independent seeds using bootstrap resampling unless otherwise stated. No samples were removed after evaluation, and all raw per-seed results are included in the source-data package.
+```
+
+---
+
+# 可直接替换的 Limitations 段落
+
+```text
+This study has several limitations. First, although the phase-only stack provides a physically constrained optical frontend, the present implementation remains a hybrid optical-digital system because reconstruction is performed after intensity detection. We therefore report optical and digital degrees of freedom separately. Second, the gain under held-out object-family shift is smaller than the gain observed for held-out aberrations, indicating that object-level distribution shift remains a challenging regime. Third, although natural-image and hardware-tolerance evaluations improve realism, experimental validation with fabricated diffractive layers remains an important next step.
+```
+
+这段必须写。它会降低拒稿风险，因为审稿人看到你们知道边界在哪里。
+
+---
+
+# 推荐重组主文结构
+
+## Title
+
+避免过强标题，例如：
+
+> Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations
+
+可改为更稳：
+
+> A phase-only diffractive optical frontend for self-calibrated imaging through dynamic aberrations
+
+原因：前者的 “neural operators” 可能让 ML 审稿人要求更强 operator-learning 理论；后者更稳，更光学。
+
+## Abstract 结构
+
+建议 5 句：
+
+1. 动态像差问题
+2. 现有 fixed optics / digital correction 的局限
+3. 你们提出 phase-only diffractive frontend + self-calibration
+4. 双 held-out + hardware + natural data 结果
+5. 限定主张：hybrid optical-digital and reproducible pipeline
+
+---
+
+# 作者回复策略
+
+## English response strategy
+
+1. Emphasize that the evaluation protocol explicitly separates aberration generalization from object-family generalization.
+2. Add a method-fairness table reporting optical and digital degrees of freedom.
+3. Reframe the method as a physically constrained optical frontend rather than a fully optical standalone system.
+4. Add failure-case analysis for held-out object families.
+5. Expand Methods to include Fresnel sampling, FFT conventions, hardware perturbation definitions, and natural-dataset preprocessing.
+6. Provide raw per-seed source data and checksums for all figure panels.
+
+## 中文回复策略
+
+1. 强调双账本协议明确区分“新像差泛化”和“新物体族泛化”。
+2. 增加方法公平性表，报告光学参数量与数字参数量。
+3. 将方法表述为物理受限的光学前端，而不是完全独立的纯光学系统。
+4. 增加新物体族失败样本分析。
+5. 扩展 Methods，包括 Fresnel 采样、FFT 约定、硬件扰动定义和自然数据预处理。
+6. 提供所有主图面板对应的 seed-level source data 与 checksum。
+
+---
+
+# 修改清单
+
+## Fatal / 投稿前必须解决
+
+* [ ] 上传并核验完整 manuscript 和 supplementary。
+* [ ] 确认所有 source data 与图完全一致。
+* [ ] 增加 Method Fairness Table。
+* [ ] 明确 optical vs digital degrees of freedom。
+* [ ] 补全 Fresnel sampling / FFT convention。
+* [ ] 补充自然数据子集选择与 license 说明。
+
+## Major / 强烈建议解决
+
+* [ ] 增加 failure-case analysis。
+* [ ] 增加 parameter-matched digital surrogate。
+* [ ] 把 object-family shift 的表述降调为 “modest but stable”。
+* [ ] 硬件容差对各方法的扰动公平性说明。
+* [ ] 所有统计结果给出 per-seed raw data。
+
+## Moderate
+
+* [ ] 将 title 从 “neural operators” 降调或在正文中定义清楚。
+* [ ] 将 tail robustness 放入主文或 Extended Data。
+* [ ] 增加 ablation：layer number、phase bases、frontend resolution。
+
+## Minor
+
+* [ ] 减少 “robust / significant / self-calibrating” 的重复使用。
+* [ ] 避免所有段落用相同模板开头。
+* [ ] 图注中写清楚 sample size、seeds、CI 方法。
+
+---
+
+# 最终建议
+
+我不建议现在把稿件表述成“停止条件完全满足、可以无修改投稿”。更稳妥的判断是：
+
+> 科学证据链接近完成，但稿件仍需要一次严格的大修式整合，尤其是公平对比、物理模型细节、自然对象数据说明和 failure-case 分析。
+
+**当前预测：**
+
+* 直接投稿 Nature Communications：**62–72%**
+* 完成本轮建议后投稿：**78–85%**
+* 如果再补一个 parameter-matched digital surrogate + failure-case figure：**82–88%**
+
+最值得马上做的下一步是：**上传最新主文和补充材料，我可以按 Nature Communications 审稿口径做逐段批注和“必须改 / 可选改 / 不建议改”的版本。**

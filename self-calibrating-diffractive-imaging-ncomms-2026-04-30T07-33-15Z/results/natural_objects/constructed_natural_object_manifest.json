@@ -1,0 +1,202 @@
+{
+  "status": "proxy_dataset_constructed",
+  "image_count": 24,
+  "datasets": [
+    "imagenet",
+    "coco"
+  ],
+  "files": [
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_000.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_000.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_001.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_001.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_002.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_002.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_003.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_003.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_004.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_004.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_005.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_005.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_006.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_006.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_007.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_007.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_008.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_008.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_009.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_009.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_010.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_010.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "imagenet",
+      "filename": "imagenet_proxy_011.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation/imagenet_proxy_011.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "layered texture + oriented structure"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_000.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_000.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_001.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_001.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_002.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_002.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_003.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_003.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_004.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_004.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_005.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_005.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_006.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_006.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_007.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_007.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_008.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_008.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_009.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_009.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_010.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_010.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    },
+    {
+      "dataset": "coco",
+      "filename": "coco_proxy_011.png",
+      "path": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation/coco_proxy_011.png",
+      "image_size": 128,
+      "source_type": "project_local_proxy",
+      "generation_recipe": "smooth scene gradient + clustered blobs"
+    }
+  ]
+}

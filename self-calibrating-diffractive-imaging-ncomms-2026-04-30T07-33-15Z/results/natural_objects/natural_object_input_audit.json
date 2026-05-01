@@ -1,0 +1,22 @@
+{
+  "project_root": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "staging_root": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects",
+  "datasets": [
+    {
+      "dataset_name": "ImageNet-1k",
+      "dataset_version": "ILSVRC2012 validation",
+      "expected_dir": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation",
+      "image_count": 12,
+      "exists": true,
+      "status": "ready"
+    },
+    {
+      "dataset_name": "COCO",
+      "dataset_version": "2017 validation",
+      "expected_dir": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation",
+      "image_count": 12,
+      "exists": true,
+      "status": "ready"
+    }
+  ]
+}

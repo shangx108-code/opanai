@@ -1,0 +1,7 @@
+figure_id,protocol,split,metric,condition,mean_value,unit,delta_vs_no_reference,delta_vs_noncommon_path,verification_status,source
+Extended Data Fig. 2,Zernike wave-optics pupil,OOD,stronger-aberration reconstruction PSNR,no-reference,37.069,dB,0.000,-0.009,verified,/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md
+Extended Data Fig. 2,Zernike wave-optics pupil,OOD,stronger-aberration reconstruction PSNR,non-common-path,37.078,dB,0.009,0.000,verified,/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md
+Extended Data Fig. 2,Zernike wave-optics pupil,OOD,stronger-aberration reconstruction PSNR,common-path,38.422,dB,1.353,1.344,verified,/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md
+Extended Data Fig. 2,Zernike wave-optics pupil,OOD,mean PSF mismatch MSE,no-reference,1.279e-05,a.u.,0.000e+00,1.240e-06,verified,/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md
+Extended Data Fig. 2,Zernike wave-optics pupil,OOD,mean PSF mismatch MSE,non-common-path,1.155e-05,a.u.,-1.240e-06,0.000e+00,verified,/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md
+Extended Data Fig. 2,Zernike wave-optics pupil,OOD,mean PSF mismatch MSE,common-path,4.217e-06,a.u.,-8.573e-06,-7.333e-06,verified,/workspace/memory/self-calibrating-diffractive-ncomms/manuscript-v1-strict.md

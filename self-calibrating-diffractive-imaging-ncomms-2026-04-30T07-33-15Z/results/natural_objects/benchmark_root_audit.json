@@ -1,0 +1,47 @@
+{
+  "project_root": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "staging_root": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects",
+  "datasets": [
+    {
+      "dataset_name": "ImageNet-1k",
+      "dataset_version": "ILSVRC2012 validation",
+      "expected_dir": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/imagenet-1k-ilsvrc2012-validation",
+      "file_count": 12,
+      "png_count": 12,
+      "jpg_count": 0,
+      "jpeg_count": 0,
+      "proxy_named_count": 12,
+      "first_files": [
+        "imagenet_proxy_000.png",
+        "imagenet_proxy_001.png",
+        "imagenet_proxy_002.png",
+        "imagenet_proxy_003.png",
+        "imagenet_proxy_004.png"
+      ],
+      "inferred_status": "proxy_only",
+      "benchmark_root_ready": false,
+      "blocker_reason": "all staged files are proxy-named placeholders rather than benchmark-root images"
+    },
+    {
+      "dataset_name": "COCO",
+      "dataset_version": "2017 validation",
+      "expected_dir": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/data/natural_objects/coco-2017-validation",
+      "file_count": 12,
+      "png_count": 12,
+      "jpg_count": 0,
+      "jpeg_count": 0,
+      "proxy_named_count": 12,
+      "first_files": [
+        "coco_proxy_000.png",
+        "coco_proxy_001.png",
+        "coco_proxy_002.png",
+        "coco_proxy_003.png",
+        "coco_proxy_004.png"
+      ],
+      "inferred_status": "proxy_only",
+      "benchmark_root_ready": false,
+      "blocker_reason": "all staged files are proxy-named placeholders rather than benchmark-root images"
+    }
+  ],
+  "all_benchmark_root_ready": false
+}

@@ -1,0 +1,30 @@
+{
+  "config": {
+    "image_size": 128,
+    "pupil_size": 128,
+    "lowres_size": 16,
+    "noise_sigma": 0.01,
+    "nominal_wiener_k": 0.001,
+    "guided_wiener_k": 0.0005,
+    "ridge_lambda": 2.5,
+    "seed": 17,
+    "train_case_count": 72,
+    "test_case_count": 24
+  },
+  "train_samples": 432,
+  "test_samples": 144,
+  "mean_fixed_psnr": 24.283769156920396,
+  "mean_guided_psnr": 27.390960987736726,
+  "mean_surrogate_psnr_lowres": 50.70302993140961,
+  "mean_fixed_psnr_lowres": 37.54116296199195,
+  "mean_guided_psnr_lowres": 34.91107586105247,
+  "mean_fixed_ssim": 0.9751511554954947,
+  "mean_guided_ssim": 0.9806973358751336,
+  "mean_surrogate_ssim_lowres": 0.9998377418781672,
+  "mean_fixed_ssim_lowres": 0.997978113123573,
+  "mean_guided_ssim_lowres": 0.9924782814730899,
+  "mean_guided_psnr_gain_over_fixed": 3.107191830816328,
+  "mean_surrogate_psnr_gain_over_fixed_lowres": 13.161866969417657,
+  "mean_surrogate_psnr_gap_to_guided_lowres": -15.791954070357146,
+  "surrogate_better_than_fixed_fraction": 0.9722222222222222
+}

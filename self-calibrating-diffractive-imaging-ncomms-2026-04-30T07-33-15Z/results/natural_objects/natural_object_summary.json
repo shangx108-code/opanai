@@ -1,0 +1,29 @@
+{
+  "status": "completed_with_project_local_proxy_images",
+  "summary_rows": [
+    {
+      "dataset_name": "ImageNet-1k",
+      "dataset_version": "ILSVRC2012 validation",
+      "image_count": 12,
+      "sample_count": 72,
+      "mean_fixed_psnr_lowres": 19.786197545547022,
+      "mean_guided_psnr_lowres": 22.34064553718626,
+      "mean_pipeline_psnr_lowres": 9.39381567666404,
+      "mean_psnr_gain_over_fixed_lowres": -10.392381868882985,
+      "better_than_fixed_fraction": 0.0
+    },
+    {
+      "dataset_name": "COCO",
+      "dataset_version": "2017 validation",
+      "image_count": 12,
+      "sample_count": 72,
+      "mean_fixed_psnr_lowres": 22.94124686886554,
+      "mean_guided_psnr_lowres": 24.983081013054687,
+      "mean_pipeline_psnr_lowres": 10.086542855451885,
+      "mean_psnr_gain_over_fixed_lowres": -12.854704013413654,
+      "better_than_fixed_fraction": 0.0
+    }
+  ],
+  "metrics_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/natural_objects/natural_object_metrics.csv",
+  "summary_json": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/natural_objects/natural_object_summary.json"
+}

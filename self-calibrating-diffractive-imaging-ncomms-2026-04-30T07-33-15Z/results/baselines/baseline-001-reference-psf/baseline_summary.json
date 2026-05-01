@@ -1,0 +1,38 @@
+{
+  "config": {
+    "image_size": 128,
+    "pupil_size": 128,
+    "wavelength": 5.32e-07,
+    "sample_spacing": 8e-06,
+    "propagation_distance": 0.012,
+    "nominal_wiener_k": 0.001,
+    "guided_wiener_k": 0.0005,
+    "seed": 7,
+    "noise_sigma": 0.01,
+    "object_count": 6,
+    "case_count": 8
+  },
+  "optics_metadata": {
+    "sample_spacing_m": 8e-06,
+    "wavelength_m": 5.32e-07,
+    "propagation_distance_m": 0.012,
+    "x_min_m": -0.000512,
+    "x_max_m": 0.000504,
+    "y_min_m": -0.000512,
+    "y_max_m": 0.000504,
+    "fx_min_1_per_m": -62500.0,
+    "fx_max_1_per_m": 61523.4375,
+    "fy_min_1_per_m": -62500.0,
+    "fy_max_1_per_m": 61523.4375
+  },
+  "sample_count": 48,
+  "mean_fixed_psnr": 12.946448473782084,
+  "mean_guided_psnr": 14.439775179761078,
+  "mean_psnr_gain": 1.4933267059789956,
+  "median_psnr_gain": 1.4013576564935084,
+  "mean_fixed_ssim": 0.6752518572226786,
+  "mean_guided_ssim": 0.777487406613087,
+  "mean_ssim_gain": 0.10223554939040845,
+  "guided_better_fraction_psnr": 1.0,
+  "guided_better_fraction_ssim": 1.0
+}

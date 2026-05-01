@@ -1,0 +1,35 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "method": "parameter_matched_digital_surrogate",
+  "parameter_budget_match_target": "phase_only_stack digital ridge stage",
+  "overall_summary": {
+    "method": "parameter_matched_digital_surrogate",
+    "mean_psnr_gain_across_ledgers": 2.393125120053652,
+    "mean_psnr_gain_across_ledgers_with_ci_center": 2.393125120053652,
+    "mean_psnr_gain_ci_low": -1.3961767302678005,
+    "mean_psnr_gain_ci_high": 6.182426970375104,
+    "mean_better_than_fixed_fraction": 0.75,
+    "digital_trainable_parameters": 145296,
+    "optical_trainable_parameters": 0,
+    "derived_channels": [
+      "noisy_lowres",
+      "reference_lowres",
+      "difference",
+      "sum",
+      "product",
+      "noisy_square",
+      "reference_square"
+    ]
+  }
+}

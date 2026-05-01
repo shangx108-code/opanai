@@ -1,0 +1,37 @@
+{
+  "k_mesh": 96,
+  "mu": 0.05,
+  "displacement_field": 0.12,
+  "zeeman_field": 0.02,
+  "intervalley_mixing": 0.08,
+  "outer_gap_offset": 0.055,
+  "candidate_states": [
+    "s_wave",
+    "valley_odd",
+    "chiral_d"
+  ],
+  "broadening_values": [
+    0.02,
+    0.05,
+    0.08
+  ],
+  "barrier_values": [
+    0.2,
+    0.8,
+    1.6,
+    2.8
+  ],
+  "orientation_values": [
+    0.0,
+    0.7853981634
+  ],
+  "intervalley_scan_values": [
+    0.0,
+    0.2,
+    0.45
+  ],
+  "field_angle_values": [
+    0.0,
+    1.5707963268
+  ]
+}

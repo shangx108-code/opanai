@@ -1,0 +1,42 @@
+{
+  "run_config": {
+    "seed": 0,
+    "train_case_count": 24,
+    "eval_case_count": 6,
+    "eval_split": "new_family_heldout_object_family",
+    "output_subdir": "pipeline_smoke"
+  },
+  "phase_config": {
+    "image_size": 128,
+    "pupil_size": 128,
+    "lowres_size": 12,
+    "layer_count": 5,
+    "phase_basis_count": 10,
+    "seed": 0,
+    "train_case_count": 24,
+    "heldout_case_count": 6,
+    "ridge_lambda": 0.75,
+    "search_steps": 14,
+    "proposal_scale": 0.28,
+    "wavelength": 5.32e-07,
+    "sample_spacing": 8e-06,
+    "propagation_distance": 0.012,
+    "noise_sigma": 0.01,
+    "nominal_wiener_k": 0.001,
+    "guided_wiener_k": 0.0005,
+    "propagation_model": "fresnel"
+  },
+  "summary": {
+    "sample_count": 24,
+    "mean_fixed_psnr_lowres": 17.570113211494387,
+    "mean_guided_psnr_lowres": 19.83599666147421,
+    "mean_pipeline_psnr_lowres": 17.755018970816646,
+    "mean_psnr_gain_over_fixed_lowres": 0.1849057593222577,
+    "better_than_fixed_fraction": 0.4166666666666667
+  },
+  "output_files": {
+    "metrics_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/pipeline/pipeline_smoke/pipeline_metrics.csv",
+    "summary_json": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/pipeline/pipeline_smoke/pipeline_summary.json",
+    "runtime_json": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/pipeline/pipeline_smoke/pipeline_runtime.json"
+  }
+}
