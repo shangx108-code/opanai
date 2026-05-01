@@ -1,0 +1,1 @@
+This GitHub snapshot currently contains the manuscript sources, processed source-data tables, traceability files and state notes for the Nature Communications style draft assembled on 2026-05-01. The compiled PDFs and figure binaries remain available in the local workspace package for this run.
