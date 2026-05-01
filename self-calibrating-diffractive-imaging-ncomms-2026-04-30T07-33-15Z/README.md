@@ -26,8 +26,8 @@ Project layout:
 
 Current primary bottleneck:
 
-- Benchmark-root natural-image evidence is still proxy-only, and the tolerance package remains short of the figure-ready export tables needed for submission-grade closure.
+- Benchmark-root natural-image evidence is still proxy-only because no licensed ImageNet/COCO benchmark-root files are staged in the audited dataset roots.
 
 Current first advancing action:
 
-- Stage licensed benchmark-root natural-image files, rerun the frozen natural-object evaluation, and then expand the tolerance exports into figure-ready tables.
+- Stage licensed benchmark-root natural-image files and rerun the frozen natural-object evaluation so the project can replace the remaining proxy-only natural-image claims with benchmark-root evidence.
