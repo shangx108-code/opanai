@@ -61,15 +61,12 @@ The remaining highest-priority gaps are:
 3. benchmark-root natural-image result files are still absent:
    - `results/natural_objects/benchmark_root_metrics.csv`
    - `results/natural_objects/benchmark_root_per_seed.csv`
-4. tolerance-closure exports are still absent:
-   - `results/tolerance/tolerance_curve_summary.csv`
-   - `results/tolerance/tolerance_curve_detail.csv`
-   - `results/tolerance/tolerance_plot_manifest.csv`
-   - `results/tolerance/hardware_tolerance_metrics.csv`
-5. figure-level source-data folders are still absent
-6. authoritative LaTeX manuscript files are still absent:
+4. authoritative LaTeX manuscript files are still absent:
    - `manuscript/main.tex`
    - `manuscript/supplement.tex`
+5. experimental and physics-validity narrative closures are still absent:
+   - `results/experimental/device_description.md`
+   - `manuscript/propagation-validity-note.md`
 
 ## Authoritative gap list
 
@@ -83,4 +80,4 @@ The GitHub-backed main-space consistency audit remains:
 
 ## Shortest next executable action
 
-Prioritize the `P1.1` benchmark-root natural-image files because they are the strongest remaining evidence blocker, then regenerate the missing tolerance export tables.
+Prioritize the `P1.1` benchmark-root natural-image files because they are now the single strongest remaining evidence blocker.
