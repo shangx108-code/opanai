@@ -2,34 +2,29 @@
 
 ## Project
 - Working title: Beyond zero-bias peaks: a nonlocal Green-function diagnostic for Majorana zero modes
-- Primary target journal: Nature Physics
-- Secondary packaging path: Nature Communications
+- Target journal: Nature Physics
 - Source note: initialized from `/workspace/user_files/01-1-.txt` on 2026-04-24
 
 ## Research goal
 Build a publishable theory paper that does not merely restate that nonlocal conductance helps, but establishes a genuinely new and experimentally actionable diagnostic hierarchy that separates topological Majorana zero modes from trivial zero-energy states across multiple superconducting hybrid platforms. The project is not considered complete until the estimated Nature Physics acceptance probability exceeds 70% and all required evidence layers are closed with auditable support.
 
 ## Current stage
-Application-and-venue repositioning with a first real CMJJ source-data bundle. On 2026-05-01, the project not only locked the compensated-magnetic Josephson-junction branch and the Nature Communications packaging path, but also generated the first auditable Figures 2-5 source-data package for that branch under `data/cmjj-source-data-2026-05-01/`. The package is built from a minimal executable effective model that runs in the current `numpy`-only environment and already covers bulk gap scans, finite-ring topology labels, open-boundary spectra, negative controls, and lead-attached transport proxies.
+Strengthened recovery stage inside the pilot-manuscript phase. The project still rests on literature-verified repositioning, theory-standard fixing, expanded transport numerics, a first three-terminal figure-grade benchmark, and a frozen topology-layer upgrade specification for the next Figure 4 rebuild, but the current scheduled-run workspace still lacks the executable three-terminal bundle itself. The recovery layer remains live in the workspace: rerunning `memory/majorana-diagnostic-natphys/code/majorana_recovery_bootstrap.py` deterministically rebuilds `/workspace/output/three-terminal-benchmark/` with fresh provenance, dependency, and missing-asset manifests. This round reconfirmed that the live workspace still does not expose the missing script or historical bundle files, and a fresh targeted connected-Google-Drive search for `majorana three terminal benchmark` and `majorana three terminal figures` also returned no recoverable copy. The scheduled container still lacks the missing scientific Python stack, and the previously verified online `pip install` path remains blocked by the package-index proxy.
 
 ## Current main bottleneck
-The main bottleneck has shifted from total absence of CMJJ evidence to selective upgrade of the weak panels. A first review pass over the new bundle shows that Figures 2 and 3 are already plausible manuscript-facing assets, while Figures 4 and 5 remain the limiting layer. The concrete bottleneck is now narrower than before: a targeted retune run identified dot and impurity control windows that recover `nu_ring = 1` while keeping `min|E|` in the near-zero regime, and a follow-up candidate rebuild regenerated the Fig. 4 control summary plus the Fig. 5 positive/dot/impurity heatmaps around those locked settings. A dedicated window-discrimination check showed that the raw proxy is substantially cleaner as a zero-bias or near-zero-bias discriminator than as a full-bias-window discriminator, and a new readout-layer upgrade now provides a stronger broad-window candidate observable, `symmetric_nonlocal_score`, without changing the underlying transport solver.
+The main bottleneck is now the still-missing executable three-terminal benchmark bundle in the current workspace and reachable archives, compounded by an upstream dependency-install barrier. The scientific bottleneck is still the weak topology layer in Figure 4, but the immediate submission-blocking constraint is more basic: the script path and historical outputs required to rerun `nu_ring` and `P_topo` on the shared inhomogeneous transport instances are not present here, the recovery audit shows that the scheduled-run Python stack currently lacks `scipy` and `matplotlib`, the refreshed broader local plus targeted connected-Google-Drive search did not recover the missing entry point or any of the nine expected benchmark assets, and the earlier direct `pip install scipy matplotlib` attempt failed because the configured package-index proxy is unreachable from this container. Until the entry script, historical bundle, and an offline or otherwise reachable dependency path are restored, the topology upgrade remains specified but not executable.
 
 ## Highest-priority objective for the current round
-Convert the first CMJJ source-data bundle into a manuscript-facing package:
+Re-establish the three-terminal benchmark as an auditable and recovery-trackable object in the current workspace before attempting any further manuscript inflation:
 
-1. keep `A-compensated-magnetic-cmjj-blueprint-2026-05-01.md` as the fixed application brief;
-2. keep `B-nc-repositioning-and-reproducibility-plan-2026-05-01.md` as the fixed packaging brief;
-3. treat `data/cmjj-source-data-2026-05-01/` and `code/generate_cmjj_source_data.py` as the current reproducible baseline;
-4. freeze the first-pass bundle as the baseline and treat `data/fig4-fig5-targeted-retune-2026-05-01/` plus `code/retune_fig4_fig5_targeted.py` as the current control-retune workspace;
-5. treat `data/fig4-fig5-candidate-rebuild-2026-05-01/` as the current manuscript-facing weak-panel package for Figures 4 and 5;
-6. treat the present raw `|G_LR|` proxy as acceptable only for a zero-bias or tight near-zero-bias discriminator;
-7. for broader bias-window framing, use the upgraded readout-layer package under `data/fig5-observable-upgrade-2026-05-01/`, with `symmetric_nonlocal_score` as the current leading candidate;
-8. only if that upgraded readout still proves inadequate should the project reopen deeper transport-observable development;
-9. only after that add plotting, captioning, and venue-specific figure selection.
+1. regenerate the bundle provenance and exact expected-file list from stable project memory;
+2. make the current absence of scripts and historical outputs explicit rather than leaving the bundle in a silent missing state;
+3. audit the actual scheduled-run Python stack rather than assuming the old environment still exists;
+4. test whether the missing scientific Python stack can be restored directly from the scheduled container rather than only inferred from import failures;
+5. avoid treating provenance recovery as evidence recovery.
 
 ## Proposed central claim
-In a compensated-magnetic Josephson junction, field-free topological superconductivity should be diagnosed not from a local near-zero feature alone, but from the consistency of bulk topology, open-boundary spectra, and phase-resolved nonlocal response under explicit ABS, impurity, and disorder false-positive tests.
+Local zero-bias peaks are neither sufficient nor stably informative in realistic hybrid superconductors; a topological diagnosis requires the joint consistency of end-to-end correlation, nonlocal transport, bulk-gap reopening, and scattering-matrix topology, and this hierarchy remains discriminating across dot-induced ABS, impurity-induced YSR-like states, and disorder-induced near-zero modes.
 
 ## Mandatory evidence package
 - Positive control: topological Rashba nanowire
@@ -45,17 +40,8 @@ In a compensated-magnetic Josephson junction, field-free topological superconduc
 - Unified Green-function / BTK / self-energy / T-matrix technical spine
 - Good instinct to include false positives instead of only ideal Majoranas
 - Strong candidate visual centerpiece in the form of a diagnostic map
-- The compensated-magnetic Josephson-junction application is now frozen as a reusable project branch rather than a vague future option
-- A Nature Communications-safe claim stack and reproducibility plan are now frozen in long-term memory
-- A first real CMJJ Figures 2-5 source-data bundle now exists under `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/`
-- The corresponding generator script and config now exist under `code/generate_cmjj_source_data.py` and `config/cmjj_source_data_config.json`
-- A targeted Fig. 4 / Fig. 5 retune bundle now exists under `data/fig4-fig5-targeted-retune-2026-05-01/`, with ranked dot and impurity control candidates that stay topologically trivial while remaining near-zero
-- A candidate-based Fig. 4 / Fig. 5 rebuild bundle now exists under `data/fig4-fig5-candidate-rebuild-2026-05-01/`, including the updated control summary table and regenerated positive/dot/impurity heatmaps
-- A window-discrimination judgment now exists under `data/fig4-fig5-candidate-rebuild-2026-05-01/`, showing that the current Fig. 5 proxy is much stronger near zero bias than over the full bias window
-- A Fig. 5 observable-upgrade bundle now exists under `data/fig5-observable-upgrade-2026-05-01/`, with `symmetric_nonlocal_score` currently giving the strongest worst-case full-bias median separation across the tested controls
-- A manuscript-facing Figure 5 broad-window text package now exists in `figure5-broad-window-caption-and-method-v1.md`
-- A direct Figure 5 main-manuscript integration page now exists in `manuscript-figure5-broad-window-integration-v1.md`
 - A first manuscript package and LaTeX draft now exist in `/workspace/output`
+- A manuscript-facing text sync now exists in `/workspace/memory/majorana-diagnostic-natphys/manuscript-facing-sync-2026-05-02`, locking the current Fig. 4 / Fig. 5 Methods-Supplement boundary and duplicated caption wording
 - Literature positioning now reflects the 2026 TAJJ overlap explicitly
 - A formal internal theory note now defines the diagnostic hierarchy and evidence-completion criteria
 - A first real-data benchmark sweep now exists for a Rashba positive control and a smooth-dot false-positive control in one finite-chain BdG code path
@@ -63,23 +49,23 @@ In a compensated-magnetic Josephson junction, field-free topological superconduc
 - A first three-terminal benchmark package now exists under `/workspace/output/three-terminal-benchmark`, including selected operating points and rebuilt Figure 3/4 candidates
 
 ## What is still missing
-- A verified novelty statement against both 2019/2021/2024 nanowire-diagnostic work and 2026 TAJJ overlap
+- A verified novelty statement against 2019/2021/2024 nanowire-diagnostic literature
 - A numerically validated disorder-robust inhomogeneous discriminator for false-positive controls
-- Final plotted and manuscript-vetted compensated-magnetic parameter scans and robustness windows
+- Platform breadth sufficient for Nature Physics
+- Real numerical results, figure-ready parameter scans, and robustness windows
 - A citation-clean reference set
-- A fully convincing compensated-magnetic nonlocal transport benchmark with stronger topology discrimination than the current first-pass proxy implementation
+- A fully convincing three-terminal transport benchmark with stronger topology discrimination than the current backbone criterion
 - A completed derivation note integrated into the manuscript rather than only the internal theory file
-- Final evidence-complete real data for every selected main-text data figure
-- A benchmark where nonlocal transport, gap reopening, and a stronger topology label are evaluated together in the compensated-magnetic branch with the final chosen observable definitions
-- One more false-positive family, preferably impurity- or YSR-like, implemented in the compensated-magnetic branch itself
+- Evidence-complete real data for every main-text data figure
+- A benchmark where nonlocal transport, gap reopening, and a stronger topology label are evaluated together rather than only finite-chain spectral proxies plus backbone topology
+- One more false-positive family, preferably impurity- or YSR-like
 - Stronger experimental observability windows for temperature and barrier scans
-- Restoration of the master manuscript source file into the long-term project space so the new Figure 5 text can be merged in place
+- Additional tuning that reduces the current over-dominance of the disorder false positive and sharpens the smooth-dot and impurity comparison
 
 ## Acceptance probability (stage estimate)
 - Nature Physics: 14-22% in the current manuscript-package state
-- Nature Communications repack path: 15-25% if submitted immediately; 50-65% if the new required evidence-and-reproducibility package is actually completed
 - Project success threshold: >70%
-- Reason: the framing is now healthier, but the compensated-magnetic branch still lacks a real figure-grade evidence bundle and the reproducibility layer is not yet complete
+- Reason: numerical coverage and figure readiness improved, but the evidence is still not selective enough, and the topology layer remains below the threshold needed for a top-tier theory paper
 
 ## Last update
-2026-05-01: locked Figure 5 to the upgraded broad-window version and stored both the manuscript-facing text package in `figure5-broad-window-caption-and-method-v1.md` and a direct main-manuscript integration page in `manuscript-figure5-broad-window-integration-v1.md`. The selected readout remains `symmetric_nonlocal_score`, used explicitly as a derived broad-window nonlocal score rather than as a new transport solver.
+2026-05-02: synchronized the manuscript-facing Fig. 4 / Fig. 5 wording across `/workspace/submission_draft_main.tex` and `/workspace/submission_pack_latex_ready.tex`, and archived the stabilized copies under `/workspace/memory/majorana-diagnostic-natphys/manuscript-facing-sync-2026-05-02/`. This round upgraded Fig. 4 to a null-calibrated ensemble-control narrative and Fig. 5 to a single prespecified nonlocal decision-rule narrative, while keeping the Methods / Supplement boundary aligned with that logic. This is a text-discipline improvement only; the full-device topology rerun remains blocked exactly as before because the missing three-terminal benchmark bundle and reachable scientific Python path have not yet been restored.
