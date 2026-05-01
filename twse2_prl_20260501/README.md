@@ -17,7 +17,9 @@ the paper outline into an executable starting point that already produces:
 - `config/default_params.json`: shared parameters
 - `src/twse2_minimal.py`: model helpers
 - `scripts/run_wp1_wp2.py`: runs the first two work packages
+- `scripts/update_sync_status.py`: refreshes the project sync audit
 - `results/`: generated summary tables and markdown
+- `sync-status.md`: current sync checklist for the long-term project space
 
 ## Run
 
