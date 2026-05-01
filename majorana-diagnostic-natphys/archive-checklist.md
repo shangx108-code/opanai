@@ -3,6 +3,8 @@
 ## Core manuscript package
 - [x] Title and abstract
 - [x] Main-text manuscript draft
+- [x] Application branch A locked in long-term space
+- [x] NC packaging branch B locked in long-term space
 - [ ] Supplementary note
 - [ ] Verified bibliography file
 
@@ -15,6 +17,9 @@
 
 ## Numerical package
 - [x] Reproducible code repository snapshot
+- [x] First CMJJ source-data generator script
+- [x] First CMJJ source-data config
+- [x] First CMJJ Figures 2-5 source-data bundle
 - [x] Parameter table for all main figures
 - [x] Raw data for main figures
 - [x] Raw data for supplementary figures
@@ -51,6 +56,7 @@
 - [x] Internal supervision notes
 - [x] Simulated referee reports
 - [x] Figure 4 rewrite pack with claim-discipline guardrails
+- [x] First CMJJ panel triage note
 - [ ] Revision log by version
 - [ ] Cover-letter draft
 
@@ -63,6 +69,16 @@
 - [ ] All evidence gaps closed
 
 ## Current drafted assets
+- [x] `memory/majorana-diagnostic-natphys/A-compensated-magnetic-cmjj-blueprint-2026-05-01.md`
+- [x] `memory/majorana-diagnostic-natphys/B-nc-repositioning-and-reproducibility-plan-2026-05-01.md`
+- [x] `memory/majorana-diagnostic-natphys/code/generate_cmjj_source_data.py`
+- [x] `memory/majorana-diagnostic-natphys/config/cmjj_source_data_config.json`
+- [x] `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/manifest.json`
+- [x] `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig2/fig2b_bulk_gap_mu_phi.csv`
+- [x] `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig3/fig3a_open_boundary_spectrum_vs_phi.csv`
+- [x] `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig4/fig4c_disorder_ensemble.csv`
+- [x] `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/source_data_fig5/fig5a_positive_transport_heatmap.csv`
+- [x] `memory/majorana-diagnostic-natphys/cmjj-first-pass-panel-triage-2026-05-01.md`
 - [x] `/workspace/output/nature-physics-manuscript-package.docx`
 - [x] `/workspace/output/compensated-magnetic-majorana-draft.tex`
 - [x] `/workspace/output/compensated-magnetic-majorana-draft.pdf`

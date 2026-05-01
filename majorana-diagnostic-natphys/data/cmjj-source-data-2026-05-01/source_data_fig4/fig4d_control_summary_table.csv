@@ -1,0 +1,4 @@
+case,mu,phi,dot_strength,impurity_strength,nu_ring
+positive_control,1.0,2.356194490192345,0.0,0.0,-1
+dot_mimic,0.0,0.6283185307179586,2.0,0.0,-1
+impurity_mimic,0.0,0.6283185307179586,0.0,2.2,-1
