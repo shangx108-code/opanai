@@ -9,31 +9,32 @@ This audit answers two questions for the active project:
 
 ## Result summary
 
-The answer to the first question is currently **no**.
+The answer to the first question is now **yes**.
 
 The canonical project root exists locally at:
 
 - `/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
 
-but it is not yet tracked in the git-backed long-term repository state that currently contains:
-
-- tracked file: `CURRENT-PROJECT-SPACE.md`
-- branch present locally: `master`
-- remote branch observed locally: `origin/master`
-
-The machine-readable project manifest still declares:
+and it is now tracked in the GitHub-backed long-term repository state at:
 
 - repository: `shangx108-code/opanai`
 - branch: `open-ai`
 - GitHub root: `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
 
-However, the current local git state shows:
+The machine-readable project manifest declares:
 
-- the project directory is untracked
-- no local `open-ai` branch exists
-- no remote `origin/open-ai` branch is visible in the current checkout
+- repository: `shangx108-code/opanai`
+- branch: `open-ai`
+- GitHub root: `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
 
-An additional GitHub-side search for the project root string and related file paths returned no matches. Therefore the current project is **not yet fully present in the GitHub-backed long-term main space**, even though the canonical path and manifest already claim that it should be.
+The current alignment check shows:
+
+- local project files: `475`
+- GitHub-tracked project files: `465`
+- missing GitHub-side substantive files: `0`
+- local-only non-authoritative files: `10` under `scripts/__pycache__/`
+
+Blob-hash comparison across the shared file set shows that the substantive tracked project files are now aligned between the active local mirror and the GitHub long-term main space. Therefore the current project **is now present in the GitHub-backed long-term main space**.
 
 ## Natural-image validation-file check
 
@@ -66,17 +67,16 @@ The current missing-data inventory is recorded in:
 
 The highest-priority gaps are:
 
-1. The project root itself is not yet committed into the GitHub-backed long-term repository state.
-2. Licensed benchmark-root natural-image files are absent for both `ImageNet-1k` and `COCO`.
-3. The true benchmark-root output files are still missing:
+1. Licensed benchmark-root natural-image files are absent for both `ImageNet-1k` and `COCO`.
+2. The true benchmark-root output files are still missing:
    - `results/natural_objects/benchmark_root_metrics.csv`
    - `results/natural_objects/benchmark_root_per_seed.csv`
-4. The tolerance package remains simulation-only and still lacks:
+3. The tolerance package remains simulation-only and still lacks:
    - `results/tolerance/tolerance_curve_summary.csv`
    - `results/tolerance/tolerance_curve_detail.csv`
    - `results/tolerance/tolerance_plot_manifest.csv`
    - `results/tolerance/hardware_tolerance_metrics.csv`
-5. The figure-level source-data folders and narrative note package are still absent.
+4. The figure-level source-data folders and narrative note package are still absent.
 
 ## Evidence-status view
 
@@ -98,24 +98,23 @@ The non-complete items are:
 
 ## Practical interpretation
 
-The current main-space problem is not only “some data are missing.” It is a two-layer issue:
+The current main-space problem is no longer GitHub placement. It is now a data-completeness issue:
 
-1. the GitHub-backed long-term space is not yet actually carrying this project root as tracked project content
-2. even inside the canonical local project root, the benchmark-root natural-image and tolerance-closure packages are still incomplete
+1. the benchmark-root natural-image branch is still proxy-only
+2. the tolerance-closure exports are still incomplete
 
 That means the next corrective work should happen in this order:
 
-1. make the project root itself truly live in the GitHub-backed main space
-2. stage licensed benchmark-root natural-image files
-3. run benchmark-root natural-image evaluation
-4. expand tolerance sweeps into uncertainty-resolved export tables
-5. build figure-level source-data folders and reproducibility packaging
+1. stage licensed benchmark-root natural-image files
+2. run benchmark-root natural-image evaluation
+3. expand tolerance sweeps into uncertainty-resolved export tables
+4. build figure-level source-data folders and reproducibility packaging
 
 ## Shortest next executable action
 
-The shortest action that fixes the largest structural problem is:
+The shortest action that fixes the largest remaining evidence problem is:
 
-1. add the full project root `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z` into the git-backed repository state
-2. keep `indexes/data-gap-inventory-v1.csv` as the authoritative missing-data checklist inside that tracked project root
+1. stage licensed benchmark-root natural-image files into the audited dataset roots
+2. keep `indexes/data-gap-inventory-v1.csv` as the authoritative missing-data checklist for the remaining evidence gaps
 
-Only after the project root is truly inside the GitHub-backed main space does it make sense to treat later data additions as long-term archival closure rather than local-only progress.
+From this point onward, later data additions can be treated as normal long-term archival updates rather than recovery of a missing GitHub project root.
