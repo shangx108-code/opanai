@@ -5,6 +5,14 @@
 This report records the current alignment status of the active project against its canonical long-term root:
 
 - `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
+- canonical GitHub repository: `shangx108-code/opanai`
+- canonical GitHub branch: `open-ai`
+
+For this project, the only valid long-term main space is:
+
+- `shangx108-code/opanai` / `open-ai` / `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
+
+The local directory under `/workspace/memory/` should be interpreted as the current working mirror of that canonical path, not as a separate long-term root.
 
 ## What was aligned in this round
 
@@ -44,11 +52,11 @@ The canonical long-term root now contains the currently visible project history 
 
 ## What is still not complete
 
-Local alignment does **not** yet mean full GitHub archival closure.
+Local alignment does **not** yet mean full GitHub archival closure into the canonical `open-ai` branch path.
 
 The remaining highest-priority gaps are:
 
-1. the project root is still not tracked in the git-backed repository state
+1. the local working mirror is still not fully pushed and tracked in the canonical GitHub long-term main space
 2. licensed benchmark-root `ImageNet-1k / ILSVRC2012 validation` files are still missing
 3. licensed benchmark-root `COCO 2017 validation` files are still missing
 4. benchmark-root natural-image result files are still absent:
@@ -76,4 +84,4 @@ The GitHub-backed main-space consistency audit remains:
 
 ## Shortest next executable action
 
-Track the canonical project root inside the git-backed repository state, then prioritize the `P1.1` benchmark-root natural-image files because they are the strongest remaining evidence blocker.
+Track the current local mirror inside the canonical GitHub long-term main space on branch `open-ai`, then prioritize the `P1.1` benchmark-root natural-image files because they are the strongest remaining evidence blocker.
