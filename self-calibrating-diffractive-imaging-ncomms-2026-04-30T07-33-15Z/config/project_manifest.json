@@ -10,6 +10,8 @@
   "github_repository": "shangx108-code/opanai",
   "github_branch": "open-ai",
   "github_root": "self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "long_term_main_space": "github:shangx108-code/opanai/open-ai/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z",
+  "long_term_main_space_policy": "The GitHub repository shangx108-code/opanai on branch open-ai is the only canonical long-term main space. The local_root is a working mirror and does not replace GitHub archival closure.",
   "schedule_id": "69f3087ca9c0819190e328bcfe7ac391",
   "schedule_timezone": "Asia/Shanghai",
   "schedule_rule": {
