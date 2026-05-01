@@ -1,0 +1,41 @@
+[
+  {
+    "candidate": "s_wave",
+    "eta": 0.0,
+    "alpha": 1.0471975511965976,
+    "barrier_Z": 2.0,
+    "zero_bias_conductance": 1.1696000000028235,
+    "peak_conductance": 1.1696000000028235,
+    "peak_bias": 0.0,
+    "peak_minus_background": 0.7901634188928319,
+    "mean_frustration": 4.132233444309463e-11,
+    "peak_split": 0.003999999999999976,
+    "signature": "broad zero-bias enhancement without split finite-bias peaks"
+  },
+  {
+    "candidate": "s_pm",
+    "eta": 1.0,
+    "alpha": 0.0,
+    "barrier_Z": 1.0,
+    "zero_bias_conductance": 3.1097999999321977,
+    "peak_conductance": 3.1097999999321977,
+    "peak_bias": 0.0,
+    "peak_minus_background": 2.4253033953468126,
+    "mean_frustration": 0.999999999958678,
+    "peak_split": 0.003999999999999976,
+    "signature": "intervalley-activated zero-bias enhancement"
+  },
+  {
+    "candidate": "chiral",
+    "eta": 0.0,
+    "alpha": 1.0471975511965976,
+    "barrier_Z": 0.0,
+    "zero_bias_conductance": 2.4499343371484117,
+    "peak_conductance": 2.477309621623919,
+    "peak_bias": -0.025999999999999995,
+    "peak_minus_background": 1.2026616705092186,
+    "mean_frustration": 0.5341523573575565,
+    "peak_split": 0.05200000000000002,
+    "signature": "finite-bias-dominant subgap response"
+  }
+]
