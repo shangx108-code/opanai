@@ -1,19 +1,25 @@
 # Sync Status
 
-Generated: `2026-05-01T14:51:25+00:00`
+Generated: `2026-05-01T15:45:53+00:00`
 Project: `twse2_prl_20260501`
 Canonical path: `/workspace/memory/twse2_prl_20260501`
 
 ## Summary
 
-- Project subtree synced to `github-user/open-ai`: `yes`
-- Local project subtree clean: `yes`
+- Project subtree synced to `github-user/open-ai`: `no`
+- Local project subtree clean: `no`
 - Remote tracking ref available: `yes`
 - Audit file excluded from sync check: `yes`
 
 ## Local Project Changes
 
-- none
+- `M twse2_prl_20260501/README.md`
+- `?? twse2_prl_20260501/results/kernel_alpha_multislice_curves.csv`
+- `?? twse2_prl_20260501/results/kernel_alpha_multislice_metrics.csv`
+- `?? twse2_prl_20260501/results/kernel_alpha_multislice_summary.csv`
+- `?? twse2_prl_20260501/results/kernel_alpha_multislice_validation_figure.svg`
+- `?? twse2_prl_20260501/results/kernel_alpha_multislice_validation_summary.md`
+- `?? twse2_prl_20260501/scripts/run_kernel_alpha_multislice_validation.py`
 
 ## Remote Changes Missing Locally In Project Subtree
 
@@ -40,6 +46,11 @@ Canonical path: `/workspace/memory/twse2_prl_20260501`
 - `manuscript/wp3-prl-figure-callout-caption-2026-05-01.tex`
 - `prl-manuscript-draft-v1.md`
 - `project-space-index.md`
+- `results/kernel_alpha_multislice_curves.csv`
+- `results/kernel_alpha_multislice_metrics.csv`
+- `results/kernel_alpha_multislice_summary.csv`
+- `results/kernel_alpha_multislice_validation_figure.svg`
+- `results/kernel_alpha_multislice_validation_summary.md`
 - `results/kernel_alpha_validation_collapse_summary.csv`
 - `results/kernel_alpha_validation_curves.csv`
 - `results/kernel_alpha_validation_figure.svg`
@@ -56,7 +67,9 @@ Canonical path: `/workspace/memory/twse2_prl_20260501`
 - `results/wp3_prl_figure_slice_annotations.csv`
 - `results/wp3_prl_figure_slice_notes.md`
 - `results/wp3_prl_figure_slice_source_data.csv`
+- `scripts/__pycache__/run_kernel_alpha_validation.cpython-312.pyc`
 - `scripts/build_wp3_figure_slice.py`
+- `scripts/run_kernel_alpha_multislice_validation.py`
 - `scripts/run_kernel_alpha_validation.py`
 - `scripts/run_wp1_wp2.py`
 - `scripts/run_wp3_minimal_btk.py`

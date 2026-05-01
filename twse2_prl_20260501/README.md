@@ -20,6 +20,7 @@ the paper outline into an executable starting point that already produces:
 - `scripts/run_wp3_minimal_btk.py`: generates the first conductance-proxy follow-up
 - `scripts/build_wp3_figure_slice.py`: extracts the figure-ready PRL panel slice from WP3 results
 - `scripts/run_kernel_alpha_validation.py`: builds the fixed-(Z,phi,eta) alpha-sweep validation dataset and figure
+- `scripts/run_kernel_alpha_multislice_validation.py`: extends the kernel-alpha validation to a small multislice robustness set
 - `scripts/update_sync_status.py`: refreshes the project sync audit
 - `results/`: generated summary tables and markdown
 - `prl-manuscript-draft-v1.md`: PRL-style manuscript draft based on the current minimal results

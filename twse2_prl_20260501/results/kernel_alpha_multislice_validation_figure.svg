@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+<rect width="100%" height="100%" fill="white" />
+<style>text { font-family: Helvetica, Arial, sans-serif; fill: #111; } .small { font-size: 18px; } .axis { font-size: 16px; } .title { font-size: 24px; font-weight: 700; } .panel { font-size: 22px; font-weight: 700; }</style>
+<text x="90" y="38" class="title">Kernel–α multislice robustness validation</text>
+<text x="90" y="72" class="panel">A</text>
+<text x="118" y="72" class="small">α-coupled peak splitting across slices</text>
+<rect x="90" y="90" width="400" height="220" fill="none" stroke="#333" stroke-width="1.2" />
+<polyline fill="none" stroke="#c23b22" stroke-width="3.0" stroke-opacity="0.95" points="123.3,121.2 234.4,121.2 345.6,121.2 456.7,121.2" />
+<circle cx="123.3" cy="121.2" r="4.5" fill="#c23b22" />
+<circle cx="234.4" cy="121.2" r="4.5" fill="#c23b22" />
+<circle cx="345.6" cy="121.2" r="4.5" fill="#c23b22" />
+<circle cx="456.7" cy="121.2" r="4.5" fill="#c23b22" />
+<polyline fill="none" stroke="#1f78b4" stroke-width="3.0" stroke-opacity="0.95" points="123.3,310.0 234.4,310.0 345.6,310.0 456.7,310.0" />
+<circle cx="123.3" cy="310.0" r="4.5" fill="#1f78b4" />
+<circle cx="234.4" cy="310.0" r="4.5" fill="#1f78b4" />
+<circle cx="345.6" cy="310.0" r="4.5" fill="#1f78b4" />
+<circle cx="456.7" cy="310.0" r="4.5" fill="#1f78b4" />
+<text x="113.3" y="334" class="axis">S1</text>
+<text x="224.4" y="334" class="axis">S2</text>
+<text x="335.6" y="334" class="axis">S3</text>
+<text x="446.7" y="334" class="axis">S4</text>
+<text x="200" y="118" class="small" fill="#c23b22">red: chiral</text>
+<text x="200" y="142" class="small" fill="#1f78b4">blue: control</text>
+<text x="610" y="72" class="panel">B</text>
+<text x="638" y="72" class="small">Collapse RMS mean across slices</text>
+<rect x="610" y="90" width="400" height="220" fill="none" stroke="#333" stroke-width="1.2" />
+<polyline fill="none" stroke="#c23b22" stroke-width="3.0" stroke-opacity="0.95" points="643.3,218.1 754.4,236.6 865.6,236.5 976.7,231.2" />
+<circle cx="643.3" cy="218.1" r="4.5" fill="#c23b22" />
+<circle cx="754.4" cy="236.6" r="4.5" fill="#c23b22" />
+<circle cx="865.6" cy="236.5" r="4.5" fill="#c23b22" />
+<circle cx="976.7" cy="231.2" r="4.5" fill="#c23b22" />
+<polyline fill="none" stroke="#1f78b4" stroke-width="3.0" stroke-opacity="0.95" points="643.3,310.0 754.4,310.0 865.6,310.0 976.7,310.0" />
+<circle cx="643.3" cy="310.0" r="4.5" fill="#1f78b4" />
+<circle cx="754.4" cy="310.0" r="4.5" fill="#1f78b4" />
+<circle cx="865.6" cy="310.0" r="4.5" fill="#1f78b4" />
+<circle cx="976.7" cy="310.0" r="4.5" fill="#1f78b4" />
+<text x="633.3" y="334" class="axis">S1</text>
+<text x="744.4" y="334" class="axis">S2</text>
+<text x="855.6" y="334" class="axis">S3</text>
+<text x="966.7" y="334" class="axis">S4</text>
+<text x="90" y="402" class="panel">C</text>
+<text x="118" y="402" class="small">Fixed-slice parameter choices</text>
+<rect x="90" y="420" width="400" height="220" fill="none" stroke="#333" stroke-width="1.2" />
+<text x="114" y="465" class="small">S1: φ=1.571, Z=2.0, η=1.00, score=0.299</text>
+<text x="114" y="507" class="small">S2: φ=1.178, Z=2.0, η=1.00, score=0.299</text>
+<text x="114" y="549" class="small">S3: φ=1.963, Z=2.0, η=1.00, score=0.299</text>
+<text x="114" y="591" class="small">S4: φ=0.785, Z=2.0, η=1.00, score=0.297</text>
+<text x="610" y="402" class="panel">D</text>
+<text x="638" y="402" class="small">Invariant verdict</text>
+<rect x="610" y="420" width="400" height="220" fill="none" stroke="#333" stroke-width="1.2" />
+<text x="634" y="472" class="small">control collapse invariant: yes</text>
+<text x="634" y="508" class="small">phase-sensitive non-collapse invariant: yes</text>
+<text x="634" y="556" class="small">overall multislice verdict: stable</text>
+<text x="634" y="596" class="small">criterion: control RMS≈0 and split-coupling≈0; chiral RMS>0.10 and split-coupling>0.12</text>
+</svg>
