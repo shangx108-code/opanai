@@ -47,8 +47,13 @@ def angular_spectrum_kernel(config: PropagationConfig) -> np.ndarray:
 def fresnel_kernel(config: PropagationConfig) -> np.ndarray:
     fx, fy = frequency_coordinates(config)
     phase = -np.pi * config.wavelength * config.propagation_distance * (fx**2 + fy**2)
-    carrier = 2.0 * np.pi * config.propagation_distance / config.wavelength
-    return np.exp(1j * carrier) * np.exp(1j * phase)
+    return np.exp(1j * phase)
+
+
+def propagate_fresnel(field: np.ndarray, config: PropagationConfig) -> np.ndarray:
+    kernel = fresnel_kernel(config)
+    spectrum = np.fft.fft2(field)
+    return np.fft.ifft2(spectrum * kernel)
 
 
 def propagate_angular_spectrum(field: np.ndarray, config: PropagationConfig) -> np.ndarray:

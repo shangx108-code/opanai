@@ -1,0 +1,12 @@
+seed=4
+propagation_model=fresnel
+fresnel_transfer_function=exp(-i*pi*lambda*z*(fx^2+fy^2))
+sample_spacing_m=8e-06
+wavelength_m=5.32e-07
+propagation_distance_m=0.012
+fx_min_1_per_m=-62500.0
+fx_max_1_per_m=61523.4375
+fy_min_1_per_m=-62500.0
+fy_max_1_per_m=61523.4375
+mean_psnr_gain=1.7631076827167629
+mean_ssim_gain=0.11999929964358758

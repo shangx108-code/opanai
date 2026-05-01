@@ -1,0 +1,180 @@
+{
+  "status": "ok",
+  "scan_size": 45,
+  "search_space": {
+    "num_layers": [
+      1,
+      2,
+      3
+    ],
+    "reference_weight": [
+      0.2,
+      0.4,
+      0.65,
+      0.9,
+      1.1
+    ],
+    "phase_mix": [
+      0.15,
+      0.35,
+      0.55
+    ],
+    "train_steps": 16
+  },
+  "best_config": {
+    "config_id": 1,
+    "num_layers": 1,
+    "reference_weight": 0.2,
+    "phase_mix": 0.15,
+    "ordinary_ood_mean_psnr_db": 11.906189,
+    "common_ood_mean_psnr_db": 12.535983,
+    "noncommon_ood_mean_psnr_db": 12.404549,
+    "wrongref_ood_mean_psnr_db": 12.555836,
+    "common_minus_ordinary_db": 0.629795,
+    "common_minus_noncommon_db": 0.131435,
+    "common_minus_wrongref_db": -0.019853
+  },
+  "top10": [
+    {
+      "config_id": 2,
+      "num_layers": 1,
+      "reference_weight": 0.2,
+      "phase_mix": 0.35,
+      "ordinary_ood_mean_psnr_db": 11.888711,
+      "common_ood_mean_psnr_db": 12.563404,
+      "noncommon_ood_mean_psnr_db": 12.639057,
+      "wrongref_ood_mean_psnr_db": 12.576496,
+      "common_minus_ordinary_db": 0.674693,
+      "common_minus_noncommon_db": -0.075653,
+      "common_minus_wrongref_db": -0.013091
+    },
+    {
+      "config_id": 1,
+      "num_layers": 1,
+      "reference_weight": 0.2,
+      "phase_mix": 0.15,
+      "ordinary_ood_mean_psnr_db": 11.906189,
+      "common_ood_mean_psnr_db": 12.535983,
+      "noncommon_ood_mean_psnr_db": 12.404549,
+      "wrongref_ood_mean_psnr_db": 12.555836,
+      "common_minus_ordinary_db": 0.629795,
+      "common_minus_noncommon_db": 0.131435,
+      "common_minus_wrongref_db": -0.019853
+    },
+    {
+      "config_id": 3,
+      "num_layers": 1,
+      "reference_weight": 0.2,
+      "phase_mix": 0.55,
+      "ordinary_ood_mean_psnr_db": 12.053087,
+      "common_ood_mean_psnr_db": 12.563809,
+      "noncommon_ood_mean_psnr_db": 12.349672,
+      "wrongref_ood_mean_psnr_db": 12.659194,
+      "common_minus_ordinary_db": 0.510723,
+      "common_minus_noncommon_db": 0.214137,
+      "common_minus_wrongref_db": -0.095385
+    },
+    {
+      "config_id": 33,
+      "num_layers": 3,
+      "reference_weight": 0.2,
+      "phase_mix": 0.55,
+      "ordinary_ood_mean_psnr_db": 11.870873,
+      "common_ood_mean_psnr_db": 12.26696,
+      "noncommon_ood_mean_psnr_db": 12.256822,
+      "wrongref_ood_mean_psnr_db": 12.259265,
+      "common_minus_ordinary_db": 0.396087,
+      "common_minus_noncommon_db": 0.010138,
+      "common_minus_wrongref_db": 0.007696
+    },
+    {
+      "config_id": 32,
+      "num_layers": 3,
+      "reference_weight": 0.2,
+      "phase_mix": 0.35,
+      "ordinary_ood_mean_psnr_db": 11.930631,
+      "common_ood_mean_psnr_db": 12.325107,
+      "noncommon_ood_mean_psnr_db": 12.129916,
+      "wrongref_ood_mean_psnr_db": 12.309556,
+      "common_minus_ordinary_db": 0.394477,
+      "common_minus_noncommon_db": 0.195191,
+      "common_minus_wrongref_db": 0.015551
+    },
+    {
+      "config_id": 16,
+      "num_layers": 2,
+      "reference_weight": 0.2,
+      "phase_mix": 0.15,
+      "ordinary_ood_mean_psnr_db": 12.14296,
+      "common_ood_mean_psnr_db": 12.51529,
+      "noncommon_ood_mean_psnr_db": 12.267729,
+      "wrongref_ood_mean_psnr_db": 12.503722,
+      "common_minus_ordinary_db": 0.37233,
+      "common_minus_noncommon_db": 0.24756,
+      "common_minus_wrongref_db": 0.011568
+    },
+    {
+      "config_id": 17,
+      "num_layers": 2,
+      "reference_weight": 0.2,
+      "phase_mix": 0.35,
+      "ordinary_ood_mean_psnr_db": 12.003353,
+      "common_ood_mean_psnr_db": 12.284498,
+      "noncommon_ood_mean_psnr_db": 12.215033,
+      "wrongref_ood_mean_psnr_db": 12.602204,
+      "common_minus_ordinary_db": 0.281146,
+      "common_minus_noncommon_db": 0.069466,
+      "common_minus_wrongref_db": -0.317705
+    },
+    {
+      "config_id": 18,
+      "num_layers": 2,
+      "reference_weight": 0.2,
+      "phase_mix": 0.55,
+      "ordinary_ood_mean_psnr_db": 12.021147,
+      "common_ood_mean_psnr_db": 12.284018,
+      "noncommon_ood_mean_psnr_db": 12.470538,
+      "wrongref_ood_mean_psnr_db": 12.578807,
+      "common_minus_ordinary_db": 0.26287,
+      "common_minus_noncommon_db": -0.18652,
+      "common_minus_wrongref_db": -0.29479
+    },
+    {
+      "config_id": 31,
+      "num_layers": 3,
+      "reference_weight": 0.2,
+      "phase_mix": 0.15,
+      "ordinary_ood_mean_psnr_db": 11.899924,
+      "common_ood_mean_psnr_db": 12.044746,
+      "noncommon_ood_mean_psnr_db": 11.909621,
+      "wrongref_ood_mean_psnr_db": 12.255968,
+      "common_minus_ordinary_db": 0.144822,
+      "common_minus_noncommon_db": 0.135125,
+      "common_minus_wrongref_db": -0.211222
+    },
+    {
+      "config_id": 21,
+      "num_layers": 2,
+      "reference_weight": 0.4,
+      "phase_mix": 0.55,
+      "ordinary_ood_mean_psnr_db": 11.83126,
+      "common_ood_mean_psnr_db": 11.641925,
+      "noncommon_ood_mean_psnr_db": 11.817411,
+      "wrongref_ood_mean_psnr_db": 12.043253,
+      "common_minus_ordinary_db": -0.189335,
+      "common_minus_noncommon_db": -0.175487,
+      "common_minus_wrongref_db": -0.401328
+    }
+  ],
+  "artifacts": {
+    "detail_csv": "/workspace/self-calibrating-diffractive-ncomms/outputs/round7_parameter_scan_detail.csv",
+    "summary_csv": "/workspace/self-calibrating-diffractive-ncomms/outputs/round7_parameter_scan_summary.csv",
+    "top10_csv": "/workspace/self-calibrating-diffractive-ncomms/outputs/round7_parameter_scan_top10.csv",
+    "summary_json": "/workspace/self-calibrating-diffractive-ncomms/outputs/round7_parameter_scan_summary.json",
+    "summary_md": "/workspace/self-calibrating-diffractive-ncomms/outputs/round7_parameter_scan_summary.md",
+    "heatmap_png": "/workspace/self-calibrating-diffractive-ncomms/outputs/round7_parameter_scan_heatmap.png",
+    "best_panel_png": "/workspace/self-calibrating-diffractive-ncomms/outputs/round7_best_config_panel.png",
+    "best_history_json": "/workspace/self-calibrating-diffractive-ncomms/outputs/round7_best_config_training_history.json"
+  },
+  "note": "Round7 is a full parameter scan over lightweight numpy-based passive D2NN settings for reproducible data completion."
+}

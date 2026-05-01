@@ -50,6 +50,8 @@ def main() -> int:
             "\n".join(
                 [
                     f"seed={seed}",
+                    f"propagation_model={summary['optics_metadata']['propagation_model']}",
+                    "fresnel_transfer_function=exp(-i*pi*lambda*z*(fx^2+fy^2))",
                     f"sample_spacing_m={config.sample_spacing}",
                     f"wavelength_m={config.wavelength}",
                     f"propagation_distance_m={config.propagation_distance}",

@@ -1,0 +1,30 @@
+canonical_field,meaning,required_for_detail,required_for_summary,current_aliases,notes
+seed,random seed or run seed,yes,optional,seed,Present in most executed multi-seed files
+dataset_name,dataset family name,yes,optional,dataset_name,Needed for natural-object and tolerance branches
+dataset_version,dataset release or subset version,yes,optional,dataset_version,Needed for benchmark-root closure
+ledger,evaluation ledger identifier,yes,yes,ledger,Required for dual-ledger benchmark
+method,method or comparator name,yes,yes,method,Missing from some robust-mask and failure-case exports
+sample_id,unique evaluated sample identifier,yes,no,object_id,Should become the main per-sample key
+object_family,object-family label,yes,no,object_label,Needed for object-family-shift interpretation
+aberration_id,identifier for aberration case,yes,no,case_id,Current files mix case_id semantics
+condition,display label for perturbation or branch,optional,optional,perturbation_family+level,Optional convenience field
+condition_family,perturbation or branch family,yes,yes,perturbation_family,Needed for tolerance closure
+condition_level,numeric or categorical perturbation level,yes,yes,level,Replace generic level naming
+psnr_fixed,fixed-baseline PSNR,yes,no,fixed_psnr_lowres,Canonical baseline metric field
+psnr_method,method PSNR,yes,no,"method_psnr_lowres;pipeline_psnr_lowres;phase_psnr_lowres;robust_method_psnr_lowres",Most important naming conflict
+psnr_guided,guided-reference PSNR,optional,no,guided_psnr_lowres,Useful for natural-object branches
+psnr_gain,PSNR gain over fixed,yes,yes,psnr_gain_over_fixed_lowres,Canonical gain field
+psnr_gap_to_guided,PSNR gap to guided reference,optional,no,psnr_gap_to_guided_lowres,Optional natural-object field
+ssim_fixed,fixed-baseline SSIM,planned,no,missing,Reserved for future reruns if available
+ssim_method,method SSIM,planned,no,missing,Reserved for future reruns if available
+ssim_gain,SSIM gain over fixed,planned,no,missing,Reserved for future reruns if available
+better_than_fixed,binary indicator that method exceeds fixed,yes,no,better_than_fixed,Missing from several detailed files
+better_than_fixed_fraction,fraction exceeding fixed,optional,yes,"better_than_fixed_fraction;robust_better_than_fixed_fraction;baseline_better_than_fixed_fraction",Summary field with comparator-specific aliases today
+mean_psnr_gain,mean PSNR gain over fixed,optional,yes,mean_psnr_gain,Used across multiple summary files
+std_psnr_gain,standard deviation of PSNR gain,optional,yes,"std;std_psnr_gain",Need one explicit name
+ci_low,lower confidence interval bound,optional,yes,"95% CI string",Should replace string-form CI
+ci_high,upper confidence interval bound,optional,yes,"95% CI string",Should replace string-form CI
+n_seeds,number of seeds aggregated,optional,yes,missing,Needed for summary auditability
+n_samples,number of samples aggregated,optional,yes,missing,Needed for summary auditability
+training_regime,training-distribution label,optional,optional,training_regime,Useful for synthetic-only versus mixed training branches
+comparator_role,role in fairness table,optional,yes,missing,Needed for reviewer-facing fairness accounting

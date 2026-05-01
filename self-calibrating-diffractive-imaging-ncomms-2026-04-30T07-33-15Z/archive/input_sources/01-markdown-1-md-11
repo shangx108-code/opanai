@@ -1,0 +1,1002 @@
+下面是按 **Nature Communications 严格审稿标准**整理的完整修改意见与补充清单。核心判断先放前面：
+
+> 目前稿件最大的风险不是“没有结果”，而是**证据层级支撑不了当前叙事层级**。
+> 应从“自然图像与硬件鲁棒系统”降调为：
+> **一个受控、可复现、双 ledger 评估下的 hybrid computational optics benchmark。**
+
+当前建议状态：**Major Revision**。
+直接投稿 NC 估计接收概率：**35–45%**。
+按下面 P0/P1 全部补齐后：**55–65%**。
+若补上真实 benchmark-root natural images 或硬件验证：**75–85%**。
+
+---
+
+# 1. 必须立刻修改的主张与文字
+
+## 1.1 标题需要降调
+
+当前方向如果继续使用 “neural operator” 会引来 ML 审稿人对 operator learning 理论、泛化边界、函数空间映射的更高要求。你们现有证据更像 **phase-only optical frontend + digital reconstruction**。
+
+建议标题：
+
+> **A phase-only diffractive frontend for hybrid self-calibrated imaging through dynamic aberrations**
+
+避免：
+
+* “all-optical”
+* “neural operator” 作为核心标题词
+* “robust natural-image imaging”
+* “hardware-tolerant diffractive system”
+
+---
+
+## 1.2 摘要必须降调
+
+摘要中不能把 proxy natural-image 和 proxy tolerance 放得像最终现实性验证。建议摘要主线改为：
+
+```text
+Dynamic aberrations turn coherent image formation into a time-varying inverse problem whose state is not directly available at measurement time. We study whether a fixed phase-only diffractive frontend can encode calibration-sensitive information before digital reconstruction. The tested system is hybrid optical-digital: a phase-only diffractive stack is followed by intensity detection and a fixed-capacity ridge reconstruction stage. Under a pre-registered dual-ledger benchmark separating held-out aberrations from held-out object families, the phase-only frontend achieved the largest average gain across the two ledgers, but the effect was strongly regime-dependent. The gain was large for held-out aberrations and modest under held-out object-family shift, where a reference-PSF deconvolution baseline remained stronger. Project-local proxy natural-image stress tests further showed that transfer beyond synthetic ledgers requires training-distribution alignment. Engineering perturbation tests identified phase-mask quantization and lateral displacement as dominant vulnerabilities; robust-mask training mitigated first-order quantization and 1 px shift but not larger displacement. These results support a bounded conclusion: a physically constrained diffractive frontend can improve average restoration under dynamic aberrations in a hybrid pipeline, while broader natural-image and hardware claims require stronger validation.
+```
+
+---
+
+## 1.3 全文替换高风险措辞
+
+| 当前/风险措辞                            | 建议替换                                                             |
+| ---------------------------------- | ---------------------------------------------------------------- |
+| all-optical reconstruction         | hybrid optical-digital reconstruction                            |
+| lightweight digital reconstruction | fixed-capacity digital ridge reconstruction stage                |
+| natural-image validation           | project-local proxy natural-image stress test                    |
+| hardware robustness                | first-order simulated tolerance diagnosis                        |
+| phase-only stack is best           | phase-only stack provides the best average dual-ledger trade-off |
+| robust to fabrication errors       | partly tolerant to selected simulated perturbations              |
+| neural operator                    | diffractive frontend / hybrid computational optics operator      |
+
+---
+
+# 2. 最重要的科学修改意见
+
+## 2.1 不要把 “overall best” 写成 “uniformly best”
+
+你们目前的关键事实是：
+
+* phase-only stack 在 combined / overall dual ledger 上平均最好；
+* 但在更难的 `new_family_heldout_object_family` ledger 中，reference-PSF deconvolution 更强；
+* phase-only 在 object-family shift 下只是 modest positive。
+
+因此正确写法应是：
+
+> The phase-only frontend provides the best average trade-off across the registered dual-ledger benchmark, rather than uniform dominance across regimes.
+
+不要写：
+
+> The phase-only method outperforms all baselines under distribution shift.
+
+---
+
+## 2.2 把 reference-PSF baseline 的性质写清楚
+
+`reference_psf_deconvolution` 不是普通 baseline，它有测试时参考 PSF 信息。应该称为：
+
+> reference-guided classical comparator
+
+而不是简单叫 “baseline”。
+
+必须解释：
+
+* 它是否使用 test-time reference PSF；
+* 它是否代表一个上限式 classical correction；
+* 它在 object-family ledger 更强，说明显式参考信息在该 regime 中仍有优势。
+
+---
+
+## 2.3 重新定位 proxy natural-image 结果
+
+现在的 proxy natural-image 结果不能写成 ImageNet/COCO 验证，只能写成：
+
+> project-local proxy natural-image stress test
+
+必须补一句：
+
+> These proxy sets are not a replacement for licensed benchmark-root ImageNet or COCO evaluation.
+
+如果继续用 “ImageNet-proxy / COCO-proxy”，必须说明：
+
+* 不是官方原图；
+* 如何构建；
+* 与真实自然图像的统计差异；
+* 不能外推到 benchmark-level natural-image performance。
+
+---
+
+## 2.4 诚实展示 hardware failure
+
+2 px lateral phase-mask shift 仍失败，这是重要结果，不能藏在 Supplementary 深处。建议在 Discussion 或 Limitations 中明确写：
+
+> The present system remains sensitive to lateral phase-mask displacement. Robust-mask training improves first-order quantization and 1 px shift, but does not resolve larger displacement such as 2 px mask shift.
+
+这会降低过度宣传风险，反而提高可信度。
+
+---
+
+## 2.5 参数公平性必须重写
+
+现在最容易被抓的问题是：
+
+* optical trainable parameters 很少；
+* digital ridge reconstruction 参数很多；
+* 但你们仍强调 optical frontend 的贡献。
+
+必须增加一个主表或 Supplementary Table：
+
+| Method                              | Optical DOF | Digital DOF | Test-time PSF? | Train data | Input channels | Retrain? | Notes                       |
+| ----------------------------------- | ----------: | ----------: | -------------- | ---------- | -------------: | -------- | --------------------------- |
+| fixed optics                        |         ... |         ... | no             | same       |            ... | no       | baseline                    |
+| phase-only stack                    |         ... |         ... | no             | same       |            ... | no       | proposed hybrid             |
+| reference-PSF deconv                |           0 |         ... | yes            | same       |            ... | no       | reference-guided comparator |
+| spectral frontend                   |         ... |         ... | no             | same       |            ... | no       | learned spectral comparator |
+| ridge surrogate                     |           0 |         ... | no             | same       |            ... | no       | digital comparator          |
+| parameter-matched digital surrogate |           0 |     matched | no             | same       |            ... | no       | needed                      |
+
+没有这个表，Reviewer 2 会继续质疑比较公平性。
+
+---
+
+# 3. 必须补充的数据清单
+
+下面按优先级列出。
+
+---
+
+## P0 数据：投稿前必须补齐
+
+### 3.1 Source data index
+
+必须建立：
+
+```text
+source_data/source_data_index.csv
+```
+
+字段：
+
+```text
+figure
+panel
+claim_supported
+data_file
+raw_file
+script
+config
+checksum
+status
+notes
+```
+
+示例：
+
+```csv
+Fig2,A,dual-ledger mean PSNR gain,results/unified_comparison_ci.csv,results/unified_comparison_detail.csv,scripts/run_unified_comparison_ci.py,configs/unified_comparison.yaml,sha256...,complete
+Fig2,B,new-family ledger comparison,results/unified_comparison_by_ledger.csv,results/unified_comparison_detail.csv,scripts/run_unified_comparison_ci.py,configs/unified_comparison.yaml,sha256...,complete
+Fig3,A,proxy natural stress test,results/natural_objects/mixed_train_natural_object_thickstats_metrics.csv,results/natural_objects/mixed_train_natural_object_thickstats_metrics.csv,scripts/run_mixed_train_natural_object_thickstats.py,configs/mixed_train_config.yaml,sha256...,proxy-only
+Fig4,A,tolerance analysis,results/tolerance/mixed_train_tolerance_metrics.csv,results/tolerance/mixed_train_tolerance_metrics.csv,scripts/run_mixed_train_tolerance.py,configs/tolerance_config.yaml,sha256...,simulation-only
+```
+
+---
+
+### 3.2 每个主图必须有 raw per-seed data
+
+不能只有 summary JSON。必须有 CSV：
+
+```text
+results/unified_comparison_detail.csv
+results/unified_comparison_by_ledger.csv
+results/unified_comparison_per_seed.csv
+results/natural_objects/mixed_train_natural_object_thickstats_metrics.csv
+results/tolerance/mixed_train_tolerance_metrics.csv
+results/robustness/robust_mask_vs_baseline_tolerance.csv
+results/failure_cases/object_shift_failure_cases.csv
+```
+
+每个 CSV 至少包括：
+
+```text
+seed
+dataset_or_ledger
+method
+sample_id
+object_family
+aberration_id
+condition
+psnr_fixed
+psnr_method
+psnr_gain
+ssim_fixed
+ssim_method
+ssim_gain
+```
+
+---
+
+### 3.3 双 ledger 结果要拆开，不只给 overall
+
+必须有：
+
+```text
+results/unified_comparison_by_ledger.csv
+```
+
+字段：
+
+```text
+ledger
+method
+mean_psnr_gain
+std
+ci_low
+ci_high
+better_than_fixed_fraction
+n_seeds
+n_samples
+```
+
+这是为了防止 “overall best” 掩盖 harder ledger 中 reference-PSF 更强。
+
+---
+
+### 3.4 Parameter fairness table
+
+必须补：
+
+```text
+results/tables/method_fairness_table.csv
+```
+
+字段：
+
+```text
+method
+optical_trainable_parameters
+digital_trainable_parameters
+total_trainable_parameters
+uses_reference_psf_at_test_time
+uses_extra_input_channel
+training_samples
+inference_cost_proxy
+retraining_for_test_distribution
+regularization
+notes
+```
+
+特别要说明：
+
+* phase-only optical DOF；
+* ridge digital DOF；
+* reference-PSF 测试时信息优势；
+* surrogate 是否参数匹配。
+
+---
+
+### 3.5 Proxy natural-image dataset manifest
+
+必须补：
+
+```text
+results/natural_objects/constructed_natural_object_manifest.csv
+```
+
+字段：
+
+```text
+image_id
+proxy_dataset
+source_type
+generation_rule
+seed
+size
+normalization
+texture_family
+frequency_profile
+saved_path
+checksum
+```
+
+还需要：
+
+```text
+results/natural_objects/proxy_natural_generation_protocol.md
+```
+
+必须回答：
+
+* 这些 proxy 图像如何生成；
+* 为什么叫 proxy natural；
+* 不能替代官方 ImageNet/COCO；
+* 哪些统计量接近自然图像，哪些不接近。
+
+---
+
+### 3.6 Natural benchmark-root 数据决策
+
+二选一必须明确：
+
+#### 路线 A：保守路线
+
+明确不做官方 ImageNet/COCO，文章中降调为 proxy stress test。
+
+需要补：
+
+```text
+manuscript/limitations_proxy_natural.md
+```
+
+#### 路线 B：进攻路线
+
+补真实 benchmark-root 数据。
+
+需要：
+
+```text
+data/natural_objects/imagenet-1k-ilsvrc2012-validation/
+data/natural_objects/coco-2017-validation/
+results/natural_objects/benchmark_root_natural_metrics.csv
+results/natural_objects/benchmark_root_natural_summary.csv
+checksums/benchmark_root_natural.sha256
+```
+
+字段同 proxy natural。
+
+---
+
+### 3.7 Tolerance 完整数据表
+
+必须有：
+
+```text
+results/tolerance/mixed_train_tolerance_metrics.csv
+results/tolerance/mixed_train_tolerance_summary.csv
+```
+
+字段：
+
+```text
+seed
+dataset
+method
+perturbation_type
+perturbation_level
+psnr_gain
+ssim_gain
+better_than_fixed
+```
+
+Perturbation 必须包括：
+
+```text
+reference_channel_noise
+reference_channel_misregistration
+phase_mask_quantization
+phase_mask_lateral_shift
+propagation_distance_error
+```
+
+---
+
+### 3.8 Robust-mask 缓解对比表
+
+必须有：
+
+```text
+results/robustness/robust_mask_vs_baseline_tolerance.csv
+```
+
+字段：
+
+```text
+condition
+perturbation_type
+perturbation_level
+baseline_psnr_gain
+robust_psnr_gain
+delta_gain
+baseline_failure_rate
+robust_failure_rate
+n_seeds
+ci_low
+ci_high
+```
+
+这是为了支撑 “robust-mask training mitigates first-order quantization and 1 px shift”。
+
+---
+
+### 3.9 Failure-case package
+
+必须有：
+
+```text
+results/failure_cases/object_shift_failure_cases.csv
+results/failure_cases/object_shift_failure_cases_panel.png
+results/failure_cases/object_shift_failure_cases.md
+```
+
+CSV 字段：
+
+```text
+sample_id
+ledger
+object_family
+method
+psnr_fixed
+psnr_method
+psnr_gain
+failure_category
+suspected_cause
+image_path
+reconstruction_path
+error_map_path
+```
+
+必须展示：
+
+* phase-only 明显失败的样本；
+* fixed baseline；
+* reference-PSF baseline；
+* error map；
+* 失败原因解释。
+
+---
+
+## P1 数据：强烈建议补齐
+
+### 3.10 Parameter-matched digital baseline
+
+新增一个数字 baseline：
+
+```text
+method = parameter_matched_digital_surrogate
+```
+
+要求：
+
+* 总参数量匹配 phase-only + ridge；
+* 不使用 reference PSF；
+* 同训练集；
+* 同 dual ledger；
+* 输出同样 CI。
+
+文件：
+
+```text
+results/parameter_matched_surrogate/metrics.csv
+results/parameter_matched_surrogate/summary.csv
+```
+
+---
+
+### 3.11 Layer / capacity scaling
+
+为了回答“是不是容量问题”，补：
+
+```text
+results/scaling/scaling_psnr_vs_params.csv
+```
+
+条件：
+
+```text
+frontend_resolution: 12x12, 24x24, 48x48
+layers: 3, 5, 7
+phase_bases: 10, 20, 40
+```
+
+字段：
+
+```text
+resolution
+layers
+phase_bases
+optical_dof
+digital_dof
+ledger
+mean_psnr_gain
+ci_low
+ci_high
+```
+
+---
+
+### 3.12 Robustness scaling
+
+补：
+
+```text
+results/robustness/shift_sensitivity_curve.csv
+```
+
+条件：
+
+```text
+shift_px: 0, 0.25, 0.5, 1.0, 1.5, 2.0
+quant_bits: continuous, 8, 6, 4, 3
+```
+
+这比只报告 1 px / 2 px 更有说服力。
+
+---
+
+## P2 数据：可选但能显著提高 NC 概率
+
+### 3.13 Fabricated-device 或实验验证
+
+哪怕小规模也有价值：
+
+```text
+results/experimental/bench_validation.csv
+```
+
+最低实验：
+
+* 打印/模拟 phase mask；
+* 采集 reference PSF；
+* 固定几类 object；
+* 比较 simulated vs measured PSF；
+* 报告重建趋势是否一致。
+
+如果无法做实验，必须在 Limitations 中写清楚。
+
+---
+
+# 4. 必须补充的推导与方法细节
+
+---
+
+## 4.1 Fresnel transfer function 推导
+
+需要在 Supplementary 中给出：
+
+[
+U_z(x,y)=\mathcal{F}^{-1}\left{\mathcal{F}[U_0(x,y)]H(f_x,f_y)\right}
+]
+
+[
+H(f_x,f_y)=\exp[-i\pi\lambda z(f_x^2+f_y^2)].
+]
+
+必须定义：
+
+```text
+λ: wavelength
+z: propagation distance
+dx: pixel pitch
+Nx, Ny: grid size
+fx, fy: FFT frequency grid
+FFT normalization convention
+padding
+aperture support
+energy normalization
+```
+
+还要写：
+
+[
+f_x = \frac{k}{N_x \Delta x}, \quad
+f_y = \frac{l}{N_y \Delta y}.
+]
+
+---
+
+## 4.2 采样条件与适用范围
+
+需要补：
+
+```text
+paraxial approximation condition
+maximum spatial frequency
+aliasing condition
+aperture-limited support
+zero-padding rule
+```
+
+至少给出：
+
+[
+\Delta f = \frac{1}{N\Delta x}
+]
+
+并说明：
+
+* 当前模拟是否满足；
+* 如果不满足，如何处理 aliasing。
+
+---
+
+## 4.3 Phase-only mask 参数化
+
+需要推导：
+
+[
+M_l(x,y)=\exp[i\phi_l(x,y)]
+]
+
+如果你们用低维 phase basis：
+
+[
+\phi_l(x,y)=\sum_{m=1}^{M} a_{lm}B_m(x,y)
+]
+
+必须说明：
+
+* basis (B_m) 是什么；
+* 50 个 optical parameters 如何得到；
+* 如何映射成实际 phase mask；
+* phase wrapping 如何处理：
+
+[
+\phi \leftarrow \phi \mod 2\pi.
+]
+
+---
+
+## 4.4 Intensity detector 模型
+
+必须写：
+
+[
+I(x,y)=|U_L(x,y)|^2
+]
+
+并说明：
+
+* 是否有 shot noise；
+* 是否归一化；
+* 是否 clipping；
+* 是否模拟 detector bit depth。
+
+---
+
+## 4.5 Ridge reconstruction 推导
+
+如果使用 ridge regression，必须写：
+
+[
+\hat{W}=\arg\min_W |XW-Y|_2^2+\alpha|W|_2^2
+]
+
+闭式解：
+
+[
+\hat{W}=(X^\top X+\alpha I)^{-1}X^\top Y
+]
+
+必须说明：
+
+* (X) 是 detector features 还是 downsampled intensity；
+* (Y) 是 object image；
+* ridge 参数 (\alpha) 如何选择；
+* 是否对所有方法相同；
+* digital parameter count 如何计算。
+
+---
+
+## 4.6 PSNR / SSIM 定义
+
+必须写：
+
+[
+\mathrm{PSNR}=20\log_{10}\left(\frac{I_{\max}}{\sqrt{\mathrm{MSE}}}\right)
+]
+
+[
+\mathrm{MSE}=\frac{1}{N}\sum_i(\hat{x}_i-x_i)^2
+]
+
+说明：
+
+* images 是否归一化到 [0,1]；
+* (I_{\max}=1)；
+* SSIM window / implementation。
+
+---
+
+## 4.7 Confidence interval 推导
+
+需要写清楚：
+
+* 以 seed 为独立单位；
+* 95% CI 的计算方式；
+* bootstrap 或 t interval。
+
+如果用 t interval：
+
+[
+\bar{x}\pm t_{0.975,n-1}\frac{s}{\sqrt{n}}
+]
+
+如果用 bootstrap：
+
+```text
+resample seeds with replacement
+compute mean
+repeat B=1000 or 10000
+take 2.5 and 97.5 percentiles
+```
+
+---
+
+## 4.8 Tolerance perturbation 数学定义
+
+### Phase quantization
+
+[
+\phi_q = \frac{2\pi}{2^b}\operatorname{round}\left(\frac{2^b\phi}{2\pi}\right)
+]
+
+### Lateral shift
+
+[
+M'(x,y)=M(x-\Delta x,y-\Delta y)
+]
+
+说明：
+
+* integer shift 还是 subpixel shift；
+* subpixel 是否用 bilinear interpolation；
+* boundary 如何处理。
+
+### Propagation distance error
+
+[
+z' = z(1+\epsilon)
+]
+
+[
+H'(f_x,f_y)=\exp[-i\pi\lambda z'(f_x^2+f_y^2)].
+]
+
+### Reference noise
+
+[
+R'=R+\eta,\quad \eta\sim\mathcal{N}(0,\sigma^2)
+]
+
+必须说明所有扰动是否对所有方法公平施加。
+
+---
+
+## 4.9 Robust-mask training 机制
+
+如果写 robust-mask training，必须给出训练目标：
+
+[
+\min_\theta \mathbb{E}*{\delta\sim p(\delta)}
+\left[
+\mathcal{L}(g*\psi(D(f_{\theta,\delta}(x))),x)
+\right]
+]
+
+其中：
+
+* (f_{\theta,\delta})：带 perturbation 的光学前端；
+* (D)：detector；
+* (g_\psi)：digital reconstruction；
+* (\delta)：quantization / shift perturbation。
+
+如果使用 straight-through estimator，必须说明：
+
+[
+\frac{\partial Q(\phi)}{\partial \phi}\approx 1
+]
+
+但正文中不要过度强调，放 Supplementary。
+
+---
+
+# 5. 图表重组建议
+
+## Fig. 1：系统与双 ledger
+
+必须展示：
+
+* phase-only frontend；
+* detector；
+* digital ridge reconstruction；
+* two ledgers；
+* reference-PSF comparator 的额外信息通道。
+
+---
+
+## Fig. 2：统一 benchmark
+
+Panel 建议：
+
+* A：dual-ledger benchmark schematic
+* B：overall mean PSNR gain
+* C：same-family aberration ledger
+* D：new-family object ledger
+* E：better-than-fixed fraction
+
+重点：不要只画 overall。
+
+---
+
+## Fig. 3：proxy natural stress test
+
+Panel：
+
+* A：synthetic-only → proxy natural failure
+* B：mixed-train recovery
+* C：ImageNet-proxy vs COCO-proxy
+* D：failure examples
+
+标题不要叫 natural-image validation，叫：
+
+> Proxy natural-image stress test
+
+---
+
+## Fig. 4：tolerance and robust-mask mitigation
+
+Panel：
+
+* A：propagation distance error
+* B：phase quantization
+* C：lateral shift
+* D：robust-mask mitigation
+* E：remaining 2 px failure
+
+这张图必须诚实显示失败。
+
+---
+
+## Supplementary Figures
+
+* S1 Fresnel propagation validation
+* S2 phase basis visualization
+* S3 method fairness / parameter count
+* S4 failure cases
+* S5 tolerance full grid
+* S6 scaling curves
+* S7 proxy natural-image construction
+
+---
+
+# 6. 稿件结构建议
+
+## Results 推荐结构
+
+### Result 1
+
+**A dual-ledger benchmark separates aberration shift from object-family shift**
+
+### Result 2
+
+**The phase-only frontend provides the best average dual-ledger trade-off**
+
+注意不要写 “best under all shifts”。
+
+### Result 3
+
+**Object-family shift exposes a harder regime where reference-guided correction remains stronger**
+
+这段要主动承认 reference-PSF 更强。
+
+### Result 4
+
+**Proxy natural-image stress tests reveal distribution mismatch and mixed-training recovery**
+
+不能叫 natural-image validation。
+
+### Result 5
+
+**Engineering perturbations identify phase-mask displacement as the dominant vulnerability**
+
+### Result 6
+
+**Robust-mask training mitigates first-order perturbations but does not resolve large lateral displacement**
+
+---
+
+# 7. Limitations 必须写
+
+建议直接加入：
+
+```text
+The present evidence has three important limits. First, the system is hybrid optical-digital: reconstruction is performed by a digital ridge stage whose degrees of freedom exceed those of the phase-only optical frontend. Second, the natural-image experiments use project-local proxy subsets rather than licensed benchmark-root ImageNet or COCO images. Third, the tolerance results are simulation-based and show unresolved failure under 2 px lateral phase-mask displacement. These limits do not invalidate the controlled dual-ledger benchmark, but they bound the scope of claims about natural-image deployment and hardware implementation.
+```
+
+---
+
+# 8. 投稿前 checklist
+
+## P0：没有这些不要投稿
+
+* [ ] 摘要降调
+* [ ] 标题降调
+* [ ] 删除 internal status / project-state 语言
+* [ ] `lightweight digital` 全部替换
+* [ ] source_data_index.csv
+* [ ] 所有图 panel 对应 raw CSV
+* [ ] 双 ledger 分开报告
+* [ ] reference-PSF 信息优势明确说明
+* [ ] proxy natural-image 不能冒充官方 ImageNet/COCO
+* [ ] robust-mask 结果必须有 CSV/source data
+* [ ] 2 px shift failure 必须正面展示
+* [ ] Fresnel / sampling / phase basis / ridge 推导补全
+
+## P1：强烈建议
+
+* [ ] parameter-matched digital surrogate
+* [ ] capacity scaling
+* [ ] tolerance sensitivity curve
+* [ ] failure-case figure
+* [ ] proxy generation protocol
+* [ ] data/code availability final version
+
+## P2：提升 NC 成功率
+
+* [ ] 官方 benchmark-root natural image evaluation
+* [ ] fabricated-device 或实验 PSF 验证
+* [ ] measured vs simulated PSF comparison
+* [ ] real alignment tolerance data
+
+---
+
+# 9. 下一步最有效执行顺序
+
+## Step 1：文本手术
+
+立刻改：
+
+* title
+* abstract
+* discussion
+* limitations
+* “lightweight digital” 相关措辞
+
+## Step 2：source data 补链
+
+生成：
+
+```text
+source_data_index.csv
+all_figures_to_data_mapping.yaml
+checksums/source_data.sha256
+```
+
+## Step 3：补推导
+
+完成：
+
+```text
+supplementary/fresnel_sampling_derivation.md
+supplementary/ridge_reconstruction_derivation.md
+supplementary/tolerance_perturbation_definitions.md
+supplementary/robust_mask_training_objective.md
+```
+
+## Step 4：补最关键缺失实验
+
+优先级：
+
+1. parameter-matched digital surrogate
+2. tolerance sensitivity curve
+3. official natural image subset 或更诚实降调
+
+---
+
+# 10. 最终判断
+
+目前这篇稿子已经有一个有价值的核心：
+
+> phase-only diffractive frontend 在受控双 ledger 动态像差 benchmark 中提供了一个有竞争力的 hybrid optical-digital trade-off。
+
+但它现在还不能支撑：
+
+> 自然图像上普遍有效、硬件鲁棒、光学结构主导性能提升。
+
+因此投稿策略应改为：
+
+> **诚实地做强 controlled computational optics benchmark，而不是过早冲 broad real-world optical-AI system。**
+
+这条路线更稳，也更容易通过 NC 编辑预筛。

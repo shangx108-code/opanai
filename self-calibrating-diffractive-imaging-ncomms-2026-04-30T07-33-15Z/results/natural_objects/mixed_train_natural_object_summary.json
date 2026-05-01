@@ -1,0 +1,37 @@
+{
+  "status": "completed",
+  "training_mix_counts": {
+    "synthetic_training_objects": 50,
+    "proxy_training_objects": 24,
+    "proxy_ImageNet-1k": 12,
+    "proxy_COCO": 12
+  },
+  "summary_rows": [
+    {
+      "dataset_name": "ImageNet-1k",
+      "dataset_version": "ILSVRC2012 validation",
+      "image_count": 12,
+      "training_regime": "mixed_synthetic_plus_proxy_natural",
+      "sample_count": 72,
+      "mean_fixed_psnr_lowres": 19.786197545547022,
+      "mean_guided_psnr_lowres": 22.34064553718626,
+      "mean_pipeline_psnr_lowres": 20.531952487763583,
+      "mean_psnr_gain_over_fixed_lowres": 0.7457549422165576,
+      "better_than_fixed_fraction": 0.7638888888888888
+    },
+    {
+      "dataset_name": "COCO",
+      "dataset_version": "2017 validation",
+      "image_count": 12,
+      "training_regime": "mixed_synthetic_plus_proxy_natural",
+      "sample_count": 72,
+      "mean_fixed_psnr_lowres": 22.94124686886554,
+      "mean_guided_psnr_lowres": 24.983081013054687,
+      "mean_pipeline_psnr_lowres": 24.27463445948438,
+      "mean_psnr_gain_over_fixed_lowres": 1.3333875906188395,
+      "better_than_fixed_fraction": 0.875
+    }
+  ],
+  "metrics_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/natural_objects/mixed_train_natural_object_metrics.csv",
+  "summary_json": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/natural_objects/mixed_train_natural_object_summary.json"
+}

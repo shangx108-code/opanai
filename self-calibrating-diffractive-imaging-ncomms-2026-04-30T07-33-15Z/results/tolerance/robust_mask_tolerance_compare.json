@@ -1,0 +1,141 @@
+{
+  "status": "completed",
+  "config": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "train_case_count": 24,
+    "eval_case_count": 6,
+    "robust_variants": [
+      [
+        "inf",
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        "inf",
+        1
+      ]
+    ]
+  },
+  "training_mix_counts": {
+    "synthetic_training_objects": 50,
+    "proxy_training_objects": 24,
+    "proxy_ImageNet-1k": 12,
+    "proxy_COCO": 12
+  },
+  "comparison_rows": [
+    {
+      "perturbation_family": "clean_reference",
+      "level": 0.0,
+      "dataset_name": "COCO",
+      "robust_mean_psnr_gain_over_fixed_lowres": 2.178318986794668,
+      "robust_better_than_fixed_fraction": 0.9768518518518519,
+      "baseline_mean_psnr_gain_over_fixed_lowres": 1.4539546724226666,
+      "baseline_better_than_fixed_fraction": 0.9027777777777778,
+      "gain_delta_vs_baseline": 0.7243643143720015
+    },
+    {
+      "perturbation_family": "clean_reference",
+      "level": 0.0,
+      "dataset_name": "ImageNet-1k",
+      "robust_mean_psnr_gain_over_fixed_lowres": 2.81159414369826,
+      "robust_better_than_fixed_fraction": 0.9212962962962963,
+      "baseline_mean_psnr_gain_over_fixed_lowres": 1.0733314018015745,
+      "baseline_better_than_fixed_fraction": 0.7916666666666666,
+      "gain_delta_vs_baseline": 1.7382627418966854
+    },
+    {
+      "perturbation_family": "phase_mask_lateral_shift",
+      "level": 1.0,
+      "dataset_name": "COCO",
+      "robust_mean_psnr_gain_over_fixed_lowres": 2.0569382670706107,
+      "robust_better_than_fixed_fraction": 0.9629629629629629,
+      "baseline_mean_psnr_gain_over_fixed_lowres": -13.767274316428265,
+      "baseline_better_than_fixed_fraction": 0.0,
+      "gain_delta_vs_baseline": 15.824212583498877
+    },
+    {
+      "perturbation_family": "phase_mask_lateral_shift",
+      "level": 1.0,
+      "dataset_name": "ImageNet-1k",
+      "robust_mean_psnr_gain_over_fixed_lowres": 2.3911054598383856,
+      "robust_better_than_fixed_fraction": 0.9166666666666666,
+      "baseline_mean_psnr_gain_over_fixed_lowres": -10.812630582823578,
+      "baseline_better_than_fixed_fraction": 0.0,
+      "gain_delta_vs_baseline": 13.203736042661964
+    },
+    {
+      "perturbation_family": "phase_mask_lateral_shift",
+      "level": 2.0,
+      "dataset_name": "COCO",
+      "robust_mean_psnr_gain_over_fixed_lowres": -13.97481639962269,
+      "robust_better_than_fixed_fraction": 0.0,
+      "baseline_mean_psnr_gain_over_fixed_lowres": -13.904498004839096,
+      "baseline_better_than_fixed_fraction": 0.0,
+      "gain_delta_vs_baseline": -0.07031839478359281
+    },
+    {
+      "perturbation_family": "phase_mask_lateral_shift",
+      "level": 2.0,
+      "dataset_name": "ImageNet-1k",
+      "robust_mean_psnr_gain_over_fixed_lowres": -11.170792696059312,
+      "robust_better_than_fixed_fraction": 0.0,
+      "baseline_mean_psnr_gain_over_fixed_lowres": -11.001795834385776,
+      "baseline_better_than_fixed_fraction": 0.0,
+      "gain_delta_vs_baseline": -0.168996861673536
+    },
+    {
+      "perturbation_family": "phase_mask_quantization",
+      "level": 3.0,
+      "dataset_name": "COCO",
+      "robust_mean_psnr_gain_over_fixed_lowres": 2.067258742113433,
+      "robust_better_than_fixed_fraction": 0.9814814814814815,
+      "baseline_mean_psnr_gain_over_fixed_lowres": -13.022355643128359,
+      "baseline_better_than_fixed_fraction": 0.0,
+      "gain_delta_vs_baseline": 15.089614385241791
+    },
+    {
+      "perturbation_family": "phase_mask_quantization",
+      "level": 3.0,
+      "dataset_name": "ImageNet-1k",
+      "robust_mean_psnr_gain_over_fixed_lowres": 2.3374463807413313,
+      "robust_better_than_fixed_fraction": 0.8888888888888888,
+      "baseline_mean_psnr_gain_over_fixed_lowres": -10.51610119723324,
+      "baseline_better_than_fixed_fraction": 0.0,
+      "gain_delta_vs_baseline": 12.853547577974572
+    },
+    {
+      "perturbation_family": "phase_mask_quantization",
+      "level": 4.0,
+      "dataset_name": "COCO",
+      "robust_mean_psnr_gain_over_fixed_lowres": 2.178352580078001,
+      "robust_better_than_fixed_fraction": 0.9768518518518519,
+      "baseline_mean_psnr_gain_over_fixed_lowres": -11.046511838252364,
+      "baseline_better_than_fixed_fraction": 0.0,
+      "gain_delta_vs_baseline": 13.224864418330366
+    },
+    {
+      "perturbation_family": "phase_mask_quantization",
+      "level": 4.0,
+      "dataset_name": "ImageNet-1k",
+      "robust_mean_psnr_gain_over_fixed_lowres": 2.5652392914209203,
+      "robust_better_than_fixed_fraction": 0.9074074074074074,
+      "baseline_mean_psnr_gain_over_fixed_lowres": -8.441047646379854,
+      "baseline_better_than_fixed_fraction": 0.0,
+      "gain_delta_vs_baseline": 11.006286937800773
+    }
+  ],
+  "metrics_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance/robust_mask_tolerance_metrics.csv",
+  "compare_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance/robust_mask_tolerance_compare.csv",
+  "summary_json": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/tolerance/robust_mask_tolerance_compare.json"
+}

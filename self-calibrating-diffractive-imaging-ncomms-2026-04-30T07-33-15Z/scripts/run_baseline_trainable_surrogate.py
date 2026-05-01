@@ -232,7 +232,7 @@ Goal: test a first trainable surrogate that consumes the distorted image togethe
 
 ## Interpretation boundary
 
-This round tests learned calibration in the mildest possible form. The surrogate does beat the fixed baseline on held-out aberration cases, which supports the claim that reference information is learnable rather than only usable through explicit deconvolution. However, the training and test sets still share the same small object family and the surrogate is evaluated at low resolution, so this result should be treated as evidence for learnability, not yet as evidence for publishable optical generalization or the final passive diffractive implementation.
+This round tests learned calibration in the mildest possible form. If the surrogate beats the fixed baseline on held-out aberration cases, it supports the claim that reference information is learnable rather than only usable through explicit deconvolution. It still does not demonstrate the final passive diffractive implementation.
 
 ## Next executable step
 

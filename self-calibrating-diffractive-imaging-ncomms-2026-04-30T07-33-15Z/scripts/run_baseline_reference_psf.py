@@ -17,12 +17,22 @@ import numpy as np
 import pandas as pd
 from PIL import Image, ImageDraw
 
+from optics_propagation import (
+    PropagationConfig,
+    frequency_coordinates,
+    propagate_fresnel,
+    spatial_coordinates,
+)
+
 
 @dataclass
 class SimulationConfig:
     image_size: int = 128
     pupil_size: int = 128
-    wavelength: float = 1.0
+    wavelength: float = 532.0e-9
+    sample_spacing: float = 8.0e-6
+    propagation_distance: float = 12.0e-3
+    propagation_model: str = "fresnel"
     nominal_wiener_k: float = 1.0e-3
     guided_wiener_k: float = 5.0e-4
     seed: int = 7
@@ -52,14 +62,26 @@ def zernike_basis(xx: np.ndarray, yy: np.ndarray, rr: np.ndarray) -> dict[str, n
 
 
 def make_psf(size: int, coeffs: dict[str, float]) -> np.ndarray:
+    sample_spacing = coeffs.pop("_sample_spacing")
+    wavelength = coeffs.pop("_wavelength")
+    propagation_distance = coeffs.pop("_propagation_distance")
+    propagation_model = coeffs.pop("_propagation_model", "fresnel")
     xx, yy, rr = make_coordinate_grid(size)
     pupil = (rr <= 1.0).astype(np.float64)
     phase = np.zeros_like(xx)
     for key, basis in zernike_basis(xx, yy, rr).items():
         phase += coeffs.get(key, 0.0) * basis
     field = pupil * np.exp(1j * phase)
-    amp = np.fft.fftshift(np.fft.fft2(np.fft.ifftshift(field)))
-    psf = np.abs(amp) ** 2
+    propagation = PropagationConfig(
+        grid_size=size,
+        sample_spacing=sample_spacing,
+        wavelength=wavelength,
+        propagation_distance=propagation_distance,
+    )
+    if propagation_model != "fresnel":
+        raise ValueError(f"Unsupported propagation_model: {propagation_model}")
+    propagated = propagate_fresnel(field, propagation)
+    psf = np.abs(propagated) ** 2
     psf /= psf.sum()
     return psf
 
@@ -159,17 +181,49 @@ def make_montage(rows: list[list[np.ndarray]], labels: list[str], path: Path) ->
     canvas.save(path)
 
 
-def main() -> int:
-    config = SimulationConfig()
-    rng = np.random.default_rng(config.seed)
-    project_root = Path(__file__).resolve().parents[1]
-    out_dir = project_root / "results" / "baselines" / "baseline-001-reference-psf"
-    out_dir.mkdir(parents=True, exist_ok=True)
+def build_optics_metadata(config: SimulationConfig) -> dict[str, float]:
+    propagation = PropagationConfig(
+        grid_size=config.pupil_size,
+        sample_spacing=config.sample_spacing,
+        wavelength=config.wavelength,
+        propagation_distance=config.propagation_distance,
+    )
+    xx, yy = spatial_coordinates(propagation)
+    fx, fy = frequency_coordinates(propagation)
+    return {
+        "propagation_model": config.propagation_model,
+        "sample_spacing_m": config.sample_spacing,
+        "wavelength_m": config.wavelength,
+        "propagation_distance_m": config.propagation_distance,
+        "x_min_m": float(xx.min()),
+        "x_max_m": float(xx.max()),
+        "y_min_m": float(yy.min()),
+        "y_max_m": float(yy.max()),
+        "fx_min_1_per_m": float(fx.min()),
+        "fx_max_1_per_m": float(fx.max()),
+        "fy_min_1_per_m": float(fy.min()),
+        "fy_max_1_per_m": float(fy.max()),
+    }
 
+
+def run_reference_baseline(config: SimulationConfig) -> tuple[pd.DataFrame, dict[str, object], list[list[np.ndarray]]]:
+    rng = np.random.default_rng(config.seed)
     objects = make_objects(config.image_size)
     object_names = [f"object_{idx:02d}" for idx in range(len(objects))]
+    optics_metadata = build_optics_metadata(config)
 
-    nominal_psf = make_psf(config.pupil_size, {"defocus": 0.0, "astig_x": 0.0, "coma_x": 0.0})
+    nominal_psf = make_psf(
+        config.pupil_size,
+        {
+            "defocus": 0.0,
+            "astig_x": 0.0,
+            "coma_x": 0.0,
+            "_sample_spacing": config.sample_spacing,
+            "_wavelength": config.wavelength,
+            "_propagation_distance": config.propagation_distance,
+            "_propagation_model": config.propagation_model,
+        },
+    )
 
     rows = []
     montage_rows: list[list[np.ndarray]] = []
@@ -179,7 +233,16 @@ def main() -> int:
             "astig_x": float(rng.uniform(-1.0, 1.0)),
             "coma_x": float(rng.uniform(-0.8, 0.8)),
         }
-        psf = make_psf(config.pupil_size, coeffs)
+        psf = make_psf(
+            config.pupil_size,
+            {
+                **coeffs,
+                "_sample_spacing": config.sample_spacing,
+                "_wavelength": config.wavelength,
+                "_propagation_distance": config.propagation_distance,
+                "_propagation_model": config.propagation_model,
+            },
+        )
         reference_observation = psf.copy()
         for obj_idx, obj in enumerate(objects):
             blurred = fft_convolve(obj, psf)
@@ -189,6 +252,7 @@ def main() -> int:
             guided_restore = wiener_deconvolution(noisy, reference_observation, config.guided_wiener_k)
 
             row = {
+                "seed": config.seed,
                 "case_id": case_idx,
                 "object_id": object_names[obj_idx],
                 "defocus": coeffs["defocus"],
@@ -209,6 +273,7 @@ def main() -> int:
     df = pd.DataFrame(rows)
     summary = {
         "config": asdict(config),
+        "optics_metadata": optics_metadata,
         "sample_count": int(len(df)),
         "mean_fixed_psnr": float(df["fixed_psnr"].mean()),
         "mean_guided_psnr": float(df["guided_psnr"].mean()),
@@ -220,6 +285,15 @@ def main() -> int:
         "guided_better_fraction_psnr": float((df["psnr_gain"] > 0).mean()),
         "guided_better_fraction_ssim": float((df["ssim_gain"] > 0).mean()),
     }
+    return df, summary, montage_rows
+
+
+def main() -> int:
+    config = SimulationConfig()
+    project_root = Path(__file__).resolve().parents[1]
+    out_dir = project_root / "results" / "baselines" / "baseline-001-reference-psf"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    df, summary, montage_rows = run_reference_baseline(config)
 
     df.to_csv(out_dir / "baseline_metrics.csv", index=False)
     pd.DataFrame(
@@ -266,6 +340,12 @@ Goal: test whether a co-propagating reference PSF can improve restoration under 
 ## Scope
 
 - Dynamic perturbation family: low-order Zernike-like defocus, astigmatism, and coma
+- Propagation model: {config.propagation_model}
+- Sample spacing Δx: {config.sample_spacing:.3e} m
+- Wavelength λ: {config.wavelength:.3e} m
+- Propagation distance z: {config.propagation_distance:.3e} m
+- Frequency coordinates fx range: {summary['optics_metadata']['fx_min_1_per_m']:.3e} to {summary['optics_metadata']['fx_max_1_per_m']:.3e} 1/m
+- Frequency coordinates fy range: {summary['optics_metadata']['fy_min_1_per_m']:.3e} to {summary['optics_metadata']['fy_max_1_per_m']:.3e} 1/m
 - Restoration comparison:
   - fixed reference-free Wiener deconvolution using a nominal PSF
   - reference-guided Wiener deconvolution using the instantaneous PSF from the co-propagating reference

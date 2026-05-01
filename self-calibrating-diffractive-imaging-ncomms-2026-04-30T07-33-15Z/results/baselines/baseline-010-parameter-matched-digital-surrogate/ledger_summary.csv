@@ -1,0 +1,3 @@
+method,ledger,mean_psnr_gain,std_psnr_gain,ci_low,ci_high,better_than_fixed_fraction,n_seeds,n_samples,samples_per_seed
+parameter_matched_digital_surrogate,same_family_heldout_aberration,4.326442390625822,0.09195226039716255,4.269449789170059,4.383434992081584,1.0,10,1440,144
+parameter_matched_digital_surrogate,new_family_heldout_object_family,0.4598078494814818,0.059291838498058066,0.4230583872441886,0.496557311718775,0.5,10,960,96

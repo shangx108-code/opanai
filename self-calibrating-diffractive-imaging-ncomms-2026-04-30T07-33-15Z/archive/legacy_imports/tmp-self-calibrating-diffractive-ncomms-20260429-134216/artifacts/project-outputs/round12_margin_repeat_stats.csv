@@ -1,0 +1,9 @@
+repeat_seed,common_minus_ordinary_db,common_minus_wrongref_db,common_minus_noncommon_db,sign_common_minus_ordinary,sign_common_minus_wrongref
+0,0.456454,0.016624,-0.139421,positive,positive
+1,0.349544,0.106671,0.014669,positive,positive
+2,0.345809,-0.013324,-0.181419,positive,nonpositive
+3,0.522998,0.158585,0.367415,positive,positive
+4,0.42903,-0.006168,0.077661,positive,nonpositive
+5,0.674163,0.254918,0.227622,positive,positive
+6,0.650038,0.113089,0.217958,positive,positive
+7,0.503747,0.174228,0.050427,positive,positive

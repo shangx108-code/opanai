@@ -5,6 +5,12 @@ Goal: test whether a co-propagating reference PSF can improve restoration under 
 ## Scope
 
 - Dynamic perturbation family: low-order Zernike-like defocus, astigmatism, and coma
+- Propagation model: angular spectrum
+- Sample spacing Δx: 8.000e-06 m
+- Wavelength λ: 5.320e-07 m
+- Propagation distance z: 1.200e-02 m
+- Frequency coordinates fx range: -6.250e+04 to 6.152e+04 1/m
+- Frequency coordinates fy range: -6.250e+04 to 6.152e+04 1/m
 - Restoration comparison:
   - fixed reference-free Wiener deconvolution using a nominal PSF
   - reference-guided Wiener deconvolution using the instantaneous PSF from the co-propagating reference
@@ -14,14 +20,14 @@ Goal: test whether a co-propagating reference PSF can improve restoration under 
 
 ## Aggregate results
 
-- Mean fixed PSNR: 27.019 dB
-- Mean guided PSNR: 31.289 dB
-- Mean PSNR gain: 4.270 dB
-- Mean fixed SSIM: 0.9818
-- Mean guided SSIM: 0.9907
-- Mean SSIM gain: 0.0088
-- Guided better fraction by PSNR: 0.896
-- Guided better fraction by SSIM: 0.771
+- Mean fixed PSNR: 12.946 dB
+- Mean guided PSNR: 14.440 dB
+- Mean PSNR gain: 1.493 dB
+- Mean fixed SSIM: 0.6753
+- Mean guided SSIM: 0.7775
+- Mean SSIM gain: 0.1022
+- Guided better fraction by PSNR: 1.000
+- Guided better fraction by SSIM: 1.000
 
 ## Interpretation boundary
 

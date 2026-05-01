@@ -1,0 +1,11 @@
+{
+  "package_name": "method_fair_hardware_tolerance_package",
+  "status": "protocol_frozen_but_not_executed",
+  "deliverables": [
+    "results/tolerance/method_fair_tolerance_matrix.csv",
+    "results/tolerance/hardware_tolerance_package.md",
+    "results/tolerance/hardware_tolerance_package.json"
+  ],
+  "fairness_rule": "Only cross-method common perturbations should be used for headline ranking. Phase-mask-specific perturbations must be reported as engineering robustness diagnostics.",
+  "true_blocker": "No executed tolerance result tables exist yet in the active root, so this round can freeze the protocol but not claim quantitative tolerance outcomes."
+}

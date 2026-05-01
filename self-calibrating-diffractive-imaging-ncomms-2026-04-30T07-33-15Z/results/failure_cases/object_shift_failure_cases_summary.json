@@ -1,0 +1,41 @@
+[
+  {
+    "seed": 1,
+    "case_id": 14,
+    "object_id": "heldout_object_family_object_00",
+    "object_label": "diag_x",
+    "defocus": -1.2102369166909632,
+    "astig_x": 0.8539955794454217,
+    "coma_x": -0.26339616347068606,
+    "fixed_psnr_lowres": 17.004451079635597,
+    "phase_psnr_lowres": 12.602715023135843,
+    "psnr_gain_over_fixed_lowres": -4.401736056499754,
+    "failure_reason": "thin diagonal crossings concentrate oblique high-frequency content that is weakened by the 12x12 low-resolution frontend"
+  },
+  {
+    "seed": 0,
+    "case_id": 8,
+    "object_id": "heldout_object_family_object_02",
+    "object_label": "checker_blocks",
+    "defocus": -0.9192015547257412,
+    "astig_x": -0.500777610463224,
+    "coma_x": -0.008655967587173352,
+    "fixed_psnr_lowres": 18.800889815447896,
+    "phase_psnr_lowres": 16.45115978268545,
+    "psnr_gain_over_fixed_lowres": -2.3497300327624444,
+    "failure_reason": "periodic block structure creates alias-prone repeated edges and boundary leakage under object-family shift"
+  },
+  {
+    "seed": 0,
+    "case_id": 12,
+    "object_id": "heldout_object_family_object_03",
+    "object_label": "crescent",
+    "defocus": -1.3594634729636987,
+    "astig_x": -0.009402908871722682,
+    "coma_x": 0.5558228556011893,
+    "fixed_psnr_lowres": 18.597502915086842,
+    "phase_psnr_lowres": 16.134430684569445,
+    "psnr_gain_over_fixed_lowres": -2.4630722305173975,
+    "failure_reason": "curved asymmetric boundaries and hollow subtraction yield mixed low-contrast edge errors after the learned optical encoding"
+  }
+]

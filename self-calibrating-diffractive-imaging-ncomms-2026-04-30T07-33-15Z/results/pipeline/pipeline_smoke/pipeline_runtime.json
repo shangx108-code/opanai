@@ -1,0 +1,14 @@
+{
+  "train_sample_count": 1200,
+  "eval_sample_count": 24,
+  "feature_shape": [
+    24,
+    1008
+  ],
+  "phase_plane_shape": [
+    24,
+    5,
+    12,
+    12
+  ]
+}

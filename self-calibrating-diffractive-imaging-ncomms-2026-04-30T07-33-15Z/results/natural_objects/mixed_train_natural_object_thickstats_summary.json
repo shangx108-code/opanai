@@ -1,0 +1,47 @@
+{
+  "status": "completed",
+  "config": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "seed_count": 5,
+    "train_case_count": 24,
+    "eval_case_count": 12
+  },
+  "training_mix_counts": {
+    "synthetic_training_objects": 50,
+    "proxy_training_objects": 24,
+    "proxy_ImageNet-1k": 12,
+    "proxy_COCO": 12
+  },
+  "summary_rows": [
+    {
+      "dataset_name": "COCO",
+      "seed_count": 5,
+      "mean_psnr_gain_over_fixed_lowres": 1.4519965582530385,
+      "ci95_half_width": 0.13702210390112615,
+      "std_psnr_gain_over_fixed_lowres": 0.1563218054811006,
+      "mean_better_than_fixed_fraction": 0.9111111111111111,
+      "mean_pipeline_psnr_lowres": 24.087215412035174,
+      "mean_fixed_psnr_lowres": 22.635218853782135,
+      "mean_guided_psnr_lowres": 24.79060307412427
+    },
+    {
+      "dataset_name": "ImageNet-1k",
+      "seed_count": 5,
+      "mean_psnr_gain_over_fixed_lowres": 0.984069556017799,
+      "ci95_half_width": 0.25010843261236126,
+      "std_psnr_gain_over_fixed_lowres": 0.2853364576873291,
+      "mean_better_than_fixed_fraction": 0.7736111111111111,
+      "mean_pipeline_psnr_lowres": 20.497441647462814,
+      "mean_fixed_psnr_lowres": 19.513372091445017,
+      "mean_guided_psnr_lowres": 22.190762559956024
+    }
+  ],
+  "metrics_csv": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/natural_objects/mixed_train_natural_object_thickstats_metrics.csv",
+  "summary_json": "/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z/results/natural_objects/mixed_train_natural_object_thickstats_summary.json"
+}
