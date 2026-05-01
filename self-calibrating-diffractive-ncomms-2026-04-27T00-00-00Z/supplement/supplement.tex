@@ -1,0 +1,61 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{caption}
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\captionsetup{font=small,labelfont=bf}
+
+\begin{document}
+\begin{center}
+{\LARGE \textbf{Supplementary Information}}\\[0.5em]
+{\large Passive self calibrating diffractive imaging through dynamic aberrations}
+\end{center}
+
+\section*{Supplementary Note 1 | Nature Communications formatting choices}
+The main manuscript follows the current Nature Communications article guidance consulted during this build: section order is Title, Abstract, Introduction, Results, Discussion, Methods, Data Availability, Code Availability, References, Acknowledgements, Author Contributions and Competing Interests; the title is kept within the short article style; references are numbered and included directly in the main \texttt{.tex} file rather than through an external BibTeX submission file; and the figures are embedded in the manuscript PDF for referee readability. The current package remains a submission-style draft rather than a final accepted-manuscript production file.
+
+\section*{Supplementary Note 2 | Evidence boundary}
+The current manuscript is intentionally evidence bounded. Verified classes are the Gaussian surrogate benchmark, the Zernike wave-optics benchmark, the CRLB-style information scan and the cross-task surrogate transfer ledger. Partially verified classes are the processor-level passive-diffractive comparisons. Unverified classes remain broader scattering families, experimental validation, a fully restored round-level raw archive and stronger electronic comparators using the pilot explicitly at test time.
+
+\section*{Supplementary Table 1 | Method fairness summary}
+\begin{longtable}{p{3.0cm}p{2.2cm}p{2.2cm}p{1.7cm}p{2.2cm}p{2.4cm}}
+\toprule
+Method & Optical trainable parameters & Digital trainable parameters & Reference at test time & Retraining at test time & Registered role \\
+\midrule
+No-reference control & 0 & lightweight ridge & no & no & negative control \\
+Non-common-path control & 0 & lightweight ridge & yes, mismatched & no & mismatch control \\
+Common-path hybrid frontend & phase-only stack & lightweight ridge & yes, co-propagating & no & proposed hybrid condition \\
+Reference-PSF deconvolution & 0 & classical deconvolution & yes & no & reference-guided classical comparator \\
+Ordinary D2NN & phase-only stack & none & no & no & processor baseline \\
+Pilot-assisted D2NN & phase-only stack & none & yes, co-propagating & no & processor prototype \\
+\bottomrule
+\end{longtable}
+
+\section*{Supplementary Table 2 | Current figure-to-data map}
+\begin{longtable}{p{1.8cm}p{2.1cm}p{6.2cm}p{3.0cm}}
+\toprule
+Figure & Panel & Supported claim & Source file \\
+\midrule
+Figure 2 & a & Common-path pilot improves Gaussian surrogate OOD reconstruction PSNR & \texttt{data/fig2\_mechanism\_waveoptics.csv} \\
+Figure 2 & b & Common-path pilot improves Zernike wave-optics OOD reconstruction PSNR & \texttt{data/fig2\_mechanism\_waveoptics.csv} \\
+Figure 2 & c & Common-path pilot lowers Zernike PSF mismatch & \texttt{data/fig2\_mechanism\_waveoptics.csv} \\
+Figure 3 & a & Pilot observation retains finite local Fisher information & \texttt{data/fig3\_information\_transfer.csv} \\
+Figure 3 & b--d & Reconstruction is strongest; classification and inverse design are weaker & \texttt{data/fig3\_information\_transfer.csv} \\
+Figure 4 & a--b & Processor-level gain is bounded and stage dependent & \texttt{data/fig4\_processor\_boundary.csv} \\
+\bottomrule
+\end{longtable}
+
+\section*{Supplementary Note 3 | Current processor-level limitation}
+The present processor-level result is not written as a flagship proof. The round-5 comparison is negative, the round-5b comparison is weakly positive and the restored round-6 comparison returns to an effective tie with the ordinary D2NN. The strongest round-6 matched common-path advantage is local rather than global. This limitation is central to the manuscript and should remain explicit in any submission-facing revision.
+
+\section*{Supplementary Note 4 | Archive status}
+The current build includes the manuscript source, the Supplementary Information source, processed source-data tables, a source-data index and the figure-rendering code used for this package. The full historical round1--round6 raw archive is not yet completely restored inside the active project directory. That restoration remains an open archive task and is stated in both the main manuscript and the data/code availability sections to avoid overstating reproducibility.
+
+\end{document}
