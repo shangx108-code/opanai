@@ -1,6 +1,6 @@
 # Sync Status
 
-Generated: `2026-05-01T13:29:55+00:00`
+Generated: `2026-05-01T13:39:06+00:00`
 Project: `twse2_prl_20260501`
 Canonical path: `/workspace/memory/twse2_prl_20260501`
 
@@ -41,8 +41,18 @@ Canonical path: `/workspace/memory/twse2_prl_20260501`
 - `results/wp1_summary.json`
 - `results/wp1_wp2_summary.md`
 - `results/wp2_edge_proxy.csv`
+- `results/wp3_btk_best_cases.json`
+- `results/wp3_btk_conductance_curves.csv`
+- `results/wp3_btk_metrics.csv`
+- `results/wp3_btk_summary.md`
+- `results/wp3_prl_figure_slice_annotations.csv`
+- `results/wp3_prl_figure_slice_notes.md`
+- `results/wp3_prl_figure_slice_source_data.csv`
+- `scripts/build_wp3_figure_slice.py`
 - `scripts/run_wp1_wp2.py`
+- `scripts/run_wp3_minimal_btk.py`
 - `scripts/update_sync_status.py`
+- `src/__pycache__/twse2_minimal.cpython-312.pyc`
 - `src/twse2_minimal.py`
 - `sync-status.md`
 
