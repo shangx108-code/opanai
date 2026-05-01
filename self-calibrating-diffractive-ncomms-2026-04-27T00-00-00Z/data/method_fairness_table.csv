@@ -1,0 +1,7 @@
+method,optical_trainable_parameters,digital_trainable_parameters,uses_reference_at_test,training_data,retraining_at_test,registered_role,notes
+No reference control,0,lightweight ridge,no,shared synthetic ledgers,no,negative control,Object only without pilot channel
+Non common path control,0,lightweight ridge,yes but mismatched,shared synthetic ledgers,no,mismatch control,Pilot does not share the same degradation realization
+Common path hybrid frontend,phase-only stack,lightweight ridge,yes and co-propagating,shared synthetic ledgers,no,proposed hybrid condition,Optical and digital degrees of freedom are explicitly separated
+Reference PSF deconvolution,0,classical deconvolution,yes,shared synthetic ledgers,no,reference-guided comparator,Represents a stronger classical comparator when explicit reference information is available
+Ordinary D2NN,phase-only stack,none,no,shared synthetic ledgers,no,processor baseline,Used for processor-level comparison in Figure 4
+Pilot assisted D2NN,phase-only stack,none,yes and co-propagating,shared synthetic ledgers,no,processor prototype,Current gain is weak and configuration sensitive
