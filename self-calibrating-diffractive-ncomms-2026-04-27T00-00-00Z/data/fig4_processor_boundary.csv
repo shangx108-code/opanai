@@ -1,0 +1,12 @@
+stage,condition,metric,value,unit,source_note
+round5,ordinary_d2nn,ood_psnr_delta_baseline,0.000,dB,Round5 baseline anchor reconstructed from project-state
+round5,common_path,ood_psnr_delta_baseline,-0.191,dB,Round5 common minus ordinary from project-state
+round5b,ordinary_d2nn,ood_psnr,11.356,dB,Round5b OOD result from project-state
+round5b,common_path,ood_psnr,11.559,dB,Round5b OOD result from project-state
+round5b,non_common_path,ood_psnr,11.505,dB,Round5b OOD result from project-state
+round5b,wrong_reference,ood_psnr,11.350,dB,Round5b OOD result from project-state
+round6_best,ordinary_d2nn,ood_psnr,20.421,dB,Round6 best OOD result from project-state
+round6_best,common_path,ood_psnr,20.421,dB,Round6 best OOD result from project-state
+round6_best,non_common_path,ood_psnr,20.473,dB,Round6 best OOD result from project-state
+round6_best,wrong_reference,ood_psnr,20.382,dB,Round6 best OOD result from project-state
+round6_matched,common_minus_noncommon,matched_psnr_gain,0.214,dB,Round6 matched common minus non-common from project-state
