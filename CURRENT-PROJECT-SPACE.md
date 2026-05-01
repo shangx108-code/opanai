@@ -1,7 +1,7 @@
 # Current Project Space
 
-Active project: `twse2-andreev-prl`
-Canonical long-term project space: `/workspace/memory/twse2-andreev-prl-2026-04-29T13-43-41Z`
-Created: `2026-04-29T13-43-41Z`
+Active project: `twse2_prl_20260501`
+Canonical long-term project space: `/workspace/memory/twse2_prl_20260501`
+Created: `2026-05-01T00:00:00Z`
 
 Future data for this chat should be saved into the canonical long-term project space above.
