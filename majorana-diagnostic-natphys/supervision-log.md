@@ -1,216 +1,5 @@
 # Supervision Log
 
-## 2026-05-01 | Round 22 supervision after Figure 5 manuscript integration page
-
-### Overall evaluation
-This round handled a real workspace limitation sensibly. The requested Figure 5 text was pushed as far toward direct manuscript integration as the current project state allowed, without pretending that a missing master manuscript file had been edited in place.
-
-### Gap to target-journal standard
-- The Figure 5 broad-window prose is now assembled in a single manuscript-ready integration page.
-- The remaining limitation is archival, not conceptual: the long-term space still needs the master manuscript source file restored if future edits are to happen directly inside that source rather than through integration pages.
-
-### Most critical quality risk
-The team could mistake the existence of an integration page for complete manuscript integration. The text is ready, but the master source still needs to be present in the long-term project space for true in-place editing.
-
-### Plan-revision advice
-1. Treat `manuscript-figure5-broad-window-integration-v1.md` as the direct replacement source for Figure 5 until the master manuscript file is restored.
-2. When the master source returns, merge from this file rather than re-drafting the same section again.
-
-### Newly completed items
-- Added `manuscript-figure5-broad-window-integration-v1.md`
-
-## 2026-05-01 | Round 21 supervision after locking the Figure 5 broad-window version
-
-### Overall evaluation
-This round finally turned the Figure 5 readout choice into manuscript-facing language. The project no longer merely has a preferred observable; it now has reusable caption, Results, and Methods text that match that choice.
-
-### Gap to target-journal standard
-- The broad-window Figure 5 path is now internally consistent: chosen readout, supporting data package, and replacement prose all align.
-- What remains is manuscript integration and final claim discipline, not more indecision about which Figure 5 branch to use.
-
-### Most critical quality risk
-The new wording must continue to present `symmetric_nonlocal_score` as a derived readout from the same heatmaps, not as if it were a deeper microscopic transport calculation.
-
-### Plan-revision advice
-1. Use `figure5-broad-window-caption-and-method-v1.md` as the default insertion source for the next manuscript rewrite.
-2. Keep the zero-bias wording only as supporting context, not as a competing main-text Figure 5 framing.
-3. Do not reopen the Figure 5 branch choice unless a later full-manuscript pass reveals a direct inconsistency.
-
-### Newly completed items
-- Added `figure5-broad-window-caption-and-method-v1.md`
-
-## 2026-05-01 | Round 20 supervision after Fig. 5 observable upgrade
-
-### Overall evaluation
-This was the right kind of transport-observable escalation. The project did not reopen the solver or drift back into control-parameter scans. It upgraded the readout layer on top of the rebuilt candidate heatmaps and tested several broad-window observables side by side.
-
-### Gap to target-journal standard
-- The project now has a concrete broad-window readout candidate rather than only a complaint that raw `|G_LR|` leaks too much away from zero bias.
-- Among the tested choices, `symmetric_nonlocal_score` is currently the strongest wide-window discriminator by worst-case median separation across the dot and impurity controls.
-- What remains is not exploratory coding, but manuscript judgment: whether this readout is already clean enough to justify the broader-bias framing, or whether the paper should still prefer the narrower near-zero-bias framing for maximal caution.
-
-### Most critical quality risk
-The new readout should not be described as a fundamentally new transport calculation. It is a readout-layer normalization and balancing step built from the same underlying heatmaps.
-
-### Plan-revision advice
-1. Treat `symmetric_nonlocal_score` as the current leading broad-window Fig. 5 readout.
-2. When writing methods, define it plainly as a balanced nonlocal score derived from `|G_LR|`, `G_LL`, and `G_RR`.
-3. Keep the near-zero-bias framing available as the lower-risk fallback until the final figure and caption pass decide which story is cleaner.
-
-### Newly completed items
-- Added `code/upgrade_fig5_observable_from_heatmaps.py`
-- Added `data/fig5-observable-upgrade-2026-05-01/observable_selection_table.csv`
-- Added `data/fig5-observable-upgrade-2026-05-01/fig5a_positive_observable_heatmap.csv`
-- Added `data/fig5-observable-upgrade-2026-05-01/fig5b_dot_candidate_observable_heatmap.csv`
-- Added `data/fig5-observable-upgrade-2026-05-01/fig5c_impurity_candidate_observable_heatmap.csv`
-- Added `data/fig5-observable-upgrade-2026-05-01/summary.md`
-
-## 2026-05-01 | Round 19 supervision after Fig. 5 window judgment
-
-### Overall evaluation
-This was the right follow-through after the candidate rebuild. The project did not immediately jump into rewriting the transport observable. It first asked the narrower question: whether the present proxy is already good enough if the figure is framed around the physically central near-zero-bias regime. That is a strong judgment move.
-
-### Gap to target-journal standard
-- The current proxy now looks defensible for a zero-bias or tight near-zero-bias Fig. 5 discriminator.
-- It still does not look equally strong as a full bias-window discriminator.
-- So the scientific bottleneck has split cleanly into two possible manuscript paths: a narrower but already supported near-zero-bias path, or a broader bias-window path that would still require an observable upgrade.
-
-### Most critical quality risk
-The main risk now is rhetorical rather than numerical: the manuscript could quietly imply a broad-bias transport discriminator even though the current numbers support a near-zero-bias discriminator much more strongly.
-
-### Plan-revision advice
-1. Frame the next Fig. 5 writing pass around zero bias or a small near-zero-bias window by default.
-2. Only reopen transport-code development if the paper truly needs a broader bias-window claim.
-3. Do not reopen dot/impurity parameter scans unless the observable is fixed and clearly still inadequate.
-
-### Newly completed items
-- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/window_discrimination_metrics.csv`
-- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/window_judgment.md`
-
-## 2026-05-01 | Round 18 supervision after candidate-based Fig. 4 / Fig. 5 rebuild
-
-### Overall evaluation
-This round closed the exact numerical action that the previous retune table pointed to. The project did not drift back into scanning. It used the locked dot and impurity candidates to regenerate the weak-panel data directly, which is the right execution behavior.
-
-### Gap to target-journal standard
-- The Fig. 4 control summary is now much healthier because the positive branch stays topological while both false-positive controls are explicitly trivial.
-- The Fig. 5 heatmaps now suppress the zero-bias nonlocal signal in the control cases as intended.
-- The remaining concern is narrower: the current proxy heatmaps still show sizable off-zero-bias structure in the controls, so the next scientific judgment is about observable adequacy rather than parameter adequacy.
-
-### Most critical quality risk
-The project could still overread the heatmaps if it treats suppressed zero-bias `G_LR` as already equivalent to a fully decisive transport discriminator across the whole bias window.
-
-### Plan-revision advice
-1. Freeze `data/fig4-fig5-candidate-rebuild-2026-05-01/` as the current weak-panel rebuild package.
-2. Judge the rebuilt heatmaps with claim discipline: if the final manuscript only needs the zero-bias and near-zero-bias story, the present proxy may already be usable; if it needs a broader bias-window discriminator, only the transport observable should be upgraded next.
-3. Do not reopen dot/impurity parameter hunting unless the observable itself is kept fixed and clearly fails.
-
-### Newly completed items
-- Added `code/rebuild_fig4_fig5_from_candidates.py`
-- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig4d_control_summary_table.csv`
-- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig5a_positive_transport_heatmap.csv`
-- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig5b_dot_candidate_transport_heatmap.csv`
-- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig5c_impurity_candidate_transport_heatmap.csv`
-- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/summary.md`
-
-## 2026-05-01 | Round 17 supervision after targeted Fig. 4 / Fig. 5 retune
-
-### Overall evaluation
-This round did the right narrow thing. Instead of rerunning the whole CMJJ branch or continuing vague parameter hunting, it isolated the actual failure mode in Figures 4 and 5 and converted it into a reusable control-retune table. The project now has explicit dot and impurity settings that keep the controls near-zero while returning them to the trivial topology sector and nearly extinguishing the probe-bias nonlocal response.
-
-### Gap to target-journal standard
-- The project still does not yet have the final rebuilt Fig. 4 summary rows or final Fig. 5 heatmaps at those candidate settings.
-- The current transport observable is still a proxy layer; it now looks more usable, but the final figure burden still depends on how clean the rebuilt panels look.
-- Disorder remains scientifically relevant, but it should no longer dictate the next iteration; the immediate task is candidate-based panel rebuilding.
-
-### Most critical quality risk
-The new retune table could be underused if the next round drifts back into broad scanning rather than immediately rebuilding the weak panels around the now-identified candidate windows.
-
-### Plan-revision advice
-1. Freeze `data/fig4-fig5-targeted-retune-2026-05-01/` as the current control-selection record.
-2. Rebuild only Fig. 4 and Fig. 5 around one top-ranked dot candidate and one top-ranked impurity candidate.
-3. Keep Figures 2 and 3 untouched during that rebuild so the project does not lose focus.
-4. After the targeted rebuild, judge whether the present transport proxy is now sufficient or whether only the observable definition still needs upgrading.
-
-### Newly completed items
-- Added `code/retune_fig4_fig5_targeted.py`
-- Added `data/fig4-fig5-targeted-retune-2026-05-01/full_scan.csv`
-- Added `data/fig4-fig5-targeted-retune-2026-05-01/candidate_controls.csv`
-- Added `data/fig4-fig5-targeted-retune-2026-05-01/summary.md`
-
-## 2026-05-01 | Round 16 supervision after CMJJ panel triage
-
-### Overall evaluation
-This round did exactly what the project needed after the first source-data run: it separated "real numerical progress" from "final figure readiness." That is a healthy move. The CMJJ branch is no longer blocked by absence of data, but it is still bottlenecked by panel selectivity.
-
-### Gap to target-journal standard
-- Figures 2 and 3 are now close enough to treat as candidate manuscript assets.
-- Figures 4 and 5 are still not sharp enough to carry the full false-positive-resistant claim without another numerical round.
-- The project still needs one cleaner negative-control/transport consistency story before venue-level framing should rise further.
-
-### Most critical quality risk
-The current risk is now overpromoting the transport and negative-control panels simply because they exist. Existence is not enough; they still need to discriminate cleanly.
-
-### Plan-revision advice
-1. Keep Figures 2 and 3 on the "plot next" track.
-2. Put Figures 4 and 5 on the "retune before plotting" track.
-3. Frame the next coding round around one narrow objective: preserve misleading local near-zero structure in the controls while making the topology-plus-nonlocal failure more decisive.
-4. Delay venue-language inflation until that specific upgrade is achieved.
-
-### Newly completed items
-- Added `cmjj-first-pass-panel-triage-2026-05-01.md`
-- Updated `project-state.md` to reflect that Figures 4 and 5 are now the active bottleneck
-
-## 2026-05-01 | Round 15 supervision after first CMJJ source-data run
-
-### Overall evaluation
-This round converted the compensated-magnetic branch from a planning object into a real numerical object. The project now has a reproducible first-pass Figures 2-5 source-data bundle for the CMJJ application, generated in the current runtime without waiting for missing plotting or scipy dependencies.
-
-### Gap to target-journal standard
-- The project now has real CMJJ data, but the package is still a first-pass minimal effective-model implementation rather than the final manuscript-grade model stack.
-- The transport layer is usable as a reproducible proxy bundle, but it still needs a scientific judgment call on whether the current observable definitions are strong enough for the final paper.
-- Plotting, panel selection, and caption discipline remain open; source data alone is not yet a finished figure package.
-
-### Most critical quality risk
-The next drift risk is subtler than before: the project could mistake "first real data exist" for "the figures are already final." They are not final yet; they are now real enough to critique and upgrade.
-
-### Plan-revision advice
-1. Freeze `generate_cmjj_source_data.py` and `cmjj_source_data_config.json` as the reproducible baseline.
-2. Use the current CSV bundle to inspect which panels already support the intended story and which ones need stronger observable definitions or parameter retuning.
-3. Only after that add rendered figures and manuscript-facing captions.
-4. Keep the venue claim level tied to the strongest surviving panels, not to the full ambition of the original branch note.
-
-### Newly completed items
-- Added `code/generate_cmjj_source_data.py`
-- Added `config/cmjj_source_data_config.json`
-- Generated `data/cmjj-source-data-2026-05-01/manifest.json`
-- Generated first-pass source-data CSV bundles for Figures 2-5 in the CMJJ branch
-
-## 2026-05-01 | Round 14 supervision after compensated-magnetic intake lock
-
-### Overall evaluation
-This round produced a real project-state improvement even without new numerics. The project no longer treats the compensated-magnetic Josephson-junction idea and the NC repack path as loose prose floating in user files; both are now frozen as canonical long-term-space objects tied to the same Majorana diagnostic project.
-
-### Gap to target-journal standard
-- The compensated-magnetic branch is now clearly defined, but it still lacks a real figure-grade source-data package.
-- The project now has an NC-safe claim stack, but it still lacks the reproducibility bundle that would make that venue path credible.
-- The paper still does not have the compensated-magnetic Figures 2-5 outputs needed to replace narrative ambition with auditable evidence.
-
-### Most critical quality risk
-The project could still confuse "better framing" with "submission progress" if it does not now move immediately into a compensated-magnetic evidence sprint.
-
-### Plan-revision advice
-1. Treat `A-compensated-magnetic-cmjj-blueprint-2026-05-01.md` as the fixed application brief for the next coding round.
-2. Treat `B-nc-repositioning-and-reproducibility-plan-2026-05-01.md` as the fixed packaging brief for manuscript and archive work.
-3. Make the next execution round produce real source data for bulk topology, open-boundary ambiguity, nonlocal transport, and at least ABS plus impurity/disorder controls in the compensated-magnetic setting.
-4. Keep all venue-language upgrades blocked until that figure bundle exists with scripts and parameter records.
-
-### Newly completed items
-- Corrected `memory/CURRENT-PROJECT-SPACE.md` to point to `majorana-diagnostic-natphys`
-- Added `A-compensated-magnetic-cmjj-blueprint-2026-05-01.md`
-- Added `B-nc-repositioning-and-reproducibility-plan-2026-05-01.md`
-- Updated `project-state.md` and `archive-checklist.md` to reflect the new application and packaging lock
-
 ## 2026-04-24 | Round 1 initialization
 
 ### Overall evaluation
@@ -526,3 +315,27 @@ The project could still waste a round searching the same indexed locations again
 - Re-ran `majorana_recovery_bootstrap.py` and reconfirmed `Missing assets: 9` with `Ready for topology rerun: False`
 - Repeated targeted connected-Google-Drive archive searches for the missing three-terminal bundle using benchmark-specific queries
 - Verified that the indexed archive path still does not expose a recoverable copy of the missing script or bundle
+
+## 2026-05-02 | Round 14 supervision after manuscript-facing Fig. 4 / Fig. 5 sync
+
+### Overall evaluation
+This round does not improve the underlying numerical evidence, but it does remove a real manuscript-integrity risk. The project had begun to carry two partially inconsistent Fig. 4 / Fig. 5 stories across different LaTeX-facing files, which could easily have reintroduced weaker or older claim wording into the next submission package.
+
+### Gap to target-journal standard
+- The full-device topology rerun remains blocked exactly as before.
+- Figure 4 still cannot be written as a completed full-device topology result.
+- Figure 5 still depends on the already-generated transport evidence and not yet on a newly restored matched rerun bundle.
+
+### Most critical quality risk
+The main risk was version drift inside the manuscript package itself: old caption logic or an underlocked transport story could have slipped back into the next draft even without any new scientific change.
+
+### Plan-revision advice
+1. Treat the new manuscript-facing sync as the canonical text layer for the current CMJJ package until new data force another rewrite.
+2. Keep the Figure 4 story explicitly null-calibrated and ensemble-based rather than falling back to selected-example language.
+3. Keep the Figure 5 story fixed on one prespecified nonlocal decision rule and move any secondary indicators to the Supplement.
+4. Do not confuse this wording cleanup with closure of the blocked full-device topology rerun.
+
+### Newly completed items
+- Synchronized duplicated Fig. 4 / Fig. 5 captions across `submission_draft_main.tex` and `submission_pack_latex_ready.tex`
+- Archived the stabilized manuscript-facing copies under `manuscript-facing-sync-2026-05-02/`
+- Updated project-state and archive-checklist records so later rounds do not regress to the older wording by accident
