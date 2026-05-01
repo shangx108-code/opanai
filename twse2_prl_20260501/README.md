@@ -18,6 +18,7 @@ the paper outline into an executable starting point that already produces:
 - `src/twse2_minimal.py`: model helpers
 - `scripts/run_wp1_wp2.py`: runs the first two work packages
 - `scripts/run_wp3_minimal_btk.py`: generates the first conductance-proxy follow-up
+- `scripts/build_wp3_figure_slice.py`: extracts the figure-ready PRL panel slice from WP3 results
 - `scripts/update_sync_status.py`: refreshes the project sync audit
 - `results/`: generated summary tables and markdown
 - `prl-manuscript-draft-v1.md`: PRL-style manuscript draft based on the current minimal results
