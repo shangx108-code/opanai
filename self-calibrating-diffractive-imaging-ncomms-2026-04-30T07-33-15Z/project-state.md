@@ -9,7 +9,7 @@
 
 ## Current single bottleneck
 
-The fairness-comparator gap is now closed at the digital-capacity level, and the GitHub long-term main space is aligned with the active local project root. The immediate blocker is now the remaining evidence gap above the realism branch: the active root still lacks licensed benchmark-root natural-image execution, and the tolerance package still lacks the dense figure-ready exports required for submission-grade closure.
+The fairness-comparator gap is now closed at the digital-capacity level, the GitHub long-term main space is aligned with the active local project root, and the tolerance/source-data/reproducibility packaging tasks requested in this round are complete. The immediate blocker is now narrower: the active root still lacks licensed benchmark-root natural-image execution, so the natural-image branch remains proxy-only and cannot be promoted to benchmark-root evidence.
 
 ## Confirmed core story
 
@@ -25,7 +25,7 @@ A fixed passive diffractive optical processor co-propagates an object wave and a
 
 ## Immediate next action
 
-Stage the licensed natural-image inputs into the audited dataset roots required by step 2, rerun `scripts/run_natural_object_evaluation.py` until it produces benchmark-root metrics, then expand `scripts/run_mixed_train_tolerance.py` into the missing figure-ready exports and replace the remaining proxy-natural wording in the manuscript and source-data index.
+Stage the licensed natural-image inputs into the audited dataset roots required by step 2, rerun `scripts/run_natural_object_evaluation.py` until it produces benchmark-root metrics, and then replace the remaining proxy-natural wording in the manuscript and source-data index.
 
 ## Verified progress
 
@@ -103,6 +103,29 @@ Stage the licensed natural-image inputs into the audited dataset roots required 
   - `1 px` shift and `3/4`-bit quantization move from large negative gains to positive gains on both proxy-natural datasets
   - `2 px` lateral shift remains a strong failure mode
 - The current result supports the narrower calibration premise and the learnability premise, but still does not justify claims about real natural-image performance or hardware robustness until the frozen protocols are actually executed.
+- The tolerance package now includes the previously missing figure-ready exports:
+  - `results/tolerance/tolerance_curve_summary.csv`
+  - `results/tolerance/tolerance_curve_detail.csv`
+  - `results/tolerance/tolerance_plot_manifest.csv`
+  - `results/tolerance/hardware_tolerance_metrics.csv`
+- Figure-level source-data folders now exist under:
+  - `source_data/Fig1/`
+  - `source_data/Fig2/`
+  - `source_data/Fig3/`
+  - `source_data/Fig4/`
+  - `source_data/FigS1/`
+- Each figure-level source-data folder now includes:
+  - panel-level copied artifacts
+  - per-panel README files
+  - config snapshots
+  - checksum manifest
+  - claim-boundary notes
+- A project-wide reproducibility manifest now exists at:
+  - `archive/reproducibility_manifest.json`
+- A real-data availability check for benchmark-root natural images remains negative:
+  - audited staging roots contain only proxy-named placeholder PNG files
+  - a connected Drive search in this round did not return accessible licensed benchmark-root ImageNet/COCO files
+  - therefore `scripts/run_natural_object_evaluation.py` cannot yet be honestly promoted to a benchmark-root rerun
 
 ## Automation
 

@@ -1,5 +1,118 @@
 # Supervision Log
 
+## 2026-05-01 | Round 22 supervision after Figure 5 manuscript integration page
+
+### Overall evaluation
+This round handled a real workspace limitation sensibly. The requested Figure 5 text was pushed as far toward direct manuscript integration as the current project state allowed, without pretending that a missing master manuscript file had been edited in place.
+
+### Gap to target-journal standard
+- The Figure 5 broad-window prose is now assembled in a single manuscript-ready integration page.
+- The remaining limitation is archival, not conceptual: the long-term space still needs the master manuscript source file restored if future edits are to happen directly inside that source rather than through integration pages.
+
+### Most critical quality risk
+The team could mistake the existence of an integration page for complete manuscript integration. The text is ready, but the master source still needs to be present in the long-term project space for true in-place editing.
+
+### Plan-revision advice
+1. Treat `manuscript-figure5-broad-window-integration-v1.md` as the direct replacement source for Figure 5 until the master manuscript file is restored.
+2. When the master source returns, merge from this file rather than re-drafting the same section again.
+
+### Newly completed items
+- Added `manuscript-figure5-broad-window-integration-v1.md`
+
+## 2026-05-01 | Round 21 supervision after locking the Figure 5 broad-window version
+
+### Overall evaluation
+This round finally turned the Figure 5 readout choice into manuscript-facing language. The project no longer merely has a preferred observable; it now has reusable caption, Results, and Methods text that match that choice.
+
+### Gap to target-journal standard
+- The broad-window Figure 5 path is now internally consistent: chosen readout, supporting data package, and replacement prose all align.
+- What remains is manuscript integration and final claim discipline, not more indecision about which Figure 5 branch to use.
+
+### Most critical quality risk
+The new wording must continue to present `symmetric_nonlocal_score` as a derived readout from the same heatmaps, not as if it were a deeper microscopic transport calculation.
+
+### Plan-revision advice
+1. Use `figure5-broad-window-caption-and-method-v1.md` as the default insertion source for the next manuscript rewrite.
+2. Keep the zero-bias wording only as supporting context, not as a competing main-text Figure 5 framing.
+3. Do not reopen the Figure 5 branch choice unless a later full-manuscript pass reveals a direct inconsistency.
+
+### Newly completed items
+- Added `figure5-broad-window-caption-and-method-v1.md`
+
+## 2026-05-01 | Round 20 supervision after Fig. 5 observable upgrade
+
+### Overall evaluation
+This was the right kind of transport-observable escalation. The project did not reopen the solver or drift back into control-parameter scans. It upgraded the readout layer on top of the rebuilt candidate heatmaps and tested several broad-window observables side by side.
+
+### Gap to target-journal standard
+- The project now has a concrete broad-window readout candidate rather than only a complaint that raw `|G_LR|` leaks too much away from zero bias.
+- Among the tested choices, `symmetric_nonlocal_score` is currently the strongest wide-window discriminator by worst-case median separation across the dot and impurity controls.
+- What remains is not exploratory coding, but manuscript judgment: whether this readout is already clean enough to justify the broader-bias framing, or whether the paper should still prefer the narrower near-zero-bias framing for maximal caution.
+
+### Most critical quality risk
+The new readout should not be described as a fundamentally new transport calculation. It is a readout-layer normalization and balancing step built from the same underlying heatmaps.
+
+### Plan-revision advice
+1. Treat `symmetric_nonlocal_score` as the current leading broad-window Fig. 5 readout.
+2. When writing methods, define it plainly as a balanced nonlocal score derived from `|G_LR|`, `G_LL`, and `G_RR`.
+3. Keep the near-zero-bias framing available as the lower-risk fallback until the final figure and caption pass decide which story is cleaner.
+
+### Newly completed items
+- Added `code/upgrade_fig5_observable_from_heatmaps.py`
+- Added `data/fig5-observable-upgrade-2026-05-01/observable_selection_table.csv`
+- Added `data/fig5-observable-upgrade-2026-05-01/fig5a_positive_observable_heatmap.csv`
+- Added `data/fig5-observable-upgrade-2026-05-01/fig5b_dot_candidate_observable_heatmap.csv`
+- Added `data/fig5-observable-upgrade-2026-05-01/fig5c_impurity_candidate_observable_heatmap.csv`
+- Added `data/fig5-observable-upgrade-2026-05-01/summary.md`
+
+## 2026-05-01 | Round 19 supervision after Fig. 5 window judgment
+
+### Overall evaluation
+This was the right follow-through after the candidate rebuild. The project did not immediately jump into rewriting the transport observable. It first asked the narrower question: whether the present proxy is already good enough if the figure is framed around the physically central near-zero-bias regime. That is a strong judgment move.
+
+### Gap to target-journal standard
+- The current proxy now looks defensible for a zero-bias or tight near-zero-bias Fig. 5 discriminator.
+- It still does not look equally strong as a full bias-window discriminator.
+- So the scientific bottleneck has split cleanly into two possible manuscript paths: a narrower but already supported near-zero-bias path, or a broader bias-window path that would still require an observable upgrade.
+
+### Most critical quality risk
+The main risk now is rhetorical rather than numerical: the manuscript could quietly imply a broad-bias transport discriminator even though the current numbers support a near-zero-bias discriminator much more strongly.
+
+### Plan-revision advice
+1. Frame the next Fig. 5 writing pass around zero bias or a small near-zero-bias window by default.
+2. Only reopen transport-code development if the paper truly needs a broader bias-window claim.
+3. Do not reopen dot/impurity parameter scans unless the observable is fixed and clearly still inadequate.
+
+### Newly completed items
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/window_discrimination_metrics.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/window_judgment.md`
+
+## 2026-05-01 | Round 18 supervision after candidate-based Fig. 4 / Fig. 5 rebuild
+
+### Overall evaluation
+This round closed the exact numerical action that the previous retune table pointed to. The project did not drift back into scanning. It used the locked dot and impurity candidates to regenerate the weak-panel data directly, which is the right execution behavior.
+
+### Gap to target-journal standard
+- The Fig. 4 control summary is now much healthier because the positive branch stays topological while both false-positive controls are explicitly trivial.
+- The Fig. 5 heatmaps now suppress the zero-bias nonlocal signal in the control cases as intended.
+- The remaining concern is narrower: the current proxy heatmaps still show sizable off-zero-bias structure in the controls, so the next scientific judgment is about observable adequacy rather than parameter adequacy.
+
+### Most critical quality risk
+The project could still overread the heatmaps if it treats suppressed zero-bias `G_LR` as already equivalent to a fully decisive transport discriminator across the whole bias window.
+
+### Plan-revision advice
+1. Freeze `data/fig4-fig5-candidate-rebuild-2026-05-01/` as the current weak-panel rebuild package.
+2. Judge the rebuilt heatmaps with claim discipline: if the final manuscript only needs the zero-bias and near-zero-bias story, the present proxy may already be usable; if it needs a broader bias-window discriminator, only the transport observable should be upgraded next.
+3. Do not reopen dot/impurity parameter hunting unless the observable itself is kept fixed and clearly fails.
+
+### Newly completed items
+- Added `code/rebuild_fig4_fig5_from_candidates.py`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig4d_control_summary_table.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig5a_positive_transport_heatmap.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig5b_dot_candidate_transport_heatmap.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig5c_impurity_candidate_transport_heatmap.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/summary.md`
+
 ## 2026-05-01 | Round 17 supervision after targeted Fig. 4 / Fig. 5 retune
 
 ### Overall evaluation

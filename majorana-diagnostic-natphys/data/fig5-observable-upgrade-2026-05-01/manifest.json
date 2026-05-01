@@ -1,0 +1,12 @@
+{
+  "generated_at_utc": "2026-05-01T13:06:04.654327+00:00",
+  "input_root": "/workspace/memory/majorana-diagnostic-natphys/data/fig4-fig5-candidate-rebuild-2026-05-01",
+  "output_root": "/workspace/memory/majorana-diagnostic-natphys/data/fig5-observable-upgrade-2026-05-01",
+  "tested_observables": [
+    "nonlocal_fraction_maxlocal",
+    "symmetric_nonlocal_score",
+    "nonlocal_fraction_sum",
+    "abs_glr"
+  ],
+  "selected_observable": "symmetric_nonlocal_score"
+}

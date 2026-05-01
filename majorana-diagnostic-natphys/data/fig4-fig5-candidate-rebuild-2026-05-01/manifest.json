@@ -1,0 +1,23 @@
+{
+  "generated_at_utc": "2026-05-01T12:55:53.528431+00:00",
+  "source_candidate_table": "/workspace/memory/majorana-diagnostic-natphys/data/fig4-fig5-targeted-retune-2026-05-01/candidate_controls.csv",
+  "baseline_script": "/workspace/memory/majorana-diagnostic-natphys/code/generate_cmjj_source_data.py",
+  "output_root": "/workspace/memory/majorana-diagnostic-natphys/data/fig4-fig5-candidate-rebuild-2026-05-01",
+  "dot_candidate": {
+    "phi_frac_pi": 0.16,
+    "phi": 0.5026548245743669,
+    "strength": 2.15
+  },
+  "impurity_candidate": {
+    "phi_frac_pi": 0.22,
+    "phi": 0.6911503837897545,
+    "strength": 2.25
+  },
+  "outputs": [
+    "fig4d_control_summary_table.csv",
+    "fig5a_positive_transport_heatmap.csv",
+    "fig5b_dot_candidate_transport_heatmap.csv",
+    "fig5c_impurity_candidate_transport_heatmap.csv",
+    "summary.md"
+  ]
+}

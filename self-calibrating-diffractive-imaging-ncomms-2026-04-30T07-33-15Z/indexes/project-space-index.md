@@ -26,6 +26,12 @@ Interpretation note:
 - `results/failure_cases/object_shift_failure_cases.md`: reviewer-facing negative-tail package
 - `results/natural_objects/natural_object_package.md`: natural-object audit scaffold
 - `results/tolerance/hardware_tolerance_package.md`: method-fair tolerance audit scaffold
+- `results/tolerance/tolerance_curve_summary.csv`: figure-ready tolerance summary table
+- `results/tolerance/tolerance_curve_detail.csv`: seed-resolved tolerance detail table
+- `results/tolerance/tolerance_plot_manifest.csv`: plot-ready tolerance panel manifest
+- `results/tolerance/hardware_tolerance_metrics.csv`: consolidated hardware-facing proxy-tolerance metrics
+- `source_data/Fig1/` through `source_data/FigS1/`: figure-level source-data folders
+- `archive/reproducibility_manifest.json`: project-wide reproducibility manifest
 
 ## Pending future authoritative files
 
@@ -34,4 +40,3 @@ Interpretation note:
 - `results/natural_objects/natural_object_metrics.csv`
 - `results/natural_objects/benchmark_root_metrics.csv`
 - `results/natural_objects/benchmark_root_per_seed.csv`
-- `results/tolerance/hardware_tolerance_metrics.csv`

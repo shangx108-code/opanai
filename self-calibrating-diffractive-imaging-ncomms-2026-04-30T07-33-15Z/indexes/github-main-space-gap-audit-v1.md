@@ -32,7 +32,7 @@ The current alignment check shows:
 - local project files: `475`
 - GitHub-tracked project files: `465`
 - missing GitHub-side substantive files: `0`
-- local-only non-authoritative files: `10` under `scripts/__pycache__/`
+- local-only non-authoritative files: `10` under `scripts/__pycache__`
 
 Blob-hash comparison across the shared file set shows that the substantive tracked project files are now aligned between the active local mirror and the GitHub long-term main space. Therefore the current project **is now present in the GitHub-backed long-term main space**.
 
@@ -71,12 +71,7 @@ The highest-priority gaps are:
 2. The true benchmark-root output files are still missing:
    - `results/natural_objects/benchmark_root_metrics.csv`
    - `results/natural_objects/benchmark_root_per_seed.csv`
-3. The tolerance package remains simulation-only and still lacks:
-   - `results/tolerance/tolerance_curve_summary.csv`
-   - `results/tolerance/tolerance_curve_detail.csv`
-   - `results/tolerance/tolerance_plot_manifest.csv`
-   - `results/tolerance/hardware_tolerance_metrics.csv`
-4. The figure-level source-data folders and narrative note package are still absent.
+3. The benchmark-root natural-image branch therefore remains `proxy-only` and blocks promotion of the current natural-image claims.
 
 ## Evidence-status view
 
@@ -98,17 +93,16 @@ The non-complete items are:
 
 ## Practical interpretation
 
-The current main-space problem is no longer GitHub placement. It is now a data-completeness issue:
+The current main-space problem is no longer GitHub placement. It is now a benchmark-root data-availability issue:
 
 1. the benchmark-root natural-image branch is still proxy-only
-2. the tolerance-closure exports are still incomplete
+2. benchmark-root metrics cannot be produced until licensed files are staged
 
 That means the next corrective work should happen in this order:
 
 1. stage licensed benchmark-root natural-image files
 2. run benchmark-root natural-image evaluation
-3. expand tolerance sweeps into uncertainty-resolved export tables
-4. build figure-level source-data folders and reproducibility packaging
+3. narrow or confirm the current proxy-natural claims against the benchmark-root outputs once they exist
 
 ## Shortest next executable action
 
