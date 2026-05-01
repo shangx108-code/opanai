@@ -3,7 +3,13 @@
 - Canonical local project root: `/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
 - Canonical GitHub branch: `open-ai`
 - Canonical GitHub repository: `shangx108-code/opanai`
+- Canonical GitHub long-term main space: `shangx108-code/opanai` / `open-ai` / `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
 - Canonical concept source: `/workspace/user_files/01-1-.txt`
+
+Interpretation note:
+
+- The GitHub path above is the only canonical long-term project root.
+- The local `/workspace/memory/...` directory is the active working mirror and does not by itself complete archival closure.
 
 ## Current authoritative files
 
