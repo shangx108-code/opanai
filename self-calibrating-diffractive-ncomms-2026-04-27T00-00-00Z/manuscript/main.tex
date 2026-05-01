@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\captionsetup{font=small,labelfont=bf}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\begin{document}
+\begin{center}
+{\LARGE \textbf{Passive self calibrating diffractive imaging through dynamic aberrations}}\\[1em]
+{\large Xin Shang$^{1,*}$}\\[0.5em]
+$^{1}$Affiliation and mailing address to be finalized before submission\\[0.5em]
+$^{*}$Correspondence: to be finalized before submission
+\end{center}
+
+\begin{abstract}
+Dynamic aberrations make coherent image formation a moving inverse problem because the degradation state changes during measurement rather than remaining fixed. Existing solutions often depend on active wavefront sensing, adaptive hardware, iterative correction or substantial electronic inference. Here we test a narrower question suited to a physically constrained benchmark: whether a fixed phase-only diffractive frontend can use a co-propagating pilot field to encode the instantaneous distortion state before digital reconstruction. Across mechanism-level surrogate studies, a Zernike wave-optics protocol, local information analysis, cross-task transfer checks and a first passive-processor prototype, the present evidence supports a bounded conclusion. A common-path pilot channel improves restoration relative to no-reference and mismatched-reference controls under the verified synthetic ledgers, with the strongest gain appearing in the wave-optics benchmark. The same evidence also sets a strict limit: the processor-level advantage remains weak and configuration sensitive, so the current manuscript frames the device result as a reproducible boundary case rather than a mature optical demonstration.
+\end{abstract}
+
+\section*{Introduction}
+Dynamic aberrations, turbulence, scattering, defocus and system drift remain central limits in microscopy, free-space sensing and coherent computational imaging because the degradation state varies from sample to sample and from frame to frame \cite{ref1,ref2,ref3,ref4,ref5,ref6,ref7,ref8}. The problem is therefore not only loss of contrast or resolution, but the fact that image formation becomes a time-varying inverse problem whose latent state is not directly known at the moment of measurement \cite{ref7,ref8,ref9,ref10,ref11,ref12,ref13}. Adaptive optics, wavefront shaping and electronic restoration have each provided powerful responses, yet they typically rely on explicit wavefront estimation, active modulation hardware, iterative correction or substantial digital post-processing \cite{ref2,ref3,ref4,ref9,ref10,ref11,ref12,ref13}.
+
+Diffractive optical neural networks and related free-space processors have extended passive optical computing beyond static classification toward denoising, phase processing, inverse design and hybrid optical-digital inference \cite{ref14,ref15,ref16,ref17,ref18,ref19,ref20,ref21,ref22,ref23}. Most reported systems, however, are optimized for one forward model or for a training distribution that treats perturbations as nuisance variability rather than as an instantaneous latent state to be inferred. This leaves an unresolved question for passive optical intelligence: can a fixed diffractive frontend become condition-aware without active retuning?
+
+Existing routes do not fully resolve that gap. Robust training can average across a family of degradations but does not guarantee access to the specific realization acting on the present input. Guide-star and wavefront-sensing schemes can estimate the aberration state, but they often require dedicated sensing paths, calibration loops or additional hardware \cite{ref2,ref4,ref11,ref24,ref25}. Purely digital restoration may be strong, yet it shifts the burden to electronic inference and may fail under distribution shift \cite{ref12,ref13,ref27,ref28,ref29,ref30,ref31,ref32}. A cleaner physical alternative is to let a known pilot field co-propagate with the object through the same unknown degradation, so that the optical measurement already carries conditional information about the current distortion.
+
+Here we formulate that conditional-optics viewpoint as a Nature Communications style benchmark for self-calibrating diffractive imaging. Figure~\ref{fig:schematic} defines the common-path pilot concept and the hybrid optical-digital pipeline considered throughout the study. Figures~\ref{fig:mechanism}--\ref{fig:transfer} establish the strongest currently verified evidence, moving from mechanism-level contrast to wave-optics persistence, local information analysis and task-transfer behavior. Figure~\ref{fig:processor} then reports the decisive processor-level comparison between ordinary and pilot-assisted phase-only diffractive frontends. The current evidence supports the mechanism and its wave-optics persistence, but not yet a strong device-level claim, so the manuscript is intentionally written with explicit evidence boundaries.
+
+\section*{Results}
+\subsection*{A common-path pilot defines the self-calibrating optical condition}
+The core hypothesis is shown schematically in Fig.~\ref{fig:schematic}. An object-bearing field and a known pilot field share the same degradation operator before entering a fixed phase-only diffractive stack. The common-path setting is compared against three controls: object-only no-reference imaging, a non-common-path pilot that does not share the same distortion realization and a wrong-reference condition that intentionally mismatches the pilot. Because the detector records intensity, the measurement contains auto-terms and cross-terms that can constrain the latent degradation state. The claim tested here is deliberately bounded: the pilot may supply useful conditional information about the current distortion, not that it universally solves blind inversion.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figures/figure1_schematic.png}
+\caption{\textbf{Common-path pilot concept for hybrid self-calibrating diffractive imaging.} A known pilot field co-propagates with the object field through the same dynamic aberration channel before entering a fixed phase-only diffractive stack. The measured intensity is then decoded by a lightweight reconstruction stage. The study compares this common-path condition against no-reference, non-common-path and wrong-reference controls.}
+\label{fig:schematic}
+\end{figure}
+
+\subsection*{Mechanism-level and wave-optics benchmarks show the clearest verified gain}
+The first verified result uses a Gaussian surrogate OOD stronger-aberration set and serves only as a mechanism-level contrast. The mean reconstruction PSNR increases from 19.669\,dB without a reference to 20.268\,dB with a non-common-path reference and 21.990\,dB with the common-path pilot (Fig.~\ref{fig:mechanism}a). The second verified result moves to a Zernike wave-optics pupil model with dynamic aberrations. In that benchmark, the common-path condition reaches 38.422\,dB OOD PSNR, exceeding both the no-reference control at 37.069\,dB and the non-common-path control at 37.078\,dB (Fig.~\ref{fig:mechanism}b). The same condition also yields the smallest mean PSF mismatch, with a mean PSF MSE of $4.217\times10^{-6}$ compared with $1.279\times10^{-5}$ and $1.155\times10^{-5}$ for the no-reference and non-common-path conditions, respectively (Fig.~\ref{fig:mechanism}c). These are the strongest current data supporting the claim that the co-propagating pilot captures condition-specific information.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figures/figure2_mechanism_waveoptics.png}
+\caption{\textbf{Mechanism-level and wave-optics validation of the common-path pilot.} a, Gaussian surrogate OOD reconstruction PSNR. b, Zernike wave-optics OOD reconstruction PSNR. c, Mean PSF mismatch in the Zernike wave-optics benchmark. All plotted values are taken from the verified project ledger and rendered from the source-data files included in this package.}
+\label{fig:mechanism}
+\end{figure}
+
+\subsection*{Local information and task-transfer analyses define where the gain is strongest}
+The pilot mechanism should be strongest when the downstream task is tightly coupled to the current degradation state. The current CRLB-style scan supports that interpretation: the median Fisher-information trace remains finite in both train and OOD regimes, with values of $6.452\times10^{-4}$ and $1.736\times10^{-4}$, respectively (Fig.~\ref{fig:transfer}a). Cross-task surrogate evaluation shows that the clearest downstream benefit appears for reconstruction, where the common-path condition improves OOD PSNR from 34.837\,dB to 36.782\,dB (Fig.~\ref{fig:transfer}b). The classification residual decreases only modestly, from 0.035464 to 0.034616 (Fig.~\ref{fig:transfer}c), and inverse-design target MSE changes only weakly, from 0.002317 to 0.002315 (Fig.~\ref{fig:transfer}d). The correct interpretation is therefore task dependence rather than universal benefit.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figures/figure3_information_transfer.png}
+\caption{\textbf{Local information and task-transfer boundary.} a, Median Fisher-information trace in the train and OOD regions of the CRLB-style scan. b, Reconstruction transfer. c, Classification residual. d, Inverse-design target MSE. The data show that the common-path pilot is most useful in reconstruction-oriented settings and only weakly beneficial in the present inverse-design proxy.}
+\label{fig:transfer}
+\end{figure}
+
+\subsection*{The processor-level result is reproducible but still bounded}
+The decisive question is whether the same mechanism survives in a fixed passive diffractive processor. The current answer is only partial. In the first two-layer prototype, the common-path condition underperformed the ordinary D2NN by 0.191\,dB, showing that adding a pilot alone does not automatically yield device-level benefit. A revised three-layer self-calibrating prototype then produced a weak positive signal, with OOD PSNR values of 11.559\,dB for the common-path condition, 11.356\,dB for the ordinary D2NN, 11.505\,dB for the non-common-path control and 11.350\,dB for the wrong-reference condition. The restored round-6 NumPy pipeline remains more conservative still: the best common-path and ordinary conditions are effectively tied at 20.421\,dB, while the best non-common-path condition reaches 20.473\,dB. The strongest matched common-path advantage found so far is a local 0.214\,dB gain over the matched non-common-path control. Figure~\ref{fig:processor} therefore documents a real but bounded processor-level signal. It does not yet support the claim that passive self-calibration has been robustly demonstrated at the device level.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{../figures/figure4_processor_boundary.png}
+\caption{\textbf{Processor-level evidence boundary.} a, Stage-wise processor-level gain. Round~5 is negative, round~5b is weakly positive and round~6 returns to an effective tie with the ordinary D2NN. b, Best OOD PSNR values in the restored round-6 pipeline. The present device result is therefore reproducible but not yet decisive.}
+\label{fig:processor}
+\end{figure}
+
+\section*{Discussion}
+The verified evidence supports a coherent but bounded story. A common-path pilot can encode useful information about the instantaneous degradation state and improve restoration under the present surrogate and Zernike wave-optics protocols. The information analysis and task-transfer checks also explain why the strongest signal appears for reconstruction-oriented mappings rather than across all downstream tasks. This is the central scientific contribution currently supported by the data.
+
+At the same time, the manuscript should not overclaim optical autonomy. The present system is hybrid optical-digital, with a fixed phase-only diffractive frontend coupled to a lightweight reconstruction stage, and the processor-level gain remains weak. The current device evidence is therefore best understood as a reproducible boundary case that keeps the conditional-optics mechanism alive while defining what still blocks a stronger Nature Communications claim. A more decisive version would need broader degradation families, stronger source-data chains, a cleaner fairness audit and a processor-level gain that is no longer confined to local configuration windows.
+
+\section*{Methods}
+\subsection*{Optical formulation}
+The input field is written as the coherent sum of an object-bearing channel and a known pilot channel, both passing through the same unknown degradation operator before entering either a digital decoder or a fixed phase-only diffractive frontend. The common-path condition means that the pilot and object share the same instantaneous aberration realization. The no-reference condition removes the pilot. The non-common-path and wrong-reference conditions retain a pilot but break the physical correspondence between pilot and object.
+
+\subsection*{Forward models}
+The evidence chain includes a Gaussian shared-blur surrogate, a Zernike wave-optics pupil model, a CRLB-style local information scan, a cross-task surrogate benchmark and a passive phase-only processor comparison. The wave-optics model is represented in scalar form for a paraxial coherent field, with the propagation kernel written in Fourier space as
+\begin{equation}
+H(f_x,f_y;z,\lambda)=\exp\left[-i\pi\lambda z(f_x^2+f_y^2)\right].
+\end{equation}
+The present manuscript uses the verified ledger values already produced from these models; it does not claim that all raw round-level files have yet been restored into the active workspace.
+
+\subsection*{Metrics and evidence labels}
+The main manuscript reports OOD reconstruction PSNR and mean PSF mismatch, with classification residuals and inverse-design target MSE used only as secondary task-transfer diagnostics. Statements are interpreted according to three evidence labels: verified, partially verified and unverified. Figures~\ref{fig:mechanism} and \ref{fig:transfer} are based on verified ledger values. Figure~\ref{fig:processor} mixes verified and partially verified values and is therefore used only to define the current device boundary.
+
+\subsection*{Statistics}
+This package visualizes deterministic summary values already recorded in the project ledger. No new statistical tests are introduced in the current manuscript build. Where exact replication counts or per-seed raw tables are still absent from the active workspace, the relevant claims are explicitly limited and deferred to future source-data completion.
+
+\section*{Data Availability}
+The processed source-data tables used to generate Figs.~\ref{fig:mechanism}--\ref{fig:processor}, together with the source-data index and supplementary method-fairness table, are included in the current project package and synchronized to the GitHub-backed long-term project space described in the Code Availability statement. These files summarize previously verified project results and are intended for transparent manuscript assembly. Restoration of the complete raw round-level outputs remains an outstanding archive task.
+
+\section*{Code Availability}
+The figure-rendering script for the present manuscript build and the manuscript source files are included in the current project package. The project long-term archive target is the \texttt{open-ai} branch of the GitHub repository \texttt{shangx108-code/opanai}, under the project directory created for this manuscript package. Recovery of the original round1--round6 simulation scripts into the same active archive remains in progress and is stated explicitly in the Supplementary Information.
+
+\section*{References}
+\begin{thebibliography}{99}
+\bibitem{ref1} Tyson, R. K. \textit{Principles of Adaptive Optics}. CRC Press (2015).
+\bibitem{ref2} Booth, M. J. Adaptive optical microscopy: the ongoing quest for a perfect image. \textit{Light Sci. Appl.} \textbf{3}, e165 (2014).
+\bibitem{ref3} Ji, N. Adaptive optical fluorescence microscopy. \textit{Nat. Methods} \textbf{14}, 374--380 (2017).
+\bibitem{ref4} Zhang, Q., Hu, Q. I., Berlage, C. \& Kner, P. Adaptive optics for optical microscopy. \textit{Biomed. Opt. Express} \textbf{14}, 1732--1762 (2023).
+\bibitem{ref5} Vellekoop, I. M. \& Mosk, A. P. Focusing coherent light through opaque strongly scattering media. \textit{Opt. Lett.} \textbf{32}, 2309--2311 (2007).
+\bibitem{ref6} Bertolotti, J. \textit{et al.} Non-invasive imaging through opaque scattering layers. \textit{Nature} \textbf{491}, 232--234 (2012).
+\bibitem{ref7} Katz, O., Heidmann, P., Fink, M. \& Gigan, S. Non-invasive single-shot imaging through scattering layers and around corners via speckle correlations. \textit{Nat. Photon.} \textbf{8}, 784--790 (2014).
+\bibitem{ref8} Baek, Y. S., Lee, K. R., Oh, J. \& Park, Y. K. Speckle-correlation scattering matrix approaches for imaging and sensing through turbidity. \textit{Sensors} \textbf{20}, 3147 (2020).
+\bibitem{ref9} Lane, R. G. \& Bates, R. H. T. Automatic multidimensional deconvolution. \textit{J. Opt. Soc. Am. A} \textbf{4}, 180--188 (1987).
+\bibitem{ref10} Fish, D. A., Brinicombe, A. M., Pike, E. R. \& Walker, J. G. Blind deconvolution by means of the Richardson-Lucy algorithm. \textit{J. Opt. Soc. Am. A} \textbf{12}, 58--65 (1995).
+\bibitem{ref11} Horstmeyer, R., Judkewitz, B., Vellekoop, I. M., Assawaworrarit, S. \& Yang, C. Guidestar-assisted wavefront-shaping methods for focusing light into biological tissue. \textit{Nat. Photon.} \textbf{9}, 563--571 (2015).
+\bibitem{ref12} Liu, Y., Hu, G., Chu, X., Liu, Z. \& Zhou, L. Deep learning based coherent diffraction imaging of dynamic scattering media. \textit{Opt. Express} \textbf{31}, 44410--44424 (2023).
+\bibitem{ref13} Sun, S. \textit{et al.} Quantum-inspired computational wavefront shaping enables turbulence-resilient distributed aperture synthesis imaging. \textit{Sci. Adv.} \textbf{11}, eaea4152 (2025).
+\bibitem{ref14} Lin, X. \textit{et al.} All-optical machine learning using diffractive deep neural networks. \textit{Science} \textbf{361}, 1004--1008 (2018).
+\bibitem{ref15} Mengu, D. \textit{et al.} At the intersection of optics and deep learning: statistical inference, computing, and inverse design. \textit{Adv. Opt. Photon.} \textbf{14}, 209--290 (2022).
+\bibitem{ref16} Hu, J., Mengu, D., Tzarouchis, D. C., Edwards, B., Engheta, N. \& Ozcan, A. Diffractive optical computing in free space. \textit{Nat. Commun.} \textbf{15}, 45982 (2024).
+\bibitem{ref17} Li, J. \textit{et al.} All-optical phase conjugation using diffractive wavefront processing. \textit{Nat. Commun.} \textbf{15}, 49304 (2024).
+\bibitem{ref18} Li, J., Mengu, D., Jarrahi, M., Aksit, K. \& Ozcan, A. All-optical image denoising using a diffractive visual processor. \textit{Light Sci. Appl.} \textbf{13}, 385 (2024).
+\bibitem{ref19} Shen, C. Y. \textit{et al.} Multiplane quantitative phase imaging using a wavelength-multiplexed diffractive optical processor. \textit{Adv. Photon.} \textbf{6}, 056003 (2024).
+\bibitem{ref20} Feng, F. \textit{et al.} Symbiotic evolution of photonics and artificial intelligence: a comprehensive review. \textit{Adv. Photon.} \textbf{7}, 024001 (2025).
+\bibitem{ref21} Wang, Z., Peng, Y., Fang, L. \& Gao, L. Computational optical imaging: on the convergence of physical and digital layers. \textit{Optica} \textbf{12}, 113--129 (2025).
+\bibitem{ref22} Chang, J. \textit{et al.} Hybrid optical-electronic convolutional neural networks with optimized diffractive optics for image classification. \textit{Sci. Rep.} \textbf{8}, 12324 (2018).
+\bibitem{ref23} Zhou, T. \textit{et al.} In situ optical backpropagation training of diffractive optical neural networks. \textit{Photonics Res.} \textbf{8}, 940--953 (2020).
+\bibitem{ref24} Gao, Y., Cao, L. \& Tsai, D. P. Single-shot, reference-less computational wavefront sensing for complex optical fields. \textit{Light Sci. Appl.} \textbf{15}, 241 (2026).
+\bibitem{ref25} Jiang, W., Guo, H., Metzler, C. A. \& Veeraraghavan, A. Guidestar-free adaptive optics with asymmetric apertures. \textit{ACM Trans. Graph.} \textbf{45}, 1--14 (2026).
+\bibitem{ref26} Kundur, D. \& Hatzinakos, D. Blind image deconvolution. \textit{IEEE Signal Process. Mag.} \textbf{13}, 43--64 (1996).
+\bibitem{ref27} Campisi, P. \& Egiazarian, K. \textit{Blind Image Deconvolution Theory and Applications}. CRC Press (2007).
+\bibitem{ref28} Krishnan, D., Tay, T. \& Fergus, R. Blind deconvolution using a normalized sparsity measure. In \textit{Proc. CVPR} 233--240 (2011).
+\bibitem{ref29} Schuler, C. J., Hirsch, M., Harmeling, S. \& Sch{\"o}lkopf, B. Learning to deblur. \textit{IEEE Trans. Pattern Anal. Mach. Intell.} \textbf{38}, 1439--1451 (2016).
+\bibitem{ref30} Nah, S., Kim, T. H. \& Lee, K. M. Deep multi-scale convolutional neural network for dynamic scene deblurring. In \textit{Proc. CVPR} 3883--3891 (2017).
+\bibitem{ref31} Kupyn, O., Budzan, V., Mykhailych, M., Mishkin, D. \& Matas, J. DeblurGAN: blind motion deblurring using conditional adversarial networks. In \textit{Proc. CVPR} 8183--8192 (2018).
+\bibitem{ref32} He, H., Sun, H. \& Gao, L. Deep aberration correction in computational imaging: a review of physics-guided and data-driven strategies. \textit{J. Phys. Photonics} \textbf{6}, 032001 (2024).
+\bibitem{ref33} Li, Y. \textit{et al.} Learned wavefront shaping for dynamic scattering compensation. \textit{Laser Photon. Rev.} \textbf{18}, 2300921 (2024).
+\bibitem{ref34} Ozcan, A. \& McLeod, E. Lensless imaging and sensing. \textit{Annu. Rev. Biomed. Eng.} \textbf{18}, 77--102 (2016).
+\bibitem{ref35} Sinha, A., Lee, J., Li, S. \& Barbastathis, G. Lensless computational imaging through deep learning. \textit{Optica} \textbf{4}, 1117--1125 (2017).
+\bibitem{ref36} Rivenson, Y. \textit{et al.} Deep learning microscopy. \textit{Optica} \textbf{4}, 1437--1443 (2017).
+\end{thebibliography}
+
+\section*{Acknowledgements}
+This manuscript package was assembled from the current project ledger, uploaded project notes and the existing memory records for the self-calibrating diffractive imaging study.
+
+\section*{Author Contributions}
+X.S. organized the project evidence chain, structured the manuscript narrative, prepared the manuscript package and consolidated the current source-data tables.
+
+\section*{Competing Interests}
+The author declares no competing interests.
+
+\end{document}
