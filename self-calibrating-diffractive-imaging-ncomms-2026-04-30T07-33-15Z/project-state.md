@@ -92,8 +92,7 @@ Stage the licensed natural-image inputs into the audited dataset roots required 
 - This audit verifies that:
   - the project manifest already points to repository `shangx108-code/opanai`, branch `open-ai`, and GitHub root `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
   - that GitHub path is the canonical long-term main space for this project, while the `/workspace/memory/...` directory is only the current working mirror
-  - the actual git-backed local carrier currently exposes only `master` / `origin/master`
-  - the active project directory is still untracked in that git-backed carrier
+  - the substantive tracked project files are aligned between the current local mirror and the GitHub long-term main space
   - the missing-data inventory is now explicit rather than implicit
 - A robust-mask mitigation training pass has now been executed with in-loop perturbation exposure to:
   - unperturbed masks
