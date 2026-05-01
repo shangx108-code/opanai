@@ -13,7 +13,7 @@ Canonical long-term main space:
 - GitHub project root: `self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
 - Current local working mirror: `/workspace/memory/self-calibrating-diffractive-imaging-ncomms-2026-04-30T07-33-15Z`
 
-This means the project root definition is already fixed. What is still incomplete is GitHub archival closure of the current local mirror into that canonical GitHub path.
+This means the project root definition is fixed and the substantive tracked project files are aligned to that canonical GitHub path. What remains incomplete is the evidence package itself, not the project-space placement.
 
 Project layout:
 
