@@ -6,5 +6,5 @@
 - [x] Avoid fabricated citations and mark literature placeholders explicitly where references will be needed later.
 - [x] Preserve a strict PRL tone: one central result, compressed framing, and no claims that imply a completed BTK or full transport calculation.
 - [x] Save the manuscript draft and project-level document checklist into the long-term project space.
-- [ ] Refresh `sync-status.md` after the manuscript files are committed.
-- [ ] Commit and push the manuscript artifacts to the GitHub-backed long-term project space.
+- [x] Refresh `sync-status.md` after the manuscript files are committed.
+- [x] Commit and push the manuscript artifacts to the GitHub-backed long-term project space.
