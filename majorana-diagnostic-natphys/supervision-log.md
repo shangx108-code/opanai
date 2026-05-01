@@ -1,5 +1,31 @@
 # Supervision Log
 
+## 2026-05-01 | Round 18 supervision after candidate-based Fig. 4 / Fig. 5 rebuild
+
+### Overall evaluation
+This round closed the exact numerical action that the previous retune table pointed to. The project did not drift back into scanning. It used the locked dot and impurity candidates to regenerate the weak-panel data directly, which is the right execution behavior.
+
+### Gap to target-journal standard
+- The Fig. 4 control summary is now much healthier because the positive branch stays topological while both false-positive controls are explicitly trivial.
+- The Fig. 5 heatmaps now suppress the zero-bias nonlocal signal in the control cases as intended.
+- The remaining concern is narrower: the current proxy heatmaps still show sizable off-zero-bias structure in the controls, so the next scientific judgment is about observable adequacy rather than parameter adequacy.
+
+### Most critical quality risk
+The project could still overread the heatmaps if it treats suppressed zero-bias `G_LR` as already equivalent to a fully decisive transport discriminator across the whole bias window.
+
+### Plan-revision advice
+1. Freeze `data/fig4-fig5-candidate-rebuild-2026-05-01/` as the current weak-panel rebuild package.
+2. Judge the rebuilt heatmaps with claim discipline: if the final manuscript only needs the zero-bias and near-zero-bias story, the present proxy may already be usable; if it needs a broader bias-window discriminator, only the transport observable should be upgraded next.
+3. Do not reopen dot/impurity parameter hunting unless the observable itself is kept fixed and clearly fails.
+
+### Newly completed items
+- Added `code/rebuild_fig4_fig5_from_candidates.py`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig4d_control_summary_table.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig5a_positive_transport_heatmap.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig5b_dot_candidate_transport_heatmap.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/fig5c_impurity_candidate_transport_heatmap.csv`
+- Added `data/fig4-fig5-candidate-rebuild-2026-05-01/summary.md`
+
 ## 2026-05-01 | Round 17 supervision after targeted Fig. 4 / Fig. 5 retune
 
 ### Overall evaluation

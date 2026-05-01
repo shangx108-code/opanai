@@ -13,7 +13,7 @@ Build a publishable theory paper that does not merely restate that nonlocal cond
 Application-and-venue repositioning with a first real CMJJ source-data bundle. On 2026-05-01, the project not only locked the compensated-magnetic Josephson-junction branch and the Nature Communications packaging path, but also generated the first auditable Figures 2-5 source-data package for that branch under `data/cmjj-source-data-2026-05-01/`. The package is built from a minimal executable effective model that runs in the current `numpy`-only environment and already covers bulk gap scans, finite-ring topology labels, open-boundary spectra, negative controls, and lead-attached transport proxies.
 
 ## Current main bottleneck
-The main bottleneck has shifted from total absence of CMJJ evidence to selective upgrade of the weak panels. A first review pass over the new bundle shows that Figures 2 and 3 are already plausible manuscript-facing assets, while Figures 4 and 5 remain the limiting layer. The concrete bottleneck is now narrower than before: a targeted retune run has already identified dot and impurity control windows that recover `nu_ring = 1` while keeping `min|E|` in the near-zero regime and driving `|G_LR|` at the probe bias effectively to zero. The remaining job is no longer a blind search, but a focused panel rebuild around those candidate settings.
+The main bottleneck has shifted from total absence of CMJJ evidence to selective upgrade of the weak panels. A first review pass over the new bundle shows that Figures 2 and 3 are already plausible manuscript-facing assets, while Figures 4 and 5 remain the limiting layer. The concrete bottleneck is now narrower than before: a targeted retune run identified dot and impurity control windows that recover `nu_ring = 1` while keeping `min|E|` in the near-zero regime, and a follow-up candidate rebuild has already regenerated the Fig. 4 control summary plus the Fig. 5 positive/dot/impurity heatmaps around those locked settings. The remaining issue is no longer parameter hunting, but judging whether the current heatmap observable is selective enough away from zero bias or whether only the transport definition still needs tightening.
 
 ## Highest-priority objective for the current round
 Convert the first CMJJ source-data bundle into a manuscript-facing package:
@@ -22,8 +22,9 @@ Convert the first CMJJ source-data bundle into a manuscript-facing package:
 2. keep `B-nc-repositioning-and-reproducibility-plan-2026-05-01.md` as the fixed packaging brief;
 3. treat `data/cmjj-source-data-2026-05-01/` and `code/generate_cmjj_source_data.py` as the current reproducible baseline;
 4. freeze the first-pass bundle as the baseline and treat `data/fig4-fig5-targeted-retune-2026-05-01/` plus `code/retune_fig4_fig5_targeted.py` as the current control-retune workspace;
-5. rebuild the Figure 4 summary rows and Figure 5 heatmaps around the newly identified trivial-near-zero control candidates before any venue-language escalation;
-6. only after that add plotting, captioning, and venue-specific figure selection.
+5. treat `data/fig4-fig5-candidate-rebuild-2026-05-01/` as the current manuscript-facing weak-panel package for Figures 4 and 5;
+6. decide whether the present heatmap observable is now sufficient or whether only the off-zero-bias transport criterion still needs tightening;
+7. only after that add plotting, captioning, and venue-specific figure selection.
 
 ## Proposed central claim
 In a compensated-magnetic Josephson junction, field-free topological superconductivity should be diagnosed not from a local near-zero feature alone, but from the consistency of bulk topology, open-boundary spectra, and phase-resolved nonlocal response under explicit ABS, impurity, and disorder false-positive tests.
@@ -47,6 +48,7 @@ In a compensated-magnetic Josephson junction, field-free topological superconduc
 - A first real CMJJ Figures 2-5 source-data bundle now exists under `memory/majorana-diagnostic-natphys/data/cmjj-source-data-2026-05-01/`
 - The corresponding generator script and config now exist under `code/generate_cmjj_source_data.py` and `config/cmjj_source_data_config.json`
 - A targeted Fig. 4 / Fig. 5 retune bundle now exists under `data/fig4-fig5-targeted-retune-2026-05-01/`, with ranked dot and impurity control candidates that stay topologically trivial while remaining near-zero
+- A candidate-based Fig. 4 / Fig. 5 rebuild bundle now exists under `data/fig4-fig5-candidate-rebuild-2026-05-01/`, including the updated control summary table and regenerated positive/dot/impurity heatmaps
 - A first manuscript package and LaTeX draft now exist in `/workspace/output`
 - Literature positioning now reflects the 2026 TAJJ overlap explicitly
 - A formal internal theory note now defines the diagnostic hierarchy and evidence-completion criteria
@@ -65,7 +67,7 @@ In a compensated-magnetic Josephson junction, field-free topological superconduc
 - A benchmark where nonlocal transport, gap reopening, and a stronger topology label are evaluated together in the compensated-magnetic branch with the final chosen observable definitions
 - One more false-positive family, preferably impurity- or YSR-like, implemented in the compensated-magnetic branch itself
 - Stronger experimental observability windows for temperature and barrier scans
-- A final focused recomputation of Fig. 4 summary rows and Fig. 5 heatmaps using the new trivial-near-zero candidate controls
+- A judgment call on whether the current Fig. 5 heatmap observable is now selective enough away from zero bias, or whether only that transport definition still needs tightening
 
 ## Acceptance probability (stage estimate)
 - Nature Physics: 14-22% in the current manuscript-package state
@@ -74,4 +76,4 @@ In a compensated-magnetic Josephson junction, field-free topological superconduc
 - Reason: the framing is now healthier, but the compensated-magnetic branch still lacks a real figure-grade evidence bundle and the reproducibility layer is not yet complete
 
 ## Last update
-2026-05-01: completed a targeted Fig. 4 / Fig. 5 retune run and stored the outputs under `data/fig4-fig5-targeted-retune-2026-05-01/`. The search identified concrete dot and impurity parameter windows where the controls remain near-zero but return to `nu_ring = 1` and show effectively vanishing `|G_LR|` at the probe bias, so the next numerical round should rebuild only the weak Fig. 4 / Fig. 5 panels around those candidates rather than continue unconstrained parameter hunting.
+2026-05-01: completed a candidate-based Fig. 4 / Fig. 5 rebuild and stored the outputs under `data/fig4-fig5-candidate-rebuild-2026-05-01/`. The new Fig. 4 control summary is clean (`nu_ring = -1` for the positive control and `nu_ring = 1` for both retuned controls), and the Fig. 5 dot/impurity heatmaps now suppress the zero-bias nonlocal signal as intended. The remaining question is whether the off-zero-bias leakage in the present proxy observable is still too large for the final claim burden.
