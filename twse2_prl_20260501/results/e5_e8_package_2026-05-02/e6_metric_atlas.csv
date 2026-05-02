@@ -1,0 +1,12 @@
+metric,value,source,meaning
+outer_inner_ratio,5.711864406779661,WP1,> 1 indicates a two-scale regime is present before AR selectivity is tested.
+s_wave_eta1_avg_frustration,4.132233444309459e-11,WP2,Ordinary same-sign reference should stay near zero in the interface-sign proxy.
+s_pm_eta1_avg_frustration,0.9999999999586766,WP2,Intervalley sign-changing proxy activates strongly when eta -> 1.
+chiral_eta1_avg_frustration,0.533334179503771,WP2,Phase-winding proxy retains finite boundary frustration even without intervalley activation.
+s_wave_peak_contrast_monotonic_fraction_vs_Z,1.0,semi-infinite BTK,Fraction of s-wave slices with strictly monotonic decreasing peak contrast as Z increases.
+s_wave_peak_contrast_z2_over_z0_eta0p5,0.36668990074887037,semi-infinite BTK,Compressed-V3 total-response suppression ratio between Z=2 and Z=0 at eta=0.5 meV.
+best_alpha_btk_peak_contrast_r,-0.4381066836867577,alpha-BTK package,Largest-magnitude compressed-V3 total peak-contrast Pearson correlation within the chosen eta_mix panel.
+best_alpha_btk_peak_contrast_rho,-0.10540925533894598,alpha-BTK package,Matched Spearman rank correlation for the highlighted alpha-BTK slice.
+xi_ar,pending,E4 follow-up,Need low-barrier AR scan on the same parameter family to certify inner-gap selectivity.
+A_phi,pending,future phi scan,Need explicit phi-dependent conductance to quantify angular anisotropy.
+S_split,pending,future phi scan,Need low-energy peak splitting or critical-closing scan to define the split-scale metric.
