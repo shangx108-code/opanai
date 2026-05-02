@@ -19,6 +19,7 @@ Uploaded in this round:
   `manuscript-facing-sync-2026-05-02/figures/`
 - updated `project-state.md`
 - updated `archive-checklist.md`
+- added `project-space-index.md`
 
 Purpose:
 
@@ -27,5 +28,8 @@ Purpose:
   to the same manuscript snapshot;
 - make the current PDFs auditable even before the final non-placeholder figure
   package exists;
+- record that the local long-term project space has been rehydrated from the
+  existing GitHub-backed code, config, data, and archive directories so the
+  workspace copy again carries the full project-space structure;
 - record clearly that this round improves manuscript packaging and traceability,
   not the blocked full-device topology rerun itself.
