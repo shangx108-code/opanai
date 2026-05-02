@@ -1,0 +1,39 @@
+# Held-out family multi-seed tolerance CI configuration
+project: self-calibrating-diffractive-imaging-ncomms
+created_utc: 2026-05-02T15:45:41.593469+00:00
+inputs:
+  natural_manifest: source_data/natural_image_gray1000_manifest.csv
+  natural_manifest_sha256: b68641eff429fe1f5af073228006004232b86f609877c6d653dba14ea04c70dd
+  heldout_eval_npz: source_data/heldout_family_full_eval.npz
+  heldout_eval_npz_sha256: 3e6a3d11d72d677bde831742d1c76cf7574f675dfef664868c156abd4c71cd26
+split:
+  split_seed: 42
+  unit: base_image_family
+  train_base_images:
+    - aqua_ravines.jpg
+    - liquid_helium.jpg
+    - ticotico.jpg
+  heldout_test_base_images:
+    - example-image-a.jpg
+    - example-image-b.jpg
+multiseed:
+  seeds: [101, 203, 307, 401, 509]
+  ci_method: normal_approximation_1p96_times_sample_std_over_sqrt_n
+  seed_count_minimum: 5
+tolerance:
+  noise_levels: [0.02, 0.04, 0.06, 0.08, 0.10, 0.12]
+  metrics:
+    - energy_gain_vs_ordinary
+    - speckle_reduction_vs_ordinary
+    - dual_win_rate
+outputs:
+  split_manifest: analysis/heldout_family_multiseed_tolerance_ci/heldout_family_split_manifest.csv
+  multiseed_ci_summary: analysis/heldout_family_multiseed_tolerance_ci/multiseed_ci_summary.csv
+  tolerance_sweep_summary: analysis/heldout_family_multiseed_tolerance_ci/tolerance_sweep_summary.csv
+  tolerance_boundary_summary: analysis/heldout_family_multiseed_tolerance_ci/tolerance_boundary_summary.csv
+  figure_to_data_mapping: analysis/heldout_family_multiseed_tolerance_ci/figure_to_data_mapping.csv
+  run_log: logs/heldout_family_phaseonly_tolerance_run.log
+  checksums: checksums/heldout_family_multiseed_tolerance_ci_SHA256SUMS.txt
+boundary_notes:
+  - This configuration audits existing project outputs and does not create new optical measurements.
+  - The split manifest is deterministic over the available gray1000 crop manifest and prevents base-image leakage.
