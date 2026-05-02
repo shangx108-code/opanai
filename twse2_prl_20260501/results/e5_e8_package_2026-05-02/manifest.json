@@ -1,0 +1,26 @@
+{
+  "package": "e5_e8_package_2026-05-02",
+  "inputs": {
+    "wp1_summary": "/workspace/memory/twse2_prl_20260501/results/wp1_summary.json",
+    "wp2_edge_proxy": "/workspace/memory/twse2_prl_20260501/results/wp2_edge_proxy.csv",
+    "alpha_btk_metadata": "/workspace/memory/twse2_prl_20260501/results/alpha_btk_correlation_2026-05-02/metadata.json",
+    "btk_robustness_summary": "/workspace/memory/twse2-andreev-prl/data/btk-generalized-valley-resolved-semi-infinite-2026-04-29/robustness_summary.csv"
+  },
+  "key_metrics": {
+    "outer_inner_ratio": 5.711864406779661,
+    "s_wave_eta1": 4.132233444309459e-11,
+    "spm_eta1": 0.9999999999586766,
+    "chiral_eta1": 0.533334179503771,
+    "s_wave_monotonic_fraction": 1.0,
+    "z2_over_z0": 0.36668990074887037,
+    "best_alpha_btk_r": -0.4381066836867577,
+    "best_alpha_btk_rho": -0.10540925533894598
+  },
+  "outputs": [
+    "e5_swave_failure_map.csv",
+    "e6_metric_atlas.csv",
+    "e6_decision_tree.md",
+    "e7_prl_gate.md",
+    "e8_manuscript_scaffold.md"
+  ]
+}
