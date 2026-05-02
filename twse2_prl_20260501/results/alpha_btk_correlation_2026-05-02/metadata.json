@@ -1,0 +1,24 @@
+{
+  "source_config": "/workspace/memory/twse2_prl_20260501/config/default_params.json",
+  "source_btk_root": "/workspace/memory/twse2-andreev-prl/data/btk-generalized-valley-resolved-semi-infinite-2026-04-29",
+  "pairings": [
+    "s_wave",
+    "nodal_even",
+    "valley_even",
+    "valley_odd"
+  ],
+  "alpha_eta_mix_values": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "figure_meta": {
+    "focus_alpha_eta_mix": 1.0,
+    "best_barrier_Z": 0.0,
+    "best_btk_eta_meV": 0.05,
+    "best_pearson_r": -0.3451096267955036,
+    "best_spearman_rho": -0.10540925533894598
+  }
+}
