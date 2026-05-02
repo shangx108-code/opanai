@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+
+\setstretch{1.15}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+\title{\textbf{Supplementary Information}\\
+False-positive-resistant nonlocal diagnosis of field-free topological superconductivity in compensated-magnetic Josephson junctions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Supplement overview}
+
+This Supplement is organized as a second evidentiary layer whose purpose is to support, stress-test and delimit the claims already made in the main manuscript. Each section answers one of three questions: how the main-text quantities are defined, how their numerical stability is checked, and how far the final diagnostic survives beyond the representative examples shown in the main text.
+
+\paragraph{Supplement S1 | Model definition.}
+This section fixes the exact Hamiltonian, basis conventions, geometry, pairing profile, compensated magnetic texture, phase convention and default parameters. Its purpose is to make the main model unambiguous.
+
+\paragraph{Supplement S2 | Topological invariant.}
+This section provides the formal definition and numerical implementation of the $Z_2$ invariant, together with convergence checks and at least one independent validation route. Its purpose is to defend Fig.~2 against the attack that the bulk phase boundary is diagnostic-dependent or numerically fragile.
+
+\paragraph{Supplement S3 | Open-boundary calculations.}
+This section defines system sizes, diagonalization choices, end-weight measures, spectral-isolation metrics and length scaling. Its purpose is to defend Fig.~3 against the attack that the boundary signal is a finite-size or metric artifact.
+
+\paragraph{Supplement S4 | Impurity and disorder controls.}
+This section specifies impurity form, disorder distribution, number of realizations, seed logic, pass/fail criterion and ensemble statistics. Its purpose is to defend Fig.~4 against the attack that the false-positive analysis is anecdotal.
+
+\paragraph{Supplement S5 | Lead-attached transport.}
+This section defines lead self-energies, transport observables, energy broadening, finite-temperature convolution and contact-geometry sensitivity. Its purpose is to defend Fig.~5 against the attack that the nonlocal criterion is tuned, fragile or underdefined.
+
+\paragraph{Supplement S6 | Low-energy effective model.}
+This section gives the compact interpretive model that explains why the topological branch yields a phase-locked nonlocal response and why impurity-induced trivial states can mimic local peaks without generating the same robust window. Its purpose is interpretive, not claim-expanding.
+
+\paragraph{Supplement S7 | Reproducibility.}
+This section enumerates data files, scripts, run commands, software versions, hardware environment, figure-to-file mapping and source-data packaging notes. Its purpose is to defend the manuscript against reproducibility and transparency objections rather than to add scientific narrative.
+
+\section*{Extended Data figure captions}
+
+\paragraph{Extended Data Figure 1 | Robustness of the nonlocal diagnostic window under parameter variation.}
+This figure extends the main-text transport analysis beyond the representative parameter set used in Fig.~5. \textbf{a,} Nonlocal response window across a broader chemical-potential range. \textbf{b,} Dependence on compensated magnetic splitting strength. \textbf{c,} Stability against moderate variation of pairing amplitude or phase-bias resolution. \textbf{d,} Summary map of parameter regions in which the combined nonlocal criterion remains valid. The purpose of this figure is not to enlarge the central claim, but to show that the diagnostic window is not an isolated fine-tuned point in parameter space.
+
+\paragraph{Extended Data Figure 2 | Finite-size scaling of low-energy boundary modes.}
+This figure tests whether the near-zero boundary branch behaves consistently with a nonlocal topological mode under changes in system length. \textbf{a,} Open-boundary low-energy spectrum for increasing junction length. \textbf{b,} Energy splitting of the lowest pair versus system length. \textbf{c,} End-state localization profile at representative lengths. \textbf{d,} Extracted decay trend demonstrating suppression of finite-size hybridization in the topological regime. These data support the interpretation that the topological near-zero branch is controlled by end-to-end hybridization rather than by an accidental local resonance.
+
+\paragraph{Extended Data Figure 3 | Lead-geometry dependence of the nonlocal transport signal.}
+This figure checks whether the transport criterion survives changes in probe configuration. \textbf{a,} Alternative lead geometries considered in the transport calculations. \textbf{b,} Nonlocal differential conductance for each geometry in the topological regime. \textbf{c,} Comparison of the antisymmetrized nonlocal signal and its phase derivative across geometries. \textbf{d,} Summary of the geometry-dependent diagnostic pass window. The central point is that the precise signal amplitude may vary with contact arrangement, but the topological phase window is still reflected in a reproducible phase-resolved nonlocal response.
+
+\paragraph{Extended Data Figure 4 | Thermal and bias broadening of the transport criterion.}
+This figure evaluates the experimental visibility of the nonlocal signal beyond the zero-temperature idealization. \textbf{a,} Broadening of the local response with increasing temperature. \textbf{b,} Broadening of the nonlocal response over the same temperature range. \textbf{c,} Effect of finite bias averaging on the extracted criterion. \textbf{d,} Remaining diagnostic window after combined thermal and bias broadening. These results define the regime in which the proposed transport signature should remain experimentally accessible and clarify where the signal becomes too washed out for reliable identification.
+
+\section*{Supplementary figure captions}
+
+\paragraph{Supplementary Figure 1 | Lattice model, conventions and numerical workflow.}
+This figure documents the computational setup used throughout the manuscript. \textbf{a,} Lattice geometry and boundary conditions. \textbf{b,} Definition of the compensated magnetic texture and superconducting phase convention. \textbf{c,} Schematic of the BdG basis and lead attachment used in bulk, boundary and transport calculations. \textbf{d,} Workflow linking Hamiltonian construction, topological diagnosis, open-boundary diagonalization and transport evaluation. It serves as a reproducibility guide rather than as an additional physics claim.
+
+\paragraph{Supplementary Figure 2 | Independent checks of the $Z_2$ topological transition.}
+This figure cross-validates the bulk transition reported in Fig.~2 using independent numerical diagnostics. \textbf{a,} Gap closing and reopening along a representative cut. \textbf{b,} Corresponding $Z_2$ invariant. \textbf{c,} Alternative topological indicator or convergence check. \textbf{d,} Agreement of transition boundaries extracted from the different procedures. The figure is included to show that the reported phase boundary is numerically stable and not an artifact of a single diagnostic choice.
+
+\paragraph{Supplementary Figure 3 | Open-boundary spectra across representative trivial and topological cuts.}
+This figure expands the boundary-state analysis beyond the single main-text example. \textbf{a--c,} Spectra and mode profiles along representative trivial cuts. \textbf{d--f,} Spectra and mode profiles along representative topological cuts. The comparison clarifies which features persist systematically across the phase diagram and which are specific to isolated parameter choices.
+
+\paragraph{Supplementary Figure 4 | Ensemble statistics for impurity-induced and disorder-induced false positives.}
+This figure provides the full statistical basis for the negative-control argument summarized in Fig.~4. \textbf{a,} Distribution of minimum excitation energies across impurity realizations. \textbf{b,} Distribution of edge-weight asymmetry. \textbf{c,} Disorder-ensemble pass and fail counts for each element of the combined criterion. \textbf{d,} False-positive rate after applying the full diagnostic filter. The figure is essential for demonstrating that the exclusion of trivial mimics is statistical rather than anecdotal.
+
+\paragraph{Supplementary Figure 5 | Comparison of candidate transport indicators.}
+This figure records the broader indicator search that is intentionally compressed out of the main text. \textbf{a,} Raw nonlocal response. \textbf{b,} Antisymmetrized nonlocal response. \textbf{c,} Phase derivative and related candidate metrics. \textbf{d,} Summary of which indicators remain consistent with the bulk transition and boundary-state window. It justifies the choice of the final criterion while keeping the main manuscript focused on one operational observable.
+
+\paragraph{Supplementary Figure 6 | Low-energy effective description near the phase-driven transition.}
+This figure connects the numerical results to a compact physical picture. \textbf{a,} Effective low-energy spectrum near the transition point. \textbf{b,} Parameter dependence of the effective mass or gap term. \textbf{c,} Matching between the effective description and the full lattice calculation. \textbf{d,} Limits of validity of the reduced model. The figure is meant to sharpen interpretation, not to enlarge the scope of the claim beyond the numerically established regime.
+
+\paragraph{Supplementary Figure 7 | Source-data and code-level reproducibility checks.}
+This figure documents the practical reproducibility package accompanying the manuscript. \textbf{a,} Mapping between main-text panels and source-data files. \textbf{b,} Plot-regeneration workflow. \textbf{c,} Numerical convergence and seed bookkeeping. \textbf{d,} File-level checklist for figure reproduction. Its role is to make the numerical claims auditable and easy to reconstruct from the released code and source data.
+
+\end{document}

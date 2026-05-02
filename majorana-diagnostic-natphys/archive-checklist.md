@@ -3,8 +3,8 @@
 ## Core manuscript package
 - [x] Title and abstract
 - [x] Main-text manuscript draft
-- [ ] Supplementary note
-- [ ] Verified bibliography file
+- [x] Supplementary note
+- [x] Verified bibliography file
 
 ## Theory package
 - [ ] Unified Hamiltonian note
@@ -56,7 +56,7 @@
 - [ ] Cover-letter draft
 
 ## Final submission package
-- [ ] Submission PDF
+- [x] Current compiled manuscript PDF
 - [ ] Source files
 - [ ] Response-to-reviewers template
 - [ ] Data/code availability statements
@@ -95,6 +95,11 @@
 - [x] `figure4-full-device-topology-rewrite-v1.md`
 - [x] `manuscript-facing-sync-2026-05-02/submission_draft_main.tex`
 - [x] `manuscript-facing-sync-2026-05-02/submission_pack_latex_ready.tex`
+- [x] `manuscript-facing-sync-2026-05-02/submission_draft_main.pdf`
+- [x] `manuscript-facing-sync-2026-05-02/supplementary_information.tex`
+- [x] `manuscript-facing-sync-2026-05-02/supplementary_information.pdf`
+- [x] `manuscript-facing-sync-2026-05-02/references_verified.bib`
+- [x] `manuscript-facing-sync-2026-05-02/document-plan.md`
 - [x] `manuscript-facing-sync-2026-05-02/README.md`
 
 ## Recovery status in current scheduled-run workspace

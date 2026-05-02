@@ -2,23 +2,30 @@
 
 Date: 2026-05-02
 
-This upload syncs the current manuscript-facing text lock for the compensated
-magnetic Josephson-junction Majorana diagnostic project into the stable GitHub
+This upload extends the existing manuscript-facing sync for the compensated
+magnetic Josephson-junction Majorana diagnostic project in the stable GitHub
 project directory `majorana-diagnostic-natphys` on branch `open-ai`.
 
 Uploaded in this round:
 
-- manuscript-facing Fig. 4 / Fig. 5 sync snapshot under
-  `manuscript-facing-sync-2026-05-02/`
+- refreshed `manuscript-facing-sync-2026-05-02/README.md`
+- updated `manuscript-facing-sync-2026-05-02/submission_draft_main.tex`
+- added `manuscript-facing-sync-2026-05-02/submission_draft_main.pdf`
+- added `manuscript-facing-sync-2026-05-02/supplementary_information.tex`
+- added `manuscript-facing-sync-2026-05-02/supplementary_information.pdf`
+- added `manuscript-facing-sync-2026-05-02/references_verified.bib`
+- added `manuscript-facing-sync-2026-05-02/document-plan.md`
+- added placeholder compilation assets under
+  `manuscript-facing-sync-2026-05-02/figures/`
 - updated `project-state.md`
 - updated `archive-checklist.md`
-- updated `supervision-log.md`
 
 Purpose:
 
-- preserve the current null-calibrated Fig. 4 wording and single-rule Fig. 5
-  wording in one GitHub-backed location
-- prevent older duplicated caption logic from re-entering the next manuscript
-  package by accident
-- record clearly that this round is a text-discipline sync, not a numerical
-  closure of the blocked full-device topology rerun
+- preserve the current manuscript compile state in one GitHub-backed location;
+- keep the tightened Introduction citation logic and first clean SI entry tied
+  to the same manuscript snapshot;
+- make the current PDFs auditable even before the final non-placeholder figure
+  package exists;
+- record clearly that this round improves manuscript packaging and traceability,
+  not the blocked full-device topology rerun itself.

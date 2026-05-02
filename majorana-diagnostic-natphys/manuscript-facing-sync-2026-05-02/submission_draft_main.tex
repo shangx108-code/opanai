@@ -29,23 +29,52 @@ Field-free routes to topological superconductivity are attractive because strong
 %    all use the same contribution line: false-positive-resistant nonlocal diagnostic.
 % 2. Keep claims such as "universal", "model-agnostic", or "optimal" out of the main text
 %    unless new evidence is added and mirrored in the Supplement.
+%
+% Standard manuscript-figure template used below:
+% \begin{figure}[t]
+% \centering
+% % Figure integration template:
+% % - Main asset file: figures/<FigureFile>.pdf
+% % - Optional raster fallback: figures/<FigureFile>.png
+% % - Source data directory: source_data/<FigureTag>/
+% % - Panel order in caption must match the final artwork
+% % - Keep \label stable once citations are in circulation
+% \includegraphics[width=\textwidth]{figures/<FigureFile>.pdf}
+% \caption{<Final caption text>}
+% \label{fig:<stable-label>}
+% \end{figure}
+%
+% Suggested citation-key ledger for the current draft:
+% - fieldfree-tsc-review
+% - majorana-platform-review
+% - local-zbp-ambiguity-review
+% - abs-false-positive-review
+% - disorder-false-positive-review
+% - planar-jj-topological-sc
+% - compensated-magnetic-jj-tajj-2026
+% - nonlocal-majorana-diagnostic-theory
+% - phase-biased-jj-majorana-review
+% - experimental-nonlocal-majorana-probe
 
 \section{Introduction}
 
-Field-free routes to topological superconductivity are becoming increasingly important because the magnetic fields commonly used to drive Majorana platforms can also suppress proximity-induced pairing, introduce orbital complications and blur spectroscopic interpretation. This tension is especially acute in Josephson-based architectures, where phase control offers an attractive tuning knob but where the absence of a clean magnetic-field-free diagnostic has limited how convincingly low-energy boundary features can be interpreted. The field therefore needs not only additional candidate platforms, but also stricter ways to determine when a field-free low-energy state is genuinely topological.
+Field-free routes to topological superconductivity are becoming increasingly important because the magnetic fields commonly used to drive Majorana platforms can also suppress proximity-induced pairing, introduce orbital complications and blur spectroscopic interpretation \cite{majorana-platform-review}. Recent compensated-magnetic and altermagnetic Josephson-junction proposals sharpen that motivation by showing how momentum-dependent spin splitting may be engineered without net magnetization or strong stray fields \cite{fieldfree-tsc-review}. This tension is especially acute in Josephson-based architectures, where phase control offers an attractive tuning knob but where the absence of a clean magnetic-field-free diagnostic has limited how convincingly low-energy boundary features can be interpreted \cite{phase-biased-jj-majorana-review}. The field therefore needs not only additional candidate platforms, but also stricter ways to determine when a field-free low-energy state is genuinely topological.
 
-That need remains unmet. Local zero-bias or near-zero-energy signatures are now understood to be intrinsically ambiguous because trivial Andreev bound states, impurity-induced in-gap states and weak-disorder resonances can all generate similar low-energy features. At the same time, recent planar and compensated-magnetic Josephson-junction proposals have sharpened the platform landscape without resolving the central exclusion problem: how to identify topology without relying on a local near-zero mode alone. As a result, the limiting issue is no longer whether one can engineer another putative field-free junction, but whether one can impose an experimentally relevant false-positive filter on the resulting low-energy states.
+That need remains unmet. Local zero-bias or near-zero-energy signatures are now understood to be intrinsically ambiguous because trivial Andreev bound states can evolve into Majorana-like low-energy features \cite{local-zbp-ambiguity-review}, impurity-induced in-gap states can be driven into the same spectral window \cite{abs-false-positive-review}, and weak disorder can likewise generate near-zero resonances that mimic the target signal \cite{disorder-false-positive-review}. At the same time, recent planar and compensated-magnetic Josephson-junction proposals have sharpened the platform landscape without resolving the central exclusion problem: how to identify topology without relying on a local near-zero mode alone \cite{planar-jj-topological-sc,compensated-magnetic-jj-tajj-2026}. As a result, the limiting issue is no longer whether one can engineer another putative field-free junction, but whether one can impose an experimentally relevant false-positive filter on the resulting low-energy states.
 
 Here we study a phase-biased Josephson junction with a compensated magnetic weak link that produces momentum-dependent spin splitting without net magnetization. In this setting, superconducting phase bias acts as the control parameter that drives a bulk gap closing and reopening together with a $Z_2$ topological transition. This makes the junction a useful arena for separating platform novelty from diagnostic rigor: the compensated magnetic texture supplies a field-free route to the transition, while the phase dependence allows the bulk, boundary and transport responses to be compared on the same footing. The key question is therefore not whether a near-zero mode can appear, but whether all physically relevant observables point to the same topological window.
 
-We answer that question by constructing a closed evidence chain. We first identify the bulk topological transition from the gap closing and $Z_2$ invariant. We then show that open-boundary near-zero modes become meaningful only when they are spectrally isolated and end-localized in the same phase window. Next, we introduce explicit impurity and disorder controls to test whether trivial low-energy states can mimic the boundary signal. Finally, we show that a phase-resolved nonlocal transport response survives these false-positive tests and provides the operational discriminator missing from local spectroscopy alone. We therefore identify topology not from the appearance of a near-zero mode, but from the consistency of bulk topology, boundary spectra and phase-resolved nonlocal response under controlled false-positive tests.
+We answer that question by constructing a closed evidence chain. We first identify the bulk topological transition from the gap closing and $Z_2$ invariant. We then show that open-boundary near-zero modes become meaningful only when they are spectrally isolated and end-localized in the same phase window. Next, we introduce explicit impurity and disorder controls to test whether trivial low-energy states can mimic the boundary signal. Finally, we show that a phase-resolved nonlocal transport response survives these false-positive tests and provides the operational discriminator missing from local spectroscopy alone \cite{nonlocal-majorana-diagnostic-theory,experimental-nonlocal-majorana-probe}. We therefore identify topology not from the appearance of a near-zero mode, but from the consistency of bulk topology, boundary spectra and phase-resolved nonlocal response under controlled false-positive tests.
 
-% Reference placeholders for Introduction:
-% [Ref-I1] field-free / low-stray-field motivation
-% [Ref-I2] ambiguity of local zero-bias or near-zero features
-% [Ref-I3] recent planar Josephson-junction proposal
-% [Ref-I4] recent compensated-magnetic / TAJJ proposal
-% [Ref-I5] diagnostic ambiguity / false-positive literature
+% Citation insertion map for Introduction:
+% - Paragraph 1 sentence 1: majorana-platform-review
+% - Paragraph 1 sentence 2: fieldfree-tsc-review
+% - Paragraph 1 sentence 3: phase-biased-jj-majorana-review
+% - Paragraph 2 sentence 2: local-zbp-ambiguity-review, abs-false-positive-review,
+%   disorder-false-positive-review
+% - Paragraph 2 sentence 3: planar-jj-topological-sc, compensated-magnetic-jj-tajj-2026
+% - Paragraph 4 sentence 4: nonlocal-majorana-diagnostic-theory,
+%   experimental-nonlocal-majorana-probe
 
 \section{Results}
 
@@ -55,7 +84,13 @@ We begin by establishing the bulk transition that underlies the rest of the manu
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/Fig2_bulk_topology.pdf}
+% Figure integration template:
+% - Main asset file: figures/Fig2_bulk_topology.pdf
+% - Optional raster fallback: figures/Fig2_bulk_topology.png
+% - Source data directory: source_data/Fig2/
+% - Panel order expected in caption: a-d
+% - Replace with figure* only if the target journal layout requires two-column width
+\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/Fig2_bulk_topology.pdf}
 \caption{\textbf{Phase-driven bulk topological transition without net magnetization.} This figure shows that superconducting phase bias drives a bulk topological transition in the absence of a conventional Zeeman field. \textbf{a,} Normal-state band splitting generated by the compensated magnetic texture, highlighting finite momentum-dependent spin splitting at zero net magnetization. \textbf{b,} Bulk excitation gap as a function of phase bias and chemical potential, revealing a gap closing and reopening that marks the transition between trivial and topological regimes. \textbf{c,} Corresponding $Z_2$ topological invariant over the same parameter space, showing that the gap reopening coincides with a change in bulk topology rather than a crossover between spectrally similar trivial states. \textbf{d,} Representative cut at fixed magnetic texture strength, resolving the gap minimum and reopening across the transition. Together, these panels establish that field-free topology in this junction is controlled by the interplay of compensated magnetic splitting, induced pairing and phase bias, and that the bulk transition can be identified independently of boundary spectroscopy.}
 \label{fig:bulk-topology}
 \end{figure}
@@ -67,7 +102,13 @@ We next turn to the open-boundary spectrum to determine what the bulk transition
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/Fig3_boundary_spectra.pdf}
+% Figure integration template:
+% - Main asset file: figures/Fig3_boundary_spectra.pdf
+% - Optional raster fallback: figures/Fig3_boundary_spectra.png
+% - Source data directory: source_data/Fig3/
+% - Panel order expected in caption: a-d
+% - Keep the label stable because Fig.~3 is cited repeatedly in the Results text
+\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/Fig3_boundary_spectra.pdf}
 \caption{\textbf{Boundary spectra reveal near-zero modes, but zero energy alone does not identify topology.} This figure separates genuine topological boundary modes from trivial near-zero mimics. \textbf{a,} Open-boundary spectrum versus phase bias, showing the emergence of a near-zero branch only after the bulk transition identified in Fig.~2. \textbf{b,} Spatial profile of the low-energy state in the topological regime, with weight localized at opposite ends of the junction, consistent with a nonlocal boundary mode. \textbf{c,} Counterexample from a trivial parameter regime or local perturbation, where a near-zero state appears but remains spatially asymmetric or insufficiently isolated from the low-energy background. \textbf{d,} Spectral-isolation metric for the lowest mode, demonstrating that the topological branch is distinguished not by zero energy alone, but by simultaneous end localization and clean separation from nearby trivial states. These results motivate the stricter claim used in the main text: local near-zero structure is necessary but not sufficient, and boundary spectroscopy must be interpreted together with bulk topology and nonlocal transport.}
 \label{fig:boundary-spectra}
 \end{figure}
@@ -81,7 +122,13 @@ This separation is not presented as a visual impression alone. Instead, we compa
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/Fig4_negative_controls.pdf}
+% Figure integration template:
+% - Main asset file: figures/Fig4_negative_controls.pdf
+% - Optional raster fallback: figures/Fig4_negative_controls.png
+% - Source data directory: source_data/Fig4/
+% - Panel order expected in caption: a-e
+% - Companion statistical table should stay aligned with the fixed pass criterion
+\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/Fig4_negative_controls.pdf}
 \caption{\textbf{Null-calibrated controls show that trivial near-zero mimics fail the diagnostic at the distribution level.} This figure tests the diagnostic against prespecified trivial null ensembles rather than selected counterexamples. \textbf{a,} Local impurity and weak-disorder perturbations applied in a bulk-trivial regime generate near-zero spectral mimics despite the absence of a topological transition. \textbf{b,} Distribution of the final diagnostic score across topological, impurity-generated trivial and disorder-generated trivial ensembles, showing that local mimics do not reproduce the same ensemble-level behavior as the topological branch. \textbf{c,} Effect-size summary, with bootstrap confidence intervals, quantifying the separation between the topological ensemble and the two null ensembles. \textbf{d,} Empirical true-positive and false-positive rates for the prespecified pass criterion, demonstrating that the trivial null ensembles remain confined to the expected background failure band. \textbf{e,} Stability of the null separation under variation of nuisance parameters such as impurity strength, disorder amplitude or thermal broadening. The figure therefore shows not only that trivial perturbations can mimic local low-energy features, but that they fail the final diagnostic in a statistically calibrated sense.}
 \label{fig:negative-controls}
 \end{figure}
@@ -101,7 +148,13 @@ This locking step is essential. Without it, the transport section would remain v
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/Fig5_nonlocal_transport.pdf}
+% Figure integration template:
+% - Main asset file: figures/Fig5_nonlocal_transport.pdf
+% - Optional raster fallback: figures/Fig5_nonlocal_transport.png
+% - Source data directory: source_data/Fig5/
+% - Panel order expected in caption: a-f
+% - If the artwork is later split into two rows, keep the single-rule wording unchanged
+\includegraphics[width=\textwidth,height=0.72\textheight,keepaspectratio]{figures/Fig5_nonlocal_transport.pdf}
 \caption{\textbf{A single phase-resolved nonlocal criterion identifies the topological window and fails under the same rule in trivial controls.} This figure converts the transport response into a single prespecified decision system. \textbf{a,} Definition of the raw lead-resolved nonlocal conductance, the antisymmetrized signal $G^{-}(\phi)$, and the fixed threshold-and-window rule used throughout the figure. \textbf{b,} Raw nonlocal response in the clean junction. \textbf{c,} Extraction of the connected phase window selected by the single nonlocal criterion. \textbf{d,} Comparison between that extracted window and the independently determined bulk-topological window. \textbf{e,} Application of the same locked criterion to impurity-driven and disorder-driven trivial controls, which retain local low-energy structure but fail the nonlocal decision rule. \textbf{f,} Final pass-fail summary, including finite-temperature, finite-bias and geometry perturbations under the same criterion. The figure therefore establishes one operational statement only: the topological regime is identified by a reproducible nonlocal decision window that is fixed before control comparisons and is not reproduced by trivial near-zero mimics.}
 \label{fig:nonlocal-transport}
 \end{figure}
@@ -123,11 +176,12 @@ The results further suggest that field-free Josephson architectures may be espec
 
 Several limitations should be stated explicitly. First, the present study is theoretical and numerical, so experimental visibility is inferred through finite-temperature, finite-bias and geometry tests rather than demonstrated in a specific device. Second, the transport criterion is developed for the compensated-magnetic junction class considered here and should not be advertised as model-agnostic without additional cross-platform analysis. Third, the strength of the manuscript depends on the statistical quality of the impurity and disorder controls and on the reproducibility of the source-data and code package. These are not peripheral implementation details; they are part of the evidentiary standard required for the central claim. For that reason, the contribution should be framed as a false-positive-resistant protocol for this junction class, with clearly stated scope and boundary conditions.
 
-Within those limits, the study advances the field in a concrete way. It identifies a field-free route to a bulk topological transition in a compensated-magnetic Josephson junction, shows why local near-zero modes do not close the case, and supplies a lead-resolved nonlocal observable that tracks the same topological window selected independently by bulk and boundary analysis. That combination is the manuscript's real contribution, and it is the level at which the work should be compared with recent Josephson-junction proposals.
+Within those limits, the study advances the field in a concrete way. It identifies a field-free route to a bulk topological transition in a compensated-magnetic Josephson junction, shows why local near-zero modes do not close the case, and supplies a lead-resolved nonlocal observable that tracks the same topological window selected independently by bulk and boundary analysis. That combination is the manuscript's real contribution, and it is the level at which the work should be compared with recent Josephson-junction proposals \cite{planar-jj-topological-sc,compensated-magnetic-jj-tajj-2026,nonlocal-majorana-diagnostic-theory}.
 
-% Discussion check:
-% Ensure prior-art comparison is handled with citations or a Supplementary comparison table,
-% not with unreferenced general claims.
+% Discussion citation check:
+% - Prior-art comparison sentence above should remain tied to
+%   planar-jj-topological-sc, compensated-magnetic-jj-tajj-2026,
+%   and nonlocal-majorana-diagnostic-theory unless the comparison set changes.
 
 \section{Conclusion}
 
@@ -186,14 +240,26 @@ Correspondence and requests for materials should be addressed to [corresponding 
 
 Supplementary Information should contain: S1 Model definition; S2 Topological invariant; S3 Open-boundary calculations; S4 Impurity and disorder controls; S5 Lead-attached transport; S6 Low-energy effective model; S7 Reproducibility. Extended Data should contain robustness figures directly relevant to the main claims, including finite-size scaling, parameter-window stability, lead-geometry dependence, and thermal/bias broadening.
 
-% Reference section placeholder:
-% Replace with the journal's bibliography style and .bib integration.
-% \bibliographystyle{unsrt}
-% \bibliography{references}
+% Bibliography integration notes:
+% - Original placeholder BibTeX file kept intact: references.bib
+% - Active verified BibTeX file for compilation: references_verified.bib
+% - Suggested keys already used in this draft:
+%   fieldfree-tsc-review
+%   majorana-platform-review
+%   phase-biased-jj-majorana-review
+%   local-zbp-ambiguity-review
+%   abs-false-positive-review
+%   disorder-false-positive-review
+%   planar-jj-topological-sc
+%   compensated-magnetic-jj-tajj-2026
+%   nonlocal-majorana-diagnostic-theory
+%   experimental-nonlocal-majorana-probe
+\bibliographystyle{unsrt}
+\bibliography{references_verified}
 
 % Final submission checklist:
-% [ ] Replace Figure~2--5 placeholders with real figure environments or journal submission assets.
-% [ ] Insert complete citations for all Introduction and Discussion prior-art claims.
+% [ ] Replace figure asset files under figures/ with final journal-exported artwork if needed.
+% [ ] Decide whether to merge references_verified.bib back into references.bib after final literature vetting.
 % [ ] Replace the provisional repository wording in Data availability and Code availability with final DOI / accession details.
 % [ ] Confirm author list, affiliations, contributions, and correspondence.
 % [ ] Ensure figure captions and Results text use the same claim boundaries.
