@@ -1,0 +1,46 @@
+{
+  "package_type": "generalized_btk_phase_sensitive_proxy",
+  "pairings": [
+    "s_wave",
+    "s_pm",
+    "chiral"
+  ],
+  "barrier_values": [
+    0.0,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "eta_values": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "field_values": [
+    0.0,
+    0.35
+  ],
+  "phi_points": 6,
+  "alpha_points": 9,
+  "bias_points": 161,
+  "best_nontrivial_alpha_anisotropy_case": {
+    "pairing": "s_pm",
+    "barrier_Z": 0.0,
+    "eta": 1.0,
+    "field_strength": 0.35,
+    "phi": 0.0,
+    "alpha_anisotropy": 1.0582377647682435,
+    "mean_frustration": 0.9999999999600812
+  },
+  "best_s_wave_alpha_anisotropy_case": {
+    "pairing": "s_wave",
+    "barrier_Z": 0.0,
+    "eta": 0.0,
+    "field_strength": 0.0,
+    "phi": 0.0,
+    "alpha_anisotropy": 4.440892098500626e-16,
+    "mean_frustration": 4.1322334443094626e-11
+  }
+}
