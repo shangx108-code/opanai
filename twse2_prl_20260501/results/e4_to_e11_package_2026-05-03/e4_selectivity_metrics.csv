@@ -1,0 +1,9 @@
+metric,value,meaning
+xi_ar,1.0111693632380576,Xi_AR near unity closes the low-barrier inner-gap tracking branch.
+corr_ar_inner,0.998130422937892,AR onset tracks Delta_in much more strongly than the outer feature.
+corr_ar_outer,0.298633288394447,Outer-feature correlation stays subleading in the current zeeman-family scan.
+threshold_max_onset_spread,0.0,Current threshold robustness package keeps the onset ordering unchanged across the tested sweep.
+barrier_max_onset_spread,0.0,Current barrier robustness package keeps the onset ordering unchanged across the tested sweep.
+gamma_max_onset_spread,0.0,Current gamma robustness package keeps the onset ordering unchanged across the tested sweep.
+energy_grid_max_onset_shift_vs_ref,0.0,Residual onset drift at the finest tested energy grid relative to the reference run.
+angle_grid_max_w_peak_shift_vs_ref,0.0,Residual alpha-window peak drift at the finest tested angular/Fermi-surface grid.
