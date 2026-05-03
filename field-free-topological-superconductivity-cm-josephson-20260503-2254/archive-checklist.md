@@ -11,19 +11,23 @@
 
 | Artifact | Status | Notes |
 |---|---|---|
-| Project root README | pending GitHub writeback | local workspace created |
-| Project state ledger | pending GitHub writeback | local workspace created |
-| Iteration log | pending GitHub writeback | local workspace created |
-| Archive checklist | pending GitHub writeback | local workspace created |
-| Manifest | pending GitHub writeback | local workspace created |
-| Drive index | pending GitHub writeback | local workspace created |
-| Requirements file | pending GitHub writeback | local workspace created |
-| Environment bootstrap script | pending GitHub writeback | local workspace created |
-| Environment check log | local only | generated after bootstrap check |
-| Manuscript LaTeX skeleton | pending GitHub writeback | local workspace created |
+| Project root README | written to GitHub | branch `open-ai` |
+| Project state ledger | written to GitHub | branch `open-ai` |
+| Iteration log | written to GitHub | branch `open-ai` |
+| Archive checklist | written to GitHub | branch `open-ai` |
+| Manifest | written to GitHub | branch `open-ai` |
+| Drive index | written to GitHub | branch `open-ai` |
+| Requirements file | written to GitHub | branch `open-ai` |
+| Environment bootstrap script | written to GitHub | branch `open-ai` |
+| Environment check log | written to GitHub | branch `open-ai` |
+| Manuscript LaTeX skeleton | written to GitHub | branch `open-ai` |
+| Minimal BdG scan script | written to GitHub | branch `open-ai` |
+| Full coarse scan CSV | local only | pending GitHub writeback |
+| Near-closing subset CSV | written to GitHub | branch `open-ai` |
+| Quantitative summary note | written to GitHub | branch `open-ai` |
 
 ## Recovery flags
 
-- unique local-only artifact risk: `environment log only`
-- pending GitHub writeback exists: `yes`
-- archive complete: `no`
+- unique local-only artifact risk: `full coarse scan CSV`
+- pending GitHub writeback exists: `yes for the full coarse scan CSV`
+- archive complete: `no after first calculation`
