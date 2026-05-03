@@ -1,0 +1,14 @@
+{
+  "python": "3.12",
+  "dependencies": [
+    "numpy",
+    "Pillow"
+  ],
+  "status": "verified",
+  "verified_on": "2026-05-03",
+  "verification_entrypoint": "scripts/environment_smoke_test.py",
+  "notes": [
+    "Current minimum reproducible route uses numpy plus Pillow only.",
+    "Heavy dependencies such as torch, scipy, and matplotlib are not assumed."
+  ]
+}
