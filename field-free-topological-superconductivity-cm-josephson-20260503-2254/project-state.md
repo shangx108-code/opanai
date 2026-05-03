@@ -1,17 +1,21 @@
 # Project State
 
 - Project: `field-free-topological-superconductivity-cm-josephson-20260503-2254`
-- Stage: `early framing`
+- Stage: `active calculation/verification`
 - Target journal: `Nature Physics`
 - Current main line: field-free topological superconductivity in compensated-magnetic Josephson junctions with nonlocal Majorana diagnostics
-- Single bottleneck: canonical project-space setup and runnable environment were missing, preventing reproducible model implementation
+- Single bottleneck: the current ad hoc two-channel BdG model is too permissive and does not isolate a convincing topological window
 - Latest real progress:
   - locked project identity from the user brief
   - created a unified project root, archive ledger skeleton, and manuscript workspace
   - checked the current Python base environment
+  - wrote the initialization skeleton to the fixed GitHub archive branch
+  - implemented and ran the first coarse minimal BdG phase scan
+  - verified that the current coarse model yields broad near-closure points with no clean topological sign flip
 - Evidence boundary:
   - the manuscript concept and target journal are clear
-  - no verified project-specific calculation has been run yet
-  - quantitative claims remain unvalidated until the model and diagnostics scripts are implemented
+  - the first executable coarse scan now exists and is reproducible
+  - the present model does not yet justify a phase-selective topological claim
+  - transport-diagnostic development is still premature until the model is sharpened
 - Next shortest path:
-  - implement the minimal BdG phase-diagram script and generate the first verified gap-closing scan
+  - replace the ad hoc coupled-channel model with a more selective junction model that suppresses generic near-closures away from `phi ~ pi`
