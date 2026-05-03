@@ -21,3 +21,17 @@
 - Upload the user project brief and smoke test outputs to GitHub when the next
   project update is pushed
 - Continue project execution from this canonical root only
+
+## 2026-05-03 Round 1 Intake to Draft
+- Current stage: full draft assembly with strict evidence boundary control
+- Single bottleneck: Figure 5 still cannot support a robust processor-level
+  common-path advantage over ordinary D2NN
+- This round completed:
+  - `manuscript/round1-intake-draft.md`
+  - `manuscript/round1-complete-skeleton.tex`
+  - `manuscript/round1-complete-skeleton.pdf`
+- This round decision:
+  - The manuscript structure is now fixed enough for iterative section updates.
+  - The next quantitative round should touch only the Figure 5 result package
+    and its immediately dependent prose unless new evidence breaks the current
+    claim boundary.
