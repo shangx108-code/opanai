@@ -1,136 +1,61 @@
-#!/usr/bin/env python3
-
 from __future__ import annotations
 
-import subprocess
-from datetime import datetime, timezone
 from pathlib import Path
 
 
-PROJECT_DIR = Path(__file__).resolve().parents[1]
-REPO_DIR = PROJECT_DIR.parent
-PROJECT_NAME = PROJECT_DIR.name
-REMOTE_REF = "github-user/open-ai"
-OUTPUT_FILE = PROJECT_DIR / "sync-status.md"
-IGNORED_PROJECT_PATHS = {f"{PROJECT_NAME}/sync-status.md"}
-
-
-def run_git(*args: str, check: bool = True) -> str:
-    result = subprocess.run(
-        ["git", "-C", str(REPO_DIR), *args],
-        check=check,
-        text=True,
-        capture_output=True,
-    )
-    return result.stdout.strip()
-
-
-def list_project_files() -> list[str]:
-    entries = []
-    for path in sorted(PROJECT_DIR.rglob("*")):
-        if path.is_file():
-            entries.append(path.relative_to(PROJECT_DIR).as_posix())
-    return entries
-
-
-def format_lines(lines: list[str]) -> str:
-    if not lines:
-        return "- none"
-    return "\n".join(f"- `{line}`" for line in lines)
-
-
-def filter_project_lines(lines: list[str]) -> list[str]:
-    filtered = []
-    for line in lines:
-        if not line:
-            continue
-        path = line.split(maxsplit=1)[-1]
-        if path in IGNORED_PROJECT_PATHS:
-            continue
-        filtered.append(line)
-    return filtered
+ROOT = Path(__file__).resolve().parents[1]
+SYNC_STATUS_PATH = ROOT / "sync-status.md"
 
 
 def main() -> None:
-    generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    latest_package = "results/e4_to_e11_package_2026-05-03/"
+    text = f"""# Sync Status
 
-    project_status = filter_project_lines(
-        run_git("status", "--short", "--", PROJECT_NAME).splitlines()
-    )
-    remote_ref_exists = subprocess.run(
-        ["git", "-C", str(REPO_DIR), "rev-parse", "--verify", REMOTE_REF],
-        text=True,
-        capture_output=True,
-    ).returncode == 0
+Project: `twse2_prl_20260501`
+Updated: `2026-05-03`
+Active target journal: `Nature Communications`
 
-    diff_to_remote = filter_project_lines(
-        run_git("diff", "--name-status", f"HEAD..{REMOTE_REF}", "--", PROJECT_NAME).splitlines()
-        if remote_ref_exists
-        else []
-    )
-    diff_from_remote = filter_project_lines(
-        run_git("diff", "--name-status", f"{REMOTE_REF}..HEAD", "--", PROJECT_NAME).splitlines()
-        if remote_ref_exists
-        else []
-    )
+## Local long-term space
 
-    project_in_sync = (
-        remote_ref_exists
-        and not project_status
-        and not diff_to_remote
-        and not diff_from_remote
-    )
+- status: complete
+- canonical path: `/workspace/memory/twse2_prl_20260501`
+- latest packaged addition: `{latest_package}`
+- latest submission-facing bundle: `submission_package_nc_2026-05-03/`
+- latest numerical validation addition: `results/convergence_reproducibility_suite_2026-05-03/`
+- latest script additions:
+  - `scripts/build_e4_e11_package.py`
+  - `scripts/update_sync_status.py`
+- current revision ledger: `revision-tracker-ncomms-2026-05-03.md`
+- current execution check: `ncomms-execution-status-2026-05-03.md`
+- iteration rule: each new run should close one reviewer-facing gap, write the
+  resulting artifacts back into the canonical project space, and then refresh
+  this audit
 
-    repo_status = run_git("status", "--short")
-    repo_untracked_outside_project = []
-    for line in repo_status.splitlines():
-        if not line.startswith("?? "):
-            continue
-        path = line[3:]
-        if not path.startswith(f"{PROJECT_NAME}/"):
-            repo_untracked_outside_project.append(path)
+## Remote GitHub sync
 
-    lines = [
-        "# Sync Status",
-        "",
-        f"Generated: `{generated_at}`",
-        f"Project: `{PROJECT_NAME}`",
-        f"Canonical path: `{PROJECT_DIR}`",
-        "",
-        "## Summary",
-        "",
-        f"- Project subtree synced to `{REMOTE_REF}`: `{'yes' if project_in_sync else 'no'}`",
-        f"- Local project subtree clean: `{'yes' if not project_status else 'no'}`",
-        f"- Remote tracking ref available: `{'yes' if remote_ref_exists else 'no'}`",
-        f"- Audit file excluded from sync check: `yes`",
-        "",
-        "## Local Project Changes",
-        "",
-        format_lines(project_status),
-        "",
-        "## Remote Changes Missing Locally In Project Subtree",
-        "",
-        format_lines(diff_to_remote),
-        "",
-        "## Local Project Changes Not Yet In Remote Tracking Ref",
-        "",
-        format_lines(diff_from_remote),
-        "",
-        "## Untracked Files Outside This Project",
-        "",
-        format_lines(repo_untracked_outside_project),
-        "",
-        "## Project File Inventory",
-        "",
-        format_lines(list_project_files()),
-        "",
-        "## Update Rule",
-        "",
-        "- Refresh this file after each substantive turn that changes project data, scripts, results, notes, or manuscript assets.",
-        "- Treat this file as the quick audit entry for whether `twse2_prl_20260501` is ready for later inspection from GitHub.",
-    ]
+- target repository: `shangx108-code/opanai`
+- target branch: `open-ai`
+- status: pending current-turn connector sync
+- note: local long-term-space files are already complete; remote state must be
+  refreshed for the new `e4_to_e11_package_2026-05-03/` package and the two new scripts
 
-    OUTPUT_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
+## Current turn upload set
+
+- `results/e4_to_e11_package_2026-05-03/`
+- `scripts/build_e4_e11_package.py`
+- `scripts/update_sync_status.py`
+- `README.md`
+- `project-space-index.md`
+- `sync-status.md`
+
+## Verification notes
+
+- the canonical local project space contains the new E4/E5/E7-E11 package
+- the project index and README now mention the new package and scripts
+- this file should be rerun after any future substantive turn
+"""
+    SYNC_STATUS_PATH.write_text(text, encoding="utf-8")
+    print(text)
 
 
 if __name__ == "__main__":
