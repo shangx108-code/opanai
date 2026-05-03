@@ -1,34 +1,44 @@
 # Sync Status
 
-Generated: `2026-05-02`
 Project: `twse2_prl_20260501`
-Canonical path: `/workspace/memory/twse2_prl_20260501`
-Remote target: `shangx108-code/opanai`, branch `open-ai`
+Updated: `2026-05-03`
+Active target journal: `Nature Communications`
 
-## Summary
+## Local long-term space
 
-- Local long-term project space updated: `yes`
-- Latest local additions include kernel invariance tests and r_he-onset tracking results: `yes`
-- GitHub connector write access in this retry: `working for text-file update`
-- This audit file was updated through the GitHub connector after fetching the remote SHA.
+- status: complete
+- canonical path: `/workspace/memory/twse2_prl_20260501`
+- latest packaged addition: `results/e4_to_e11_package_2026-05-03/`
+- latest submission-facing bundle: `submission_package_nc_2026-05-03/`
+- latest numerical validation addition: `results/convergence_reproducibility_suite_2026-05-03/`
+- latest script additions:
+  - `scripts/build_e4_e11_package.py`
+  - `scripts/update_sync_status.py`
+- current revision ledger: `revision-tracker-ncomms-2026-05-03.md`
+- current execution check: `ncomms-execution-status-2026-05-03.md`
+- iteration rule: each new run should close one reviewer-facing gap, write the
+  resulting artifacts back into the canonical project space, and then refresh
+  this audit
 
-## Latest scientific artifacts to sync/check
+## Remote GitHub sync
 
-- `scripts/build_rhe_onset_kernel_tracking.py`
-- `results/rhe_onset_kernel_tracking_2026-05-02/`
-- `scripts/run_kernel_invariance_tests.py`
-- `results/kernel_invariance_tests_2026-05-02/`
-- updated `scripts/build_channel_resolved_multiorbital_btk.py`
-- updated `README.md`
-- updated `project-space-index.md`
+- target repository: `shangx108-code/opanai`
+- target branch: `open-ai`
+- status: pending current-turn connector sync
+- note: local long-term-space files are already complete; remote state must be
+  refreshed for the new `e4_to_e11_package_2026-05-03/` package and the two new scripts
 
-## Current evidence status
+## Current turn upload set
 
-- alpha-window origin: kernel-intrinsic after basis-rotation and interface-mixing invariance tests
-- explicit alpha-weighting: removed from channel-selection construction
-- r_he onset extraction: implemented as a kernel-internal AR-onset diagnostic
-- Delta_in tracking from r_he onset: verified in the local result package
+- `results/e4_to_e11_package_2026-05-03/`
+- `scripts/build_e4_e11_package.py`
+- `scripts/update_sync_status.py`
+- `README.md`
+- `project-space-index.md`
+- `sync-status.md`
 
-## Remaining sync note
+## Verification notes
 
-This file confirms that connector-based writes can reach the remote branch. Large CSV/PNG result files should be pushed or updated file-by-file next, or by a normal git push from an environment with direct GitHub network access.
+- the canonical local project space contains the new E4/E5/E7-E11 package
+- the project index and README now mention the new package and scripts
+- this file should be rerun after any future substantive turn
