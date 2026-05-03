@@ -1,0 +1,20 @@
+path,status,category
+main.tex,present,submission package
+main.pdf,present,submission package
+supplementary_information.tex,present,submission package
+supplementary_information.pdf,present,submission package
+references.bib,present,submission package
+README_reproduce.md,present,submission package
+cover_letter_draft.md,present,submission package
+source_data/SourceData_NC_revision.xlsx,present,submission package
+data_manifest_sha256.txt,present,submission package
+requirements.txt,present,submission package
+figures/Fig1_pairing_symmetry_comparison.png,present,figure asset
+figures/Fig2_rhe_onset_vs_delta_in.png,present,figure asset
+figures/Fig3_smatrix_audit.png,present,figure asset
+figures/Fig4_kernel_invariance_alpha_window.png,present,figure asset
+figures/Fig5_constraint_audit.png,present,figure asset
+submission_package_nc_2026-05-03.zip,present,archive bundle
+submission_package_nc_2026-05-03_clean.zip,present,archive bundle
+submission_package_nc_2026-05-03_rev2.zip,present,archive bundle
+submission_package_nc_2026-05-03_rev3.zip,present,archive bundle
