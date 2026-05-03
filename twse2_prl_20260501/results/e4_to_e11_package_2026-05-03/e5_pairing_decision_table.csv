@@ -1,0 +1,6 @@
+family,inner_gap_tracking_status,alpha_window_status,basis_invariance_status,phase_sensitive_signature_status,mean_alpha_selectivity,mean_support_leakage,mixed_constraint_pass
+s_wave,"yes, but only as a smooth baseline",weak or absent,no channel-selective alpha window survives,not claimed,0.0066,0.0103,no
+s_pm,not yet isolated,conditional and unstable,spectral metric stable but decision branch not closed,not claimed,0.0038,0.4444,no
+chiral,compatible in current kernel line,present,spectral metric stable,supported in current constraint pipeline,0.0177,0.0703,yes
+trivial_double_peak,fails as desired,absent,not applicable,negative control only,0.0009,0.0000,no
+global_basis_check,not a pairing family,alpha-window metric invariant,max deviation 3.33e-16,use as a figure-level supporting control,,,yes
