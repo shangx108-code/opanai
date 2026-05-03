@@ -1,0 +1,807 @@
+下面把第一篇文章规划成一个可直接启动的理论项目蓝图。我会按 Nature Physics 级别论文的逻辑来设计，而不是按普通 PRB 文章来设计。
+
+拟定题目
+
+建议主标题不要太窄地写成 “altermagnet”，而是写成更有概括性的：
+
+Field-free topological superconductivity in compensated-magnetic Josephson junctions
+
+副标题式表达可以是：
+
+Nonlocal Majorana fingerprints beyond zero-bias conductance peaks
+
+中文理解就是：
+
+在无净磁化补偿磁序 Josephson 结中实现无外磁场拓扑超导，并用非局域输运判据排除平庸 Andreev 态。
+
+核心不是“我们又提出一个 Majorana 平台”，而是：
+
+传统 Majorana 方案依赖 Zeeman 场和局域零偏峰；我们提出一种由补偿磁序驱动、无需净磁化的拓扑 Josephson 方案，并给出局域峰之外的非局域诊断协议。
+
+一、文章的中心物理命题
+
+你们要回答的核心问题
+
+传统拓扑超导平台面临三个老问题：
+
+第一，需要 Zeeman 场或磁性破坏时间反演，容易带来 orbital effect、超导配对抑制和无序敏感性。
+
+第二，局域零偏电导峰并不是 Majorana 的唯一证据，平庸 Andreev bound states、量子点态、杂质态、soft gap 都能伪装。
+
+第三，很多理论方案只是展示边界零能态，但没有给出实验上如何区分真伪的输运判据。
+
+所以你们的中心问题应写成：
+
+是否可以在无净磁化的补偿磁序 Josephson 结中实现可相位调控的拓扑超导，并用非局域输运、电流相位关系和杂质响应共同识别真正的 Majorana 模式？
+
+这句话里有三个关键词：field-free、phase-controlled、nonlocal diagnostic。
+
+二、与已有文献的差异化定位
+
+集体文献洞察
+
+近期 altermagnetism、odd-parity magnetism、unconventional magnet Josephson junction 正在快速升温。已有工作已经提出 altermagnetic Josephson junction 可以支持拓扑超导、Andreev 分子、Josephson diode 和非局域 Josephson 效应。但很多文章仍集中在“某个模型中有 Majorana 或二极管效应”。你们要避开拥挤点，重点做成：
+
+统一补偿磁序机制，而不是只讨论一个具体材料；
+
+相位控制拓扑相变，而不是只画静态相图；
+
+非局域输运判据，而不是只画 LDOS 和零偏峰；
+
+平庸态排伪，包括 ABS、YSR、无序、界面粗糙；
+
+可实验协议，告诉实验组测哪些量、如何判定、哪些信号不可靠。
+
+这会让文章从“模型预测”升级为“领域方法论 + 新平台”。
+
+三、建议采用的物理结构
+
+建议主结构选择：
+
+Planar Josephson junction + compensated magnetic weak link
+
+几何如下：
+
+[S_L-\mathrm{CM}-S_R]
+
+其中 CM 表示 compensated magnet，例如 altermagnet、odd-parity magnet、(d)-wave magnet 或其他无净磁化但有动量依赖自旋劈裂的磁性层。
+
+左右两个 s-wave 超导电极相位分别为：
+
+[\Delta_L = \Delta e^{+i\phi/2}, \quad\Delta_R = \Delta e^{-i\phi/2}]
+
+中间弱连接区域具有动量依赖自旋劈裂：
+
+[M(\mathbf{k}) = M_0 f(\mathbf{k})]
+
+典型选择：
+
+[f_{d_{x^2-y^2}}(\mathbf{k}) = \cos k_x - \cos k_y]
+
+或连续模型中：
+
+[f(\mathbf{k}) = k_x^2-k_y^2]
+
+这个 (M(\mathbf{k})) 的关键是：它不是普通 Zeeman 场，没有空间平均净磁化，但仍然能产生自旋选择性谱结构。
+
+四、最小模型设计
+
+正常态 Hamiltonian
+
+建议从一个二维晶格模型开始：
+
+\xi_{\mathbf{k}}\sigma_0+\alpha_R(\sin k_y \sigma_x - \sin k_x \sigma_y)+M(\mathbf{k})\sigma_z]
+
+其中：
+
+-2t(\cos k_x+\cos k_y)-\mu]
+
+M_0(\cos k_x-\cos k_y)]
+
+这里：
+
+(t)：跃迁；
+
+(\mu)：化学势；
+
+(\alpha_R)：Rashba SOC，可先保留，后面再证明某些情况下可以减弱甚至不需要；
+
+(M_0)：补偿磁序强度；
+
+(\sigma_i)：自旋 Pauli 矩阵。
+
+如果想突出“无普通 Zeeman 场”，必须明确写：
+
+[B_\mathrm{Z}=0]
+
+并比较 (M(\mathbf{k})\sigma_z) 与普通 Zeeman 项 (B\sigma_z) 的差异。
+
+BdG Hamiltonian
+
+BdG 形式：
+
+\begin{pmatrix}H_0(\mathbf{k}) & \Delta(\mathbf{r}) i\sigma_y -\Delta^(\mathbf{r}) i\sigma_y & -H_0^(-\mathbf{k})\end{pmatrix}]
+
+也可写成：
+
+\Delta_y(\mathbf{r})\tau_y]
+
+其中：
+
+[\Delta_x = \Delta \cos \varphi(\mathbf{r}),\quad\Delta_y = \Delta \sin \varphi(\mathbf{r})]
+
+左右相位差为 (\phi)。
+
+拓扑指标
+
+你们至少需要两个互相验证的拓扑指标：
+
+方法 A：能带闭合与 reopening
+
+沿着 junction 方向设为 (x)，横向为 (y)。如果 (x) 方向平移不变，则对每个 (k_x) 求有效一维谱：
+
+[E_n(k_x,\phi)]
+
+寻找 gap closing/reopening：
+
+[E_\mathrm{gap}(\phi,\mu,M_0,\alpha_R)=0]
+
+方法 B：散射矩阵拓扑不变量
+
+对一维有效系统，可以用零能反射矩阵定义：
+
+[Q=\mathrm{sgn}[\det r(0)]]
+
+或在粒子-空穴对称约束下用 Pfaffian 指标：
+
+[Q=\mathrm{sgn}\left[\frac{\mathrm{Pf},H_\mathrm{BdG}(k=0)}{\mathrm{Pf},H_\mathrm{BdG}(k=\pi)}\right]]
+
+如果你们用递归格林函数，散射矩阵指标非常适合，因为可直接从 lead self-energy 和 Green function 得到 (r(E))、(t(E))。
+
+五、论文的核心创新点设计
+
+创新点 1：无净磁化拓扑相
+
+你们要证明：
+
+普通 Zeeman 场为零时：
+
+[B_Z=0]
+
+系统仍然可以进入拓扑相：
+
+[Q=-1]
+
+而且这个拓扑相由三个因素协同产生：
+
+[\text{phase bias } \phi+\text{compensated magnetic spin splitting } M(\mathbf{k})+\text{proximity pairing } \Delta]
+
+最好得到类似这样的结论：
+
+[\phi \approx \pi]
+
+附近拓扑窗口最大，而 (M_0) 控制拓扑带反转。
+
+创新点 2：相位调控的拓扑开关
+
+传统纳米线通过磁场调控拓扑相：
+
+[B>B_c]
+
+你们的方案通过 Josephson 相位调控：
+
+[\phi: 0 \rightarrow \pi]
+
+可以实现：
+
+[Q=+1 \rightarrow Q=-1]
+
+这点很重要，因为它给实验组一个低损耗、可调控的 knob。文章要强调：
+
+拓扑相变可以通过超导相位差驱动，而不是通过强外磁场驱动。
+
+创新点 3：非局域输运指纹
+
+这篇文章要避免只讨论局域零偏峰。建议定义三类电导：
+
+局域电导：
+
+[G_{LL}(V)=\frac{dI_L}{dV_L}]
+
+右端局域电导：
+
+[G_{RR}(V)=\frac{dI_R}{dV_R}]
+
+非局域电导：
+
+[G_{LR}(V)=\frac{dI_L}{dV_R}]
+
+非局域电导进一步分解为：
+
+[G_{LR}\proptoT_\mathrm{CAR}-T_\mathrm{EC}]
+
+其中：
+
+(T_\mathrm{CAR})：crossed Andreev reflection；
+
+(T_\mathrm{EC})：elastic cotunneling。
+
+真正的 Majorana 模式应具有端到端相关性，因此在拓扑相变附近，(G_{LR}) 应与 bulk gap closing/reopening 同步变化。平庸 ABS 可以产生 (G_{LL}) 零偏峰，但通常不会产生稳定、对称、相位相关的 (G_{LR}) 拓扑信号。
+
+创新点 4：排除平庸态伪信号
+
+你们必须专门做一节：
+
+Why zero-bias peaks are not enough
+
+然后放入三类负对照：
+
+对照 A：普通 Andreev bound state
+
+通过在 junction 一端加入局域势阱：
+
+[V_\mathrm{dot}(x)=V_0 e^{-(x-x_0)^2/2\sigma^2}]
+
+制造局域 ABS。它可能产生零偏峰，但缺少端到端非局域相关。
+
+对照 B：Yu-Shiba-Rusinov impurity
+
+加入磁性杂质：
+
+J\mathbf{S}\cdot \boldsymbol{\sigma}\delta(\mathbf{r}-\mathbf{r}_0)]
+
+用 T-matrix：
+
+\left[1-V_\mathrm{imp}G_0(E,\mathbf{r}_0,\mathbf{r}0)\right]^{-1}V\mathrm{imp}]
+
+计算杂质诱导的 in-gap state。YSR 态可能靠近零能，但其空间分布、非局域响应、相位依赖与 Majorana 不同。
+
+对照 C：无序诱导近零能态
+
+加入随机势：
+
+[V_\mathrm{dis}(\mathbf{r})\in[-W/2,W/2]]
+
+进行无序平均：
+
+[\langle G(V)\rangle_W]
+
+并画出拓扑相在 (W) 下的存活概率。你们要展示：局域零偏峰在无序下很容易出现，但只有拓扑相的非局域判据具有统计稳定性。
+
+六、建议的主文图结构
+
+一篇 Nature Physics 风格文章，主文最好控制在 4–5 张核心图，每张图都有明确故事。
+
+Figure 1：概念图 + 机制图
+
+内容：
+
+左图：planar Josephson junction 几何。左右 s-wave 超导，中间 compensated magnetic weak link。标出相位差 (\phi)、无外磁场 (B=0)、测量端口 (L/R)。
+
+中图：普通 Zeeman 场 vs compensated magnetic splitting 的区别。普通 Zeeman 场整体自旋劈裂；altermagnetic/compensated magnetic splitting 在动量空间符号变化，总磁矩为零。
+
+右图：机制示意。相位差 (\phi) 和 (M(\mathbf{k})) 共同诱导拓扑带反转，边界出现 Majorana zero modes。
+
+核心信息：
+
+Topological superconductivity without net magnetization.
+
+Figure 2：拓扑相图
+
+建议画四个相图：
+
+[(\mu,\phi)]
+
+[(M_0,\phi)]
+
+[(\alpha_R,M_0)]
+
+[(W,M_0)]
+
+每个相图中颜色表示 bulk gap 或拓扑指标：
+
+[Q=\pm 1]
+
+最好用黑线标出 gap closing 边界。
+
+主结论：
+
+在 (B_Z=0) 下，系统在宽参数窗口内进入拓扑相；相位差 (\phi) 是最有效的开关。
+
+Figure 3：Majorana 波函数与能谱
+
+内容：
+
+开边界能谱 (E_n(\phi))；
+
+拓扑相中两个端点的零能态；
+
+Majorana polarization 或 particle-hole self-conjugacy；
+
+有限长度下 Majorana splitting 随长度指数衰减：
+
+[\delta E \sim e^{-L/\xi}\cos(k_F L+\theta)]
+
+这张图要证明你们看到的不是普通 in-gap state，而是具有端点局域、粒子-空穴自共轭、拓扑相伴随的 Majorana 模式。
+
+Figure 4：局域与非局域输运
+
+这是最关键的一张图。
+
+画：
+
+[G_{LL}(V,\phi)]
+
+[G_{RR}(V,\phi)]
+
+[G_{LR}(V,\phi)]
+
+[T_\mathrm{CAR}(V,\phi)-T_\mathrm{EC}(V,\phi)]
+
+你们要展示：
+
+局域零偏峰可以出现，但不能单独判定拓扑；真正的拓扑相变同时伴随非局域 gap closing/reopening 和端到端相关信号。
+
+主结论：
+
+Nonlocal conductance tracks the topological transition, while local zero-bias peaks alone do not.
+
+Figure 5：平庸态排伪
+
+这张图决定文章档次。
+
+比较四种情况：
+
+情形
+
+局域零偏峰
+
+非局域信号
+
+拓扑指标
+
+结论
+
+真 Majorana
+
+有
+
+有
+
+(Q=-1)
+
+拓扑
+
+局域 ABS
+
+有
+
+弱或无
+
+(Q=+1)
+
+平庸
+
+YSR 态
+
+可有
+
+局域为主
+
+(Q=+1)
+
+平庸
+
+无序近零能态
+
+可有
+
+不稳定
+
+随样本波动
+
+非拓扑
+
+如果这张图做得好，文章的说服力会大幅提升。
+
+七、计算路线
+
+Step 1：先做清洁体系相图
+
+目标是确定基本拓扑窗口。
+
+参数建议：
+
+[t=1,\quad \Delta=0.1t,\quad \alpha_R=0.1t-0.3t]
+
+[M_0=0-1t,\quad \mu=-4t \sim 4t,\quad \phi=0\sim 2\pi]
+
+输出：
+
+bulk spectrum；
+
+topological invariant；
+
+phase diagram；
+
+Majorana wavefunction。
+
+Step 2：接入正常金属 lead，做 BTK/Green function 输运
+
+用 retarded Green function：
+
+H_\mathrm{BdG}
+
+\Sigma_L^r
+
+\Sigma_R^r\right]^{-1}]
+
+局域 Andreev reflection：
+
+\mathrm{Tr}[\Gamma_L^h G^r \Gamma_L^e G^a]]
+
+普通反射：
+
+\mathrm{Tr}[\Gamma_L^e G^r \Gamma_L^e G^a]]
+
+局域电导：
+
+T_{ee}^{LL}(E)+T_{he}^{LL}(E)]]
+
+非局域电导：
+
+T_{ee}^{LR}(E)]]
+
+这里：
+
+[T_{he}^{LR}=T_\mathrm{CAR}]
+
+[T_{ee}^{LR}=T_\mathrm{EC}]
+
+这正好是你们熟悉的 BTK + 格林函数框架。
+
+Step 3：做杂质 T-matrix
+
+非磁杂质：
+
+[V_\mathrm{imp}=U\tau_z]
+
+磁性杂质：
+
+[V_\mathrm{imp}=J\mathbf{S}\cdot \boldsymbol{\sigma}]
+
+T-matrix：
+
+[T(E)=[1-V_\mathrm{imp}G_0^r(E,\mathbf{r}_0,\mathbf{r}0)]^{-1}V\mathrm{imp}]
+
+修正后的 Green function：
+
+G_0^r+G_0^r T G_0^r]
+
+输出：
+
+impurity-induced LDOS；
+
+YSR state energy；
+
+impurity position dependence；
+
+impurity 对局域/非局域电导的影响。
+
+这部分是你们的优势，应该放大。
+
+Step 4：做无序统计
+
+随机势：
+
+[V_i\in[-W/2,W/2]]
+
+对每个样本计算：
+
+[Q_i,\quad G_{LL}^{(i)},\quad G_{LR}^{(i)},\quad E_\mathrm{gap}^{(i)}]
+
+然后统计：
+
+\frac{1}{N}\sum_i\Theta(Q_i=-1)]
+
+以及：
+
+[\mathrm{Var}[G_{LR}(0)]]
+
+你们要得出的理想结论是：
+
+局域零偏峰在无序下并不可靠，但非局域拓扑响应和散射矩阵指标在一定无序范围内保持一致。
+
+八、文章摘要雏形
+
+可以先写成这样：
+
+The search for Majorana modes in superconducting hybrids has been hindered by the need for magnetic fields and by the ambiguity of local zero-bias conductance peaks. Here we propose a field-free route to topological superconductivity in phase-biased Josephson junctions based on compensated magnetic weak links. The momentum-dependent spin splitting of the compensated magnet, despite producing no net magnetization, cooperates with the superconducting phase bias to drive a topological transition. Using a combination of scattering-matrix topology, recursive Green-function simulations and generalized BTK transport theory, we identify Majorana end modes and establish a nonlocal conductance criterion that distinguishes them from trivial Andreev and impurity-induced zero-energy states. Our results provide an experimentally testable protocol for realizing and diagnosing field-free topological superconductivity in magnetic Josephson devices.
+
+中文意思：
+
+Majorana 模式研究长期受限于外磁场需求和局域零偏峰歧义。我们提出一种基于补偿磁序弱连接的相位偏置 Josephson 结，在无净磁化条件下实现拓扑超导。补偿磁体的动量依赖自旋劈裂与 Josephson 相位差协同驱动拓扑相变。通过散射矩阵拓扑指标、递归格林函数和广义 BTK 输运，我们识别 Majorana 端模，并建立非局域电导判据，将其与平庸 Andreev 态和杂质诱导零能态区分开来。
+
+九、建议文章结构
+
+Introduction
+
+重点不是介绍所有 Majorana 背景，而是提出痛点：
+
+Majorana 需要更干净、更低磁场的平台；
+
+局域零偏峰存在严重歧义；
+
+补偿磁序提供无净磁化自旋劈裂；
+
+Josephson 相位差提供可调控拓扑开关；
+
+本文给出新平台和非局域判据。
+
+Model and mechanism
+
+介绍 Josephson junction 几何、Hamiltonian、补偿磁序项、相位偏置。
+
+必须强调：
+
+[\langle M(\mathbf{k})\rangle_\mathrm{BZ}=0]
+
+但：
+
+[M(\mathbf{k}) \neq 0]
+
+因此无净磁化但有自旋选择性。
+
+Topological phase diagram
+
+给出：
+
+clean limit 相图；
+
+gap closing/reopening；
+
+拓扑不变量；
+
+相位调控拓扑开关。
+
+Majorana modes
+
+给出：
+
+open boundary spectrum；
+
+Majorana wavefunction；
+
+finite-size splitting；
+
+Majorana polarization。
+
+Local and nonlocal transport
+
+给出：
+
+(G_{LL})、(G_{RR})、(G_{LR})；
+
+CAR/EC 分解；
+
+与拓扑相图对应；
+
+与相位偏置对应。
+
+Distinguishing trivial zero-energy states
+
+重点章节。
+
+比较：
+
+topological Majorana；
+
+trivial ABS；
+
+YSR impurity；
+
+disorder-induced near-zero states。
+
+这部分要做得像“实验诊断手册”。
+
+Discussion
+
+讨论可实现平台：
+
+altermagnetic weak links；
+
+2D compensated magnets；
+
+vdW Josephson junction；
+
+semiconductor-superconductor-altermagnet hybrids；
+
+proximitized quantum anomalous or spin-split materials。
+
+也要诚实讨论限制：
+
+材料界面质量；
+
+pairing suppression；
+
+magnetic domain；
+
+finite temperature；
+
+lead-induced broadening；
+
+phase control difficulty。
+
+十、最重要的“成败点”
+
+这篇文章成败不取决于你们能不能画出 Majorana 零模；很多文章都能画。成败取决于以下四点：
+
+是否真的 field-free
+
+必须避免偷偷引入普通 Zeeman 场。所有主图都应保持：
+
+[B_Z=0]
+
+可以在补充材料中比较 (B_Z\neq 0)，但主文要突出无外磁场。
+
+是否真的超越已有 altermagnet 文章
+
+已有工作已经讨论 altermagnetic Josephson junction 和 Majorana。你们要把创新点放在：
+
+补偿磁序的统一机制；
+
+相位驱动拓扑开关；
+
+非局域输运；
+
+真假 Majorana 排伪；
+
+杂质和无序鲁棒性。
+
+不要只说“我们也发现了 Majorana”。
+
+是否能排除平庸 ABS
+
+如果文章只有 LDOS 和 (G_{LL})，很难有高影响力。必须把平庸 ABS 做出来，然后证明它和真 Majorana 的差别。
+
+是否有实验可操作性
+
+最后要给出明确实验协议：
+
+调相位 (\phi)；
+
+测 (G_{LL})、(G_{RR})、(G_{LR})；
+
+观察 bulk gap closing/reopening；
+
+检查非局域信号是否与拓扑相变同步；
+
+扫 gate、温度、磁畴方向、界面透明度；
+
+排除局域 ABS/YSR/无序峰。
+
+十一、投稿前必须完成的 robustness checklist
+
+建议内部设一个 checklist：
+
+检查项
+
+是否必须
+
+目标
+
+(B_Z=0) 下拓扑相
+
+必须
+
+核心卖点
+
+gap closing/reopening
+
+必须
+
+拓扑相变证据
+
+散射矩阵拓扑指标
+
+必须
+
+与能谱交叉验证
+
+Majorana 端态
+
+必须
+
+直观证据
+
+局域电导 (G_{LL})
+
+必须
+
+与实验连接
+
+非局域电导 (G_{LR})
+
+必须
+
+排伪核心
+
+CAR/EC 分解
+
+强烈建议
+
+解释非局域信号
+
+平庸 ABS 对照
+
+必须
+
+排除伪峰
+
+YSR 杂质对照
+
+强烈建议
+
+发挥你们优势
+
+无序平均
+
+必须
+
+现实性
+
+界面透明度扫描
+
+必须
+
+实验可行性
+
+有限温度/展宽
+
+必须
+
+实验对比
+
+磁畴方向/晶轴旋转
+
+强烈建议
+
+补偿磁序特色
+
+十二、建议参考文献
+
+Fu, L., & Kane, C. L. (2008). Superconducting proximity effect and Majorana fermions at the surface of a topological insulator. Physical Review Letters, 100, 096407. https://doi.org/10.1103/PhysRevLett.100.096407
+
+Lutchyn, R. M., Sau, J. D., & Das Sarma, S. (2010). Majorana fermions and a topological phase transition in semiconductor-superconductor heterostructures. Physical Review Letters, 105, 077001. https://doi.org/10.1103/PhysRevLett.105.077001
+
+Oreg, Y., Refael, G., & von Oppen, F. (2010). Helical liquids and Majorana bound states in quantum wires. Physical Review Letters, 105, 177002. https://doi.org/10.1103/PhysRevLett.105.177002
+
+Hell, M., Leijnse, M., & Flensberg, K. (2017). Two-dimensional platform for networks of Majorana bound states. Physical Review Letters, 118, 107701. https://doi.org/10.1103/PhysRevLett.118.107701
+
+Pientka, F., Keselman, A., Berg, E., Yacoby, A., Stern, A., & Halperin, B. I. (2017). Topological superconductivity in a planar Josephson junction. Physical Review X, 7, 021032. https://doi.org/10.1103/PhysRevX.7.021032
+
+Fornieri, A., Whiticar, A. M., Setiawan, F., Portolés, E., Drachmann, A. C. C., Keselman, A., et al. (2019). Evidence of topological superconductivity in planar Josephson junctions. Nature, 569, 89–92. https://doi.org/10.1038/s41586-019-1068-8
+
+Ren, H., Pientka, F., Hart, S., Pierce, A. T., Kosowsky, M., Lunczer, L., et al. (2019). Topological superconductivity in a phase-controlled Josephson junction. Nature, 569, 93–98. https://doi.org/10.1038/s41586-019-1148-9
+
+Yang, G. Z. X., Sun, Z. T., Xie, Y. M., & Law, K. T. (2026). Topological altermagnetic Josephson junctions. npj Quantum Materials. https://www.nature.com/articles/s41535-026-00874-8
+
+Sharma, P., & Mohanta, N. (2026). Double-peak Majorana bound states in altermagnet–superconductor heterostructures. arXiv. https://arxiv.org/abs/2603.25844
+
+Mondal, S., & Cayao, J. (2026). Spin-polarized Andreev molecules and anomalous nonlocal Josephson effects in altermagnetic junctions. arXiv. https://arxiv.org/abs/2603.04954
+
+Wang, X., Lyu, K. Y., Guo, Y., & Li, Y. X. (2026). Quantized crossed Andreev reflection in altermagnet/altermagnet topological superconductor/altermagnet heterojunction. Physical Review B. https://link.aps.org/doi/10.1103/rv94-djlk
+
+Ridley, M., Cohen, E., Flindt, C., & Tuovinen, R. (2026). Current cross-correlation spectroscopy of Majorana bound states. Physical Review B. https://link.aps.org/doi/10.1103/vyq4-xc1j
+
+最后建议
+
+这篇文章最适合的定位不是：
+
+“我们在 altermagnet Josephson junction 中发现 Majorana。”
+
+而应该是：
+
+“我们提出一种无净磁化、相位可控的拓扑超导机制，并建立一套能区分真 Majorana 与平庸零能态的非局域输运诊断。”
+
+这样文章的格局会更大，也更符合 Nature Physics 对“概念推进 + 可实验验证 + 领域意义”的要求。
