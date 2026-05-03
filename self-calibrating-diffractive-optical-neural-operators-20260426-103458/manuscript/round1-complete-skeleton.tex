@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{longtable}
+
+\setstretch{1.08}
+\setlist[itemize]{leftmargin=1.5em}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+
+\title{Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations}
+\author{Round 1 Intake-to-Draft Skeleton}
+\date{2026-05-03}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dynamic aberrations turn coherent image formation into a time-varying inverse problem whose state is often unknown at the moment of measurement. Existing optical correction strategies typically rely on active wavefront sensing, adaptive hardware, iterative optimization, or substantial electronic post-processing. Here we study a stricter question: whether a fixed diffractive optical processor can use a co-propagating optical reference to infer the instantaneous degradation state and improve image recovery without dynamic reconfiguration of the optics. Across Gaussian surrogate studies, wave-optics simulations with dynamic Zernike aberrations, information-theoretic and task-level analyses, and a first phase-only passive-processor prototype, the current evidence supports the bounded claim that a common-path pilot channel can reduce uncertainty about the present degradation and improve downstream recovery relative to no-reference and non-common-path controls. The same evidence also exposes the main unresolved issue: the processor-level gain remains weak and configuration-sensitive, with the current minimal NumPy rebuild showing at best a near-tie with the ordinary D2NN and only a local matched common-path advantage over the non-common-path control. This round therefore delivers a complete manuscript skeleton with explicit evidence boundaries while leaving the final device-level claim open pending stronger processor-level results.
+\end{abstract}
+
+\section{Introduction}
+Dynamic aberrations, turbulence, scattering, defocus, and system drift remain central limits in microscopy, free-space imaging, and coherent computational imaging because they vary during acquisition rather than acting as one fixed blur kernel. The practical difficulty is not only reduced resolution or contrast, but the fact that the degradation state itself changes from sample to sample and frame to frame, so image formation becomes a moving inverse problem. Adaptive optics, wavefront shaping, and computational correction have each delivered powerful responses, yet they usually depend on explicit wavefront estimation, active modulation hardware, iterative feedback, or heavy digital reconstruction.
+
+Diffractive optical neural networks and related free-space optical processors have expanded passive optical computing beyond static classification toward denoising, phase processing, analog inference, and inverse design. Most such systems, however, are optimized for one forward model or for a training distribution that treats perturbations as nuisance variability rather than as an instantaneous latent state that can itself be inferred. This leaves an unresolved question at the heart of passive optical intelligence: can a fixed diffractive processor become condition-aware without active retuning?
+
+Existing routes do not fully close that gap. Robust training can average over a family of degradations, but it does not guarantee access to the specific realization acting on the present input. Guide-star and wavefront-sensing methods can estimate the aberration state, yet they often require dedicated sensing paths, active correction loops, or additional hardware. Purely digital restoration can be powerful, but it shifts the burden to electronic inference and may fail out of distribution. A physically cleaner route is to let a known reference field co-propagate with the object through the same unknown distortion, so that the recorded optical field already contains conditional information about the current degradation.
+
+This manuscript develops that conditional-optics viewpoint for self-calibrating diffractive processing. Figure~1 introduces the common-path pilot concept and the control conditions used throughout the study. Figure~2 tests whether the effect survives a wave-optics forward model with dynamic Zernike aberrations. Figure~3 asks what can be said, within clear local limits, about the information carried by the pilot observation and the resulting task-level loss floor. Figure~4 checks whether the same mechanism transfers across downstream tasks. Figure~5 then presents the crucial processor-level comparison between ordinary and pilot-assisted passive diffractive networks. The present evidence supports the mechanism and its wave-optics persistence, but Figure~5 remains too weak to justify a final Nature Communications claim, so the paper is written with strict evidence boundaries rather than submission-level certainty.
+
+\section{Results}
+\subsection{Result 1: Common-path reference reduces uncertainty in the minimal mechanism model}
+Figure~1 establishes the conditional-observation mechanism rather than a device claim. In the Gaussian surrogate study, the out-of-distribution stronger-aberration set gave a mean reconstruction PSNR of 19.669~dB without a reference and 20.268~dB with a non-common-path reference, whereas the common-path pilot reached 21.990~dB. This ordering is the first direct evidence that a pilot sharing the same instantaneous degradation can improve recovery beyond both no-reference and mismatched-reference baselines. The argument role of Figure~1 is therefore narrow but essential: it shows that the common-path pilot is not merely adding optical power, but can carry condition-specific information relevant to reconstruction.
+
+\textbf{Figure 1 role.} Concept schematic plus no-reference, non-common-path, and common-path mechanism controls. This figure supports the mechanism only.
+
+\subsection{Result 2: The same direction persists in a wave-optics model with dynamic Zernike aberrations}
+Figure~2 moves from surrogate intuition to a more realistic coherent-propagation model. Under the Zernike pupil protocol, the stronger-aberration set produced a mean reconstruction PSNR of 37.069~dB for no-reference, 37.078~dB for non-common-path, and 38.422~dB for common-path input. The common-path setting also achieved the smallest mean PSF mismatch, with a mean PSF MSE of 4.217e-06 compared with 1.279e-05 for no-reference and 1.155e-05 for non-common-path. Figure~2 therefore carries the manuscript's strongest verified recovery result: the common-path advantage survives a wave-optics model in which the degradation originates from dynamic pupil aberrations rather than from a Gaussian surrogate blur.
+
+\textbf{Figure 2 role.} Wave-optics validation under dynamic Zernike aberrations. This figure carries the strongest current verified result.
+
+\subsection{Result 3: Information-theoretic and task-level analyses explain why the pilot can help, but only locally}
+Figure~3 provides the theoretical bridge between the pilot observation and downstream performance. The current CRLB-style scan shows that the pilot observation model carries finite Fisher information over much of the explored train and out-of-distribution region, with median trace values of 6.452e-04 and 1.736e-04, respectively. The accompanying local bound note links pilot-channel covariance to downstream task loss through a local curvature sandwich. The resulting claim must remain restrained. Figure~3 supports the statement that the pilot can lower local task-level error floors when the observation model and task map satisfy the stated assumptions. It does not prove that a fixed passive processor will always recover the latent degradation or solve a general blind inverse problem.
+
+\textbf{Figure 3 role.} Local information and task-level theory support, not global blind inversion.
+
+\subsection{Result 4: Cross-task generalization is strongest for reconstruction and weaker for other tasks}
+Figure~4 prevents overgeneralization by showing where the current positive signal is strongest and where it remains modest. In the current cross-task surrogate evaluation, the common-path condition improves out-of-distribution reconstruction PSNR from 34.837~dB to 36.782~dB relative to no-reference. It also lowers the classification true-class residual from 0.035464 to 0.034616 and yields only a very small improvement in inverse-design target MSE, from 0.002317 to 0.002315. Figure~4 therefore argues for a task-dependent advantage rather than a universal one. Reconstruction is the clearest positive regime in the current evidence chain, classification residual shows a mild improvement, and inverse design remains too weak to support a broad claim.
+
+\textbf{Figure 4 role.} Task dependence and evidence boundary control.
+
+\subsection{Result 5: A first passive diffractive processor prototype exists, but the gain is still weak}
+Figure~5 is the manuscript's decisive bottleneck figure, and it must be read conservatively. The first two-layer phase-only reconstruction-only D2NN comparison yielded a neutral-to-negative result, with the common-path condition falling 0.191~dB below the ordinary D2NN. A revised three-layer self-calibrating phase-only prototype then produced a weak positive object-zone out-of-distribution signal, but the current activity-workspace rebuild shows that the processor-level story is still configuration-sensitive rather than settled. In the restored NumPy-only baseline, the best common-path out-of-distribution mean PSNR is 20.421~dB, effectively tied with the best ordinary D2NN at 20.421~dB, while the best non-common-path configuration reaches 20.473~dB. The strongest matched common-path advantage found in the current rebuild is local rather than global: at four layers and pilot amplitude 0.25, common-path exceeds the matched non-common-path control by 0.214~dB, but that window still does not deliver a clear ordinary-beating result.
+
+Figure~5 is therefore still necessary because it proves that the device-level story is no longer missing; however, its present argument role is limited to showing that a reproducible processor-level baseline and a local common-path window now exist. It does not yet justify the claim that self-calibration has been cleanly demonstrated at the processor level.
+
+\textbf{Figure 5 role.} Weak but real processor-level prototype boundary. This figure cannot yet carry the full main claim.
+
+\section{Discussion}
+Taken together, Figures~1--5 support a coherent but incomplete story. The main verified point is that a common-path pilot can encode useful information about the current degradation realization and improve recovery under the present surrogate and wave-optics protocols. The theoretical analyses in Figure~3 and the cross-task comparison in Figure~4 help explain why this improvement is strongest for reconstruction-oriented mappings and weaker elsewhere. This mechanism differs from ordinary robustness training because the pilot is meant to expose the current degradation instance, not merely average over a training distribution.
+
+The same evidence also draws a hard boundary around the manuscript. Figure~5 shows that the fixed passive-processor implementation is not yet strong enough to carry the paper's central claim at Nature Communications level. The gain is architecture-dependent, remains small, and is not yet mirrored by a cleaner calibration readout. The current manuscript must therefore present the processor-level result as a weak prototype rather than as a mature optical demonstration. That restraint is important because the existing negative or neutral findings are scientifically informative: they show that adding a pilot channel alone does not automatically produce a robust processor-level advantage.
+
+Several failure modes remain open. A pilot with too little information content may not sufficiently constrain the latent state. Reference mismatch or non-common-path corruption can erase the advantage. Stronger digital baselines may yet absorb or outperform the pilot information if trained with richer conditional structure. The processor-level effect may also remain fragile under seed changes, pilot-strength variation, layer-count scaling, turbulence, thin phase-screen scattering, fabrication errors, or detector noise. None of those regimes is yet verified, so they should appear as explicit outstanding risks rather than hidden assumptions.
+
+\section{Methods}
+\subsection{Optical formulation of common-path self-calibration}
+We consider an input optical field composed of an object-bearing channel and a known pilot channel that traverse the same unknown degradation operator before entering either a reconstruction rule or a passive diffractive processor. The common-path condition means that the pilot is exposed to the same instantaneous aberration realization as the object. The no-reference control removes the pilot entirely. The non-common-path control uses a pilot that does not share the same realization, and the wrong-reference control introduces a deliberately mismatched pilot. Because the detector records intensity, the combined observation carries auto- and cross-term information that can, in principle, constrain the latent degradation state. The verified claim in this manuscript is limited to the existence of useful conditional information under the current observation models; it does not claim globally solved blind inversion.
+
+\subsection{Forward models and degradation families}
+The evidence package uses four forward-model layers. The first is a Gaussian shared-blur surrogate that tests the mechanism in a minimal setting. The second is a wave-optics pupil model with dynamic Zernike aberrations, which serves as the strongest current physically grounded recovery result. The third is a task-level surrogate family used to link pilot-state information to reconstruction, classification residual, and inverse-design proxy losses. The fourth is a phase-only passive diffractive processor protocol that directly compares ordinary D2NN and pilot-assisted D2NN variants. Only the first processor-level prototype is currently available, and it should be treated as partial evidence rather than a definitive device result.
+
+\subsection{Metrics, controls, and evidence labeling}
+Primary current performance metrics are out-of-distribution reconstruction PSNR and PSF mismatch, with coefficient-recovery errors used only as secondary diagnostics because they are not uniformly aligned with the strongest recovery trends in the current dataset. Figure~1 compares no-reference, non-common-path, wrong-reference, and common-path conditions at the mechanism level. Figure~2 uses the same contrast to test persistence in the Zernike wave-optics model. Figure~3 reports pilot-information and local task-level analyses. Figure~4 compares reconstruction, classification residual, and inverse-design proxy behavior under the same conditional-observation logic. Figure~5 evaluates the passive-processor protocol. Throughout the manuscript, statements are marked internally by status: verified, partially verified, or unverified.
+
+\section{Summary}
+This work advances a bounded conditional-optics hypothesis: a common-path pilot can supply useful information about the instantaneous degradation state in imaging through dynamic aberrations. The strongest verified evidence comes from the wave-optics Zernike protocol, the pilot-information analysis, and the reconstruction-dominant cross-task results summarized in Figures~2--4. The decisive remaining gap is Figure~5: processor-level self-calibrating diffractive performance is now partially present, but still too weak and too architecture-sensitive to satisfy the acceptance bar of the target journal.
+
+\section*{Current manuscript assembly notes}
+\begin{itemize}
+  \item Keep the title and the four-paragraph introduction stable unless new evidence changes the core scope.
+  \item Keep Figure~5 language conservative until a stronger ordinary-versus-common-path result exists.
+  \item Next writing update should touch only Result~5, the closing discussion paragraph, and the final summary sentence if new processor-level evidence arrives.
+  \item Do not broaden the claim to arbitrary scattering, experimental validation, or fabrication robustness before those regimes are actually computed.
+\end{itemize}
+
+\end{document}
