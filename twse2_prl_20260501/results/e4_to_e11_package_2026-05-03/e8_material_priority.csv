@@ -1,0 +1,19 @@
+item,material,status,evidence_path,next_note
+A1,S^dagger S / flux conservation audit,complete,results/full_smatrix_transport_audit_2026-05-03/,normal-incidence full-S audit already saved
+A2,r_he-onset threshold robustness,complete,results/transport_validation_suite_2026-05-03/,threshold family already shows zero onset spread
+A3,Z-sweep,partial,results/transport_validation_suite_2026-05-03/ ; results/channel_resolved_multiorbital_btk_2026-05-02/,needs figure/SI-ready barrier export rather than internal validation only
+A4,broadening / energy-grid convergence,complete,results/convergence_reproducibility_suite_2026-05-03/,"energy-grid, angle-grid, and broadening package already saved"
+A5,ordinary s-wave negative-control plot,complete,results/observable_constraint_negative_control_2026-05-03/,same-pipeline ordinary baseline and trivial control already saved
+A6,trivial finite-bias double-peak control,complete,results/observable_constraint_negative_control_2026-05-03/,explicit trivial control already fails as desired
+A7,source data for every main figure,complete,submission_package_nc_2026-05-03/source_data/,compiled workbook and figure-wise CSV files already present
+A8,code availability package,complete,submission_package_nc_2026-05-03/README_reproduce.md ; requirements.txt ; scripts/,"reproduction guide, requirements, and script set already present"
+B1,eigenchannel projection onto experimentally meaningful modes,not started,none,still absent in current long-term space
+B2,interface orientation map,partial,results/kernel_invariance_tests_2026-05-02/ ; results/observable_constraint_negative_control_2026-05-03/,"alpha dependence exists, but no dedicated experiment-facing orientation map yet"
+B3,finite-temperature smearing,not started,none,no dedicated temperature package yet
+B4,disorder / interface roughness proxy,partial,results/kernel_invariance_tests_2026-05-02/,"interface-mixing proxy exists, but no full disorder package"
+B5,comparison with standard single-channel BTK,not started,none,no saved direct benchmark
+B6,parameter sensitivity table,partial,results/e4_to_e11_package_2026-05-03/e8_material_priority.csv,"this package provides the first ledger, but not a manuscript-facing full table yet"
+C1,predicted experimental line cuts,not started,none,still absent
+C2,data-driven decision tree,partial,results/e5_to_e8_package_2026-05-02/ ; results/e4_to_e11_package_2026-05-03/,"bounded decision-tree package exists, but not yet fully data-driven"
+C3,full alternative-pairing atlas,partial,results/observable_constraint_negative_control_2026-05-03/ ; results/channel_resolved_multiorbital_btk_2026-05-02/,"family comparison exists, but not a full atlas"
+C4,public Zenodo/figshare archive draft,not started,none,no public deposition draft yet
