@@ -21,7 +21,7 @@ environment skeleton for future manuscript and computation work.
 ### Output status
 
 - Files created locally in canonical long-term space: `yes`
-- GitHub write-back completed: `pending verification`
+- GitHub write-back completed: `yes`
 - Runtime check completed: `yes`
 - Environment completeness: `partial; numpy and pandas available, scipy/matplotlib/kwant/sympy missing`
 
