@@ -15,5 +15,5 @@
   `results/environment_smoke_test_2026-05-03/`.
 
 ## Immediate Next Action
-- Write the canonical root and its runtime baseline files into GitHub `open-ai`
-  so future runs can continue from the same project identity.
+- Continue project execution from this canonical root and migrate the remaining
+  high-value historical manuscript assets into the new structure as needed.
