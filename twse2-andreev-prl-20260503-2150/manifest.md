@@ -1,0 +1,22 @@
+# Manifest
+
+- Canonical project root:
+  - `twse2-andreev-prl-20260503-2150/`
+- Core ledger files:
+  - `project-profile.md`
+  - `project-state.md`
+  - `iteration-log.md`
+  - `archive-checklist.md`
+  - `drive-index.md`
+  - `manifest.md`
+- Bootstrap executable assets:
+  - `configs/default_params.json`
+  - `src/twse2_minimal.py`
+  - `scripts/run_wp1_wp2.py`
+- Source intake materials:
+  - `user-materials/01-markdown-4-1-.md`
+  - `user-materials/02-markdown-2-2-1-.md`
+- Future manuscript assets location:
+  - `manuscript/`
+- Future result tables and figures location:
+  - `results/`
