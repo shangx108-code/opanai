@@ -2,15 +2,15 @@
 
 - Archive mode: `active`
 - Fixed project root confirmed: `projects/field-free-majorana-compensated-josephson-natphys-2026-05-03T13-29-00Z`
-- Current archive risk: `temporary until this round's GitHub write-back is verified`
+- Current archive risk: `no immediate archive loss risk`
 
 ## Status By Artifact Class
 
-- project ledgers: `待回补 GitHub`
-- archived source brief: `待回补 GitHub`
-- runtime config and scripts: `待回补 GitHub`
-- manuscript root skeleton: `待回补 GitHub`
-- runtime check log: `待回补 GitHub`
+- project ledgers: `已写入 GitHub`
+- archived source brief: `已写入 GitHub`
+- runtime config and scripts: `已写入 GitHub`
+- manuscript root skeleton: `已写入 GitHub`
+- runtime check log: `已写入 GitHub`
 - project virtual environment wrapper: `local only, reproducible from python venv --system-site-packages`
 
 ## Environment Note
