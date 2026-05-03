@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-05-03T13:37:59.269220+00:00",
+  "python": "3.12.13",
+  "numpy": "2.3.5",
+  "pillow": "12.2.0",
+  "project_root": "/workspace/self-calibrating-diffractive-optical-neural-operators-20260426-103458",
+  "result_dir": "/workspace/self-calibrating-diffractive-optical-neural-operators-20260426-103458/results/environment_smoke_test_2026-05-03",
+  "field_stats": {
+    "min": 0.10032631456851959,
+    "max": 0.9999222755432129,
+    "mean": 0.5531250238418579
+  },
+  "status": "ok"
+}
