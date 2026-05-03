@@ -1,0 +1,28 @@
+{
+  "package": "e4_to_e11_package_2026-05-03",
+  "inputs": {
+    "nc_memo": "/workspace/user_files/01-markdown-1-md-20",
+    "xi_ar_metrics": "/workspace/memory/twse2_prl_20260501/results/xi_ar_zeeman_scan_2026-05-02/metrics.json",
+    "transport_validation": "/workspace/memory/twse2_prl_20260501/results/transport_validation_suite_2026-05-03/transport_validation_summary.csv",
+    "kernel_invariance": "/workspace/memory/twse2_prl_20260501/results/kernel_invariance_tests_2026-05-02/invariance_summary.csv",
+    "constraint_summary": "/workspace/memory/twse2_prl_20260501/results/observable_constraint_negative_control_2026-05-03/constraint_summary.csv",
+    "smatrix_summary": "/workspace/memory/twse2_prl_20260501/results/full_smatrix_transport_audit_2026-05-03/smatrix_summary.csv",
+    "particle_hole_summary": "/workspace/memory/twse2_prl_20260501/results/full_smatrix_transport_audit_2026-05-03/particle_hole_summary.csv",
+    "energy_convergence": "/workspace/memory/twse2_prl_20260501/results/convergence_reproducibility_suite_2026-05-03/energy_convergence_summary.csv",
+    "angle_convergence": "/workspace/memory/twse2_prl_20260501/results/convergence_reproducibility_suite_2026-05-03/angle_convergence_summary.csv",
+    "submission_package": "/workspace/memory/twse2_prl_20260501/submission_package_nc_2026-05-03"
+  },
+  "outputs": [
+    "e4_selectivity_metrics.csv",
+    "e4_inner_gap_selectivity.md",
+    "e5_pairing_decision_table.csv",
+    "e5_pairing_negative_controls.md",
+    "e7_methods_strengthening.md",
+    "e8_material_priority.csv",
+    "e8_material_priority.md",
+    "e9_reference_positioning.md",
+    "e10_reviewer_response_map.md",
+    "e11_submission_audit.csv",
+    "e11_submission_package_audit.md"
+  ]
+}
