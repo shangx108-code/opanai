@@ -1,0 +1,65 @@
+下面给你们设计一篇从零开始、目标 Nature Communications 的完整论文。方向仍然在光学衍射神经网络，但不做传统分类器，而是做一个更像 Nat Commun 的“跨学科成像问题”：动态像差/散射环境下的自校准全光成像恢复。
+
+论文总题目
+
+Self-calibrating diffractive optical neural operators for imaging through dynamic aberrations
+
+中文可理解为：
+
+面向动态像差成像的自校准衍射光学神经算子
+
+核心故事一句话：
+
+我们提出一种带“光学引导参考”的衍射神经网络，使固定的被动衍射层能够从同一光路中的参考波自动感知动态像差，并在探测面直接形成校正后的图像，从而实现无需迭代自适应光学、无需大规模电子后处理的快速成像恢复。
+
+一、为什么这篇有 Nature Communications 潜力
+
+传统 D2NN 从 Lin 等人在 Science 提出后，已经证明可用于分类、成像、相位处理、去噪等任务，但大多数工作仍然默认光路稳定、退化模型固定，或者只针对一个静态任务优化。近年高水平工作已经从“分类准确率”转向“成像与物理计算”：例如自由空间衍射计算、全光图像去噪、相位共轭、多平面定量相位成像等方向。因此，一篇新的 Nat Commun 级论文必须回答一个更大的物理问题：
+
+固定的被动衍射网络能否处理动态变化的光学退化？
+
+这个问题很重要，因为显微成像、大气成像、自由空间通信、内窥/散射介质成像都面临动态像差、湍流、散射、离焦和系统漂移。传统自适应光学需要波前传感、迭代校正或可调器件；电子深度学习恢复则需要算力和延迟。你们的切入点是：
+
+不做可调衍射网络，而是做“参考波辅助的固定衍射网络”。
+
+这比单纯“鲁棒训练”更有新意，因为网络不只是对扰动平均鲁棒，而是利用一个共同传播的 pilot/reference wave，从光学输入中读取当前像差状态。
+
+二、核心科学假设
+
+物理假设
+
+假设目标物光场 (O(x,y)) 与一个已知参考光场 (R(x,y)) 同时通过未知动态退化介质 (\mathcal{T}_{\xi})，其中 (\xi) 表示当前像差、散射或湍流状态：
+
+\mathcal{T}{\xi}[O(x,y)]+\alpha e^{i\varphi_p}\mathcal{T}{\xi}[R(x,y)]]
+
+这里 (R(x,y)) 可以是点源、棋盘格、稀疏编码图案、环形参考、低频结构光或 guide-star-like reference。它和物体经过同一退化通道，因此携带了当前退化的信息。
+
+衍射神经网络为固定被动系统：
+
+\mathcal{H}{\theta}\left(E{\text{in}}\right)]
+
+最终探测器输出强度：
+
+|E_L(x,y)|^2]
+
+由于探测强度包含物光与参考光的干涉交叉项：
+
+|E_O|^2 + |E_R|^2 + 2\Re(E_OE_R^*)]
+
+所以即使衍射传播本身是线性的，探测过程也能提供相位相关信息。你们的网络要学习的是：
+
+[\mathcal{H}{\theta}:\left(\mathcal{T}{\xi}[O],\mathcal{T}_{\xi}[R]\right)\rightarrowO]
+
+这就是“自校准”的来源。
+
+论文主张
+
+建议主张控制在以下范围，不要夸大：
+
+A fixed passive diffractive processor can perform distribution-level self-calibrated imaging correction when a co-propagating optical reference encodes the instantaneous aberration state.
+
+也就是说，不说“任意散射都能恢复”，而是说：
+
+在一类物理可描述的动态像差/弱散射/湍流分布内，固定衍射处理器可以利用参考波实现自校准恢复。
+
+这个表述更可信。
