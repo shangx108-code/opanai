@@ -24,9 +24,9 @@ Active target journal: `Nature Communications`
 
 - target repository: `shangx108-code/opanai`
 - target branch: `open-ai`
-- status: pending current-turn connector sync
-- note: local long-term-space files are already complete; remote state must be
-  refreshed for the new `e4_to_e11_package_2026-05-03/` package and the two new scripts
+- status: current-turn text assets synchronized through the GitHub connector
+- note: the new `e4_to_e11_package_2026-05-03/` package, updated index files,
+  and the two sync scripts are now present on the remote branch
 
 ## Current turn upload set
 
