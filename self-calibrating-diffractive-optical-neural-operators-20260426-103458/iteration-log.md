@@ -18,5 +18,6 @@
     `results/environment_smoke_test_2026-05-03/`
 
 ## Pending
-- Write the canonical root structure into GitHub `open-ai`
+- Upload the user project brief and smoke test outputs to GitHub when the next
+  project update is pushed
 - Continue project execution from this canonical root only
