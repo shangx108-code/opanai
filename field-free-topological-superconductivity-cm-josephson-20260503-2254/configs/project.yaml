@@ -1,0 +1,29 @@
+project:
+  id: field-free-topological-superconductivity-cm-josephson-20260503-2254
+  short_title: field-free topological superconductivity in compensated-magnetic Josephson junctions
+  target_journal: Nature Physics
+  started_at_asia_shanghai: "2026-05-03 22:54"
+  manuscript_root: manuscript
+  results_root: results
+  scripts_root: scripts
+  logs_root: logs
+
+physics_scope:
+  platform: planar Josephson junction with compensated-magnetic weak link
+  central_claim:
+    - field-free topological superconductivity without net magnetization
+    - phase-controlled topological transition
+    - nonlocal transport diagnostics beyond local zero-bias peaks
+  model_components:
+    - kinetic dispersion
+    - Rashba spin-orbit coupling
+    - momentum-dependent compensated magnetic splitting
+    - proximity-induced s-wave pairing
+  first_computation:
+    - build minimal BdG Hamiltonian
+    - scan phase bias near pi
+    - detect gap closing and reopening
+
+execution:
+  python_entry_check: scripts/check_environment.py
+  bootstrap_script: scripts/bootstrap_env.sh
