@@ -1,0 +1,20 @@
+{
+  "mu": -1.65,
+  "t1": 1.0,
+  "t2": 0.18,
+  "v1": 0.32,
+  "mz": 0.22,
+  "displacement_field": 0.12,
+  "zeeman_field": 0.0,
+  "phi_field": 0.0,
+  "delta_corr": 0.34,
+  "delta_sc": 0.11,
+  "gamma": 0.02,
+  "k_grid": 101,
+  "energy_min": -0.8,
+  "energy_max": 0.8,
+  "energy_points": 801,
+  "theta_points": 720,
+  "alpha_points": 13,
+  "eta_values": [0.0, 0.25, 0.5, 0.75, 1.0]
+}
