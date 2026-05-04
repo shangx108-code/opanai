@@ -25,9 +25,13 @@
 | Full coarse scan CSV | local only | pending GitHub writeback |
 | Near-closing subset CSV | written to GitHub | branch `open-ai` |
 | Quantitative summary note | written to GitHub | branch `open-ai` |
+| Planar junction coarse scan script | written to GitHub | branch `open-ai` |
+| Planar junction full coarse scan CSV | local only | pending GitHub writeback |
+| Planar junction near-closing subset CSV | written to GitHub | branch `open-ai` |
+| Planar junction quantitative summary note | written to GitHub | branch `open-ai` |
 
 ## Recovery flags
 
-- unique local-only artifact risk: `full coarse scan CSV`
-- pending GitHub writeback exists: `yes for the full coarse scan CSV`
-- archive complete: `no after first calculation`
+- unique local-only artifact risk: `two full coarse scan CSV files`
+- pending GitHub writeback exists: `yes for the full coarse scan CSV files`
+- archive complete: `no after second calculation`
