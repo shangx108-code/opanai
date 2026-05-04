@@ -33,9 +33,13 @@
 | Selective weak-link full coarse scan CSV | local only | pending GitHub writeback |
 | Selective weak-link near-closing subset CSV | written to GitHub | branch `open-ai` |
 | Selective weak-link quantitative summary note | written to GitHub | branch `open-ai` |
+| Round-4 channel-filtered scan script | written to GitHub | branch `open-ai` |
+| Round-4 full coarse scan CSV | local only | pending GitHub writeback |
+| Round-4 near-closing subset CSV | written to GitHub | branch `open-ai` |
+| Round-4 quantitative summary note | written to GitHub | branch `open-ai` |
 
 ## Recovery flags
 
-- unique local-only artifact risk: `three full coarse scan CSV files`
-- pending GitHub writeback exists: `yes for the full coarse scan CSV files`
-- archive complete: `no after third calculation`
+- unique local-only artifact risk: `four full coarse scan CSV files`
+- pending GitHub writeback exists: `yes for the four full coarse scan CSV files`
+- archive complete: `no after fourth calculation`
