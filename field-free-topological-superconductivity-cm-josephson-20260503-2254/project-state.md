@@ -4,7 +4,7 @@
 - Stage: `active calculation/verification`
 - Target journal: `Nature Physics`
 - Current main line: field-free topological superconductivity in compensated-magnetic Josephson junctions with nonlocal Majorana diagnostics
-- Single bottleneck: the current ad hoc two-channel BdG model is too permissive and does not isolate a convincing topological window
+- Single bottleneck: the weak-link physics and coupling structure still produce generic low-gap states, so a more planar geometry alone does not isolate a convincing topological window
 - Latest real progress:
   - locked project identity from the user brief
   - created a unified project root, archive ledger skeleton, and manuscript workspace
@@ -12,10 +12,11 @@
   - wrote the initialization skeleton to the fixed GitHub archive branch
   - implemented and ran the first coarse minimal BdG phase scan
   - verified that the current coarse model yields broad near-closure points with no clean topological sign flip
+  - implemented and ran a second coarse scan using a strip-like planar junction model
+  - verified that geometry-only refinement worsens phase selectivity under a matched low-gap threshold
 - Evidence boundary:
   - the manuscript concept and target journal are clear
-  - the first executable coarse scan now exists and is reproducible
-  - the present model does not yet justify a phase-selective topological claim
+  - neither the first two-channel model nor the second strip-like planar model justifies a phase-selective topological claim
   - transport-diagnostic development is still premature until the model is sharpened
 - Next shortest path:
-  - replace the ad hoc coupled-channel model with a more selective junction model that suppresses generic near-closures away from `phi ~ pi`
+  - redesign the weak-link physics by introducing a more selective compensated-magnetic junction mechanism rather than only geometric partitioning
