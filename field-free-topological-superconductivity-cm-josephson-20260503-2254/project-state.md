@@ -4,7 +4,7 @@
 - Stage: `active calculation/verification`
 - Target journal: `Nature Physics`
 - Current main line: field-free topological superconductivity in compensated-magnetic Josephson junctions with nonlocal Majorana diagnostics
-- Single bottleneck: the weak-link physics and coupling structure still produce generic low-gap states, so a more planar geometry alone does not isolate a convincing topological window
+- Single bottleneck: the selective weak-link redesign improves phase allocation but still leaves an oversized residual low-gap manifold, so one more pruning mechanism is needed
 - Latest real progress:
   - locked project identity from the user brief
   - created a unified project root, archive ledger skeleton, and manuscript workspace
@@ -14,9 +14,12 @@
   - verified that the current coarse model yields broad near-closure points with no clean topological sign flip
   - implemented and ran a second coarse scan using a strip-like planar junction model
   - verified that geometry-only refinement worsens phase selectivity under a matched low-gap threshold
+  - implemented and ran a third coarse scan with stronger barrier, weaker interface tunneling, and a narrower compensated-magnetic weak-link form
+  - verified a mixed result: phase allocation improves relative to the second scan, but total low-gap clutter increases strongly
 - Evidence boundary:
   - the manuscript concept and target journal are clear
-  - neither the first two-channel model nor the second strip-like planar model justifies a phase-selective topological claim
+  - none of the first three coarse models justifies a phase-selective topological claim yet
+  - the third scan is the first branch that moves spectral weight in the right direction, but it still fails the clutter criterion
   - transport-diagnostic development is still premature until the model is sharpened
 - Next shortest path:
-  - redesign the weak-link physics by introducing a more selective compensated-magnetic junction mechanism rather than only geometric partitioning
+  - add one explicit pruning mechanism on top of the selective weak link, such as stronger bank-junction mismatch or a more anisotropic compensated-magnetic channel filter
