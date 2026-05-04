@@ -4,7 +4,7 @@
 - Stage: `active calculation/verification`
 - Target journal: `Nature Physics`
 - Current main line: field-free topological superconductivity in compensated-magnetic Josephson junctions with nonlocal Majorana diagnostics
-- Single bottleneck: the selective weak-link redesign improves phase allocation but still leaves an oversized residual low-gap manifold, so one more pruning mechanism is needed
+- Single bottleneck: the new hard channel/orbital filter cuts the low-gap manifold strongly, but the surviving near-closures are still almost phi-flat rather than concentrated near `phi ~ pi`
 - Latest real progress:
   - locked project identity from the user brief
   - created a unified project root, archive ledger skeleton, and manuscript workspace
@@ -16,10 +16,13 @@
   - verified that geometry-only refinement worsens phase selectivity under a matched low-gap threshold
   - implemented and ran a third coarse scan with stronger barrier, weaker interface tunneling, and a narrower compensated-magnetic weak-link form
   - verified a mixed result: phase allocation improves relative to the second scan, but total low-gap clutter increases strongly
+  - implemented and ran a fourth coarse scan with hard channel/orbital filtering on top of the selective weak-link branch
+  - verified that the near-closing count drops from `125` to `39` while the residual low-gap points collapse into three phi-flat parameter families
 - Evidence boundary:
   - the manuscript concept and target journal are clear
-  - none of the first three coarse models justifies a phase-selective topological claim yet
-  - the third scan is the first branch that moves spectral weight in the right direction, but it still fails the clutter criterion
-  - transport-diagnostic development is still premature until the model is sharpened
+  - none of the first four coarse models justifies a phase-selective topological claim yet
+  - the fourth scan succeeds specifically at clutter reduction, not at producing a clean `phi ~ pi` focused closure pattern
+  - the exploratory topological indicator becomes abundant in the fourth scan and therefore cannot be trusted yet as manuscript-grade evidence by itself
+  - transport-diagnostic development is still premature until the phase-selective closure problem is sharpened further
 - Next shortest path:
-  - add one explicit pruning mechanism on top of the selective weak link, such as stronger bank-junction mismatch or a more anisotropic compensated-magnetic channel filter
+  - keep the reduced clutter of the fourth branch while restoring stronger phase sensitivity in the surviving active channel, likely through a small re-coupling or junction-mode revision rather than further brute-force pruning
