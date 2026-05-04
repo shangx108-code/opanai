@@ -43,9 +43,15 @@
 | Round-5 family trace CSV | local only | pending GitHub writeback |
 | Round-5 full coarse scan CSV | local only | pending GitHub writeback |
 | Round-5 near-closing subset CSV | local only | pending GitHub writeback |
+| Round-6 row-asymmetric scan script | written to GitHub | branch `open-ai` |
+| Round-6 candidate score table | written to GitHub | branch `open-ai` |
+| Round-6 quantitative summary note | written to GitHub | branch `open-ai` |
+| Round-6 family trace CSV | local only | pending GitHub writeback |
+| Round-6 full coarse scan CSV | local only | pending GitHub writeback |
+| Round-6 near-closing subset CSV | local only | pending GitHub writeback |
 
 ## Recovery flags
 
-- unique local-only artifact risk: `seven full or trace-heavy scan CSV files`
-- pending GitHub writeback exists: `yes for the seven larger CSV artifacts`
-- archive complete: `no after fifth calculation`
+- unique local-only artifact risk: `ten full or trace-heavy scan CSV files`
+- pending GitHub writeback exists: `yes for the ten larger CSV artifacts`
+- archive complete: `no after sixth calculation`
