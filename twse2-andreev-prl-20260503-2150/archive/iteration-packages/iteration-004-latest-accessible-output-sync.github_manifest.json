@@ -1,0 +1,37 @@
+{
+  "package": "iteration-004-latest-accessible-output-sync.zip",
+  "zip_bytes": 3925739,
+  "base64_bytes": 5303193,
+  "sha256": "cb8fa739af437ca9cae418f2eb5245aa5b5a11bff5dcbbdf66c599519f2ef9ab",
+  "chunks": [
+    {
+      "name": "part-000",
+      "bytes": 850000
+    },
+    {
+      "name": "part-001",
+      "bytes": 850000
+    },
+    {
+      "name": "part-002",
+      "bytes": 850000
+    },
+    {
+      "name": "part-003",
+      "bytes": 850000
+    },
+    {
+      "name": "part-004",
+      "bytes": 850000
+    },
+    {
+      "name": "part-005",
+      "bytes": 850000
+    },
+    {
+      "name": "part-006",
+      "bytes": 203193
+    }
+  ],
+  "chunk_count": 7
+}
