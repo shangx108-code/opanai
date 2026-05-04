@@ -4,7 +4,7 @@
 - Stage: `active calculation/verification`
 - Target journal: `Nature Physics`
 - Current main line: field-free topological superconductivity in compensated-magnetic Josephson junctions with nonlocal Majorana diagnostics
-- Single bottleneck: the new hard channel/orbital filter cuts the low-gap manifold strongly, but the surviving near-closures are still almost phi-flat rather than concentrated near `phi ~ pi`
+- Single bottleneck: small recoupling can restore local `phi` leverage in the residual families, but every tested recoupling candidate reopens too much global low-gap clutter
 - Latest real progress:
   - locked project identity from the user brief
   - created a unified project root, archive ledger skeleton, and manuscript workspace
@@ -18,11 +18,13 @@
   - verified a mixed result: phase allocation improves relative to the second scan, but total low-gap clutter increases strongly
   - implemented and ran a fourth coarse scan with hard channel/orbital filtering on top of the selective weak-link branch
   - verified that the near-closing count drops from `125` to `39` while the residual low-gap points collapse into three phi-flat parameter families
+  - implemented and ran a round-five family-focused recoupling scan on those three residual families
+  - verified that local `phi=pi` preference can be restored in all three families, but the same recoupling knobs expand the full near-closing manifold from `39` back to `173-204`
 - Evidence boundary:
   - the manuscript concept and target journal are clear
-  - none of the first four coarse models justifies a phase-selective topological claim yet
-  - the fourth scan succeeds specifically at clutter reduction, not at producing a clean `phi ~ pi` focused closure pattern
-  - the exploratory topological indicator becomes abundant in the fourth scan and therefore cannot be trusted yet as manuscript-grade evidence by itself
-  - transport-diagnostic development is still premature until the phase-selective closure problem is sharpened further
+  - none of the first five coarse branches justifies a phase-selective topological claim yet
+  - round four succeeds at clutter reduction only
+  - round five proves that local phase leverage is recoverable, but also proves that uniform recoupling is too global to be the right mechanism
+  - transport-diagnostic development is still premature until a phase-selective closure pattern is recovered without reopening broad low-gap clutter
 - Next shortest path:
-  - keep the reduced clutter of the fourth branch while restoring stronger phase sensitivity in the surviving active channel, likely through a small re-coupling or junction-mode revision rather than further brute-force pruning
+  - search for a more mode-selective phase lever than uniform recoupling, because broad interface/SOC recoupling is now verified to be too global
