@@ -4,7 +4,7 @@
 - Stage: `active calculation/verification`
 - Target journal: `Nature Physics`
 - Current main line: field-free topological superconductivity in compensated-magnetic Josephson junctions with nonlocal Majorana diagnostics
-- Single bottleneck: small recoupling can restore local `phi` leverage in the residual families, but every tested recoupling candidate reopens too much global low-gap clutter
+- Single bottleneck: row-asymmetric recoupling is clearly less damaging than uniform recoupling, but it still reopens too much global low-gap clutter to beat the round-four hard-filter branch
 - Latest real progress:
   - locked project identity from the user brief
   - created a unified project root, archive ledger skeleton, and manuscript workspace
@@ -20,11 +20,14 @@
   - verified that the near-closing count drops from `125` to `39` while the residual low-gap points collapse into three phi-flat parameter families
   - implemented and ran a round-five family-focused recoupling scan on those three residual families
   - verified that local `phi=pi` preference can be restored in all three families, but the same recoupling knobs expand the full near-closing manifold from `39` back to `173-204`
+  - implemented and ran a round-six row-asymmetric recoupling scan with recoupling restricted to the active row side
+  - verified that global blowback is reduced relative to round five, but near-closing points still rise to `104`, so round four remains the cleaner branch
 - Evidence boundary:
   - the manuscript concept and target journal are clear
-  - none of the first five coarse branches justifies a phase-selective topological claim yet
-  - round four succeeds at clutter reduction only
-  - round five proves that local phase leverage is recoverable, but also proves that uniform recoupling is too global to be the right mechanism
+  - none of the first six coarse branches justifies a phase-selective topological claim yet
+  - round four remains the cleanest clutter-reduction branch
+  - round five proves uniform recoupling is too global
+  - round six proves row-asymmetric recoupling is directionally better, but still not selective enough
   - transport-diagnostic development is still premature until a phase-selective closure pattern is recovered without reopening broad low-gap clutter
 - Next shortest path:
-  - search for a more mode-selective phase lever than uniform recoupling, because broad interface/SOC recoupling is now verified to be too global
+  - search for a still more selective phase lever than row-asymmetric recoupling, likely `k`-selective or phase-textured rather than another static interface-strength change
