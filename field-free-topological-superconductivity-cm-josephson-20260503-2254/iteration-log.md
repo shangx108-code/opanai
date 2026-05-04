@@ -96,3 +96,39 @@
   - the four earlier full coarse scan CSV files
 - Next shortest action:
   - test a more mode-selective phase lever instead of another uniform recoupling pass
+
+## 2026-05-04 11:xx Asia/Shanghai
+
+- Continued from the round-five failure mode with one narrower task only:
+  - restrict recoupling to the active row side instead of the whole junction
+- Implemented new round-six script:
+  - `scripts/run_round6_row_asymmetric_recoupling_scan.py`
+- Asymmetric knobs tested:
+  - `t_interface_left_active`
+  - `alpha_interface_left_active`
+  - `alpha_junction_x_active`
+  - `barrier_active`
+- Candidate search result:
+  - best candidate: `t_interface_left_active=0.20`, `alpha_interface_left_active=0.30`, `alpha_junction_x_active=0.14`, `barrier_active=2.30`
+  - family-level `phi~pi` wins: `2/3`
+  - family-level minima at `phi=pi`: `2/3`
+- Full-grid consequence of the best asymmetric candidate:
+  - total points: `936`
+  - near-closing points: `104`
+  - near-closing `phi~pi` fraction: `0.154`
+  - near-closing low-phase fraction: `0.231`
+  - smallest gap: `4.465e-5` at `mu=1.0`, `M0=0.6`, `phi/pi=1.0`
+- Main conclusion of this round:
+  - row-asymmetric recoupling is clearly less damaging than uniform recoupling
+  - but it still does not beat the round-four hard-filter branch, because the near-closing count remains much larger than `39`
+- GitHub writeback completed in this round for:
+  - `scripts/run_round6_row_asymmetric_recoupling_scan.py`
+  - `results/round6-row-asymmetric-recoupling-20260504/summary.md`
+  - `results/round6-row-asymmetric-recoupling-20260504/candidate_scores.csv`
+- GitHub writeback still pending after this round for:
+  - `results/round6-row-asymmetric-recoupling-20260504/best_asymmetric_full_scan.csv`
+  - `results/round6-row-asymmetric-recoupling-20260504/best_asymmetric_near_closing.csv`
+  - `results/round6-row-asymmetric-recoupling-20260504/family_gap_traces.csv`
+  - the earlier larger CSV artifacts from rounds one through five
+- Next shortest action:
+  - test a still more selective phase lever, likely `k`-selective or phase-textured, rather than another static interface-strength change
