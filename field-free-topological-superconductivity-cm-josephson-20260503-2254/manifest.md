@@ -23,6 +23,12 @@
 - `results/channel-filtered-round4-scan-20260504/summary.md`: quantitative round-four result summary
 - `results/channel-filtered-round4-scan-20260504/channel_filtered_round4_near_closing_points.csv`: near-closing subset for the fourth scan
 - `results/channel-filtered-round4-scan-20260504/channel_filtered_round4_gap_scan.csv`: full fourth-scan coarse grid output, currently still local-only and pending GitHub writeback
+- `scripts/run_round5_recoupled_family_scan.py`: fifth scan testing small recoupling on the three residual round-four families
+- `results/round5-recoupled-family-scan-20260504/summary.md`: round-five quantitative tradeoff summary
+- `results/round5-recoupled-family-scan-20260504/candidate_scores.csv`: round-five candidate ranking table
+- `results/round5-recoupled-family-scan-20260504/family_gap_traces.csv`: round-five family trace table, currently still local-only and pending GitHub writeback
+- `results/round5-recoupled-family-scan-20260504/best_recoupled_full_scan.csv`: full fifth-scan coarse grid output, currently still local-only and pending GitHub writeback
+- `results/round5-recoupled-family-scan-20260504/best_recoupled_near_closing.csv`: fifth-scan near-closing subset, currently still local-only and pending GitHub writeback
 
 ## Current archive expectation
 
