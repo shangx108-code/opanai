@@ -29,6 +29,12 @@
 - `results/round5-recoupled-family-scan-20260504/family_gap_traces.csv`: round-five family trace table, currently still local-only and pending GitHub writeback
 - `results/round5-recoupled-family-scan-20260504/best_recoupled_full_scan.csv`: full fifth-scan coarse grid output, currently still local-only and pending GitHub writeback
 - `results/round5-recoupled-family-scan-20260504/best_recoupled_near_closing.csv`: fifth-scan near-closing subset, currently still local-only and pending GitHub writeback
+- `scripts/run_round6_row_asymmetric_recoupling_scan.py`: sixth scan testing active-row-only asymmetric recoupling
+- `results/round6-row-asymmetric-recoupling-20260504/summary.md`: round-six quantitative summary
+- `results/round6-row-asymmetric-recoupling-20260504/candidate_scores.csv`: round-six candidate ranking table
+- `results/round6-row-asymmetric-recoupling-20260504/family_gap_traces.csv`: round-six family trace table, currently still local-only and pending GitHub writeback
+- `results/round6-row-asymmetric-recoupling-20260504/best_asymmetric_full_scan.csv`: full sixth-scan coarse grid output, currently still local-only and pending GitHub writeback
+- `results/round6-row-asymmetric-recoupling-20260504/best_asymmetric_near_closing.csv`: sixth-scan near-closing subset, currently still local-only and pending GitHub writeback
 
 ## Current archive expectation
 
