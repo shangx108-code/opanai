@@ -1,9 +1,9 @@
 # Iteration 004 GitHub Sync Manifest
 
 - Package: `iteration-004-latest-accessible-output-sync.zip`
-- ZIP bytes: `3925748`
-- Base64 bytes: `5303205`
-- SHA256: `788715512345e187da35db431840e846820b23d16f797d23dcf0fe83e519808d`
+- ZIP bytes: `3925739`
+- Base64 bytes: `5303193`
+- SHA256: `cb8fa739af437ca9cae418f2eb5245aa5b5a11bff5dcbbdf66c599519f2ef9ab`
 - Base64 chunks: `7`
 
 ## Restore
