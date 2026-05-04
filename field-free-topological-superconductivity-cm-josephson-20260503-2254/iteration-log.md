@@ -56,3 +56,43 @@
   - the three earlier full coarse scan CSV files from rounds one to three
 - Next shortest action:
   - recover stronger phase sensitivity in the surviving active channel without reopening broad low-gap clutter
+
+## 2026-05-04 10:xx Asia/Shanghai
+
+- Continued on the three residual round-four families with one narrower task only:
+  - test minimal recoupling instead of more pruning
+- Implemented new round-five script:
+  - `scripts/run_round5_recoupled_family_scan.py`
+- Recoupling knobs tested:
+  - small increases in `t_interface`
+  - small increases in `t_junction_y`
+  - small increases in `alpha_junction_x` and `alpha_junction_y`
+  - slight relaxation of `channel_filter_strength`
+- Candidate search result:
+  - best family-level candidate: `t_interface=0.20`, `t_junction_y=0.14`, `alpha_junction_x=0.10`, `alpha_junction_y=0.06`, `channel_filter_strength=0.55`
+  - this candidate gives `3/3` family-level `phi~pi` wins
+- Family-level conclusion:
+  - local phase leverage is recoverable
+  - for the strongest affected family `(M0=1.2, mu=2.0)`, the family gap changes from `4.607e-4` at `phi=0` to `1.569e-4` at `phi=pi`
+- Full-grid consequence of the best family-level candidate:
+  - total points: `936`
+  - near-closing points rise to `204`
+  - near-closing `phi~pi` fraction: `0.147`
+  - near-closing low-phase fraction: `0.235`
+  - smallest gap occurs at `phi/pi=0.5`
+- Tradeoff check on the best-balanced alternatives:
+  - the next two `3/3` family-win candidates still reopen `178` and `173` near-closing points respectively
+- Main conclusion of this round:
+  - uniform recoupling is not the right branch
+  - it restores local phase preference only by reopening too much global low-gap clutter
+- GitHub writeback completed in this round for:
+  - `scripts/run_round5_recoupled_family_scan.py`
+  - `results/round5-recoupled-family-scan-20260504/summary.md`
+  - `results/round5-recoupled-family-scan-20260504/candidate_scores.csv`
+- GitHub writeback still pending after this round for:
+  - `results/round5-recoupled-family-scan-20260504/best_recoupled_full_scan.csv`
+  - `results/round5-recoupled-family-scan-20260504/best_recoupled_near_closing.csv`
+  - `results/round5-recoupled-family-scan-20260504/family_gap_traces.csv`
+  - the four earlier full coarse scan CSV files
+- Next shortest action:
+  - test a more mode-selective phase lever instead of another uniform recoupling pass
