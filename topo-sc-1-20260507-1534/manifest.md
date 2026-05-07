@@ -1,0 +1,35 @@
+# Manifest
+
+- Canonical project root:
+  - `topo-sc-1-20260507-1534/`
+- Core ledger files:
+  - `README.md`
+  - `project-profile.md`
+  - `project-state.md`
+  - `iteration-log.md`
+  - `archive-checklist.md`
+  - `drive-index.md`
+  - `manifest.md`
+  - `archive-status.md`
+  - `key-findings.md`
+  - `open-questions.md`
+  - `role-assignments.md`
+  - `journal-criteria.md`
+  - `supervision-log.md`
+  - `review-history.md`
+- Intake materials:
+  - `user-materials/01-markdown-1-md-23`
+- Theory coordination assets:
+  - `theory-execution-brief.md`
+  - `quick-start-cn.md`
+  - `codex-prompts/00-master-prompt.md`
+  - `codex-prompts/06-one-shot-execution-prompt.md`
+  - `feedback-templates/01-run-report-template.md`
+  - `feedback-templates/02-claim-evidence-template.md`
+  - `feedback-templates/03-figure-audit-template.md`
+- Reserved future artifact paths:
+  - `manuscript/`
+  - `results/`
+  - `scripts/`
+  - `configs/`
+  - `logs/`
