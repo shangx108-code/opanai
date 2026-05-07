@@ -1,0 +1,22 @@
+# Role Assignments
+
+- Coordinator
+  - current task: maintain the canonical archive path and read Codex feedback files to decide the next global move
+  - input: run reports, claim-evidence sheets, figure audits, blocker files
+  - output: updated project state, next-step routing, and archive discipline
+- Theory
+  - current task: keep the paper claim boundary aligned with verified physics and define the minimum acceptable diagnostics
+  - input: intake markdown and returned computation results
+  - output: theory interpretation, claim tightening, and next claim to test
+- Code and numerics
+  - current task: execute `WP1` first under the canonical prompt contract
+  - input: `codex-prompts/` and `feedback-templates/`
+  - output: baseline model, parameter table, and first reusable feedback files
+- Data and figure analysis
+  - current task: judge whether returned spectra, LDOS maps, and diagnostics support manuscript-use claims
+  - input: figures, tables, and figure-audit files
+  - output: draft-usable versus supplementary-only decisions
+- Manuscript
+  - current task: remain downstream of verified evidence; do not draft stronger claims than current diagnostics allow
+  - input: claim-evidence files and theory brief
+  - output: later figure-text closure and manuscript-safe wording
