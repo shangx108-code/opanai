@@ -1,0 +1,42 @@
+# Archive Status
+
+- Current state:
+  - `规划-第一轮.md`: `仅有本地副本`
+  - `specs/positive-control-benchmark-spec-v1.md`: `仅有本地副本`
+  - `codex-prompts/01-positive-control-benchmark-cn.md`: `仅有本地副本`
+  - `specs/control-pool-sensitivity-spec-v1.md`: `仅有本地副本`
+  - `codex-prompts/02-control-pool-sensitivity-cn.md`: `仅有本地副本`
+  - `specs/wide-link-exact-sensitivity-spec-v1.md`: `仅有本地副本`
+  - `codex-prompts/03-wide-link-exact-sensitivity-cn.md`: `仅有本地副本`
+  - `specs/full-ladder-active-family-search-spec-v1.md`: `仅有本地副本`
+  - `codex-prompts/04-full-ladder-active-family-search-cn.md`: `仅有本地副本`
+  - `specs/w4-b0-3-independent-candidate-validation-spec-v1.md`: `仅有本地副本`
+  - `codex-prompts/05-w4-b0-3-independent-candidate-validation-cn.md`: `仅有本地副本`
+  - `specs/w4-b0-3-c2-c4-narrow-validation-campaign-spec-v1.md`: `仅有本地副本`
+  - `codex-prompts/06-w4-b0-3-c2-c4-narrow-validation-campaign-cn.md`: `仅有本地副本`
+  - `manuscript/nc-safe-claim-package-v1.md`: `仅有本地副本`
+  - `manuscript/nc-safe-paragraph-replacements-v1.md`: `仅有本地副本`
+  - ledger files in this project root: `仅有本地副本`
+  - submission-package main text in `/workspace/tmp/public_repository_package_r2/paper/cm_jj_nc_main.tex`: `仅有本地副本`
+  - submission-package Week-4 claim-boundary audit in `/workspace/tmp/public_repository_package_r2/submission/claim_evidence_boundary_audit_week4.md`: `仅有本地副本`
+  - submission-package Week-4 claim-boundary audit table in `/workspace/tmp/public_repository_package_r2/submission/claim_evidence_boundary_audit_week4.csv`: `仅有本地副本`
+  - submission-package Week-5 prompt in `/workspace/tmp/public_repository_package_r2/submission/codex_prompt_week5_w4b03_family_narrow_validation_package_cn.md`: `仅有本地副本`
+  - submission-package final audit in `/workspace/tmp/public_repository_package_r2/submission/final_audit.md`: `仅有本地副本`
+  - submission-package Week-5 family source-data folder in `/workspace/tmp/public_repository_package_r2/data/source_data_week5_w4_b0_3_family_narrow_validation/`: `仅有本地副本`
+  - refreshed manual-download long-term archive bundle in `/workspace/output/field-free-jj-active-channel-family-ncomms-20260513-1510-long-term-space-with-history-20260514T011858Z.zip`: `仅有本地副本`
+  - raw historical intake mirror in `/workspace/memory/projects/field-free-jj-active-channel-family-ncomms-20260513-1510/archive/intake-user-files/`: `已同步到长期空间；GitHub backfill pending`
+  - edited public-repository snapshot in `/workspace/memory/projects/field-free-jj-active-channel-family-ncomms-20260513-1510/archive/public_repository_package_r2_snapshot/`: `已同步到长期空间；GitHub backfill pending`
+  - uploaded manuscript PDFs in `/workspace/user_files/`: `原始副本仍在；已同步到长期空间`
+  - uploaded revision brief in `/workspace/user_files/03-markdown-1-md-33`: `原始副本仍在；已同步到长期空间`
+  - uploaded Codex positive-control zip in `/workspace/user_files/01-codex-return-positive-control-benchmark-v1-1-.zip`: `原始副本仍在；已同步到长期空间`
+  - uploaded Codex control-pool sensitivity zip in `/workspace/user_files/01-codex-return-control-pool-sensitivity-v1.zip`: `原始副本仍在；已同步到长期空间`
+  - uploaded Codex wide-link exact sensitivity zip in `/workspace/user_files/01-codex-return-wide-link-exact-sensitivity-v1.zip`: `原始副本仍在；已同步到长期空间`
+  - uploaded Codex full-ladder family search zip in `/workspace/user_files/01-codex-return-full-ladder-active-family-search-v1.zip`: `原始副本仍在；已同步到长期空间`
+  - uploaded Codex w4_b0.3 independent validation zip in `/workspace/user_files/01-codex-return-w4-b0-3-independent-candidate-validation-v1.zip`: `原始副本仍在；已同步到长期空间`
+  - uploaded Codex w4_b0.3 narrow C2-C4 validation zip in `/workspace/user_files/01-codex-return-w4-b0-3-c2-c4-narrow-validation-campaign-v1.zip`: `原始副本仍在；已同步到长期空间`
+  - uploaded Codex Week-5 family package zip in `/workspace/user_files/01-codex-return-week5-w4-b0-3-family-narrow-validation-package-v1.zip`: `原始副本仍在；已同步到长期空间`
+- Primary archive risk:
+  - GitHub main-archive copy has not yet been backfilled for this new project root
+- Required backfill:
+  - mirror the initialized project root, synchronized historical intake mirror, edited public-repository snapshot, Week-5 package references, and updated submission-package files to the fixed GitHub project path
+  - decide whether the uploaded PDFs should be copied into canonical project materials or referenced by manifest only
