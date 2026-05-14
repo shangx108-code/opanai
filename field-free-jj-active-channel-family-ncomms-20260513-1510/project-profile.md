@@ -1,0 +1,22 @@
+# Project Profile
+
+- Project identifier: `field-free-jj-active-channel-family-ncomms-20260513-1510`
+- Chinese project name: `零场约瑟夫森主动通道全 ladder 家族-NC`
+- Fixed memory root: `/workspace/memory/projects/field-free-jj-active-channel-family-ncomms-20260513-1510/`
+- Intended GitHub root: `shangx108-code/opanai` on branch `open-ai` under project folder `field-free-jj-active-channel-family-ncomms-20260513-1510/`
+- Target journal: `Nature Communications`
+- First formal start time: `2026-05-13 15:10 Asia/Shanghai`
+- Project scope:
+  - build a submission-grade Nature Communications manuscript around field-free compensated-magnetic Josephson topology
+  - keep the core claim centered on a matched-control evidence benchmark rather than a loose false-positive story
+  - push toward a genuine active-channel family that survives the full scalar + profile + finite-size + CAR/EC ladder when feasible
+  - keep numerical calculation, batch reruns, transport recomputation, and data package generation delegated to Codex
+  - keep this window focused on orchestration, claim control, derivation, manuscript writing, figure logic, and reviewer-oriented judgment
+- Locked current manuscript line:
+  - `A matched-control benchmark for finite-device evidence in field-free Josephson topology`
+- Working acceptance objective:
+  - maximize eventual acceptance probability at Nature Communications by closing the protocol-validity criticism, tightening the evidence ladder, and promoting the paper from a negative audit to a field standard paper
+- Scope boundary:
+  - do not switch away from the compensated-magnetic planar Josephson platform unless explicitly requested
+  - do not weaken the matched-control standard for convenience before a positive-control calibration exists
+  - do not let a single attractive transport row become the main story before scalar/profile/finite-size selectivity is closed
