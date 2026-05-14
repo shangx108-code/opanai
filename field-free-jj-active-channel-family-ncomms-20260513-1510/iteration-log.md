@@ -1,0 +1,98 @@
+# Iteration Log
+
+## 2026-05-13 Round 1
+
+- Action completed:
+  - established the canonical long-term project folder for the Nature Communications active-channel line
+  - read the uploaded main manuscript, supplement, and revision brief
+  - summarized the revision brief into a durable first-round project plan
+  - initialized ledger files for project state, archive state, key findings, and open questions
+  - froze the positive-control benchmark as the first Codex computation task
+  - locked the exact Codex return package name to `codex-return-positive-control-benchmark-v1`
+  - read the uploaded zip `01-codex-return-positive-control-benchmark-v1-1-.zip`
+  - verified that the positive-control benchmark passed cleanly
+  - advanced the next bottleneck to control-pool sensitivity
+  - froze the second Codex computation task and locked the exact return zip name to `codex-return-control-pool-sensitivity-v1.zip`
+  - read the uploaded zip `01-codex-return-control-pool-sensitivity-v1.zip`
+  - verified that the overall sensitivity result is qualitatively stable except for the wide-link archive exactness gap
+  - advanced the next bottleneck to exact wide-link sensitivity restoration or recomputation
+  - froze the third Codex computation task and locked the exact return zip name to `codex-return-wide-link-exact-sensitivity-v1.zip`
+  - read the uploaded zip `01-codex-return-wide-link-exact-sensitivity-v1.zip`
+  - verified that wide-link exact sensitivity is fully closed under max, p95, and top-5 mean controls
+  - advanced the next bottleneck to full-ladder active-family search
+  - froze the fourth Codex computation task and locked the exact return zip name to `codex-return-full-ladder-active-family-search-v1.zip`
+  - read the uploaded zip `01-codex-return-full-ladder-active-family-search-v1.zip`
+  - verified that one family-level signal exists for `w4_b0.3`, but current support is concentrated in `C1`
+  - advanced the next bottleneck to within-family independent-candidate validation
+  - froze the fifth Codex computation task and locked the exact return zip name to `codex-return-w4-b0-3-independent-candidate-validation-v1.zip`
+  - read the uploaded zip `01-codex-return-w4-b0-3-independent-candidate-validation-v1.zip`
+  - verified that `C2-C4` are blocked by missing resonance-map and transport runs rather than by completed negative tests
+  - advanced the next bottleneck to a narrow `C2-C4` validation campaign using the `C1` settings
+  - froze the sixth Codex computation task and locked the exact return zip name to `codex-return-w4-b0-3-c2-c4-narrow-validation-campaign-v1.zip`
+  - read the uploaded zip `01-codex-return-w4-b0-3-c2-c4-narrow-validation-campaign-v1.zip`
+  - verified that the narrow campaign closes the missing resonance/transport blockage for `C2-C4`
+  - verified that `C2`, `C3`, and `C4` all acquire nonzero full-ladder support under the reused `C1` settings
+  - upgraded the family-level conclusion from `C1-only` to `within-family replicated narrow support`
+  - drafted an NC-safe rewrite package containing main-text replacement paragraphs and a claim-evidence matrix for the `w4_b0.3` result
+  - extracted the current main-manuscript PDF text and converted the NC-safe rewrite into paragraph-by-paragraph replacements aligned to the manuscript's existing section structure
+  - unpacked the prior public repository submission package and switched from PDF-only editing to the real `paper/cm_jj_nc_main.tex` source
+  - updated the submission package main text, claim-evidence audit, and revision summary to state `w4_b0.3` as within-family replicated narrow support rather than a broad platform result
+  - drafted a new Codex prompt for a Week-5 `w4_b0.3` family narrow-validation source-data package
+  - read the uploaded zip `01-codex-return-week5-w4-b0-3-family-narrow-validation-package-v1.zip`
+  - verified that the Week-5 return package reports `status = within_family_replicated_narrow_support`
+  - confirmed that the submission package already contains the integrated source-data folder `data/source_data_week5_w4_b0_3_family_narrow_validation/`
+  - synchronized `project-state.md`, `archive-status.md`, `archive-checklist.md`, `manifest.md`, and `CURRENT-PROJECT-SPACE.md` to the completed Week-5 state
+  - refreshed `submission/final_audit.md` so the audit now reflects the current manuscript language and integrated Week-5 source-data package
+  - packaged the canonical long-term project space for manual download as `/workspace/output/field-free-jj-active-channel-family-ncomms-20260513-1510-long-term-space-20260514T005632Z.zip`
+  - synchronized all raw historical intake files from `/workspace/user_files/` into `archive/intake-user-files/` under the canonical long-term project root
+  - synchronized the current edited working tree from `/workspace/tmp/public_repository_package_r2/` into `archive/public_repository_package_r2_snapshot/` under the canonical long-term project root
+  - generated a refreshed manual-download backup from the now-synchronized project root as `/workspace/output/field-free-jj-active-channel-family-ncomms-20260513-1510-long-term-space-with-history-20260514T011858Z.zip`
+- Deliverables created:
+  - `project-profile.md`
+  - `project-state.md`
+  - `key-findings.md`
+  - `open-questions.md`
+  - `archive-status.md`
+  - `archive-checklist.md`
+  - `drive-index.md`
+  - `manifest.md`
+  - `role-assignments.md`
+  - `review-history.md`
+  - `supervision-log.md`
+  - `规划-第一轮.md`
+  - `specs/positive-control-benchmark-spec-v1.md`
+  - `codex-prompts/01-positive-control-benchmark-cn.md`
+  - `specs/control-pool-sensitivity-spec-v1.md`
+  - `codex-prompts/02-control-pool-sensitivity-cn.md`
+  - `specs/wide-link-exact-sensitivity-spec-v1.md`
+  - `codex-prompts/03-wide-link-exact-sensitivity-cn.md`
+  - `specs/full-ladder-active-family-search-spec-v1.md`
+  - `codex-prompts/04-full-ladder-active-family-search-cn.md`
+  - `specs/w4-b0-3-independent-candidate-validation-spec-v1.md`
+  - `codex-prompts/05-w4-b0-3-independent-candidate-validation-cn.md`
+  - `specs/w4-b0-3-c2-c4-narrow-validation-campaign-spec-v1.md`
+  - `codex-prompts/06-w4-b0-3-c2-c4-narrow-validation-campaign-cn.md`
+  - `manuscript/nc-safe-claim-package-v1.md`
+  - `manuscript/nc-safe-paragraph-replacements-v1.md`
+  - `submission-package update in /workspace/tmp/public_repository_package_r2/paper/cm_jj_nc_main.tex`
+  - `submission-package update in /workspace/tmp/public_repository_package_r2/submission/claim_evidence_boundary_audit_week4.md`
+  - `submission-package update in /workspace/tmp/public_repository_package_r2/submission/claim_evidence_boundary_audit_week4.csv`
+  - `submission/codex_prompt_week5_w4b03_family_narrow_validation_package_cn.md`
+  - `uploaded zip /workspace/user_files/01-codex-return-week5-w4-b0-3-family-narrow-validation-package-v1.zip`
+  - `submission-package data folder /workspace/tmp/public_repository_package_r2/data/source_data_week5_w4_b0_3_family_narrow_validation/`
+  - `submission-package update in /workspace/tmp/public_repository_package_r2/submission/final_audit.md`
+  - `/workspace/output/field-free-jj-active-channel-family-ncomms-20260513-1510-long-term-space-20260514T005632Z.zip`
+  - `/workspace/output/field-free-jj-active-channel-family-ncomms-20260513-1510-long-term-space-with-history-20260514T011858Z.zip`
+  - `archive/intake-user-files/`
+  - `archive/public_repository_package_r2_snapshot/`
+- Current conclusion:
+  - the paper now has a real within-family replicated narrow-validation result for `w4_b0.3`, with `C1-C4` all showing nonzero full-ladder support under the matched narrow ladder
+  - the family result is now backed by a reusable Week-5 source-data bundle rather than by prose-only wording
+- Archive result:
+  - files created locally in the canonical memory root
+  - Week-5 source-data zip and integrated submission-package files located and registered
+  - manual-download archive bundle generated for the canonical long-term project space
+  - raw intake files and edited submission/public-repository snapshot are now copied into the canonical long-term project root
+  - GitHub backfill not yet completed and remains pending
+- Next required move:
+  - generate a fresh downloadable backup from the now-expanded canonical project root, then backfill the whole synchronized root to the fixed GitHub path
