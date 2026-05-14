@@ -1,0 +1,71 @@
+# Key Findings
+
+- Verified from the current uploaded manuscript and supplement:
+  - wide-link candidate pool contains `1140` topology-consistent rows, `28` rows passing the local open-boundary gate, and `0` rows surviving strict matched-control scalar release
+  - the active-channel profile is implemented at the Hamiltonian level before topology and finite-device tests are recomputed
+  - the current manuscript already supports the bounded statement that scalar boundary release, active-channel localization, and transport selectivity decouple
+  - the transport audit currently shows stronger pass rates for integrated `|G_nonlocal|` than for CAR-only and near-zero CAR criteria
+- Locked writing-side interpretation boundary:
+  - periodic topology is a selector, not finite-device evidence
+  - wide-link failure is a benchmark baseline, not the whole paper
+  - benchmark credibility requires matched trivial controls, profile-resolved localization checks, finite-size/end-environment audit, and CAR/EC decomposition
+- Newly verified from the first Codex return package:
+  - the positive-control benchmark passes on a spinless Kitaev chain
+  - verdict status is `pass`
+  - released topological rows: `35`
+  - released trivial rows: `0`
+  - lengths with release: `40, 80, 120, 160, 200`
+  - the protocol-validity criticism is no longer the first bottleneck
+- Newly verified from the control-pool sensitivity return package:
+  - overall verdict is `partially_stable_with_documented_wide_link_archive_limitation`
+  - wide-link strict null remains `0 / 1140` under exact archived `max control`
+  - active-channel scalar windows survive under `max`, `P95`, and `top-5 mean`
+  - scalar-positive/profile-negative rows remain abundant under all three control summaries:
+    - `max = 461`
+    - `P95 = 464`
+    - `top-5 mean = 517`
+  - transport `|G| > CAR` hierarchy survives under all three control summaries:
+    - `max = 166 vs 109`
+    - `P95 = 166 vs 111`
+    - `top-5 mean = 171 vs 114`
+- Newly verified from the wide-link exact sensitivity return package:
+  - verdict status is `exact_stable`
+  - source mode is `direct_recompute`
+  - candidate pool is preserved at `1140`
+  - wide-link strict release remains:
+    - `max = 0 / 1140`
+    - `P95 = 0 / 1140`
+    - `top-5 mean = 0 / 1140`
+  - the strongest near-positive row remains below release with best `B = 0.8848163605522893`
+- Newly verified from the full-ladder active-family search return package:
+  - verdict status is `family_found`
+  - best family is `w4_b0.3`
+  - best family full-ladder pass count is `11`
+  - those passes span `3` active lengths and `2` normal-extension settings
+  - current support is concentrated in a single target candidate: `w4_b0.3__C1`
+  - the current result supports a cautious targeted-validation track, not yet a broad device-facing family claim
+- Newly verified from the `w4_b0.3` independent-candidate validation return package:
+  - verdict status is `blocked`
+  - independent candidate indices tested are `C2`, `C3`, and `C4`
+  - none of `C2-C4` has archived full-ladder support yet
+  - the blocker is missing resonance-map and transport rows, not a completed negative full-ladder outcome
+  - `C2-C4` already have strong stage2 scalar and profile baselines, so they remain live candidates for a narrow validation campaign
+- Newly verified from the `w4_b0.3` narrow `C2-C4` validation return package:
+  - verdict status is `independent_support_found`
+  - the missing-data bottleneck is closed with new resonance and transport rows generated for `C2-C4`
+  - `C2`, `C3`, and `C4` all gain nonzero full-ladder support under the reused `C1` narrow ladder
+  - full-ladder pass counts are:
+    - `C1 = 11 / 84`
+    - `C2 = 4 / 84`
+    - `C3 = 9 / 84`
+    - `C4 = 10 / 84`
+  - the dominant first failure mode after the new runs is `integrated_abs_G`
+  - this closes the prior `single_target_only` concern at the narrow within-family level
+  - the supported claim boundary is a replicated narrow-validation result for `w4_b0.3`, not a broad unconstrained family-wide device-platform claim
+- Newly verified from the Week-5 family source-data package:
+  - verdict status is `within_family_replicated_narrow_support`
+  - the package provides reusable report text, replication summary tables, failure-mode summaries, caption-safe wording, and claim-boundary wording
+  - the same package has been integrated into the submission tree under `data/source_data_week5_w4_b0_3_family_narrow_validation/`
+  - the manuscript can now cite the `w4_b0.3` family result with a source-data anchor rather than prose-only support
+- Not yet verified and therefore not claimable:
+  - that a compensated-magnetic active-channel family survives the full scalar + profile + finite-size + CAR/EC ladder robustly enough for a broad device-facing family claim
