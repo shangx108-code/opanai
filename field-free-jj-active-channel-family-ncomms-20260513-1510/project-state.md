@@ -1,0 +1,105 @@
+# Project State
+
+- Current stage: `NC-safe family-language update plus Week-5 narrow-validation source-data integration`
+- Unique main bottleneck:
+  - `the narrow C2-C4 validation campaign and the follow-up Week-5 data package have closed the science-side single-target bottleneck; the current blocking issue is to keep the updated manuscript/source-data state fully traceable and backfilled to the fixed main archive without drift between ledgers and submission files`
+- Why this is first:
+  - protocol validity is passed
+  - benchmark robustness is passed
+  - the previous within-family validation did not falsify `C2-C4`; it showed they were never run through resonance and transport
+  - the narrow campaign now shows that `C2-C4` do acquire nonzero full-ladder support under the reused `C1` settings
+  - the uploaded Week-5 package converts that result into reusable source-data tables, claim-boundary text, and caption-safe wording
+  - under the project archive rules, once a reusable result already exists, keeping the canonical archive and package state consistent becomes the next blocking task before any broader new push
+- Latest real progress:
+  - locked the canonical project identifier `field-free-jj-active-channel-family-ncomms-20260513-1510`
+  - created the canonical long-term project root for this Nature Communications line
+  - ingested the uploaded main manuscript, supplement, and revision brief
+  - converted the uploaded revision brief into a first durable execution plan
+  - initialized the ledger files needed for continued multi-round work
+  - froze the first Codex computation task as a positive-control benchmark spec plus a dedicated Codex prompt
+  - received and read the first Codex return package for the positive-control benchmark
+  - verified a successful positive-control benchmark pass across five lengths with no released trivial rows
+  - froze the second Codex computation task as a control-pool sensitivity audit plus a dedicated Codex prompt
+  - received and read the control-pool sensitivity return package
+  - verified that the overall sensitivity verdict is partially stable, with the only explicit limitation concentrated in the wide-link archive
+  - froze the third Codex computation task as a wide-link exact sensitivity restoration or recomputation plus a dedicated Codex prompt
+  - received and read the wide-link exact sensitivity return package
+  - verified that wide-link strict release remains zero under exact max, p95, and top-5 mean control summaries
+  - froze the fourth Codex computation task as a full-ladder active-family search plus a dedicated Codex prompt
+  - received and read the full-ladder active-family search return package
+  - verified that one family-level signal exists for `w4_b0.3` with `11` full-ladder passes
+  - identified the main risk that the current support is concentrated in `w4_b0.3__C1`
+  - froze the fifth Codex computation task as an independent-candidate validation inside `w4_b0.3`
+  - received and read the `w4_b0.3` independent-candidate validation return package
+  - verified that `C2-C4` are blocked by missing resonance-map and transport rows rather than by completed negative full-ladder tests
+  - froze the sixth Codex computation task as a narrow `C2-C4` resonance plus transport validation campaign
+  - received and read the `w4_b0.3` narrow `C2-C4` validation return package
+  - verified that the missing-data bottleneck is closed and that `C2-C4` all gain nonzero full-ladder support under the reused `C1` narrow ladder
+  - drafted an NC-safe main-text and claim-evidence package that rewrites the new family result as within-family replicated narrow support rather than a broad platform claim
+  - mapped the current manuscript PDF into section-anchored paragraph replacements and produced a direct integration draft for Abstract, Introduction, Results, and Discussion
+  - unpacked the prior public repository submission package and confirmed that the editable manuscript source is `paper/cm_jj_nc_main.tex`
+  - integrated the NC-safe family-language update directly into the real submission package main text and claim-boundary audit
+  - drafted a new Codex prompt that asks only for a `w4_b0.3` within-family narrow-validation data package suitable for manuscript/source-data insertion
+  - received and read the Week-5 return zip `01-codex-return-week5-w4-b0-3-family-narrow-validation-package-v1.zip`
+  - verified that the Week-5 package contains reusable report, summary-table, claim-boundary, caption, verdict, and figure-source files for the `w4_b0.3` family result
+  - confirmed that the submission package already contains the integrated Week-5 source-data folder `data/source_data_week5_w4_b0_3_family_narrow_validation/`
+  - synchronized the canonical ledgers and submission audit so the project state, manifest, archive checklist, and submission audit all reflect the completed Week-5 package
+  - generated a refreshed manual-download archive bundle of the canonical long-term project space, including synchronized historical data, at `/workspace/output/field-free-jj-active-channel-family-ncomms-20260513-1510-long-term-space-with-history-20260514T011858Z.zip`
+  - synchronized the raw historical intake files from `/workspace/user_files/` into `archive/intake-user-files/` inside the canonical project root
+  - synchronized the current edited submission/public-repository working tree from `/workspace/tmp/public_repository_package_r2/` into `archive/public_repository_package_r2_snapshot/` inside the canonical project root
+- Current accepted evidence:
+  - the present manuscript already supports a strong benchmark-style backbone:
+    - wide-link `1140 -> 28 -> 0` under the strict matched-control scalar gate
+    - active-channel profiling changes the Hamiltonian and can open scalar windows
+    - scalar release, active-profile dominance, and finite-size/end-environment sensitivity are not automatically aligned
+    - nonlocal transport magnitude release is stronger than CAR-selective release
+  - the uploaded revision brief sets the NC-safe story center:
+    - benchmark / evidence standard / matched-control protocol
+    - not a simple `false positives` headline
+  - the current best target outcome is:
+    - an evidence-standard paper with a calibrated ladder
+    - plus, if achievable, one real active-channel family that survives the full ladder
+  - new verified benchmark finding:
+    - the matched-control scalar ladder releases a known-positive Kitaev-chain benchmark across lengths `40, 80, 120, 160, 200`
+    - verdict status `pass`
+    - released topological rows `35`
+    - released trivial rows `0`
+  - new verified sensitivity finding:
+    - active-channel scalar windows survive under `max`, `P95`, and `top-5 mean`
+    - scalar-positive/profile-negative separation survives under all three control summaries
+    - transport `|G| > CAR` hierarchy survives under all three control summaries
+    - wide-link strict null remains `0 / 1140` exactly for `max control`, `P95`, and `top-5 mean`
+  - new verified family-search finding:
+    - best family is `w4_b0.3`
+    - best family full-ladder pass count is `11`
+    - those passes span `3` active lengths and `2` normal-extension settings
+    - current family-level support is still concentrated in one target candidate, `w4_b0.3__C1`
+  - new verified within-family validation finding:
+    - independent candidate indices `C2-C4` have strong scalar and profile baselines
+    - archived full-ladder support for `C2-C4` is currently blocked by missing resonance-map and transport rows
+    - `single_target_only` is not yet a tested negative conclusion; it is still a missing-run conclusion
+  - new verified narrow-validation finding:
+    - verdict status is `independent_support_found`
+    - tested candidates are `C2`, `C3`, and `C4`
+    - all of `C2-C4` now have nonzero full-ladder support under the matched narrow ladder
+    - pass counts are:
+      - `C2 = 4 / 84`
+      - `C3 = 9 / 84`
+      - `C4 = 10 / 84`
+    - the anchor reference remains `C1 = 11 / 84`
+    - the dominant first failure mode after the new runs is `integrated_abs_G`
+    - the manuscript-safe interpretation is now within-family replicated narrow support, not a broad unconstrained device-platform claim
+  - new verified Week-5 source-data-package finding:
+    - uploaded package exists at `/workspace/user_files/01-codex-return-week5-w4-b0-3-family-narrow-validation-package-v1.zip`
+    - verdict status in the package is `within_family_replicated_narrow_support`
+    - the package supplies reusable report text, replication tables, failure-mode summaries, claim-boundary text, caption draft, and figure-source CSV files
+    - the same result has already been integrated into the submission package under `data/source_data_week5_w4_b0_3_family_narrow_validation/`
+    - the package closes the `single_target_only` concern in a form that is citable by the manuscript and submission audit
+- Immediate next action:
+  - `generate and hand off a fresh manual-download backup built from the now-synchronized canonical project root; after that, backfill the whole root to the fixed GitHub archive path`
+- Archive status note:
+  - `local long-term space initialized`
+  - `Week-5 package and submission-package deltas are now registered locally`
+  - `manual-download long-term archive bundle generated in /workspace/output/`
+  - `historical raw intake and the current public-repository snapshot are now both synchronized into the canonical project root under archive/`
+  - `GitHub main-archive mirroring still pending and must be backfilled`
