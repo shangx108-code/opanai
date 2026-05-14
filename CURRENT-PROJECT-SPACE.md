@@ -1,17 +1,26 @@
 # Current Project Space
 
-Active project: `field-free-majorana-compensated-josephson-natphys-2026-05-03T13-29-00Z`
-Canonical long-term project space: `/workspace/memory/projects/field-free-majorana-compensated-josephson-natphys-2026-05-03T13-29-00Z`
-Created: `2026-05-03T13:29:00Z`
+## Active Project
 
-Future data for this chat should be saved into the canonical long-term project
-space above.
+field-free-jj-active-channel-family-ncomms-20260513-1510
 
-Execution rule: all future data, scripts, results, notes, manuscript files, and
-other project artifacts generated in this chat must be synchronized into
-`/workspace/memory/projects/field-free-majorana-compensated-josephson-natphys-2026-05-03T13-29-00Z`
-as the GitHub-backed long-term project space.
+## Target Journal
 
-Push rule: all project data saved into this long-term project space should be
-saved back to the attached GitHub long-term archive after each substantive
-update, so the latest data remain available for later inspection.
+Nature Communications
+
+## Current Stage
+
+NC-oriented evidence chain now includes the Week-5 within-family narrow-validation package and synchronized claim-boundary wording
+
+## Current Primary Bottleneck
+
+The science-side `C1`-only weakness is closed at the narrow within-family level; the current blocking item is archive consistency and GitHub backfill for the updated Week-5 package and submission-package deltas.
+
+## Authoritative Directory
+
+`/workspace/memory/projects/field-free-jj-active-channel-family-ncomms-20260513-1510/`
+
+## Nearby Project Reminder
+
+- predecessor field-free Josephson project root exists: `field-free-topological-superconductivity-cm-josephson-20260503-2254`
+- it remains a separate earlier project line with a different target journal and is not merged into `field-free-jj-active-channel-family-ncomms-20260513-1510`
